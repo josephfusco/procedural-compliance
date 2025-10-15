@@ -288,6 +288,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const templateModal = document.getElementById('template-modal');
     const templateModalTitle = document.getElementById('template-modal-title');
     const templateModalContent = document.getElementById('template-modal-content');
+    const templateModalProse = document.getElementById('template-modal-prose');
     const templateModalClose = document.getElementById('template-modal-close');
     const templateModalCloseBtn = document.getElementById('template-modal-close-btn');
     const templateCopyBtn = document.getElementById('template-copy-btn');
@@ -300,8 +301,8 @@ document.addEventListener('DOMContentLoaded', () => {
     async function openTemplateViewer(templatePath, templateTitle, githubUrl) {
         try {
             // Show loading state
-            if (templateModalContent) {
-                templateModalContent.innerHTML = '<div class="text-center py-12"><div class="inline-block animate-spin rounded-full h-12 w-12 border-b-2 border-primary"></div><p class="mt-4 text-muted-foreground">Loading template...</p></div>';
+            if (templateModalProse) {
+                templateModalProse.innerHTML = '<div class="text-center py-12"><div class="inline-block animate-spin rounded-full h-12 w-12 border-b-2 border-primary"></div><p class="mt-4 text-muted-foreground">Loading template...</p></div>';
             }
             if (templateModalTitle) {
                 templateModalTitle.textContent = templateTitle;
@@ -320,13 +321,13 @@ document.addEventListener('DOMContentLoaded', () => {
             // Render markdown
             if (typeof marked !== 'undefined') {
                 const html = marked.parse(currentMarkdownContent);
-                if (templateModalContent) {
-                    templateModalContent.innerHTML = html;
+                if (templateModalProse) {
+                    templateModalProse.innerHTML = html;
                 }
             } else {
                 // Fallback if marked.js doesn't load
-                if (templateModalContent) {
-                    templateModalContent.innerHTML = `<pre>${currentMarkdownContent}</pre>`;
+                if (templateModalProse) {
+                    templateModalProse.innerHTML = `<pre>${currentMarkdownContent}</pre>`;
                 }
             }
 
@@ -336,8 +337,8 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         } catch (error) {
             console.error('Error loading template:', error);
-            if (templateModalContent) {
-                templateModalContent.innerHTML = '<div class="text-center py-12"><p class="text-red-600">Failed to load template. Please try again.</p></div>';
+            if (templateModalProse) {
+                templateModalProse.innerHTML = '<div class="text-center py-12"><p class="text-red-600">Failed to load template. Please try again.</p></div>';
             }
         }
     }
