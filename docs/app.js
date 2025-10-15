@@ -45,9 +45,12 @@ document.addEventListener('DOMContentLoaded', () => {
 
         // Generate cards from table rows
         templateRows.forEach(row => {
+            const linkElement = row.querySelector('a');
             const title = row.querySelector('.font-medium')?.textContent || '';
             const subtitle = row.querySelector('.text-muted-foreground')?.textContent || '';
-            const link = row.querySelector('a')?.href || '';
+            const link = linkElement?.getAttribute('href') || '';
+            const templateTitle = linkElement?.dataset.templateTitle || title;
+            const githubUrl = linkElement?.dataset.githubUrl || '';
             const jurisdiction = row.dataset.jurisdiction || 'ny';
             const category = row.dataset.category || '';
             const urgency = row.dataset.urgency || 'standard';
@@ -82,7 +85,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     ${urgencyBadge}
                 </div>
                 <div class="template-card-footer">
-                    <a href="${link}" target="_blank" class="template-card-link">View Template →</a>
+                    <a href="${link}" class="template-link template-card-link" data-template-title="${templateTitle}" data-github-url="${githubUrl}">View Template →</a>
                 </div>
             `;
 
@@ -273,6 +276,124 @@ document.addEventListener('DOMContentLoaded', () => {
         // Close search with Escape
         if (e.key === 'Escape' && searchModal && !searchModal.classList.contains('hidden')) {
             closeSearch();
+        }
+
+        // Close template viewer with Escape
+        const templateModal = document.getElementById('template-modal');
+        if (e.key === 'Escape' && templateModal && !templateModal.classList.contains('hidden')) {
+            closeTemplateViewer();
+        }
+    });
+
+    // Template Viewer Functionality
+    const templateModal = document.getElementById('template-modal');
+    const templateModalTitle = document.getElementById('template-modal-title');
+    const templateModalContent = document.getElementById('template-modal-content');
+    const templateModalClose = document.getElementById('template-modal-close');
+    const templateModalCloseBtn = document.getElementById('template-modal-close-btn');
+    const templateCopyBtn = document.getElementById('template-copy-btn');
+    const templateGithubLink = document.getElementById('template-github-link');
+
+    let currentMarkdownContent = '';
+    let currentTemplatePath = '';
+
+    // Open template viewer
+    async function openTemplateViewer(templatePath, templateTitle, githubUrl) {
+        try {
+            // Show loading state
+            if (templateModalContent) {
+                templateModalContent.innerHTML = '<div class="text-center py-12"><div class="inline-block animate-spin rounded-full h-12 w-12 border-b-2 border-primary"></div><p class="mt-4 text-muted-foreground">Loading template...</p></div>';
+            }
+            if (templateModalTitle) {
+                templateModalTitle.textContent = templateTitle;
+            }
+            if (templateModal) {
+                templateModal.classList.remove('hidden');
+            }
+
+            // Fetch markdown content
+            const response = await fetch(templatePath);
+            if (!response.ok) throw new Error('Failed to load template');
+
+            currentMarkdownContent = await response.text();
+            currentTemplatePath = templatePath;
+
+            // Render markdown
+            if (typeof marked !== 'undefined') {
+                const html = marked.parse(currentMarkdownContent);
+                if (templateModalContent) {
+                    templateModalContent.innerHTML = html;
+                }
+            } else {
+                // Fallback if marked.js doesn't load
+                if (templateModalContent) {
+                    templateModalContent.innerHTML = `<pre>${currentMarkdownContent}</pre>`;
+                }
+            }
+
+            // Update GitHub link
+            if (templateGithubLink) {
+                templateGithubLink.href = githubUrl;
+            }
+        } catch (error) {
+            console.error('Error loading template:', error);
+            if (templateModalContent) {
+                templateModalContent.innerHTML = '<div class="text-center py-12"><p class="text-red-600">Failed to load template. Please try again.</p></div>';
+            }
+        }
+    }
+
+    // Close template viewer
+    function closeTemplateViewer() {
+        if (templateModal) {
+            templateModal.classList.add('hidden');
+        }
+        currentMarkdownContent = '';
+        currentTemplatePath = '';
+    }
+
+    // Copy markdown to clipboard
+    async function copyMarkdownToClipboard() {
+        try {
+            await navigator.clipboard.writeText(currentMarkdownContent);
+            // Show success feedback
+            if (templateCopyBtn) {
+                const originalText = templateCopyBtn.innerHTML;
+                templateCopyBtn.innerHTML = `
+                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+                    </svg>
+                    <span>Copied!</span>
+                `;
+                setTimeout(() => {
+                    templateCopyBtn.innerHTML = originalText;
+                }, 2000);
+            }
+        } catch (error) {
+            console.error('Failed to copy:', error);
+            alert('Failed to copy to clipboard. Please try again.');
+        }
+    }
+
+    // Attach event listeners for template viewer
+    if (templateModalClose) templateModalClose.addEventListener('click', closeTemplateViewer);
+    if (templateModalCloseBtn) templateModalCloseBtn.addEventListener('click', closeTemplateViewer);
+    if (templateCopyBtn) templateCopyBtn.addEventListener('click', copyMarkdownToClipboard);
+    if (templateModal) {
+        templateModal.addEventListener('click', (e) => {
+            if (e.target === templateModal) closeTemplateViewer();
+        });
+    }
+
+    // Intercept template link clicks (for both table and card views)
+    document.addEventListener('click', (e) => {
+        const link = e.target.closest('.template-link');
+        if (link) {
+            e.preventDefault();
+            const templatePath = link.getAttribute('href');
+            const templateTitle = link.dataset.templateTitle || 'Template';
+            const githubUrl = link.dataset.githubUrl || '';
+            openTemplateViewer(templatePath, templateTitle, githubUrl);
         }
     });
 
