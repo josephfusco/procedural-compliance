@@ -48,22 +48,13 @@ header.sticky {
     -webkit-backdrop-filter: blur(10px);
 }
 
-/* Hero section refinement - needs !important to override Tailwind */
-body > section:first-of-type {
+/* Hero section with explicit targeting */
+#hero {
     background-color: rgb(7, 16, 42) !important;
 }
 
-body > section:first-of-type p {
+#hero p {
     color: rgb(174, 146, 97) !important;
-}
-
-/* Ensure main content has white background to prevent hero bleed */
-main {
-    background-color: #ffffff !important;
-}
-
-main section {
-    background-color: #ffffff !important;
 }
 
 /* Smooth scrolling for anchor links */
