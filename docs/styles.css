@@ -48,6 +48,14 @@
 
 #hero p {
     color: rgb(174, 146, 97) !important;
+    position: relative;
+    z-index: 10;
+}
+
+/* Hero content wrapper */
+.hero-content {
+    position: relative;
+    z-index: 10;
 }
 
 /* Lady Justice centered below hero text */
@@ -55,6 +63,8 @@
     height: auto;
     max-width: 150px;
     width: 100%;
+    position: relative;
+    z-index: 1;
 }
 
 /* Legal Foundation disclosure/details element */
