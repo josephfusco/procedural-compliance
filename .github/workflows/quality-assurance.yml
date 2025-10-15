@@ -144,6 +144,43 @@ jobs:
 
           echo "✅ Citation database structure verified"
 
+      - name: Verify template manifest
+        run: |
+          echo "🔍 Verifying template manifest structure..."
+
+          # Check templates/index.json exists
+          if [ ! -f "templates/index.json" ]; then
+            echo "❌ templates/index.json not found"
+            exit 1
+          fi
+
+          # Validate JSON syntax
+          if ! jq empty templates/index.json 2>/dev/null; then
+            echo "❌ templates/index.json has invalid JSON syntax"
+            exit 1
+          fi
+
+          # Check required keys
+          if jq -e '.metadata' templates/index.json > /dev/null && \
+             jq -e '.templates' templates/index.json > /dev/null; then
+            echo "✅ Template manifest has correct structure"
+          else
+            echo "❌ Template manifest missing required keys"
+            exit 1
+          fi
+
+          # Check template count matches
+          MANIFEST_COUNT=$(jq '.templates | length' templates/index.json)
+          FILE_COUNT=$(ls -1 templates/*.md 2>/dev/null | wc -l | tr -d ' ')
+
+          if [ "$MANIFEST_COUNT" -eq "$FILE_COUNT" ]; then
+            echo "✅ Template count matches: $MANIFEST_COUNT templates"
+          else
+            echo "⚠️ Mismatch: $MANIFEST_COUNT in manifest vs $FILE_COUNT files"
+          fi
+
+          echo "✅ Template manifest verified"
+
   markdown-lint:
     name: Markdown Linting
     runs-on: ubuntu-latest

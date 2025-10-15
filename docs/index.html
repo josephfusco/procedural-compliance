@@ -48,6 +48,116 @@
     </script>
 
     <link rel="stylesheet" href="styles.css">
+
+    <!-- Structured Data for AI Agents and SEO -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "ItemList",
+      "name": "Legal Templates - Procedural Enclosure Toolkit",
+      "description": "Open-source legal templates for enforcing procedural compliance in NY and Federal courts",
+      "url": "https://josephfusco.github.io/procedural-enclosure-toolkit/",
+      "numberOfItems": 12,
+      "itemListElement": [
+        {
+          "@type": "Article",
+          "position": 1,
+          "name": "Procedural Enclosure (Universal)",
+          "description": "Universal template for demanding statutory compliance from any role",
+          "url": "https://github.com/josephfusco/procedural-enclosure-toolkit/blob/main/templates/procedural_enclosure_universal.md",
+          "keywords": ["CPLR §2219(a)", "22 NYCRR §202.48(b)", "New York", "procedural-enforcement"]
+        },
+        {
+          "@type": "Article",
+          "position": 2,
+          "name": "Article 78 Mandamus",
+          "description": "Petition to compel performance of duty required by law",
+          "url": "https://github.com/josephfusco/procedural-enclosure-toolkit/blob/main/templates/article78_mandamus.md",
+          "keywords": ["CPLR §7803(1)", "New York", "procedural-enforcement", "urgent"]
+        },
+        {
+          "@type": "Article",
+          "position": 3,
+          "name": "Notice of Appeal",
+          "description": "Notice of appeal to Appellate Division",
+          "url": "https://github.com/josephfusco/procedural-enclosure-toolkit/blob/main/templates/notice_of_appeal.md",
+          "keywords": ["CPLR §5515", "New York", "appeals", "urgent"]
+        },
+        {
+          "@type": "Article",
+          "position": 4,
+          "name": "Emergency Stay",
+          "description": "Motion for stay of enforcement pending appeal",
+          "url": "https://github.com/josephfusco/procedural-enclosure-toolkit/blob/main/templates/emergency_stay.md",
+          "keywords": ["CPLR §5519", "New York", "appeals", "emergency"]
+        },
+        {
+          "@type": "Article",
+          "position": 5,
+          "name": "FOIL Request",
+          "description": "Freedom of Information Law request for records",
+          "url": "https://github.com/josephfusco/procedural-enclosure-toolkit/blob/main/templates/foil_request.md",
+          "keywords": ["Public Officers Law §87", "New York", "transparency"]
+        },
+        {
+          "@type": "Article",
+          "position": 6,
+          "name": "Judicial Conduct Complaint",
+          "description": "Complaint to NY Commission on Judicial Conduct",
+          "url": "https://github.com/josephfusco/procedural-enclosure-toolkit/blob/main/templates/judicial_conduct_complaint.md",
+          "keywords": ["22 NYCRR Part 100", "New York", "oversight"]
+        },
+        {
+          "@type": "Article",
+          "position": 7,
+          "name": "Attorney Grievance",
+          "description": "Complaint to Attorney Grievance Committee",
+          "url": "https://github.com/josephfusco/procedural-enclosure-toolkit/blob/main/templates/attorney_grievance.md",
+          "keywords": ["22 NYCRR Part 1200", "New York", "oversight"]
+        },
+        {
+          "@type": "Article",
+          "position": 8,
+          "name": "Procedural Enclosure - Judge",
+          "description": "Formal demand for judge to issue written decisions",
+          "url": "https://github.com/josephfusco/procedural-enclosure-toolkit/blob/main/templates/enclosure_judge.md",
+          "keywords": ["CPLR §2219(a)", "New York", "procedural-enforcement", "urgent"]
+        },
+        {
+          "@type": "Article",
+          "position": 9,
+          "name": "Procedural Enclosure - Attorney for Child",
+          "description": "Demand for Attorney for Child to fulfill statutory duties",
+          "url": "https://github.com/josephfusco/procedural-enclosure-toolkit/blob/main/templates/enclosure_afc.md",
+          "keywords": ["FCA §§241-249", "New York", "procedural-enforcement"]
+        },
+        {
+          "@type": "Article",
+          "position": 10,
+          "name": "Procedural Enclosure - Assigned Counsel",
+          "description": "Demand for assigned counsel to provide competent representation",
+          "url": "https://github.com/josephfusco/procedural-enclosure-toolkit/blob/main/templates/enclosure_assigned_counsel.md",
+          "keywords": ["RPC 1.2-1.4", "New York", "procedural-enforcement"]
+        },
+        {
+          "@type": "Article",
+          "position": 11,
+          "name": "Procedural Enclosure - Court Clerk",
+          "description": "Demand for court clerk to maintain accurate records",
+          "url": "https://github.com/josephfusco/procedural-enclosure-toolkit/blob/main/templates/enclosure_clerk.md",
+          "keywords": ["CPLR §5017(b)", "New York", "procedural-enforcement"]
+        },
+        {
+          "@type": "Article",
+          "position": 12,
+          "name": "Procedural Enclosure - Opposing Counsel",
+          "description": "Demand for opposing counsel to comply with professional conduct rules",
+          "url": "https://github.com/josephfusco/procedural-enclosure-toolkit/blob/main/templates/enclosure_opposing_counsel.md",
+          "keywords": ["RPC 3.3-3.4", "New York", "procedural-enforcement"]
+        }
+      ]
+    }
+    </script>
 </head>
 <body class="bg-background text-foreground font-sans antialiased">
     <!-- Header -->
@@ -85,11 +195,9 @@
             <div class="container mx-auto px-4 py-3">
                 <div class="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-2 text-sm">
                     <div class="flex items-center space-x-4">
-                        <span class="font-serif font-medium">Procedural Enclosure Toolkit</span>
-                        <span class="text-muted-foreground">•</span>
-                        <span class="text-muted-foreground">12 templates</span>
+                        <span class="font-medium">Open-Source Legal Templates for NY & Federal Courts</span>
                         <span class="text-muted-foreground hidden sm:inline">•</span>
-                        <span class="text-muted-foreground hidden sm:inline">Updated January 2025</span>
+                        <span class="text-muted-foreground hidden sm:inline" id="template-count">12 templates available</span>
                     </div>
                     <div class="flex items-center space-x-2 text-muted-foreground">
                         <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -151,9 +259,229 @@
                     </button>
                 </div>
 
-                <!-- Template Results -->
+                <!-- Template Results - Static HTML (Enhanced by JavaScript) -->
                 <div id="template-results">
-                    <!-- Populated by JavaScript -->
+                    <div class="border border-border rounded-md overflow-hidden">
+                        <table class="table-dense">
+                            <thead>
+                                <tr>
+                                    <th>Template</th>
+                                    <th class="hidden md:table-cell">Jurisdiction</th>
+                                    <th class="hidden lg:table-cell">Urgency</th>
+                                    <th>Actions</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr data-jurisdiction="ny" data-category="procedural-enforcement" data-urgency="standard">
+                                    <td>
+                                        <div class="font-medium text-sm">Procedural Enclosure (Universal)</div>
+                                        <div class="text-xs text-muted-foreground mt-0.5">CPLR §2219(a) - Written Order Requirement</div>
+                                    </td>
+                                    <td class="hidden md:table-cell">
+                                        <span class="badge badge-ny">NY</span>
+                                    </td>
+                                    <td class="hidden lg:table-cell">
+                                        <span class="badge badge-standard">STANDARD</span>
+                                    </td>
+                                    <td>
+                                        <div class="flex items-center space-x-2">
+                                            <a href="https://github.com/josephfusco/procedural-enclosure-toolkit/blob/main/templates/procedural_enclosure_universal.md" target="_blank" class="text-sm text-primary hover:underline">View</a>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr data-jurisdiction="ny" data-category="procedural-enforcement" data-urgency="urgent">
+                                    <td>
+                                        <div class="font-medium text-sm">Article 78 Mandamus</div>
+                                        <div class="text-xs text-muted-foreground mt-0.5">CPLR §7803(1) - Compel Ministerial Duty</div>
+                                    </td>
+                                    <td class="hidden md:table-cell">
+                                        <span class="badge badge-ny">NY</span>
+                                    </td>
+                                    <td class="hidden lg:table-cell">
+                                        <span class="badge badge-urgent">URGENT</span>
+                                    </td>
+                                    <td>
+                                        <div class="flex items-center space-x-2">
+                                            <a href="https://github.com/josephfusco/procedural-enclosure-toolkit/blob/main/templates/article78_mandamus.md" target="_blank" class="text-sm text-primary hover:underline">View</a>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr data-jurisdiction="ny" data-category="appeals" data-urgency="urgent">
+                                    <td>
+                                        <div class="font-medium text-sm">Notice of Appeal</div>
+                                        <div class="text-xs text-muted-foreground mt-0.5">CPLR §5515 - Appellate Procedure</div>
+                                    </td>
+                                    <td class="hidden md:table-cell">
+                                        <span class="badge badge-ny">NY</span>
+                                    </td>
+                                    <td class="hidden lg:table-cell">
+                                        <span class="badge badge-urgent">URGENT</span>
+                                    </td>
+                                    <td>
+                                        <div class="flex items-center space-x-2">
+                                            <a href="https://github.com/josephfusco/procedural-enclosure-toolkit/blob/main/templates/notice_of_appeal.md" target="_blank" class="text-sm text-primary hover:underline">View</a>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr data-jurisdiction="ny" data-category="appeals" data-urgency="emergency">
+                                    <td>
+                                        <div class="font-medium text-sm">Emergency Stay</div>
+                                        <div class="text-xs text-muted-foreground mt-0.5">CPLR §5519 - Stay Pending Appeal</div>
+                                    </td>
+                                    <td class="hidden md:table-cell">
+                                        <span class="badge badge-ny">NY</span>
+                                    </td>
+                                    <td class="hidden lg:table-cell">
+                                        <span class="badge badge-emergency">EMERGENCY</span>
+                                    </td>
+                                    <td>
+                                        <div class="flex items-center space-x-2">
+                                            <a href="https://github.com/josephfusco/procedural-enclosure-toolkit/blob/main/templates/emergency_stay.md" target="_blank" class="text-sm text-primary hover:underline">View</a>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr data-jurisdiction="ny" data-category="transparency" data-urgency="standard">
+                                    <td>
+                                        <div class="font-medium text-sm">FOIL Request</div>
+                                        <div class="text-xs text-muted-foreground mt-0.5">Public Officers Law §87 - Records Request</div>
+                                    </td>
+                                    <td class="hidden md:table-cell">
+                                        <span class="badge badge-ny">NY</span>
+                                    </td>
+                                    <td class="hidden lg:table-cell">
+                                        <span class="badge badge-standard">STANDARD</span>
+                                    </td>
+                                    <td>
+                                        <div class="flex items-center space-x-2">
+                                            <a href="https://github.com/josephfusco/procedural-enclosure-toolkit/blob/main/templates/foil_request.md" target="_blank" class="text-sm text-primary hover:underline">View</a>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr data-jurisdiction="ny" data-category="oversight" data-urgency="standard">
+                                    <td>
+                                        <div class="font-medium text-sm">Judicial Conduct Complaint</div>
+                                        <div class="text-xs text-muted-foreground mt-0.5">22 NYCRR Part 100 - Judicial Ethics</div>
+                                    </td>
+                                    <td class="hidden md:table-cell">
+                                        <span class="badge badge-ny">NY</span>
+                                    </td>
+                                    <td class="hidden lg:table-cell">
+                                        <span class="badge badge-standard">STANDARD</span>
+                                    </td>
+                                    <td>
+                                        <div class="flex items-center space-x-2">
+                                            <a href="https://github.com/josephfusco/procedural-enclosure-toolkit/blob/main/templates/judicial_conduct_complaint.md" target="_blank" class="text-sm text-primary hover:underline">View</a>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr data-jurisdiction="ny" data-category="oversight" data-urgency="standard">
+                                    <td>
+                                        <div class="font-medium text-sm">Attorney Grievance</div>
+                                        <div class="text-xs text-muted-foreground mt-0.5">22 NYCRR Part 1200 - Professional Conduct</div>
+                                    </td>
+                                    <td class="hidden md:table-cell">
+                                        <span class="badge badge-ny">NY</span>
+                                    </td>
+                                    <td class="hidden lg:table-cell">
+                                        <span class="badge badge-standard">STANDARD</span>
+                                    </td>
+                                    <td>
+                                        <div class="flex items-center space-x-2">
+                                            <a href="https://github.com/josephfusco/procedural-enclosure-toolkit/blob/main/templates/attorney_grievance.md" target="_blank" class="text-sm text-primary hover:underline">View</a>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr data-jurisdiction="ny" data-category="procedural-enforcement" data-urgency="urgent">
+                                    <td>
+                                        <div class="font-medium text-sm">Procedural Enclosure - Judge</div>
+                                        <div class="text-xs text-muted-foreground mt-0.5">CPLR §2219(a) - Judicial Compliance</div>
+                                    </td>
+                                    <td class="hidden md:table-cell">
+                                        <span class="badge badge-ny">NY</span>
+                                    </td>
+                                    <td class="hidden lg:table-cell">
+                                        <span class="badge badge-urgent">URGENT</span>
+                                    </td>
+                                    <td>
+                                        <div class="flex items-center space-x-2">
+                                            <a href="https://github.com/josephfusco/procedural-enclosure-toolkit/blob/main/templates/enclosure_judge.md" target="_blank" class="text-sm text-primary hover:underline">View</a>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr data-jurisdiction="ny" data-category="procedural-enforcement" data-urgency="standard">
+                                    <td>
+                                        <div class="font-medium text-sm">Procedural Enclosure - Attorney for Child</div>
+                                        <div class="text-xs text-muted-foreground mt-0.5">FCA §§241-249 - AFC Duties</div>
+                                    </td>
+                                    <td class="hidden md:table-cell">
+                                        <span class="badge badge-ny">NY</span>
+                                    </td>
+                                    <td class="hidden lg:table-cell">
+                                        <span class="badge badge-standard">STANDARD</span>
+                                    </td>
+                                    <td>
+                                        <div class="flex items-center space-x-2">
+                                            <a href="https://github.com/josephfusco/procedural-enclosure-toolkit/blob/main/templates/enclosure_afc.md" target="_blank" class="text-sm text-primary hover:underline">View</a>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr data-jurisdiction="ny" data-category="procedural-enforcement" data-urgency="standard">
+                                    <td>
+                                        <div class="font-medium text-sm">Procedural Enclosure - Assigned Counsel</div>
+                                        <div class="text-xs text-muted-foreground mt-0.5">RPC 1.2-1.4 - Attorney Duties</div>
+                                    </td>
+                                    <td class="hidden md:table-cell">
+                                        <span class="badge badge-ny">NY</span>
+                                    </td>
+                                    <td class="hidden lg:table-cell">
+                                        <span class="badge badge-standard">STANDARD</span>
+                                    </td>
+                                    <td>
+                                        <div class="flex items-center space-x-2">
+                                            <a href="https://github.com/josephfusco/procedural-enclosure-toolkit/blob/main/templates/enclosure_assigned_counsel.md" target="_blank" class="text-sm text-primary hover:underline">View</a>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr data-jurisdiction="ny" data-category="procedural-enforcement" data-urgency="standard">
+                                    <td>
+                                        <div class="font-medium text-sm">Procedural Enclosure - Court Clerk</div>
+                                        <div class="text-xs text-muted-foreground mt-0.5">CPLR §5017(b) - Clerk Duties</div>
+                                    </td>
+                                    <td class="hidden md:table-cell">
+                                        <span class="badge badge-ny">NY</span>
+                                    </td>
+                                    <td class="hidden lg:table-cell">
+                                        <span class="badge badge-standard">STANDARD</span>
+                                    </td>
+                                    <td>
+                                        <div class="flex items-center space-x-2">
+                                            <a href="https://github.com/josephfusco/procedural-enclosure-toolkit/blob/main/templates/enclosure_clerk.md" target="_blank" class="text-sm text-primary hover:underline">View</a>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr data-jurisdiction="ny" data-category="procedural-enforcement" data-urgency="standard">
+                                    <td>
+                                        <div class="font-medium text-sm">Procedural Enclosure - Opposing Counsel</div>
+                                        <div class="text-xs text-muted-foreground mt-0.5">RPC 3.3-3.4 - Ethical Obligations</div>
+                                    </td>
+                                    <td class="hidden md:table-cell">
+                                        <span class="badge badge-ny">NY</span>
+                                    </td>
+                                    <td class="hidden lg:table-cell">
+                                        <span class="badge badge-standard">STANDARD</span>
+                                    </td>
+                                    <td>
+                                        <div class="flex items-center space-x-2">
+                                            <a href="https://github.com/josephfusco/procedural-enclosure-toolkit/blob/main/templates/enclosure_opposing_counsel.md" target="_blank" class="text-sm text-primary hover:underline">View</a>
+                                        </div>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="mt-4 text-sm text-muted-foreground">
+                        Showing 12 templates
+                    </div>
                 </div>
             </div>
         </section>
