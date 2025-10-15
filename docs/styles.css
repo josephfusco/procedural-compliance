@@ -41,13 +41,6 @@
     margin: 0;
 }
 
-/* Sticky header elevation */
-header.sticky {
-    box-shadow: var(--shadow-md);
-    backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px);
-}
-
 /* Hero section with explicit targeting */
 #hero {
     background-color: rgb(7, 16, 42) !important;
