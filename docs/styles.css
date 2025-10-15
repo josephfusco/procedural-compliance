@@ -109,12 +109,10 @@ code {
     color: #ffffff;
 }
 
-/* Flag icon styles */
-.badge-flag {
+/* US Flag image for federal badges - following US.gov design pattern */
+.badge-flag-img {
     width: 1rem;
-    height: 0.75rem;
-    border: 1px solid rgba(255, 255, 255, 0.3);
-    border-radius: 0.125rem;
+    height: auto;
     flex-shrink: 0;
 }
 

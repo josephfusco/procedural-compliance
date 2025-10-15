@@ -55,10 +55,10 @@ document.addEventListener('DOMContentLoaded', () => {
             const category = row.dataset.category || '';
             const urgency = row.dataset.urgency || 'standard';
 
-            // Determine jurisdiction badge with flag icon
+            // Determine jurisdiction badge - NY is text-only, Federal uses US flag image
             const jurisdictionBadge = jurisdiction === 'ny'
-                ? '<span class="badge badge-ny"><svg class="badge-flag" role="img" aria-label="New York State Flag"><use href="#flag-ny"></use></svg><span>NY</span></span>'
-                : '<span class="badge badge-federal"><svg class="badge-flag" role="img" aria-label="United States Flag"><use href="#flag-us"></use></svg><span>Federal</span></span>';
+                ? '<span class="badge badge-ny">NY</span>'
+                : '<span class="badge badge-federal"><img src="us_flag_small.png" class="badge-flag-img" alt="U.S. flag" loading="lazy"><span>Federal</span></span>';
 
             // Determine urgency badge
             let urgencyBadge = '<span class="badge badge-standard">STANDARD</span>';
@@ -251,9 +251,10 @@ document.addEventListener('DOMContentLoaded', () => {
             const link = row.querySelector('a')?.href || '';
             const jurisdiction = row.dataset.jurisdiction || 'ny';
 
-            const flagIcon = jurisdiction === 'ny'
-                ? '<svg class="badge-flag" role="img" aria-label="New York State Flag"><use href="#flag-ny"></use></svg>'
-                : '<svg class="badge-flag" role="img" aria-label="United States Flag"><use href="#flag-us"></use></svg>';
+            // NY is text-only badge, Federal includes US flag image
+            const badgeContent = jurisdiction === 'ny'
+                ? 'NY'
+                : '<img src="us_flag_small.png" class="badge-flag-img" alt="U.S. flag" loading="lazy"><span>Federal</span>';
 
             return `
                 <a href="${link}" target="_blank" class="block px-3 py-2 rounded-md hover:bg-muted transition-colors">
@@ -262,7 +263,7 @@ document.addEventListener('DOMContentLoaded', () => {
                             <div class="font-medium text-sm">${title}</div>
                             <div class="text-xs text-muted-foreground">${subtitle}</div>
                         </div>
-                        <span class="badge badge-${jurisdiction} ml-2">${flagIcon}<span>${jurisdiction === 'ny' ? 'NY' : 'Federal'}</span></span>
+                        <span class="badge badge-${jurisdiction} ml-2">${badgeContent}</span>
                     </div>
                 </a>
             `;
