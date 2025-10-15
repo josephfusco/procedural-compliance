@@ -10,6 +10,33 @@
     --border: #e5e7eb;
 }
 
+/* US Government-style banner (open source project) */
+.gov-banner {
+    background-color: #f0f0f0;
+    border-bottom: 1px solid #dcdee0;
+    font-size: 0.8125rem;
+}
+
+.gov-banner-flag {
+    width: 1rem;
+    height: auto;
+    flex-shrink: 0;
+}
+
+.gov-banner-text {
+    font-weight: 600;
+    color: #1b1b1b;
+    line-height: 1.3;
+    margin: 0;
+}
+
+.gov-banner-subtext {
+    font-size: 0.6875rem;
+    color: #71767a;
+    line-height: 1.3;
+    margin: 0;
+}
+
 /* Smooth scrolling for anchor links */
 html {
     scroll-behavior: smooth;
