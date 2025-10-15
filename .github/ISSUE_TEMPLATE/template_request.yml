@@ -1,0 +1,122 @@
+name: Template Request
+description: Request a new legal template for a specific situation
+title: "[Template Request]: "
+labels: ["template-request", "enhancement"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for your template request! Help us understand what you need.
+
+  - type: dropdown
+    id: jurisdiction
+    attributes:
+      label: Jurisdiction
+      description: Which court system?
+      options:
+        - New York State Courts
+        - Federal Courts (US District, Circuit, Supreme)
+        - California
+        - Texas
+        - Florida
+        - Other (specify in description)
+    validations:
+      required: true
+
+  - type: input
+    id: court-type
+    attributes:
+      label: Specific Court
+      description: Which court would this be filed in?
+      placeholder: "e.g., Supreme Court (NY), Family Court, US District Court SDNY"
+    validations:
+      required: true
+
+  - type: textarea
+    id: situation
+    attributes:
+      label: Situation Description
+      description: Describe the legal situation this template would address
+      placeholder: |
+        Example: "I need to request a hearing date after judge failed to schedule one
+        within required timeframe under Family Court Act §1028(b)."
+
+        IMPORTANT: Anonymize all details - no real names, case numbers, or identifying info.
+    validations:
+      required: true
+
+  - type: textarea
+    id: relief
+    attributes:
+      label: Relief Sought
+      description: What would this template ask the court to do?
+      placeholder: |
+        Example: "Order court to schedule hearing within 30 days as required by statute,
+        or alternatively compel compliance through mandamus."
+    validations:
+      required: true
+
+  - type: textarea
+    id: authorities
+    attributes:
+      label: Legal Authorities
+      description: List relevant statutes, rules, or cases
+      placeholder: |
+        - Family Court Act §1028(b)
+        - CPLR Article 78
+        - 22 NYCRR §202.48(b)
+        - [Case law if known]
+    validations:
+      required: true
+
+  - type: textarea
+    id: existing-templates
+    attributes:
+      label: Why Existing Templates Don't Fit
+      description: Have you reviewed existing templates? Why don't they work for this situation?
+      placeholder: |
+        "I reviewed the procedural enclosure template, but it's for written decisions.
+        I need a template specifically for compelling scheduling of a required hearing."
+
+  - type: dropdown
+    id: urgency
+    attributes:
+      label: Urgency Level
+      options:
+        - Low (no immediate deadline)
+        - Medium (deadline within 30+ days)
+        - High (deadline within 7-30 days)
+        - Emergency (deadline within 7 days)
+
+  - type: textarea
+    id: research
+    attributes:
+      label: Research Done (Optional)
+      description: Have you found similar templates elsewhere, or relevant case law?
+      placeholder: "Link to similar templates or note if you've researched this issue"
+
+  - type: dropdown
+    id: contribute
+    attributes:
+      label: Would you be willing to help draft this template?
+      description: If you have legal research or writing skills
+      options:
+        - Yes, I can help draft
+        - Yes, I can help review
+        - No, but I can test it
+        - No, just requesting
+
+  - type: checkboxes
+    id: terms
+    attributes:
+      label: Verification
+      description: Confirm the following
+      options:
+        - label: I have anonymized all case-specific information
+          required: true
+        - label: I have searched existing templates and this is not covered
+          required: true
+        - label: This request complies with ethical guidelines (no UPL)
+          required: true
+        - label: I have read and agree to the Code of Conduct
+          required: true

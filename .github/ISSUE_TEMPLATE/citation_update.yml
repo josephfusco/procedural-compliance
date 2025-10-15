@@ -1,0 +1,112 @@
+name: Citation Update
+description: Report outdated, incorrect, or missing citations
+title: "[Citation]: "
+labels: ["citation-update"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Help us maintain Cornell Law precision by reporting citation issues!
+
+  - type: dropdown
+    id: issue-type
+    attributes:
+      label: Type of Citation Issue
+      options:
+        - Outdated (statute/rule amended)
+        - Incorrect (wrong citation or text)
+        - Overruled (case law no longer good)
+        - Missing (authority should be cited)
+        - Formatting (citation format wrong)
+    validations:
+      required: true
+
+  - type: input
+    id: citation
+    attributes:
+      label: Citation in Question
+      description: Exact citation as it appears
+      placeholder: "CPLR §2219(a) or Apfel v. Prudential-Bache, 81 N.Y.2d 470 (1993)"
+    validations:
+      required: true
+
+  - type: input
+    id: file-location
+    attributes:
+      label: File Location
+      description: Where is this citation used?
+      placeholder: "templates/procedural_enclosure.md, line 45"
+    validations:
+      required: true
+
+  - type: textarea
+    id: problem
+    attributes:
+      label: What's Wrong?
+      description: Describe the issue with this citation
+      placeholder: |
+        Example: "CPLR §2219(a) was amended in June 2024 to include additional
+        language about electronic orders. Current template doesn't reflect amendment."
+    validations:
+      required: true
+
+  - type: textarea
+    id: correction
+    attributes:
+      label: Suggested Correction
+      description: What should it say instead?
+      placeholder: |
+        "CPLR §2219(a) (as amended June 15, 2024) now states: '[new text]'..."
+    validations:
+      required: true
+
+  - type: input
+    id: verification-source
+    attributes:
+      label: Official Source for Verification
+      description: Link to official source (NY Senate, U.S. Code, court website)
+      placeholder: "https://www.nysenate.gov/legislation/laws/CVP/2219"
+    validations:
+      required: true
+
+  - type: dropdown
+    id: jurisdiction
+    attributes:
+      label: Jurisdiction
+      options:
+        - New York
+        - Federal
+        - Both
+        - Other
+
+  - type: textarea
+    id: impact
+    attributes:
+      label: Impact Assessment
+      description: How critical is this fix?
+      placeholder: |
+        - Does this affect substantive legal rights?
+        - Could using old citation cause problems?
+        - How many templates are affected?
+
+  - type: textarea
+    id: additional-research
+    attributes:
+      label: Additional Research (Optional)
+      description: Related cases, secondary sources, or analysis
+      placeholder: "Include case law analysis, law review articles, or practice guides if relevant"
+
+  - type: checkboxes
+    id: verification
+    attributes:
+      label: Verification Checklist
+      description: Confirm you've verified this issue
+      options:
+        - label: I have checked the official source (not relying on AI or unofficial sites)
+          required: true
+        - label: I have identified all affected files (if known)
+          required: true
+        - label: I have reviewed current update log (/citations/update-log.md)
+          required: true
+        - label: This is not already a known issue in update log
+          required: true

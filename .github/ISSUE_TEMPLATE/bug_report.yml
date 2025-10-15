@@ -1,0 +1,106 @@
+name: Bug Report
+description: File a bug report for templates, scripts, or website issues
+title: "[Bug]: "
+labels: ["bug"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for taking the time to report a bug! Please fill out the sections below.
+
+  - type: dropdown
+    id: area
+    attributes:
+      label: What area is affected?
+      options:
+        - Template (incorrect citation, formatting issue)
+        - Script (validation, citation checker, grading)
+        - Website (GitHub Pages interface)
+        - Documentation (README, guides, tutorials)
+        - Citation Database (JSON files)
+        - Other
+    validations:
+      required: true
+
+  - type: textarea
+    id: description
+    attributes:
+      label: Bug Description
+      description: Clear and concise description of the bug
+      placeholder: "When I use the procedural enclosure template, the citation for CPLR §2219(a) is formatted incorrectly..."
+    validations:
+      required: true
+
+  - type: textarea
+    id: reproduction
+    attributes:
+      label: Steps to Reproduce
+      description: Steps to reproduce the behavior
+      placeholder: |
+        1. Open template '...'
+        2. Navigate to section '...'
+        3. Look at citation '...'
+        4. See error
+    validations:
+      required: true
+
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected Behavior
+      description: What you expected to happen
+      placeholder: "Citation should be 'CPLR §2219(a)' not 'CPLR 2219(a)'"
+    validations:
+      required: true
+
+  - type: textarea
+    id: actual
+    attributes:
+      label: Actual Behavior
+      description: What actually happened
+      placeholder: "Citation is missing '§' symbol"
+    validations:
+      required: true
+
+  - type: input
+    id: file
+    attributes:
+      label: Affected File
+      description: Which file has the bug?
+      placeholder: "templates/procedural_enclosure.md"
+
+  - type: dropdown
+    id: severity
+    attributes:
+      label: Severity
+      options:
+        - Low (cosmetic issue)
+        - Medium (incorrect information, but obvious)
+        - High (misleading or dangerous error)
+        - Critical (breaks functionality)
+
+  - type: textarea
+    id: environment
+    attributes:
+      label: Environment (if website bug)
+      description: Browser, OS, device
+      placeholder: |
+        - OS: macOS 14.0
+        - Browser: Chrome 120
+        - Device: Desktop
+
+  - type: textarea
+    id: additional
+    attributes:
+      label: Additional Context
+      description: Screenshots, links, or other relevant information
+      placeholder: "Attach screenshot or provide link to specific line"
+
+  - type: checkboxes
+    id: terms
+    attributes:
+      label: Code of Conduct
+      description: By submitting this issue, you agree to follow our Code of Conduct
+      options:
+        - label: I have read and agree to the Code of Conduct
+          required: true
