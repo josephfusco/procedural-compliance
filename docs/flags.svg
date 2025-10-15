@@ -1,0 +1,99 @@
+<svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
+  <!-- NY State Flag - Simplified version with blue field and coat of arms -->
+  <symbol id="flag-ny" viewBox="0 0 32 24">
+    <title>New York State Flag</title>
+    <!-- Blue field -->
+    <rect width="32" height="24" fill="#003f87"/>
+
+    <!-- Simplified coat of arms silhouette in center -->
+    <g transform="translate(16, 12)">
+      <!-- Shield -->
+      <path d="M-4,-6 L-4,4 Q-4,6 -2,7 L0,8 L2,7 Q4,6 4,4 L4,-6 Z" fill="#ffffff"/>
+
+      <!-- Eagle wings simplified -->
+      <ellipse cx="0" cy="-7" rx="5" ry="2" fill="#b8860b"/>
+
+      <!-- Supporters (Liberty and Justice figures as simple pillars) -->
+      <rect x="-6" y="-4" width="1" height="10" fill="#ffffff" opacity="0.8"/>
+      <rect x="5" y="-4" width="1" height="10" fill="#ffffff" opacity="0.8"/>
+    </g>
+  </symbol>
+
+  <!-- US Flag - Simplified version following US.gov design patterns -->
+  <symbol id="flag-us" viewBox="0 0 32 24">
+    <title>United States Flag</title>
+    <!-- Stripes -->
+    <rect width="32" height="1.846" y="0" fill="#b22234"/>
+    <rect width="32" height="1.846" y="1.846" fill="#ffffff"/>
+    <rect width="32" height="1.846" y="3.692" fill="#b22234"/>
+    <rect width="32" height="1.846" y="5.538" fill="#ffffff"/>
+    <rect width="32" height="1.846" y="7.384" fill="#b22234"/>
+    <rect width="32" height="1.846" y="9.23" fill="#ffffff"/>
+    <rect width="32" height="1.846" y="11.076" fill="#b22234"/>
+    <rect width="32" height="1.846" y="12.922" fill="#ffffff"/>
+    <rect width="32" height="1.846" y="14.768" fill="#b22234"/>
+    <rect width="32" height="1.846" y="16.614" fill="#ffffff"/>
+    <rect width="32" height="1.846" y="18.46" fill="#b22234"/>
+    <rect width="32" height="1.846" y="20.306" fill="#ffffff"/>
+    <rect width="32" height="1.846" y="22.152" fill="#b22234"/>
+
+    <!-- Canton (blue field with stars) -->
+    <rect width="12.8" height="12.922" fill="#3c3b6e"/>
+
+    <!-- Simplified star field (5x6 grid represented as dots for clean appearance at small sizes) -->
+    <g fill="#ffffff">
+      <!-- Row 1 (6 stars) -->
+      <circle cx="1.6" cy="1.5" r="0.4"/>
+      <circle cx="3.2" cy="1.5" r="0.4"/>
+      <circle cx="4.8" cy="1.5" r="0.4"/>
+      <circle cx="6.4" cy="1.5" r="0.4"/>
+      <circle cx="8" cy="1.5" r="0.4"/>
+      <circle cx="9.6" cy="1.5" r="0.4"/>
+
+      <!-- Row 2 (5 stars offset) -->
+      <circle cx="2.4" cy="3" r="0.4"/>
+      <circle cx="4" cy="3" r="0.4"/>
+      <circle cx="5.6" cy="3" r="0.4"/>
+      <circle cx="7.2" cy="3" r="0.4"/>
+      <circle cx="8.8" cy="3" r="0.4"/>
+
+      <!-- Row 3 (6 stars) -->
+      <circle cx="1.6" cy="4.5" r="0.4"/>
+      <circle cx="3.2" cy="4.5" r="0.4"/>
+      <circle cx="4.8" cy="4.5" r="0.4"/>
+      <circle cx="6.4" cy="4.5" r="0.4"/>
+      <circle cx="8" cy="4.5" r="0.4"/>
+      <circle cx="9.6" cy="4.5" r="0.4"/>
+
+      <!-- Row 4 (5 stars offset) -->
+      <circle cx="2.4" cy="6" r="0.4"/>
+      <circle cx="4" cy="6" r="0.4"/>
+      <circle cx="5.6" cy="6" r="0.4"/>
+      <circle cx="7.2" cy="6" r="0.4"/>
+      <circle cx="8.8" cy="6" r="0.4"/>
+
+      <!-- Row 5 (6 stars) -->
+      <circle cx="1.6" cy="7.5" r="0.4"/>
+      <circle cx="3.2" cy="7.5" r="0.4"/>
+      <circle cx="4.8" cy="7.5" r="0.4"/>
+      <circle cx="6.4" cy="7.5" r="0.4"/>
+      <circle cx="8" cy="7.5" r="0.4"/>
+      <circle cx="9.6" cy="7.5" r="0.4"/>
+
+      <!-- Row 6 (5 stars offset) -->
+      <circle cx="2.4" cy="9" r="0.4"/>
+      <circle cx="4" cy="9" r="0.4"/>
+      <circle cx="5.6" cy="9" r="0.4"/>
+      <circle cx="7.2" cy="9" r="0.4"/>
+      <circle cx="8.8" cy="9" r="0.4"/>
+
+      <!-- Row 7 (6 stars) -->
+      <circle cx="1.6" cy="10.5" r="0.4"/>
+      <circle cx="3.2" cy="10.5" r="0.4"/>
+      <circle cx="4.8" cy="10.5" r="0.4"/>
+      <circle cx="6.4" cy="10.5" r="0.4"/>
+      <circle cx="8" cy="10.5" r="0.4"/>
+      <circle cx="9.6" cy="10.5" r="0.4"/>
+    </g>
+  </symbol>
+</svg>
