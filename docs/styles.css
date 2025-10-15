@@ -48,23 +48,22 @@ header.sticky {
     -webkit-backdrop-filter: blur(10px);
 }
 
-/* Hero section refinement */
-section:first-of-type {
-    background-color: rgb(7, 16, 42);
+/* Hero section refinement - needs !important to override Tailwind */
+body > section:first-of-type {
+    background-color: rgb(7, 16, 42) !important;
 }
 
-section:first-of-type p {
-    color: rgb(174, 146, 97);
+body > section:first-of-type p {
+    color: rgb(174, 146, 97) !important;
 }
 
 /* Ensure main content has white background to prevent hero bleed */
 main {
-    background-color: #ffffff;
+    background-color: #ffffff !important;
 }
 
-/* All sections except first (hero) get white background */
-section:not(:first-of-type) {
-    background-color: #ffffff;
+main section {
+    background-color: #ffffff !important;
 }
 
 /* Smooth scrolling for anchor links */
