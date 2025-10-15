@@ -44,10 +44,27 @@
 /* Hero section with explicit targeting */
 #hero {
     background-color: rgb(7, 16, 42) !important;
+    position: relative;
+    min-height: 200px;
 }
 
 #hero p {
     color: rgb(174, 146, 97) !important;
+}
+
+/* Lady Justice positioned at left viewport edge */
+.hero-justice {
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: auto;
+    object-fit: contain;
+}
+
+/* Hero content with left padding to avoid Lady Justice overlap */
+.hero-content {
+    padding-left: 100px;
 }
 
 /* Legal Foundation disclosure/details element */
@@ -70,7 +87,7 @@ html {
 
 /* Container max-width for focused, information-dense layout */
 .container {
-    max-width: 800px;
+    max-width: 700px;
 }
 
 /* Typography enhancements */
