@@ -193,12 +193,6 @@ document.addEventListener('DOMContentLoaded', () => {
         if (countElement) {
             countElement.textContent = `Showing ${visibleCount} template${visibleCount !== 1 ? 's' : ''}`;
         }
-
-        // Update info bar count
-        const infoBarCount = document.getElementById('template-count');
-        if (infoBarCount) {
-            infoBarCount.textContent = `${visibleCount} template${visibleCount !== 1 ? 's' : ''} available`;
-        }
     }
 
     // Search functionality
