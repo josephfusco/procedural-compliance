@@ -50,6 +50,19 @@
     color: rgb(174, 146, 97) !important;
 }
 
+/* Legal Foundation disclosure/details element */
+.legal-foundation-disclosure[open] .disclosure-arrow {
+    transform: rotate(90deg);
+}
+
+.legal-foundation-disclosure summary::-webkit-details-marker {
+    display: none;
+}
+
+.legal-foundation-disclosure summary {
+    list-style: none;
+}
+
 /* Smooth scrolling for anchor links */
 html {
     scroll-behavior: smooth;
