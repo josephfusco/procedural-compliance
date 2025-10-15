@@ -57,6 +57,16 @@ section:first-of-type p {
     color: rgb(174, 146, 97);
 }
 
+/* Ensure main content has white background to prevent hero bleed */
+main {
+    background-color: #ffffff;
+}
+
+/* All sections except first (hero) get white background */
+section:not(:first-of-type) {
+    background-color: #ffffff;
+}
+
 /* Smooth scrolling for anchor links */
 html {
     scroll-behavior: smooth;
