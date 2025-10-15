@@ -397,6 +397,85 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 
+    // Intercept guide link clicks (guides are also markdown, use same viewer)
+    document.addEventListener('click', (e) => {
+        const link = e.target.closest('.guide-link');
+        if (link) {
+            e.preventDefault();
+            const guidePath = link.getAttribute('href');
+            const guideTitle = link.dataset.guideTitle || 'Guide';
+            const githubUrl = link.dataset.githubUrl || '';
+            openTemplateViewer(guidePath, guideTitle, githubUrl);
+        }
+    });
+
+    // Intercept citation link clicks (JSON files)
+    document.addEventListener('click', (e) => {
+        const link = e.target.closest('.citation-link');
+        if (link) {
+            e.preventDefault();
+            const citationPath = link.getAttribute('href');
+            const citationTitle = link.dataset.citationTitle || 'Citation';
+            const githubUrl = link.dataset.githubUrl || '';
+            openCitationViewer(citationPath, citationTitle, githubUrl);
+        }
+    });
+
+    // Open citation viewer for JSON files
+    async function openCitationViewer(citationPath, citationTitle, githubUrl) {
+        try {
+            // Show loading state
+            if (templateModalProse) {
+                templateModalProse.innerHTML = '<div class="text-center py-12"><div class="inline-block animate-spin rounded-full h-12 w-12 border-b-2 border-primary"></div><p class="mt-4 text-muted-foreground">Loading citation database...</p></div>';
+            }
+            if (templateModalTitle) {
+                templateModalTitle.textContent = citationTitle;
+            }
+            if (templateModal) {
+                templateModal.classList.remove('hidden');
+            }
+
+            // Fetch JSON content
+            const response = await fetch(citationPath);
+            if (!response.ok) throw new Error('Failed to load citation');
+
+            const jsonData = await response.json();
+            currentMarkdownContent = JSON.stringify(jsonData, null, 2);
+            currentTemplatePath = citationPath;
+
+            // Format JSON as readable HTML
+            let html = '<div class="citation-viewer"><pre class="language-json"><code>';
+            html += escapeHtml(JSON.stringify(jsonData, null, 2));
+            html += '</code></pre></div>';
+
+            if (templateModalProse) {
+                templateModalProse.innerHTML = html;
+            }
+
+            // Update GitHub link
+            if (templateGithubLink) {
+                templateGithubLink.href = githubUrl;
+            }
+        } catch (error) {
+            console.error('Error loading citation:', error);
+            if (templateModalProse) {
+                templateModalProse.innerHTML = '<div class="text-center py-12"><p class="text-red-600">Failed to load citation. Please try again.</p></div>';
+            }
+        }
+    }
+
+    // Helper function to escape HTML
+    function escapeHtml(text) {
+        const map = {
+            '&': '&amp;',
+            '<': '&lt;',
+            '>': '&gt;',
+            '"': '&quot;',
+            "'": '&#039;'
+        };
+        return text.replace(/[&<>"']/g, m => map[m]);
+    }
+
     // Attach event listeners
     if (jurisdictionFilter) jurisdictionFilter.addEventListener('change', applyFilters);
     if (categoryFilter) categoryFilter.addEventListener('change', applyFilters);

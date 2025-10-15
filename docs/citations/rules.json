@@ -1,0 +1,374 @@
+{
+  "metadata": {
+    "title": "Procedural Enclosure Toolkit - Court Rules Database",
+    "version": "1.0.0",
+    "last_updated": "2025-01-15",
+    "jurisdiction_focus": ["new-york", "federal"],
+    "verification_required": "Court rules change periodically. Always verify with official court sources before filing.",
+    "note": "Includes local rules and procedures for NY and federal courts"
+  },
+  "new_york": {
+    "appellate_divisions": {
+      "first_department": {
+        "name": "Appellate Division, First Department",
+        "coverage": "Manhattan, Bronx",
+        "courthouse": "27 Madison Avenue, New York, NY 10010",
+        "url": "https://nycourts.gov/courts/ad1/",
+        "rules_url": "https://nycourts.gov/courts/ad1/rules&procedures/rulesindex.shtml",
+        "key_rules": {
+          "22_nycrr_600": {
+            "citation": "22 NYCRR Part 600",
+            "title": "Rules of Practice - First Department",
+            "sections": {
+              "600.5": "Motion practice",
+              "600.10": "Perfection of appeals",
+              "600.11": "Pre-argument statements"
+            }
+          },
+          "22_nycrr_670": {
+            "citation": "22 NYCRR Part 670",
+            "title": "Attorney discipline - First Department",
+            "note": "Departmental Disciplinary Committee procedures"
+          }
+        },
+        "appeal_deadlines": {
+          "perfection": "9 months from notice of appeal (generally)",
+          "brief_service": "Per calendar scheduling"
+        },
+        "contact": {
+          "clerk": "(212) 340-0400",
+          "grievance_committee": "(212) 401-0800",
+          "address_grievance": "61 Broadway, 2nd Floor, New York, NY 10006"
+        }
+      },
+      "second_department": {
+        "name": "Appellate Division, Second Department",
+        "coverage": "Brooklyn, Queens, Staten Island, Nassau, Suffolk, Westchester, Rockland, Orange, Dutchess, Putnam",
+        "courthouse": "45 Monroe Place, Brooklyn, NY 11201",
+        "url": "https://nycourts.gov/courts/ad2/",
+        "rules_url": "https://nycourts.gov/courts/ad2/practiceRules.shtml",
+        "key_rules": {
+          "22_nycrr_670": {
+            "citation": "22 NYCRR Part 670",
+            "title": "Rules of Practice - Second Department",
+            "sections": {
+              "670.8": "Perfection of civil appeals",
+              "670.5": "Motion practice"
+            }
+          },
+          "22_nycrr_691": {
+            "citation": "22 NYCRR Part 691",
+            "title": "Attorney discipline - Second Department"
+          }
+        },
+        "appeal_deadlines": {
+          "perfection": "9 months from notice of appeal (generally)",
+          "brief_service": "Per calendar scheduling"
+        },
+        "contact": {
+          "clerk": "(718) 875-1300",
+          "grievance_committee": "(718) 923-6300",
+          "address_grievance": "Renaissance Plaza, 335 Adams Street, Suite 2400, Brooklyn, NY 11201"
+        }
+      },
+      "third_department": {
+        "name": "Appellate Division, Third Department",
+        "coverage": "Albany and upstate counties",
+        "courthouse": "Justice Building, Empire State Plaza, Albany, NY 12223",
+        "url": "https://nycourts.gov/courts/ad3/",
+        "rules_url": "https://nycourts.gov/courts/ad3/practiceRules/index.shtml",
+        "key_rules": {
+          "22_nycrr_800": {
+            "citation": "22 NYCRR Part 800",
+            "title": "Rules of Practice - Third Department"
+          },
+          "22_nycrr_806": {
+            "citation": "22 NYCRR Part 806",
+            "title": "Attorney discipline - Third Department"
+          }
+        },
+        "contact": {
+          "clerk": "(518) 471-4777",
+          "grievance_committee": "(518) 474-8816",
+          "address_grievance": "O'Brien Building, 40 Beaver Street, Suite 202, Albany, NY 12207"
+        }
+      },
+      "fourth_department": {
+        "name": "Appellate Division, Fourth Department",
+        "coverage": "Buffalo, Rochester, Syracuse regions",
+        "courthouse": "50 East Avenue, Rochester, NY 14604",
+        "url": "https://nycourts.gov/courts/ad4/",
+        "rules_url": "https://nycourts.gov/courts/ad4/practice/index.shtml",
+        "key_rules": {
+          "22_nycrr_1000": {
+            "citation": "22 NYCRR Part 1000",
+            "title": "Rules of Practice - Fourth Department"
+          },
+          "22_nycrr_1022": {
+            "citation": "22 NYCRR Part 1022",
+            "title": "Attorney discipline - Fourth Department"
+          }
+        },
+        "contact": {
+          "clerk": "(585) 530-3100",
+          "grievance_committee": "(716) 845-3630",
+          "address_grievance": "1036 Ellicott Square Building, 295 Main Street, Buffalo, NY 14203"
+        }
+      }
+    },
+    "trial_courts": {
+      "supreme_court": {
+        "name": "New York Supreme Court (trial level)",
+        "note": "Despite name, this is the trial-level court of general jurisdiction",
+        "key_rules": {
+          "22_nycrr_202": {
+            "citation": "22 NYCRR Part 202",
+            "title": "Uniform Civil Rules for the Supreme Court and County Court",
+            "key_sections": {
+              "202.5": "Individual assignment system",
+              "202.7": "Alternate dispute resolution",
+              "202.8": "Motion procedures",
+              "202.48": "Submission of orders, judgments and decrees",
+              "202.70": "Differentiated case management"
+            }
+          },
+          "22_nycrr_207": {
+            "citation": "22 NYCRR Part 207",
+            "title": "Matrimonial actions",
+            "note": "Special procedures for divorce and family law in Supreme Court"
+          }
+        },
+        "e_filing": {
+          "system": "NYSCEF (New York State Courts Electronic Filing)",
+          "url": "https://iapps.courts.state.ny.us/nyscef/",
+          "mandatory_counties": [
+            "New York (Manhattan)",
+            "Kings (Brooklyn)",
+            "Queens",
+            "Bronx",
+            "Richmond (Staten Island)",
+            "Nassau",
+            "Suffolk",
+            "Westchester",
+            "Erie",
+            "Monroe",
+            "Onondaga"
+          ],
+          "rules": "22 NYCRR §202.5-b"
+        }
+      },
+      "family_court": {
+        "name": "New York Family Court",
+        "jurisdiction": "Child custody, support, abuse/neglect, juvenile delinquency",
+        "key_rules": {
+          "22_nycrr_205": {
+            "citation": "22 NYCRR Part 205",
+            "title": "Uniform Rules for Family Court",
+            "key_sections": {
+              "205.5": "Individual assignment",
+              "205.8": "Motion procedures"
+            }
+          }
+        },
+        "note": "Family Court Act (FCA) governs substantive law; 22 NYCRR Part 205 governs procedure"
+      },
+      "surrogate_court": {
+        "name": "New York Surrogate's Court",
+        "jurisdiction": "Estates, wills, trusts, guardianships",
+        "key_rules": {
+          "22_nycrr_207": {
+            "citation": "22 NYCRR Part 207",
+            "title": "Uniform Rules for Surrogate's Court"
+          }
+        }
+      }
+    },
+    "judicial_conduct": {
+      "commission": {
+        "name": "New York State Commission on Judicial Conduct",
+        "address": "Corning Tower, Suite 2301, Empire State Plaza, Albany, NY 12223",
+        "phone": "(518) 453-4600",
+        "url": "https://cjc.ny.gov/",
+        "rules": {
+          "22_nycrr_100": {
+            "citation": "22 NYCRR Part 100",
+            "title": "Rules of the Chief Judge - Code of Judicial Conduct",
+            "key_sections": {
+              "100.1": "General provisions",
+              "100.2": "Integrity and impartiality",
+              "100.3": "Adjudicative responsibilities",
+              "100.4": "Extrajudicial activities"
+            }
+          },
+          "22_nycrr_7000": {
+            "citation": "22 NYCRR Part 7000",
+            "title": "Rules of the Commission on Judicial Conduct",
+            "note": "Procedural rules for filing and investigating complaints"
+          }
+        }
+      }
+    }
+  },
+  "federal": {
+    "districts": {
+      "sdny": {
+        "name": "U.S. District Court for the Southern District of New York",
+        "coverage": "Manhattan, Bronx, Westchester, Rockland, Putnam, Orange, Dutchess, Sullivan",
+        "courthouse": "500 Pearl Street, New York, NY 10007",
+        "url": "https://nysd.uscourts.gov/",
+        "local_rules_url": "https://nysd.uscourts.gov/rules/rules",
+        "key_local_rules": {
+          "civil_rule_1": "Scope of rules",
+          "civil_rule_3": "Service and filing of pleadings",
+          "civil_rule_6": "Discovery procedures",
+          "civil_rule_7": "Motion practice",
+          "civil_rule_56": "Summary judgment procedures"
+        },
+        "e_filing": {
+          "system": "CM/ECF (Case Management/Electronic Case Files)",
+          "url": "https://ecf.nysd.uscourts.gov/",
+          "registration_required": true,
+          "training": "https://nysd.uscourts.gov/ecf-info"
+        },
+        "fees": {
+          "civil_complaint": "$402",
+          "notice_of_appeal": "$505",
+          "ifp_available": "28 U.S.C. §1915"
+        },
+        "contact": {
+          "clerk": "(212) 805-0136",
+          "pro_se_office": "(212) 805-0175"
+        }
+      },
+      "edny": {
+        "name": "U.S. District Court for the Eastern District of New York",
+        "coverage": "Brooklyn, Queens, Staten Island, Nassau, Suffolk",
+        "courthouse": "225 Cadman Plaza East, Brooklyn, NY 11201",
+        "url": "https://nyed.uscourts.gov/",
+        "local_rules_url": "https://nyed.uscourts.gov/rules",
+        "key_local_rules": {
+          "civil_rule_7": "Motion practice",
+          "civil_rule_26": "Discovery procedures",
+          "civil_rule_56": "Summary judgment"
+        },
+        "e_filing": {
+          "system": "CM/ECF",
+          "url": "https://ecf.nyed.uscourts.gov/"
+        },
+        "contact": {
+          "clerk": "(718) 613-2600"
+        }
+      },
+      "ndny": {
+        "name": "U.S. District Court for the Northern District of New York",
+        "coverage": "Albany, Syracuse, and northern NY counties",
+        "courthouse": "James T. Foley U.S. Courthouse, 445 Broadway, Albany, NY 12207",
+        "url": "https://nynd.uscourts.gov/",
+        "local_rules_url": "https://nynd.uscourts.gov/rules",
+        "e_filing": {
+          "system": "CM/ECF",
+          "url": "https://ecf.nynd.uscourts.gov/"
+        },
+        "contact": {
+          "clerk": "(518) 257-1800"
+        }
+      },
+      "wdny": {
+        "name": "U.S. District Court for the Western District of New York",
+        "coverage": "Buffalo, Rochester, and western NY counties",
+        "courthouse": "2 Niagara Square, Buffalo, NY 14202",
+        "url": "https://nywd.uscourts.gov/",
+        "local_rules_url": "https://nywd.uscourts.gov/rules",
+        "e_filing": {
+          "system": "CM/ECF",
+          "url": "https://ecf.nywd.uscourts.gov/"
+        },
+        "contact": {
+          "clerk": "(716) 551-4211"
+        }
+      }
+    },
+    "circuit": {
+      "second_circuit": {
+        "name": "U.S. Court of Appeals for the Second Circuit",
+        "coverage": "New York, Connecticut, Vermont",
+        "courthouse": "Thurgood Marshall U.S. Courthouse, 40 Foley Square, New York, NY 10007",
+        "url": "https://www.ca2.uscourts.gov/",
+        "local_rules_url": "https://www.ca2.uscourts.gov/rules",
+        "key_local_rules": {
+          "rule_3": "Filing notice of appeal",
+          "rule_10": "Preparation of record on appeal",
+          "rule_31": "Briefs",
+          "rule_32": "Form of briefs"
+        },
+        "e_filing": {
+          "system": "CM/ECF",
+          "url": "https://ecf.ca2.uscourts.gov/"
+        },
+        "deadlines": {
+          "notice_of_appeal": "30 days from entry of judgment (60 days if U.S. is party)",
+          "brief": "Per briefing schedule order"
+        },
+        "contact": {
+          "clerk": "(212) 857-8500"
+        }
+      }
+    },
+    "federal_rules": {
+      "frcp": {
+        "title": "Federal Rules of Civil Procedure",
+        "url": "https://www.uscourts.gov/rules-policies/current-rules-practice-procedure/federal-rules-civil-procedure",
+        "effective_date": "December 1, 2023 (current amendments)",
+        "key_rules": [
+          "FRCP 4 - Service of process",
+          "FRCP 7 - Pleadings and motions",
+          "FRCP 26 - Discovery",
+          "FRCP 52 - Findings by court",
+          "FRCP 56 - Summary judgment",
+          "FRCP 65 - Injunctions"
+        ]
+      },
+      "frap": {
+        "title": "Federal Rules of Appellate Procedure",
+        "url": "https://www.uscourts.gov/rules-policies/current-rules-practice-procedure/federal-rules-appellate-procedure",
+        "effective_date": "December 1, 2023 (current amendments)",
+        "key_rules": [
+          "FRAP 3 - Filing notice of appeal",
+          "FRAP 4 - Appeal deadlines",
+          "FRAP 21 - Mandamus and prohibition",
+          "FRAP 32 - Form of briefs"
+        ]
+      },
+      "fre": {
+        "title": "Federal Rules of Evidence",
+        "url": "https://www.uscourts.gov/rules-policies/current-rules-practice-procedure/federal-rules-evidence",
+        "effective_date": "December 1, 2023 (current amendments)"
+      }
+    }
+  },
+  "usage_notes": {
+    "local_rules_critical": "ALWAYS check local rules for specific district/department. Local rules supplement FRCP/CPLR.",
+    "e_filing_mandatory": "Electronic filing is mandatory in most NY counties and all federal courts.",
+    "registration_requirements": {
+      "nyscef": "Attorney registration required. Pro se filers have different procedures.",
+      "cmecf": "Registration and training required for federal CM/ECF. Pro se may file electronically with permission."
+    },
+    "rule_updates": "Court rules change periodically. Check official court websites before filing.",
+    "formatting_requirements": {
+      "font": "Generally 12pt Times New Roman or similar",
+      "margins": "1 inch margins (generally)",
+      "line_spacing": "Double-spaced (varies by court)",
+      "page_limits": "Check local rules for motion and brief page limits"
+    }
+  },
+  "verification_checklist": [
+    "1. Confirm jurisdiction (which court?)",
+    "2. Check local rules for that specific court",
+    "3. Verify e-filing requirements and procedures",
+    "4. Confirm motion notice periods and response deadlines",
+    "5. Review formatting requirements (font, spacing, margins)",
+    "6. Check page limits for document type",
+    "7. Verify service requirements (who must be served? how?)",
+    "8. Confirm filing fees and payment methods"
+  ]
+}
