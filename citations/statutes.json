@@ -1,0 +1,361 @@
+{
+  "metadata": {
+    "title": "Procedural Enclosure Toolkit - Statute Database",
+    "version": "1.0.0",
+    "last_updated": "2025-01-15",
+    "jurisdiction_focus": ["new-york", "federal"],
+    "verification_required": "All citations must be verified by user before filing. This database is reference only.",
+    "sources": [
+      "https://www.nysenate.gov/legislation/laws/CVP",
+      "https://www.nysenate.gov/legislation/laws/JUD",
+      "https://www.law.cornell.edu/uscode/",
+      "https://www.law.cornell.edu/rules/frcp/"
+    ]
+  },
+  "new_york": {
+    "cplr": {
+      "title": "Civil Practice Law and Rules",
+      "url": "https://www.nysenate.gov/legislation/laws/CVP",
+      "sections": {
+        "2219": {
+          "subsection": "(a)",
+          "citation": "CPLR §2219(a)",
+          "title": "Form and content of order",
+          "text": "Every order shall be in writing and contain a determination of the motion and a statement of the grounds therefor.",
+          "effective_date": "1963-09-01",
+          "amendments": [],
+          "usage": "Core authority for procedural enclosure demanding written orders",
+          "related_rules": ["22 NYCRR §202.48(b)"],
+          "key_cases": [
+            "Apfel v. Prudential-Bache Secs. Inc., 81 N.Y.2d 470 (1993)",
+            "Lohnas v. Luzi, 69 N.Y.2d 704 (1986)"
+          ]
+        },
+        "2214": {
+          "subsection": "(b)",
+          "citation": "CPLR §2214(b)",
+          "title": "Time for service of motion papers",
+          "text": "A motion shall be made returnable at a time not later than the latest date permitted for noticing a case or matter to be heard...",
+          "effective_date": "1963-09-01",
+          "usage": "Motion notice requirements",
+          "related_sections": ["CPLR §2214(a)", "CPLR §2214(c)"]
+        },
+        "3212": {
+          "citation": "CPLR §3212",
+          "title": "Motion for summary judgment",
+          "text": "Any party may move for summary judgment...",
+          "effective_date": "1963-09-01",
+          "usage": "Summary judgment standard and procedure"
+        },
+        "5515": {
+          "citation": "CPLR §5515",
+          "title": "Taking an appeal as of right; method",
+          "text": "An appeal as of right is taken by filing and serving a notice of appeal...",
+          "effective_date": "1963-09-01",
+          "usage": "Notice of appeal requirements",
+          "related_sections": ["CPLR §5513", "CPLR §5519"]
+        },
+        "5519": {
+          "citation": "CPLR §5519",
+          "title": "Stay during pendency of appeal",
+          "subsections": {
+            "a": {
+              "citation": "CPLR §5519(a)(1)",
+              "text": "Upon an appeal from a judgment or order..., the court which rendered the judgment or made the order, or the appellate division, may stay the enforcement of the judgment or order during the pendency of the appeal upon such terms as may be just...",
+              "usage": "Emergency stay pending appeal"
+            },
+            "c": {
+              "citation": "CPLR §5519(c)",
+              "text": "Undertaking on stay",
+              "usage": "Bond requirements for stay"
+            }
+          }
+        },
+        "7801": {
+          "citation": "CPLR §7801",
+          "title": "Article 78 proceeding defined",
+          "text": "The only method of challenging a determination of a body or officer is by a proceeding under this article...",
+          "effective_date": "1963-09-01",
+          "usage": "Mandamus/prohibition/certiorari framework"
+        },
+        "7803": {
+          "subsection": "(1)",
+          "citation": "CPLR §7803(1)",
+          "title": "Grounds for relief in Article 78",
+          "text": "Whether the body or officer failed to perform a duty enjoined upon it by law",
+          "usage": "Mandamus to compel ministerial duty"
+        },
+        "7804": {
+          "subsection": "(b)",
+          "citation": "CPLR §7804(b)",
+          "title": "Procedure",
+          "text": "The proceeding shall be instituted by a petition...",
+          "usage": "Article 78 filing requirements"
+        }
+      }
+    },
+    "nycrr": {
+      "title": "New York Codes, Rules and Regulations",
+      "url": "https://ww2.nycourts.gov/rules",
+      "sections": {
+        "202.48": {
+          "subsection": "(b)",
+          "citation": "22 NYCRR §202.48(b)",
+          "title": "Submission of orders, judgments and decrees for signature",
+          "text": "All orders and judgments shall state the relief granted or denied...",
+          "effective_date": "2006-01-01",
+          "usage": "Mandates written decisions in trial courts",
+          "related_statutes": ["CPLR §2219(a)"]
+        },
+        "100.2": {
+          "subsection": "(A)",
+          "citation": "22 NYCRR §100.2(A)",
+          "title": "Judicial Conduct - Integrity and Impartiality",
+          "text": "A judge shall... act at all times in a manner that promotes public confidence in the integrity and impartiality of the judiciary.",
+          "effective_date": "2015-01-01",
+          "usage": "Basis for judicial conduct complaints"
+        },
+        "100.3": {
+          "subsection": "(B)(6)",
+          "citation": "22 NYCRR §100.3(B)(6)",
+          "title": "Judicial Conduct - Right to be heard",
+          "text": "A judge shall accord to every person who has a legal interest in a proceeding... the right to be heard according to law.",
+          "effective_date": "2015-01-01",
+          "usage": "Due process requirement for judicial conduct"
+        },
+        "1200.1": {
+          "citation": "22 NYCRR Part 1200",
+          "title": "Rules of Professional Conduct",
+          "text": "Attorney ethics and disciplinary rules",
+          "effective_date": "2009-04-01",
+          "usage": "Basis for attorney grievance complaints",
+          "key_rules": ["1.1", "1.3", "1.4", "3.3", "3.4", "8.4"]
+        },
+        "1240": {
+          "citation": "22 NYCRR Part 1240",
+          "title": "Procedures for Attorneys in Disciplinary Matters",
+          "effective_date": "2002-01-01",
+          "usage": "Attorney discipline procedure"
+        },
+        "216.1": {
+          "citation": "22 NYCRR §216.1",
+          "title": "Access to court records",
+          "text": "Court records shall be available to the public...",
+          "effective_date": "2012-01-01",
+          "usage": "FOIL requests for court records"
+        }
+      }
+    },
+    "judiciary_law": {
+      "title": "New York Judiciary Law",
+      "url": "https://www.nysenate.gov/legislation/laws/JUD",
+      "sections": {
+        "44": {
+          "citation": "Judiciary Law §44",
+          "title": "Commission on Judicial Conduct",
+          "subsections": {
+            "1": "Powers and duties of commission",
+            "5": "Confidentiality of complaints"
+          },
+          "usage": "Judicial conduct complaint authority"
+        },
+        "90": {
+          "citation": "Judiciary Law §90",
+          "title": "Attorney discipline",
+          "text": "Attorneys convicted of felonies; removal from office, disbarment",
+          "usage": "Attorney discipline statutory authority"
+        }
+      }
+    },
+    "public_officers_law": {
+      "title": "New York Public Officers Law",
+      "url": "https://www.nysenate.gov/legislation/laws/PBO",
+      "sections": {
+        "87": {
+          "citation": "Public Officers Law §87",
+          "title": "Access to agency records",
+          "text": "Each agency shall... make available for public inspection and copying all records...",
+          "effective_date": "1974-09-01",
+          "usage": "FOIL request authority"
+        },
+        "89": {
+          "citation": "Public Officers Law §89",
+          "title": "Agency response to FOIL requests",
+          "text": "Five business day response requirement",
+          "usage": "FOIL timing requirements"
+        }
+      }
+    },
+    "family_court_act": {
+      "title": "New York Family Court Act",
+      "url": "https://www.nysenate.gov/legislation/laws/FCT",
+      "sections": {
+        "1028": {
+          "subsection": "(a)",
+          "citation": "FCA §1028(a)",
+          "title": "Orders of disposition in child protective proceedings",
+          "usage": "Family court dispositional authority"
+        },
+        "1089": {
+          "citation": "FCA §1089",
+          "title": "Appeal from order of disposition",
+          "usage": "Family court appellate procedure"
+        }
+      }
+    }
+  },
+  "federal": {
+    "usc_title_28": {
+      "title": "28 U.S.C. - Judiciary and Judicial Procedure",
+      "url": "https://www.law.cornell.edu/uscode/text/28",
+      "sections": {
+        "1331": {
+          "citation": "28 U.S.C. §1331",
+          "title": "Federal question jurisdiction",
+          "text": "The district courts shall have original jurisdiction of all civil actions arising under the Constitution, laws, or treaties of the United States.",
+          "usage": "Federal court jurisdictional basis"
+        },
+        "1332": {
+          "citation": "28 U.S.C. §1332",
+          "title": "Diversity jurisdiction",
+          "text": "The district courts shall have original jurisdiction of all civil actions where the matter in controversy exceeds... $75,000...",
+          "usage": "Diversity jurisdiction requirements"
+        },
+        "1343": {
+          "citation": "28 U.S.C. §1343",
+          "title": "Civil rights jurisdiction",
+          "text": "Original jurisdiction of any civil action authorized by law to be commenced by any person... to redress the deprivation, under color of any State law...",
+          "usage": "Jurisdiction for §1983 actions"
+        },
+        "1361": {
+          "citation": "28 U.S.C. §1361",
+          "title": "Mandamus jurisdiction",
+          "text": "The district courts shall have original jurisdiction of any action in the nature of mandamus to compel an officer or employee of the United States...",
+          "usage": "Federal mandamus authority"
+        },
+        "1391": {
+          "citation": "28 U.S.C. §1391",
+          "title": "Venue",
+          "text": "Venue requirements for federal civil actions",
+          "usage": "Proper federal court venue determination"
+        }
+      }
+    },
+    "usc_title_42": {
+      "title": "42 U.S.C. - Public Health and Welfare",
+      "url": "https://www.law.cornell.edu/uscode/text/42",
+      "sections": {
+        "1983": {
+          "citation": "42 U.S.C. §1983",
+          "title": "Civil action for deprivation of rights",
+          "text": "Every person who, under color of any statute, ordinance, regulation, custom, or usage... subjects, or causes to be subjected, any citizen... to the deprivation of any rights, privileges, or immunities secured by the Constitution and laws, shall be liable...",
+          "effective_date": "1871-04-20",
+          "usage": "Federal civil rights actions for constitutional violations",
+          "related_sections": ["28 U.S.C. §1343"],
+          "key_cases": [
+            "Monroe v. Pape, 365 U.S. 167 (1961)",
+            "Monell v. Department of Social Services, 436 U.S. 658 (1978)"
+          ]
+        }
+      }
+    },
+    "frcp": {
+      "title": "Federal Rules of Civil Procedure",
+      "url": "https://www.law.cornell.edu/rules/frcp",
+      "sections": {
+        "4": {
+          "citation": "FRCP 4",
+          "title": "Summons and service of process",
+          "usage": "Federal service requirements"
+        },
+        "7": {
+          "citation": "FRCP 7",
+          "title": "Pleadings allowed; motions",
+          "usage": "Motion practice in federal court"
+        },
+        "26": {
+          "citation": "FRCP 26",
+          "title": "Duty to disclose; general provisions governing discovery",
+          "text": "Mandatory initial disclosures required",
+          "usage": "Federal discovery procedure"
+        },
+        "52": {
+          "subsection": "(a)",
+          "citation": "FRCP 52(a)",
+          "title": "Findings and conclusions by the court",
+          "text": "In an action tried on the facts without a jury... the court must find the facts specially and state its conclusions of law separately.",
+          "usage": "Written findings requirement (bench trials only)",
+          "note": "Less stringent than CPLR §2219(a)"
+        },
+        "56": {
+          "citation": "FRCP 56",
+          "title": "Summary judgment",
+          "usage": "Federal summary judgment standard"
+        },
+        "65": {
+          "citation": "FRCP 65",
+          "title": "Injunctions and restraining orders",
+          "usage": "Preliminary injunction and TRO authority",
+          "related_sections": ["FRCP 65(b)"]
+        }
+      }
+    },
+    "frap": {
+      "title": "Federal Rules of Appellate Procedure",
+      "url": "https://www.law.cornell.edu/rules/frap",
+      "sections": {
+        "3": {
+          "citation": "FRAP 3",
+          "title": "Appeal as of right - how taken",
+          "text": "An appeal permitted by law as of right from a district court to a court of appeals may be taken only by filing a notice of appeal with the district clerk...",
+          "usage": "Federal notice of appeal requirements"
+        },
+        "4": {
+          "citation": "FRAP 4",
+          "title": "Appeal as of right - when taken",
+          "text": "30 days from entry of judgment (60 days if United States is a party)",
+          "usage": "Federal appeal deadlines"
+        },
+        "21": {
+          "citation": "FRAP 21",
+          "title": "Writs of mandamus and prohibition",
+          "text": "Authority for appellate mandamus",
+          "usage": "Circuit court mandamus procedure"
+        }
+      }
+    },
+    "fre": {
+      "title": "Federal Rules of Evidence",
+      "url": "https://www.law.cornell.edu/rules/fre",
+      "sections": {
+        "201": {
+          "citation": "FRE 201",
+          "title": "Judicial notice of adjudicative facts",
+          "usage": "Federal judicial notice requirements"
+        }
+      }
+    }
+  },
+  "verification": {
+    "warning": "AI-GENERATED CITATIONS MUST BE MANUALLY VERIFIED",
+    "instructions": "Before filing any document:",
+    "steps": [
+      "1. Cross-reference each citation against official sources",
+      "2. Verify statutory text has not been amended",
+      "3. Confirm case law is still good law (not overruled)",
+      "4. Check effective dates for rule changes",
+      "5. Review local court rules for jurisdiction-specific requirements"
+    ],
+    "official_sources": {
+      "ny_statutes": "https://www.nysenate.gov/legislation/laws",
+      "ny_court_rules": "https://ww2.nycourts.gov/rules",
+      "federal_statutes": "https://www.law.cornell.edu/uscode/",
+      "federal_rules": "https://www.uscourts.gov/rules-policies/current-rules-practice-procedure",
+      "case_law": [
+        "https://law.justia.com/",
+        "https://scholar.google.com/",
+        "https://www.nycourts.gov/reporter/"
+      ]
+    }
+  }
+}
