@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Procedural Enclosure Toolkit - Open-source legal templates for enforcing procedural compliance in NY and Federal courts">
+    <title>Procedural Enclosure Toolkit</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <nav class="container">
+            <div class="logo">
+                <h1>⚖️ Procedural Enclosure Toolkit</h1>
+            </div>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#templates">Templates</a></li>
+                <li><a href="#guides">Guides</a></li>
+                <li><a href="#citations">Citations</a></li>
+                <li><a href="https://github.com/joefusco/procedural-enclosure-toolkit" target="_blank">GitHub</a></li>
+            </ul>
+            <button class="mobile-menu-toggle" aria-label="Toggle menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section id="home" class="hero">
+            <div class="container">
+                <h2>Enforce Procedural Compliance Through Documentation</h2>
+                <p class="lead">Open-source legal templates for compelling written orders, demanding due process, and preserving appellate record in New York and Federal courts.</p>
+                <div class="cta-buttons">
+                    <a href="#templates" class="btn btn-primary">Browse Templates</a>
+                    <a href="#guides" class="btn btn-secondary">Read Guides</a>
+                    <a href="https://github.com/joefusco/procedural-enclosure-toolkit" class="btn btn-outline" target="_blank">View on GitHub</a>
+                </div>
+                <div class="disclaimer">
+                    <p><strong>Not legal advice.</strong> For educational purposes. Verify all citations. Consult counsel for case-specific guidance.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Template Selector -->
+        <section id="templates" class="templates">
+            <div class="container">
+                <h2>Find Your Template</h2>
+                <p class="section-intro">Select your jurisdiction, issue type, and urgency level to find the right template.</p>
+
+                <div class="filter-panel">
+                    <div class="filter-group">
+                        <label for="jurisdiction-filter">Jurisdiction</label>
+                        <select id="jurisdiction-filter" class="filter-select">
+                            <option value="all">All Jurisdictions</option>
+                            <option value="ny">New York</option>
+                            <option value="federal">Federal Courts</option>
+                        </select>
+                    </div>
+
+                    <div class="filter-group">
+                        <label for="category-filter">Category</label>
+                        <select id="category-filter" class="filter-select">
+                            <option value="all">All Categories</option>
+                            <option value="procedural-enforcement">Procedural Enforcement</option>
+                            <option value="appeals">Appeals</option>
+                            <option value="transparency">Transparency/Records</option>
+                            <option value="oversight">Oversight/Accountability</option>
+                        </select>
+                    </div>
+
+                    <div class="filter-group">
+                        <label for="urgency-filter">Urgency</label>
+                        <select id="urgency-filter" class="filter-select">
+                            <option value="all">All Levels</option>
+                            <option value="emergency">Emergency (same day)</option>
+                            <option value="urgent">Urgent (1-7 days)</option>
+                            <option value="standard">Standard (7+ days)</option>
+                        </select>
+                    </div>
+
+                    <button id="reset-filters" class="btn btn-outline">Reset Filters</button>
+                </div>
+
+                <div id="template-results" class="template-grid">
+                    <!-- Templates will be populated by JavaScript -->
+                </div>
+            </div>
+        </section>
+
+        <!-- Guides Section -->
+        <section id="guides" class="guides">
+            <div class="container">
+                <h2>Comprehensive Guides</h2>
+                <div class="guide-grid">
+                    <div class="guide-card">
+                        <h3>📖 Usage Guide</h3>
+                        <p>Step-by-step instructions for using templates, filing procedures, and service requirements.</p>
+                        <a href="https://github.com/joefusco/procedural-enclosure-toolkit/blob/main/guides/USAGE_GUIDE.md" class="btn btn-small" target="_blank">Read Guide</a>
+                    </div>
+
+                    <div class="guide-card">
+                        <h3>❓ FAQ</h3>
+                        <p>50+ frequently asked questions about procedural enclosures, appeals, and legal strategy.</p>
+                        <a href="https://github.com/joefusco/procedural-enclosure-toolkit/blob/main/guides/FAQ.md" class="btn btn-small" target="_blank">Read FAQ</a>
+                    </div>
+
+                    <div class="guide-card">
+                        <h3>🗺️ Jurisdictions</h3>
+                        <p>Court-by-court guide for NY and Federal districts, with local rules and contact information.</p>
+                        <a href="https://github.com/joefusco/procedural-enclosure-toolkit/blob/main/guides/JURISDICTIONS.md" class="btn btn-small" target="_blank">View Jurisdictions</a>
+                    </div>
+
+                    <div class="guide-card">
+                        <h3>⚖️ Ethics</h3>
+                        <p>Unauthorized practice boundaries, pro se rights, and AI confidentiality protocols.</p>
+                        <a href="https://github.com/joefusco/procedural-enclosure-toolkit/blob/main/guides/ETHICS.md" class="btn btn-small" target="_blank">Read Ethics</a>
+                    </div>
+
+                    <div class="guide-card">
+                        <h3>📚 Glossary</h3>
+                        <p>100+ legal terms, Bluebook citations, and procedural concepts with Cornell Law precision.</p>
+                        <a href="https://github.com/joefusco/procedural-enclosure-toolkit/blob/main/guides/GLOSSARY.md" class="btn btn-small" target="_blank">View Glossary</a>
+                    </div>
+
+                    <div class="guide-card">
+                        <h3>🤖 AI Prompts</h3>
+                        <p>Prompt engineering library with 26 specialized prompts for legal document generation.</p>
+                        <a href="https://github.com/joefusco/procedural-enclosure-toolkit/tree/main/prompts" class="btn btn-small" target="_blank">Browse Prompts</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Citation Database -->
+        <section id="citations" class="citations">
+            <div class="container">
+                <h2>Citation Database</h2>
+                <p class="section-intro">Machine-readable legal authorities verified as of January 2025.</p>
+
+                <div class="citation-categories">
+                    <div class="citation-card">
+                        <h3>📜 Statutes</h3>
+                        <p>CPLR, 22 NYCRR, 28 USC, 42 USC §1983, FRCP, FRAP with verified text and effective dates.</p>
+                        <a href="https://github.com/joefusco/procedural-enclosure-toolkit/blob/main/citations/statutes.json" class="btn btn-small" target="_blank">View Database</a>
+                    </div>
+
+                    <div class="citation-card">
+                        <h3>⚖️ Case Law</h3>
+                        <p>Key precedents from NY Court of Appeals, US Supreme Court, Second Circuit with holdings and Justia links.</p>
+                        <a href="https://github.com/joefusco/procedural-enclosure-toolkit/blob/main/citations/cases.json" class="btn btn-small" target="_blank">View Database</a>
+                    </div>
+
+                    <div class="citation-card">
+                        <h3>📋 Court Rules</h3>
+                        <p>Local rules for all NY Appellate Divisions and Federal districts with e-filing procedures.</p>
+                        <a href="https://github.com/joefusco/procedural-enclosure-toolkit/blob/main/citations/rules.json" class="btn btn-small" target="_blank">View Database</a>
+                    </div>
+                </div>
+
+                <div class="warning-box">
+                    <h4>⚠️ Verification Required</h4>
+                    <p><strong>All citations must be manually verified before filing.</strong> AI-generated content may contain hallucinated citations. Cross-reference against official sources. See <a href="https://github.com/joefusco/procedural-enclosure-toolkit/blob/main/citations/update-log.md" target="_blank">Update Log</a> for amendment tracking.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Features -->
+        <section id="features" class="features">
+            <div class="container">
+                <h2>Toolkit Features</h2>
+                <div class="features-grid">
+                    <div class="feature">
+                        <div class="feature-icon">📝</div>
+                        <h3>Cornell Law Precision</h3>
+                        <p>Written with surgical succinctness and verified citations from authoritative sources.</p>
+                    </div>
+
+                    <div class="feature">
+                        <div class="feature-icon">🤖</div>
+                        <h3>AI-Native Design</h3>
+                        <p>26 prompt templates for GPT-4, Claude, and other LLMs with safety protocols.</p>
+                    </div>
+
+                    <div class="feature">
+                        <div class="feature-icon">🗂️</div>
+                        <h3>Multi-Jurisdiction</h3>
+                        <p>NY and Federal courts fully supported. Expandable to CA, TX, FL.</p>
+                    </div>
+
+                    <div class="feature">
+                        <div class="feature-icon">✅</div>
+                        <h3>Validation Scripts</h3>
+                        <p>Automated pre-filing checks for placeholders, citations, and formatting.</p>
+                    </div>
+
+                    <div class="feature">
+                        <div class="feature-icon">📊</div>
+                        <h3>Citation Database</h3>
+                        <p>Machine-readable JSON databases of statutes, case law, and court rules.</p>
+                    </div>
+
+                    <div class="feature">
+                        <div class="feature-icon">🔓</div>
+                        <h3>Open Source</h3>
+                        <p>MIT License. Free forever. Community-driven. No paywalls or subscriptions.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Quick Start -->
+        <section id="quick-start" class="quick-start">
+            <div class="container">
+                <h2>Quick Start</h2>
+                <div class="steps">
+                    <div class="step">
+                        <div class="step-number">1</div>
+                        <h3>Clone Repository</h3>
+                        <code>git clone https://github.com/joefusco/procedural-enclosure-toolkit.git</code>
+                    </div>
+
+                    <div class="step">
+                        <div class="step-number">2</div>
+                        <h3>Select Template</h3>
+                        <p>Browse <code>/templates</code> or <code>/examples</code> for your use case.</p>
+                    </div>
+
+                    <div class="step">
+                        <div class="step-number">3</div>
+                        <h3>Customize</h3>
+                        <p>Replace <code>{{placeholders}}</code> with case-specific information.</p>
+                    </div>
+
+                    <div class="step">
+                        <div class="step-number">4</div>
+                        <h3>Validate</h3>
+                        <code>./scripts/validate.sh your-document.md</code>
+                    </div>
+
+                    <div class="step">
+                        <div class="step-number">5</div>
+                        <h3>File</h3>
+                        <p>Convert to PDF and file via NYSCEF or CM/ECF. Serve on all parties.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>About</h4>
+                    <p>Open-source toolkit for procedural enforcement in New York and Federal courts.</p>
+                    <p><strong>Not legal advice.</strong> Educational purposes only.</p>
+                </div>
+
+                <div class="footer-section">
+                    <h4>Resources</h4>
+                    <ul>
+                        <li><a href="https://github.com/joefusco/procedural-enclosure-toolkit" target="_blank">GitHub Repository</a></li>
+                        <li><a href="https://github.com/joefusco/procedural-enclosure-toolkit/blob/main/CONTRIBUTING.md" target="_blank">Contributing Guide</a></li>
+                        <li><a href="https://github.com/joefusco/procedural-enclosure-toolkit/issues" target="_blank">Report Issue</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h4>Legal</h4>
+                    <ul>
+                        <li><a href="https://github.com/joefusco/procedural-enclosure-toolkit/blob/main/LICENSE" target="_blank">MIT License</a></li>
+                        <li><a href="https://github.com/joefusco/procedural-enclosure-toolkit/blob/main/guides/ETHICS.md" target="_blank">Ethics & Disclaimers</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2025 Procedural Enclosure Toolkit. Released under MIT License.</p>
+                <p>Maintained by the open-source community. Not affiliated with any court or government entity.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="app.js"></script>
+</body>
+</html>
