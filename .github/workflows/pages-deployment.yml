@@ -75,8 +75,8 @@ jobs:
         run: |
           echo "🔍 Checking CSS syntax..."
 
-          # Basic CSS validation - check for common syntax errors
-          if grep -E '\{[^}]*\}' docs/styles.css > /dev/null; then
+          # Basic CSS validation - check for curly braces (multi-line aware)
+          if grep -q '{' docs/styles.css && grep -q '}' docs/styles.css; then
             echo "✅ CSS structure appears valid"
           else
             echo "❌ CSS structure may be invalid"
@@ -85,7 +85,7 @@ jobs:
 
           # Check for required CSS variables
           if grep -q ':root {' docs/styles.css && \
-             grep -q '--primary-color:' docs/styles.css; then
+             grep -q '\-\-primary-color:' docs/styles.css; then
             echo "✅ CSS variables defined"
           else
             echo "❌ Missing CSS variables"
@@ -96,21 +96,22 @@ jobs:
         run: |
           echo "🔍 Checking JavaScript syntax..."
 
-          # Check for basic JS structure
-          if grep -q 'const templates =' docs/app.js && \
-             grep -q 'function' docs/app.js; then
+          # Check for progressive enhancement structure
+          if grep -q 'document.getElementById' docs/app.js && \
+             grep -q 'function' docs/app.js && \
+             grep -q 'addEventListener' docs/app.js; then
             echo "✅ JavaScript structure valid"
           else
             echo "❌ JavaScript structure may be invalid"
             exit 1
           fi
 
-          # Check that template database is populated
-          TEMPLATE_COUNT=$(grep -c '"id":' docs/app.js || echo "0")
+          # Check that templates are pre-rendered in HTML (not JS)
+          TEMPLATE_COUNT=$(grep -c 'data-jurisdiction=' docs/index.html || echo "0")
           if [ "$TEMPLATE_COUNT" -gt 5 ]; then
-            echo "✅ Template database populated ($TEMPLATE_COUNT templates)"
+            echo "✅ Templates pre-rendered in HTML ($TEMPLATE_COUNT templates)"
           else
-            echo "❌ Template database may be incomplete"
+            echo "❌ Templates may not be pre-rendered in HTML"
             exit 1
           fi
 
