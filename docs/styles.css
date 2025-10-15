@@ -8,6 +8,18 @@
     --foreground: #1a1a1a;
     --muted: #f9fafb;
     --border: #e5e7eb;
+
+    /* USWDS-inspired shadow system */
+    --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+    --shadow-base: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+    --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+    --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+    --shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+
+    /* Federal design tokens */
+    --ring-color: rgba(44, 62, 80, 0.5);
+    --hover-lift: translateY(-1px);
+    --active-press: scale(0.98);
 }
 
 /* US Government-style banner (open source project) */
@@ -15,6 +27,7 @@
     background-color: #f0f0f0;
     border-bottom: 1px solid #dcdee0;
     font-size: 0.8125rem;
+    box-shadow: var(--shadow-sm);
 }
 
 .gov-banner-flag {
@@ -30,6 +43,27 @@
     margin: 0;
 }
 
+/* Sticky header elevation */
+header.sticky {
+    box-shadow: var(--shadow-md);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+}
+
+/* Hero section refinement */
+section:first-of-type {
+    background: linear-gradient(180deg,
+        rgba(249, 250, 251, 0.4) 0%,
+        rgba(249, 250, 251, 0.6) 50%,
+        rgba(249, 250, 251, 0.4) 100%
+    );
+    box-shadow: inset 0 1px 0 0 rgba(255, 255, 255, 0.1);
+}
+
+section:first-of-type p {
+    text-shadow: 0 1px 2px rgba(255, 255, 255, 0.8);
+}
+
 /* Smooth scrolling for anchor links */
 html {
     scroll-behavior: smooth;
@@ -40,10 +74,37 @@ html {
     max-width: 900px;
 }
 
+/* Typography enhancements */
+h1, h2, h3, h4, h5, h6 {
+    font-weight: 600;
+    letter-spacing: -0.01em;
+    line-height: 1.3;
+}
+
+h2 {
+    font-weight: 600;
+    letter-spacing: -0.015em;
+}
+
+h3 {
+    font-weight: 500;
+    letter-spacing: -0.01em;
+}
+
+/* Section spacing improvements */
+section {
+    position: relative;
+}
+
+section + section {
+    box-shadow: inset 0 1px 0 0 rgba(0, 0, 0, 0.05);
+}
+
 /* Focus visible for accessibility */
 *:focus-visible {
     outline: 2px solid #2c3e50;
     outline-offset: 2px;
+    box-shadow: 0 0 0 4px var(--ring-color);
 }
 
 /* Selection color */
@@ -56,7 +117,22 @@ html {
 a,
 button,
 select {
-    transition: all 150ms ease-in-out;
+    transition: all 200ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Button enhancements */
+button {
+    box-shadow: var(--shadow-sm);
+}
+
+button:hover {
+    transform: var(--hover-lift);
+    box-shadow: var(--shadow-base);
+}
+
+button:active {
+    transform: var(--active-press);
+    box-shadow: var(--shadow-sm);
 }
 
 /* Custom select dropdown chevron - maintains native accessibility */
@@ -69,10 +145,32 @@ select {
     background-position: right 0.75rem center;
     background-size: 12px;
     padding-right: 2.5rem;
+    box-shadow: var(--shadow-sm);
+    border: 1px solid #e5e7eb;
+}
+
+select:hover {
+    border-color: #d1d5db;
+    box-shadow: var(--shadow-base);
 }
 
 select:focus {
     background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12'%3E%3Cpath fill='%232c3e50' d='M6 9L1.5 4.5h9L6 9z'/%3E%3C/svg%3E");
+    border-color: #2c3e50;
+    box-shadow: 0 0 0 3px var(--ring-color);
+}
+
+/* Link enhancements */
+a {
+    position: relative;
+}
+
+a:hover {
+    transform: var(--hover-lift);
+}
+
+a:active {
+    transform: var(--active-press);
 }
 
 /* Code blocks styling */
@@ -89,6 +187,7 @@ code {
 .table-dense {
     width: 100%;
     border-collapse: collapse;
+    box-shadow: var(--shadow-base);
 }
 
 .table-dense th {
@@ -97,9 +196,10 @@ code {
     font-weight: 600;
     font-size: 0.8125rem;
     border-bottom: 2px solid #d1d5db;
-    background-color: #f9fafb;
+    background: linear-gradient(180deg, #fafbfc 0%, #f9fafb 100%);
     color: #374151;
     letter-spacing: 0.025em;
+    box-shadow: inset 0 -1px 0 0 rgba(0, 0, 0, 0.05);
 }
 
 .table-dense td {
@@ -110,11 +210,15 @@ code {
 }
 
 .table-dense tbody tr {
-    transition: background-color 150ms ease-in-out;
+    transition: all 200ms cubic-bezier(0.4, 0, 0.2, 1);
+    border-left: 3px solid transparent;
 }
 
 .table-dense tbody tr:hover {
     background-color: #f9fafb;
+    border-left-color: #2c3e50;
+    box-shadow: inset 3px 0 0 0 #2c3e50, var(--shadow-sm);
+    transform: var(--hover-lift);
 }
 
 .table-dense tbody tr:last-child td {
@@ -130,19 +234,27 @@ code {
     font-size: 0.6875rem;
     font-weight: 600;
     border-radius: 0.25rem;
-    border: none;
     letter-spacing: 0.025em;
     text-transform: uppercase;
+    box-shadow: var(--shadow-sm);
+    transition: all 150ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.badge:hover {
+    transform: scale(1.05);
+    box-shadow: var(--shadow-base);
 }
 
 .badge-ny {
     background-color: #1d4ed8;
     color: #ffffff;
+    border: 1px solid rgba(29, 78, 216, 0.2);
 }
 
 .badge-federal {
     background-color: #16a34a;
     color: #ffffff;
+    border: 1px solid rgba(22, 163, 74, 0.2);
 }
 
 /* US Flag image for federal badges - following US.gov design pattern */
@@ -155,16 +267,21 @@ code {
 .badge-emergency {
     background-color: #dc2626;
     color: #ffffff;
+    border: 1px solid rgba(220, 38, 38, 0.2);
+    box-shadow: 0 0 0 3px rgba(220, 38, 38, 0.1);
 }
 
 .badge-urgent {
     background-color: #ea580c;
     color: #ffffff;
+    border: 1px solid rgba(234, 88, 12, 0.2);
+    box-shadow: 0 0 0 2px rgba(234, 88, 12, 0.1);
 }
 
 .badge-standard {
     background-color: #6b7280;
     color: #ffffff;
+    border: 1px solid rgba(107, 114, 128, 0.2);
 }
 
 /* Card view grid layout */
@@ -194,14 +311,35 @@ code {
     border: 1px solid #e5e7eb;
     border-radius: 0.5rem;
     background-color: #ffffff;
-    transition: all 150ms ease-in-out;
+    transition: all 200ms cubic-bezier(0.4, 0, 0.2, 1);
     height: 100%;
+    box-shadow: var(--shadow-sm);
+    position: relative;
+}
+
+.template-card::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    border-radius: 0.5rem;
+    padding: 1px;
+    background: linear-gradient(135deg, rgba(44, 62, 80, 0.1), rgba(184, 134, 11, 0.1));
+    -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+    -webkit-mask-composite: xor;
+    mask-composite: exclude;
+    opacity: 0;
+    transition: opacity 200ms ease-in-out;
 }
 
 .template-card:hover {
     background-color: #f9fafb;
     border-color: #d1d5db;
-    box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1);
+    box-shadow: var(--shadow-lg);
+    transform: translateY(-4px);
+}
+
+.template-card:hover::before {
+    opacity: 1;
 }
 
 .template-card-header {
@@ -378,6 +516,24 @@ code {
     color: #1a252f;
 }
 
+/* Modal backdrop enhancement */
+#search-modal,
+#template-modal {
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    background-color: rgba(0, 0, 0, 0.6);
+}
+
+/* Search modal elevation */
+#search-modal > div {
+    box-shadow: var(--shadow-xl);
+}
+
+/* Template modal elevation */
+#template-modal > div {
+    box-shadow: var(--shadow-xl), 0 0 0 1px rgba(0, 0, 0, 0.05);
+}
+
 /* Search modal animation */
 @keyframes fade-in {
     from {
@@ -391,7 +547,42 @@ code {
 }
 
 #search-modal:not(.hidden) > div {
-    animation: fade-in 150ms ease-out;
+    animation: fade-in 200ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+#template-modal:not(.hidden) > div {
+    animation: fade-in 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Guide and resource cards enhancement */
+section a[class*="block p-4"] {
+    box-shadow: var(--shadow-sm);
+    transition: all 200ms cubic-bezier(0.4, 0, 0.2, 1);
+    position: relative;
+    overflow: hidden;
+}
+
+section a[class*="block p-4"]:hover {
+    box-shadow: var(--shadow-md);
+    transform: translateY(-2px);
+}
+
+section a[class*="block p-4"]::after {
+    content: '→';
+    position: absolute;
+    right: 1rem;
+    top: 1rem;
+    opacity: 0;
+    transition: opacity 200ms ease-in-out;
+}
+
+section a[class*="block p-4"]:hover::after {
+    opacity: 0.3;
+}
+
+/* Footer elevation */
+footer {
+    box-shadow: 0 -1px 3px 0 rgba(0, 0, 0, 0.05);
 }
 
 /* Mobile menu */
