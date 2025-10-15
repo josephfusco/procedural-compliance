@@ -5,285 +5,290 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Procedural Enclosure Toolkit - Open-source legal templates for enforcing procedural compliance in NY and Federal courts">
     <title>Procedural Enclosure Toolkit</title>
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Custom Tailwind Config -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        border: '#e5e7eb',
+                        input: '#e5e7eb',
+                        ring: '#2c3e50',
+                        background: '#ffffff',
+                        foreground: '#1a1a1a',
+                        primary: {
+                            DEFAULT: '#2c3e50',
+                            foreground: '#ffffff'
+                        },
+                        secondary: {
+                            DEFAULT: '#f9fafb',
+                            foreground: '#1a1a1a'
+                        },
+                        muted: {
+                            DEFAULT: '#f9fafb',
+                            foreground: '#6b7280'
+                        },
+                        accent: {
+                            DEFAULT: '#b8860b',
+                            foreground: '#ffffff'
+                        }
+                    },
+                    fontFamily: {
+                        serif: ['Georgia', 'Cambria', 'Times New Roman', 'serif'],
+                        sans: ['-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'Roboto', 'sans-serif'],
+                        mono: ['Monaco', 'Courier New', 'monospace']
+                    }
+                }
+            }
+        }
+    </script>
+
     <link rel="stylesheet" href="styles.css">
 </head>
-<body>
-    <header>
-        <nav class="container">
-            <div class="logo">
-                <h1>⚖️ Procedural Enclosure Toolkit</h1>
+<body class="bg-background text-foreground font-sans antialiased">
+    <!-- Header -->
+    <header class="sticky top-0 z-50 w-full border-b border-border bg-background/95 backdrop-blur">
+        <div class="container mx-auto px-4">
+            <div class="flex h-14 items-center justify-between">
+                <div class="flex items-center space-x-2">
+                    <span class="text-xl">⚖️</span>
+                    <h1 class="text-lg font-serif font-semibold">Procedural Enclosure Toolkit</h1>
+                </div>
+                <nav class="hidden md:flex items-center space-x-6 text-sm">
+                    <a href="#templates" class="text-foreground/80 hover:text-foreground transition-colors">Templates</a>
+                    <a href="#guides" class="text-foreground/80 hover:text-foreground transition-colors">Guides</a>
+                    <a href="#citations" class="text-foreground/80 hover:text-foreground transition-colors">Citations</a>
+                    <a href="https://github.com/joefusco/procedural-enclosure-toolkit" target="_blank" class="text-foreground/80 hover:text-foreground transition-colors">GitHub</a>
+                </nav>
+                <button id="search-trigger" class="hidden md:flex items-center space-x-2 px-3 py-1.5 text-sm text-muted-foreground bg-muted rounded-md border border-border hover:bg-secondary transition-colors">
+                    <span>Search</span>
+                    <kbd class="pointer-events-none inline-flex h-5 select-none items-center gap-1 rounded border border-border bg-background px-1.5 font-mono text-xs font-medium text-muted-foreground">
+                        <span class="text-xs">/</span>
+                    </kbd>
+                </button>
+                <button class="md:hidden" id="mobile-menu-toggle" aria-label="Toggle menu">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+                    </svg>
+                </button>
             </div>
-            <ul class="nav-links">
-                <li><a href="#home">Home</a></li>
-                <li><a href="#templates">Templates</a></li>
-                <li><a href="#guides">Guides</a></li>
-                <li><a href="#citations">Citations</a></li>
-                <li><a href="https://github.com/joefusco/procedural-enclosure-toolkit" target="_blank">GitHub</a></li>
-            </ul>
-            <button class="mobile-menu-toggle" aria-label="Toggle menu">
-                <span></span>
-                <span></span>
-                <span></span>
-            </button>
-        </nav>
+        </div>
     </header>
 
     <main>
-        <!-- Hero Section -->
-        <section id="home" class="hero">
-            <div class="container">
-                <h2>Enforce Procedural Compliance Through Documentation</h2>
-                <p class="lead">Open-source legal templates for compelling written orders, demanding due process, and preserving appellate record in New York and Federal courts.</p>
-                <div class="cta-buttons">
-                    <a href="#templates" class="btn btn-primary">Browse Templates</a>
-                    <a href="#guides" class="btn btn-secondary">Read Guides</a>
-                    <a href="https://github.com/joefusco/procedural-enclosure-toolkit" class="btn btn-outline" target="_blank">View on GitHub</a>
-                </div>
-                <div class="disclaimer">
-                    <p><strong>Not legal advice.</strong> For educational purposes. Verify all citations. Consult counsel for case-specific guidance.</p>
+        <!-- Info Bar -->
+        <div class="border-b border-border bg-muted/40">
+            <div class="container mx-auto px-4 py-3">
+                <div class="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-2 text-sm">
+                    <div class="flex items-center space-x-4">
+                        <span class="font-serif font-medium">Procedural Enclosure Toolkit</span>
+                        <span class="text-muted-foreground">•</span>
+                        <span class="text-muted-foreground">12 templates</span>
+                        <span class="text-muted-foreground hidden sm:inline">•</span>
+                        <span class="text-muted-foreground hidden sm:inline">Updated January 2025</span>
+                    </div>
+                    <div class="flex items-center space-x-2 text-muted-foreground">
+                        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                        </svg>
+                        <span class="text-xs">Not legal advice. Educational purposes only.</span>
+                    </div>
                 </div>
             </div>
-        </section>
+        </div>
 
-        <!-- Template Selector -->
-        <section id="templates" class="templates">
-            <div class="container">
-                <h2>Find Your Template</h2>
-                <p class="section-intro">Select your jurisdiction, issue type, and urgency level to find the right template.</p>
+        <!-- Templates Section -->
+        <section id="templates" class="py-8">
+            <div class="container mx-auto px-4">
+                <!-- Section Header -->
+                <div class="mb-6">
+                    <h2 class="text-2xl font-serif font-semibold mb-2">Legal Templates</h2>
+                    <p class="text-muted-foreground text-sm">Select filters to find templates for your jurisdiction and situation.</p>
+                </div>
 
-                <div class="filter-panel">
-                    <div class="filter-group">
-                        <label for="jurisdiction-filter">Jurisdiction</label>
-                        <select id="jurisdiction-filter" class="filter-select">
-                            <option value="all">All Jurisdictions</option>
+                <!-- Filters -->
+                <div class="mb-6 flex flex-col sm:flex-row gap-3 items-start sm:items-end">
+                    <div class="w-full sm:w-auto">
+                        <label for="jurisdiction-filter" class="text-xs font-medium text-muted-foreground mb-1.5 block">Jurisdiction</label>
+                        <select id="jurisdiction-filter" class="w-full sm:w-40 h-9 px-3 py-2 text-sm border border-border rounded-md bg-background focus:outline-none focus:ring-2 focus:ring-ring">
+                            <option value="all">All</option>
                             <option value="ny">New York</option>
-                            <option value="federal">Federal Courts</option>
+                            <option value="federal">Federal</option>
                         </select>
                     </div>
 
-                    <div class="filter-group">
-                        <label for="category-filter">Category</label>
-                        <select id="category-filter" class="filter-select">
+                    <div class="w-full sm:w-auto">
+                        <label for="category-filter" class="text-xs font-medium text-muted-foreground mb-1.5 block">Category</label>
+                        <select id="category-filter" class="w-full sm:w-48 h-9 px-3 py-2 text-sm border border-border rounded-md bg-background focus:outline-none focus:ring-2 focus:ring-ring">
                             <option value="all">All Categories</option>
                             <option value="procedural-enforcement">Procedural Enforcement</option>
                             <option value="appeals">Appeals</option>
-                            <option value="transparency">Transparency/Records</option>
-                            <option value="oversight">Oversight/Accountability</option>
+                            <option value="transparency">Transparency</option>
+                            <option value="oversight">Oversight</option>
                         </select>
                     </div>
 
-                    <div class="filter-group">
-                        <label for="urgency-filter">Urgency</label>
-                        <select id="urgency-filter" class="filter-select">
+                    <div class="w-full sm:w-auto">
+                        <label for="urgency-filter" class="text-xs font-medium text-muted-foreground mb-1.5 block">Urgency</label>
+                        <select id="urgency-filter" class="w-full sm:w-40 h-9 px-3 py-2 text-sm border border-border rounded-md bg-background focus:outline-none focus:ring-2 focus:ring-ring">
                             <option value="all">All Levels</option>
-                            <option value="emergency">Emergency (same day)</option>
-                            <option value="urgent">Urgent (1-7 days)</option>
-                            <option value="standard">Standard (7+ days)</option>
+                            <option value="emergency">Emergency</option>
+                            <option value="urgent">Urgent</option>
+                            <option value="standard">Standard</option>
                         </select>
                     </div>
 
-                    <button id="reset-filters" class="btn btn-outline">Reset Filters</button>
+                    <button id="reset-filters" class="h-9 px-4 py-2 text-sm border border-border rounded-md bg-background hover:bg-muted transition-colors whitespace-nowrap">
+                        Reset
+                    </button>
+
+                    <button id="view-toggle" class="ml-auto h-9 px-4 py-2 text-sm border border-border rounded-md bg-background hover:bg-muted transition-colors whitespace-nowrap">
+                        <span id="view-toggle-text">Card View</span>
+                    </button>
                 </div>
 
-                <div id="template-results" class="template-grid">
-                    <!-- Templates will be populated by JavaScript -->
+                <!-- Template Results -->
+                <div id="template-results">
+                    <!-- Populated by JavaScript -->
                 </div>
             </div>
         </section>
 
         <!-- Guides Section -->
-        <section id="guides" class="guides">
-            <div class="container">
-                <h2>Comprehensive Guides</h2>
-                <div class="guide-grid">
-                    <div class="guide-card">
-                        <h3>📖 Usage Guide</h3>
-                        <p>Step-by-step instructions for using templates, filing procedures, and service requirements.</p>
-                        <a href="https://github.com/joefusco/procedural-enclosure-toolkit/blob/main/guides/USAGE_GUIDE.md" class="btn btn-small" target="_blank">Read Guide</a>
-                    </div>
+        <section id="guides" class="py-8 border-t border-border bg-muted/30">
+            <div class="container mx-auto px-4">
+                <h2 class="text-2xl font-serif font-semibold mb-6">Documentation & Guides</h2>
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+                    <a href="https://github.com/joefusco/procedural-enclosure-toolkit/blob/main/guides/USAGE_GUIDE.md" target="_blank" class="block p-4 border border-border rounded-md bg-background hover:bg-muted transition-colors">
+                        <h3 class="font-medium mb-2">Usage Guide</h3>
+                        <p class="text-sm text-muted-foreground">Step-by-step filing procedures and service requirements.</p>
+                    </a>
 
-                    <div class="guide-card">
-                        <h3>❓ FAQ</h3>
-                        <p>50+ frequently asked questions about procedural enclosures, appeals, and legal strategy.</p>
-                        <a href="https://github.com/joefusco/procedural-enclosure-toolkit/blob/main/guides/FAQ.md" class="btn btn-small" target="_blank">Read FAQ</a>
-                    </div>
+                    <a href="https://github.com/joefusco/procedural-enclosure-toolkit/blob/main/guides/FAQ.md" target="_blank" class="block p-4 border border-border rounded-md bg-background hover:bg-muted transition-colors">
+                        <h3 class="font-medium mb-2">FAQ</h3>
+                        <p class="text-sm text-muted-foreground">50+ questions about procedural enclosures and appeals.</p>
+                    </a>
 
-                    <div class="guide-card">
-                        <h3>🗺️ Jurisdictions</h3>
-                        <p>Court-by-court guide for NY and Federal districts, with local rules and contact information.</p>
-                        <a href="https://github.com/joefusco/procedural-enclosure-toolkit/blob/main/guides/JURISDICTIONS.md" class="btn btn-small" target="_blank">View Jurisdictions</a>
-                    </div>
+                    <a href="https://github.com/joefusco/procedural-enclosure-toolkit/blob/main/guides/JURISDICTIONS.md" target="_blank" class="block p-4 border border-border rounded-md bg-background hover:bg-muted transition-colors">
+                        <h3 class="font-medium mb-2">Jurisdictions</h3>
+                        <p class="text-sm text-muted-foreground">NY and Federal court systems with contact information.</p>
+                    </a>
 
-                    <div class="guide-card">
-                        <h3>⚖️ Ethics</h3>
-                        <p>Unauthorized practice boundaries, pro se rights, and AI confidentiality protocols.</p>
-                        <a href="https://github.com/joefusco/procedural-enclosure-toolkit/blob/main/guides/ETHICS.md" class="btn btn-small" target="_blank">Read Ethics</a>
-                    </div>
+                    <a href="https://github.com/joefusco/procedural-enclosure-toolkit/blob/main/guides/ETHICS.md" target="_blank" class="block p-4 border border-border rounded-md bg-background hover:bg-muted transition-colors">
+                        <h3 class="font-medium mb-2">Ethics</h3>
+                        <p class="text-sm text-muted-foreground">Pro se rights and AI confidentiality protocols.</p>
+                    </a>
 
-                    <div class="guide-card">
-                        <h3>📚 Glossary</h3>
-                        <p>100+ legal terms, Bluebook citations, and procedural concepts with Cornell Law precision.</p>
-                        <a href="https://github.com/joefusco/procedural-enclosure-toolkit/blob/main/guides/GLOSSARY.md" class="btn btn-small" target="_blank">View Glossary</a>
-                    </div>
+                    <a href="https://github.com/joefusco/procedural-enclosure-toolkit/blob/main/guides/GLOSSARY.md" target="_blank" class="block p-4 border border-border rounded-md bg-background hover:bg-muted transition-colors">
+                        <h3 class="font-medium mb-2">Glossary</h3>
+                        <p class="text-sm text-muted-foreground">100+ legal terms with Bluebook citations.</p>
+                    </a>
 
-                    <div class="guide-card">
-                        <h3>🤖 AI Prompts</h3>
-                        <p>Prompt engineering library with 26 specialized prompts for legal document generation.</p>
-                        <a href="https://github.com/joefusco/procedural-enclosure-toolkit/tree/main/prompts" class="btn btn-small" target="_blank">Browse Prompts</a>
-                    </div>
+                    <a href="https://github.com/joefusco/procedural-enclosure-toolkit/tree/main/prompts" target="_blank" class="block p-4 border border-border rounded-md bg-background hover:bg-muted transition-colors">
+                        <h3 class="font-medium mb-2">AI Prompts</h3>
+                        <p class="text-sm text-muted-foreground">26 prompt templates for legal document generation.</p>
+                    </a>
                 </div>
             </div>
         </section>
 
-        <!-- Citation Database -->
-        <section id="citations" class="citations">
-            <div class="container">
-                <h2>Citation Database</h2>
-                <p class="section-intro">Machine-readable legal authorities verified as of January 2025.</p>
+        <!-- Citations Section -->
+        <section id="citations" class="py-8 border-t border-border">
+            <div class="container mx-auto px-4">
+                <h2 class="text-2xl font-serif font-semibold mb-2">Citation Database</h2>
+                <p class="text-muted-foreground text-sm mb-6">Machine-readable legal authorities verified January 2025.</p>
 
-                <div class="citation-categories">
-                    <div class="citation-card">
-                        <h3>📜 Statutes</h3>
-                        <p>CPLR, 22 NYCRR, 28 USC, 42 USC §1983, FRCP, FRAP with verified text and effective dates.</p>
-                        <a href="https://github.com/joefusco/procedural-enclosure-toolkit/blob/main/citations/statutes.json" class="btn btn-small" target="_blank">View Database</a>
-                    </div>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mb-6">
+                    <a href="https://github.com/joefusco/procedural-enclosure-toolkit/blob/main/citations/statutes.json" target="_blank" class="block p-4 border border-border rounded-md bg-background hover:bg-muted transition-colors">
+                        <h3 class="font-medium mb-2">Statutes</h3>
+                        <p class="text-sm text-muted-foreground">CPLR, 22 NYCRR, USC, FRCP, FRAP with verified text.</p>
+                    </a>
 
-                    <div class="citation-card">
-                        <h3>⚖️ Case Law</h3>
-                        <p>Key precedents from NY Court of Appeals, US Supreme Court, Second Circuit with holdings and Justia links.</p>
-                        <a href="https://github.com/joefusco/procedural-enclosure-toolkit/blob/main/citations/cases.json" class="btn btn-small" target="_blank">View Database</a>
-                    </div>
+                    <a href="https://github.com/joefusco/procedural-enclosure-toolkit/blob/main/citations/cases.json" target="_blank" class="block p-4 border border-border rounded-md bg-background hover:bg-muted transition-colors">
+                        <h3 class="font-medium mb-2">Case Law</h3>
+                        <p class="text-sm text-muted-foreground">Key precedents with holdings and Justia links.</p>
+                    </a>
 
-                    <div class="citation-card">
-                        <h3>📋 Court Rules</h3>
-                        <p>Local rules for all NY Appellate Divisions and Federal districts with e-filing procedures.</p>
-                        <a href="https://github.com/joefusco/procedural-enclosure-toolkit/blob/main/citations/rules.json" class="btn btn-small" target="_blank">View Database</a>
-                    </div>
+                    <a href="https://github.com/joefusco/procedural-enclosure-toolkit/blob/main/citations/rules.json" target="_blank" class="block p-4 border border-border rounded-md bg-background hover:bg-muted transition-colors">
+                        <h3 class="font-medium mb-2">Court Rules</h3>
+                        <p class="text-sm text-muted-foreground">Local rules for all NY Appellate Divisions.</p>
+                    </a>
                 </div>
 
-                <div class="warning-box">
-                    <h4>⚠️ Verification Required</h4>
-                    <p><strong>All citations must be manually verified before filing.</strong> AI-generated content may contain hallucinated citations. Cross-reference against official sources. See <a href="https://github.com/joefusco/procedural-enclosure-toolkit/blob/main/citations/update-log.md" target="_blank">Update Log</a> for amendment tracking.</p>
-                </div>
-            </div>
-        </section>
-
-        <!-- Features -->
-        <section id="features" class="features">
-            <div class="container">
-                <h2>Toolkit Features</h2>
-                <div class="features-grid">
-                    <div class="feature">
-                        <div class="feature-icon">📝</div>
-                        <h3>Cornell Law Precision</h3>
-                        <p>Written with surgical succinctness and verified citations from authoritative sources.</p>
-                    </div>
-
-                    <div class="feature">
-                        <div class="feature-icon">🤖</div>
-                        <h3>AI-Native Design</h3>
-                        <p>26 prompt templates for GPT-4, Claude, and other LLMs with safety protocols.</p>
-                    </div>
-
-                    <div class="feature">
-                        <div class="feature-icon">🗂️</div>
-                        <h3>Multi-Jurisdiction</h3>
-                        <p>NY and Federal courts fully supported. Expandable to CA, TX, FL.</p>
-                    </div>
-
-                    <div class="feature">
-                        <div class="feature-icon">✅</div>
-                        <h3>Validation Scripts</h3>
-                        <p>Automated pre-filing checks for placeholders, citations, and formatting.</p>
-                    </div>
-
-                    <div class="feature">
-                        <div class="feature-icon">📊</div>
-                        <h3>Citation Database</h3>
-                        <p>Machine-readable JSON databases of statutes, case law, and court rules.</p>
-                    </div>
-
-                    <div class="feature">
-                        <div class="feature-icon">🔓</div>
-                        <h3>Open Source</h3>
-                        <p>MIT License. Free forever. Community-driven. No paywalls or subscriptions.</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Quick Start -->
-        <section id="quick-start" class="quick-start">
-            <div class="container">
-                <h2>Quick Start</h2>
-                <div class="steps">
-                    <div class="step">
-                        <div class="step-number">1</div>
-                        <h3>Clone Repository</h3>
-                        <code>git clone https://github.com/joefusco/procedural-enclosure-toolkit.git</code>
-                    </div>
-
-                    <div class="step">
-                        <div class="step-number">2</div>
-                        <h3>Select Template</h3>
-                        <p>Browse <code>/templates</code> or <code>/examples</code> for your use case.</p>
-                    </div>
-
-                    <div class="step">
-                        <div class="step-number">3</div>
-                        <h3>Customize</h3>
-                        <p>Replace <code>{{placeholders}}</code> with case-specific information.</p>
-                    </div>
-
-                    <div class="step">
-                        <div class="step-number">4</div>
-                        <h3>Validate</h3>
-                        <code>./scripts/validate.sh your-document.md</code>
-                    </div>
-
-                    <div class="step">
-                        <div class="step-number">5</div>
-                        <h3>File</h3>
-                        <p>Convert to PDF and file via NYSCEF or CM/ECF. Serve on all parties.</p>
+                <div class="p-4 border border-amber-200 bg-amber-50 rounded-md">
+                    <div class="flex items-start space-x-2">
+                        <svg class="w-5 h-5 text-amber-600 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"/>
+                        </svg>
+                        <div class="text-sm">
+                            <p class="font-medium text-amber-900 mb-1">Verification Required</p>
+                            <p class="text-amber-800">All citations must be manually verified before filing. AI-generated content may contain errors. Cross-reference against official sources.</p>
+                        </div>
                     </div>
                 </div>
             </div>
         </section>
     </main>
 
-    <footer>
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-section">
-                    <h4>About</h4>
-                    <p>Open-source toolkit for procedural enforcement in New York and Federal courts.</p>
-                    <p><strong>Not legal advice.</strong> Educational purposes only.</p>
+    <!-- Footer -->
+    <footer class="border-t border-border bg-muted/30 py-8 mt-8">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-6">
+                <div>
+                    <h4 class="font-serif font-medium mb-3">About</h4>
+                    <p class="text-sm text-muted-foreground mb-2">Open-source toolkit for procedural enforcement in NY and Federal courts.</p>
+                    <p class="text-sm text-muted-foreground"><strong>Not legal advice.</strong> Educational purposes only.</p>
                 </div>
 
-                <div class="footer-section">
-                    <h4>Resources</h4>
-                    <ul>
-                        <li><a href="https://github.com/joefusco/procedural-enclosure-toolkit" target="_blank">GitHub Repository</a></li>
-                        <li><a href="https://github.com/joefusco/procedural-enclosure-toolkit/blob/main/CONTRIBUTING.md" target="_blank">Contributing Guide</a></li>
-                        <li><a href="https://github.com/joefusco/procedural-enclosure-toolkit/issues" target="_blank">Report Issue</a></li>
+                <div>
+                    <h4 class="font-serif font-medium mb-3">Resources</h4>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="https://github.com/joefusco/procedural-enclosure-toolkit" target="_blank" class="text-muted-foreground hover:text-foreground transition-colors">GitHub Repository</a></li>
+                        <li><a href="https://github.com/joefusco/procedural-enclosure-toolkit/blob/main/CONTRIBUTING.md" target="_blank" class="text-muted-foreground hover:text-foreground transition-colors">Contributing Guide</a></li>
+                        <li><a href="https://github.com/joefusco/procedural-enclosure-toolkit/issues" target="_blank" class="text-muted-foreground hover:text-foreground transition-colors">Report Issue</a></li>
                     </ul>
                 </div>
 
-                <div class="footer-section">
-                    <h4>Legal</h4>
-                    <ul>
-                        <li><a href="https://github.com/joefusco/procedural-enclosure-toolkit/blob/main/LICENSE" target="_blank">MIT License</a></li>
-                        <li><a href="https://github.com/joefusco/procedural-enclosure-toolkit/blob/main/guides/ETHICS.md" target="_blank">Ethics & Disclaimers</a></li>
+                <div>
+                    <h4 class="font-serif font-medium mb-3">Legal</h4>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="https://github.com/joefusco/procedural-enclosure-toolkit/blob/main/LICENSE" target="_blank" class="text-muted-foreground hover:text-foreground transition-colors">MIT License</a></li>
+                        <li><a href="https://github.com/joefusco/procedural-enclosure-toolkit/blob/main/guides/ETHICS.md" target="_blank" class="text-muted-foreground hover:text-foreground transition-colors">Ethics & Disclaimers</a></li>
                     </ul>
                 </div>
             </div>
 
-            <div class="footer-bottom">
+            <div class="border-t border-border pt-6 text-center text-sm text-muted-foreground">
                 <p>&copy; 2025 Procedural Enclosure Toolkit. Released under MIT License.</p>
-                <p>Maintained by the open-source community. Not affiliated with any court or government entity.</p>
             </div>
         </div>
     </footer>
+
+    <!-- Search Modal (Command Palette) -->
+    <div id="search-modal" class="hidden fixed inset-0 z-50 bg-black/50" role="dialog" aria-modal="true">
+        <div class="fixed left-1/2 top-[20%] -translate-x-1/2 w-full max-w-2xl bg-background border border-border rounded-lg shadow-lg">
+            <div class="flex items-center border-b border-border px-4">
+                <svg class="w-5 h-5 text-muted-foreground" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/>
+                </svg>
+                <input
+                    type="text"
+                    id="search-input"
+                    class="flex-1 px-3 py-3 text-sm bg-transparent border-0 focus:outline-none"
+                    placeholder="Search templates..."
+                    autocomplete="off"
+                />
+                <button id="search-close" class="text-sm text-muted-foreground hover:text-foreground">ESC</button>
+            </div>
+            <div id="search-results" class="max-h-96 overflow-y-auto p-2">
+                <!-- Populated by JavaScript -->
+            </div>
+        </div>
+    </div>
 
     <script src="app.js"></script>
 </body>
