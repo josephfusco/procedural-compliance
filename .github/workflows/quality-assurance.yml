@@ -266,12 +266,10 @@ jobs:
           echo "🧪 Testing validation script..."
 
           # Create test file with issues
-          cat > /tmp/test-template.md <<'EOF'
-# Test Template
-PLACEHOLDER1
-PLACEHOLDER2
-[TODO: Fix this]
-EOF
+          echo "# Test Template" > /tmp/test-template.md
+          echo "PLACEHOLDER1" >> /tmp/test-template.md
+          echo "PLACEHOLDER2" >> /tmp/test-template.md
+          echo "[TODO: Fix this]" >> /tmp/test-template.md
 
           # Run validation (expect it to find issues)
           if ./scripts/validate.sh /tmp/test-template.md; then
@@ -285,13 +283,11 @@ EOF
           echo "🧪 Testing citation checker..."
 
           # Create test file with citations
-          cat > /tmp/test-citations.md <<'EOF'
-# Test Citations
-CPLR §2219(a)
-22 NYCRR §202.48(b)
-*Apfel v. Prudential-Bache*, 81 N.Y.2d 470 (1993)
-42 U.S.C. §1983
-EOF
+          echo "# Test Citations" > /tmp/test-citations.md
+          echo "CPLR §2219(a)" >> /tmp/test-citations.md
+          echo "22 NYCRR §202.48(b)" >> /tmp/test-citations.md
+          echo "*Apfel v. Prudential-Bache*, 81 N.Y.2d 470 (1993)" >> /tmp/test-citations.md
+          echo "42 U.S.C. §1983" >> /tmp/test-citations.md
 
           # Run citation checker
           ./scripts/check-citations.sh /tmp/test-citations.md
