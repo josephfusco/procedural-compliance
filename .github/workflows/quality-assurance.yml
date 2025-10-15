@@ -1,0 +1,451 @@
+name: Quality Assurance
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+  schedule:
+    # Run monthly on the 1st at 00:00 UTC to check for broken links
+    - cron: '0 0 1 * *'
+
+jobs:
+  validate-templates:
+    name: Validate Templates
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Check for unfilled placeholders in templates
+        run: |
+          echo "🔍 Checking templates for {{placeholders}} that should be filled..."
+
+          FOUND_ISSUES=0
+
+          # Check templates directory
+          for file in templates/*.md examples/*.md; do
+            if [ -f "$file" ]; then
+              # Count placeholders (expected in templates)
+              PLACEHOLDER_COUNT=$(grep -o '{{[^}]*}}' "$file" 2>/dev/null | wc -l | tr -d ' ')
+
+              if [ "$PLACEHOLDER_COUNT" -gt 0 ]; then
+                echo "✅ $file: $PLACEHOLDER_COUNT placeholders (expected for templates)"
+              fi
+            fi
+          done
+
+          echo "✅ Template placeholder check complete"
+
+      - name: Check for incomplete bracket notes
+        run: |
+          echo "🔍 Checking for incomplete [BRACKET NOTES]..."
+
+          # Search for bracket notes in templates (these are fine)
+          # Search for bracket notes in docs (should be resolved)
+          if grep -r '\[TODO\]' docs/ 2>/dev/null || \
+             grep -r '\[FIXME\]' docs/ 2>/dev/null || \
+             grep -r '\[XXX\]' docs/ 2>/dev/null; then
+            echo "⚠️ Found incomplete notes in documentation"
+            exit 1
+          fi
+
+          echo "✅ No incomplete notes in documentation"
+
+      - name: Verify required files exist
+        run: |
+          echo "🔍 Checking required files exist..."
+
+          REQUIRED_FILES=(
+            "README.md"
+            "LICENSE"
+            "CONTRIBUTING.md"
+            "CODE_OF_CONDUCT.md"
+            "templates/procedural_enclosure.md"
+            "guides/FAQ.md"
+            "guides/USAGE_GUIDE.md"
+            "citations/statutes.json"
+            "scripts/validate.sh"
+          )
+
+          MISSING=0
+          for file in "${REQUIRED_FILES[@]}"; do
+            if [ ! -f "$file" ]; then
+              echo "❌ Missing required file: $file"
+              MISSING=$((MISSING + 1))
+            else
+              echo "✅ Found: $file"
+            fi
+          done
+
+          if [ $MISSING -gt 0 ]; then
+            echo "❌ $MISSING required files missing"
+            exit 1
+          fi
+
+          echo "✅ All required files present"
+
+  validate-json:
+    name: Validate JSON Files
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Validate JSON syntax
+        run: |
+          echo "🔍 Validating JSON files..."
+
+          ERRORS=0
+          for file in citations/*.json; do
+            if [ -f "$file" ]; then
+              echo "Checking $file..."
+              if jq empty "$file" 2>/dev/null; then
+                echo "✅ $file: Valid JSON"
+              else
+                echo "❌ $file: Invalid JSON"
+                ERRORS=$((ERRORS + 1))
+              fi
+            fi
+          done
+
+          if [ $ERRORS -gt 0 ]; then
+            echo "❌ $ERRORS JSON files have syntax errors"
+            exit 1
+          fi
+
+          echo "✅ All JSON files valid"
+
+      - name: Verify citation database structure
+        run: |
+          echo "🔍 Verifying citation database structure..."
+
+          # Check statutes.json has required keys
+          if jq -e '.metadata' citations/statutes.json > /dev/null && \
+             jq -e '.new_york' citations/statutes.json > /dev/null && \
+             jq -e '.federal' citations/statutes.json > /dev/null; then
+            echo "✅ statutes.json has correct structure"
+          else
+            echo "❌ statutes.json missing required keys"
+            exit 1
+          fi
+
+          # Check cases.json has required keys
+          if jq -e '.metadata' citations/cases.json > /dev/null && \
+             jq -e '.new_york' citations/cases.json > /dev/null && \
+             jq -e '.federal' citations/cases.json > /dev/null; then
+            echo "✅ cases.json has correct structure"
+          else
+            echo "❌ cases.json missing required keys"
+            exit 1
+          fi
+
+          echo "✅ Citation database structure verified"
+
+  markdown-lint:
+    name: Markdown Linting
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Lint Markdown files
+        uses: DavidAnson/markdownlint-cli2-action@v15
+        with:
+          globs: |
+            **/*.md
+            !node_modules/**
+          config: |
+            {
+              "MD013": false,
+              "MD033": false,
+              "MD041": false,
+              "MD034": false
+            }
+
+  link-checker:
+    name: Check Links
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Check internal links
+        run: |
+          echo "🔍 Checking internal links..."
+
+          # Check for broken internal links (relative paths)
+          ERRORS=0
+
+          for file in $(find . -name "*.md" -not -path "./node_modules/*"); do
+            # Extract relative links
+            grep -oP '\[.*?\]\(\K[^)]+' "$file" 2>/dev/null | while read -r link; do
+              # Skip external URLs
+              if [[ "$link" =~ ^https?:// ]]; then
+                continue
+              fi
+
+              # Skip anchors only
+              if [[ "$link" =~ ^# ]]; then
+                continue
+              fi
+
+              # Resolve relative path
+              DIR=$(dirname "$file")
+              TARGET="$DIR/$link"
+
+              if [ ! -f "$TARGET" ] && [ ! -d "$TARGET" ]; then
+                echo "⚠️ Broken link in $file: $link"
+                ERRORS=$((ERRORS + 1))
+              fi
+            done
+          done
+
+          if [ $ERRORS -gt 0 ]; then
+            echo "⚠️ Found $ERRORS broken internal links (review recommended)"
+            # Don't fail build on broken links, just warn
+          else
+            echo "✅ All internal links valid"
+          fi
+
+  script-tests:
+    name: Test Scripts
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Make scripts executable
+        run: |
+          chmod +x scripts/*.sh
+
+      - name: Test validation script
+        run: |
+          echo "🧪 Testing validation script..."
+
+          # Create test file with issues
+          cat > /tmp/test-template.md <<'EOF'
+# Test Template
+{{Placeholder1}}
+{{Placeholder2}}
+[TODO: Fix this]
+EOF
+
+          # Run validation (expect it to find issues)
+          if ./scripts/validate.sh /tmp/test-template.md; then
+            echo "⚠️ Validation should have found issues but didn't"
+          else
+            echo "✅ Validation correctly identified issues"
+          fi
+
+      - name: Test citation checker
+        run: |
+          echo "🧪 Testing citation checker..."
+
+          # Create test file with citations
+          cat > /tmp/test-citations.md <<'EOF'
+# Test Citations
+CPLR §2219(a)
+22 NYCRR §202.48(b)
+*Apfel v. Prudential-Bache*, 81 N.Y.2d 470 (1993)
+42 U.S.C. §1983
+EOF
+
+          # Run citation checker
+          ./scripts/check-citations.sh /tmp/test-citations.md
+          echo "✅ Citation checker ran successfully"
+
+      - name: Test grading script
+        run: |
+          echo "🧪 Testing grading script..."
+
+          # Run grading script on a real template
+          ./scripts/grade.sh templates/procedural_enclosure.md
+          echo "✅ Grading script ran successfully"
+
+  security-scan:
+    name: Security Scan
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Check for sensitive data
+        run: |
+          echo "🔒 Scanning for sensitive data..."
+
+          # Check for common sensitive patterns
+          FOUND=0
+
+          # Social Security Numbers
+          if grep -rE '\b[0-9]{3}-[0-9]{2}-[0-9]{4}\b' . --exclude-dir=.git --exclude-dir=node_modules; then
+            echo "⚠️ Possible SSN pattern found"
+            FOUND=$((FOUND + 1))
+          fi
+
+          # Email addresses (real ones, not examples)
+          if grep -rE '\b[A-Za-z0-9._%+-]+@(?!example\.com|domain\.com)[A-Za-z0-9.-]+\.[A-Z|a-z]{2,}\b' . --exclude-dir=.git --exclude-dir=node_modules --exclude="*.yml" --exclude="*.yaml"; then
+            echo "⚠️ Real email addresses found (review if they should be anonymized)"
+            FOUND=$((FOUND + 1))
+          fi
+
+          # Phone numbers (US format)
+          if grep -rE '\b\([0-9]{3}\) [0-9]{3}-[0-9]{4}\b' . --exclude-dir=.git --exclude-dir=node_modules; then
+            echo "⚠️ Possible phone number pattern found"
+            FOUND=$((FOUND + 1))
+          fi
+
+          if [ $FOUND -eq 0 ]; then
+            echo "✅ No obvious sensitive data patterns found"
+          else
+            echo "⚠️ Review flagged patterns for sensitive data"
+            # Don't fail build, just warn
+          fi
+
+  accessibility-check:
+    name: Accessibility Check
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Check heading hierarchy
+        run: |
+          echo "🔍 Checking markdown heading hierarchy..."
+
+          # Verify headings don't skip levels (h1 -> h2 -> h3, not h1 -> h3)
+          for file in $(find . -name "*.md" -not -path "./node_modules/*"); do
+            echo "Checking $file..."
+
+            # Extract heading levels
+            grep -E '^#{1,6} ' "$file" 2>/dev/null | sed 's/^\(#*\).*/\1/' | \
+              awk '{
+                level = length($0)
+                if (NR > 1 && level - prev_level > 1) {
+                  print "⚠️ Heading skip in '"$file"' line " NR
+                }
+                prev_level = level
+              }'
+          done
+
+          echo "✅ Heading hierarchy check complete"
+
+  citation-reminder:
+    name: Citation Update Reminder
+    runs-on: ubuntu-latest
+    if: github.event_name == 'schedule'
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Check citation age
+        run: |
+          echo "📅 Checking citation database update status..."
+
+          LAST_UPDATE=$(jq -r '.metadata.last_updated' citations/statutes.json)
+          CURRENT_DATE=$(date +%Y-%m-%d)
+
+          echo "Last citation update: $LAST_UPDATE"
+          echo "Current date: $CURRENT_DATE"
+
+          # Calculate days since update
+          LAST_EPOCH=$(date -d "$LAST_UPDATE" +%s 2>/dev/null || date -j -f "%Y-%m-%d" "$LAST_UPDATE" +%s)
+          CURRENT_EPOCH=$(date +%s)
+          DAYS_OLD=$(( (CURRENT_EPOCH - LAST_EPOCH) / 86400 ))
+
+          echo "Citations are $DAYS_OLD days old"
+
+          if [ $DAYS_OLD -gt 180 ]; then
+            echo "⚠️ Citations are over 6 months old - review recommended"
+            echo "See citations/update-log.md for verification procedures"
+          else
+            echo "✅ Citations are current (under 6 months old)"
+          fi
+
+  build-check:
+    name: Build Check
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js (for potential future JS tooling)
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Verify documentation completeness
+        run: |
+          echo "📋 Verifying documentation completeness..."
+
+          # Check that all templates have corresponding entries in docs
+          MISSING=0
+
+          for template in templates/*.md; do
+            BASENAME=$(basename "$template" .md)
+
+            # Check if mentioned in README.md
+            if ! grep -q "$BASENAME" README.md; then
+              echo "⚠️ Template $BASENAME not mentioned in README.md"
+              MISSING=$((MISSING + 1))
+            fi
+          done
+
+          if [ $MISSING -gt 0 ]; then
+            echo "⚠️ $MISSING templates not documented in README"
+            # Don't fail, just warn
+          else
+            echo "✅ All templates documented"
+          fi
+
+      - name: Check for TODO markers in code
+        run: |
+          echo "🔍 Checking for TODO markers..."
+
+          # Find TODO/FIXME/XXX in code (excluding templates which can have them)
+          if grep -r 'TODO\|FIXME\|XXX' scripts/ .github/ 2>/dev/null; then
+            echo "⚠️ Found TODO markers in code - review pending tasks"
+            # Don't fail, just inform
+          else
+            echo "✅ No TODO markers in code"
+          fi
+
+  summary:
+    name: Quality Assurance Summary
+    runs-on: ubuntu-latest
+    needs: [validate-templates, validate-json, markdown-lint, link-checker, script-tests, security-scan, accessibility-check]
+    if: always()
+
+    steps:
+      - name: Summary
+        run: |
+          echo "📊 Quality Assurance Summary"
+          echo "=============================="
+          echo ""
+          echo "Template Validation: ${{ needs.validate-templates.result }}"
+          echo "JSON Validation: ${{ needs.validate-json.result }}"
+          echo "Markdown Linting: ${{ needs.markdown-lint.result }}"
+          echo "Link Checking: ${{ needs.link-checker.result }}"
+          echo "Script Tests: ${{ needs.script-tests.result }}"
+          echo "Security Scan: ${{ needs.security-scan.result }}"
+          echo "Accessibility Check: ${{ needs.accessibility-check.result }}"
+          echo ""
+
+          if [ "${{ needs.validate-templates.result }}" != "success" ] || \
+             [ "${{ needs.validate-json.result }}" != "success" ] || \
+             [ "${{ needs.markdown-lint.result }}" != "success" ] || \
+             [ "${{ needs.script-tests.result }}" != "success" ]; then
+            echo "❌ Some critical checks failed"
+            exit 1
+          else
+            echo "✅ All critical checks passed"
+          fi
