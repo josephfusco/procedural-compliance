@@ -18,8 +18,6 @@
 
     /* Federal design tokens */
     --ring-color: rgba(44, 62, 80, 0.5);
-    --hover-lift: translateY(-1px);
-    --active-press: scale(0.98);
 }
 
 /* US Government-style banner (open source project) */
@@ -52,16 +50,11 @@ header.sticky {
 
 /* Hero section refinement */
 section:first-of-type {
-    background: linear-gradient(180deg,
-        rgba(249, 250, 251, 0.4) 0%,
-        rgba(249, 250, 251, 0.6) 50%,
-        rgba(249, 250, 251, 0.4) 100%
-    );
-    box-shadow: inset 0 1px 0 0 rgba(255, 255, 255, 0.1);
+    background-color: rgb(7, 16, 42);
 }
 
 section:first-of-type p {
-    text-shadow: 0 1px 2px rgba(255, 255, 255, 0.8);
+    color: rgb(174, 146, 97);
 }
 
 /* Smooth scrolling for anchor links */
@@ -126,12 +119,10 @@ button {
 }
 
 button:hover {
-    transform: var(--hover-lift);
     box-shadow: var(--shadow-base);
 }
 
 button:active {
-    transform: var(--active-press);
     box-shadow: var(--shadow-sm);
 }
 
@@ -163,14 +154,6 @@ select:focus {
 /* Link enhancements */
 a {
     position: relative;
-}
-
-a:hover {
-    transform: var(--hover-lift);
-}
-
-a:active {
-    transform: var(--active-press);
 }
 
 /* Code blocks styling */
@@ -217,8 +200,7 @@ code {
 .table-dense tbody tr:hover {
     background-color: #f9fafb;
     border-left-color: #2c3e50;
-    box-shadow: inset 3px 0 0 0 #2c3e50, var(--shadow-sm);
-    transform: var(--hover-lift);
+    box-shadow: inset 3px 0 0 0 #2c3e50;
 }
 
 .table-dense tbody tr:last-child td {
@@ -241,7 +223,6 @@ code {
 }
 
 .badge:hover {
-    transform: scale(1.05);
     box-shadow: var(--shadow-base);
 }
 
@@ -268,14 +249,12 @@ code {
     background-color: #dc2626;
     color: #ffffff;
     border: 1px solid rgba(220, 38, 38, 0.2);
-    box-shadow: 0 0 0 3px rgba(220, 38, 38, 0.1);
 }
 
 .badge-urgent {
     background-color: #ea580c;
     color: #ffffff;
     border: 1px solid rgba(234, 88, 12, 0.2);
-    box-shadow: 0 0 0 2px rgba(234, 88, 12, 0.1);
 }
 
 .badge-standard {
@@ -314,32 +293,12 @@ code {
     transition: all 200ms cubic-bezier(0.4, 0, 0.2, 1);
     height: 100%;
     box-shadow: var(--shadow-sm);
-    position: relative;
-}
-
-.template-card::before {
-    content: '';
-    position: absolute;
-    inset: 0;
-    border-radius: 0.5rem;
-    padding: 1px;
-    background: linear-gradient(135deg, rgba(44, 62, 80, 0.1), rgba(184, 134, 11, 0.1));
-    -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
-    -webkit-mask-composite: xor;
-    mask-composite: exclude;
-    opacity: 0;
-    transition: opacity 200ms ease-in-out;
 }
 
 .template-card:hover {
     background-color: #f9fafb;
     border-color: #d1d5db;
-    box-shadow: var(--shadow-lg);
-    transform: translateY(-4px);
-}
-
-.template-card:hover::before {
-    opacity: 1;
+    box-shadow: var(--shadow-md);
 }
 
 .template-card-header {
@@ -558,26 +517,11 @@ code {
 section a[class*="block p-4"] {
     box-shadow: var(--shadow-sm);
     transition: all 200ms cubic-bezier(0.4, 0, 0.2, 1);
-    position: relative;
-    overflow: hidden;
 }
 
 section a[class*="block p-4"]:hover {
     box-shadow: var(--shadow-md);
-    transform: translateY(-2px);
-}
-
-section a[class*="block p-4"]::after {
-    content: '→';
-    position: absolute;
-    right: 1rem;
-    top: 1rem;
-    opacity: 0;
-    transition: opacity 200ms ease-in-out;
-}
-
-section a[class*="block p-4"]:hover::after {
-    opacity: 0.3;
+    border-color: #d1d5db;
 }
 
 /* Footer elevation */
