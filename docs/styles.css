@@ -123,6 +123,95 @@ code {
     color: #ffffff;
 }
 
+/* Card view grid layout */
+.card-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+}
+
+@media (min-width: 640px) {
+    .card-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (min-width: 1024px) {
+    .card-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+/* Template card styling - Cornell Law aesthetic */
+.template-card {
+    display: flex;
+    flex-direction: column;
+    padding: 1.25rem;
+    border: 1px solid #e5e7eb;
+    border-radius: 0.5rem;
+    background-color: #ffffff;
+    transition: all 150ms ease-in-out;
+    height: 100%;
+}
+
+.template-card:hover {
+    background-color: #f9fafb;
+    border-color: #d1d5db;
+    box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1);
+}
+
+.template-card-header {
+    flex: 1;
+    margin-bottom: 1rem;
+}
+
+.template-card-title {
+    font-family: Georgia, Cambria, 'Times New Roman', serif;
+    font-size: 1rem;
+    font-weight: 600;
+    line-height: 1.4;
+    color: #1a1a1a;
+    margin-bottom: 0.5rem;
+}
+
+.template-card-subtitle {
+    font-size: 0.8125rem;
+    color: #6b7280;
+    line-height: 1.5;
+}
+
+.template-card-badges {
+    display: flex;
+    gap: 0.5rem;
+    margin-bottom: 1rem;
+    flex-wrap: wrap;
+}
+
+.template-card-footer {
+    display: flex;
+    justify-content: flex-end;
+    padding-top: 0.75rem;
+    border-top: 1px solid #e5e7eb;
+}
+
+.template-card-link {
+    font-size: 0.875rem;
+    color: #2c3e50;
+    font-weight: 500;
+    text-decoration: none;
+    transition: color 150ms ease-in-out;
+}
+
+.template-card-link:hover {
+    color: #1a252f;
+    text-decoration: underline;
+}
+
+/* View toggle animations */
+.view-transition {
+    animation: fade-in 200ms ease-out;
+}
+
 /* Loading state */
 .loading {
     opacity: 0.5;
