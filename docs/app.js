@@ -311,7 +311,7 @@ document.addEventListener('DOMContentLoaded', () => {
     function highlightTemplatePlaceholders(container) {
         if (!container) return;
 
-        const LONG_PLACEHOLDER_THRESHOLD = 50; // characters
+        const LONG_PLACEHOLDER_THRESHOLD = 40; // characters
         const longPlaceholders = []; // Store long placeholders for footnotes
         let footnoteCounter = 0;
 
