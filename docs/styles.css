@@ -114,7 +114,7 @@ h3 {
 
 /* Helpful site text styling - distinguishes instructional text from legal templates */
 .helpful-text {
-    color: #dc2626 !important; /* red-600 for WCAG AA compliance */
+    color: #374151 !important; /* neutral gray for clean, professional appearance */
 }
 
 /* Section spacing improvements */
