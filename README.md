@@ -1,46 +1,87 @@
-# Procedural Enclosure Toolkit
+# Procedural Compliance Framework (PCF)
 
-Open-source legal toolkit for procedural enforcement. Includes modular templates to compel written compliance from judges, clerks, and counsel under CPLR, NYCRR, and due process law. Converts silence into record evidence for appeals, §1983 actions, and oversight.
+An open, citation-based standard for verifying adherence to court procedure and professional ethics.
 
-## What's Here
+## What is PCF?
 
-- **Universal enclosure template** with role modules (Judge, AFC, Counsel, Clerk, Opposing Counsel)
-- **Ready-made filings**: CPLR 5704(a) OSC, 22 NYCRR 202.48(b) Notice, Rule 65 injunction skeleton
-- **Automation scripts** to quickly generate new templates
+**Procedural Compliance Framework (PCF)** — A neutral specification and template set that documents required procedural duties under statute and rule, compels performance or written justification, and creates a verifiable record of compliance or omission. PCF is a documentation framework, not a pleading recognized by the CPLR.
+
+## Mission
+
+The Procedural Compliance Framework (PCF) defines an open, citation-based standard for verifying adherence to court procedure and professional ethics — transforming due process from assumption into verifiable record.
+
+## How It Works
+
+1. **Select an actor** (judge, clerk, counsel, AFC)
+2. **Generate a statute-linked notice**
+3. **Serve and archive** to create a verifiable record
+
+## Project Ethos & Specification
+
+The PCF operates as an open procedural specification for documenting compliance with governing statutes, rules of court, and professional obligations. It does not evaluate motives, outcomes, or individuals. It verifies whether required procedural steps occurred, in writing, within statutory timeframes.
+
+**Design Principle:** Each template maps to an objectively verifiable rule (e.g., CPLR, DRL, NYCRR) and generates reproducible records.
+
+**Scope:** Applicable across courts and agencies; jurisdiction-tagged modules (NY, Federal) clarify use.
+
+**Governance:** Open-source under MIT. Changes follow a public changelog and review process modeled on RFCs.
+
+**Objective:** Define a transparent, repeatable standard for procedural accountability so due process can be demonstrated, not debated.
 
 ## Quick Start
 
-1. Copy a template from `/templates`
-2. Replace `{{placeholders}}` with your case-specific information
-3. File via e-filing and serve according to your jurisdiction's rules
+1. Browse templates at [proceduralcompliance.org](https://josephfusco.github.io/procedural-enclosure-toolkit/)
+2. Select jurisdiction-specific template (NY or Federal)
+3. Replace `{{placeholders}}` with case-specific information
+4. File via e-filing and serve according to local rules
 
 ## Directory Structure
 
 ```
-procedural-enclosure-toolkit/
-├─ templates/          # Core procedural enclosure templates
-├─ examples/           # Ready-to-file skeletons for common motions
-└─ scripts/            # Automation utilities
+procedural-compliance-framework/
+├─ docs/
+│  ├─ templates/       # Jurisdiction-specific templates (NY, Federal)
+│  ├─ guides/          # Filing procedures and redaction guides
+│  ├─ spec/            # PCF definition and technical specification
+│  └─ citations/       # Machine-readable legal authorities
+├─ README.md
+├─ CHANGELOG.md
+└─ CONTRIBUTING.md
 ```
 
-## Usage Example
+## Jurisdictions
 
-```bash
-# Create a new custom template
-./scripts/new.sh my-custom-enclosure
+- **New York:** CPLR, NYCRR, DRL templates
+- **Federal:** FRCP, FRAP, USC templates
 
-# Edit the template
-vi templates/my-custom-enclosure.md
-```
+All templates include YAML metadata with jurisdiction tags, role identifiers, and statutory references.
 
-## Contribute
+## Contributing
 
-See [CONTRIBUTING.md](CONTRIBUTING.md) — PRs welcome for clarity, citations, or new jurisdictions.
+See [CONTRIBUTING.md](CONTRIBUTING.md) — PRs welcome for:
+- Citations and legal accuracy
+- Jurisdiction adaptations
+- Neutral, judge-proof language improvements
+- Example filled outputs
+
+All contributions must include:
+- Statute/rule citations
+- Jurisdiction tags
+- Neutral tone (no accusatory language)
+
+## Resources
+
+- **Website:** [proceduralcompliance.org](https://josephfusco.github.io/procedural-enclosure-toolkit/)
+- **GitHub:** [josephfusco/procedural-enclosure-toolkit](https://github.com/josephfusco/procedural-enclosure-toolkit)
+- **CHANGELOG:** [CHANGELOG.md](CHANGELOG.md)
+- **Specification:** [docs/spec/definition.md](docs/spec/definition.md)
 
 ## License
 
 MIT License. See [LICENSE](LICENSE) for full text.
 
 ## Disclaimer
+
+**Educational civic-tech resource. Not legal advice.** Use jurisdiction-specific templates with local rules. Remove personal/child PII before sharing.
 
 This toolkit provides legal procedure templates for informational purposes. It does not constitute legal advice. Consult qualified counsel regarding your specific circumstances and jurisdiction.
