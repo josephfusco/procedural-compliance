@@ -112,6 +112,11 @@ h3 {
     letter-spacing: -0.01em;
 }
 
+/* Helpful site text styling - distinguishes instructional text from legal templates */
+.helpful-text {
+    color: #dc2626 !important; /* red-600 for WCAG AA compliance */
+}
+
 /* Section spacing improvements */
 section {
     position: relative;

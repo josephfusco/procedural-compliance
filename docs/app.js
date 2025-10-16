@@ -7,6 +7,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const jurisdictionFilter = document.getElementById('jurisdiction-filter');
     const categoryFilter = document.getElementById('category-filter');
     const urgencyFilter = document.getElementById('urgency-filter');
+    const roleFilter = document.getElementById('role-filter');
     const resetButton = document.getElementById('reset-filters');
     const searchTrigger = document.getElementById('search-trigger');
     const searchModal = document.getElementById('search-modal');
@@ -31,6 +32,7 @@ document.addEventListener('DOMContentLoaded', () => {
         jurisdictionFilter.value = 'all';
         categoryFilter.value = 'all';
         urgencyFilter.value = 'all';
+        roleFilter.value = 'all';
         applyFilters();
     }
 
@@ -54,6 +56,7 @@ document.addEventListener('DOMContentLoaded', () => {
             const jurisdiction = row.dataset.jurisdiction || 'ny';
             const category = row.dataset.category || '';
             const urgency = row.dataset.urgency || 'standard';
+            const role = row.dataset.role || 'procedural';
 
             // Determine jurisdiction badge - NY is text-only, Federal uses US flag image
             const jurisdictionBadge = jurisdiction === 'ny'
@@ -75,6 +78,7 @@ document.addEventListener('DOMContentLoaded', () => {
             card.dataset.jurisdiction = jurisdiction;
             card.dataset.category = category;
             card.dataset.urgency = urgency;
+            card.dataset.role = role;
             card.dataset.templateTitle = templateTitle;
             card.dataset.githubUrl = githubUrl;
 
@@ -147,6 +151,7 @@ document.addEventListener('DOMContentLoaded', () => {
         const jurisdiction = jurisdictionFilter.value;
         const category = categoryFilter.value;
         const urgency = urgencyFilter.value;
+        const role = roleFilter.value;
         let visibleCount = 0;
 
         if (currentView === 'table') {
@@ -155,12 +160,14 @@ document.addEventListener('DOMContentLoaded', () => {
                 const rowJurisdiction = row.dataset.jurisdiction;
                 const rowCategory = row.dataset.category;
                 const rowUrgency = row.dataset.urgency;
+                const rowRole = row.dataset.role;
 
                 const matchesJurisdiction = jurisdiction === 'all' || rowJurisdiction === jurisdiction;
                 const matchesCategory = category === 'all' || rowCategory === category;
                 const matchesUrgency = urgency === 'all' || rowUrgency === urgency;
+                const matchesRole = role === 'all' || rowRole === role;
 
-                if (matchesJurisdiction && matchesCategory && matchesUrgency) {
+                if (matchesJurisdiction && matchesCategory && matchesUrgency && matchesRole) {
                     row.style.display = '';
                     visibleCount++;
                 } else {
@@ -174,12 +181,14 @@ document.addEventListener('DOMContentLoaded', () => {
                 const cardJurisdiction = card.dataset.jurisdiction;
                 const cardCategory = card.dataset.category;
                 const cardUrgency = card.dataset.urgency;
+                const cardRole = card.dataset.role;
 
                 const matchesJurisdiction = jurisdiction === 'all' || cardJurisdiction === jurisdiction;
                 const matchesCategory = category === 'all' || cardCategory === category;
                 const matchesUrgency = urgency === 'all' || cardUrgency === urgency;
+                const matchesRole = role === 'all' || cardRole === role;
 
-                if (matchesJurisdiction && matchesCategory && matchesUrgency) {
+                if (matchesJurisdiction && matchesCategory && matchesUrgency && matchesRole) {
                     card.style.display = '';
                     visibleCount++;
                 } else {
@@ -511,6 +520,7 @@ document.addEventListener('DOMContentLoaded', () => {
     if (jurisdictionFilter) jurisdictionFilter.addEventListener('change', applyFilters);
     if (categoryFilter) categoryFilter.addEventListener('change', applyFilters);
     if (urgencyFilter) urgencyFilter.addEventListener('change', applyFilters);
+    if (roleFilter) roleFilter.addEventListener('change', applyFilters);
     if (resetButton) resetButton.addEventListener('click', resetFilters);
     if (viewToggle) viewToggle.addEventListener('click', toggleView);
     if (searchTrigger) searchTrigger.addEventListener('click', openSearch);

@@ -270,7 +270,7 @@
         <div class="container mx-auto px-4">
             <div class="flex items-center gap-2 py-1.5">
                 <img src="us_flag_small.png" class="gov-banner-flag" alt="U.S. flag" loading="lazy">
-                <p class="gov-banner-text">A public specification for verifiable procedural compliance • Educational resource, not legal counsel</p>
+                <p class="gov-banner-text helpful-text">A public specification for verifiable procedural compliance • Educational resource, not legal counsel</p>
             </div>
         </div>
     </div>
@@ -302,13 +302,13 @@
     <!-- Hero Section -->
     <section id="hero" class="border-b border-border bg-muted/30">
         <div class="container mx-auto px-4 py-16">
-            <div class="text-lg font-serif text-foreground/90 leading-loose max-w-3xl mx-auto text-center">
-                <p>
+            <div class="text-lg font-serif leading-loose max-w-3xl mx-auto text-center">
+                <p class="helpful-text">
                     <em>We the People</em> establish this framework to document the procedure by which rights become remedy. Courts shall provide written findings. Clerks shall maintain faithful records. Counsel shall fulfill statutory duty. When procedure fails, liberty fails. We publish openly that all may enforce the law's promise.
                 </p>
             </div>
             <div class="mt-8 text-center">
-                <span class="inline-flex items-center px-3 py-1 text-sm font-medium bg-accent/10 text-accent border border-accent/20 rounded-full">
+                <span id="hero-template-count" class="inline-flex items-center px-3 py-1 text-sm font-medium bg-accent/10 text-accent border border-accent/20 rounded-full">
                     20 Templates Available
                 </span>
             </div>
@@ -322,7 +322,7 @@
                 <!-- Section Header -->
                 <div class="mb-6">
                     <h2 id="templates-heading" class="text-2xl font-serif font-semibold mb-2">Legal Templates</h2>
-                    <p class="text-muted-foreground text-sm">Ready-to-use templates for filing demands, requests, and complaints. Fill in placeholders like {{Your Name}} and {{Case Number}} with your information.</p>
+                    <p class="helpful-text text-sm">Ready-to-use templates for filing demands, requests, and complaints. Fill in placeholders like {{Your Name}} and {{Case Number}} with your information.</p>
                 </div>
 
                 <!-- Filters -->
@@ -357,6 +357,20 @@
                         </select>
                     </div>
 
+                    <div class="w-full sm:w-auto">
+                        <label for="role-filter" class="text-xs font-medium text-muted-foreground mb-1.5 block">Role/Actor</label>
+                        <select id="role-filter" class="w-full sm:w-48 h-9 px-3 py-2 text-sm border border-border rounded-md bg-background focus:outline-none focus:ring-2 focus:ring-ring">
+                            <option value="all">All Roles</option>
+                            <option value="universal">Universal</option>
+                            <option value="judge">Judge</option>
+                            <option value="afc">Attorney for Child</option>
+                            <option value="counsel">Assigned Counsel</option>
+                            <option value="clerk">Court Clerk</option>
+                            <option value="opposing-counsel">Opposing Counsel</option>
+                            <option value="procedural">Procedural/General</option>
+                        </select>
+                    </div>
+
                     <button id="reset-filters" class="h-9 px-4 py-2 text-sm border border-border rounded-md bg-background hover:bg-muted transition-colors whitespace-nowrap">
                         Reset
                     </button>
@@ -378,7 +392,7 @@
                                 </tr>
                             </thead>
                             <tbody>
-                                <tr data-jurisdiction="ny" data-category="procedural-enforcement" data-urgency="standard">
+                                <tr data-jurisdiction="ny" data-category="procedural-enforcement" data-urgency="standard" data-role="universal">
                                     <td>
                                         <a href="templates/procedural_enclosure_universal.md" class="template-link block group" data-template-title="Procedural Enclosure (Universal)" data-github-url="https://github.com/josephfusco/procedural-compliance/blob/main/templates/procedural_enclosure_universal.md">
                                             <div class="font-medium text-sm text-primary group-hover:underline">Procedural Enclosure (Universal)</div>
@@ -392,7 +406,7 @@
                                         <span class="badge badge-standard">STANDARD</span>
                                     </td>
                                 </tr>
-                                <tr data-jurisdiction="ny" data-category="procedural-enforcement" data-urgency="urgent">
+                                <tr data-jurisdiction="ny" data-category="procedural-enforcement" data-urgency="urgent" data-role="procedural">
                                     <td>
                                         <a href="templates/article78_mandamus.md" class="template-link block group" data-template-title="Article 78 Mandamus" data-github-url="https://github.com/josephfusco/procedural-compliance/blob/main/templates/article78_mandamus.md">
                                             <div class="font-medium text-sm text-primary group-hover:underline">Article 78 Mandamus</div>
@@ -406,7 +420,7 @@
                                         <span class="badge badge-urgent">URGENT</span>
                                     </td>
                                 </tr>
-                                <tr data-jurisdiction="ny" data-category="appeals" data-urgency="urgent">
+                                <tr data-jurisdiction="ny" data-category="appeals" data-urgency="urgent" data-role="procedural">
                                     <td>
                                         <a href="templates/notice_of_appeal.md" class="template-link block group" data-template-title="Notice of Appeal" data-github-url="https://github.com/josephfusco/procedural-compliance/blob/main/templates/notice_of_appeal.md">
                                             <div class="font-medium text-sm text-primary group-hover:underline">Notice of Appeal</div>
@@ -420,7 +434,7 @@
                                         <span class="badge badge-urgent">URGENT</span>
                                     </td>
                                 </tr>
-                                <tr data-jurisdiction="ny" data-category="appeals" data-urgency="emergency">
+                                <tr data-jurisdiction="ny" data-category="appeals" data-urgency="emergency" data-role="procedural">
                                     <td>
                                         <a href="templates/emergency_stay.md" class="template-link block group" data-template-title="Emergency Stay" data-github-url="https://github.com/josephfusco/procedural-compliance/blob/main/templates/emergency_stay.md">
                                             <div class="font-medium text-sm text-primary group-hover:underline">Emergency Stay</div>
@@ -434,7 +448,7 @@
                                         <span class="badge badge-emergency">EMERGENCY</span>
                                     </td>
                                 </tr>
-                                <tr data-jurisdiction="ny" data-category="transparency" data-urgency="standard">
+                                <tr data-jurisdiction="ny" data-category="transparency" data-urgency="standard" data-role="procedural">
                                     <td>
                                         <a href="templates/foil_request.md" class="template-link block group" data-template-title="FOIL Request" data-github-url="https://github.com/josephfusco/procedural-compliance/blob/main/templates/foil_request.md">
                                             <div class="font-medium text-sm text-primary group-hover:underline">FOIL Request</div>
@@ -448,7 +462,7 @@
                                         <span class="badge badge-standard">STANDARD</span>
                                     </td>
                                 </tr>
-                                <tr data-jurisdiction="ny" data-category="oversight" data-urgency="standard">
+                                <tr data-jurisdiction="ny" data-category="oversight" data-urgency="standard" data-role="procedural">
                                     <td>
                                         <a href="templates/judicial_conduct_complaint.md" class="template-link block group" data-template-title="Judicial Conduct Complaint" data-github-url="https://github.com/josephfusco/procedural-compliance/blob/main/templates/judicial_conduct_complaint.md">
                                             <div class="font-medium text-sm text-primary group-hover:underline">Judicial Conduct Complaint</div>
@@ -462,7 +476,7 @@
                                         <span class="badge badge-standard">STANDARD</span>
                                     </td>
                                 </tr>
-                                <tr data-jurisdiction="ny" data-category="oversight" data-urgency="standard">
+                                <tr data-jurisdiction="ny" data-category="oversight" data-urgency="standard" data-role="procedural">
                                     <td>
                                         <a href="templates/attorney_grievance.md" class="template-link block group" data-template-title="Attorney Grievance" data-github-url="https://github.com/josephfusco/procedural-compliance/blob/main/templates/attorney_grievance.md">
                                             <div class="font-medium text-sm text-primary group-hover:underline">Attorney Grievance</div>
@@ -476,7 +490,7 @@
                                         <span class="badge badge-standard">STANDARD</span>
                                     </td>
                                 </tr>
-                                <tr data-jurisdiction="ny" data-category="procedural-enforcement" data-urgency="urgent">
+                                <tr data-jurisdiction="ny" data-category="procedural-enforcement" data-urgency="urgent" data-role="judge">
                                     <td>
                                         <a href="templates/enclosure_judge.md" class="template-link block group" data-template-title="Procedural Enclosure - Judge" data-github-url="https://github.com/josephfusco/procedural-compliance/blob/main/templates/enclosure_judge.md">
                                             <div class="font-medium text-sm text-primary group-hover:underline">Procedural Enclosure - Judge</div>
@@ -490,7 +504,7 @@
                                         <span class="badge badge-urgent">URGENT</span>
                                     </td>
                                 </tr>
-                                <tr data-jurisdiction="ny" data-category="procedural-enforcement" data-urgency="standard">
+                                <tr data-jurisdiction="ny" data-category="procedural-enforcement" data-urgency="standard" data-role="afc">
                                     <td>
                                         <a href="templates/enclosure_afc.md" class="template-link block group" data-template-title="Procedural Enclosure - Attorney for Child" data-github-url="https://github.com/josephfusco/procedural-compliance/blob/main/templates/enclosure_afc.md">
                                             <div class="font-medium text-sm text-primary group-hover:underline">Procedural Enclosure - Attorney for Child</div>
@@ -504,7 +518,7 @@
                                         <span class="badge badge-standard">STANDARD</span>
                                     </td>
                                 </tr>
-                                <tr data-jurisdiction="ny" data-category="procedural-enforcement" data-urgency="standard">
+                                <tr data-jurisdiction="ny" data-category="procedural-enforcement" data-urgency="standard" data-role="counsel">
                                     <td>
                                         <a href="templates/enclosure_assigned_counsel.md" class="template-link block group" data-template-title="Procedural Enclosure - Assigned Counsel" data-github-url="https://github.com/josephfusco/procedural-compliance/blob/main/templates/enclosure_assigned_counsel.md">
                                             <div class="font-medium text-sm text-primary group-hover:underline">Procedural Enclosure - Assigned Counsel</div>
@@ -518,7 +532,7 @@
                                         <span class="badge badge-standard">STANDARD</span>
                                     </td>
                                 </tr>
-                                <tr data-jurisdiction="ny" data-category="procedural-enforcement" data-urgency="standard">
+                                <tr data-jurisdiction="ny" data-category="procedural-enforcement" data-urgency="standard" data-role="clerk">
                                     <td>
                                         <a href="templates/enclosure_clerk.md" class="template-link block group" data-template-title="Procedural Enclosure - Court Clerk" data-github-url="https://github.com/josephfusco/procedural-compliance/blob/main/templates/enclosure_clerk.md">
                                             <div class="font-medium text-sm text-primary group-hover:underline">Procedural Enclosure - Court Clerk</div>
@@ -532,7 +546,7 @@
                                         <span class="badge badge-standard">STANDARD</span>
                                     </td>
                                 </tr>
-                                <tr data-jurisdiction="ny" data-category="procedural-enforcement" data-urgency="standard">
+                                <tr data-jurisdiction="ny" data-category="procedural-enforcement" data-urgency="standard" data-role="opposing-counsel">
                                     <td>
                                         <a href="templates/enclosure_opposing_counsel.md" class="template-link block group" data-template-title="Procedural Enclosure - Opposing Counsel" data-github-url="https://github.com/josephfusco/procedural-compliance/blob/main/templates/enclosure_opposing_counsel.md">
                                             <div class="font-medium text-sm text-primary group-hover:underline">Procedural Enclosure - Opposing Counsel</div>
@@ -546,7 +560,7 @@
                                         <span class="badge badge-standard">STANDARD</span>
                                     </td>
                                 </tr>
-                                <tr data-jurisdiction="ny" data-category="procedural-enforcement" data-urgency="standard">
+                                <tr data-jurisdiction="ny" data-category="procedural-enforcement" data-urgency="standard" data-role="procedural">
                                     <td>
                                         <a href="templates/ny_nyscef_violations.md" class="template-link block group" data-template-title="NYSCEF E-Filing Violations" data-github-url="https://github.com/josephfusco/procedural-compliance/blob/main/templates/ny_nyscef_violations.md">
                                             <div class="font-medium text-sm text-primary group-hover:underline">NYSCEF E-Filing Violations</div>
@@ -560,7 +574,7 @@
                                         <span class="badge badge-standard">STANDARD</span>
                                     </td>
                                 </tr>
-                                <tr data-jurisdiction="federal" data-category="procedural-enforcement" data-urgency="standard">
+                                <tr data-jurisdiction="federal" data-category="procedural-enforcement" data-urgency="standard" data-role="universal">
                                     <td>
                                         <a href="templates/federal_procedural_enclosure_universal.md" class="template-link block group" data-template-title="Procedural Enclosure (Universal - Federal)" data-github-url="https://github.com/josephfusco/procedural-compliance/blob/main/templates/federal_procedural_enclosure_universal.md">
                                             <div class="font-medium text-sm text-primary group-hover:underline">Procedural Enclosure (Universal - Federal)</div>
@@ -574,7 +588,7 @@
                                         <span class="badge badge-standard">STANDARD</span>
                                     </td>
                                 </tr>
-                                <tr data-jurisdiction="federal" data-category="procedural-enforcement" data-urgency="urgent">
+                                <tr data-jurisdiction="federal" data-category="procedural-enforcement" data-urgency="urgent" data-role="procedural">
                                     <td>
                                         <a href="templates/federal_mandamus.md" class="template-link block group" data-template-title="Federal Mandamus" data-github-url="https://github.com/josephfusco/procedural-compliance/blob/main/templates/federal_mandamus.md">
                                             <div class="font-medium text-sm text-primary group-hover:underline">Federal Mandamus</div>
@@ -588,7 +602,7 @@
                                         <span class="badge badge-urgent">URGENT</span>
                                     </td>
                                 </tr>
-                                <tr data-jurisdiction="federal" data-category="appeals" data-urgency="urgent">
+                                <tr data-jurisdiction="federal" data-category="appeals" data-urgency="urgent" data-role="procedural">
                                     <td>
                                         <a href="templates/federal_notice_of_appeal.md" class="template-link block group" data-template-title="Federal Notice of Appeal" data-github-url="https://github.com/josephfusco/procedural-compliance/blob/main/templates/federal_notice_of_appeal.md">
                                             <div class="font-medium text-sm text-primary group-hover:underline">Federal Notice of Appeal</div>
@@ -602,7 +616,7 @@
                                         <span class="badge badge-urgent">URGENT</span>
                                     </td>
                                 </tr>
-                                <tr data-jurisdiction="federal" data-category="appeals" data-urgency="emergency">
+                                <tr data-jurisdiction="federal" data-category="appeals" data-urgency="emergency" data-role="procedural">
                                     <td>
                                         <a href="templates/federal_emergency_stay.md" class="template-link block group" data-template-title="Federal Emergency Stay" data-github-url="https://github.com/josephfusco/procedural-compliance/blob/main/templates/federal_emergency_stay.md">
                                             <div class="font-medium text-sm text-primary group-hover:underline">Federal Emergency Stay</div>
@@ -616,7 +630,7 @@
                                         <span class="badge badge-emergency">EMERGENCY</span>
                                     </td>
                                 </tr>
-                                <tr data-jurisdiction="federal" data-category="transparency" data-urgency="standard">
+                                <tr data-jurisdiction="federal" data-category="transparency" data-urgency="standard" data-role="procedural">
                                     <td>
                                         <a href="templates/federal_foia_request.md" class="template-link block group" data-template-title="FOIA Request" data-github-url="https://github.com/josephfusco/procedural-compliance/blob/main/templates/federal_foia_request.md">
                                             <div class="font-medium text-sm text-primary group-hover:underline">FOIA Request</div>
@@ -630,7 +644,7 @@
                                         <span class="badge badge-standard">STANDARD</span>
                                     </td>
                                 </tr>
-                                <tr data-jurisdiction="federal" data-category="procedural-enforcement" data-urgency="urgent">
+                                <tr data-jurisdiction="federal" data-category="procedural-enforcement" data-urgency="urgent" data-role="judge">
                                     <td>
                                         <a href="templates/federal_enclosure_judge.md" class="template-link block group" data-template-title="Procedural Enclosure - Federal Judge" data-github-url="https://github.com/josephfusco/procedural-compliance/blob/main/templates/federal_enclosure_judge.md">
                                             <div class="font-medium text-sm text-primary group-hover:underline">Procedural Enclosure - Federal Judge</div>
@@ -644,7 +658,7 @@
                                         <span class="badge badge-urgent">URGENT</span>
                                     </td>
                                 </tr>
-                                <tr data-jurisdiction="federal" data-category="procedural-enforcement" data-urgency="standard">
+                                <tr data-jurisdiction="federal" data-category="procedural-enforcement" data-urgency="standard" data-role="clerk">
                                     <td>
                                         <a href="templates/federal_enclosure_clerk.md" class="template-link block group" data-template-title="Procedural Enclosure - Federal Clerk" data-github-url="https://github.com/josephfusco/procedural-compliance/blob/main/templates/federal_enclosure_clerk.md">
                                             <div class="font-medium text-sm text-primary group-hover:underline">Procedural Enclosure - Federal Clerk</div>
@@ -658,7 +672,7 @@
                                         <span class="badge badge-standard">STANDARD</span>
                                     </td>
                                 </tr>
-                                <tr data-jurisdiction="federal" data-category="procedural-enforcement" data-urgency="standard">
+                                <tr data-jurisdiction="federal" data-category="procedural-enforcement" data-urgency="standard" data-role="opposing-counsel">
                                     <td>
                                         <a href="templates/federal_enclosure_opposing_counsel.md" class="template-link block group" data-template-title="Procedural Enclosure - Federal Opposing Counsel" data-github-url="https://github.com/josephfusco/procedural-compliance/blob/main/templates/federal_enclosure_opposing_counsel.md">
                                             <div class="font-medium text-sm text-primary group-hover:underline">Procedural Enclosure - Federal Opposing Counsel</div>
@@ -689,7 +703,7 @@
                     <span class="badge badge-ny">NY</span>
                     <h2 id="ny-resources-heading" class="text-2xl font-serif font-semibold">New York Court Resources</h2>
                 </div>
-                <p class="text-muted-foreground text-sm mb-6">Official resources and procedural guides for navigating the New York court system.</p>
+                <p class="helpful-text text-sm mb-6">Official resources and procedural guides for navigating the New York court system.</p>
 
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
                     <a href="https://www.nycourts.gov/efile/rules.shtml" target="_blank" rel="noopener noreferrer" class="block p-4 border border-border rounded-md bg-white hover:bg-blue-50 transition-colors">
@@ -713,8 +727,8 @@
             <div class="grid grid-cols-1 md:grid-cols-3 gap-12 mb-10">
                 <div>
                     <h3 class="text-lg font-serif font-semibold mb-4 text-foreground">Open Collaboration</h3>
-                    <p class="text-sm text-foreground/80 mb-3 leading-relaxed">An open specification for verifying adherence to statutory procedure in state and federal courts. Contributions welcome.</p>
-                    <p class="text-sm text-foreground/80 font-medium"><strong>Not legal advice.</strong> Educational purposes only.</p>
+                    <p class="helpful-text text-sm mb-3 leading-relaxed">An open specification for verifying adherence to statutory procedure in state and federal courts. Contributions welcome.</p>
+                    <p class="helpful-text text-sm font-medium"><strong>Not legal advice.</strong> Educational purposes only.</p>
                 </div>
 
                 <div>
@@ -803,20 +817,28 @@
     <script>
         // Dynamically update template count
         document.addEventListener('DOMContentLoaded', () => {
+            // Count actual template rows
+            const templateRows = document.querySelectorAll('#template-results tbody tr');
+            const totalCount = templateRows.length;
+
             // Update JSON-LD numberOfItems based on actual itemListElement array
             const jsonLd = document.querySelector('script[type="application/ld+json"]');
             if (jsonLd) {
                 const schema = JSON.parse(jsonLd.textContent);
-                const actualCount = schema.itemListElement ? schema.itemListElement.length : 0;
-                schema.numberOfItems = actualCount;
+                schema.numberOfItems = totalCount;
                 jsonLd.textContent = JSON.stringify(schema, null, 2);
             }
 
-            // Update "Showing X templates" text based on actual table rows
-            const templateRows = document.querySelectorAll('#template-results tbody tr');
+            // Update hero badge count
+            const heroCount = document.getElementById('hero-template-count');
+            if (heroCount && totalCount > 0) {
+                heroCount.textContent = `${totalCount} Template${totalCount !== 1 ? 's' : ''} Available`;
+            }
+
+            // Update "Showing X templates" text
             const templateCountText = document.querySelector('#template-results .mt-4.text-sm.text-muted-foreground');
-            if (templateCountText && templateRows.length > 0) {
-                templateCountText.textContent = `Showing ${templateRows.length} templates`;
+            if (templateCountText && totalCount > 0) {
+                templateCountText.textContent = `Showing ${totalCount} template${totalCount !== 1 ? 's' : ''}`;
             }
         });
     </script>
