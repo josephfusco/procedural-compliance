@@ -48,7 +48,7 @@ templates/
 ### Step 2: Copy Template
 
 **Option A: Download from GitHub**
-1. Go to https://github.com/josephfusco/procedural-enclosure-toolkit
+1. Go to https://github.com/josephfusco/procedural-compliance
 2. Navigate to `templates/` folder
 3. Click on the template file
 4. Click "Raw" button
@@ -56,8 +56,8 @@ templates/
 
 **Option B: Clone Repository**
 ```bash
-git clone https://github.com/josephfusco/procedural-enclosure-toolkit.git
-cd procedural-enclosure-toolkit/templates
+git clone https://github.com/josephfusco/procedural-compliance.git
+cd procedural-compliance/templates
 ```
 
 ### Step 3: Open in Editor
@@ -665,6 +665,6 @@ an amended order listing the papers considered.
 - See `guides/GLOSSARY.md` for legal term definitions
 
 **Need Help?**
-- Open issue: https://github.com/josephfusco/procedural-enclosure-toolkit/issues
+- Open issue: https://github.com/josephfusco/procedural-compliance/issues
 - Review examples: `/examples` directory
 - Try AI prompts: `/prompts` directory

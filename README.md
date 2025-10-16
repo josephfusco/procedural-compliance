@@ -30,7 +30,7 @@ The PCF operates as an open procedural specification for documenting compliance 
 
 ## Quick Start
 
-1. Browse templates at [proceduralcompliance.org](https://josephfusco.github.io/procedural-enclosure-toolkit/)
+1. Browse templates at [proceduralcompliance.org](https://josephfusco.github.io/procedural-compliance/)
 2. Select jurisdiction-specific template (NY or Federal)
 3. Replace `{{placeholders}}` with case-specific information
 4. File via e-filing and serve according to local rules
@@ -71,8 +71,8 @@ All contributions must include:
 
 ## Resources
 
-- **Website:** [proceduralcompliance.org](https://josephfusco.github.io/procedural-enclosure-toolkit/)
-- **GitHub:** [josephfusco/procedural-enclosure-toolkit](https://github.com/josephfusco/procedural-enclosure-toolkit)
+- **Website:** [proceduralcompliance.org](https://josephfusco.github.io/procedural-compliance/)
+- **GitHub:** [josephfusco/procedural-compliance](https://github.com/josephfusco/procedural-compliance)
 - **CHANGELOG:** [CHANGELOG.md](CHANGELOG.md)
 - **Specification:** [docs/spec/definition.md](docs/spec/definition.md)
 

@@ -41,7 +41,7 @@ This directory contains the static website for the Procedural Enclosure Toolkit,
 
 **2. Access Site:**
 - URL format: `https://[username].github.io/[repository-name]/`
-- For this repo: `https://joefusco.github.io/procedural-enclosure-toolkit/`
+- For this repo: `https://joefusco.github.io/procedural-compliance/`
 
 **3. Custom Domain (Optional):**
 - Add `CNAME` file to `/docs` with custom domain

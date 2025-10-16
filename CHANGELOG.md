@@ -213,9 +213,9 @@ All PCF content is released under MIT License. Contributions are accepted under 
 
 ## Links
 
-- **Repository**: [josephfusco/procedural-enclosure-toolkit](https://github.com/josephfusco/procedural-enclosure-toolkit)
-- **Website**: [proceduralcompliance.org](https://josephfusco.github.io/procedural-enclosure-toolkit/)
-- **Issues**: [GitHub Issues](https://github.com/josephfusco/procedural-enclosure-toolkit/issues)
+- **Repository**: [josephfusco/procedural-compliance](https://github.com/josephfusco/procedural-compliance)
+- **Website**: [proceduralcompliance.org](https://josephfusco.github.io/procedural-compliance/)
+- **Issues**: [GitHub Issues](https://github.com/josephfusco/procedural-compliance/issues)
 - **Specification**: [docs/spec/definition.md](docs/spec/definition.md)
 
 ---
@@ -226,4 +226,4 @@ All PCF content is released under MIT License. Contributions are accepted under 
 
 ---
 
-*Note: This changelog will be updated with each release. For unreleased changes, see the [main branch](https://github.com/josephfusco/procedural-enclosure-toolkit).*
+*Note: This changelog will be updated with each release. For unreleased changes, see the [main branch](https://github.com/josephfusco/procedural-compliance).*

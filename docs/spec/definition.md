@@ -179,6 +179,6 @@ Define a transparent, repeatable standard for procedural accountability so due p
 
 ---
 
-**Repository:** [josephfusco/procedural-enclosure-toolkit](https://github.com/josephfusco/procedural-enclosure-toolkit)
-**Website:** [proceduralcompliance.org](https://josephfusco.github.io/procedural-enclosure-toolkit/)
-**Issue Tracker:** [GitHub Issues](https://github.com/josephfusco/procedural-enclosure-toolkit/issues)
+**Repository:** [josephfusco/procedural-compliance](https://github.com/josephfusco/procedural-compliance)
+**Website:** [proceduralcompliance.org](https://josephfusco.github.io/procedural-compliance/)
+**Issue Tracker:** [GitHub Issues](https://github.com/josephfusco/procedural-compliance/issues)

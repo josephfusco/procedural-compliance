@@ -501,4 +501,4 @@ No, but you should:
 - Check `guides/USAGE_GUIDE.md` for step-by-step instructions
 - Review `guides/ETHICS.md` for legal boundaries
 - See `guides/JURISDICTIONS.md` for state-specific guidance
-- Open an issue on GitHub: https://github.com/josephfusco/procedural-enclosure-toolkit/issues
+- Open an issue on GitHub: https://github.com/josephfusco/procedural-compliance/issues

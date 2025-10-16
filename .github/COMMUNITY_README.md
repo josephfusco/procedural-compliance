@@ -48,13 +48,13 @@ See `/wiki-templates/` directory for markdown files ready to import.
 **Import Process:**
 ```bash
 # Clone wiki repository
-git clone https://github.com/joefusco/procedural-enclosure-toolkit.wiki.git
+git clone https://github.com/joefusco/procedural-compliance.wiki.git
 
 # Copy template files
-cp wiki-templates/*.md procedural-enclosure-toolkit.wiki/
+cp wiki-templates/*.md procedural-compliance.wiki/
 
 # Push to wiki
-cd procedural-enclosure-toolkit.wiki
+cd procedural-compliance.wiki
 git add .
 git commit -m "Initialize wiki with template documentation"
 git push

@@ -209,7 +209,7 @@ chmod 755 scripts/*.sh
 ### Script not found
 ```bash
 # Run from repository root
-cd /path/to/procedural-enclosure-toolkit
+cd /path/to/procedural-compliance
 ./scripts/validate.sh templates/file.md
 ```
 
@@ -247,7 +247,7 @@ Guidelines:
 
 ## Support
 
-**Issues:** https://github.com/josephfusco/procedural-enclosure-toolkit/issues
+**Issues:** https://github.com/josephfusco/procedural-compliance/issues
 
 **Documentation:** See `/guides` for comprehensive guidance
 

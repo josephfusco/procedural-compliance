@@ -105,8 +105,8 @@ This directory contains GitHub Actions workflows that automatically test, valida
 **Add to README.md:**
 
 ```markdown
-![Quality Assurance](https://github.com/joefusco/procedural-enclosure-toolkit/workflows/Quality%20Assurance/badge.svg)
-![Pages Deployment](https://github.com/joefusco/procedural-enclosure-toolkit/workflows/GitHub%20Pages%20Deployment%20Check/badge.svg)
+![Quality Assurance](https://github.com/joefusco/procedural-compliance/workflows/Quality%20Assurance/badge.svg)
+![Pages Deployment](https://github.com/joefusco/procedural-compliance/workflows/GitHub%20Pages%20Deployment%20Check/badge.svg)
 ```
 
 ---

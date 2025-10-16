@@ -160,8 +160,8 @@ This toolkit provides legal procedure templates for informational purposes. It d
 
 ## Resources
 
-- **Website:** [proceduralcompliance.org](https://josephfusco.github.io/procedural-enclosure-toolkit/)
-- **GitHub:** [josephfusco/procedural-enclosure-toolkit](https://github.com/josephfusco/procedural-enclosure-toolkit)
+- **Website:** [proceduralcompliance.org](https://josephfusco.github.io/procedural-compliance/)
+- **GitHub:** [josephfusco/procedural-compliance](https://github.com/josephfusco/procedural-compliance)
 - **CHANGELOG:** [CHANGELOG.md](../CHANGELOG.md)
 - **Specification:** [docs/spec/definition.md](spec/definition.md)
 
@@ -169,7 +169,7 @@ This toolkit provides legal procedure templates for informational purposes. It d
 
 ## Contact
 
-**Issues and Feedback:** [GitHub Issues](https://github.com/josephfusco/procedural-enclosure-toolkit/issues)
+**Issues and Feedback:** [GitHub Issues](https://github.com/josephfusco/procedural-compliance/issues)
 
 **Contributing:** Pull requests welcome! See [CONTRIBUTING.md](../CONTRIBUTING.md).
 

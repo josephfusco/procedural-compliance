@@ -258,7 +258,7 @@ educational/
 
 **Attribution:**
 - Credit: "Procedural Enclosure Toolkit"
-- Link: https://github.com/joefusco/procedural-enclosure-toolkit
+- Link: https://github.com/joefusco/procedural-compliance
 - License: MIT (free to use, adapt, redistribute)
 
 ---
