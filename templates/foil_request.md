@@ -1,6 +1,12 @@
 # FREEDOM OF INFORMATION LAW REQUEST
 
-**[NY][FOIL] Request for Records Pursuant to Public Officers Law §87**
+**[NY][FOIL] Request for Records Pursuant to Public Officers Law Section 87**
+
+## WHAT IS THIS?
+
+This is a formal request to get copies of government records. In New York, most government records are public by law. This template helps you ask for records like court documents, emails, meeting minutes, or other official documents.
+
+**(In simple terms:** The government has to show you their records unless there's a specific legal reason they can't. This letter formally asks for those records.**)**
 
 ---
 
@@ -21,7 +27,7 @@
 
 ## REQUEST FOR RECORDS
 
-Pursuant to the New York Freedom of Information Law (Public Officers Law §87) and implementing regulations, I hereby request access to and copies of the following records:
+Pursuant to the New York Freedom of Information Law (Public Officers Law Section 87) and implementing regulations, I hereby request access to and copies of the following records:
 
 ### RECORDS REQUESTED
 
@@ -52,7 +58,7 @@ If electronic format is available, please email records to: {{email address}}.
 {{#if fee_waiver}}
 ## FEE WAIVER REQUEST
 
-I request a waiver of all fees associated with this request pursuant to Public Officers Law §87(1)(b)(iii) and 21 NYCRR §1401.9, on the grounds that:
+I request a waiver of all fees associated with this request pursuant to Public Officers Law Section 87(1)(b)(iii) and 21 NYCRR Section 1401.9, on the grounds that:
 
 {{Reason for waiver - e.g., "disclosure is in the public interest" / "requester cannot afford fees" / "records relate to ongoing litigation affecting requester's rights"}}
 
@@ -64,7 +70,7 @@ Public disclosure of these records would primarily benefit the general public by
 
 ## STATUTORY TIMELINE
 
-Pursuant to Public Officers Law §89(3):
+Pursuant to Public Officers Law Section 89(3):
 
 1. **Acknowledgment:** You must acknowledge receipt of this request within five (5) business days.
 
@@ -76,17 +82,17 @@ Pursuant to Public Officers Law §89(3):
 
 ## LEGAL BASIS
 
-**Public Officers Law §87(2):**
+**Public Officers Law Section 87(2):**
 > "Each entity subject to the provisions of this article... shall make available for public inspection and copying all records, except that such entity may deny access to records or portions thereof that... [enumerated exceptions]."
 
 **Applicable to:**
-- State agencies (Public Officers Law §86(3))
+- State agencies (Public Officers Law Section 86(3))
 - Municipal corporations and local government entities
-- Courts (22 NYCRR §216.1 for court records)
+- Courts (22 NYCRR Section 216.1 for court records)
 
 **Exemptions:**
 If you determine that any portion of the requested records is exempt from disclosure, please:
-1. Identify the specific exemption claimed (Public Officers Law §87(2)(a)-(i))
+1. Identify the specific exemption claimed (Public Officers Law Section 87(2)(a)-(i))
 2. Provide factual basis for exemption
 3. Redact only the exempt portion and provide remainder
 
@@ -107,7 +113,7 @@ I am available to discuss this request and clarify the scope if needed.
 
 ## CERTIFICATION
 
-I certify that I am making this request for lawful purposes and that the information will not be used for commercial solicitation purposes in violation of Public Officers Law §89(2)(b).
+I certify that I am making this request for lawful purposes and that the information will not be used for commercial solicitation purposes in violation of Public Officers Law Section 89(2)(b).
 
 _________________________
 {{Your Signature}}
@@ -118,14 +124,14 @@ Dated: {{Date}}
 ---
 
 **Authority:**
-- Public Officers Law Article 6 (§§84-90) (Freedom of Information Law)
+- Public Officers Law Article 6 (Section 84-90) (Freedom of Information Law)
 - 21 NYCRR Part 1401 (implementing regulations)
-- 22 NYCRR §216.1 (access to court records)
-- Public Officers Law §89(3) (response timeline)
-- Public Officers Law §89(4)(a) (administrative appeal)
+- 22 NYCRR Section 216.1 (access to court records)
+- Public Officers Law Section 89(3) (response timeline)
+- Public Officers Law Section 89(4)(a) (administrative appeal)
 
 **If Request is Denied:**
-- Appeal to head of agency within 30 days (Public Officers Law §89(4)(a))
-- Judicial review under Article 78 (Public Officers Law §89(4)(b))
+- Appeal to head of agency within 30 days (Public Officers Law Section 89(4)(a))
+- Judicial review under Article 78 (Public Officers Law Section 89(4)(b))
 
-**Note:** For court records, also check CPLR §5017(b) (clerk's duty to provide access) and local court rules.
+**Note:** For court records, also check CPLR Section 5017(b) (clerk's duty to provide access) and local court rules.

@@ -27,15 +27,15 @@ Petitioner {{Name}}, by {{pro se / counsel}}, respectfully alleges:
 
 ### I. NATURE OF PROCEEDING
 
-1. This is a proceeding pursuant to CPLR Article 78 to compel respondent to perform a ministerial duty required by law: {{specific duty - e.g., "issue written orders pursuant to CPLR §2219(a)" / "provide access to court records under CPLR §5017(b)"}}.
+1. This is a proceeding pursuant to CPLR Article 78 to compel respondent to perform a ministerial duty required by law: {{specific duty - e.g., "issue written orders pursuant to CPLR Section 2219(a)" / "provide access to court records under CPLR Section 5017(b)"}}.
 
 2. Despite multiple demands over {{X}} months, respondent has refused or failed to perform this statutory obligation.
 
 ### II. JURISDICTION AND VENUE
 
-3. This Court has jurisdiction pursuant to CPLR §7804(b), which authorizes mandamus relief to compel performance of a duty enjoined by law upon a public officer.
+3. This Court has jurisdiction pursuant to CPLR Section 7804(b), which authorizes mandamus relief to compel performance of a duty enjoined by law upon a public officer.
 
-4. Venue is proper in {{County}} County under CPLR §7804(b) as respondent's principal office is located in this county.
+4. Venue is proper in {{County}} County under CPLR Section 7804(b) as respondent's principal office is located in this county.
 
 ### III. PARTIES
 
@@ -85,7 +85,7 @@ Petitioner {{Name}}, by {{pro se / counsel}}, respectfully alleges:
 
 #### POINT I: MANDAMUS IS THE APPROPRIATE REMEDY
 
-23. Mandamus lies to compel performance of a ministerial duty required by law. CPLR §7803(1); *Kolisnyk v. County of Monroe*, 34 N.Y.3d 1092 (2020).
+23. Mandamus lies to compel performance of a ministerial duty required by law. CPLR Section 7803(1); *Kolisnyk v. County of Monroe*, 34 N.Y.3d 1092 (2020).
 
 24. To obtain mandamus, petitioner must demonstrate: (1) a clear legal right to the relief sought; (2) respondent's duty to perform is ministerial and not discretionary; and (3) no adequate alternative remedy exists. *Matter of Holtzman v. Goldman*, 71 N.Y.2d 564, 572 (1988).
 
@@ -149,9 +149,9 @@ WHEREFORE, Petitioner respectfully requests that this Court:
 
 A. Issue an order to show cause why a writ of mandamus should not issue, returnable on the earliest available date;
 
-B. After hearing, issue a writ of mandamus directing respondent to {{specific action - e.g., "issue written orders pursuant to CPLR §2219(a) for Motion Nos. 3, 5, and 7 within fourteen (14) days"}};
+B. After hearing, issue a writ of mandamus directing respondent to {{specific action - e.g., "issue written orders pursuant to CPLR Section 2219(a) for Motion Nos. 3, 5, and 7 within fourteen (14) days"}};
 
-C. Award costs and disbursements to petitioner pursuant to CPLR §8101;
+C. Award costs and disbursements to petitioner pursuant to CPLR Section 8101;
 
 D. Grant such other and further relief as the Court deems just and proper.
 
@@ -214,14 +214,14 @@ Notary Public
 
 **Authorities Cited:**
 
-- CPLR Article 78 (§§7801-7806)
-- CPLR §7803(1) (mandamus)
-- CPLR §7804(b) (jurisdiction and venue)
-- CPLR §{{specific duty statute}}
+- CPLR Article 78 (Section 7801-7806)
+- CPLR Section 7803(1) (mandamus)
+- CPLR Section 7804(b) (jurisdiction and venue)
+- CPLR Section {{specific duty statute}}
 - *Kolisnyk v. County of Monroe*, 34 N.Y.3d 1092 (2020)
 - *Matter of Holtzman v. Goldman*, 71 N.Y.2d 564 (1988)
 - {{Additional authorities as applicable}}
 
 ---
 
-**Service:** This Verified Petition and supporting papers shall be served on respondent pursuant to CPLR §7804(d) and relevant court rules.
+**Service:** This Verified Petition and supporting papers shall be served on respondent pursuant to CPLR Section 7804(d) and relevant court rules.

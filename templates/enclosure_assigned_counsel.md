@@ -1,4 +1,4 @@
-# PROCEDURAL ENCLOSURE — ASSIGNED COUNSEL
+# PROCEDURAL ENCLOSURE -- ASSIGNED COUNSEL
 
 **[NY] Demand for Competent Representation and Communication**
 

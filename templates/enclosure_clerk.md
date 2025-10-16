@@ -1,4 +1,4 @@
-# PROCEDURAL ENCLOSURE — COURT CLERK
+# PROCEDURAL ENCLOSURE -- COURT CLERK
 
 **[NY][CPLR] Demand for Proper Record Entry and Access**
 
@@ -17,10 +17,10 @@
 
 You are bound by:
 
-- **CPLR §5017(b):** Clerk must enter orders and judgments in record
-- **22 NYCRR §202.48:** Motion procedures and record maintenance
-- **22 NYCRR §202.5(b):** Public access to court records (with statutory exceptions)
-- **Judiciary Law §255:** Duties of clerks
+- **CPLR Section 5017(b):** Clerk must enter orders and judgments in record
+- **22 NYCRR Section 202.48:** Motion procedures and record maintenance
+- **22 NYCRR Section 202.5(b):** Public access to court records (with statutory exceptions)
+- **Judiciary Law Section 255:** Duties of clerks
 
 ## Identified Deficiencies
 
@@ -45,7 +45,7 @@ You are demanded to:
 Failure to maintain accurate records or provide lawful access may:
 
 - Compromise appellate review (CPLR Article 55)
-- Violate public access rights (22 NYCRR §202.5)
+- Violate public access rights (22 NYCRR Section 202.5)
 - Support mandamus relief (CPLR Article 78)
 
 ## Preservation Notice

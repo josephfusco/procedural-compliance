@@ -1,4 +1,4 @@
-# PROCEDURAL ENCLOSURE — ATTORNEY FOR THE CHILD
+# PROCEDURAL ENCLOSURE -- ATTORNEY FOR THE CHILD
 
 **[NY][FCA] Demand for Zealous Representation and Communication**
 
@@ -17,8 +17,8 @@
 
 You are bound by:
 
-- **FCA §§241–249:** Duties of law guardians and attorneys for children
-- **22 NYCRR §7.2(d):** Standards for representation of children
+- **FCA Section 241–249:** Duties of law guardians and attorneys for children
+- **22 NYCRR Section 7.2(d):** Standards for representation of children
 - **RPC 1.1, 1.3, 1.4:** Competence, diligence, and client communication
 - **Matter of Lashonda B., 28 N.Y.3d 259 (2016):** AFC must zealously advocate for child's expressed wishes
 

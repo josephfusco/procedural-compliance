@@ -2,6 +2,12 @@
 
 **[NY][CPLR] Appeal to Appellate Division Pursuant to CPLR Article 55**
 
+## WHAT IS THIS?
+
+This is the document you file to start an appeal. An appeal asks a higher court to review a lower court's decision. You typically have 30 days from when you received the order/judgment to file this.
+
+**(In simple terms:** When a judge makes a decision you think is wrong, this letter officially tells the court "I want a higher court to review this."**)**
+
 ---
 
 **{{TRIAL COURT NAME}}**
@@ -35,9 +41,9 @@ The Notice of Entry of the {{order/judgment}} was served on {{Appellant Name}} o
 
 The issues to be raised on appeal include, but are not limited to:
 
-1. {{Issue 1 - e.g., "Whether the trial court erred in granting defendant's motion to dismiss for failure to state a claim under CPLR §3211(a)(7)"}}
+1. {{Issue 1 - e.g., "Whether the trial court erred in granting defendant's motion to dismiss for failure to state a claim under CPLR Section 3211(a)(7)"}}
 
-2. {{Issue 2 - e.g., "Whether the trial court violated CPLR §2219(a) by failing to state grounds for the decision or specify papers considered"}}
+2. {{Issue 2 - e.g., "Whether the trial court violated CPLR Section 2219(a) by failing to state grounds for the decision or specify papers considered"}}
 
 3. {{Issue 3 - e.g., "Whether the trial court's ruling deprived appellant of due process by [specify]"}}
 
@@ -48,13 +54,13 @@ The issues to be raised on appeal include, but are not limited to:
 {{#if stay_requested}}
 ## STAY OF ENFORCEMENT
 
-PLEASE TAKE FURTHER NOTICE that appellant intends to move for a stay of enforcement of the {{order/judgment}} pending determination of this appeal pursuant to CPLR §5519.
+PLEASE TAKE FURTHER NOTICE that appellant intends to move for a stay of enforcement of the {{order/judgment}} pending determination of this appeal pursuant to CPLR Section 5519.
 {{/if}}
 
 {{#if poor_person_relief}}
 ## POOR PERSON RELIEF
 
-PLEASE TAKE FURTHER NOTICE that appellant intends to move for leave to proceed as a poor person pursuant to CPLR §1101 and for assignment of counsel.
+PLEASE TAKE FURTHER NOTICE that appellant intends to move for leave to proceed as a poor person pursuant to CPLR Section 1101 and for assignment of counsel.
 {{/if}}
 
 ---
@@ -100,14 +106,14 @@ Clerk of the Appellate Division
 ---
 
 **Authorities:**
-- CPLR §5515 (notice of appeal - form and content)
-- CPLR §5513 (time to appeal - 30 days from service of notice of entry)
-- CPLR §5519 (stays pending appeal)
-- CPLR §1101 (poor person relief)
-- CPLR §5701 (appeals as of right; permission required)
+- CPLR Section 5515 (notice of appeal - form and content)
+- CPLR Section 5513 (time to appeal - 30 days from service of notice of entry)
+- CPLR Section 5519 (stays pending appeal)
+- CPLR Section 1101 (poor person relief)
+- CPLR Section 5701 (appeals as of right; permission required)
 
 **Next Steps:**
 - Perfect appeal within time specified by Appellate Division (typically 9 months)
-- Order transcripts (CPLR §5525)
-- Prepare record on appeal (CPLR §5526)
+- Order transcripts (CPLR Section 5525)
+- Prepare record on appeal (CPLR Section 5526)
 - File appellant's brief per Appellate Division rules

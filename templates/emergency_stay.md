@@ -1,6 +1,6 @@
 # MOTION FOR STAY PENDING APPEAL
 
-**[NY][CPLR] Emergency Stay Pursuant to CPLR §5519**
+**[NY][CPLR] Emergency Stay Pursuant to CPLR Section 5519**
 
 ---
 
@@ -23,7 +23,7 @@ Index No. {{Number}}
 
 ## NOTICE OF MOTION FOR STAY PENDING APPEAL
 
-PLEASE TAKE NOTICE that upon the annexed affidavit/affirmation of {{Name}}, dated {{date}}, and the {{memorandum of law / exhibits / other supporting papers}} submitted herewith, movant will move this Court at {{Courthouse Address}}, {{Courtroom}}, on {{date}} at {{time}} in the {{a.m./p.m.}}, or as soon thereafter as counsel can be heard, for an order pursuant to CPLR §5519:
+PLEASE TAKE NOTICE that upon the annexed affidavit/affirmation of {{Name}}, dated {{date}}, and the {{memorandum of law / exhibits / other supporting papers}} submitted herewith, movant will move this Court at {{Courthouse Address}}, {{Courtroom}}, on {{date}} at {{time}} in the {{a.m./p.m.}}, or as soon thereafter as counsel can be heard, for an order pursuant to CPLR Section 5519:
 
 1. **Staying enforcement** of the {{order/judgment}} dated {{date}} pending determination of movant's appeal to the Appellate Division, {{Department}} Department;
 
@@ -74,7 +74,7 @@ COUNTY OF {{COUNTY}} )
 
 ### II. LEGAL STANDARD
 
-5. CPLR §5519(a)(1) authorizes this Court to stay enforcement of a judgment or order "upon such terms as may be just."
+5. CPLR Section 5519(a)(1) authorizes this Court to stay enforcement of a judgment or order "upon such terms as may be just."
 
 6. To obtain a stay, movant must demonstrate:
    - Likelihood of success on the merits of the appeal
@@ -94,7 +94,7 @@ COUNTY OF {{COUNTY}} )
 
 **Analysis:** {{Brief explanation of why this is likely to be reversed. Cite cases where similar errors led to reversal.}}
 
-**Issue 2:** {{e.g., "The trial court violated CPLR §2219(a) by failing to state grounds for decision"}}
+**Issue 2:** {{e.g., "The trial court violated CPLR Section 2219(a) by failing to state grounds for decision"}}
 
 **Analysis:** {{Explanation + authority}}
 
@@ -146,7 +146,7 @@ COUNTY OF {{COUNTY}} )
 18. Movant proposes the following terms for the stay:
 
 {{If undertaking required:
-- "Movant will post undertaking in the amount of ${{X}} pursuant to CPLR §5519(a)(1)"}}
+- "Movant will post undertaking in the amount of ${{X}} pursuant to CPLR Section 5519(a)(1)"}}
 
 {{Other conditions:
 - "Movant will perfect appeal within {{X}} months"
@@ -175,7 +175,7 @@ Notary Public
 
 ### I. APPLICABLE LEGAL STANDARD
 
-CPLR §5519(a)(1) provides: "Upon an appeal from a judgment or order..., the court which rendered the judgment or made the order, or the appellate division, may stay the enforcement of the judgment or order during the pendency of the appeal upon such terms as may be just..."
+CPLR Section 5519(a)(1) provides: "Upon an appeal from a judgment or order..., the court which rendered the judgment or made the order, or the appellate division, may stay the enforcement of the judgment or order during the pendency of the appeal upon such terms as may be just..."
 
 Stay requires showing:
 1. Likelihood of success on appeal
@@ -210,7 +210,7 @@ Stay requires showing:
 
 ### III. UNDERTAKING
 
-{{If court requires undertaking under CPLR §5519(c), address:
+{{If court requires undertaking under CPLR Section 5519(c), address:
 - Movant's ability/willingness to post
 - Appropriate amount
 - Security for respondent's interests}}
@@ -251,10 +251,10 @@ Dated: {{Date}}
 ---
 
 **Authority:**
-- CPLR §5519 (stays)
-- CPLR §5519(a)(1) (automatic stay if notice of appeal served within 30 days + undertaking filed)
-- CPLR §5519(c) (undertaking)
+- CPLR Section 5519 (stays)
+- CPLR Section 5519(a)(1) (automatic stay if notice of appeal served within 30 days + undertaking filed)
+- CPLR Section 5519(c) (undertaking)
 - *William Karl Realty Corp. v. 420 W. 204th St. Realty LLC*, 132 A.D.3d 561 (1st Dep't 2015)
 - *Doe v. Axelrod*, 73 N.Y.2d 748 (1988)
 
-**Note:** If trial court denies stay, move for stay in Appellate Division under same standard (CPLR §5519(a)(2)).
+**Note:** If trial court denies stay, move for stay in Appellate Division under same standard (CPLR Section 5519(a)(2)).

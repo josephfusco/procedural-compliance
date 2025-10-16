@@ -2,6 +2,14 @@
 
 **[NY] Formal Complaint Pursuant to 22 NYCRR Part 100 (Code of Judicial Conduct)**
 
+## WHAT IS THIS?
+
+This is a formal complaint against a judge for misconduct. This is a serious step that should only be used when a judge has violated the rules of judicial conduct (not just made a decision you disagree with). The Commission on Judicial Conduct investigates complaints and can discipline judges.
+
+**(In simple terms:** When a judge breaks the rules of how judges are supposed to behave, this form lets you report them to the official watchdog agency.**)**
+
+**WARNING:** Filing this during an active case can affect how the judge treats you. Consider filing after your case is over, or consult a lawyer first.
+
 ---
 
 **TO:** New York State Commission on Judicial Conduct
@@ -42,7 +50,7 @@
 
 ## III. BASIS FOR COMPLAINT
 
-This complaint is filed pursuant to Judiciary Law §44 and alleges violations of the Rules of Judicial Conduct, 22 NYCRR Part 100.
+This complaint is filed pursuant to Judiciary Law Section 44 and alleges violations of the Rules of Judicial Conduct, 22 NYCRR Part 100.
 
 ---
 
@@ -64,7 +72,7 @@ This complaint is filed pursuant to Judiciary Law §44 and alleges violations of
 
 **Facts:** {{Detailed description of what judge did or failed to do. Be specific, factual, and chronological. Include exact quotes if available.}}
 
-**Rule Violated:** 22 NYCRR §100.3(B)(6) - "A judge shall accord to every person who has a legal interest in a proceeding... the right to be heard according to law."
+**Rule Violated:** 22 NYCRR Section 100.3(B)(6) - "A judge shall accord to every person who has a legal interest in a proceeding... the right to be heard according to law."
 
 **Why This is Misconduct:** {{Explanation of how this violates the rule and affected the proceeding}}
 
@@ -93,20 +101,20 @@ This complaint is filed pursuant to Judiciary Law §44 and alleges violations of
 
 The complained-of conduct violates the following provisions of 22 NYCRR Part 100:
 
-**§100.1 - General Provisions**
+**Section 100.1 - General Provisions**
 {{If applicable}}
 
-**§100.2 - Maintaining Integrity and Impartiality**
-- §100.2(A): "A judge shall... act at all times in a manner that promotes public confidence in the integrity and impartiality of the judiciary."
+**Section 100.2 - Maintaining Integrity and Impartiality**
+- Section 100.2(A): "A judge shall... act at all times in a manner that promotes public confidence in the integrity and impartiality of the judiciary."
   - Violated by: {{How}}
 
-**§100.3 - Adjudicative Responsibilities**
-- §100.3(B)(6): Right to be heard
+**Section 100.3 - Adjudicative Responsibilities**
+- Section 100.3(B)(6): Right to be heard
   - Violated by: {{How}}
-- §100.3(B)(8): Consideration of relevant information
+- Section 100.3(B)(8): Consideration of relevant information
   - Violated by: {{How}}
 
-**§100.4 - Extrajudicial Activities**
+**Section 100.4 - Extrajudicial Activities**
 {{If applicable - ex parte communications, improper contacts}}
 
 ---
@@ -162,7 +170,7 @@ I respectfully request that the Commission:
 ## XI. CONFIDENTIALITY AND CONSENT
 
 I understand that:
-- Complaints are confidential until formal charges are filed (Judiciary Law §44(5))
+- Complaints are confidential until formal charges are filed (Judiciary Law Section 44(5))
 - The Commission may disclose complaint to judge as part of investigation
 - False complaints may subject complainant to sanctions
 
@@ -185,13 +193,13 @@ Dated: {{Date}}
 ## AUTHORITIES
 
 **Judiciary Law:**
-- §44 (Commission on Judicial Conduct - powers and duties)
-- §44(5) (confidentiality of complaints)
+- Section 44 (Commission on Judicial Conduct - powers and duties)
+- Section 44(5) (confidentiality of complaints)
 
 **Rules of Judicial Conduct:**
 - 22 NYCRR Part 100 (entire)
-- §100.2(A) (integrity and impartiality)
-- §100.3(B) (adjudicative responsibilities)
+- Section 100.2(A) (integrity and impartiality)
+- Section 100.3(B) (adjudicative responsibilities)
 
 **Commission Rules:**
 - 22 NYCRR Part 7000 (Rules of Commission on Judicial Conduct)
@@ -214,8 +222,8 @@ Dated: {{Date}}
 **Alternatives:**
 - Appeal procedural errors (CPLR Article 55)
 - Article 78 mandamus (CPLR Article 78)
-- Federal court (42 U.S.C. §1983)
-- Motion for recusal (CPLR §4110-4115)
+- Federal court (42 U.S.C. Section 1983)
+- Motion for recusal (CPLR Section 4110-4115)
 
 **Use this mechanism only when:**
 - Pattern of misconduct (not isolated error)

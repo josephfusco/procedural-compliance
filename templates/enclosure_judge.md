@@ -1,4 +1,4 @@
-# PROCEDURAL ENCLOSURE — JUDGE
+# PROCEDURAL ENCLOSURE -- JUDGE
 
 **[NY][CPLR] Demand for Written Decision with Findings**
 
@@ -17,17 +17,17 @@
 
 You are bound by:
 
-- **CPLR §2219(a):** "An order shall state the grounds on which it is based and shall specify the papers on which it was made."
-- **22 NYCRR §202.48(b):** Decisions on motions "shall be in writing or on the record."
-- **CPLR §5704(a):** Party may move to vacate or modify ex parte orders.
+- **CPLR Section 2219(a):** "An order shall state the grounds on which it is based and shall specify the papers on which it was made."
+- **22 NYCRR Section 202.48(b):** Decisions on motions "shall be in writing or on the record."
+- **CPLR Section 5704(a):** Party may move to vacate or modify ex parte orders.
 - **Due Process:** Right to notice, hearing, and written findings before deprivation of liberty or property interests.
 
 ## Record Status
 
 As of {{date}}, the following motions or applications have been decided orally or without written orders entered in the record:
 
-1. **Motion No. {{ID}}** — {{Subject}} — {{Oral ruling date or docket entry}}
-2. **Motion No. {{ID}}** — {{Subject}} — {{Oral ruling date or docket entry}}
+1. **Motion No. {{ID}}** -- {{Subject}} -- {{Oral ruling date or docket entry}}
+2. **Motion No. {{ID}}** -- {{Subject}} -- {{Oral ruling date or docket entry}}
 3. {{Additional motions as applicable}}
 
 No written orders stating grounds or papers considered appear in the NYSCEF docket or court file.
@@ -50,7 +50,7 @@ This notice preserves the record for appellate review and administrative complai
 
 - CPLR Article 55 (appeals)
 - 22 NYCRR Part 1 (judicial conduct)
-- Applicable federal civil rights statutes (42 U.S.C. §1983)
+- Applicable federal civil rights statutes (42 U.S.C. Section 1983)
 
 ## Service
 

@@ -1,4 +1,4 @@
-# PROCEDURAL ENCLOSURE — OPPOSING COUNSEL
+# PROCEDURAL ENCLOSURE -- OPPOSING COUNSEL
 
 **[NY] Demand for Good Faith Compliance with Discovery and Procedural Rules**
 
@@ -21,7 +21,7 @@ You are bound by:
 - **RPC 3.4:** Fairness to opposing party and counsel; no obstruction of access to evidence
 - **RPC 8.4:** Prohibition on conduct involving dishonesty, fraud, deceit, or misrepresentation
 - **CPLR Article 31:** Disclosure (discovery) procedures and enforcement
-- **22 NYCRR §130-1.1:** Sanctions for frivolous conduct
+- **22 NYCRR Section 130-1.1:** Sanctions for frivolous conduct
 
 ## Identified Deficiencies
 
@@ -46,8 +46,8 @@ You are demanded to:
 
 This notice preserves the record for:
 
-- Motion to compel discovery (CPLR §3124, §3126)
-- Motion for sanctions under CPLR §3126, 22 NYCRR §130-1.1
+- Motion to compel discovery (CPLR Section 3124, Section 3126)
+- Motion for sanctions under CPLR Section 3126, 22 NYCRR Section 130-1.1
 - Grievance complaint for violation of RPC 3.3, 3.4, 8.4 (22 NYCRR Part 1240)
 - Preclusion of evidence or issues due to discovery non-compliance
 

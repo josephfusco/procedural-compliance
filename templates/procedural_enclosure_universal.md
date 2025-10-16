@@ -1,5 +1,13 @@
 # PROCEDURAL ENCLOSURE (Universal)
 
+## WHAT IS THIS?
+
+This is a formal letter that puts a court official (judge, clerk, lawyer) on notice that they failed to follow a required legal procedure. It creates a written record that can be used for appeals or complaints.
+
+**(In simple terms:** When someone in the legal system doesn't follow the rules, this letter formally tells them "you broke this specific rule" and demands they fix it or explain why not.**)**
+
+---
+
 **TO:** {{Name, Title}}
 **FROM:** {{Your Name}}
 **DATE:** {{Date}}
@@ -13,9 +21,13 @@
 
 You act as {{Role}} in the above-captioned matter, bound by {{Applicable Statutes, Rules, and Ethical Provisions}}.
 
+**(In simple terms:** This identifies who you're writing to and what laws they're supposed to follow.**)**
+
 ## 2. Identified Duty
 
 The law requires you to {{specific statutory or rule-based duty}}. No compliant action or written explanation appears in the record filed with the court as of {{date}}.
+
+**(In simple terms:** This points to the specific rule they broke and when.**)**
 
 ## 3. Demand for Compliance
 
@@ -23,6 +35,8 @@ You are hereby demanded to:
 
 - **Perform** the required action within {{X}} business days of service of this notice, **OR**
 - **Provide written authority** for non-performance, including statutory basis and factual justification, within the same timeframe.
+
+**(In simple terms:** Do what you're supposed to do within X days, or explain in writing why you think you don't have to.**)**
 
 ## 4. Record Preservation
 
@@ -32,9 +46,13 @@ This document serves as:
 - Preservation notice under applicable record-keeping rules
 - Basis for further relief if statutory duties remain unperformed
 
+**(In simple terms:** This letter goes on the record and can be used later if you need to appeal or file a complaint.**)**
+
 ## 5. Service and Filing
 
 This notice is served via {{method of service}} and {{filed/uploaded}} to {{NYSCEF, CM/ECF, or other platform}} on {{date}}.
+
+**(In simple terms:** How and when you delivered this letter to the recipient.**)**
 
 ---
 
@@ -45,9 +63,9 @@ Use the appropriate module below based on the recipient's role.
 ### Judge
 
 **Applicable Authority:**
-- CPLR §2219(a): Orders must state grounds and papers considered
-- 22 NYCRR §202.48(b): Decisions on motions must be in writing or on the record
-- CPLR §5704(a): Right to review ex parte orders
+- CPLR Section 2219(a): Orders must state grounds and papers considered
+- 22 NYCRR Section 202.48(b): Decisions on motions must be in writing or on the record
+- CPLR Section 5704(a): Right to review ex parte orders
 
 **Duties:**
 - Issue written decisions with findings of fact and conclusions of law
@@ -57,8 +75,8 @@ Use the appropriate module below based on the recipient's role.
 ### Attorney for the Child (AFC)
 
 **Applicable Authority:**
-- FCA §§241–249: Duties of law guardians and attorneys for children
-- 22 NYCRR §7.2(d): Standards for representation
+- FCA Section 241–249: Duties of law guardians and attorneys for children
+- 22 NYCRR Section 7.2(d): Standards for representation
 
 **Duties:**
 - Zealous advocacy for client's expressed wishes
@@ -80,8 +98,8 @@ Use the appropriate module below based on the recipient's role.
 ### Court Clerk
 
 **Applicable Authority:**
-- CPLR §5017(b): Entry and filing of orders
-- 22 NYCRR §202.48: Motion procedures and record-keeping
+- CPLR Section 5017(b): Entry and filing of orders
+- 22 NYCRR Section 202.48: Motion procedures and record-keeping
 
 **Duties:**
 - Accurate docketing and record maintenance

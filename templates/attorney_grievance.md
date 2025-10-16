@@ -208,7 +208,7 @@ Dated: {{Date}}
 
 **Attorney Discipline:**
 - 22 NYCRR Part 1240 (Procedures for Attorneys in Disciplinary Matters)
-- Judiciary Law §90 (Attorney discipline)
+- Judiciary Law Section 90 (Attorney discipline)
 
 **Rules of Professional Conduct:**
 - 22 NYCRR Part 1200 (entire)
