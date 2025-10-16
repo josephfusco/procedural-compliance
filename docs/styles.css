@@ -552,9 +552,47 @@ section a[class*="block p-4"]:hover {
     border-color: #d1d5db;
 }
 
-/* Footer elevation */
+/* Footer elevation and styling */
 footer {
     box-shadow: 0 -1px 3px 0 rgba(0, 0, 0, 0.05);
+}
+
+/* Footer link accessibility - WCAG 2.1 AA compliant focus indicators */
+.footer-link {
+    position: relative;
+    display: inline-block;
+}
+
+.footer-link:focus {
+    outline: 2px solid #2c3e50;
+    outline-offset: 4px;
+    box-shadow: 0 0 0 4px rgba(44, 62, 80, 0.15);
+    border-radius: 2px;
+}
+
+.footer-link:focus-visible {
+    outline: 2px solid #2c3e50;
+    outline-offset: 4px;
+    box-shadow: 0 0 0 4px rgba(44, 62, 80, 0.15);
+    border-radius: 2px;
+}
+
+/* Ensure sufficient color contrast for footer text */
+footer h3 {
+    color: #1a1a1a;
+}
+
+footer p {
+    color: rgba(26, 26, 26, 0.8);
+}
+
+footer a {
+    color: rgba(26, 26, 26, 0.8);
+}
+
+footer a:hover {
+    color: #1a1a1a;
+    text-decoration-color: #1a1a1a;
 }
 
 /* Mobile menu */

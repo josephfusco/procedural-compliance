@@ -544,15 +544,6 @@ document.addEventListener('DOMContentLoaded', () => {
     }
     if (searchInput) searchInput.addEventListener('input', handleSearch);
 
-    // Mobile menu toggle
-    const mobileMenuToggle = document.getElementById('mobile-menu-toggle');
-    if (mobileMenuToggle) {
-        mobileMenuToggle.addEventListener('click', () => {
-            const menu = document.getElementById('mobile-menu');
-            if (menu) menu.classList.toggle('active');
-        });
-    }
-
     // Smooth scrolling for anchor links
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         anchor.addEventListener('click', function (e) {
