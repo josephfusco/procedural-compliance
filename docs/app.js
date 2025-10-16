@@ -488,12 +488,12 @@ document.addEventListener('DOMContentLoaded', () => {
                 let badgeHTML = '';
 
                 if (jurisdiction === 'ny') {
-                    badgeHTML = '<span class="badge badge-ny ml-2">NY</span>';
+                    badgeHTML = '<span class="badge badge-ny" style="font-size: 0.625rem; padding: 0.125rem 0.5rem; margin-left: 0.5rem; vertical-align: middle;">NY</span>';
                 } else if (jurisdiction === 'federal') {
-                    badgeHTML = '<span class="badge badge-federal ml-2"><img src="us_flag_small.png" class="badge-flag-img" alt="U.S. flag" loading="lazy"><span>Federal</span></span>';
+                    badgeHTML = '<span class="badge badge-federal" style="font-size: 0.625rem; padding: 0.125rem 0.5rem; margin-left: 0.5rem; vertical-align: middle;"><img src="us_flag_small.png" class="badge-flag-img" alt="U.S. flag" loading="lazy"><span>Federal</span></span>';
                 }
 
-                templateModalTitle.innerHTML = `${templateTitle}${badgeHTML}`;
+                templateModalTitle.innerHTML = `${templateTitle} ${badgeHTML}`;
             }
 
             // Render markdown (without frontmatter)
