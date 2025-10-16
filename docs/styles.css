@@ -1,6 +1,44 @@
 /* Procedural Enclosure Toolkit - Minimal Custom Styles */
 /* Most styling is handled by Tailwind CSS utility classes */
 
+/* ==================================================================
+   USWDS Public Sans Font (Self-Hosted)
+   Official government typeface from https://github.com/uswds/public-sans
+   font-display: swap ensures text is visible immediately with fallback fonts
+   ================================================================== */
+
+@font-face {
+    font-family: 'Public Sans';
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src: url('fonts/public-sans/PublicSans-Regular.woff2') format('woff2');
+}
+
+@font-face {
+    font-family: 'Public Sans';
+    font-style: normal;
+    font-weight: 500;
+    font-display: swap;
+    src: url('fonts/public-sans/PublicSans-Medium.woff2') format('woff2');
+}
+
+@font-face {
+    font-family: 'Public Sans';
+    font-style: normal;
+    font-weight: 600;
+    font-display: swap;
+    src: url('fonts/public-sans/PublicSans-SemiBold.woff2') format('woff2');
+}
+
+@font-face {
+    font-family: 'Public Sans';
+    font-style: normal;
+    font-weight: 700;
+    font-display: swap;
+    src: url('fonts/public-sans/PublicSans-Bold.woff2') format('woff2');
+}
+
 /* Screen reader only utility (fallback if Tailwind doesn't load) */
 .sr-only {
     position: absolute;
