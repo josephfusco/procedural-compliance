@@ -291,8 +291,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const templateModalProse = document.getElementById('template-modal-prose');
     const templateModalClose = document.getElementById('template-modal-close');
     const templateModalCloseBtn = document.getElementById('template-modal-close-btn');
-    const templateCopyBtn = document.getElementById('template-copy-btn');
-    const templateGithubLink = document.getElementById('template-github-link');
+    const templateDownloadBtn = document.getElementById('template-download-btn');
 
     let currentMarkdownContent = '';
     let currentTemplatePath = '';
@@ -352,11 +351,6 @@ document.addEventListener('DOMContentLoaded', () => {
                     templateModalProse.innerHTML = `<pre>${currentMarkdownContent}</pre>`;
                 }
             }
-
-            // Update GitHub link
-            if (templateGithubLink) {
-                templateGithubLink.href = githubUrl;
-            }
         } catch (error) {
             console.error('Error loading template:', error);
             if (templateModalProse) {
@@ -406,29 +400,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
     }
 
-    // Copy markdown to clipboard
-    async function copyMarkdownToClipboard() {
-        try {
-            await navigator.clipboard.writeText(currentMarkdownContent);
-            // Show success feedback
-            if (templateCopyBtn) {
-                const originalText = templateCopyBtn.innerHTML;
-                templateCopyBtn.innerHTML = `
-                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
-                    </svg>
-                    <span>Copied!</span>
-                `;
-                setTimeout(() => {
-                    templateCopyBtn.innerHTML = originalText;
-                }, 2000);
-            }
-        } catch (error) {
-            console.error('Failed to copy:', error);
-            alert('Failed to copy to clipboard. Please try again.');
-        }
-    }
-
     // Focus trap for template modal
     function handleModalFocusTrap(e) {
         if (!templateModal || templateModal.classList.contains('hidden')) return;
@@ -462,7 +433,6 @@ document.addEventListener('DOMContentLoaded', () => {
     // Attach event listeners for template viewer
     if (templateModalClose) templateModalClose.addEventListener('click', closeTemplateViewer);
     if (templateModalCloseBtn) templateModalCloseBtn.addEventListener('click', closeTemplateViewer);
-    if (templateCopyBtn) templateCopyBtn.addEventListener('click', copyMarkdownToClipboard);
     if (templateModal) {
         templateModal.addEventListener('click', (e) => {
             if (e.target === templateModal) closeTemplateViewer();
