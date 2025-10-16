@@ -400,41 +400,45 @@ code {
     color: #6b7280;
 }
 
-/* Template Viewer Sheet Styles */
+/* Template Viewer Sheet Styles - Compact, Professional Typography */
 #template-sheet .prose {
     font-family: Georgia, Cambria, 'Times New Roman', serif;
     color: #1a1a1a;
-    line-height: 1.8;
-    max-width: 768px;
-    font-size: 1rem;
+    line-height: 1.6;
+    max-width: 100%;
+    font-size: 0.9375rem;
     word-break: break-word;
     overflow-wrap: break-word;
     hyphens: auto;
 }
 
 #template-sheet .prose h1 {
-    font-size: 1.875rem;
+    font-size: 1.375rem;
     font-weight: 700;
     margin-top: 0;
-    margin-bottom: 1.5rem;
-    line-height: 1.2;
+    margin-bottom: 0.75rem;
+    line-height: 1.25;
     border-bottom: 2px solid #e5e7eb;
-    padding-bottom: 0.75rem;
+    padding-bottom: 0.5rem;
+    color: #111827;
 }
 
 #template-sheet .prose h2 {
-    font-size: 1.5rem;
+    font-size: 1.125rem;
     font-weight: 600;
     margin-top: 1.25rem;
-    margin-bottom: 1rem;
-    line-height: 1.3;
+    margin-bottom: 0.5rem;
+    line-height: 1.35;
+    color: #1f2937;
 }
 
 #template-sheet .prose h3 {
-    font-size: 1.25rem;
+    font-size: 1rem;
     font-weight: 600;
     margin-top: 1rem;
-    margin-bottom: 0.75rem;
+    margin-bottom: 0.5rem;
+    line-height: 1.4;
+    color: #374151;
 }
 
 #template-sheet .prose p {
@@ -444,19 +448,19 @@ code {
 
 #template-sheet .prose ul,
 #template-sheet .prose ol {
-    margin-top: 1rem;
-    margin-bottom: 1rem;
-    padding-left: 1.75rem;
+    margin-top: 0.75rem;
+    margin-bottom: 0.75rem;
+    padding-left: 1.5rem;
 }
 
 #template-sheet .prose li {
-    margin-top: 0.5rem;
-    margin-bottom: 0.5rem;
+    margin-top: 0.25rem;
+    margin-bottom: 0.25rem;
 }
 
 #template-sheet .prose hr {
-    margin-top: 1.25rem;
-    margin-bottom: 1.25rem;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
     border: none;
     border-top: 1px solid #e5e7eb;
 }
@@ -496,11 +500,12 @@ code {
 }
 
 #template-sheet .prose blockquote {
-    border-left: 4px solid #b8860b;
-    padding-left: 1rem;
-    margin: 1.5rem 0;
+    border-left: 3px solid #b8860b;
+    padding-left: 0.75rem;
+    margin: 1rem 0;
     font-style: italic;
     color: #6b7280;
+    font-size: 0.9em;
 }
 
 #template-sheet .prose a {
@@ -510,6 +515,29 @@ code {
 
 #template-sheet .prose a:hover {
     color: #1a252f;
+}
+
+/* Table styling for template content */
+#template-sheet .prose table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 1rem 0;
+    font-size: 0.875rem;
+}
+
+#template-sheet .prose table th {
+    text-align: left;
+    padding: 0.5rem 0.75rem;
+    font-weight: 600;
+    background: #f9fafb;
+    border: 1px solid #e5e7eb;
+    font-size: 0.8125rem;
+}
+
+#template-sheet .prose table td {
+    padding: 0.5rem 0.75rem;
+    border: 1px solid #e5e7eb;
+    vertical-align: top;
 }
 
 /* Modal backdrop enhancement */
