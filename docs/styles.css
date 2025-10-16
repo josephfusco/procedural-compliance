@@ -577,6 +577,18 @@ code {
     color: #374151;
 }
 
+/* Legal document header formatting - vertically stack TO/FROM/DATE/CASE/COURT/SUBJECT */
+#template-sheet .prose > p:first-of-type strong {
+    display: block;
+    margin-bottom: 0.375rem;
+    line-height: 1.5;
+}
+
+#template-sheet .prose > p:first-of-type {
+    line-height: 1.8;
+    margin-bottom: 1.5rem;
+}
+
 #template-sheet .prose em {
     font-style: italic;
 }
