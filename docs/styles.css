@@ -603,17 +603,19 @@ code {
     font-weight: 600;
 }
 
-/* Template placeholder highlighting - USWDS warning color for action needed */
+/* Template placeholder highlighting - subtle, polished inline style */
 .template-placeholder {
-    background-color: #fee685;  /* USWDS warning-light */
-    color: #936900;             /* Dark text for WCAG AA contrast */
-    padding: 0.125rem 0.375rem;
-    border-radius: 0.25rem;
-    font-weight: 600;
-    border: 1px solid #ffbe2e;  /* USWDS warning */
+    background-color: #fffbeb;  /* Very pale yellow - barely visible */
+    color: #92400e;             /* Amber-900 for subtle emphasis */
+    padding: 0.0625rem 0.25rem;
+    border-radius: 0.1875rem;
+    font-weight: 500;
+    border: none;
+    border-bottom: 1.5px solid #fbbf24; /* Amber-400 subtle underline */
     font-family: Monaco, 'Courier New', monospace;
-    font-size: 0.9em;
+    font-size: 0.875em;
     white-space: nowrap;
+    font-style: normal;
 }
 
 /* Citation numbers for long placeholders - subtle, traditional footnote styling */
