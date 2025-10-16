@@ -4,6 +4,10 @@
 
 ---
 
+**WARNING:** This is a formal disciplinary complaint that creates a permanent record. Use only after exhausting cooperative remedies (procedural enclosures, direct communication, fee arbitration). This may damage professional relationships and will trigger an investigation. Filing a false or frivolous complaint may subject you to sanctions. Consider less adversarial options first.
+
+---
+
 **TO:** Attorney Grievance Committee
         {{Department}} Department
         {{Address - varies by department}}

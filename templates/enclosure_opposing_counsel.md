@@ -13,19 +13,23 @@
 
 ---
 
+**NOTE:** This notice assumes good faith and seeks cooperative compliance with procedural requirements. It is not an accusation of misconduct, but a formal request to ensure complete record and proper procedure.
+
+---
+
 ## Legal Authority
 
 You are bound by:
 
-- **RPC 3.3:** Candor toward the tribunal; duty to disclose controlling adverse authority
-- **RPC 3.4:** Fairness to opposing party and counsel; no obstruction of access to evidence
-- **RPC 8.4:** Prohibition on conduct involving dishonesty, fraud, deceit, or misrepresentation
 - **CPLR Article 31:** Disclosure (discovery) procedures and enforcement
+- **RPC 3.4:** Fairness to opposing party and counsel; no obstruction of access to evidence
+- **RPC 3.3:** Candor toward the tribunal; duty to disclose controlling adverse authority
 - **22 NYCRR Section 130-1.1:** Sanctions for frivolous conduct
+- **RPC 8.4:** Prohibition on conduct involving dishonesty, fraud, deceit, or misrepresentation
 
-## Identified Deficiencies
+## Procedural Status
 
-As of {{date}}, you have failed to:
+As of {{date}}, the record does not reflect:
 
 1. **Respond to discovery:** No response to {{document requests / interrogatories / notice for deposition}} served on {{date}}, now {{X}} days overdue.
 2. **Produce documents:** Failed to produce {{category of documents}} as ordered by the court on {{date}}.
@@ -41,6 +45,10 @@ You are demanded to:
 2. **Produce documents** as ordered or provide privilege log and legal basis for withholding.
 3. **Correct misrepresentations** by filing amended {{pleading/brief}} or written stipulation acknowledging error.
 4. **Confirm compliance** in writing to all parties and the court.
+
+## Cooperative Resolution
+
+If the requested actions are completed within {{X}} business days, no further action is necessary. This notice will serve only as record preservation for procedural compliance.
 
 ## Preservation and Remedy
 

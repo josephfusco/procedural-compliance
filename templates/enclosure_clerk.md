@@ -13,6 +13,10 @@
 
 ---
 
+**NOTE:** This notice assumes good faith and seeks cooperative compliance with procedural requirements. It is not an accusation of misconduct, but a formal request to ensure complete record and proper procedure.
+
+---
+
 ## Legal Authority
 
 You are bound by:
@@ -22,9 +26,9 @@ You are bound by:
 - **22 NYCRR Section 202.5(b):** Public access to court records (with statutory exceptions)
 - **Judiciary Law Section 255:** Duties of clerks
 
-## Identified Deficiencies
+## Procedural Status
 
-As of {{date}}, the following deficiencies exist in the record:
+As of {{date}}, the following items require attention:
 
 1. **Missing entries:** {{Document type}} filed on {{date}} not entered in docket or NYSCEF.
 2. **Incorrect entries:** Docket entry {{ID}} misidentifies {{document/party/date}}.
@@ -39,6 +43,10 @@ You are demanded to:
 1. **Correct the record** by {{specific action: entering document, correcting docket entry, etc.}} within {{X}} business days.
 2. **Provide access** to {{requested materials}} pursuant to CPLR and NYCRR public access rules.
 3. **Issue written explanation** if access is denied, citing statutory authority and factual basis.
+
+## Cooperative Resolution
+
+If the requested actions are completed within {{X}} business days, no further action is necessary. This notice will serve only as record preservation for procedural compliance.
 
 ## Legal Consequences
 

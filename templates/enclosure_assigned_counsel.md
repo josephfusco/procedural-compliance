@@ -13,6 +13,10 @@
 
 ---
 
+**NOTE:** This notice assumes good faith and seeks cooperative compliance with procedural requirements. It is not an accusation of misconduct, but a formal request to ensure complete record and proper procedure.
+
+---
+
 ## Legal Authority
 
 You are bound by:
@@ -25,9 +29,9 @@ You are bound by:
   - Reasonably consulting about means to achieve objectives
   - Keeping client reasonably informed about status of matter
 
-## Identified Deficiencies
+## Procedural Status
 
-As of {{date}}, you have failed to:
+As of {{date}}, the record does not reflect:
 
 1. **Communicate:** No contact since {{date or "assignment"}}, despite {{number}} attempts to reach you via {{phone/email}}.
 2. **Consult on strategy:** No discussion of {{plea, motion, defense theory, settlement, etc.}}.
@@ -52,6 +56,10 @@ I instruct you to pursue the following objectives in this case:
 - {{Objective 3}}
 
 Failure to follow these instructions or explain why they conflict with ethical duties constitutes abandonment of representation.
+
+## Cooperative Resolution
+
+If the requested actions are completed within {{X}} business days, no further action is necessary. This notice will serve only as record preservation for procedural compliance.
 
 ## Preservation and Remedy
 

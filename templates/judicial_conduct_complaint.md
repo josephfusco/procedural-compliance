@@ -4,6 +4,10 @@
 
 ---
 
+**WARNING:** This is a formal complaint against a judge that creates a permanent record. Filing during an active case may affect how the judge treats you. Use only after exhausting procedural remedies (appeals, Article 78, procedural enclosures). This should address serious misconduct, not mere disagreement with a decision. Filing a false or frivolous complaint may subject you to sanctions. Consider filing after your case concludes, or consult an attorney first.
+
+---
+
 **TO:** New York State Commission on Judicial Conduct
         Corning Tower, Suite 2301
         Empire State Plaza

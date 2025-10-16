@@ -13,6 +13,10 @@
 
 ---
 
+**NOTE:** This notice assumes good faith and seeks cooperative compliance with procedural requirements. It is not an accusation of misconduct, but a formal request to ensure complete record and proper procedure.
+
+---
+
 ## Legal Authority
 
 You are bound by:
@@ -43,6 +47,10 @@ Pursuant to the above statutory provisions, you are demanded to:
    - Conclusions of law
 
 2. **Provide these orders within {{X}} business days** of service of this notice.
+
+## Cooperative Resolution
+
+If written orders are provided within {{X}} business days, no further action is necessary. This notice will serve only as record preservation for procedural compliance.
 
 ## Preservation and Record Notice
 

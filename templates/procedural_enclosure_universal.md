@@ -9,6 +9,10 @@
 
 ---
 
+**NOTE:** This notice assumes good faith and seeks cooperative compliance with procedural requirements. It is not an accusation of misconduct, but a formal request to ensure complete record and proper procedure.
+
+---
+
 ## 1. Role and Authority
 
 You act as {{Role}} in the above-captioned matter, bound by {{Applicable Statutes, Rules, and Ethical Provisions}}.
