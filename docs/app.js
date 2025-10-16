@@ -297,6 +297,14 @@ document.addEventListener('DOMContentLoaded', () => {
     let currentMarkdownContent = '';
     let currentTemplatePath = '';
 
+    // Helper function: Convert template path to hash-friendly ID
+    // Example: "templates/procedural_enclosure_universal.md" -> "procedural-enclosure-universal"
+    function getTemplateIdFromPath(path) {
+        if (!path) return '';
+        const filename = path.split('/').pop(); // Get filename
+        return filename.replace('.md', '').replace(/_/g, '-'); // Remove .md and convert underscores to hyphens
+    }
+
     // Open template viewer
     async function openTemplateViewer(templatePath, templateTitle, githubUrl) {
         try {
@@ -309,6 +317,12 @@ document.addEventListener('DOMContentLoaded', () => {
             }
             if (templateModal) {
                 templateModal.classList.remove('hidden');
+            }
+
+            // Update URL hash for deep linking
+            const templateId = getTemplateIdFromPath(templatePath);
+            if (templateId) {
+                window.location.hash = templateId;
             }
 
             // Fetch markdown content
@@ -350,6 +364,45 @@ document.addEventListener('DOMContentLoaded', () => {
         }
         currentMarkdownContent = '';
         currentTemplatePath = '';
+
+        // Clear URL hash without adding to browser history
+        if (window.location.hash) {
+            history.replaceState(null, null, ' ');
+        }
+    }
+
+    // Handle URL hash changes for deep linking
+    function handleHashChange() {
+        const hash = window.location.hash.substring(1); // Remove # prefix
+        if (!hash) return;
+
+        // Find template link with matching ID
+        const templateLinks = document.querySelectorAll('.template-link');
+        for (const link of templateLinks) {
+            const linkPath = link.getAttribute('href');
+            const linkId = getTemplateIdFromPath(linkPath);
+
+            if (linkId === hash) {
+                const templateTitle = link.dataset.templateTitle || 'Template';
+                const githubUrl = link.dataset.githubUrl || '';
+                openTemplateViewer(linkPath, templateTitle, githubUrl);
+                break;
+            }
+        }
+
+        // Also check guide links
+        const guideLinks = document.querySelectorAll('.guide-link');
+        for (const link of guideLinks) {
+            const linkPath = link.getAttribute('href');
+            const linkId = getTemplateIdFromPath(linkPath);
+
+            if (linkId === hash) {
+                const guideTitle = link.dataset.guideTitle || 'Guide';
+                const githubUrl = link.dataset.githubUrl || '';
+                openTemplateViewer(linkPath, guideTitle, githubUrl);
+                break;
+            }
+        }
     }
 
     // Copy markdown to clipboard
@@ -515,5 +568,21 @@ document.addEventListener('DOMContentLoaded', () => {
                 }
             }
         });
+    });
+
+    // Handle hash-based deep linking on page load
+    handleHashChange();
+
+    // Handle browser back/forward buttons
+    window.addEventListener('popstate', () => {
+        const hash = window.location.hash.substring(1);
+        if (hash) {
+            handleHashChange();
+        } else {
+            // Hash was cleared, close modal if open
+            if (templateModal && !templateModal.classList.contains('hidden')) {
+                closeTemplateViewer();
+            }
+        }
     });
 });
