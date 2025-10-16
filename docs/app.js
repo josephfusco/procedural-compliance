@@ -296,6 +296,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     let currentMarkdownContent = '';
     let currentTemplatePath = '';
+    let lastFocusedElement = null;
 
     // Helper function: Convert template path to hash-friendly ID
     // Example: "templates/procedural_enclosure_universal.md" -> "procedural-enclosure-universal"
@@ -308,6 +309,9 @@ document.addEventListener('DOMContentLoaded', () => {
     // Open template viewer
     async function openTemplateViewer(templatePath, templateTitle, githubUrl) {
         try {
+            // Store current focused element to return focus later
+            lastFocusedElement = document.activeElement;
+
             // Show loading state
             if (templateModalProse) {
                 templateModalProse.innerHTML = '<div class="text-center py-12"><div class="inline-block animate-spin rounded-full h-12 w-12 border-b-2 border-primary"></div><p class="mt-4 text-muted-foreground">Loading template...</p></div>';
@@ -317,6 +321,10 @@ document.addEventListener('DOMContentLoaded', () => {
             }
             if (templateModal) {
                 templateModal.classList.remove('hidden');
+                // Focus the close button for initial focus
+                setTimeout(() => {
+                    if (templateModalClose) templateModalClose.focus();
+                }, 100);
             }
 
             // Update URL hash for deep linking
@@ -364,6 +372,12 @@ document.addEventListener('DOMContentLoaded', () => {
         }
         currentMarkdownContent = '';
         currentTemplatePath = '';
+
+        // Return focus to the element that opened the modal
+        if (lastFocusedElement && typeof lastFocusedElement.focus === 'function') {
+            lastFocusedElement.focus();
+            lastFocusedElement = null;
+        }
 
         // Clear URL hash without adding to browser history
         if (window.location.hash) {
@@ -428,6 +442,36 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     }
 
+    // Focus trap for template modal
+    function handleModalFocusTrap(e) {
+        if (!templateModal || templateModal.classList.contains('hidden')) return;
+
+        // Only trap Tab key
+        if (e.key !== 'Tab') return;
+
+        // Get all focusable elements within the modal
+        const focusableElements = templateModal.querySelectorAll(
+            'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])'
+        );
+        const focusableArray = Array.from(focusableElements);
+        const firstFocusable = focusableArray[0];
+        const lastFocusable = focusableArray[focusableArray.length - 1];
+
+        if (e.shiftKey) {
+            // Shift+Tab: moving backwards
+            if (document.activeElement === firstFocusable) {
+                e.preventDefault();
+                lastFocusable.focus();
+            }
+        } else {
+            // Tab: moving forwards
+            if (document.activeElement === lastFocusable) {
+                e.preventDefault();
+                firstFocusable.focus();
+            }
+        }
+    }
+
     // Attach event listeners for template viewer
     if (templateModalClose) templateModalClose.addEventListener('click', closeTemplateViewer);
     if (templateModalCloseBtn) templateModalCloseBtn.addEventListener('click', closeTemplateViewer);
@@ -436,6 +480,8 @@ document.addEventListener('DOMContentLoaded', () => {
         templateModal.addEventListener('click', (e) => {
             if (e.target === templateModal) closeTemplateViewer();
         });
+        // Add focus trap listener
+        document.addEventListener('keydown', handleModalFocusTrap);
     }
 
     // Intercept template link clicks (for both table and card views)
