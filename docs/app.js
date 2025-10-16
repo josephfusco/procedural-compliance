@@ -306,6 +306,44 @@ document.addEventListener('DOMContentLoaded', () => {
     let currentTemplatePath = '';
     let lastFocusedElement = null;
 
+    // Highlight template placeholders - wrap {{...}} in styled spans
+    function highlightTemplatePlaceholders(container) {
+        if (!container) return;
+
+        const walker = document.createTreeWalker(
+            container,
+            NodeFilter.SHOW_TEXT,
+            null
+        );
+
+        const nodesToReplace = [];
+        while (walker.nextNode()) {
+            const node = walker.currentNode;
+            // Check if text node contains placeholder syntax
+            if (node.textContent.includes('{{') && node.textContent.includes('}}')) {
+                nodesToReplace.push(node);
+            }
+        }
+
+        nodesToReplace.forEach(node => {
+            const fragment = document.createDocumentFragment();
+            const tempDiv = document.createElement('div');
+
+            // Replace {{...}} with highlighted spans
+            tempDiv.innerHTML = node.textContent.replace(
+                /\{\{([^}]+)\}\}/g,
+                '<span class="template-placeholder">{{$1}}</span>'
+            );
+
+            // Move all child nodes to fragment
+            while (tempDiv.firstChild) {
+                fragment.appendChild(tempDiv.firstChild);
+            }
+
+            node.parentNode.replaceChild(fragment, node);
+        });
+    }
+
     // Helper function: Convert template path to hash-friendly ID
     // Example: "templates/notice_universal.md" -> "notice-universal"
     function getTemplateIdFromPath(path) {
@@ -407,11 +445,15 @@ document.addEventListener('DOMContentLoaded', () => {
                 const html = marked.parse(content);
                 if (templateModalProse) {
                     templateModalProse.innerHTML = html;
+                    // Highlight {{placeholders}} with USWDS warning color
+                    highlightTemplatePlaceholders(templateModalProse);
                 }
             } else {
                 // Fallback if marked.js doesn't load
                 if (templateModalProse) {
                     templateModalProse.innerHTML = `<pre>${content}</pre>`;
+                    // Highlight {{placeholders}} in fallback view too
+                    highlightTemplatePlaceholders(templateModalProse);
                 }
             }
         } catch (error) {
