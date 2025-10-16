@@ -523,7 +523,9 @@ document.addEventListener('DOMContentLoaded', () => {
     // Open citation viewer for JSON files
     async function openCitationViewer(citationPath, citationTitle, githubUrl) {
         try {
-            // Show loading state
+            // Store focused element and show loading state
+            lastFocusedElement = document.activeElement;
+
             if (templateModalProse) {
                 templateModalProse.innerHTML = '<div class="text-center py-12"><div class="inline-block animate-spin rounded-full h-12 w-12 border-b-2 border-primary"></div><p class="mt-4 text-muted-foreground">Loading citation database...</p></div>';
             }
@@ -532,6 +534,9 @@ document.addEventListener('DOMContentLoaded', () => {
             }
             if (templateModal) {
                 templateModal.classList.remove('hidden');
+                setTimeout(() => {
+                    if (templateModalClose) templateModalClose.focus();
+                }, 100);
             }
 
             // Fetch JSON content
@@ -542,13 +547,16 @@ document.addEventListener('DOMContentLoaded', () => {
             currentMarkdownContent = JSON.stringify(jsonData, null, 2);
             currentTemplatePath = citationPath;
 
-            // Format JSON as readable HTML
-            let html = '<div class="citation-viewer"><pre class="language-json"><code>';
-            html += escapeHtml(JSON.stringify(jsonData, null, 2));
-            html += '</code></pre></div>';
-
-            if (templateModalProse) {
-                templateModalProse.innerHTML = html;
+            // Render citation browser based on file type
+            if (citationPath.includes('statutes.json')) {
+                renderStatuteBrowser(jsonData);
+            } else if (citationPath.includes('cases.json')) {
+                renderCaseBrowser(jsonData);
+            } else if (citationPath.includes('rules.json')) {
+                renderRulesBrowser(jsonData);
+            } else {
+                // Fallback to formatted JSON
+                renderFormattedJSON(jsonData);
             }
 
             // Update GitHub link
@@ -560,6 +568,216 @@ document.addEventListener('DOMContentLoaded', () => {
             if (templateModalProse) {
                 templateModalProse.innerHTML = '<div class="text-center py-12"><p class="text-red-600">Failed to load citation. Please try again.</p></div>';
             }
+        }
+    }
+
+    // Render statute database browser
+    function renderStatuteBrowser(data) {
+        const citations = [];
+
+        // Parse New York statutes
+        if (data.new_york) {
+            Object.entries(data.new_york).forEach(([categoryKey, category]) => {
+                if (categoryKey === 'cplr' || categoryKey === 'nycrr' || categoryKey === 'judiciary_law' ||
+                    categoryKey === 'public_officers_law' || categoryKey === 'family_court_act') {
+                    Object.entries(category.sections || {}).forEach(([sectionKey, section]) => {
+                        citations.push({
+                            jurisdiction: 'ny',
+                            citation: section.citation || `${category.title} §${sectionKey}`,
+                            title: section.title || '',
+                            text: section.text || '',
+                            usage: section.usage || '',
+                            subsection: section.subsection || '',
+                            related: section.related_rules || section.related_sections || [],
+                            cases: section.key_cases || [],
+                            url: section.url || category.url
+                        });
+                    });
+                }
+            });
+        }
+
+        // Parse Federal statutes
+        if (data.federal) {
+            Object.entries(data.federal).forEach(([categoryKey, category]) => {
+                if (category.sections) {
+                    Object.entries(category.sections).forEach(([sectionKey, section]) => {
+                        citations.push({
+                            jurisdiction: 'federal',
+                            citation: section.citation || `${categoryKey} §${sectionKey}`,
+                            title: section.title || '',
+                            text: section.text || '',
+                            usage: section.usage || '',
+                            subsection: section.subsection || '',
+                            related: section.related_sections || [],
+                            cases: section.key_cases || [],
+                            url: section.url || category.url
+                        });
+                    });
+                }
+            });
+        }
+
+        renderCitationBrowser(citations, data.metadata || {});
+    }
+
+    // Render case law browser
+    function renderCaseBrowser(data) {
+        // Placeholder - will be similar structure to statute browser
+        renderFormattedJSON(data);
+    }
+
+    // Render court rules browser
+    function renderRulesBrowser(data) {
+        // Placeholder - will be similar structure to statute browser
+        renderFormattedJSON(data);
+    }
+
+    // Render citation browser interface
+    function renderCitationBrowser(citations, metadata) {
+        let html = `
+            <div class="citation-browser">
+                <!-- Search and Filter Bar -->
+                <div class="sticky top-0 bg-background border-b border-border p-4 space-y-3">
+                    <div class="flex gap-3">
+                        <div class="flex-1">
+                            <input
+                                type="text"
+                                id="citation-search"
+                                placeholder="Search citations, titles, or text..."
+                                class="w-full px-3 py-2 text-sm border border-border rounded-md focus:outline-none focus:ring-2 focus:ring-ring"
+                            />
+                        </div>
+                        <select id="citation-jurisdiction-filter" class="px-3 py-2 text-sm border border-border rounded-md focus:outline-none focus:ring-2 focus:ring-ring">
+                            <option value="all">All Jurisdictions</option>
+                            <option value="ny">New York</option>
+                            <option value="federal">Federal</option>
+                        </select>
+                    </div>
+                    <div class="text-xs text-muted-foreground">
+                        <span id="citation-count">${citations.length}</span> citation${citations.length !== 1 ? 's' : ''} total
+                    </div>
+                </div>
+
+                <!-- Citations List -->
+                <div id="citations-list" class="p-4 space-y-4">
+                    ${citations.map(c => renderCitationCard(c)).join('')}
+                </div>
+            </div>
+        `;
+
+        if (templateModalProse) {
+            templateModalProse.innerHTML = html;
+
+            // Attach search and filter listeners
+            const searchInput = document.getElementById('citation-search');
+            const jurisdictionFilter = document.getElementById('citation-jurisdiction-filter');
+
+            if (searchInput && jurisdictionFilter) {
+                const filterCitations = () => {
+                    const query = searchInput.value.toLowerCase();
+                    const jurisdiction = jurisdictionFilter.value;
+
+                    const filtered = citations.filter(c => {
+                        const matchesJurisdiction = jurisdiction === 'all' || c.jurisdiction === jurisdiction;
+                        const matchesSearch = query === '' ||
+                            c.citation.toLowerCase().includes(query) ||
+                            c.title.toLowerCase().includes(query) ||
+                            c.text.toLowerCase().includes(query) ||
+                            c.usage.toLowerCase().includes(query);
+                        return matchesJurisdiction && matchesSearch;
+                    });
+
+                    const citationsList = document.getElementById('citations-list');
+                    const citationCount = document.getElementById('citation-count');
+
+                    if (citationsList) {
+                        citationsList.innerHTML = filtered.length === 0
+                            ? '<div class="text-center py-12 text-muted-foreground">No citations found</div>'
+                            : filtered.map(c => renderCitationCard(c)).join('');
+                    }
+
+                    if (citationCount) {
+                        citationCount.textContent = filtered.length;
+                    }
+                };
+
+                searchInput.addEventListener('input', filterCitations);
+                jurisdictionFilter.addEventListener('change', filterCitations);
+            }
+        }
+    }
+
+    // Render individual citation card
+    function renderCitationCard(citation) {
+        const jurisdictionBadge = citation.jurisdiction === 'ny'
+            ? '<span class="badge badge-ny text-xs">NY</span>'
+            : '<span class="badge badge-federal text-xs"><img src="us_flag_small.png" class="badge-flag-img" alt="U.S. flag" loading="lazy"><span>Federal</span></span>';
+
+        return `
+            <div class="citation-card border border-border rounded-md p-4 bg-background hover:bg-muted/30 transition-colors">
+                <div class="flex items-start justify-between gap-3 mb-3">
+                    <div class="flex-1">
+                        <div class="flex items-center gap-2 mb-1">
+                            <h3 class="font-mono font-semibold text-base text-primary">${escapeHtml(citation.citation)}</h3>
+                            ${jurisdictionBadge}
+                        </div>
+                        ${citation.title ? `<p class="text-sm font-medium text-foreground/90">${escapeHtml(citation.title)}</p>` : ''}
+                    </div>
+                </div>
+
+                ${citation.text ? `
+                    <div class="mb-3 p-3 bg-muted/50 rounded border-l-2 border-accent/30">
+                        <p class="text-sm text-foreground/80 italic">${escapeHtml(citation.text)}</p>
+                    </div>
+                ` : ''}
+
+                ${citation.usage ? `
+                    <div class="mb-2">
+                        <span class="text-xs font-semibold text-accent uppercase tracking-wide">Usage:</span>
+                        <p class="text-sm text-foreground/80 mt-1">${escapeHtml(citation.usage)}</p>
+                    </div>
+                ` : ''}
+
+                ${citation.related && citation.related.length > 0 ? `
+                    <div class="mb-2">
+                        <span class="text-xs font-semibold text-muted-foreground uppercase tracking-wide">Related:</span>
+                        <p class="text-xs text-muted-foreground mt-1">${citation.related.map(r => escapeHtml(r)).join(', ')}</p>
+                    </div>
+                ` : ''}
+
+                ${citation.cases && citation.cases.length > 0 ? `
+                    <div class="mb-2">
+                        <span class="text-xs font-semibold text-muted-foreground uppercase tracking-wide">Key Cases:</span>
+                        <p class="text-xs text-muted-foreground mt-1">${citation.cases.map(c => escapeHtml(c)).join('; ')}</p>
+                    </div>
+                ` : ''}
+
+                ${citation.url ? `
+                    <div class="mt-3 pt-3 border-t border-border">
+                        <a href="${escapeHtml(citation.url)}" target="_blank" rel="noopener noreferrer" class="text-xs text-primary hover:underline">
+                            View Official Source →
+                        </a>
+                    </div>
+                ` : ''}
+            </div>
+        `;
+    }
+
+    // Fallback: Render formatted JSON
+    function renderFormattedJSON(data) {
+        const html = `
+            <div class="citation-viewer p-4">
+                <div class="mb-4 p-3 bg-blue-50 border border-blue-200 rounded-md">
+                    <p class="text-sm text-blue-900">
+                        <strong>Note:</strong> This database type doesn't have a custom browser yet. Showing formatted JSON below.
+                    </p>
+                </div>
+                <pre class="language-json bg-muted/30 p-4 rounded-md overflow-x-auto text-xs"><code>${escapeHtml(JSON.stringify(data, null, 2))}</code></pre>
+            </div>
+        `;
+        if (templateModalProse) {
+            templateModalProse.innerHTML = html;
         }
     }
 

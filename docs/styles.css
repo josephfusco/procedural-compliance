@@ -506,6 +506,110 @@ code {
     color: #1a252f;
 }
 
+/* Citation Browser Styles */
+.citation-browser {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    max-height: calc(90vh - 8rem);
+}
+
+.citation-browser .sticky {
+    position: sticky;
+    z-index: 10;
+}
+
+#citations-list {
+    overflow-y: auto;
+    flex: 1;
+}
+
+#citations-list::-webkit-scrollbar {
+    width: 8px;
+}
+
+#citations-list::-webkit-scrollbar-track {
+    background: #f9fafb;
+}
+
+#citations-list::-webkit-scrollbar-thumb {
+    background: #d1d5db;
+    border-radius: 4px;
+}
+
+#citations-list::-webkit-scrollbar-thumb:hover {
+    background: #9ca3af;
+}
+
+.citation-card {
+    transition: all 200ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.citation-card:hover {
+    background-color: #fafbfc !important;
+    border-color: #2c3e50 !important;
+    box-shadow: var(--shadow-md);
+}
+
+.citation-card h3 {
+    color: #2c3e50;
+    font-size: 0.9375rem;
+}
+
+.citation-card .badge {
+    flex-shrink: 0;
+}
+
+/* Citation search input */
+#citation-search {
+    font-size: 0.875rem;
+    transition: all 200ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+#citation-search:focus {
+    border-color: #2c3e50;
+    box-shadow: 0 0 0 3px var(--ring-color);
+}
+
+#citation-jurisdiction-filter {
+    font-size: 0.875rem;
+    flex-shrink: 0;
+    min-width: 140px;
+}
+
+/* Citation text highlighting */
+.citation-card p {
+    line-height: 1.6;
+}
+
+.citation-card .bg-muted\/50 {
+    background-color: rgba(249, 250, 251, 0.8);
+}
+
+.citation-card .border-accent\/30 {
+    border-left-color: rgba(184, 134, 11, 0.3);
+}
+
+/* Citation card responsive adjustments */
+@media (max-width: 640px) {
+    .citation-card {
+        padding: 1rem;
+    }
+
+    .citation-card h3 {
+        font-size: 0.875rem;
+    }
+
+    #citation-jurisdiction-filter {
+        width: 100%;
+        min-width: unset;
+    }
+
+    .citation-browser .sticky > div:first-child {
+        flex-direction: column;
+    }
+}
+
 /* Modal backdrop enhancement */
 #search-modal,
 #template-modal {
