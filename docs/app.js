@@ -404,19 +404,6 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         }
 
-        // Also check guide links
-        const guideLinks = document.querySelectorAll('.guide-link');
-        for (const link of guideLinks) {
-            const linkPath = link.getAttribute('href');
-            const linkId = getTemplateIdFromPath(linkPath);
-
-            if (linkId === hash) {
-                const guideTitle = link.dataset.guideTitle || 'Guide';
-                const githubUrl = link.dataset.githubUrl || '';
-                openTemplateViewer(linkPath, guideTitle, githubUrl);
-                break;
-            }
-        }
     }
 
     // Copy markdown to clipboard
@@ -493,18 +480,6 @@ document.addEventListener('DOMContentLoaded', () => {
             const templateTitle = link.dataset.templateTitle || 'Template';
             const githubUrl = link.dataset.githubUrl || '';
             openTemplateViewer(templatePath, templateTitle, githubUrl);
-        }
-    });
-
-    // Intercept guide link clicks (guides are also markdown, use same viewer)
-    document.addEventListener('click', (e) => {
-        const link = e.target.closest('.guide-link');
-        if (link) {
-            e.preventDefault();
-            const guidePath = link.getAttribute('href');
-            const guideTitle = link.dataset.guideTitle || 'Guide';
-            const githubUrl = link.dataset.githubUrl || '';
-            openTemplateViewer(guidePath, guideTitle, githubUrl);
         }
     });
 
