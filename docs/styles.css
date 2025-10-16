@@ -413,32 +413,32 @@ code {
 }
 
 #template-sheet .prose h1 {
-    font-size: 1.375rem;
-    font-weight: 700;
+    font-size: 1.25rem;
+    font-weight: 600;
     margin-top: 0;
     margin-bottom: 0.75rem;
     line-height: 1.25;
-    border-bottom: 2px solid #e5e7eb;
+    border-bottom: 1px solid #e5e7eb;
     padding-bottom: 0.5rem;
-    color: #111827;
-}
-
-#template-sheet .prose h2 {
-    font-size: 1.125rem;
-    font-weight: 600;
-    margin-top: 1.25rem;
-    margin-bottom: 0.5rem;
-    line-height: 1.35;
     color: #1f2937;
 }
 
+#template-sheet .prose h2 {
+    font-size: 1.0625rem;
+    font-weight: 500;
+    margin-top: 1.25rem;
+    margin-bottom: 0.5rem;
+    line-height: 1.35;
+    color: #374151;
+}
+
 #template-sheet .prose h3 {
-    font-size: 1rem;
-    font-weight: 600;
+    font-size: 0.9375rem;
+    font-weight: 500;
     margin-top: 1rem;
     margin-bottom: 0.5rem;
     line-height: 1.4;
-    color: #374151;
+    color: #4b5563;
 }
 
 #template-sheet .prose p {
@@ -466,8 +466,8 @@ code {
 }
 
 #template-sheet .prose strong {
-    font-weight: 600;
-    color: #111827;
+    font-weight: 500;
+    color: #374151;
 }
 
 #template-sheet .prose em {
