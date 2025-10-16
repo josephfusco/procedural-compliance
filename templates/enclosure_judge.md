@@ -17,6 +17,28 @@
 
 ---
 
+## Important Legal Context
+
+**Understanding Written Order Requirements:**
+- CPLR Section 2219(a) primarily applies to dispositive orders and final judgments
+- Oral rulings made on the record are often legally sufficient
+- Courts have discretion in how they document routine procedural matters
+- Not every absence of written findings constitutes reversible error (harmless error doctrine applies)
+
+**This notice requests written orders to:**
+- Ensure complete appellate record
+- Clarify basis for rulings
+- Prevent potential appealable error
+
+**This is NOT:**
+- An accusation of judicial misconduct
+- A guarantee of relief even if orders are absent
+- A substitute for proper appellate procedure
+
+**Recommendation:** If this concerns a final order or dispositive motion, consult an attorney about whether written findings are legally required in your specific situation.
+
+---
+
 ## Legal Authority
 
 You are bound by:
@@ -52,13 +74,15 @@ Pursuant to the above statutory provisions, you are demanded to:
 
 If written orders are provided within {{X}} business days, no further action is necessary. This notice will serve only as record preservation for procedural compliance.
 
-## Preservation and Record Notice
+## Preservation Notice
 
-This notice preserves the record for appellate review and administrative complaint under:
+This notice preserves the procedural record for:
 
-- CPLR Article 55 (appeals)
-- 22 NYCRR Part 1 (judicial conduct)
-- Applicable federal civil rights statutes (42 U.S.C. Section 1983)
+- Appellate review under CPLR Article 55 (if applicable)
+- Motion practice if compliance is not forthcoming
+- Administrative record of good-faith compliance efforts
+
+If informal resolution and motion practice are unsuccessful, you may need to consult an attorney about additional remedies.
 
 ## Service
 

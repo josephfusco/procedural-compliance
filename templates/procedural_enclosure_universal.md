@@ -13,6 +13,23 @@
 
 ---
 
+## Important Legal Context
+
+**Procedural compliance is important, but:**
+- Courts apply "harmless error" doctrine - not every procedural deviation warrants reversal or sanction
+- You must show the violation caused actual prejudice to your case
+- Appellate courts balance procedural strictness against substantive justice
+- Informal compliance is preferred over formal motion practice
+
+**This notice:**
+- Creates a record of the procedural issue
+- Requests compliance to avoid appealable error
+- Does NOT guarantee relief even if violation occurred
+
+**Recommendation:** Consult an attorney to evaluate whether a procedural issue is material to your case.
+
+---
+
 ## 1. Role and Authority
 
 You act as {{Role}} in the above-captioned matter, bound by {{Applicable Statutes, Rules, and Ethical Provisions}}.

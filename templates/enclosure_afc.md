@@ -48,15 +48,15 @@ You are demanded to:
 
 If the requested actions are completed within {{X}} business days, no further action is necessary. This notice will serve only as record preservation for procedural compliance.
 
-## Preservation and Remedy
+## Preservation Notice
 
-This notice preserves the record for:
+This notice preserves the procedural record for:
 
-- Motion to disqualify or replace counsel
-- Appellate review of ineffective assistance
-- Administrative complaint under 22 NYCRR Part 1240 (Attorney Grievance)
+- Motion to address representation issues if informal resolution fails
+- Appellate review (if applicable)
+- Administrative record of good-faith compliance efforts
 
-Failure to comply may result in a motion for your removal and appointment of substitute counsel.
+If informal resolution is unsuccessful and representation concerns persist, you may need to consult an attorney about remedies including potential motion for substitution of counsel.
 
 ## Service
 

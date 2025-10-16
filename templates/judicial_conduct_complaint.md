@@ -8,6 +8,67 @@
 
 ---
 
+## ⚠️ BEFORE USING THIS TEMPLATE
+
+### When to Use Judicial Conduct Complaint
+
+**USE this template when:**
+- Judge engaged in **actual misconduct** (not just a wrong decision)
+- Pattern of behavior showing bias, dishonesty, or ethical violations
+- Judicial conduct violates specific provisions of Code of Judicial Conduct
+- You have exhausted all other remedies (appeals, motions, Article 78)
+- Case has concluded OR consultation with attorney confirms appropriateness
+
+**DO NOT use this if:**
+- You disagree with judge's ruling (that's what appeals are for)
+- Judge made legal error (use appeal or Article 78)
+- You're upset about losing your case
+- Judge exercised discretion you don't like
+- You haven't tried procedural remedies first
+
+**Appropriate example:** Judge has pattern of failing to provide written orders for final judgments despite repeated demands; has refused to issue orders for 6+ months; appeals exhausted.
+
+**Inappropriate example:** Judge denied your motion and you think the decision was wrong.
+
+### Exhaust These Remedies First
+
+**You MUST try these steps before filing complaint:**
+
+1. **Procedural enclosures** requesting compliance
+2. **Motions** to address procedural issues (motion for findings, motion to vacate)
+3. **Notice of Appeal** (if applicable)
+4. **Article 78** (if ministerial duty issue)
+5. **Consultation with attorney** about whether conduct is truly misconduct vs. appealable error
+
+**Critical timing issue:** Filing during active case creates risk of retaliation or appearance of impropriety.
+
+### Resource Requirements & Risks
+
+⚠️ **Important Considerations:**
+
+- **Timeline:** Investigation may take 6-24 months or longer
+- **Confidentiality:** Complaint is confidential until formal charges filed (if ever)
+- **Judge will be notified:** Judge gets copy and can respond
+- **Success rate:** Very low - most complaints dismissed
+- **Risk:** Filing during active case may affect how judge treats you
+- **No direct relief:** Commission cannot change your case outcome
+- **Standard:** Must show actual misconduct, not mere error
+
+**What this achieves:**
+- Creates accountability record for serious judicial misconduct
+- May result in discipline (admonition, censure, removal in extreme cases)
+- Does NOT fix your case - use appeals for that
+
+**Alternatives:**
+- Appeal (fixes legal errors in your case)
+- Article 78 (compels ministerial duties)
+- Motion for recusal (removes biased judge from your case)
+- Complaint to chief administrative judge (local court issues)
+
+**Best practice:** File AFTER case concludes and AFTER consultation with attorney.
+
+---
+
 **TO:** New York State Commission on Judicial Conduct
         Corning Tower, Suite 2301
         Empire State Plaza

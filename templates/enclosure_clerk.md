@@ -48,21 +48,23 @@ You are demanded to:
 
 If the requested actions are completed within {{X}} business days, no further action is necessary. This notice will serve only as record preservation for procedural compliance.
 
-## Legal Consequences
+## Importance of Accurate Records
 
-Failure to maintain accurate records or provide lawful access may:
+Accurate court records are essential for:
 
-- Compromise appellate review (CPLR Article 55)
-- Violate public access rights (22 NYCRR Section 202.5)
-- Support mandamus relief (CPLR Article 78)
+- Complete appellate review (CPLR Article 55)
+- Public access to court proceedings (22 NYCRR Section 202.5)
+- Proper administration of justice
 
 ## Preservation Notice
 
-This notice preserves the record for:
+This notice preserves the procedural record for:
 
-- Motion to compel compliance (CPLR Article 78)
-- Appellate claims of inadequate record
-- Administrative review of clerk procedures
+- Potential motion practice if informal resolution fails
+- Appellate review (if applicable)
+- Administrative record of good-faith compliance efforts
+
+If informal resolution is unsuccessful, you may need to consult an attorney about further remedies.
 
 ## Service
 

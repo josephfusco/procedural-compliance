@@ -50,16 +50,15 @@ You are demanded to:
 
 If the requested actions are completed within {{X}} business days, no further action is necessary. This notice will serve only as record preservation for procedural compliance.
 
-## Preservation and Remedy
+## Preservation Notice
 
-This notice preserves the record for:
+This notice preserves the procedural record for:
 
-- Motion to compel discovery (CPLR Section 3124, Section 3126)
-- Motion for sanctions under CPLR Section 3126, 22 NYCRR Section 130-1.1
-- Grievance complaint for violation of RPC 3.3, 3.4, 8.4 (22 NYCRR Part 1240)
-- Preclusion of evidence or issues due to discovery non-compliance
+- Potential motion to compel if informal resolution fails (CPLR Section 3124)
+- Court's consideration of discovery compliance
+- Administrative record of good-faith compliance efforts
 
-Failure to comply may result in motion practice seeking adverse inference, preclusion, costs, and attorney disciplinary referral.
+If informal resolution is unsuccessful, you may need to file a motion to compel discovery under CPLR Article 31. The court has discretion to award costs and impose sanctions for discovery violations under CPLR Section 3126 and 22 NYCRR Section 130-1.1.
 
 ## Service
 

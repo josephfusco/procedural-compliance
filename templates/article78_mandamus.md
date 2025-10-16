@@ -4,6 +4,61 @@
 
 ---
 
+## ⚠️ BEFORE USING THIS TEMPLATE
+
+### When to Use Article 78 Mandamus
+
+**USE this template when:**
+- A public official has a **ministerial duty** (no discretion) under law
+- The duty is clear and mandatory ("shall," not "may")
+- You have a **clear legal right** to the official's performance
+- You have **exhausted all other remedies** (see below)
+- The duty is **purely administrative** (no judgment or policy involved)
+
+**DO NOT use this if:**
+- The official has discretion in how/when to act
+- You disagree with a discretionary decision or ruling
+- You haven't tried informal remedies first
+- An appeal or other remedy is available
+- The issue involves judicial discretion or policy judgment
+
+**Appropriate example:** Judge refuses to issue written order despite multiple requests; no other remedy available.
+
+**Inappropriate example:** Judge denied your motion (that's discretionary, use appeal instead).
+
+### Exhaust These Remedies First
+
+**You MUST try these steps before filing Article 78:**
+
+1. **Informal written request** to the official (letter/email)
+2. **Procedural enclosure** (formal demand)
+3. **Motion to the court** (if applicable - e.g., motion to compel, motion for order)
+4. **Second demand** with reasonable deadline
+5. **Consultation with attorney** about whether duty is truly ministerial
+
+**Document everything:** Save copies of all demands, responses, and attempts at resolution.
+
+### Resource Requirements
+
+⚠️ **Important Considerations:**
+
+- **Filing fee:** $300+ (varies by county)
+- **Timeline:** 6-18 months minimum from filing to decision
+- **Complexity:** Article 78 practice is highly technical
+- **Success rate:** Low unless duty is clearly ministerial with no alternative remedy
+- **Attorney strongly recommended:** Pro se Article 78 petitions rarely succeed
+- **Cost if you lose:** May be ordered to pay respondent's legal fees
+
+**Alternatives to consider:**
+- Appeal (if order was entered and time hasn't expired)
+- Motion practice (often faster and cheaper)
+- Consultation with attorney about other remedies
+- Complaint to oversight body (if appropriate)
+
+**Proceed only if:** All informal remedies exhausted, duty is clearly ministerial, and attorney has reviewed your case OR you cannot afford attorney and have no other option.
+
+---
+
 **SUPREME COURT OF THE STATE OF NEW YORK**
 **COUNTY OF {{COUNTY}}**
 

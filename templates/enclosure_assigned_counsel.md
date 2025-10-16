@@ -61,13 +61,15 @@ Failure to follow these instructions or explain why they conflict with ethical d
 
 If the requested actions are completed within {{X}} business days, no further action is necessary. This notice will serve only as record preservation for procedural compliance.
 
-## Preservation and Remedy
+## Preservation Notice
 
-This notice preserves the record for:
+This notice preserves the procedural record for:
 
-- Motion to relieve or replace assigned counsel
-- Appellate claim of ineffective assistance of counsel
-- Grievance complaint under 22 NYCRR Part 1240
+- Motion to address representation issues if informal resolution fails
+- Appellate review (if applicable)
+- Administrative record of good-faith compliance efforts
+
+If informal resolution is unsuccessful and representation concerns persist, you may need to consult with the court about potential remedies including motion for substitution of counsel.
 
 ## Service
 

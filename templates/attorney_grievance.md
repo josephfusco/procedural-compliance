@@ -8,6 +8,75 @@
 
 ---
 
+## ⚠️ BEFORE USING THIS TEMPLATE
+
+### When to Use Attorney Grievance Complaint
+
+**USE this template when:**
+- Attorney engaged in **serious misconduct** (not just poor performance)
+- Pattern of behavior violating Rules of Professional Conduct
+- Attorney abandoned representation without notice
+- Attorney misappropriated client funds or committed fraud
+- You exhausted cooperative remedies (see below)
+
+**DO NOT use this if:**
+- You disagree with attorney's strategy (that's not misconduct)
+- Attorney made tactical error you don't like
+- You're unhappy with case outcome (not attorney's fault)
+- Fee dispute that can be resolved through arbitration
+- You haven't tried talking to attorney first
+
+**Appropriate example:** Attorney abandoned representation without notice; hasn't responded to calls/emails for 3+ months; missed court deadlines; procedural enclosures ignored.
+
+**Inappropriate example:** Attorney recommended settlement you don't like (that's strategic disagreement, not misconduct).
+
+### Exhaust These Remedies First
+
+**You MUST try these steps before filing grievance:**
+
+1. **Direct communication** with attorney about concerns
+2. **Written request** for specific actions or explanations
+3. **Procedural enclosure** (if applicable)
+4. **Fee arbitration** (if fee-related) through local bar association
+5. **Motion to court** for relief or substitution of counsel
+6. **Consultation with another attorney** about whether conduct is actionable misconduct
+
+**Document everything:** Save all communications, missed deadlines, and attempts at resolution.
+
+### Resource Requirements & Consequences
+
+⚠️ **Important Considerations:**
+
+- **Timeline:** Investigation may take 6-12 months or longer
+- **Confidentiality:** Complaint is confidential until formal charges (if ever)
+- **Attorney notified:** Attorney will receive complaint and can respond
+- **Success rate:** Low unless serious misconduct clearly documented
+- **Relationship:** Attorney-client relationship will be permanently damaged
+- **No direct relief:** Grievance committee cannot fix your case or get refund
+- **What this achieves:** Potential discipline ranging from admonition to disbarment
+
+**Alternatives for specific issues:**
+- **Fee disputes:** Mandatory fee arbitration (faster, gets money back)
+- **Poor representation during case:** Motion to substitute counsel
+- **Malpractice (damages):** Legal malpractice lawsuit
+- **Ineffective assistance (criminal):** Claim on appeal or post-conviction
+
+**Types of misconduct appropriate for grievance:**
+- Abandonment without notice
+- Misappropriation of client funds
+- Fraud or dishonesty
+- Conflict of interest
+- Failure to communicate for extended period
+- Missing statute of limitations
+
+**NOT appropriate for grievance:**
+- Lost your case (outcome not misconduct)
+- Strategic disagreement
+- Single missed call/email
+- Attorney's personality
+
+---
+
 **TO:** Attorney Grievance Committee
         {{Department}} Department
         {{Address - varies by department}}
