@@ -32,8 +32,8 @@ if [ ! -d "templates" ]; then
 fi
 
 # Check if universal template exists
-if [ ! -f "templates/procedural_enclosure_universal.md" ]; then
-    echo "Error: templates/procedural_enclosure_universal.md not found"
+if [ ! -f "templates/notice_universal.md" ]; then
+    echo "Error: templates/notice_universal.md not found"
     echo "The universal template is required as the basis for new templates"
     exit 1
 fi
@@ -48,7 +48,7 @@ if [ -f "$target" ]; then
 fi
 
 # Copy universal template to new file
-cp templates/procedural_enclosure_universal.md "$target"
+cp templates/notice_universal.md "$target"
 
 echo "✓ Created $target"
 echo ""

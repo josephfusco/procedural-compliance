@@ -35,12 +35,12 @@
 
 ```
 templates/
-├─ procedural_enclosure_universal.md    # Generic template
-├─ enclosure_judge.md                    # For judges
-├─ enclosure_afc.md                      # For Attorney for Child
-├─ enclosure_assigned_counsel.md         # For your own attorney
-├─ enclosure_clerk.md                    # For court clerks
-└─ enclosure_opposing_counsel.md         # For opposing party's attorney
+├─ notice_universal.md                   # Generic template
+├─ notice_judge.md                       # For judges
+├─ notice_afc.md                         # For Attorney for Child
+├─ notice_assigned_counsel.md            # For your own attorney
+├─ notice_clerk.md                       # For court clerks
+└─ notice_opposing_counsel.md            # For opposing party's attorney
 ```
 
 **Choose based on who violated the procedure.**

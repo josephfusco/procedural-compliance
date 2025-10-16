@@ -307,7 +307,7 @@ document.addEventListener('DOMContentLoaded', () => {
     let lastFocusedElement = null;
 
     // Helper function: Convert template path to hash-friendly ID
-    // Example: "templates/procedural_enclosure_universal.md" -> "procedural-enclosure-universal"
+    // Example: "templates/notice_universal.md" -> "notice-universal"
     function getTemplateIdFromPath(path) {
         if (!path) return '';
         const filename = path.split('/').pop(); // Get filename

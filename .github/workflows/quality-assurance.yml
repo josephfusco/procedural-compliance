@@ -62,7 +62,7 @@ jobs:
             "LICENSE"
             "CONTRIBUTING.md"
             "CODE_OF_CONDUCT.md"
-            "templates/procedural_enclosure_universal.md"
+            "templates/notice_universal.md"
             "guides/FAQ.md"
             "guides/USAGE_GUIDE.md"
             "citations/statutes.json"
@@ -287,7 +287,7 @@ jobs:
           echo "🧪 Testing grading script..."
 
           # Run grading script on a real template
-          ./scripts/grade.sh templates/procedural_enclosure_universal.md
+          ./scripts/grade.sh templates/notice_universal.md
           echo "✅ Grading script ran successfully"
 
   security-scan:
