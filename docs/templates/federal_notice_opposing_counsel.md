@@ -1,5 +1,5 @@
 ---
-title: "Procedural Enclosure - Federal Opposing Counsel"
+title: "Notice of Non-Compliance - Federal Opposing Counsel"
 jurisdiction: "Federal"
 role: "counsel"
 statutes: ["Model Rules 3.3", "Model Rules 3.4", "FRCP 11", "FRCP 26", "FRCP 37"]
@@ -12,7 +12,7 @@ version: "1.0.0"
 This template applies to United States District Courts and Circuit Courts of Appeals governed by FRCP, FRAP, and Federal Rules of Evidence.
 ---
 
-# PROCEDURAL ENCLOSURE - OPPOSING COUNSEL (Federal)
+# NOTICE OF NON-COMPLIANCE - OPPOSING COUNSEL (Federal)
 
 **TO:** {{Attorney Name}}, Esq.
 {{Law Firm Name}}
@@ -214,7 +214,7 @@ Violation subjects attorney to sanctions under FRCP 11(c).
 
 ## 5. Record Preservation and Further Relief
 
-This Procedural Enclosure serves as:
+This Notice of Non-Compliance serves as:
 
 - **Formal notice** of professional violations for disciplinary and judicial review
 - **Preservation** of objection to misconduct for sanctions motions and appellate review
@@ -269,7 +269,7 @@ Pursuant to FRCP 11(c)(2), this notice provides you with 21 days to withdraw or 
 
 ## 7. Service and Filing
 
-This Procedural Enclosure is:
+This Notice of Non-Compliance is:
 
 - **Served** on {{Attorney Name}} via {{email / certified mail / CM/ECF}}
 - **Served** on all parties via CM/ECF {{or}} **Not filed** (per FRCP 11(c)(2) safe harbor requirement)
@@ -302,7 +302,7 @@ _________________________
 
 ## CERTIFICATE OF SERVICE
 
-I hereby certify that on {{date}}, a true and correct copy of this Procedural Enclosure was served on {{Attorney Name}} via {{method}}.
+I hereby certify that on {{date}}, a true and correct copy of this Notice of Non-Compliance was served on {{Attorney Name}} via {{method}}.
 
 {{If FRCP 11 safe harbor applies:}} This notice was not filed with the Court pursuant to FRCP 11(c)(2) safe harbor requirements.
 

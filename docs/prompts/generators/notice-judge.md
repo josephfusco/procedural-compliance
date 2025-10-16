@@ -1,4 +1,4 @@
-# Generator: Procedural Enclosure for Judge (CPLR §2219(a))
+# Generator: Notice of Non-Compliance for Judge (CPLR §2219(a))
 
 **Version:** 1.0
 **Last Updated:** 2025-10-15
@@ -6,7 +6,7 @@
 
 ## Objective
 
-Generate a complete procedural enclosure directed at a judge who has failed to issue written orders stating grounds and specifying papers considered, in violation of CPLR §2219(a) and 22 NYCRR §202.48(b).
+Generate a complete notice of non-compliance directed at a judge who has failed to issue written orders stating grounds and specifying papers considered, in violation of CPLR §2219(a) and 22 NYCRR §202.48(b).
 
 ## Use Cases
 
@@ -41,7 +41,7 @@ Generate a complete procedural enclosure directed at a judge who has failed to i
 ## Prompt Template
 
 ```
-You are an expert in New York civil procedure. Generate a procedural enclosure
+You are an expert in New York civil procedure. Generate a notice of non-compliance
 directed at a judge demanding compliance with CPLR §2219(a) and 22 NYCRR §202.48(b).
 
 INPUT INFORMATION:
@@ -65,7 +65,7 @@ PRIOR REQUESTS FOR WRITTEN ORDERS:
 {{/if}}
 
 TASK:
-Generate a complete procedural enclosure that:
+Generate a complete notice of non-compliance that:
 
 1. **HEADER SECTION**
    - Professional letterhead format
@@ -126,7 +126,7 @@ Generate the complete document now.
 The AI should generate a complete document following this structure:
 
 ```markdown
-# PROCEDURAL ENCLOSURE — JUDGE
+# NOTICE OF NON-COMPLIANCE — JUDGE
 
 **[NY][CPLR] Demand for Written Decision with Findings**
 
@@ -188,7 +188,7 @@ Served via [NYSCEF upload / hand delivery / certified mail] on [date].
 
 **Certification of Service**
 
-I certify that this Procedural Enclosure was served upon Hon. [Judge Name] via [method] on [date].
+I certify that this Notice of Non-Compliance was served upon Hon. [Judge Name] via [method] on [date].
 
 [Your Signature]
 [Your Name]
@@ -239,7 +239,7 @@ Prior Requests:
 ### Output (AI-Generated)
 
 ```markdown
-# PROCEDURAL ENCLOSURE — JUDGE
+# NOTICE OF NON-COMPLIANCE — JUDGE
 
 **[NY][CPLR] Demand for Written Decision with Findings**
 
@@ -316,13 +316,13 @@ Failure to comply with statutory duties may form the basis for:
 
 ## Service
 
-This Procedural Enclosure is served via NYSCEF upload and filed in the official case record on October 15, 2025.
+This Notice of Non-Compliance is served via NYSCEF upload and filed in the official case record on October 15, 2025.
 
 ---
 
 **Certification of Service**
 
-I certify that this Procedural Enclosure was served upon Hon. John Smith, Justice of the Supreme Court, via NYSCEF electronic filing on October 15, 2025, and that all parties to this action were served via NYSCEF on the same date.
+I certify that this Notice of Non-Compliance was served upon Hon. John Smith, Justice of the Supreme Court, via NYSCEF electronic filing on October 15, 2025, and that all parties to this action were served via NYSCEF on the same date.
 
 Dated: October 15, 2025
 
@@ -367,7 +367,7 @@ After generating the document:
 
 ## Limitations
 
-This generator creates a procedural enclosure for **post-decision** demands. For other scenarios, use:
+This generator creates a notice of non-compliance for **post-decision** demands. For other scenarios, use:
 - **Pre-decision preservation:** Different template (objection/motion)
 - **Ex parte orders:** Use CPLR §5704(a) OSC template instead
 - **Federal court:** Use Fed. R. Civ. P. 65 preliminary injunction template

@@ -260,7 +260,7 @@ This creates a clean record for appellate and federal intervention.
 
 2. **Document Judicial Non-Compliance (Ongoing)**
    - Maintain log of all court refusals
-   - Serve procedural enclosures for each violation
+   - Serve notice of non-compliances for each violation
    - Preserve for appellate record
 
 3. **Consider Article 78 Mandamus (Day 20-30)**
@@ -308,7 +308,7 @@ This creates a clean record for appellate and federal intervention.
 
 ### VI. Record Preservation Checklist
 
-- [ ] Serve all procedural enclosures with proof of service
+- [ ] Serve all notice of non-compliances with proof of service
 - [ ] Upload all documents to NYSCEF (creates timestamped record)
 - [ ] Request transcripts of all court proceedings
 - [ ] Maintain chronological log of all events
@@ -325,7 +325,7 @@ This creates a clean record for appellate and federal intervention.
 
 **NEXT WEEK:**
 4. If motion denied, immediately file emergency stay with Appellate Division
-5. Serve procedural enclosure on judge for continued non-compliance
+5. Serve notice of non-compliance on judge for continued non-compliance
 6. Begin drafting notice of appeal
 
 **ONGOING:**

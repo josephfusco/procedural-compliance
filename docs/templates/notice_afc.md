@@ -1,5 +1,5 @@
 ---
-title: "Procedural Enclosure - Attorney for Child"
+title: "Notice of Non-Compliance - Attorney for Child"
 jurisdiction: "NY"
 role: "afc"
 statutes: ["FCA §§241-249", "22 NYCRR §7.2(d)", "RPC 1.1", "RPC 1.3", "RPC 1.4"]
@@ -12,7 +12,7 @@ version: "1.0.0"
 This template applies to New York State courts (Supreme, Family, Appellate Division) governed by CPLR, DRL, FCA, and 22 NYCRR.
 ---
 
-# PROCEDURAL ENCLOSURE — ATTORNEY FOR THE CHILD
+# NOTICE OF NON-COMPLIANCE — ATTORNEY FOR THE CHILD
 
 **[NY][FCA] Demand for Zealous Representation and Communication**
 
@@ -72,7 +72,7 @@ Served via {{email / certified mail / NYSCEF}} on {{date}}.
 
 **Certification of Service**
 
-I certify that this Procedural Enclosure was served upon {{AFC Name}} via {{method}} on {{date}}.
+I certify that this Notice of Non-Compliance was served upon {{AFC Name}} via {{method}} on {{date}}.
 
 {{Your Signature}}
 {{Your Name}}

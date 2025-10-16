@@ -79,7 +79,7 @@ Petitioner {{Name}}, by {{pro se / counsel}}, respectfully alleges:
 
 **Demands for Compliance**
 
-15. On {{date}}, petitioner served respondent with procedural enclosure demanding compliance with {{statute/rule}} (Exhibit A).
+15. On {{date}}, petitioner served respondent with notice of non-compliance demanding compliance with {{statute/rule}} (Exhibit A).
 
 16. Respondent did not respond or comply within the {{X}} business days requested.
 
@@ -199,7 +199,7 @@ _________________________
 
 ## EXHIBITS
 
-**Exhibit A:** Procedural Enclosure dated {{date}}
+**Exhibit A:** Notice of Non-Compliance dated {{date}}
 **Exhibit B:** {{Administrative Appeal/Motion/Demand}} filed {{date}}
 **Exhibit C:** {{Agency Denial/Court Order/Correspondence}}
 **Exhibit D:** {{Additional documentation}}

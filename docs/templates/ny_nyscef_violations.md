@@ -204,7 +204,7 @@ Consolidated e-filing requirements into substantive statutes (CPLR, SCPA, etc.),
 
 ## 5. Record Preservation and Further Relief
 
-This Procedural Enclosure serves as:
+This Notice of Non-Compliance serves as:
 
 - **Formal notice** of NYSCEF violations for administrative and judicial review
 - **Preservation** of objection to improper rejections and e-filing non-compliance
@@ -250,7 +250,7 @@ If you fail to cure within three (3) days, I will:
 
 ## 7. Service and Filing
 
-This Procedural Enclosure is:
+This Notice of Non-Compliance is:
 
 - **{{E-filed / Served}}** via NYSCEF on {{date}}
 - **Served** on all parties via NYSCEF
@@ -285,7 +285,7 @@ _________________________
 
 ## CERTIFICATE OF SERVICE
 
-I hereby certify that on {{date}}, a true and correct copy of this Procedural Enclosure was {{e-filed via NYSCEF / served via NYSCEF email / tendered in paper due to system unavailability}} to all parties.
+I hereby certify that on {{date}}, a true and correct copy of this Notice of Non-Compliance was {{e-filed via NYSCEF / served via NYSCEF email / tendered in paper due to system unavailability}} to all parties.
 
 {{If tendered in paper:}} NYSCEF was unavailable on {{date}} from {{time}} to {{time}}, necessitating paper service pursuant to Uniform Rule 202.5-b(c)(1).
 

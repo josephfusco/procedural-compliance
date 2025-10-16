@@ -1,4 +1,18 @@
-# PROCEDURAL ENCLOSURE -- ASSIGNED COUNSEL
+---
+title: "Notice of Non-Compliance - Assigned Counsel"
+jurisdiction: "NY"
+role: "counsel"
+statutes: ["RPC 1.1", "RPC 1.2", "RPC 1.3", "RPC 1.4"]
+version: "1.0.0"
+---
+
+---
+**JURISDICTION: NEW YORK**
+
+This template applies to New York State courts (Supreme, Family, Appellate Division) governed by CPLR, DRL, FCA, and 22 NYCRR.
+---
+
+# NOTICE OF NON-COMPLIANCE — ASSIGNED COUNSEL
 
 **[NY] Demand for Competent Representation and Communication**
 
@@ -10,10 +24,6 @@
 **CASE:** {{Caption}} | {{Index / Docket Number}}
 **COURT:** {{Court Name and County}}
 **SUBJECT:** Notice of Non-Compliance with Duties Under Rules of Professional Conduct
-
----
-
-**NOTE:** This notice assumes good faith and seeks cooperative compliance with procedural requirements. It is not an accusation of misconduct, but a formal request to ensure complete record and proper procedure.
 
 ---
 
@@ -29,9 +39,9 @@ You are bound by:
   - Reasonably consulting about means to achieve objectives
   - Keeping client reasonably informed about status of matter
 
-## Procedural Status
+## Identified Deficiencies
 
-As of {{date}}, the record does not reflect:
+As of {{date}}, you have failed to:
 
 1. **Communicate:** No contact since {{date or "assignment"}}, despite {{number}} attempts to reach you via {{phone/email}}.
 2. **Consult on strategy:** No discussion of {{plea, motion, defense theory, settlement, etc.}}.
@@ -57,19 +67,13 @@ I instruct you to pursue the following objectives in this case:
 
 Failure to follow these instructions or explain why they conflict with ethical duties constitutes abandonment of representation.
 
-## Cooperative Resolution
+## Preservation and Remedy
 
-If the requested actions are completed within {{X}} business days, no further action is necessary. This notice will serve only as record preservation for procedural compliance.
+This notice preserves the record for:
 
-## Preservation Notice
-
-This notice preserves the procedural record for:
-
-- Motion to address representation issues if informal resolution fails
-- Appellate review (if applicable)
-- Administrative record of good-faith compliance efforts
-
-If informal resolution is unsuccessful and representation concerns persist, you may need to consult with the court about potential remedies including motion for substitution of counsel.
+- Motion to relieve or replace assigned counsel
+- Appellate claim of ineffective assistance of counsel
+- Grievance complaint under 22 NYCRR Part 1240
 
 ## Service
 
@@ -79,7 +83,7 @@ Served via {{email / certified mail / hand delivery}} on {{date}}.
 
 **Certification of Service**
 
-I certify that this Procedural Enclosure was served upon {{Counsel Name}} via {{method}} on {{date}}.
+I certify that this Notice of Non-Compliance was served upon {{Counsel Name}} via {{method}} on {{date}}.
 
 {{Your Signature}}
 {{Your Name}}

@@ -23,7 +23,7 @@
 
 **Most Common Use Case:** Judge issued oral ruling without written order
 
-→ Use: `templates/enclosure_judge.md` or `prompts/generators/enclosure-judge.md`
+→ Use: `templates/notice_judge.md` or `prompts/generators/notice-judge.md`
 
 ---
 
@@ -35,12 +35,12 @@
 
 ```
 templates/
-├─ procedural_enclosure_universal.md    # Generic template
-├─ enclosure_judge.md                    # For judges
-├─ enclosure_afc.md                      # For Attorney for Child
-├─ enclosure_assigned_counsel.md         # For your own attorney
-├─ enclosure_clerk.md                    # For court clerks
-└─ enclosure_opposing_counsel.md         # For opposing party's attorney
+├─ notice_universal.md    # Generic template
+├─ notice_judge.md                    # For judges
+├─ notice_afc.md                      # For Attorney for Child
+├─ notice_assigned_counsel.md         # For your own attorney
+├─ notice_clerk.md                    # For court clerks
+└─ notice_opposing_counsel.md         # For opposing party's attorney
 ```
 
 **Choose based on who violated the procedure.**
@@ -208,7 +208,7 @@ prompts/
 ```
 
 **Most used generators:**
-- `generators/enclosure-judge.md`
+- `generators/notice-judge.md`
 - `generators/article78-mandamus.md`
 - `generators/notice-of-appeal.md`
 - `generators/motion-to-compel.md`
@@ -254,7 +254,7 @@ My child: "minor child" or "J.D." (initials only)
 **Copy the "Prompt Template" section.** It looks like this:
 
 ```
-You are an expert in New York civil procedure. Generate a procedural enclosure...
+You are an expert in New York civil procedure. Generate a notice of non-compliance...
 
 INPUT INFORMATION:
 - Your Name: {{your_name}}
@@ -262,7 +262,7 @@ INPUT INFORMATION:
 [etc.]
 
 TASK:
-Generate a complete procedural enclosure that:
+Generate a complete notice of non-compliance that:
 1. [Requirement 1]
 2. [Requirement 2]
 [etc.]
@@ -271,7 +271,7 @@ Generate a complete procedural enclosure that:
 **Replace `{{variables}}` with your info:**
 
 ```
-You are an expert in New York civil procedure. Generate a procedural enclosure...
+You are an expert in New York civil procedure. Generate a notice of non-compliance...
 
 INPUT INFORMATION:
 - Your Name: John Doe (use pseudonym)
@@ -380,7 +380,7 @@ For each citation in document:
 **Step 3: Upload Document**
 - Document Type: Select appropriate (e.g., "Notice," "Motion," "Letter")
 - Upload your PDF
-- Fill in description: "Procedural Enclosure Pursuant to CPLR §2219(a)"
+- Fill in description: "Notice of Non-Compliance Pursuant to CPLR §2219(a)"
 
 **Step 4: Review and Submit**
 - Review filing
@@ -465,7 +465,7 @@ an amended order listing the papers considered.
 **Your response:**
 1. **Acknowledge compliance** for items provided
 2. **Send follow-up enclosure** for remaining items
-3. **Reference prior enclosure:** "This is a follow-up to the procedural enclosure
+3. **Reference prior enclosure:** "This is a follow-up to the notice of non-compliance
    served [date] regarding [remaining issues]."
 
 ### Scenario 3: Court Ignores (No Response)
@@ -567,7 +567,7 @@ an amended order listing the papers considered.
 **Workflow:**
 
 **Week 1 (Day 1-7):**
-1. Use template: `templates/enclosure_judge.md`
+1. Use template: `templates/notice_judge.md`
 2. List all 3 motions without orders
 3. Cite CPLR §2219(a), 22 NYCRR §202.48(b)
 4. Request written orders within 14 days
@@ -602,8 +602,8 @@ an amended order listing the papers considered.
 **Workflow:**
 
 **Day 1-3:**
-1. Send procedural enclosure to opposing counsel
-2. Use template: `templates/enclosure_opposing_counsel.md`
+1. Send notice of non-compliance to opposing counsel
+2. Use template: `templates/notice_opposing_counsel.md`
 3. List specific discovery requests unanswered
 4. Cite CPLR §§3124, 3126 (sanctions)
 5. Give 10 days to respond
@@ -636,7 +636,7 @@ an amended order listing the papers considered.
 **Workflow:**
 
 **Day 1-3:**
-1. File procedural enclosure demanding written order with grounds
+1. File notice of non-compliance demanding written order with grounds
 2. File omnibus notice (22 NYCRR §202.48(b)) submitting proposed order
 3. File motion to reargue (CPLR §2221) citing procedural defect
 

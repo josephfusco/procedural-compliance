@@ -77,7 +77,7 @@ PCF is **not**:
 ## Template Categories
 
 ### Procedural Enforcement
-- **Procedural Enclosures**: Demand written compliance from judges, clerks, counsel
+- **Notices of Non-Compliance**: Demand written compliance from judges, clerks, counsel
 - **Universal Templates**: Adaptable to any role or violation
 
 ### Appeals

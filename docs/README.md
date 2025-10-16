@@ -1,12 +1,12 @@
 # Web Interface - GitHub Pages Site
 
-**Interactive template catalog for procedural enclosure toolkit**
+**Interactive template catalog for notice of non-compliance toolkit**
 
 ---
 
 ## Overview
 
-This directory contains the static website for the Procedural Enclosure Toolkit, deployed via GitHub Pages. The site provides:
+This directory contains the static website for the Notice of Non-Compliance Toolkit, deployed via GitHub Pages. The site provides:
 
 - **Searchable Template Catalog** - Filter by jurisdiction, category, and urgency
 - **Comprehensive Guides** - Links to all documentation
@@ -75,7 +75,7 @@ Templates are defined in `app.js`:
 const templates = [
     {
         id: 'procedural-enclosure',
-        title: 'Procedural Enclosure (Written Orders)',
+        title: 'Notice of Non-Compliance (Written Orders)',
         jurisdiction: 'ny',
         category: 'procedural-enforcement',
         urgency: 'standard',

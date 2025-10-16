@@ -1,18 +1,4 @@
----
-title: "Procedural Enclosure (Universal)"
-jurisdiction: "NY"
-role: "universal"
-statutes: ["CPLR §2219(a)", "22 NYCRR §202.48(b)", "CPLR §5017(b)"]
-version: "1.0.0"
----
-
----
-**JURISDICTION: NEW YORK**
-
-This template applies to New York State courts (Supreme, Family, Appellate Division) governed by CPLR, DRL, FCA, and 22 NYCRR.
----
-
-# PROCEDURAL ENCLOSURE (Universal)
+# NOTICE OF NON-COMPLIANCE (Universal)
 
 **TO:** {{Name, Title}}
 **FROM:** {{Your Name}}
@@ -20,6 +6,27 @@ This template applies to New York State courts (Supreme, Family, Appellate Divis
 **CASE:** {{Caption, Index Number}}
 **COURT:** {{Court Name and Location}}
 **SUBJECT:** Procedural Notice and Demand for Statutory Compliance
+
+---
+
+**NOTE:** This notice assumes good faith and seeks cooperative compliance with procedural requirements. It is not an accusation of misconduct, but a formal request to ensure complete record and proper procedure.
+
+---
+
+## Important Legal Context
+
+**Procedural compliance is important, but:**
+- Courts apply "harmless error" doctrine - not every procedural deviation warrants reversal or sanction
+- You must show the violation caused actual prejudice to your case
+- Appellate courts balance procedural strictness against substantive justice
+- Informal compliance is preferred over formal motion practice
+
+**This notice:**
+- Creates a record of the procedural issue
+- Requests compliance to avoid appealable error
+- Does NOT guarantee relief even if violation occurred
+
+**Recommendation:** Consult an attorney to evaluate whether a procedural issue is material to your case.
 
 ---
 
@@ -59,9 +66,9 @@ Use the appropriate module below based on the recipient's role.
 ### Judge
 
 **Applicable Authority:**
-- CPLR §2219(a): Orders must state grounds and papers considered
-- 22 NYCRR §202.48(b): Decisions on motions must be in writing or on the record
-- CPLR §5704(a): Right to review ex parte orders
+- CPLR Section 2219(a): Orders must state grounds and papers considered
+- 22 NYCRR Section 202.48(b): Decisions on motions must be in writing or on the record
+- CPLR Section 5704(a): Right to review ex parte orders
 
 **Duties:**
 - Issue written decisions with findings of fact and conclusions of law
@@ -71,8 +78,8 @@ Use the appropriate module below based on the recipient's role.
 ### Attorney for the Child (AFC)
 
 **Applicable Authority:**
-- FCA §§241–249: Duties of law guardians and attorneys for children
-- 22 NYCRR §7.2(d): Standards for representation
+- FCA Section 241–249: Duties of law guardians and attorneys for children
+- 22 NYCRR Section 7.2(d): Standards for representation
 
 **Duties:**
 - Zealous advocacy for client's expressed wishes
@@ -94,8 +101,8 @@ Use the appropriate module below based on the recipient's role.
 ### Court Clerk
 
 **Applicable Authority:**
-- CPLR §5017(b): Entry and filing of orders
-- 22 NYCRR §202.48: Motion procedures and record-keeping
+- CPLR Section 5017(b): Entry and filing of orders
+- 22 NYCRR Section 202.48: Motion procedures and record-keeping
 
 **Duties:**
 - Accurate docketing and record maintenance
@@ -118,7 +125,7 @@ Use the appropriate module below based on the recipient's role.
 
 **Service Certification**
 
-I certify that this Procedural Enclosure was served upon {{Recipient Name}} via {{method}} on {{date}}.
+I certify that this Notice of Non-Compliance was served upon {{Recipient Name}} via {{method}} on {{date}}.
 
 {{Your Signature}}
 {{Your Name}}

@@ -121,5 +121,5 @@ specified, with remedies and preservation strategy]
 ## Related Prompts
 
 - `/personas/procedural-expert.md` - Detailed procedural analysis
-- `/generators/enclosure-judge.md` - Generate challenge document
+- `/generators/notice-judge.md` - Generate challenge document
 - `/personas/appellate-advisor.md` - Appeal strategy

@@ -1,5 +1,5 @@
 ---
-title: "Procedural Enclosure - Federal Clerk"
+title: "Notice of Non-Compliance - Federal Clerk"
 jurisdiction: "Federal"
 role: "clerk"
 statutes: ["FRCP 58", "FRCP 79", "28 U.S.C. §751"]
@@ -12,7 +12,7 @@ version: "1.0.0"
 This template applies to United States District Courts and Circuit Courts of Appeals governed by FRCP, FRAP, and Federal Rules of Evidence.
 ---
 
-# PROCEDURAL ENCLOSURE - FEDERAL COURT CLERK
+# NOTICE OF NON-COMPLIANCE - FEDERAL COURT CLERK
 
 **TO:** {{Clerk Name}}, {{Title - Clerk of Court / Deputy Clerk}}
 {{Court Name}}
@@ -170,7 +170,7 @@ E-Government Act of 2002, 44 U.S.C. §3501 note, and Judicial Conference policy 
 
 ## 5. Record Preservation and Further Relief
 
-This Procedural Enclosure serves as:
+This Notice of Non-Compliance serves as:
 
 - **Formal notice** of clerk non-compliance for administrative and judicial review
 - **Preservation** of objection to docket errors and delayed judgment entry
@@ -218,7 +218,7 @@ Clerk has **no discretion** to:
 
 ## 7. Service and Filing
 
-This Procedural Enclosure is:
+This Notice of Non-Compliance is:
 
 - **Filed** via CM/ECF on {{date}}
 - **Served** on Clerk of Court via {{email / hand delivery / certified mail}}
@@ -251,7 +251,7 @@ _________________________
 
 ## CERTIFICATE OF SERVICE
 
-I hereby certify that on {{date}}, a true and correct copy of this Procedural Enclosure was filed via CM/ECF, served on all parties, and {{delivered to Clerk's Office via {{method}}}}.
+I hereby certify that on {{date}}, a true and correct copy of this Notice of Non-Compliance was filed via CM/ECF, served on all parties, and {{delivered to Clerk's Office via {{method}}}}.
 
 _________________________
 {{Signature}}

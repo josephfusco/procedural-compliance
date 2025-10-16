@@ -2,15 +2,15 @@
 
 ## General Questions
 
-### What is a "procedural enclosure"?
+### What is a "notice of non-compliance"?
 
-A procedural enclosure is a formal demand for compliance with procedural requirements (like written orders, proper notice, or adherence to court rules). It "encloses" the recipient by:
+A notice of non-compliance is a formal demand for compliance with procedural requirements (like written orders, proper notice, or adherence to court rules). It "encloses" the recipient by:
 1. Identifying a specific mandatory duty
 2. Documenting non-compliance
 3. Demanding performance or written justification
 4. Preserving the issue for appellate or administrative review
 
-Unlike substantive motions (which argue about the merits of your case), procedural enclosures focus on process violations—failures to follow CPLR, court rules, or due process requirements.
+Unlike substantive motions (which argue about the merits of your case), notice of non-compliances focus on process violations—failures to follow CPLR, court rules, or due process requirements.
 
 ### Can I use this toolkit if I'm representing myself (pro se)?
 
@@ -45,7 +45,7 @@ No, but you should:
 **Decision tree:**
 
 1. **Has the violation already occurred?**
-   - Yes: Use procedural enclosure template
+   - Yes: Use notice of non-compliance template
    - No: Use motion or objection to preserve issue
 
 2. **Has the enclosure been ignored?**
@@ -54,11 +54,11 @@ No, but you should:
    - Yes (multiple times): Escalate to Article 78, appeal, or federal court
 
 3. **Who violated the procedure?**
-   - Judge: `enclosure_judge.md`
-   - Attorney for Child: `enclosure_afc.md`
-   - Assigned Counsel: `enclosure_assigned_counsel.md`
-   - Court Clerk: `enclosure_clerk.md`
-   - Opposing Counsel: `enclosure_opposing_counsel.md`
+   - Judge: `notice_judge.md`
+   - Attorney for Child: `notice_afc.md`
+   - Assigned Counsel: `notice_assigned_counsel.md`
+   - Court Clerk: `notice_clerk.md`
+   - Opposing Counsel: `notice_opposing_counsel.md`
 
 4. **What type of violation?**
    - Missing written order: CPLR §2219(a) enclosure
@@ -66,7 +66,7 @@ No, but you should:
    - Discovery non-compliance: Motion to compel (CPLR §3124)
    - Appealable final order: Notice of Appeal
 
-### What if the court ignores my procedural enclosure?
+### What if the court ignores my notice of non-compliance?
 
 **Escalation strategy:**
 
@@ -91,7 +91,7 @@ No, but you should:
 ### How long should I wait for a response?
 
 **Typical deadlines in enclosures:**
-- **10-14 business days:** Standard for procedural enclosures
+- **10-14 business days:** Standard for notice of non-compliances
 - **5 business days:** For urgent matters (but not true emergencies)
 - **Immediate/24 hours:** Only for genuine emergencies (use OSC, not enclosure)
 
@@ -113,9 +113,9 @@ No, but you should:
 - Still must serve parties who haven't appeared (use traditional service)
 - Print confirmation page as proof of service
 
-### What's the difference between a motion and a procedural enclosure?
+### What's the difference between a motion and a notice of non-compliance?
 
-| Feature | Motion | Procedural Enclosure |
+| Feature | Motion | Notice of Non-Compliance |
 |---------|--------|---------------------|
 | **Purpose** | Request court to grant relief | Demand compliance with existing duty |
 | **Court action required** | Yes (court must decide) | No (recipient should comply voluntarily) |
@@ -137,7 +137,7 @@ No, but you should:
 
 **Honest answer:** Possibly, but:
 
-**Why judges may not like procedural enclosures:**
+**Why judges may not like notice of non-compliances:**
 - Highlights their non-compliance with CPLR
 - Creates formal record of violations
 - May be seen as "aggressive" or "disrespectful"
@@ -178,7 +178,7 @@ No, but you should:
 - Don't combine with other aggressive tactics (excessive motions, personal attacks)
 - Focus on clear procedural violations, not trivial technicalities
 
-### Can I be sanctioned for filing procedural enclosures?
+### Can I be sanctioned for filing notice of non-compliances?
 
 **Unlikely,** if done properly. Sanctions (22 NYCRR §130-1.1) require:
 1. Frivolous conduct
@@ -345,7 +345,7 @@ No, but you should:
 
 ## Strategic Questions
 
-### Should I file procedural enclosures before or after other motions?
+### Should I file notice of non-compliances before or after other motions?
 
 **General rule:** Enclosures BEFORE aggressive motions.
 
@@ -374,7 +374,7 @@ No, but you should:
 - Equal protection violations
 
 **2. State remedies exhausted:**
-- Filed procedural enclosures (ignored)
+- Filed notice of non-compliances (ignored)
 - Filed motions (denied without hearing)
 - Filed Article 78 (denied or would be futile)
 - Appellate review unavailable or inadequate
@@ -421,7 +421,7 @@ No, but you should:
 - Objection not in record (oral objection not transcribed)
 - Waived by failure to raise in motion to reargue
 
-**How procedural enclosures preserve issues:**
+**How notice of non-compliances preserve issues:**
 - Create written record of objection
 - Identify specific rule violated
 - Request relief (compliance)

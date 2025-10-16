@@ -6,7 +6,7 @@
 
 ## Objective
 
-Generate a complete Article 78 petition (mandamus) to compel a judge, clerk, or government official to perform a mandatory duty under law, typically used when procedural enclosures have been ignored.
+Generate a complete Article 78 petition (mandamus) to compel a judge, clerk, or government official to perform a mandatory duty under law, typically used when notice of non-compliances have been ignored.
 
 ## Use Cases
 
@@ -264,7 +264,7 @@ OUTPUT: [Complete Article 78 petition as shown above, tailored to facts]
 
 ## Strategic Notes
 
-- File Article 78 only after procedural enclosures have been ignored
+- File Article 78 only after notice of non-compliances have been ignored
 - This is a "nuclear option" - use when cooperation has failed
 - Consider political/relational consequences
 - Article 78 creates formal legal record of non-compliance
@@ -272,6 +272,6 @@ OUTPUT: [Complete Article 78 petition as shown above, tailored to facts]
 
 ## Related Prompts
 
-- `/generators/enclosure-judge.md` - File before Article 78
+- `/generators/notice-judge.md` - File before Article 78
 - `/personas/litigation-strategist.md` - Strategic timing
 - `/validators/procedural-review.md` - Check before filing

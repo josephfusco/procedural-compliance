@@ -77,7 +77,7 @@ Petitioner {{Name}}, by {{pro se / counsel}}, respectfully alleges:
 
 **Demands for Compliance**
 
-15. On {{date}}, petitioner served respondent with procedural enclosure demanding compliance with {{statute}} (Exhibit A).
+15. On {{date}}, petitioner served respondent with notice of non-compliance demanding compliance with {{statute}} (Exhibit A).
 
 16. Respondent did not respond or comply within the {{X}} business days requested.
 
@@ -219,8 +219,8 @@ Notary Public
 
 ## EXHIBITS
 
-**Exhibit A:** Procedural Enclosure dated {{date}}
-**Exhibit B:** Second Procedural Enclosure dated {{date}}
+**Exhibit A:** Notice of Non-Compliance dated {{date}}
+**Exhibit B:** Second Notice of Non-Compliance dated {{date}}
 **Exhibit C:** {{Motion/Omnibus Notice/Other}} filed {{date}}
 **Exhibit D:** {{Court orders, docket sheets, correspondence, etc.}}
 

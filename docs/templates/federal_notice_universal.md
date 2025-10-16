@@ -1,5 +1,5 @@
 ---
-title: "Procedural Enclosure (Universal - Federal)"
+title: "Notice of Non-Compliance (Universal - Federal)"
 jurisdiction: "Federal"
 role: "universal"
 statutes: ["FRCP 52(a)", "FRCP 79", "FRCP 26", "28 U.S.C. §455"]
@@ -12,7 +12,7 @@ version: "1.0.0"
 This template applies to United States District Courts and Circuit Courts of Appeals governed by FRCP, FRAP, and Federal Rules of Evidence.
 ---
 
-# PROCEDURAL ENCLOSURE (Universal - Federal)
+# NOTICE OF NON-COMPLIANCE (Universal - Federal)
 
 **TO:** {{Name, Title}}
 **FROM:** {{Your Name}}
@@ -144,7 +144,7 @@ Use the appropriate module below based on the recipient's role.
 
 **Service Certification**
 
-I certify that this Procedural Enclosure was served upon {{Recipient Name}} via {{method - CM/ECF, certified mail, etc.}} on {{date}}.
+I certify that this Notice of Non-Compliance was served upon {{Recipient Name}} via {{method - CM/ECF, certified mail, etc.}} on {{date}}.
 
 {{Your Signature}}
 {{Your Name}}

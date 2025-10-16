@@ -1,10 +1,10 @@
-# Generator: Procedural Enclosure for Opposing Counsel
+# Generator: Notice of Non-Compliance for Opposing Counsel
 
 **Version:** 1.0
 **Document Type:** Discovery/procedural compliance demand
 
 ## Objective
-Generate procedural enclosure demanding compliance with discovery, disclosure, or procedural obligations from opposing counsel.
+Generate notice of non-compliance demanding compliance with discovery, disclosure, or procedural obligations from opposing counsel.
 
 ## Input Requirements
 - `{{your_name}}`, `{{opposing_counsel}}`, `{{case_info}}`
@@ -14,7 +14,7 @@ Generate procedural enclosure demanding compliance with discovery, disclosure, o
 
 ## Prompt
 ```
-Generate procedural enclosure to opposing counsel pursuant to:
+Generate notice of non-compliance to opposing counsel pursuant to:
 - CPLR Article 31 (discovery)
 - RPC 3.3, 3.4, 8.4 (professional conduct)
 - 22 NYCRR §130-1.1 (sanctions)
@@ -42,5 +42,5 @@ Tone: Professional but firm. This is pre-motion demand, not hostile attack.
 ```
 
 ## Related
-- `/templates/enclosure_opposing_counsel.md` - Static template
+- `/templates/notice_opposing_counsel.md` - Static template
 - `/research/remedy-recommender.md` - If enclosure ignored

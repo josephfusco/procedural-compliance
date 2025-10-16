@@ -294,7 +294,7 @@ Replace: [State intermediate appellate court]
 - **Federal:** Less emphasis on written orders (except bench trial findings)
 
 **Strategy by jurisdiction:**
-- **NY:** Use procedural enclosures aggressively
+- **NY:** Use notice of non-compliances aggressively
 - **CA:** Request statement of decision early
 - **TX:** Consider mandamus as primary remedy
 - **FL:** Follow federal model more closely

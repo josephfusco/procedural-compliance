@@ -38,5 +38,5 @@ Emphasize urgency, irreparable harm, inadequate remedy at law.
 ```
 
 ## Related
-- `/templates/enclosure_judge.md` - Non-emergency approach
+- `/templates/notice_judge.md` - Non-emergency approach
 - `/generators/article78-mandamus.md` - If OSC is denied

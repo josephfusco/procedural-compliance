@@ -138,7 +138,7 @@ UPL varies by state but generally includes:
 
 ---
 
-## IV. Ethical Use of Procedural Enclosures
+## IV. Ethical Use of Notice of Non-Compliances
 
 ### Proper Use
 
@@ -160,7 +160,7 @@ UPL varies by state but generally includes:
 
 ### Improper Use
 
-**Do NOT use procedural enclosures for:**
+**Do NOT use notice of non-compliances for:**
 - Harassment of judge/attorney
 - Delay tactics
 - Trivial technicalities

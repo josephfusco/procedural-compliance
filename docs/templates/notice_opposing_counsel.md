@@ -1,4 +1,18 @@
-# PROCEDURAL ENCLOSURE -- OPPOSING COUNSEL
+---
+title: "Notice of Non-Compliance - Opposing Counsel"
+jurisdiction: "NY"
+role: "counsel"
+statutes: ["RPC 3.3", "RPC 3.4", "RPC 8.4", "CPLR Article 31", "22 NYCRR §130-1.1"]
+version: "1.0.0"
+---
+
+---
+**JURISDICTION: NEW YORK**
+
+This template applies to New York State courts (Supreme, Family, Appellate Division) governed by CPLR, DRL, FCA, and 22 NYCRR.
+---
+
+# NOTICE OF NON-COMPLIANCE — OPPOSING COUNSEL
 
 **[NY] Demand for Good Faith Compliance with Discovery and Procedural Rules**
 
@@ -13,23 +27,19 @@
 
 ---
 
-**NOTE:** This notice assumes good faith and seeks cooperative compliance with procedural requirements. It is not an accusation of misconduct, but a formal request to ensure complete record and proper procedure.
-
----
-
 ## Legal Authority
 
 You are bound by:
 
-- **CPLR Article 31:** Disclosure (discovery) procedures and enforcement
-- **RPC 3.4:** Fairness to opposing party and counsel; no obstruction of access to evidence
 - **RPC 3.3:** Candor toward the tribunal; duty to disclose controlling adverse authority
-- **22 NYCRR Section 130-1.1:** Sanctions for frivolous conduct
+- **RPC 3.4:** Fairness to opposing party and counsel; no obstruction of access to evidence
 - **RPC 8.4:** Prohibition on conduct involving dishonesty, fraud, deceit, or misrepresentation
+- **CPLR Article 31:** Disclosure (discovery) procedures and enforcement
+- **22 NYCRR §130-1.1:** Sanctions for frivolous conduct
 
-## Procedural Status
+## Identified Deficiencies
 
-As of {{date}}, the record does not reflect:
+As of {{date}}, you have failed to:
 
 1. **Respond to discovery:** No response to {{document requests / interrogatories / notice for deposition}} served on {{date}}, now {{X}} days overdue.
 2. **Produce documents:** Failed to produce {{category of documents}} as ordered by the court on {{date}}.
@@ -46,19 +56,16 @@ You are demanded to:
 3. **Correct misrepresentations** by filing amended {{pleading/brief}} or written stipulation acknowledging error.
 4. **Confirm compliance** in writing to all parties and the court.
 
-## Cooperative Resolution
+## Preservation and Remedy
 
-If the requested actions are completed within {{X}} business days, no further action is necessary. This notice will serve only as record preservation for procedural compliance.
+This notice preserves the record for:
 
-## Preservation Notice
+- Motion to compel discovery (CPLR §3124, §3126)
+- Motion for sanctions under CPLR §3126, 22 NYCRR §130-1.1
+- Grievance complaint for violation of RPC 3.3, 3.4, 8.4 (22 NYCRR Part 1240)
+- Preclusion of evidence or issues due to discovery non-compliance
 
-This notice preserves the procedural record for:
-
-- Potential motion to compel if informal resolution fails (CPLR Section 3124)
-- Court's consideration of discovery compliance
-- Administrative record of good-faith compliance efforts
-
-If informal resolution is unsuccessful, you may need to file a motion to compel discovery under CPLR Article 31. The court has discretion to award costs and impose sanctions for discovery violations under CPLR Section 3126 and 22 NYCRR Section 130-1.1.
+Failure to comply may result in motion practice seeking adverse inference, preclusion, costs, and attorney disciplinary referral.
 
 ## Service
 
@@ -68,7 +75,7 @@ Served via {{NYSCEF / email / certified mail}} on {{date}}.
 
 **Certification of Service**
 
-I certify that this Procedural Enclosure was served upon {{Counsel Name}} via {{method}} on {{date}}.
+I certify that this Notice of Non-Compliance was served upon {{Counsel Name}} via {{method}} on {{date}}.
 
 {{Your Signature}}
 {{Your Name}}

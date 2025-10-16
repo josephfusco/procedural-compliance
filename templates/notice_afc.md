@@ -1,4 +1,4 @@
-# PROCEDURAL ENCLOSURE -- ATTORNEY FOR THE CHILD
+# NOTICE OF NON-COMPLIANCE -- ATTORNEY FOR THE CHILD
 
 **[NY][FCA] Demand for Zealous Representation and Communication**
 
@@ -66,7 +66,7 @@ Served via {{email / certified mail / NYSCEF}} on {{date}}.
 
 **Certification of Service**
 
-I certify that this Procedural Enclosure was served upon {{AFC Name}} via {{method}} on {{date}}.
+I certify that this Notice of Non-Compliance was served upon {{AFC Name}} via {{method}} on {{date}}.
 
 {{Your Signature}}
 {{Your Name}}

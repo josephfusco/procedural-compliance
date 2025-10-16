@@ -1,4 +1,4 @@
-# PROCEDURAL ENCLOSURE -- JUDGE
+# NOTICE OF NON-COMPLIANCE -- JUDGE
 
 **[NY][CPLR] Demand for Written Decision with Findings**
 
@@ -92,7 +92,7 @@ Served via {{NYSCEF upload / hand delivery / certified mail}} on {{date}}.
 
 **Certification of Service**
 
-I certify that this Procedural Enclosure was served upon Hon. {{Judge Name}} via {{method}} on {{date}}.
+I certify that this Notice of Non-Compliance was served upon Hon. {{Judge Name}} via {{method}} on {{date}}.
 
 {{Your Signature}}
 {{Your Name}}

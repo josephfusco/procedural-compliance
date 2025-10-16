@@ -1,5 +1,5 @@
 ---
-title: "Procedural Enclosure - Court Clerk"
+title: "Notice of Non-Compliance - Court Clerk"
 jurisdiction: "NY"
 role: "clerk"
 statutes: ["CPLR §5017(b)", "22 NYCRR §202.48", "Judiciary Law §255"]
@@ -12,7 +12,7 @@ version: "1.0.0"
 This template applies to New York State courts (Supreme, Family, Appellate Division) governed by CPLR, DRL, FCA, and 22 NYCRR.
 ---
 
-# PROCEDURAL ENCLOSURE — COURT CLERK
+# NOTICE OF NON-COMPLIANCE — COURT CLERK
 
 **[NY][CPLR] Demand for Proper Record Entry and Access**
 
@@ -78,7 +78,7 @@ Served via {{hand delivery / certified mail / email to clerk's office}} on {{dat
 
 **Certification of Service**
 
-I certify that this Procedural Enclosure was served upon {{Clerk Name / Office}} via {{method}} on {{date}}.
+I certify that this Notice of Non-Compliance was served upon {{Clerk Name / Office}} via {{method}} on {{date}}.
 
 {{Your Signature}}
 {{Your Name}}

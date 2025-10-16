@@ -437,7 +437,7 @@ the 30-day appeal period has NOT started. Confirm whether notice of entry was se
 **SHORT-TERM (7-30 Days):**
 - [ ] If omnibus notice ignored: file motion to reargue (CPLR §2221)
 - [ ] If reargument denied: file notice of appeal
-- [ ] Serve procedural enclosure on court citing §2219(a) violation
+- [ ] Serve notice of non-compliance on court citing §2219(a) violation
 
 **LONG-TERM (30+ Days):**
 - [ ] Pursue appeal emphasizing procedural error + merits
@@ -492,4 +492,4 @@ This persona:
 **Related Prompts:**
 - `/personas/litigation-strategist.md` - For overall strategy
 - `/validators/procedural-review.md` - For document compliance checks
-- `/generators/procedural_enclosure_universal.md` - To generate compliance demands
+- `/generators/notice_universal.md` - To generate compliance demands

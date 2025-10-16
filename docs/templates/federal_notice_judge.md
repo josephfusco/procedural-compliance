@@ -1,5 +1,5 @@
 ---
-title: "Procedural Enclosure - Federal Judge"
+title: "Notice of Non-Compliance - Federal Judge"
 jurisdiction: "Federal"
 role: "judge"
 statutes: ["FRCP 52(a)", "FRCP 79", "28 U.S.C. §455"]
@@ -12,7 +12,7 @@ version: "1.0.0"
 This template applies to United States District Courts and Circuit Courts of Appeals governed by FRCP, FRAP, and Federal Rules of Evidence.
 ---
 
-# PROCEDURAL ENCLOSURE - FEDERAL JUDGE
+# NOTICE OF NON-COMPLIANCE - FEDERAL JUDGE
 
 **TO:** The Honorable {{Judge Name}}
 {{Title - District Judge / Magistrate Judge}}
@@ -126,7 +126,7 @@ FRCP 52(a)(1) uses the mandatory word "**must**": the court **must** find facts 
 
 ## 5. Record Preservation and Further Relief
 
-This Procedural Enclosure serves as:
+This Notice of Non-Compliance serves as:
 
 - **Formal notice** of procedural non-compliance for appellate review
 - **Preservation** of objection to procedural defects pursuant to FRCP 46
@@ -148,7 +148,7 @@ This Procedural Enclosure serves as:
 
 ## 6. Preservation of Objections
 
-Pursuant to FRCP 46, a party may preserve a claim of error by informing the court of the action the party wishes the court to take. This Procedural Enclosure formally informs the Court of:
+Pursuant to FRCP 46, a party may preserve a claim of error by informing the court of the action the party wishes the court to take. This Notice of Non-Compliance formally informs the Court of:
 
 1. **Objection to lack of written findings and conclusions** required by FRCP 52(a).
 2. **Demand for compliance** within fourteen (14) business days.
@@ -158,7 +158,7 @@ Pursuant to FRCP 46, a party may preserve a claim of error by informing the cour
 
 ## 7. Service and Filing
 
-This Procedural Enclosure is:
+This Notice of Non-Compliance is:
 
 - **Filed** via CM/ECF on {{date}}
 - **Served** on all parties via CM/ECF
@@ -192,7 +192,7 @@ _________________________
 
 ## CERTIFICATE OF SERVICE
 
-I hereby certify that on {{date}}, a true and correct copy of this Procedural Enclosure was filed via CM/ECF and served on all parties and {{delivered to chambers via {{method}}}}.
+I hereby certify that on {{date}}, a true and correct copy of this Notice of Non-Compliance was filed via CM/ECF and served on all parties and {{delivered to chambers via {{method}}}}.
 
 _________________________
 {{Signature}}

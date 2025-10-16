@@ -24,7 +24,7 @@ prompts/
 
 ### Basic Usage
 
-1. **Choose a prompt** based on your need (e.g., `generators/enclosure-judge.md`)
+1. **Choose a prompt** based on your need (e.g., `generators/notice-judge.md`)
 2. **Fill in the variables** marked with `{{double braces}}`
 3. **Submit to your AI** (GPT-4, Claude, etc.)
 4. **Review and validate** using validation prompts
@@ -33,7 +33,7 @@ prompts/
 
 ```bash
 # 1. Generate document
-Use: prompts/generators/enclosure-judge.md
+Use: prompts/generators/notice-judge.md
 Input: Your case facts + jurisdiction
 
 # 2. Validate citations
@@ -123,9 +123,9 @@ AI role definitions for specialized legal tasks:
 
 ### Generators (`/generators`)
 Create complete legal documents:
-- `enclosure-judge.md` - Judge enclosures (CPLR §2219(a))
-- `enclosure-afc.md` - Attorney for Child enclosures
-- `enclosure-counsel.md` - Opposing counsel enclosures
+- `notice-judge.md` - Judge notices (CPLR §2219(a))
+- `notice-afc.md` - Attorney for Child notices
+- `notice-opposing-counsel.md` - Opposing counsel notices
 - `article78-mandamus.md` - CPLR Article 78 petitions
 - `notice-of-appeal.md` - Appellate notices
 - `osc-emergency.md` - Emergency orders to show cause
@@ -151,7 +151,7 @@ Legal analysis prompts:
 **Be Specific:**
 ```
 ❌ "Write a motion to the judge"
-✅ "Generate a procedural enclosure pursuant to CPLR §2219(a)
+✅ "Generate a notice of non-compliance pursuant to CPLR §2219(a)
    demanding written orders for Motion No. 5 decided orally on
    March 15, 2025 in Supreme Court, Erie County, Index No. 12345/2025"
 ```
