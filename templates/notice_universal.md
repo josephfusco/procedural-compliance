@@ -1,10 +1,10 @@
 # NOTICE OF NON-COMPLIANCE (Universal)
 
-**TO:** {{Name, Title}}
-**FROM:** {{Your Name}}
-**DATE:** {{Date}}
-**CASE:** {{Caption, Index Number}}
-**COURT:** {{Court Name and Location}}
+**TO:** {{Name, Title}}<br>
+**FROM:** {{Your Name}}<br>
+**DATE:** {{Date}}<br>
+**CASE:** {{Caption, Index Number}}<br>
+**COURT:** {{Court Name and Location}}<br>
 **SUBJECT:** Procedural Notice and Demand for Statutory Compliance
 
 ---

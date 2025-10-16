@@ -4,11 +4,11 @@
 
 ---
 
-**TO:** {{Clerk Name / Office Title}}, County Clerk / Court Clerk
-**FROM:** {{Your Name}}, {{Pro Se / Counsel for Party}}
-**DATE:** {{Date}}
-**CASE:** {{Caption}} | Index No. {{Number}}
-**COURT:** {{Court Name and County}}
+**TO:** {{Clerk Name / Office Title}}, County Clerk / Court Clerk<br>
+**FROM:** {{Your Name}}, {{Pro Se / Counsel for Party}}<br>
+**DATE:** {{Date}}<br>
+**CASE:** {{Caption}} | Index No. {{Number}}<br>
+**COURT:** {{Court Name and County}}<br>
 **SUBJECT:** Demand for Compliance with Record-Keeping and Filing Duties
 
 ---

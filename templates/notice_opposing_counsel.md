@@ -4,11 +4,11 @@
 
 ---
 
-**TO:** {{Counsel Name}}, Esq., Counsel for {{Opposing Party}}
-**FROM:** {{Your Name}}, {{Pro Se / Counsel for Party}}
-**DATE:** {{Date}}
-**CASE:** {{Caption}} | Index No. {{Number}}
-**COURT:** {{Court Name and County}}
+**TO:** {{Counsel Name}}, Esq., Counsel for {{Opposing Party}}<br>
+**FROM:** {{Your Name}}, {{Pro Se / Counsel for Party}}<br>
+**DATE:** {{Date}}<br>
+**CASE:** {{Caption}} | Index No. {{Number}}<br>
+**COURT:** {{Court Name and County}}<br>
 **SUBJECT:** Notice of Non-Compliance with Discovery, Disclosure, and Ethical Duties
 
 ---

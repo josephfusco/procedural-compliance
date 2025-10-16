@@ -4,11 +4,11 @@
 
 ---
 
-**TO:** {{Counsel Name}}, Esq., Assigned Counsel
-**FROM:** {{Your Name}}, Client
-**DATE:** {{Date}}
-**CASE:** {{Caption}} | {{Index / Docket Number}}
-**COURT:** {{Court Name and County}}
+**TO:** {{Counsel Name}}, Esq., Assigned Counsel<br>
+**FROM:** {{Your Name}}, Client<br>
+**DATE:** {{Date}}<br>
+**CASE:** {{Caption}} | {{Index / Docket Number}}<br>
+**COURT:** {{Court Name and County}}<br>
 **SUBJECT:** Notice of Non-Compliance with Duties Under Rules of Professional Conduct
 
 ---

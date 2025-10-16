@@ -4,11 +4,11 @@
 
 ---
 
-**TO:** {{AFC Name}}, Esq., Attorney for the Child
-**FROM:** {{Your Name}}, {{Party / Pro Se Litigant}}
-**DATE:** {{Date}}
-**CASE:** {{Caption}} | Docket No. {{Number}}
-**COURT:** {{Family Court, County}}
+**TO:** {{AFC Name}}, Esq., Attorney for the Child<br>
+**FROM:** {{Your Name}}, {{Party / Pro Se Litigant}}<br>
+**DATE:** {{Date}}<br>
+**CASE:** {{Caption}} | Docket No. {{Number}}<br>
+**COURT:** {{Family Court, County}}<br>
 **SUBJECT:** Notice of Non-Compliance with Duties Under FCA and NYCRR Part 7
 
 ---

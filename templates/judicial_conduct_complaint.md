@@ -69,17 +69,17 @@
 
 ---
 
-**TO:** New York State Commission on Judicial Conduct
-        Corning Tower, Suite 2301
-        Empire State Plaza
-        Albany, New York 12223
-        Phone: (518) 453-4600
-        Email: [Check current contact via nycourts.gov]
+**TO:** New York State Commission on Judicial Conduct<br>
+Corning Tower, Suite 2301<br>
+Empire State Plaza<br>
+Albany, New York 12223<br>
+Phone: (518) 453-4600<br>
+Email: [Check current contact via nycourts.gov]
 
-**FROM:** {{Your Name}}
-          {{Address}}
-          {{Email}}
-          {{Phone}}
+**FROM:** {{Your Name}}<br>
+{{Address}}<br>
+{{Email}}<br>
+{{Phone}}
 
 **DATE:** {{Date}}
 

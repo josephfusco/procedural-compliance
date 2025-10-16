@@ -4,11 +4,11 @@
 
 ---
 
-**TO:** Hon. {{Judge Name}}, {{Court Title}}
-**FROM:** {{Your Name}}, {{Pro Se / Counsel for Party}}
-**DATE:** {{Date}}
-**CASE:** {{Caption}} | Index No. {{Number}}
-**COURT:** {{Court Name and County}}
+**TO:** Hon. {{Judge Name}}, {{Court Title}}<br>
+**FROM:** {{Your Name}}, {{Pro Se / Counsel for Party}}<br>
+**DATE:** {{Date}}<br>
+**CASE:** {{Caption}} | Index No. {{Number}}<br>
+**COURT:** {{Court Name and County}}<br>
 **SUBJECT:** Demand for Written Order Stating Grounds and Papers Considered
 
 ---

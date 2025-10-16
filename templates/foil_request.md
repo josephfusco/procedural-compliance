@@ -4,14 +4,14 @@
 
 ---
 
-**TO:** {{Records Access Officer / Agency Head}}
-        {{Agency/Court Name}}
-        {{Address}}
+**TO:** {{Records Access Officer / Agency Head}}<br>
+{{Agency/Court Name}}<br>
+{{Address}}
 
-**FROM:** {{Your Name}}
-          {{Your Address}}
-          {{Email}}
-          {{Phone}}
+**FROM:** {{Your Name}}<br>
+{{Your Address}}<br>
+{{Email}}<br>
+{{Phone}}
 
 **DATE:** {{Date}}
 

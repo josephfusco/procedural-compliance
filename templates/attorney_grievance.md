@@ -77,14 +77,14 @@
 
 ---
 
-**TO:** Attorney Grievance Committee
-        {{Department}} Department
-        {{Address - varies by department}}
+**TO:** Attorney Grievance Committee<br>
+{{Department}} Department<br>
+{{Address - varies by department}}
 
-**FROM:** {{Your Name}}
-          {{Address}}
-          {{Email}}
-          {{Phone}}
+**FROM:** {{Your Name}}<br>
+{{Address}}<br>
+{{Email}}<br>
+{{Phone}}
 
 **DATE:** {{Date}}
 
