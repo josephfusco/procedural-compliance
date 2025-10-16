@@ -1,3 +1,17 @@
+---
+title: "Procedural Enclosure - Opposing Counsel"
+jurisdiction: "NY"
+role: "counsel"
+statutes: ["RPC 3.3", "RPC 3.4", "RPC 8.4", "CPLR Article 31", "22 NYCRR §130-1.1"]
+version: "1.0.0"
+---
+
+---
+**JURISDICTION: NEW YORK**
+
+This template applies to New York State courts (Supreme, Family, Appellate Division) governed by CPLR, DRL, FCA, and 22 NYCRR.
+---
+
 # PROCEDURAL ENCLOSURE — OPPOSING COUNSEL
 
 **[NY] Demand for Good Faith Compliance with Discovery and Procedural Rules**

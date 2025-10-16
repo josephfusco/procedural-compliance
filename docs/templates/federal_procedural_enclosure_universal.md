@@ -1,3 +1,17 @@
+---
+title: "Procedural Enclosure (Universal - Federal)"
+jurisdiction: "Federal"
+role: "universal"
+statutes: ["FRCP 52(a)", "FRCP 79", "FRCP 26", "28 U.S.C. §455"]
+version: "1.0.0"
+---
+
+---
+**JURISDICTION: FEDERAL**
+
+This template applies to United States District Courts and Circuit Courts of Appeals governed by FRCP, FRAP, and Federal Rules of Evidence.
+---
+
 # PROCEDURAL ENCLOSURE (Universal - Federal)
 
 **TO:** {{Name, Title}}

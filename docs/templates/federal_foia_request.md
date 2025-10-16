@@ -1,3 +1,17 @@
+---
+title: "FOIA Request"
+jurisdiction: "Federal"
+role: "procedural"
+statutes: ["5 U.S.C. §552", "5 U.S.C. §552(a)(4)", "5 U.S.C. §552(a)(6)"]
+version: "1.0.0"
+---
+
+---
+**JURISDICTION: FEDERAL**
+
+This template applies to United States District Courts and Circuit Courts of Appeals governed by FRCP, FRAP, and Federal Rules of Evidence.
+---
+
 # FREEDOM OF INFORMATION ACT (FOIA) REQUEST
 
 **[Federal][5 U.S.C. §552] Request for Agency Records**

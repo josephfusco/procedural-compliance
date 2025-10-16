@@ -1,3 +1,17 @@
+---
+title: "Procedural Enclosure - Federal Opposing Counsel"
+jurisdiction: "Federal"
+role: "counsel"
+statutes: ["Model Rules 3.3", "Model Rules 3.4", "FRCP 11", "FRCP 26", "FRCP 37"]
+version: "1.0.0"
+---
+
+---
+**JURISDICTION: FEDERAL**
+
+This template applies to United States District Courts and Circuit Courts of Appeals governed by FRCP, FRAP, and Federal Rules of Evidence.
+---
+
 # PROCEDURAL ENCLOSURE - OPPOSING COUNSEL (Federal)
 
 **TO:** {{Attorney Name}}, Esq.

@@ -1,3 +1,17 @@
+---
+title: "Procedural Enclosure - Attorney for Child"
+jurisdiction: "NY"
+role: "afc"
+statutes: ["FCA §§241-249", "22 NYCRR §7.2(d)", "RPC 1.1", "RPC 1.3", "RPC 1.4"]
+version: "1.0.0"
+---
+
+---
+**JURISDICTION: NEW YORK**
+
+This template applies to New York State courts (Supreme, Family, Appellate Division) governed by CPLR, DRL, FCA, and 22 NYCRR.
+---
+
 # PROCEDURAL ENCLOSURE — ATTORNEY FOR THE CHILD
 
 **[NY][FCA] Demand for Zealous Representation and Communication**

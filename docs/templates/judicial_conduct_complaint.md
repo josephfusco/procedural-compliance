@@ -1,3 +1,17 @@
+---
+title: "Judicial Conduct Complaint"
+jurisdiction: "NY"
+role: "oversight"
+statutes: ["22 NYCRR Part 100", "Judiciary Law §44", "22 NYCRR Part 7000"]
+version: "1.0.0"
+---
+
+---
+**JURISDICTION: NEW YORK**
+
+This template applies to New York State courts (Supreme, Family, Appellate Division) governed by CPLR, DRL, FCA, and 22 NYCRR.
+---
+
 # COMPLAINT TO NY STATE COMMISSION ON JUDICIAL CONDUCT
 
 **[NY] Formal Complaint Pursuant to 22 NYCRR Part 100 (Code of Judicial Conduct)**

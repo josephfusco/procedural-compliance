@@ -1,3 +1,17 @@
+---
+title: "Procedural Enclosure - Federal Clerk"
+jurisdiction: "Federal"
+role: "clerk"
+statutes: ["FRCP 58", "FRCP 79", "28 U.S.C. §751"]
+version: "1.0.0"
+---
+
+---
+**JURISDICTION: FEDERAL**
+
+This template applies to United States District Courts and Circuit Courts of Appeals governed by FRCP, FRAP, and Federal Rules of Evidence.
+---
+
 # PROCEDURAL ENCLOSURE - FEDERAL COURT CLERK
 
 **TO:** {{Clerk Name}}, {{Title - Clerk of Court / Deputy Clerk}}

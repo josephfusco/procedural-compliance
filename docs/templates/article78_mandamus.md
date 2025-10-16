@@ -1,3 +1,17 @@
+---
+title: "Article 78 Mandamus"
+jurisdiction: "NY"
+role: "procedural"
+statutes: ["CPLR §7803(1)", "CPLR §7804(b)", "CPLR Article 78"]
+version: "1.0.0"
+---
+
+---
+**JURISDICTION: NEW YORK**
+
+This template applies to New York State courts (Supreme, Family, Appellate Division) governed by CPLR, DRL, FCA, and 22 NYCRR.
+---
+
 # VERIFIED PETITION FOR ARTICLE 78 MANDAMUS RELIEF
 
 **[NY][CPLR] Mandamus to Compel Performance of Ministerial Duty**

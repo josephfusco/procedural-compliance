@@ -1,3 +1,17 @@
+---
+title: "Federal Notice of Appeal"
+jurisdiction: "Federal"
+role: "procedural"
+statutes: ["FRAP Rule 3", "28 U.S.C. §1291", "FRAP Rule 4"]
+version: "1.0.0"
+---
+
+---
+**JURISDICTION: FEDERAL**
+
+This template applies to United States District Courts and Circuit Courts of Appeals governed by FRCP, FRAP, and Federal Rules of Evidence.
+---
+
 # NOTICE OF APPEAL
 
 **[Federal][FRAP Rule 3] Appeal to Circuit Court of Appeals**

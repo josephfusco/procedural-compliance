@@ -1,3 +1,17 @@
+---
+title: "Procedural Enclosure - Assigned Counsel"
+jurisdiction: "NY"
+role: "counsel"
+statutes: ["RPC 1.1", "RPC 1.2", "RPC 1.3", "RPC 1.4"]
+version: "1.0.0"
+---
+
+---
+**JURISDICTION: NEW YORK**
+
+This template applies to New York State courts (Supreme, Family, Appellate Division) governed by CPLR, DRL, FCA, and 22 NYCRR.
+---
+
 # PROCEDURAL ENCLOSURE — ASSIGNED COUNSEL
 
 **[NY] Demand for Competent Representation and Communication**

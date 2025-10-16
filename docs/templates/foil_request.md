@@ -1,3 +1,17 @@
+---
+title: "FOIL Request"
+jurisdiction: "NY"
+role: "procedural"
+statutes: ["Public Officers Law §87", "Public Officers Law §89", "21 NYCRR Part 1401"]
+version: "1.0.0"
+---
+
+---
+**JURISDICTION: NEW YORK**
+
+This template applies to New York State courts (Supreme, Family, Appellate Division) governed by CPLR, DRL, FCA, and 22 NYCRR.
+---
+
 # FREEDOM OF INFORMATION LAW REQUEST
 
 **[NY][FOIL] Request for Records Pursuant to Public Officers Law §87**

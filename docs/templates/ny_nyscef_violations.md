@@ -1,3 +1,17 @@
+---
+title: "NYSCEF E-Filing Violations"
+jurisdiction: "NY"
+role: "clerk"
+statutes: ["Uniform Rule 202.5-bb", "Uniform Rule 202.5-b", "Uniform Rule 202.5-d", "22 NYCRR Part 1245"]
+version: "1.0.0"
+---
+
+---
+**JURISDICTION: NEW YORK**
+
+This template applies to New York State courts (Supreme, Family, Appellate Division) governed by CPLR, DRL, FCA, and 22 NYCRR.
+---
+
 # PROCEDURAL ENCLOSURE - NYSCEF E-FILING VIOLATIONS
 
 **TO:** {{Recipient Name, Title}}

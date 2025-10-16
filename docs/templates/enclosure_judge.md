@@ -1,3 +1,17 @@
+---
+title: "Procedural Enclosure - Judge"
+jurisdiction: "NY"
+role: "judge"
+statutes: ["CPLR §2219(a)", "22 NYCRR §202.48(b)", "CPLR §5704(a)"]
+version: "1.0.0"
+---
+
+---
+**JURISDICTION: NEW YORK**
+
+This template applies to New York State courts (Supreme, Family, Appellate Division) governed by CPLR, DRL, FCA, and 22 NYCRR.
+---
+
 # PROCEDURAL ENCLOSURE — JUDGE
 
 **[NY][CPLR] Demand for Written Decision with Findings**

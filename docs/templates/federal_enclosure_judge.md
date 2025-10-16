@@ -1,3 +1,17 @@
+---
+title: "Procedural Enclosure - Federal Judge"
+jurisdiction: "Federal"
+role: "judge"
+statutes: ["FRCP 52(a)", "FRCP 79", "28 U.S.C. §455"]
+version: "1.0.0"
+---
+
+---
+**JURISDICTION: FEDERAL**
+
+This template applies to United States District Courts and Circuit Courts of Appeals governed by FRCP, FRAP, and Federal Rules of Evidence.
+---
+
 # PROCEDURAL ENCLOSURE - FEDERAL JUDGE
 
 **TO:** The Honorable {{Judge Name}}

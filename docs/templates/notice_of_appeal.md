@@ -1,3 +1,17 @@
+---
+title: "Notice of Appeal"
+jurisdiction: "NY"
+role: "procedural"
+statutes: ["CPLR §5515", "CPLR §5513", "CPLR Article 55"]
+version: "1.0.0"
+---
+
+---
+**JURISDICTION: NEW YORK**
+
+This template applies to New York State courts (Supreme, Family, Appellate Division) governed by CPLR, DRL, FCA, and 22 NYCRR.
+---
+
 # NOTICE OF APPEAL
 
 **[NY][CPLR] Appeal to Appellate Division Pursuant to CPLR Article 55**

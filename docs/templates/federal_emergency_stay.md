@@ -1,3 +1,17 @@
+---
+title: "Federal Emergency Stay"
+jurisdiction: "Federal"
+role: "procedural"
+statutes: ["FRAP Rule 8", "FRAP Rule 8(a)(1)", "28 U.S.C. §1292"]
+version: "1.0.0"
+---
+
+---
+**JURISDICTION: FEDERAL**
+
+This template applies to United States District Courts and Circuit Courts of Appeals governed by FRCP, FRAP, and Federal Rules of Evidence.
+---
+
 # EMERGENCY MOTION FOR STAY PENDING APPEAL
 
 **[Federal][FRAP Rule 8] Stay of Judgment or Order Pending Appeal**

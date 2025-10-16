@@ -1,3 +1,17 @@
+---
+title: "Federal Mandamus"
+jurisdiction: "Federal"
+role: "procedural"
+statutes: ["28 U.S.C. §1361", "28 U.S.C. §1391(e)", "28 U.S.C. §1651"]
+version: "1.0.0"
+---
+
+---
+**JURISDICTION: FEDERAL**
+
+This template applies to United States District Courts and Circuit Courts of Appeals governed by FRCP, FRAP, and Federal Rules of Evidence.
+---
+
 # VERIFIED PETITION FOR WRIT OF MANDAMUS
 
 **[Federal][28 U.S.C. §1361] Mandamus to Compel Federal Officer**

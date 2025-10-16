@@ -1,3 +1,17 @@
+---
+title: "Procedural Enclosure - Court Clerk"
+jurisdiction: "NY"
+role: "clerk"
+statutes: ["CPLR §5017(b)", "22 NYCRR §202.48", "Judiciary Law §255"]
+version: "1.0.0"
+---
+
+---
+**JURISDICTION: NEW YORK**
+
+This template applies to New York State courts (Supreme, Family, Appellate Division) governed by CPLR, DRL, FCA, and 22 NYCRR.
+---
+
 # PROCEDURAL ENCLOSURE — COURT CLERK
 
 **[NY][CPLR] Demand for Proper Record Entry and Access**

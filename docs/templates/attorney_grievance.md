@@ -1,3 +1,17 @@
+---
+title: "Attorney Grievance"
+jurisdiction: "NY"
+role: "oversight"
+statutes: ["22 NYCRR Part 1200", "22 NYCRR Part 1240", "Judiciary Law §90"]
+version: "1.0.0"
+---
+
+---
+**JURISDICTION: NEW YORK**
+
+This template applies to New York State courts (Supreme, Family, Appellate Division) governed by CPLR, DRL, FCA, and 22 NYCRR.
+---
+
 # ATTORNEY GRIEVANCE COMPLAINT
 
 **[NY] Complaint to Attorney Grievance Committee Pursuant to 22 NYCRR Part 1240**

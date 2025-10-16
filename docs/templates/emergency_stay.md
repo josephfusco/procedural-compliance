@@ -1,3 +1,17 @@
+---
+title: "Emergency Stay"
+jurisdiction: "NY"
+role: "procedural"
+statutes: ["CPLR §5519", "CPLR §5519(a)(1)", "CPLR Article 55"]
+version: "1.0.0"
+---
+
+---
+**JURISDICTION: NEW YORK**
+
+This template applies to New York State courts (Supreme, Family, Appellate Division) governed by CPLR, DRL, FCA, and 22 NYCRR.
+---
+
 # MOTION FOR STAY PENDING APPEAL
 
 **[NY][CPLR] Emergency Stay Pursuant to CPLR §5519**
