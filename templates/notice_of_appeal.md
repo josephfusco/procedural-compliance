@@ -2,12 +2,6 @@
 
 **[NY][CPLR] Appeal to Appellate Division Pursuant to CPLR Article 55**
 
-## WHAT IS THIS?
-
-This is the document you file to start an appeal. An appeal asks a higher court to review a lower court's decision. You typically have 30 days from when you received the order/judgment to file this.
-
-**(In simple terms:** When a judge makes a decision you think is wrong, this letter officially tells the court "I want a higher court to review this."**)**
-
 ---
 
 **{{TRIAL COURT NAME}}**

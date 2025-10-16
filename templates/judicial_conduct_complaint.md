@@ -2,14 +2,6 @@
 
 **[NY] Formal Complaint Pursuant to 22 NYCRR Part 100 (Code of Judicial Conduct)**
 
-## WHAT IS THIS?
-
-This is a formal complaint against a judge for misconduct. This is a serious step that should only be used when a judge has violated the rules of judicial conduct (not just made a decision you disagree with). The Commission on Judicial Conduct investigates complaints and can discipline judges.
-
-**(In simple terms:** When a judge breaks the rules of how judges are supposed to behave, this form lets you report them to the official watchdog agency.**)**
-
-**WARNING:** Filing this during an active case can affect how the judge treats you. Consider filing after your case is over, or consult a lawyer first.
-
 ---
 
 **TO:** New York State Commission on Judicial Conduct

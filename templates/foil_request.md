@@ -2,12 +2,6 @@
 
 **[NY][FOIL] Request for Records Pursuant to Public Officers Law Section 87**
 
-## WHAT IS THIS?
-
-This is a formal request to get copies of government records. In New York, most government records are public by law. This template helps you ask for records like court documents, emails, meeting minutes, or other official documents.
-
-**(In simple terms:** The government has to show you their records unless there's a specific legal reason they can't. This letter formally asks for those records.**)**
-
 ---
 
 **TO:** {{Records Access Officer / Agency Head}}
