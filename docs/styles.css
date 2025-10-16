@@ -25,30 +25,36 @@
     white-space: normal;
 }
 
-/* CSS Variables - USWDS-Inspired Design System */
+/* CSS Variables - USWDS Design System */
 :root {
-    /* Core colors */
-    --primary-color: #2c3e50;
-    --background: #ffffff;
-    --foreground: #1a1a1a;
-    --muted: #f9fafb;
-    --border: #e5e7eb;
+    /* USWDS Primary Colors */
+    --uswds-blue: #005EA2;           /* USWDS Primary Blue */
+    --uswds-blue-dark: #0050d8;      /* USWDS Blue Hover */
+    --uswds-blue-darker: #1a4480;    /* USWDS Dark Blue */
+    --uswds-blue-light: #73b3e7;     /* USWDS Light Blue */
 
-    /* USWDS Spacing Scale (units-1 through units-7) */
+    /* Core colors (USWDS-aligned) */
+    --primary-color: var(--uswds-blue);
+    --background: #ffffff;
+    --foreground: #1b1b1b;
+    --muted: #f0f0f0;
+    --border: #dfe1e2;
+
+    /* USWDS Spacing Scale (8px baseline grid) */
     --spacing-1: 0.25rem;   /* 4px */
     --spacing-2: 0.5rem;    /* 8px */
     --spacing-3: 0.75rem;   /* 12px */
     --spacing-4: 1rem;      /* 16px */
-    --spacing-5: 1.25rem;   /* 20px */
-    --spacing-6: 1.5rem;    /* 24px */
-    --spacing-7: 2rem;      /* 32px */
+    --spacing-5: 1.5rem;    /* 24px - increased from 20px */
+    --spacing-6: 2rem;      /* 32px - increased from 24px */
+    --spacing-7: 2.5rem;    /* 40px - increased from 32px */
 
-    /* USWDS Shadow System */
-    --shadow-1: 0 1px 4px 0 rgba(0, 0, 0, 0.1);
-    --shadow-2: 0 4px 8px 0 rgba(0, 0, 0, 0.1);
-    --shadow-3: 0 8px 16px 0 rgba(0, 0, 0, 0.1);
-    --shadow-4: 0 12px 24px 0 rgba(0, 0, 0, 0.1);
-    --shadow-5: 0 16px 32px 0 rgba(0, 0, 0, 0.12);
+    /* USWDS Shadow System (more pronounced) */
+    --shadow-1: 0 1px 4px 0 rgba(0, 0, 0, 0.12);
+    --shadow-2: 0 4px 8px 0 rgba(0, 0, 0, 0.14);
+    --shadow-3: 0 8px 16px 0 rgba(0, 0, 0, 0.16);
+    --shadow-4: 0 12px 24px 0 rgba(0, 0, 0, 0.18);
+    --shadow-5: 0 16px 40px 0 rgba(0, 0, 0, 0.2);
 
     /* Legacy shadow names (keep for compatibility) */
     --shadow-sm: var(--shadow-1);
@@ -57,7 +63,7 @@
     --shadow-lg: var(--shadow-3);
     --shadow-xl: var(--shadow-4);
 
-    /* USWDS Semantic Colors */
+    /* USWDS Base Colors */
     --color-base-darkest: #1b1b1b;
     --color-base-darker: #454545;
     --color-base-dark: #5b5b5b;
@@ -66,8 +72,12 @@
     --color-base-lighter: #dfe1e2;
     --color-base-lightest: #f0f0f0;
 
+    /* USWDS Focus Colors */
+    --uswds-focus-blue: #2491ff;
+    --uswds-focus-yellow: #ffbe2e;
+
     /* Federal design tokens */
-    --ring-color: rgba(44, 62, 80, 0.5);
+    --ring-color: rgba(0, 94, 162, 0.3);  /* USWDS blue with transparency */
 }
 
 /* US Government-style banner (open source project) */
@@ -152,11 +162,11 @@ section + section {
     box-shadow: inset 0 1px 0 0 rgba(0, 0, 0, 0.05);
 }
 
-/* Focus visible for accessibility */
+/* USWDS Focus Indicators - Thick 4px outlines for accessibility */
 *:focus-visible {
-    outline: 2px solid #2c3e50;
+    outline: 4px solid var(--uswds-focus-blue);
     outline-offset: 2px;
-    box-shadow: 0 0 0 4px var(--ring-color);
+    box-shadow: none;
 }
 
 /* Selection color */
@@ -185,6 +195,40 @@ button:active {
     box-shadow: var(--shadow-sm);
 }
 
+/* USWDS Button Styles - Government Design System */
+#template-download-btn,
+.uswds-button {
+    background-color: var(--uswds-blue) !important;
+    color: #ffffff !important;
+    font-family: 'Public Sans', -apple-system, sans-serif !important;
+    font-weight: 600 !important;
+    padding: 0.75rem 1.5rem !important;
+    border-radius: 0.25rem !important;
+    box-shadow: var(--shadow-2) !important;
+    border: none !important;
+    transition: all 150ms ease-in-out !important;
+}
+
+#template-download-btn:hover,
+.uswds-button:hover {
+    background-color: var(--uswds-blue-dark) !important;
+    box-shadow: var(--shadow-3) !important;
+    transform: translateY(-1px);
+}
+
+#template-download-btn:active,
+.uswds-button:active {
+    background-color: var(--uswds-blue-darker) !important;
+    box-shadow: var(--shadow-1) !important;
+    transform: translateY(0);
+}
+
+#template-download-btn:focus-visible,
+.uswds-button:focus-visible {
+    outline: 4px solid var(--uswds-focus-blue) !important;
+    outline-offset: 4px !important;
+}
+
 /* Custom select dropdown chevron - maintains native accessibility */
 select {
     appearance: none;
@@ -205,8 +249,8 @@ select:hover {
 }
 
 select:focus {
-    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12'%3E%3Cpath fill='%232c3e50' d='M6 9L1.5 4.5h9L6 9z'/%3E%3C/svg%3E");
-    border-color: #2c3e50;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12'%3E%3Cpath fill='%23005EA2' d='M6 9L1.5 4.5h9L6 9z'/%3E%3C/svg%3E");
+    border-color: var(--uswds-blue);
     box-shadow: 0 0 0 3px var(--ring-color);
 }
 
@@ -258,8 +302,8 @@ code {
 
 .table-dense tbody tr:hover {
     background-color: #f9fafb;
-    border-left-color: #2c3e50;
-    box-shadow: inset 3px 0 0 0 #2c3e50;
+    border-left-color: var(--uswds-blue);
+    box-shadow: inset 3px 0 0 0 var(--uswds-blue);
 }
 
 .table-dense tbody tr:last-child td {
@@ -357,7 +401,7 @@ code {
 
 .template-card:hover {
     background-color: #f9fafb;
-    border-color: #2c3e50;
+    border-color: var(--uswds-blue);
     box-shadow: var(--shadow-lg);
 }
 
@@ -397,14 +441,14 @@ code {
 
 .template-card-link {
     font-size: 0.875rem;
-    color: #2c3e50;
+    color: var(--uswds-blue);
     font-weight: 500;
     text-decoration: none;
     transition: color 150ms ease-in-out;
 }
 
 .template-card-link:hover {
-    color: #1a252f;
+    color: var(--uswds-blue-darker);
     text-decoration: underline;
 }
 
@@ -537,12 +581,12 @@ code {
 }
 
 #template-sheet .prose a {
-    color: #2c3e50;
+    color: var(--uswds-blue);
     text-decoration: underline;
 }
 
 #template-sheet .prose a:hover {
-    color: #1a252f;
+    color: var(--uswds-blue-darker);
 }
 
 /* Table styling for template content */
@@ -611,11 +655,26 @@ code {
     background: var(--color-base);
 }
 
-/* Sheet Header Improvements */
+/* USWDS Sheet Header */
 #template-sheet > div:first-child {
-    background: linear-gradient(180deg, #ffffff 0%, #fafbfc 100%);
-    border-bottom: 2px solid var(--border);
-    box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.05);
+    background: linear-gradient(180deg, #f0f0f0 0%, #ffffff 100%);
+    border-bottom: 3px solid var(--border);
+    box-shadow: var(--shadow-2);
+    padding: var(--spacing-5) var(--spacing-6) !important;
+}
+
+/* USWDS Sheet Footer - Increased Spacing */
+#template-sheet > div:last-child {
+    padding: var(--spacing-5) var(--spacing-6) !important;
+    border-top: 3px solid var(--border) !important;
+}
+
+/* Apply Public Sans to UI Elements */
+button,
+label,
+select,
+.gov-banner-text {
+    font-family: 'Public Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
 }
 
 /* Modal and Sheet animations */
@@ -688,16 +747,16 @@ footer {
 }
 
 .footer-link:focus {
-    outline: 2px solid #2c3e50;
+    outline: 4px solid var(--uswds-focus-blue);
     outline-offset: 4px;
-    box-shadow: 0 0 0 4px rgba(44, 62, 80, 0.15);
+    box-shadow: none;
     border-radius: 2px;
 }
 
 .footer-link:focus-visible {
-    outline: 2px solid #2c3e50;
+    outline: 4px solid var(--uswds-focus-blue);
     outline-offset: 4px;
-    box-shadow: 0 0 0 4px rgba(44, 62, 80, 0.15);
+    box-shadow: none;
     border-radius: 2px;
 }
 
