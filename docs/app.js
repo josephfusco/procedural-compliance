@@ -307,8 +307,13 @@ document.addEventListener('DOMContentLoaded', () => {
     let lastFocusedElement = null;
 
     // Highlight template placeholders - wrap {{...}} in styled spans
+    // Long placeholders (>50 chars) become numbered citations with footnotes at bottom
     function highlightTemplatePlaceholders(container) {
         if (!container) return;
+
+        const LONG_PLACEHOLDER_THRESHOLD = 50; // characters
+        const longPlaceholders = []; // Store long placeholders for footnotes
+        let footnoteCounter = 0;
 
         const walker = document.createTreeWalker(
             container,
@@ -329,10 +334,27 @@ document.addEventListener('DOMContentLoaded', () => {
             const fragment = document.createDocumentFragment();
             const tempDiv = document.createElement('div');
 
-            // Replace {{...}} with highlighted spans
+            // Replace {{...}} with either highlighted span or citation
             tempDiv.innerHTML = node.textContent.replace(
                 /\{\{([^}]+)\}\}/g,
-                '<span class="template-placeholder">{{$1}}</span>'
+                (match, content) => {
+                    const fullPlaceholder = match; // {{content}}
+                    const trimmedContent = content.trim();
+
+                    // Check if placeholder is too long
+                    if (trimmedContent.length > LONG_PLACEHOLDER_THRESHOLD) {
+                        footnoteCounter++;
+                        longPlaceholders.push({
+                            number: footnoteCounter,
+                            content: fullPlaceholder
+                        });
+                        // Return citation
+                        return `<span class="template-citation">[${footnoteCounter}]</span>`;
+                    } else {
+                        // Return normal highlighted placeholder
+                        return `<span class="template-placeholder">${fullPlaceholder}</span>`;
+                    }
+                }
             );
 
             // Move all child nodes to fragment
@@ -342,6 +364,40 @@ document.addEventListener('DOMContentLoaded', () => {
 
             node.parentNode.replaceChild(fragment, node);
         });
+
+        // If there are long placeholders, add footnotes section at bottom
+        if (longPlaceholders.length > 0) {
+            const footnotesSection = document.createElement('div');
+            footnotesSection.className = 'template-footnotes';
+
+            const footnotesTitle = document.createElement('div');
+            footnotesTitle.className = 'template-footnotes-title';
+            footnotesTitle.textContent = 'Template Field Reference';
+            footnotesSection.appendChild(footnotesTitle);
+
+            const footnotesList = document.createElement('div');
+            footnotesList.className = 'template-footnotes-list';
+
+            longPlaceholders.forEach(({ number, content }) => {
+                const footnoteItem = document.createElement('div');
+                footnoteItem.className = 'template-footnote-item';
+
+                const footnoteNumber = document.createElement('span');
+                footnoteNumber.className = 'template-footnote-number';
+                footnoteNumber.textContent = `[${number}]`;
+
+                const footnoteContent = document.createElement('span');
+                footnoteContent.className = 'template-footnote-content';
+                footnoteContent.textContent = content;
+
+                footnoteItem.appendChild(footnoteNumber);
+                footnoteItem.appendChild(footnoteContent);
+                footnotesList.appendChild(footnoteItem);
+            });
+
+            footnotesSection.appendChild(footnotesList);
+            container.appendChild(footnotesSection);
+        }
     }
 
     // Helper function: Convert template path to hash-friendly ID
