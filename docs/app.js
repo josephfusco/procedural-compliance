@@ -305,6 +305,42 @@ document.addEventListener('DOMContentLoaded', () => {
         return filename.replace('.md', '').replace(/_/g, '-'); // Remove .md and convert underscores to hyphens
     }
 
+    // Parse YAML frontmatter from markdown
+    function parseFrontmatter(markdown) {
+        const frontmatterRegex = /^---\s*\n([\s\S]*?)\n---\s*\n/;
+        const match = markdown.match(frontmatterRegex);
+
+        if (!match) {
+            return { frontmatter: {}, content: markdown };
+        }
+
+        // Extract frontmatter and content
+        const frontmatterText = match[1];
+        const content = markdown.slice(match[0].length);
+
+        // Simple YAML parser for our needs
+        const frontmatter = {};
+        const lines = frontmatterText.split('\n');
+
+        for (const line of lines) {
+            const colonIndex = line.indexOf(':');
+            if (colonIndex > -1) {
+                const key = line.substring(0, colonIndex).trim();
+                let value = line.substring(colonIndex + 1).trim();
+
+                // Remove quotes if present
+                if ((value.startsWith('"') && value.endsWith('"')) ||
+                    (value.startsWith("'") && value.endsWith("'"))) {
+                    value = value.slice(1, -1);
+                }
+
+                frontmatter[key] = value;
+            }
+        }
+
+        return { frontmatter, content };
+    }
+
     // Open template viewer
     async function openTemplateViewer(templatePath, templateTitle, githubUrl) {
         try {
@@ -336,19 +372,37 @@ document.addEventListener('DOMContentLoaded', () => {
             const response = await fetch(templatePath);
             if (!response.ok) throw new Error('Failed to load template');
 
-            currentMarkdownContent = await response.text();
+            const rawMarkdown = await response.text();
+            currentMarkdownContent = rawMarkdown;
             currentTemplatePath = templatePath;
 
-            // Render markdown
+            // Parse frontmatter
+            const { frontmatter, content } = parseFrontmatter(rawMarkdown);
+
+            // Add jurisdiction badge to title if available
+            if (frontmatter.jurisdiction && templateModalTitle) {
+                const jurisdiction = frontmatter.jurisdiction.toLowerCase();
+                let badgeHTML = '';
+
+                if (jurisdiction === 'ny') {
+                    badgeHTML = '<span class="badge badge-ny ml-2">NY</span>';
+                } else if (jurisdiction === 'federal') {
+                    badgeHTML = '<span class="badge badge-federal ml-2"><img src="us_flag_small.png" class="badge-flag-img" alt="U.S. flag" loading="lazy"><span>Federal</span></span>';
+                }
+
+                templateModalTitle.innerHTML = `${templateTitle}${badgeHTML}`;
+            }
+
+            // Render markdown (without frontmatter)
             if (typeof marked !== 'undefined') {
-                const html = marked.parse(currentMarkdownContent);
+                const html = marked.parse(content);
                 if (templateModalProse) {
                     templateModalProse.innerHTML = html;
                 }
             } else {
                 // Fallback if marked.js doesn't load
                 if (templateModalProse) {
-                    templateModalProse.innerHTML = `<pre>${currentMarkdownContent}</pre>`;
+                    templateModalProse.innerHTML = `<pre>${content}</pre>`;
                 }
             }
         } catch (error) {
