@@ -131,8 +131,9 @@ html {
 /* Container max-width for focused, information-dense layout */
 /* Configured via Tailwind config to force 1100px across all breakpoints */
 
-/* Typography enhancements */
+/* Typography enhancements - USWDS Public Sans for UI */
 h1, h2, h3, h4, h5, h6 {
+    font-family: 'Public Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
     font-weight: 600;
     letter-spacing: -0.01em;
     line-height: 1.3;
