@@ -68,12 +68,15 @@ document.addEventListener('DOMContentLoaded', () => {
                 urgencyBadge = '<span class="badge badge-urgent">URGENT</span>';
             }
 
-            // Create card element
-            const card = document.createElement('div');
-            card.className = 'template-card';
+            // Create card element as a link
+            const card = document.createElement('a');
+            card.href = link;
+            card.className = 'template-card template-link';
             card.dataset.jurisdiction = jurisdiction;
             card.dataset.category = category;
             card.dataset.urgency = urgency;
+            card.dataset.templateTitle = templateTitle;
+            card.dataset.githubUrl = githubUrl;
 
             card.innerHTML = `
                 <div class="template-card-header">
@@ -83,9 +86,6 @@ document.addEventListener('DOMContentLoaded', () => {
                 <div class="template-card-badges">
                     ${jurisdictionBadge}
                     ${urgencyBadge}
-                </div>
-                <div class="template-card-footer">
-                    <a href="${link}" class="template-link template-card-link" data-template-title="${templateTitle}" data-github-url="${githubUrl}">View Template →</a>
                 </div>
             `;
 
