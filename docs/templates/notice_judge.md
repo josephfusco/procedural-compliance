@@ -18,6 +18,61 @@ This template applies to New York State courts (Supreme, Family, Appellate Divis
 
 ---
 
+## ⚠️ BEFORE USING THIS TEMPLATE
+
+### When to Use Notice to Judge
+
+**USE this template when:**
+- Judge decided motions orally without written orders in NYSCEF/file
+- Decisions affect substantive rights or may be appealed
+- You've waited reasonable time (2-4 weeks) for written order
+- You need written findings for appellate record
+- Judge's ruling involves discretion that should be documented
+
+**DO NOT use this if:**
+- Oral ruling was made on the record (transcript exists)
+- This is routine procedural matter (scheduling, adjournments)
+- Written order already exists but you disagree with it (file appeal instead)
+- You're seeking to re-argue the merits (this won't change the decision)
+- No prejudice from lack of written order (harmless error)
+
+**Appropriate example:** Judge decided dispositive motion #5 orally 6 weeks ago; no written order in NYSCEF; you need it for appeal.
+
+**Inappropriate example:** Judge denied your motion last week and you want to argue about it (this isn't a motion for reconsideration).
+
+### Try These Steps First
+
+**Before sending this notice:**
+
+1. **Check NYSCEF/docket** to confirm no written order was entered
+2. **Wait 2-4 weeks** after oral ruling (courts have backlogs)
+3. **Email clerk** politely asking about status of written order
+4. **Court appearance:** Ask court attorney/clerk when order will be issued
+5. **Informal letter:** Send respectful letter to chambers requesting order
+
+**Document everything:** Save emails, docket screenshots, and correspondence.
+
+### Resource Requirements & Realistic Expectations
+
+⚠️ **Important Considerations:**
+
+- **Timeline:** May take additional 2-8 weeks for judge to issue order after this notice
+- **Success rate:** High if order truly missing; low if oral ruling was sufficient
+- **Legal nuance:** CPLR §2219(a) primarily applies to final/dispositive orders
+- **Harmless error:** Lack of written order may not be reversible error if no prejudice
+- **What this achieves:** Creates record; may prompt written order; preserves issue for appeal
+- **What this does NOT do:** Re-argue merits, guarantee reversal, or change judge's mind
+
+**Alternatives to consider:**
+- **Appeal without written order:** Appellate Division can review from transcript/record
+- **Motion to compel:** If judge repeatedly refuses to issue required orders
+- **Article 78:** If ministerial duty to enter order is clear and judge still refuses
+- **Consult attorney:** To evaluate if written order is truly necessary for your appeal
+
+**Best practice:** Use this after informal methods fail and written order is truly necessary (not just preferred).
+
+---
+
 **TO:** Hon. {{Judge Name}}, {{Court Title}}
 **FROM:** {{Your Name}}, {{Pro Se / Counsel for Party}}
 **DATE:** {{Date}}

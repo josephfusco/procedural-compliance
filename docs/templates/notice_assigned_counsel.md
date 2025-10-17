@@ -18,6 +18,61 @@ This template applies to New York State courts (Supreme, Family, Appellate Divis
 
 ---
 
+## ⚠️ BEFORE USING THIS TEMPLATE
+
+### When to Use Notice to Assigned Counsel
+
+**USE this template when:**
+- Assigned counsel hasn't contacted you in weeks/months despite your attempts
+- Counsel missed court dates or failed to file important motions
+- You disagree with counsel's strategy and they won't explain or discuss
+- Counsel won't return calls/emails about case status
+- You need to create record of communication failures before seeking new counsel
+
+**DO NOT use this if:**
+- You simply disagree with counsel's legal advice (that's not misconduct)
+- Counsel explained their strategy and you just don't like it
+- You want counsel to lie, file frivolous motions, or violate ethics
+- This is first communication problem (try calling/emailing first)
+- You're upset about losing (outcome ≠ incompetence)
+
+**Appropriate example:** Assigned counsel hasn't returned 10+ calls over 3 months; missed last court date; you don't know case status.
+
+**Inappropriate example:** Counsel advised plea deal you don't want (they're allowed to recommend strategy you disagree with).
+
+### Try These Steps First
+
+**Before sending this notice:**
+
+1. **Multiple contact attempts:** Call, email, show up to office (document each attempt)
+2. **Contact supervisor:** If public defender, contact their supervisor
+3. **Court appearance:** Ask judge at next appearance about getting counsel to respond
+4. **Write informal letter:** Send non-threatening letter asking for meeting
+5. **Understand their obligations:** Read RPC 1.1-1.4 to confirm actual violation
+
+**Document everything:** Save voicemails, emails, screenshots showing attempts to contact.
+
+### Resource Requirements & Consequences
+
+⚠️ **Important Considerations:**
+
+- **Timeline:** Counsel may respond within days; or you may need to seek substitution
+- **Relationship:** This will likely damage attorney-client relationship
+- **Motion to substitute:** You may need to file motion if counsel doesn't improve
+- **You're stuck with them until:** Court grants substitution (hard to get in criminal cases)
+- **What this achieves:** Creates record for ineffective assistance claim; may prompt compliance
+- **What this does NOT do:** Automatically get you new counsel or guarantee better representation
+
+**Alternatives to consider:**
+- **Supervisor complaint:** If public defender, complain to their office first
+- **Motion to relieve:** Ask court to appoint new counsel (need good cause)
+- **Grievance complaint:** For serious misconduct (abandonment, fraud, etc.) - use Attorney Grievance template
+- **Consult attorney:** If you can afford private counsel, that's fastest solution
+
+**Best practice:** Use this as last resort before seeking counsel substitution; it documents your attempts to work with assigned counsel.
+
+---
+
 **TO:** {{Counsel Name}}, Esq., Assigned Counsel
 **FROM:** {{Your Name}}, Client
 **DATE:** {{Date}}
