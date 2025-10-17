@@ -433,8 +433,8 @@ document.addEventListener('DOMContentLoaded', () => {
             popover.textContent = tooltipText;
             popover.setAttribute('role', 'tooltip');
 
-            // Insert popover after trigger
-            trigger.parentNode.insertBefore(popover, trigger.nextSibling);
+            // Append popover as child of trigger (trigger has position: relative)
+            trigger.appendChild(popover);
 
             // Show on hover (desktop)
             trigger.addEventListener('mouseenter', () => {
