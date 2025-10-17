@@ -18,6 +18,84 @@ This template applies to New York State courts (Supreme, Family, Appellate Divis
 
 ---
 
+## ⚠️ BEFORE USING THIS TEMPLATE
+
+### When to Use Notice of Appeal
+
+**USE this template when:**
+- Trial court issued order/judgment you believe is legally erroneous
+- Order is appealable as of right or by permission (check CPLR §5701)
+- You are within 30-day deadline from service of notice of entry
+- You have exhausted post-trial motions (if applicable)
+- Appellate review could result in reversal, modification, or remand
+
+**DO NOT use this if:**
+- Appeal deadline has passed (30 days from notice of entry, not from decision date)
+- Order is non-appealable interlocutory order (CPLR §5701(a))
+- You haven't received notice of entry yet (wait for it to start appeal clock)
+- You want to re-argue merits to trial court (file motion to reargue instead)
+- Issue wasn't preserved in trial court (need contemporaneous objection)
+
+**Appropriate example:** Trial court granted summary judgment dismissing your case; notice of entry served 15 days ago; you believe ruling was legal error.
+
+**Inappropriate example:** Judge made oral ruling 2 weeks ago but no written order entered yet (wait for written order and notice of entry).
+
+### Critical Timing and Prerequisites
+
+**STRICT DEADLINES - MISS THESE AND LOSE YOUR APPEAL:**
+
+1. **30-day deadline:** File notice of appeal within 30 days of service of notice of entry with written order (CPLR §5513(a))
+   - Clock starts from service of "Notice of Entry" - NOT from decision date
+   - If no notice of entry served, 5 years from entry of judgment
+   - Extensions rarely granted; deadline is jurisdictional
+
+2. **Preserve issues below:** Must have made contemporaneous objection/motion in trial court
+   - Can't raise new issues on appeal
+   - Exception: subject matter jurisdiction, questions of law from undisputed facts
+
+3. **File in correct court:**
+   - Supreme Court → Appellate Division for your department
+   - Family Court → Appellate Division (check FCA for which orders are appealable)
+   - Confirm which department has jurisdiction over your county
+
+4. **Serve all parties:** Notice of appeal must be served on all parties and filed with trial court clerk
+
+### Resource Requirements & Realistic Expectations
+
+⚠️ **Important Considerations:**
+
+- **Timeline:** 9-12 months for briefing, 6-12 months for decision after submission
+- **Cost:** Transcript costs ($3-5/page), printing costs, potential undertaking for stay
+- **Success rate:** ~20-30% reversal rate overall; higher if clear legal error
+- **Perfection requirements:** Must order transcripts, prepare record, file briefs within strict deadlines
+- **What this achieves:** Appellate review of legal errors; potential reversal, modification, or new trial
+- **What this does NOT do:** Allow you to present new evidence; retry facts; guarantee reversal
+
+**What happens after filing notice of appeal:**
+1. **Order transcripts** (within 10 days of notice of appeal - CPLR §5525)
+2. **Prepare record on appeal** (assemble all relevant papers from trial court)
+3. **File appellant's brief** (9 months after notice of appeal in most departments)
+4. **Respondent files brief** (typically 60 days after appellant's brief)
+5. **Appellant's reply brief** (optional, typically 30 days)
+6. **Oral argument** (if requested and granted)
+7. **Decision** (typically 6-12 months after full submission)
+
+**Costs to expect:**
+- **Transcripts:** $3-5 per page (typically $1,000-5,000+ for trial)
+- **Record on appeal:** Printing/assembly costs
+- **Poor person relief:** May waive costs if you qualify (CPLR §1101)
+- **Stay undertaking:** If seeking stay, may need to post bond (CPLR §5519)
+
+**Alternatives to consider:**
+- **Motion to reargue:** Ask trial court to reconsider (CPLR §2221) - 30 days from service with notice of entry
+- **Motion for renewal:** Based on new facts (CPLR §2221)
+- **Settle the judgment:** Negotiate resolution before appeal
+- **Consult appellate attorney:** Appeals are technical; mistakes can be fatal
+
+**Best practice:** File notice of appeal early (don't wait until day 30); consult experienced appellate counsel; understand this is just first step in lengthy process.
+
+---
+
 **{{TRIAL COURT NAME}}**
 **COUNTY OF {{COUNTY}}**
 

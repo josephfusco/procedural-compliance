@@ -18,6 +18,109 @@ This template applies to New York State courts (Supreme, Family, Appellate Divis
 
 ---
 
+## ⚠️ BEFORE USING THIS TEMPLATE
+
+### When to Use Motion for Stay Pending Appeal
+
+**USE this template when:**
+- You filed notice of appeal and need to stop enforcement of judgment/order
+- Enforcement would cause irreparable harm that can't be undone if you win appeal
+- You have likelihood of success on appeal (not frivolous)
+- Harm to you from enforcement exceeds harm to other party from delay
+- Judgment involves custody, property sale, or other irreversible action
+
+**DO NOT use this if:**
+- You haven't filed notice of appeal yet (file that first)
+- Appeal is frivolous or weak (courts won't stay for unlikely appeals)
+- Money damages alone are at stake (usually not irreparable)
+- You can't post required undertaking (if court requires one)
+- No immediate enforcement is threatened
+
+**Appropriate example:** Court ordered custody transfer to other parent; you filed appeal; transfer scheduled in 5 days; you need stay to prevent irreversible custody change pending appeal.
+
+**Inappropriate example:** Court awarded $10,000 money judgment; you filed appeal but opposing party hasn't tried to collect yet (no imminent irreparable harm).
+
+### Legal Standard - You Must Prove ALL Four Elements
+
+**To obtain stay, you MUST demonstrate:**
+
+1. **Likelihood of success on appeal**
+   - Not "guaranteed to win" but "substantial probability of reversal"
+   - Clear legal error by trial court
+   - Cite cases where similar errors were reversed
+
+2. **Irreparable injury without stay**
+   - Harm that can't be compensated by money
+   - Examples: loss of custody, forced sale of home, constitutional violation
+   - Must be imminent and concrete, not speculative
+
+3. **Balance of equities favors stay**
+   - Your harm from enforcement > their harm from delay
+   - Consider: can you post undertaking to protect their interests?
+
+4. **Public interest** (if applicable)
+   - Maintaining constitutional rights
+   - Child welfare (custody cases)
+   - Usually neutral factor
+
+**High bar to meet:** Courts disfavor staying judgments. You need strong showing on all elements.
+
+### Timing and Procedure
+
+**TIMING CRITICAL:**
+
+1. **File notice of appeal FIRST** (required before stay motion)
+2. **Move for stay immediately** (before enforcement occurs)
+3. **Automatic stay option** (CPLR §5519(a)(1)):
+   - If you serve notice of appeal within 30 days AND
+   - File undertaking (bond) in required amount
+   - Automatically stays money judgments (not custody, injunctions, etc.)
+
+**WHERE TO MOVE:**
+- **Trial court first** (CPLR §5519(a)(1)) - faster, same judge who decided case
+- **Appellate Division** (CPLR §5519(a)(2)) - if trial court denies or you skip trial court
+- **Both:** Can move in trial court first, then Appellate Division if denied
+
+**NOTICE REQUIREMENTS:**
+- Must give reasonable notice to all parties
+- Emergency/ex parte stays rarely granted without notice
+- Show good cause if seeking stay on shortened time
+
+### Resource Requirements & Undertaking
+
+⚠️ **Important Considerations:**
+
+- **Undertaking (bond):** Court may require you to post bond to protect other party
+  - Typically 110% of judgment amount for money judgments
+  - May be waived for non-money judgments or if you're poor person
+  - Must obtain from surety company (costs money)
+
+- **Timeline:**
+  - Emergency: Can get stay in days/weeks if truly urgent
+  - Standard: 2-4 weeks for decision
+  - If denied by trial court, move in Appellate Division immediately
+
+- **Success rate:** ~30-40% if you have strong irreparable harm + good appeal
+
+- **What this achieves:** Stops enforcement while appeal pending; preserves status quo
+
+- **What this does NOT do:** Guarantee success on appeal; make enforcement impossible forever (only delays)
+
+**Costs:**
+- Undertaking/bond premiums (typically 1-2% of bond amount per year)
+- Motion filing fees
+- Possible transcript costs if court needs record
+
+**Alternatives to consider:**
+- **Negotiate with other party:** Agree to voluntary stay pending appeal
+- **Partial enforcement:** Agree to some enforcement with protections
+- **Expedited appeal:** Request accelerated briefing schedule instead of stay
+- **Supersedeas bond:** Automatic stay for money judgments (CPLR §5519(a)(1))
+
+**Best practice:** File stay motion immediately after notice of appeal; demonstrate concrete imminent harm; offer reasonable undertaking; show strong likelihood of success on appeal.
+
+---
+
 **{{TRIAL COURT NAME}}**
 **COUNTY OF {{COUNTY}}**
 

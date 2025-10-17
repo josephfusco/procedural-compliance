@@ -14,6 +14,97 @@ This template applies to New York State courts (Supreme, Family, Appellate Divis
 
 # PROCEDURAL ENCLOSURE - NYSCEF E-FILING VIOLATIONS
 
+---
+
+## ⚠️ BEFORE USING THIS TEMPLATE
+
+### When to Use NYSCEF Violations Notice
+
+**USE this template when:**
+- Clerk improperly rejected your compliant e-filing
+- Clerk accepted paper filing in mandatory e-filing case
+- NYSCEF was down and clerk refused your timely paper filing
+- Opposing counsel refuses to accept NYSCEF service
+- E-filing violation caused you to miss deadline or prejudiced your case
+
+**DO NOT use this if:**
+- Your e-filing had actual technical defects (wrong format, missing signature, etc.)
+- Case is not subject to mandatory e-filing (check Administrative Orders)
+- You missed deadline for reasons unrelated to e-filing issues
+- Clerk has already corrected the error
+- You haven't tried informal resolution first (email/call to clerk)
+
+**Appropriate example:** You e-filed motion 2 hours before deadline; NYSCEF confirmation received; clerk improperly rejected it next day for "insufficient reason"; now past deadline.
+
+**Inappropriate example:** Your PDF was corrupted and clerk properly rejected it (that's valid technical defect under Uniform Rule 202.5-d).
+
+### Try These Steps First
+
+**Before sending this notice:**
+
+1. **Verify NYSCEF rules apply** to your case type and county
+   - Check Administrative Orders: https://www.nycourts.gov/efile/rules.shtml
+   - Confirm your case is in mandatory e-filing category
+
+2. **Save evidence:**
+   - NYSCEF confirmation email (proves timely filing)
+   - Rejection notice with stated reason
+   - Screenshots if NYSCEF was down
+   - Email chain with clerk if applicable
+
+3. **Contact NYSCEF Resource Center:**
+   - Email: nyscef@nycourts.gov
+   - Phone: (646) 386-3033
+   - Explain issue; ask for assistance
+
+4. **Email county clerk's office** requesting correction
+   - Be polite and professional
+   - Attach NYSCEF confirmation
+   - Request specific remedy (accept filing with original date)
+
+5. **Speak to supervisor** if clerk refuses to correct
+
+**Document everything:** Save all emails, confirmations, screenshots, and correspondence.
+
+### Resource Requirements & Remedies
+
+⚠️ **Important Considerations:**
+
+- **Timeline:** Clerk may correct immediately; or may require motion (2-4 weeks)
+- **Technical knowledge required:** Must understand NYSCEF rules and permissible rejection grounds
+- **Success rate:** High if rejection was truly improper and you have proof
+- **What this achieves:** Creates record; usually prompts correction; supports motion if clerk refuses
+- **What this does NOT do:** Automatically fix the problem; excuse filing if rejection was proper
+
+**Permissible grounds for rejection (Uniform Rule 202.5-d):**
+- **Technical defects:** Corrupted file, wrong format (not PDF/A), illegible
+- **Missing information:** No signature, incomplete caption, wrong party names
+- **Untimely filing:** Filed after deadline
+- **Incorrect fee:** Wrong amount or payment method
+
+**IMPROPER rejection reasons (clerk CANNOT reject for these):**
+- "Document is too long" (if within page limits)
+- "I don't like the formatting" (if meets technical requirements)
+- "You should have filed this differently" (substantive disagreement)
+- "You need to file in person" (when mandatory e-filing applies)
+
+**Available remedies:**
+1. **Informal correction:** Clerk accepts filing with nunc pro tunc date (most common if you're right)
+2. **Order to Show Cause:** Court orders clerk to accept filing with original date
+3. **Article 78 mandamus:** Compel clerk to perform ministerial duty
+4. **Complaint to NYSCEF Resource Center:** Administrative review
+5. **Include in appeal:** If improper rejection caused substantive harm
+
+**Alternatives to consider:**
+- **Motion for nunc pro tunc relief:** Ask court to deem filing timely despite rejection
+- **Excuse late filing:** If missed deadline due to NYSCEF issues beyond your control
+- **Stipulation with opposing party:** Agree to accept filing as timely
+- **Re-file immediately:** While also challenging improper rejection
+
+**Best practice:** Contact NYSCEF Resource Center first; save all evidence; this notice creates record before filing motion; most clerks will correct error once legal authority is shown.
+
+---
+
 **TO:** {{Recipient Name, Title}}
 {{Court/Law Firm Name}}
 **FROM:** {{Your Name}}
