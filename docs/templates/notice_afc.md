@@ -18,6 +18,62 @@ This template applies to New York State courts (Supreme, Family, Appellate Divis
 
 ---
 
+## ⚠️ BEFORE USING THIS TEMPLATE
+
+### When to Use Notice to Attorney for the Child
+
+**USE this template when:**
+- AFC has not met with the child they represent despite reasonable time passing
+- AFC has not filed position statements or communicated child's wishes to court
+- AFC missed court appearances or failed to participate in proceedings
+- AFC appears to be acting as law guardian (best interests) when appointed as AFC (expressed wishes)
+- You need to create record of AFC's failure to fulfill statutory duties
+
+**DO NOT use this if:**
+- AFC is fulfilling duties but you disagree with child's expressed position
+- AFC is properly advocating for child's best interests when role is law guardian
+- This is first instance of concern (try informal communication first)
+- Child is unable to express wishes and AFC appropriately switched to best interests standard
+- AFC's strategy differs from yours but is within professional judgment
+
+**Appropriate example:** AFC appointed 4 months ago; no documented meeting with child; no position statement filed; missed last two hearings.
+
+**Inappropriate example:** AFC is advocating for child's wish to stay with non-custodial parent and you disagree with that outcome.
+
+### Try These Steps First
+
+**Before sending this notice:**
+
+1. **Review appointment order** to confirm role (AFC vs. law guardian)
+2. **Contact AFC directly** via email/phone expressing concerns
+3. **Ask child** if AFC has met with them or explained role
+4. **Document failures** (missed appearances, lack of filings, no communication)
+5. **Raise issue in court** at next appearance before sending formal notice
+6. **Consult FCA §§241-249** to confirm actual violation of duties
+
+**Document everything:** Court dates, attempted contacts, child's statements about meetings.
+
+### Resource Requirements & Consequences
+
+⚠️ **Important Considerations:**
+
+- **Timeline:** AFC may respond within days; court may address at next appearance
+- **Child impact:** May affect child's case if AFC remains ineffective
+- **Relationship:** May damage cooperation between parties and AFC
+- **Court discretion:** Judge may or may not remove/replace AFC based on this notice
+- **What this achieves:** Creates record for appeal; may prompt AFC to fulfill duties; supports motion to replace
+- **What this does NOT do:** Automatically remove AFC; guarantee new counsel; change child's expressed wishes
+
+**Alternatives to consider:**
+- **Raise directly in court:** Ask judge to inquire about AFC's compliance at next appearance
+- **Motion to replace counsel:** If AFC abandonment is clear and ongoing
+- **Grievance complaint:** For serious misconduct (use Attorney Grievance template)
+- **Consult with your attorney:** If you're represented, have them address with court
+
+**Best practice:** Use this after informal attempts fail and AFC's non-compliance is documented and ongoing; preserves record for appeal and supports motion to replace if needed.
+
+---
+
 **TO:** {{AFC Name}}, Esq., Attorney for the Child
 **FROM:** {{Your Name}}, {{Party / Pro Se Litigant}}
 **DATE:** {{Date}}

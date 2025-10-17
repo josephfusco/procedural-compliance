@@ -18,6 +18,62 @@ This template applies to New York State courts (Supreme, Family, Appellate Divis
 
 ---
 
+## ⚠️ BEFORE USING THIS TEMPLATE
+
+### When to Use Notice to Court Clerk
+
+**USE this template when:**
+- Clerk failed to enter filed documents in docket or NYSCEF
+- Docket entries are incorrect (wrong dates, parties, document types)
+- Clerk denied access to public court records without legal basis
+- Orders were issued but not entered in the record
+- Clerk's errors may affect your case or appellate rights
+
+**DO NOT use this if:**
+- Error was just discovered and you haven't informally requested correction
+- Documents are sealed or legitimately exempt from public access
+- Clerk explained legal basis for denial and it's valid
+- This is about clerk's personality or customer service (not legal compliance)
+- Issue is with judge's decision (not clerk's ministerial duties)
+
+**Appropriate example:** Filed motion 3 weeks ago via NYSCEF; not entered in docket; clerk has not responded to 3 emails requesting correction.
+
+**Inappropriate example:** Clerk was rude when you called (that's not non-compliance with legal duties).
+
+### Try These Steps First
+
+**Before sending this notice:**
+
+1. **Check NYSCEF/docket** to confirm error exists
+2. **Email clerk's office** politely requesting correction with case details
+3. **Call clerk's office** if no email response within 5 business days
+4. **Visit courthouse** in person to request correction (if feasible)
+5. **Speak to supervising clerk** if line clerk doesn't respond
+6. **Document the issue** with screenshots, docket printouts, filing receipts
+
+**Document everything:** Save emails, note phone calls, keep filing confirmations.
+
+### Resource Requirements & Realistic Expectations
+
+⚠️ **Important Considerations:**
+
+- **Timeline:** Correction may take 1-2 weeks after notice; could be immediate
+- **Success rate:** High for clear ministerial errors; lower for access denials with legal basis
+- **Clerk authority:** Clerks have ministerial duties but judges control many record decisions
+- **What this achieves:** Creates record; usually prompts correction; supports Article 78 if ignored
+- **What this does NOT do:** Force clerk action immediately; override judicial seal orders
+
+**Alternatives to consider:**
+- **Informal requests first:** Usually fastest resolution (email/call/visit)
+- **Speak to court attorney:** For issues requiring judicial input
+- **Motion to court:** For substantive relief (e.g., motion to unseal records)
+- **Article 78 proceeding:** If clerk refuses ministerial duty with no legal basis
+- **Appellate counsel:** For advice on preserving record for appeal
+
+**Best practice:** Use this only after informal methods fail; clerk errors are usually inadvertent and quickly corrected with polite request.
+
+---
+
 **TO:** {{Clerk Name / Office Title}}, County Clerk / Court Clerk
 **FROM:** {{Your Name}}, {{Pro Se / Counsel for Party}}
 **DATE:** {{Date}}

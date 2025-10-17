@@ -14,6 +14,71 @@ This template applies to New York State courts (Supreme, Family, Appellate Divis
 
 # NOTICE OF NON-COMPLIANCE (Universal)
 
+---
+
+## ⚠️ BEFORE USING THIS TEMPLATE
+
+### When to Use Universal Notice of Non-Compliance
+
+**USE this template when:**
+- You need to address multiple roles or recipients with common procedural failures
+- Specific role template doesn't exist for your situation
+- Court actor violated clear statutory or rule-based duty
+- You need flexible template adaptable to various procedural deficiencies
+- Creating record for multiple related compliance issues
+
+**DO NOT use this if:**
+- More specific template exists (judge, AFC, clerk, counsel - use those instead)
+- Duty is unclear or disputed
+- You haven't tried informal resolution
+- Complaint is about case outcome rather than procedural compliance
+- Issue requires substantive motion rather than notice
+
+**Appropriate example:** Multiple court actors (clerk and court attorney) failed to enter orders and provide case file access; need single comprehensive notice.
+
+**Inappropriate example:** You lost your motion and want to complain generally about the process (use appeal or specific remedy instead).
+
+### Preparation Steps
+
+**Before sending this notice:**
+
+1. **Check if specific template exists** (judge, AFC, assigned counsel, clerk, opposing counsel)
+2. **Identify specific statute/rule violated** with citation
+3. **Document the failure** with dates, docket references, attempts to resolve
+4. **Attempt informal resolution** appropriate to recipient's role
+5. **Customize role module** from template to match your situation
+6. **Verify proper service method** for recipient
+
+**Document everything:** Statutory requirements, timeline of non-compliance, your attempts to resolve.
+
+### Resource Requirements & Customization
+
+⚠️ **Important Considerations:**
+
+- **Customization required:** This is framework template requiring significant adaptation
+- **Legal research needed:** Must identify specific duties and authorities
+- **Less established:** Specific templates (judge, counsel, etc.) have more case law support
+- **Flexibility vs. precision:** More adaptable but less tailored than role-specific templates
+- **What this achieves:** Creates record for various procedural failures; preserves appeal issues
+- **What this does NOT do:** Provide detailed role-specific guidance; guarantee success
+
+**When to use specific templates instead:**
+- **Judge:** Use notice_judge.md for written order demands
+- **AFC:** Use notice_afc.md for attorney for child issues
+- **Assigned Counsel:** Use notice_assigned_counsel.md for representation failures
+- **Clerk:** Use notice_clerk.md for record-keeping issues
+- **Opposing Counsel:** Use notice_opposing_counsel.md for discovery/ethics violations
+
+**Appropriate use cases for universal template:**
+- Court reporter failed to produce transcript
+- Court-appointed evaluator violated procedural rules
+- Multiple actors with related failures
+- Unique role not covered by specific templates
+
+**Best practice:** Prefer specific templates when available; use universal only when necessary; heavily customize role modules and authorities to your specific situation.
+
+---
+
 **TO:** {{Name, Title}}
 **FROM:** {{Your Name}}
 **DATE:** {{Date}}
