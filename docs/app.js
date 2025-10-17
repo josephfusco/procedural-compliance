@@ -306,62 +306,126 @@ document.addEventListener('DOMContentLoaded', () => {
     let currentTemplatePath = '';
     let lastFocusedElement = null;
 
-    // Separate template metadata from legal document and wrap appropriately
+    // Separate template into jurisdiction, guidance, and legal document sections
     function separateMetadataFromDocument(container) {
         if (!container) return;
 
-        // Patterns that indicate the start of the actual legal document
-        const documentStartPatterns = [
-            /SUPREME COURT OF THE STATE/i,
-            /UNITED STATES DISTRICT COURT/i,
-            /^COUNTY OF/i,
-            /IN THE MATTER OF/i,
-            /^TO:\s+\{\{/i,  // Headers like "TO: {{Name}}"
-            /^FROM:\s+\{\{/i,  // Headers like "FROM: {{Your Name}}"
-            /^\*\*TO:\*\*/i,  // Bold markdown headers
-            /^\*\*FROM:\*\*/i,
-            /^\*\*SUPREME COURT/i,  // Bold markdown court names
-            /^\*\*UNITED STATES/i
-        ];
-
-        // Find all direct children that are block elements
         const children = Array.from(container.children);
+        let jurisdictionEndIndex = -1;
+        let guidanceStartIndex = -1;
+        let guidanceEndIndex = -1;
         let documentStartIndex = -1;
 
-        // Find where the actual legal document starts
+        // Find section boundaries
         for (let i = 0; i < children.length; i++) {
-            const text = children[i].textContent;
-            const isDocumentStart = documentStartPatterns.some(pattern => pattern.test(text));
+            const element = children[i];
+            const text = element.textContent;
 
-            if (isDocumentStart) {
-                documentStartIndex = i;
-                break;
+            // Find end of jurisdiction section (first HR after "JURISDICTION:")
+            if (jurisdictionEndIndex === -1 && element.tagName === 'HR' && i > 0 &&
+                children[i-1]?.textContent.includes('This template applies to')) {
+                jurisdictionEndIndex = i;
+            }
+
+            // Find start of guidance section (h2 with warning emoji)
+            if (guidanceStartIndex === -1 && element.tagName === 'H2' &&
+                text.includes('⚠️') && text.includes('BEFORE USING THIS TEMPLATE')) {
+                guidanceStartIndex = i;
+            }
+
+            // Find end of guidance section (HR after guidance started)
+            if (guidanceStartIndex !== -1 && guidanceEndIndex === -1 &&
+                element.tagName === 'HR' && i > guidanceStartIndex) {
+                guidanceEndIndex = i;
+            }
+
+            // Find start of legal document
+            if (guidanceEndIndex !== -1 && documentStartIndex === -1) {
+                const documentPatterns = [
+                    /SUPREME COURT OF THE STATE/i,
+                    /UNITED STATES DISTRICT COURT/i,
+                    /^COUNTY OF/i,
+                    /IN THE MATTER OF/i,
+                    /^TO:\s+\{\{/i,
+                    /^FROM:\s+\{\{/i,
+                    /^\*\*TO:\*\*/i,
+                    /^\*\*FROM:\*\*/i,
+                    /^\*\*SUPREME COURT/i,
+                    /^\*\*UNITED STATES/i
+                ];
+
+                if (documentPatterns.some(pattern => pattern.test(text))) {
+                    documentStartIndex = i;
+                    break;
+                }
             }
         }
 
-        // If we found the document start, wrap metadata section
-        if (documentStartIndex > 0) {
-            const metadataWrapper = document.createElement('div');
-            metadataWrapper.className = 'template-metadata-section';
+        // Wrap jurisdiction section (simple, clean styling)
+        if (jurisdictionEndIndex > 0) {
+            const jurisdictionWrapper = document.createElement('div');
+            jurisdictionWrapper.className = 'template-jurisdiction-section';
 
-            // Move all elements before document start into metadata wrapper
-            for (let i = 0; i < documentStartIndex; i++) {
-                metadataWrapper.appendChild(children[0]); // Always take first child until we reach document start
+            for (let i = 0; i <= jurisdictionEndIndex; i++) {
+                jurisdictionWrapper.appendChild(children[0]);
             }
 
-            // Insert metadata wrapper at the beginning
-            container.insertBefore(metadataWrapper, container.firstChild);
+            container.insertBefore(jurisdictionWrapper, container.firstChild);
+        }
 
-            // Wrap remaining content (the actual legal document) in document section
+        // Wrap guidance section (USWDS alert warning)
+        if (guidanceStartIndex !== -1 && guidanceEndIndex !== -1) {
+            const guidanceWrapper = document.createElement('div');
+            guidanceWrapper.className = 'usa-alert usa-alert--warning template-guidance-section';
+            guidanceWrapper.setAttribute('role', 'region');
+            guidanceWrapper.setAttribute('aria-label', 'Template usage guidance');
+
+            const guidanceBody = document.createElement('div');
+            guidanceBody.className = 'usa-alert__body';
+
+            // Calculate how many elements to move (after jurisdiction wrapper)
+            const currentChildren = Array.from(container.children);
+            const startIdx = currentChildren.findIndex(el =>
+                el.tagName === 'H2' && el.textContent.includes('⚠️'));
+            const endIdx = currentChildren.findIndex((el, idx) =>
+                idx > startIdx && el.tagName === 'HR');
+
+            if (startIdx !== -1 && endIdx !== -1) {
+                // Move elements from start to end (inclusive of HR)
+                for (let i = startIdx; i <= endIdx; i++) {
+                    guidanceBody.appendChild(currentChildren[startIdx]);
+                }
+
+                guidanceWrapper.appendChild(guidanceBody);
+
+                // Insert after jurisdiction section
+                const jurisdictionSection = container.querySelector('.template-jurisdiction-section');
+                if (jurisdictionSection && jurisdictionSection.nextSibling) {
+                    container.insertBefore(guidanceWrapper, jurisdictionSection.nextSibling);
+                } else {
+                    container.insertBefore(guidanceWrapper, container.firstChild);
+                }
+            }
+        }
+
+        // Wrap legal document section
+        const finalChildren = Array.from(container.children);
+        const guidanceSection = container.querySelector('.template-guidance-section');
+        if (guidanceSection) {
             const documentWrapper = document.createElement('div');
             documentWrapper.className = 'template-document-section';
 
-            // Move all remaining children into document wrapper
-            while (metadataWrapper.nextSibling) {
-                documentWrapper.appendChild(metadataWrapper.nextSibling);
+            // Move all remaining children after guidance into document wrapper
+            let nextEl = guidanceSection.nextSibling;
+            while (nextEl) {
+                const currentEl = nextEl;
+                nextEl = nextEl.nextSibling;
+                documentWrapper.appendChild(currentEl);
             }
 
-            container.appendChild(documentWrapper);
+            if (documentWrapper.children.length > 0) {
+                container.appendChild(documentWrapper);
+            }
         }
     }
 
