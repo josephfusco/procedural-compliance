@@ -1027,13 +1027,53 @@ footer a:hover {
         color: var(--foreground);
     }
 
-    /* Global typography - ensure all headings are light */
+    /* Global typography - ensure all headings and text are light */
     h1, h2, h3, h4, h5, h6 {
-        color: #e5e5e5;
+        color: #e5e5e5 !important;
     }
 
     p {
-        color: #d4d4d4;
+        color: #d4d4d4 !important;
+    }
+
+    /* Override Tailwind utility classes for dark mode */
+    .text-foreground {
+        color: #e5e5e5 !important;
+    }
+
+    .text-muted-foreground {
+        color: #a3a3a3 !important;
+    }
+
+    .text-foreground\/80 {
+        color: rgba(229, 229, 229, 0.8) !important;
+    }
+
+    .text-foreground\/70 {
+        color: rgba(229, 229, 229, 0.7) !important;
+    }
+
+    .text-foreground\/60 {
+        color: rgba(229, 229, 229, 0.6) !important;
+    }
+
+    /* Labels */
+    label {
+        color: #a3a3a3 !important;
+    }
+
+    /* Link colors */
+    .text-primary {
+        color: var(--uswds-blue-light) !important;
+    }
+
+    a {
+        color: var(--uswds-blue-light);
+    }
+
+    /* Main content section */
+    #templates {
+        background-color: var(--background);
     }
 
     /* Government banner */
@@ -1052,13 +1092,25 @@ footer a:hover {
         border-bottom-color: var(--border);
     }
 
+    header h1 {
+        color: #e5e5e5 !important;
+    }
+
+    header a {
+        color: rgba(229, 229, 229, 0.8) !important;
+    }
+
+    header a:hover {
+        color: #e5e5e5 !important;
+    }
+
     /* Hero section */
     #hero {
         background-color: #0f0f0f;
     }
 
     #hero p {
-        color: #d4d4d4;
+        color: #d4d4d4 !important;
     }
 
     /* Helpful text in dark mode */
