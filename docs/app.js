@@ -312,121 +312,96 @@ document.addEventListener('DOMContentLoaded', () => {
 
         const children = Array.from(container.children);
         let jurisdictionEndIndex = -1;
+        let titleIndex = -1;
         let guidanceStartIndex = -1;
         let guidanceEndIndex = -1;
-        let documentStartIndex = -1;
 
         // Find section boundaries
         for (let i = 0; i < children.length; i++) {
             const element = children[i];
             const text = element.textContent;
 
-            // Find end of jurisdiction section (first HR after "JURISDICTION:")
+            // Find jurisdiction section end (first HR after "JURISDICTION:")
             if (jurisdictionEndIndex === -1 && element.tagName === 'HR' && i > 0 &&
                 children[i-1]?.textContent.includes('This template applies to')) {
                 jurisdictionEndIndex = i;
             }
 
-            // Find start of guidance section (h2 with warning emoji)
+            // Find template title (H1 after jurisdiction)
+            if (jurisdictionEndIndex !== -1 && titleIndex === -1 && element.tagName === 'H1') {
+                titleIndex = i;
+            }
+
+            // Find guidance section start (h2 with warning emoji)
             if (guidanceStartIndex === -1 && element.tagName === 'H2' &&
                 text.includes('⚠️') && text.includes('BEFORE USING THIS TEMPLATE')) {
                 guidanceStartIndex = i;
             }
 
-            // Find end of guidance section (HR after guidance started)
+            // Find guidance section end (HR after guidance started)
             if (guidanceStartIndex !== -1 && guidanceEndIndex === -1 &&
                 element.tagName === 'HR' && i > guidanceStartIndex) {
                 guidanceEndIndex = i;
+                break;
             }
+        }
 
-            // Find start of legal document
-            if (guidanceEndIndex !== -1 && documentStartIndex === -1) {
-                const documentPatterns = [
-                    /SUPREME COURT OF THE STATE/i,
-                    /UNITED STATES DISTRICT COURT/i,
-                    /^COUNTY OF/i,
-                    /IN THE MATTER OF/i,
-                    /^TO:\s+\{\{/i,
-                    /^FROM:\s+\{\{/i,
-                    /^\*\*TO:\*\*/i,
-                    /^\*\*FROM:\*\*/i,
-                    /^\*\*SUPREME COURT/i,
-                    /^\*\*UNITED STATES/i
-                ];
+        // Build the clean structure from scratch
+        const jurisdictionWrapper = document.createElement('div');
+        jurisdictionWrapper.className = 'template-jurisdiction-section';
 
-                if (documentPatterns.some(pattern => pattern.test(text))) {
-                    documentStartIndex = i;
-                    break;
+        const titleWrapper = document.createElement('div');
+        titleWrapper.className = 'template-title-section';
+
+        const guidanceWrapper = document.createElement('details');
+        guidanceWrapper.className = 'template-guidance-section';
+        guidanceWrapper.setAttribute('open', '');
+
+        const guidanceSummary = document.createElement('summary');
+        guidanceSummary.className = 'template-guidance-summary';
+        guidanceSummary.innerHTML = '<span class="warning-icon">⚠️</span> <strong>Before Using This Template</strong>';
+
+        const guidanceContent = document.createElement('div');
+        guidanceContent.className = 'template-guidance-content';
+
+        const documentWrapper = document.createElement('div');
+        documentWrapper.className = 'template-document-section';
+
+        // Move elements into appropriate sections
+        const allChildren = Array.from(container.children);
+
+        for (let i = 0; i < allChildren.length; i++) {
+            const element = allChildren[i];
+
+            if (i <= jurisdictionEndIndex) {
+                // Jurisdiction section (hide HRs)
+                if (element.tagName !== 'HR') {
+                    jurisdictionWrapper.appendChild(element.cloneNode(true));
                 }
-            }
-        }
-
-        // Wrap jurisdiction section (simple, clean styling)
-        if (jurisdictionEndIndex > 0) {
-            const jurisdictionWrapper = document.createElement('div');
-            jurisdictionWrapper.className = 'template-jurisdiction-section';
-
-            for (let i = 0; i <= jurisdictionEndIndex; i++) {
-                jurisdictionWrapper.appendChild(children[0]);
-            }
-
-            container.insertBefore(jurisdictionWrapper, container.firstChild);
-        }
-
-        // Wrap guidance section (USWDS alert warning)
-        if (guidanceStartIndex !== -1 && guidanceEndIndex !== -1) {
-            const guidanceWrapper = document.createElement('div');
-            guidanceWrapper.className = 'usa-alert usa-alert--warning template-guidance-section';
-            guidanceWrapper.setAttribute('role', 'region');
-            guidanceWrapper.setAttribute('aria-label', 'Template usage guidance');
-
-            const guidanceBody = document.createElement('div');
-            guidanceBody.className = 'usa-alert__body';
-
-            // Calculate how many elements to move (after jurisdiction wrapper)
-            const currentChildren = Array.from(container.children);
-            const startIdx = currentChildren.findIndex(el =>
-                el.tagName === 'H2' && el.textContent.includes('⚠️'));
-            const endIdx = currentChildren.findIndex((el, idx) =>
-                idx > startIdx && el.tagName === 'HR');
-
-            if (startIdx !== -1 && endIdx !== -1) {
-                // Move elements from start to end (inclusive of HR)
-                for (let i = startIdx; i <= endIdx; i++) {
-                    guidanceBody.appendChild(currentChildren[startIdx]);
+            } else if (i === titleIndex) {
+                // Template title
+                titleWrapper.appendChild(element.cloneNode(true));
+            } else if (i > guidanceStartIndex && i < guidanceEndIndex) {
+                // Guidance content (skip the h2 heading)
+                if (element.tagName !== 'H2') {
+                    guidanceContent.appendChild(element.cloneNode(true));
                 }
-
-                guidanceWrapper.appendChild(guidanceBody);
-
-                // Insert after jurisdiction section
-                const jurisdictionSection = container.querySelector('.template-jurisdiction-section');
-                if (jurisdictionSection && jurisdictionSection.nextSibling) {
-                    container.insertBefore(guidanceWrapper, jurisdictionSection.nextSibling);
-                } else {
-                    container.insertBefore(guidanceWrapper, container.firstChild);
-                }
+            } else if (i > guidanceEndIndex) {
+                // Legal document content
+                documentWrapper.appendChild(element.cloneNode(true));
             }
         }
 
-        // Wrap legal document section
-        const finalChildren = Array.from(container.children);
-        const guidanceSection = container.querySelector('.template-guidance-section');
-        if (guidanceSection) {
-            const documentWrapper = document.createElement('div');
-            documentWrapper.className = 'template-document-section';
+        // Assemble the final structure
+        guidanceWrapper.appendChild(guidanceSummary);
+        guidanceWrapper.appendChild(guidanceContent);
 
-            // Move all remaining children after guidance into document wrapper
-            let nextEl = guidanceSection.nextSibling;
-            while (nextEl) {
-                const currentEl = nextEl;
-                nextEl = nextEl.nextSibling;
-                documentWrapper.appendChild(currentEl);
-            }
-
-            if (documentWrapper.children.length > 0) {
-                container.appendChild(documentWrapper);
-            }
-        }
+        // Clear container and rebuild
+        container.innerHTML = '';
+        container.appendChild(jurisdictionWrapper);
+        container.appendChild(titleWrapper);
+        container.appendChild(guidanceWrapper);
+        container.appendChild(documentWrapper);
     }
 
     // Highlight template placeholders with popovers for long ones

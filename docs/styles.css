@@ -623,74 +623,107 @@ code {
     font-style: normal;
 }
 
-/* Template Jurisdiction Section - Minimal, clean header */
+/* Template Jurisdiction Section - Minimal, subtle header */
 .template-jurisdiction-section {
-    padding: 0.8125rem 0; /* 13px - F₇ vertical padding */
-    margin-bottom: 1.3125rem; /* 21px - F₈ */
+    padding: 0.5rem 0;
+    margin-bottom: 0.8125rem; /* 13px - F₇ */
     border-bottom: 1px solid #e5e7eb;
 }
 
-.template-jurisdiction-section hr {
-    display: none; /* Hide horizontal rules within jurisdiction section */
+.template-jurisdiction-section p {
+    font-size: 0.8125rem !important; /* 13px - F₇ */
+    color: #6b7280 !important;
+    margin: 0.25rem 0 !important;
 }
 
 .template-jurisdiction-section strong {
     color: #374151;
     font-weight: 600;
-    font-size: 0.875rem;
-    letter-spacing: 0.025em;
+    font-size: 0.75rem;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
 }
 
-/* Template Guidance Section - USWDS Alert Warning */
+/* Template Title Section */
+.template-title-section {
+    margin-bottom: 1.3125rem; /* 21px - F₈ */
+}
+
+.template-title-section h1 {
+    margin-top: 1.3125rem !important; /* 21px - F₈ */
+}
+
+/* Template Guidance Section - Collapsible Details */
 .template-guidance-section {
-    margin-bottom: 3.4375rem; /* 55px - F₁₀ - Large section break */
-}
-
-/* USWDS Alert Component - Warning Variant */
-.usa-alert {
-    background-color: #fef3c7; /* Warning light background */
-    border-left: 4px solid #f59e0b; /* Warning border */
-    border-radius: 0.25rem;
+    border: 1px solid #fbbf24; /* Warm amber border */
+    border-left: 4px solid #f59e0b; /* Thicker left accent */
+    border-radius: 0.375rem;
+    background-color: #fffbeb; /* Very light amber */
+    margin-bottom: 2.125rem; /* 34px - F₉ */
     box-shadow: var(--shadow-sm);
 }
 
-.usa-alert--warning {
-    background-color: #fef3c7;
-    border-left-color: #f59e0b;
-}
-
-.usa-alert__body {
-    padding: 1.3125rem; /* 21px - F₈ */
-}
-
-.usa-alert__body h2 {
-    margin-top: 0 !important;
-    font-size: 1.125rem !important;
-    font-weight: 600;
-    color: #92400e; /* Warning dark text */
+.template-guidance-summary {
+    padding: 0.8125rem 1rem; /* 13px × 16px - F₇ */
+    cursor: pointer;
+    user-select: none;
     display: flex;
     align-items: center;
     gap: 0.5rem;
-}
-
-.usa-alert__body h3 {
-    font-size: 1rem !important;
+    font-size: 0.9375rem; /* Slightly smaller than body */
     font-weight: 600;
-    color: #78350f;
-    margin-top: 1.3125rem !important;
+    color: #92400e; /* Amber-800 */
+    transition: all 150ms ease-in-out;
+    list-style: none; /* Remove default arrow */
 }
 
-.usa-alert__body p,
-.usa-alert__body li {
-    color: #451a03; /* Warning darkest for body text */
+.template-guidance-summary::-webkit-details-marker {
+    display: none;
 }
 
-.usa-alert__body strong {
-    color: #78350f;
+.template-guidance-summary::before {
+    content: "▸";
+    font-size: 0.875rem;
+    transition: transform 150ms ease-in-out;
+    color: #f59e0b;
 }
 
-.usa-alert__body hr {
-    display: none; /* Hide trailing HR in guidance section */
+.template-guidance-section[open] .template-guidance-summary::before {
+    transform: rotate(90deg);
+}
+
+.template-guidance-summary:hover {
+    background-color: #fef3c7; /* Slightly darker amber on hover */
+}
+
+.warning-icon {
+    font-size: 1rem;
+    line-height: 1;
+}
+
+.template-guidance-content {
+    padding: 0 1rem 1rem 1rem;
+    border-top: 1px solid #fcd34d; /* Subtle divider */
+}
+
+.template-guidance-content h3 {
+    font-size: 0.9375rem !important;
+    font-weight: 600;
+    color: #92400e;
+    margin-top: 1rem !important;
+    margin-bottom: 0.5rem !important;
+}
+
+.template-guidance-content p,
+.template-guidance-content li {
+    font-size: 0.875rem !important; /* Slightly smaller text */
+    color: #451a03; /* Amber-900 for readability */
+    line-height: 1.5 !important;
+}
+
+.template-guidance-content strong {
+    color: #78350f; /* Amber-700 */
+    font-weight: 600;
 }
 
 /* Template Document Section - Clean white background */
@@ -1377,35 +1410,52 @@ html[data-theme="dark"] .template-jurisdiction-section {
     border-bottom-color: #2a2a2a;
 }
 
+html[data-theme="dark"] .template-jurisdiction-section p {
+    color: #a3a3a3 !important;
+}
+
 html[data-theme="dark"] .template-jurisdiction-section strong {
     color: #d4d4d4;
 }
 
-/* Template guidance section - USWDS Alert Warning dark mode */
-html[data-theme="dark"] .usa-alert {
-    background-color: #1f2937; /* Dark gray background */
+/* Template title section - dark mode */
+html[data-theme="dark"] .template-title-section h1 {
+    color: #e5e5e5 !important;
+}
+
+/* Template guidance section - dark mode */
+html[data-theme="dark"] .template-guidance-section {
+    background-color: #1a1410; /* Dark warm brown */
+    border-color: #d97706;
     border-left-color: #f59e0b;
 }
 
-html[data-theme="dark"] .usa-alert--warning {
-    background-color: #1f2937;
-    border-left-color: #f59e0b;
-}
-
-html[data-theme="dark"] .usa-alert__body h2 {
-    color: #fbbf24; /* Warning bright yellow for heading */
-}
-
-html[data-theme="dark"] .usa-alert__body h3 {
+html[data-theme="dark"] .template-guidance-summary {
     color: #fbbf24;
 }
 
-html[data-theme="dark"] .usa-alert__body p,
-html[data-theme="dark"] .usa-alert__body li {
-    color: #e5e5e5; /* Light text for readability */
+html[data-theme="dark"] .template-guidance-summary:hover {
+    background-color: #2a2420;
 }
 
-html[data-theme="dark"] .usa-alert__body strong {
+html[data-theme="dark"] .template-guidance-summary::before {
+    color: #fbbf24;
+}
+
+html[data-theme="dark"] .template-guidance-content {
+    border-top-color: #78350f;
+}
+
+html[data-theme="dark"] .template-guidance-content h3 {
+    color: #fbbf24 !important;
+}
+
+html[data-theme="dark"] .template-guidance-content p,
+html[data-theme="dark"] .template-guidance-content li {
+    color: #e5e5e5 !important;
+}
+
+html[data-theme="dark"] .template-guidance-content strong {
     color: #fcd34d;
 }
 
