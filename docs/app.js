@@ -314,8 +314,14 @@ document.addEventListener('DOMContentLoaded', () => {
         const documentStartPatterns = [
             /SUPREME COURT OF THE STATE/i,
             /UNITED STATES DISTRICT COURT/i,
-            /COUNTY OF/i,
-            /IN THE MATTER OF/i
+            /^COUNTY OF/i,
+            /IN THE MATTER OF/i,
+            /^TO:\s+\{\{/i,  // Headers like "TO: {{Name}}"
+            /^FROM:\s+\{\{/i,  // Headers like "FROM: {{Your Name}}"
+            /^\*\*TO:\*\*/i,  // Bold markdown headers
+            /^\*\*FROM:\*\*/i,
+            /^\*\*SUPREME COURT/i,  // Bold markdown court names
+            /^\*\*UNITED STATES/i
         ];
 
         // Find all direct children that are block elements

@@ -528,7 +528,9 @@ code {
     margin-top: 0;
     margin-bottom: 1.3125rem; /* 21px - F₈ */
     line-height: 1.272; /* √φ - tight, elegant heading rhythm */
-    color: #1a1a1a;
+    color: #374151; /* Subtle gray instead of pure black */
+    border-bottom: 2px dotted #d1d5db; /* Subtle dotted underline */
+    padding-bottom: 0.8125rem; /* 13px - F₇ */
 }
 
 /* H2 - Fibonacci 21px (F₈) */
