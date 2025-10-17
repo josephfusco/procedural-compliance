@@ -1003,7 +1003,7 @@ footer a:hover {
 
 /* Dark Mode - System Preference (when not overridden to light) */
 @media (prefers-color-scheme: dark) {
-    html:not([data-theme="light"]) :root {
+    html:not([data-theme="light"]):root {
         /* Dark theme core colors - WCAG AA compliant */
         --background: #0a0a0a;
         --foreground: #e5e5e5;
@@ -1468,11 +1468,13 @@ footer a:hover {
 
 /* Dark Mode - Manual Override (applies dark mode regardless of system preference) */
 html[data-theme="dark"] {
-    /* Import all dark mode styles by setting CSS variables */
+    /* Dark theme core colors - WCAG AA compliant */
     --background: #0a0a0a;
     --foreground: #e5e5e5;
     --muted: #0f0f0f;
     --border: #2a2a2a;
+
+    /* USWDS colors adjusted for dark mode */
     --uswds-blue-light: #60a5fa;
     --color-base-lightest: #0f0f0f;
     --color-base-lighter: #2a2a2a;
@@ -1481,4 +1483,452 @@ html[data-theme="dark"] {
     --color-base-dark: #d4d4d4;
     --color-base-darker: #e5e5e5;
     --color-base-darkest: #f5f5f5;
+}
+
+html[data-theme="dark"] body {
+    background-color: var(--background);
+    color: var(--foreground);
+}
+
+/* Global typography - ensure all headings and text are light */
+html[data-theme="dark"] h1,
+html[data-theme="dark"] h2,
+html[data-theme="dark"] h3,
+html[data-theme="dark"] h4,
+html[data-theme="dark"] h5,
+html[data-theme="dark"] h6 {
+    color: #e5e5e5 !important;
+}
+
+html[data-theme="dark"] p {
+    color: #d4d4d4 !important;
+}
+
+/* Override Tailwind utility classes for dark mode */
+html[data-theme="dark"] .text-foreground {
+    color: #e5e5e5 !important;
+}
+
+html[data-theme="dark"] .text-muted-foreground {
+    color: #a3a3a3 !important;
+}
+
+html[data-theme="dark"] .text-foreground\/80 {
+    color: rgba(229, 229, 229, 0.8) !important;
+}
+
+html[data-theme="dark"] .text-foreground\/70 {
+    color: rgba(229, 229, 229, 0.7) !important;
+}
+
+html[data-theme="dark"] .text-foreground\/60 {
+    color: rgba(229, 229, 229, 0.6) !important;
+}
+
+html[data-theme="dark"] .text-foreground\/50 {
+    color: rgba(229, 229, 229, 0.5) !important;
+}
+
+/* Labels */
+html[data-theme="dark"] label {
+    color: #a3a3a3 !important;
+}
+
+/* Additional text color utilities */
+html[data-theme="dark"] .text-sm {
+    color: inherit;
+}
+
+html[data-theme="dark"] .text-xs {
+    color: inherit;
+}
+
+/* Link colors */
+html[data-theme="dark"] .text-primary {
+    color: var(--uswds-blue-light) !important;
+}
+
+html[data-theme="dark"] a {
+    color: var(--uswds-blue-light);
+}
+
+/* Main content section */
+html[data-theme="dark"] #templates {
+    background-color: var(--background);
+}
+
+/* Government banner */
+html[data-theme="dark"] .gov-banner {
+    background-color: #0f0f0f;
+    border-bottom-color: #2a2a2a;
+}
+
+html[data-theme="dark"] .gov-banner-text {
+    color: #e5e5e5;
+}
+
+/* Header */
+html[data-theme="dark"] header {
+    background-color: var(--background);
+    border-bottom-color: var(--border);
+}
+
+html[data-theme="dark"] header h1 {
+    color: #e5e5e5 !important;
+}
+
+html[data-theme="dark"] header a {
+    color: rgba(229, 229, 229, 0.8) !important;
+}
+
+html[data-theme="dark"] header a:hover {
+    color: #e5e5e5 !important;
+}
+
+/* Hero section */
+html[data-theme="dark"] #hero {
+    background-color: #0f0f0f;
+}
+
+html[data-theme="dark"] #hero p {
+    color: #d4d4d4 !important;
+}
+
+/* Helpful text in dark mode */
+html[data-theme="dark"] .helpful-text {
+    color: #d4d4d4 !important;
+}
+
+/* Search trigger button */
+html[data-theme="dark"] #search-trigger {
+    background-color: var(--muted);
+    color: var(--foreground);
+    border-color: var(--border);
+}
+
+html[data-theme="dark"] #search-trigger:hover {
+    background-color: #2a2a2a;
+}
+
+html[data-theme="dark"] #search-trigger kbd {
+    background-color: var(--background);
+    border-color: var(--border);
+    color: #a3a3a3;
+}
+
+/* Tables */
+html[data-theme="dark"] .table-dense {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.4);
+}
+
+html[data-theme="dark"] .table-dense th {
+    background: linear-gradient(180deg, #0f0f0f 0%, #0a0a0a 100%);
+    border-bottom-color: #404040;
+    color: #e5e5e5;
+}
+
+html[data-theme="dark"] .table-dense td {
+    border-bottom-color: #2a2a2a;
+}
+
+html[data-theme="dark"] .table-dense tbody tr:hover {
+    background-color: #0f0f0f;
+}
+
+/* Template cards */
+html[data-theme="dark"] .template-card {
+    background-color: #0f0f0f;
+    border-color: #2a2a2a;
+}
+
+html[data-theme="dark"] .template-card:hover {
+    background-color: #2a2a2a;
+    border-color: var(--uswds-blue-light);
+}
+
+html[data-theme="dark"] .template-card-title {
+    color: #f5f5f5;
+}
+
+html[data-theme="dark"] .template-card-subtitle {
+    color: #a3a3a3;
+}
+
+html[data-theme="dark"] .template-card-footer {
+    border-top-color: #2a2a2a;
+}
+
+html[data-theme="dark"] .template-card-link {
+    color: var(--uswds-blue-light);
+}
+
+html[data-theme="dark"] .template-card-link:hover {
+    color: #93c5fd;
+}
+
+/* Selects and inputs */
+html[data-theme="dark"] select {
+    background-color: var(--muted);
+    color: var(--foreground);
+    border-color: var(--border);
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12'%3E%3Cpath fill='%23a3a3a3' d='M6 9L1.5 4.5h9L6 9z'/%3E%3C/svg%3E");
+}
+
+html[data-theme="dark"] select:hover {
+    border-color: #404040;
+}
+
+html[data-theme="dark"] select:focus {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12'%3E%3Cpath fill='%2360a5fa' d='M6 9L1.5 4.5h9L6 9z'/%3E%3C/svg%3E");
+    border-color: var(--uswds-blue-light);
+}
+
+/* Buttons */
+html[data-theme="dark"] button {
+    background-color: var(--muted);
+    color: var(--foreground);
+    border-color: var(--border);
+}
+
+html[data-theme="dark"] button:hover {
+    background-color: #2a2a2a;
+}
+
+/* Code blocks */
+html[data-theme="dark"] code {
+    background-color: #0f0f0f;
+    border-color: #2a2a2a;
+    color: #fbbf24;
+}
+
+/* Template viewer sheet */
+html[data-theme="dark"] #template-sheet {
+    background-color: var(--background);
+    border-left-color: var(--border);
+}
+
+html[data-theme="dark"] #template-sheet .prose {
+    color: #e5e5e5;
+}
+
+html[data-theme="dark"] #template-sheet .prose h1 {
+    color: #d4d4d4;
+    border-bottom-color: #404040;
+}
+
+html[data-theme="dark"] #template-sheet .prose h2,
+html[data-theme="dark"] #template-sheet .prose h3 {
+    color: #e5e5e5;
+}
+
+html[data-theme="dark"] #template-sheet .prose hr {
+    border-top-color: #2a2a2a;
+}
+
+html[data-theme="dark"] #template-sheet .prose strong {
+    color: #f5f5f5;
+}
+
+html[data-theme="dark"] #template-sheet .prose code {
+    background-color: #0f0f0f;
+    color: #fbbf24;
+}
+
+html[data-theme="dark"] #template-sheet .prose pre {
+    background-color: #0f0f0f;
+    border-color: #2a2a2a;
+}
+
+html[data-theme="dark"] #template-sheet .prose pre code {
+    color: #e5e5e5;
+}
+
+html[data-theme="dark"] #template-sheet .prose blockquote {
+    border-left-color: #b8860b;
+    color: #a3a3a3;
+}
+
+html[data-theme="dark"] #template-sheet .prose a {
+    color: var(--uswds-blue-light);
+}
+
+html[data-theme="dark"] #template-sheet .prose a:hover {
+    color: #93c5fd;
+}
+
+html[data-theme="dark"] #template-sheet .prose table th {
+    background-color: #0f0f0f;
+    border-color: #2a2a2a;
+}
+
+html[data-theme="dark"] #template-sheet .prose table td {
+    border-color: #2a2a2a;
+}
+
+/* Template placeholder */
+html[data-theme="dark"] .template-placeholder {
+    background-color: #0f0f0f;
+    color: #fbbf24;
+    border-bottom-color: #b8860b;
+}
+
+/* Template metadata section */
+html[data-theme="dark"] .template-metadata-section {
+    background-color: #1a1a1a;
+    border-left-color: #404040;
+}
+
+html[data-theme="dark"] .template-metadata-section::before {
+    color: #a3a3a3;
+}
+
+/* Template document section */
+html[data-theme="dark"] .template-document-section {
+    background-color: var(--background);
+}
+
+/* Placeholder with popover */
+html[data-theme="dark"] .template-placeholder-with-popover {
+    background-color: #0f0f0f;
+    color: #fbbf24;
+    border-bottom-color: #b8860b;
+}
+
+html[data-theme="dark"] .template-placeholder-with-popover:hover {
+    background-color: #2a2a2a;
+    border-bottom-color: #d97706;
+}
+
+html[data-theme="dark"] .info-icon {
+    color: var(--uswds-blue-light);
+}
+
+/* Popover tooltip */
+html[data-theme="dark"] .template-popover {
+    background-color: #1f2937;
+    color: #f5f5f5;
+    border-color: var(--uswds-blue-light);
+}
+
+/* Modal backdrop */
+html[data-theme="dark"] #search-modal,
+html[data-theme="dark"] #template-modal {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Search modal */
+html[data-theme="dark"] #search-modal > div {
+    background-color: var(--background);
+    border-color: var(--border);
+}
+
+html[data-theme="dark"] #search-input {
+    background-color: var(--background);
+    color: var(--foreground);
+}
+
+html[data-theme="dark"] #search-close {
+    color: #a3a3a3;
+}
+
+html[data-theme="dark"] #search-close:hover {
+    color: #e5e5e5;
+}
+
+/* Sheet header */
+html[data-theme="dark"] #template-sheet > div:first-child {
+    background-color: var(--background);
+    border-bottom-color: var(--border);
+}
+
+html[data-theme="dark"] #template-modal-close {
+    color: #a3a3a3;
+}
+
+html[data-theme="dark"] #template-modal-close:hover {
+    color: #e5e5e5;
+}
+
+/* Scrollbar */
+html[data-theme="dark"] #template-modal-content::-webkit-scrollbar-track {
+    background: var(--background);
+    border-left-color: var(--border);
+}
+
+html[data-theme="dark"] #template-modal-content::-webkit-scrollbar-thumb {
+    background: #404040;
+    border-color: var(--background);
+}
+
+html[data-theme="dark"] #template-modal-content::-webkit-scrollbar-thumb:hover {
+    background: #525252;
+}
+
+/* Footer */
+html[data-theme="dark"] footer {
+    background-color: #0f0f0f !important;
+    border-top-color: var(--border);
+}
+
+/* Override Tailwind bg-muted/30 opacity in dark mode */
+html[data-theme="dark"] footer.bg-muted\/30 {
+    background-color: #0f0f0f !important;
+}
+
+html[data-theme="dark"] footer h3 {
+    color: #f5f5f5 !important;
+}
+
+html[data-theme="dark"] footer p {
+    color: #d4d4d4 !important;
+}
+
+html[data-theme="dark"] footer a {
+    color: #d4d4d4 !important;
+}
+
+html[data-theme="dark"] footer a:hover {
+    color: #f5f5f5 !important;
+    text-decoration-color: #f5f5f5;
+}
+
+/* Ensure copyright text is visible */
+html[data-theme="dark"] footer .text-foreground\/70 {
+    color: #d4d4d4 !important;
+}
+
+html[data-theme="dark"] footer .text-foreground\/60 {
+    color: #a3a3a3 !important;
+}
+
+/* Resource cards */
+html[data-theme="dark"] section a[class*="block p-4"] {
+    background-color: #0f0f0f;
+    border-color: #2a2a2a;
+}
+
+html[data-theme="dark"] section a[class*="block p-4"]:hover {
+    background-color: #2a2a2a;
+    border-color: #404040;
+}
+
+/* Badge adjustments for dark mode - maintain contrast */
+html[data-theme="dark"] .badge-ny {
+    background: linear-gradient(135deg, #2563eb 0%, #3b82f6 100%);
+}
+
+html[data-theme="dark"] .badge-federal {
+    background: linear-gradient(135deg, #475569 0%, #64748b 100%);
+}
+
+html[data-theme="dark"] .badge-emergency {
+    background: linear-gradient(135deg, #dc2626 0%, #ef4444 100%);
+}
+
+html[data-theme="dark"] .badge-urgent {
+    background: linear-gradient(135deg, #ea580c 0%, #f97316 100%);
+}
+
+html[data-theme="dark"] .badge-standard {
+    background: linear-gradient(135deg, #6b7280 0%, #9ca3af 100%);
 }
