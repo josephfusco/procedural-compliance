@@ -276,7 +276,7 @@
 </head>
 <body class="bg-background text-foreground font-sans antialiased">
     <!-- Skip Navigation Link (Accessibility) -->
-    <a href="#main-content" class="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 focus:z-50 focus:px-4 focus:py-2 focus:bg-primary focus:text-primary-foreground focus:rounded focus:outline-none focus:ring-2 focus:ring-ring">
+    <a href="#main-content" class="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 focus:z-50 focus:px-4 focus:py-2 focus:bg-primary focus:text-primary-foreground focus:rounded focus:outline-none focus:ring-4 focus:ring-ring focus:ring-offset-2">
         Skip to main content
     </a>
 
@@ -308,11 +308,11 @@
                 </div>
                 <div class="flex items-center gap-2 w-full md:w-auto">
                     <!-- Theme Toggle Button - USWDS Style -->
-                    <button id="theme-toggle" class="flex items-center justify-center px-4 py-2 text-sm font-medium text-foreground bg-transparent rounded border-2 border-border hover:bg-muted transition-colors" aria-label="Light mode. Click to toggle" role="switch" aria-checked="false">
+                    <button id="theme-toggle" class="flex items-center justify-center px-4 py-2 text-sm font-medium text-foreground bg-transparent rounded border-2 border-border hover:bg-muted transition-colors focus:outline-none focus:ring-4 focus:ring-ring focus:ring-offset-2" aria-label="Light mode. Click to toggle" role="switch" aria-checked="false">
                         <span id="theme-label">Light</span>
                     </button>
 
-                    <button id="search-trigger" class="flex items-center justify-center md:justify-start space-x-2 px-4 py-2 text-sm font-medium text-foreground bg-transparent rounded border-2 border-border hover:bg-muted transition-colors flex-1 md:flex-initial" aria-label="Open search">
+                    <button id="search-trigger" class="flex items-center justify-center md:justify-start space-x-2 px-4 py-2 text-sm font-medium text-foreground bg-transparent rounded border-2 border-border hover:bg-muted transition-colors focus:outline-none focus:ring-4 focus:ring-ring focus:ring-offset-2 flex-1 md:flex-initial" aria-label="Open search">
                         <span>Search</span>
                         <kbd class="pointer-events-none inline-flex h-5 select-none items-center gap-1 rounded border border-border bg-background px-2 font-mono text-xs font-medium text-muted-foreground">
                             <span class="text-xs">/</span>
@@ -353,7 +353,7 @@
                 <div class="mb-6 flex flex-col sm:flex-row gap-3 items-start sm:items-end">
                     <div class="w-full sm:w-auto">
                         <label for="jurisdiction-filter" class="usa-label text-xs font-medium text-muted-foreground mb-2 block">Jurisdiction</label>
-                        <select id="jurisdiction-filter" class="usa-select w-full sm:w-40 h-9 px-3 py-2 text-sm border border-border rounded bg-background focus:outline-none focus:ring-2 focus:ring-ring">
+                        <select id="jurisdiction-filter" class="usa-select w-full sm:w-40 h-9 px-3 py-2 text-sm border border-border rounded bg-background focus:outline-none focus:ring-4 focus:ring-ring focus:ring-offset-2">
                             <option value="all">All</option>
                             <option value="ny">New York</option>
                             <option value="federal">Federal</option>
@@ -362,7 +362,7 @@
 
                     <div class="w-full sm:w-auto">
                         <label for="category-filter" class="usa-label text-xs font-medium text-muted-foreground mb-2 block">Category</label>
-                        <select id="category-filter" class="usa-select w-full sm:w-48 h-9 px-3 py-2 text-sm border border-border rounded bg-background focus:outline-none focus:ring-2 focus:ring-ring">
+                        <select id="category-filter" class="usa-select w-full sm:w-48 h-9 px-3 py-2 text-sm border border-border rounded bg-background focus:outline-none focus:ring-4 focus:ring-ring focus:ring-offset-2">
                             <option value="all">All Categories</option>
                             <option value="procedural-enforcement">Procedural Enforcement</option>
                             <option value="appeals">Appeals</option>
@@ -373,7 +373,7 @@
 
                     <div class="w-full sm:w-auto">
                         <label for="urgency-filter" class="usa-label text-xs font-medium text-muted-foreground mb-2 block">Urgency</label>
-                        <select id="urgency-filter" class="usa-select w-full sm:w-40 h-9 px-3 py-2 text-sm border border-border rounded bg-background focus:outline-none focus:ring-2 focus:ring-ring">
+                        <select id="urgency-filter" class="usa-select w-full sm:w-40 h-9 px-3 py-2 text-sm border border-border rounded bg-background focus:outline-none focus:ring-4 focus:ring-ring focus:ring-offset-2">
                             <option value="all">All Levels</option>
                             <option value="emergency">Emergency</option>
                             <option value="urgent">Urgent</option>
@@ -383,7 +383,7 @@
 
                     <div class="w-full sm:w-auto">
                         <label for="role-filter" class="usa-label text-xs font-medium text-muted-foreground mb-2 block">Role/Actor</label>
-                        <select id="role-filter" class="usa-select w-full sm:w-48 h-9 px-3 py-2 text-sm border border-border rounded bg-background focus:outline-none focus:ring-2 focus:ring-ring">
+                        <select id="role-filter" class="usa-select w-full sm:w-48 h-9 px-3 py-2 text-sm border border-border rounded bg-background focus:outline-none focus:ring-4 focus:ring-ring focus:ring-offset-2">
                             <option value="all">All Roles</option>
                             <option value="universal">Universal</option>
                             <option value="judge">Judge</option>
@@ -395,11 +395,11 @@
                         </select>
                     </div>
 
-                    <button id="reset-filters" class="h-9 px-4 py-2 text-sm font-medium text-foreground bg-transparent rounded border-2 border-border hover:bg-muted transition-colors whitespace-nowrap">
+                    <button id="reset-filters" class="h-9 px-4 py-2 text-sm font-medium text-foreground bg-transparent rounded border-2 border-border hover:bg-muted transition-colors focus:outline-none focus:ring-4 focus:ring-ring focus:ring-offset-2 whitespace-nowrap">
                         Reset
                     </button>
 
-                    <button id="view-toggle" class="ml-auto h-9 px-4 py-2 text-sm font-medium text-foreground bg-transparent rounded border-2 border-border hover:bg-muted transition-colors whitespace-nowrap">
+                    <button id="view-toggle" class="ml-auto h-9 px-4 py-2 text-sm font-medium text-foreground bg-transparent rounded border-2 border-border hover:bg-muted transition-colors focus:outline-none focus:ring-4 focus:ring-ring focus:ring-offset-2 whitespace-nowrap">
                         <span id="view-toggle-text">Card View</span>
                     </button>
                 </div>
@@ -782,7 +782,7 @@
                 <input
                     type="text"
                     id="search-input"
-                    class="flex-1 px-3 py-3 text-sm bg-transparent border-0 focus:outline-none"
+                    class="flex-1 px-3 py-3 text-sm bg-transparent border-0 focus:outline-none focus:ring-4 focus:ring-ring focus:ring-offset-2"
                     placeholder="Search templates..."
                     autocomplete="off"
                     aria-label="Search templates"
