@@ -614,70 +614,101 @@ code {
     font-style: normal;
 }
 
-/* Citation numbers for long placeholders - Fibonacci small size */
-.template-citation {
-    display: inline;
-    color: var(--uswds-blue);
-    font-weight: 600;
-    font-family: Georgia, Cambria, 'Times New Roman', serif;
-    font-size: 0.8125rem; /* 13px - F₇ */
-    text-decoration: none;
-    vertical-align: super;
-    line-height: 0;
-    position: relative;
-    top: -0.25em;
-}
-
-/* Footnotes section - Fibonacci spacing and sizing */
-.template-footnotes {
-    margin-top: 3.4375rem; /* 55px - F₁₀ */
+/* Template Metadata Section - USWDS Info styling */
+.template-metadata-section {
+    background-color: #e7f6f8; /* USWDS info-lighter */
+    border-left: 4px solid #00bde3; /* USWDS info */
     padding: 1.3125rem; /* 21px - F₈ */
-    background-color: #f9fafb;
-    border-top: 2px solid #e5e7eb;
+    margin-bottom: 3.4375rem; /* 55px - F₁₀ - Large section break */
     border-radius: 0.25rem;
 }
 
-.template-footnotes-title {
+.template-metadata-section::before {
+    content: "Template Guidance";
+    display: block;
     font-family: 'Public Sans', -apple-system, sans-serif;
     font-size: 0.8125rem; /* 13px - F₇ */
     font-weight: 600;
-    color: #374151;
-    margin-bottom: 1.3125rem; /* 21px - F₈ */
+    color: #00bde3; /* USWDS info */
     text-transform: uppercase;
     letter-spacing: 0.05em;
-    padding-bottom: 0.8125rem; /* 13px - F₇ */
-    border-bottom: 1px solid #e5e7eb;
+    margin-bottom: 1.3125rem; /* 21px - F₈ */
 }
 
-.template-footnotes-list {
-    display: flex;
-    flex-direction: column;
-    gap: 1.3125rem; /* 21px - F₈ */
+/* Template Document Section - Clean white background */
+.template-document-section {
+    background-color: #ffffff;
+    /* No additional styling - pure document */
 }
 
-.template-footnote-item {
+/* Placeholder with popover trigger - interactive info icon */
+.template-placeholder-with-popover {
+    position: relative;
+    display: inline;
+    background-color: #fffbeb;
+    color: #92400e;
+    padding: 0.0625rem 0.25rem;
+    border-radius: 0.1875rem;
+    font-weight: 500;
+    border-bottom: 1.5px solid #fbbf24;
+    font-family: Monaco, 'Courier New', monospace;
+    font-size: 0.875em;
+    cursor: pointer;
+    transition: all 150ms ease-in-out;
+}
+
+.template-placeholder-with-popover:hover {
+    background-color: #fef3c7;
+    border-bottom-color: #f59e0b;
+}
+
+.template-placeholder-with-popover:focus {
+    outline: 2px solid var(--uswds-focus-blue);
+    outline-offset: 2px;
+}
+
+/* Info icon for popover trigger */
+.info-icon {
+    display: inline-block;
+    color: var(--uswds-blue);
+    font-weight: 600;
+    font-size: 0.875em;
+    margin-left: 0.125rem;
+}
+
+/* Popover tooltip - USWDS design */
+.template-popover {
+    position: absolute;
+    z-index: 1000;
+    max-width: 300px;
+    padding: 0.8125rem; /* 13px - F₇ */
+    background-color: #1f2937; /* Dark background */
+    color: #ffffff;
+    border: 1px solid var(--uswds-blue);
+    border-radius: 0.25rem;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    font-family: Monaco, 'Courier New', monospace;
     font-size: 0.8125rem; /* 13px - F₇ */
     line-height: 1.618; /* φ */
-    color: #4b5563;
-    display: flex;
-    gap: 0.8125rem; /* 13px - F₇ */
-    align-items: flex-start;
-}
-
-.template-footnote-number {
-    flex-shrink: 0;
-    font-weight: 600;
-    font-family: Monaco, 'Courier New', monospace;
-    color: #936900;
-    min-width: 2rem; /* 32px - close to F₉=34 */
-}
-
-.template-footnote-content {
-    font-family: Monaco, 'Courier New', monospace;
     word-wrap: break-word;
     overflow-wrap: break-word;
-    color: #1f2937;
-    flex: 1;
+    animation: popover-fade-in 150ms ease-out;
+}
+
+.template-popover.hidden {
+    display: none;
+}
+
+/* Popover fade-in animation */
+@keyframes popover-fade-in {
+    from {
+        opacity: 0;
+        transform: translateY(-4px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 /* Preformatted code blocks - Fibonacci spacing */

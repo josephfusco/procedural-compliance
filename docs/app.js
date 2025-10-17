@@ -306,14 +306,64 @@ document.addEventListener('DOMContentLoaded', () => {
     let currentTemplatePath = '';
     let lastFocusedElement = null;
 
-    // Highlight template placeholders - wrap {{...}} in styled spans
-    // Long placeholders (>50 chars) become numbered citations with footnotes at bottom
+    // Separate template metadata from legal document and wrap appropriately
+    function separateMetadataFromDocument(container) {
+        if (!container) return;
+
+        // Patterns that indicate the start of the actual legal document
+        const documentStartPatterns = [
+            /SUPREME COURT OF THE STATE/i,
+            /UNITED STATES DISTRICT COURT/i,
+            /COUNTY OF/i,
+            /IN THE MATTER OF/i
+        ];
+
+        // Find all direct children that are block elements
+        const children = Array.from(container.children);
+        let documentStartIndex = -1;
+
+        // Find where the actual legal document starts
+        for (let i = 0; i < children.length; i++) {
+            const text = children[i].textContent;
+            const isDocumentStart = documentStartPatterns.some(pattern => pattern.test(text));
+
+            if (isDocumentStart) {
+                documentStartIndex = i;
+                break;
+            }
+        }
+
+        // If we found the document start, wrap metadata section
+        if (documentStartIndex > 0) {
+            const metadataWrapper = document.createElement('div');
+            metadataWrapper.className = 'template-metadata-section';
+
+            // Move all elements before document start into metadata wrapper
+            for (let i = 0; i < documentStartIndex; i++) {
+                metadataWrapper.appendChild(children[0]); // Always take first child until we reach document start
+            }
+
+            // Insert metadata wrapper at the beginning
+            container.insertBefore(metadataWrapper, container.firstChild);
+
+            // Wrap remaining content (the actual legal document) in document section
+            const documentWrapper = document.createElement('div');
+            documentWrapper.className = 'template-document-section';
+
+            // Move all remaining children into document wrapper
+            while (metadataWrapper.nextSibling) {
+                documentWrapper.appendChild(metadataWrapper.nextSibling);
+            }
+
+            container.appendChild(documentWrapper);
+        }
+    }
+
+    // Highlight template placeholders with popovers for long ones
     function highlightTemplatePlaceholders(container) {
         if (!container) return;
 
         const LONG_PLACEHOLDER_THRESHOLD = 40; // characters
-        const longPlaceholders = []; // Store long placeholders for footnotes
-        let footnoteCounter = 0;
 
         const walker = document.createTreeWalker(
             container,
@@ -324,7 +374,6 @@ document.addEventListener('DOMContentLoaded', () => {
         const nodesToReplace = [];
         while (walker.nextNode()) {
             const node = walker.currentNode;
-            // Check if text node contains placeholder syntax
             if (node.textContent.includes('{{') && node.textContent.includes('}}')) {
                 nodesToReplace.push(node);
             }
@@ -334,30 +383,24 @@ document.addEventListener('DOMContentLoaded', () => {
             const fragment = document.createDocumentFragment();
             const tempDiv = document.createElement('div');
 
-            // Replace {{...}} with either highlighted span or citation
+            // Replace {{...}} with either highlighted span or popover
             tempDiv.innerHTML = node.textContent.replace(
                 /\{\{([^}]+)\}\}/g,
                 (match, content) => {
-                    const fullPlaceholder = match; // {{content}}
+                    const fullPlaceholder = match;
                     const trimmedContent = content.trim();
 
-                    // Check if placeholder is too long
                     if (trimmedContent.length > LONG_PLACEHOLDER_THRESHOLD) {
-                        footnoteCounter++;
-                        longPlaceholders.push({
-                            number: footnoteCounter,
-                            content: fullPlaceholder
-                        });
-                        // Return citation
-                        return `<span class="template-citation">[${footnoteCounter}]</span>`;
+                        // Long placeholder - create popover trigger
+                        const uniqueId = 'popover-' + Math.random().toString(36).substr(2, 9);
+                        return `<span class="template-placeholder-with-popover" data-tooltip="${fullPlaceholder.replace(/"/g, '&quot;')}" data-popover-id="${uniqueId}" tabindex="0" role="button" aria-label="Show field details">Field <span class="info-icon">ⓘ</span></span>`;
                     } else {
-                        // Return normal highlighted placeholder
+                        // Short placeholder - normal highlighting
                         return `<span class="template-placeholder">${fullPlaceholder}</span>`;
                     }
                 }
             );
 
-            // Move all child nodes to fragment
             while (tempDiv.firstChild) {
                 fragment.appendChild(tempDiv.firstChild);
             }
@@ -365,38 +408,89 @@ document.addEventListener('DOMContentLoaded', () => {
             node.parentNode.replaceChild(fragment, node);
         });
 
-        // If there are long placeholders, add footnotes section at bottom
-        if (longPlaceholders.length > 0) {
-            const footnotesSection = document.createElement('div');
-            footnotesSection.className = 'template-footnotes';
+        // Add event listeners for popovers
+        addPopoverEventListeners(container);
+    }
 
-            const footnotesTitle = document.createElement('div');
-            footnotesTitle.className = 'template-footnotes-title';
-            footnotesTitle.textContent = 'Template Field Reference';
-            footnotesSection.appendChild(footnotesTitle);
+    // Add hover and click event listeners for popovers
+    function addPopoverEventListeners(container) {
+        const triggers = container.querySelectorAll('.template-placeholder-with-popover');
 
-            const footnotesList = document.createElement('div');
-            footnotesList.className = 'template-footnotes-list';
+        triggers.forEach(trigger => {
+            const tooltipText = trigger.dataset.tooltip;
+            const popoverId = trigger.dataset.popoverId;
 
-            longPlaceholders.forEach(({ number, content }) => {
-                const footnoteItem = document.createElement('div');
-                footnoteItem.className = 'template-footnote-item';
+            // Create popover element
+            const popover = document.createElement('div');
+            popover.className = 'template-popover hidden';
+            popover.id = popoverId;
+            popover.textContent = tooltipText;
+            popover.setAttribute('role', 'tooltip');
 
-                const footnoteNumber = document.createElement('span');
-                footnoteNumber.className = 'template-footnote-number';
-                footnoteNumber.textContent = `[${number}]`;
+            // Insert popover after trigger
+            trigger.parentNode.insertBefore(popover, trigger.nextSibling);
 
-                const footnoteContent = document.createElement('span');
-                footnoteContent.className = 'template-footnote-content';
-                footnoteContent.textContent = content;
-
-                footnoteItem.appendChild(footnoteNumber);
-                footnoteItem.appendChild(footnoteContent);
-                footnotesList.appendChild(footnoteItem);
+            // Show on hover (desktop)
+            trigger.addEventListener('mouseenter', () => {
+                positionPopover(trigger, popover);
+                popover.classList.remove('hidden');
             });
 
-            footnotesSection.appendChild(footnotesList);
-            container.appendChild(footnotesSection);
+            trigger.addEventListener('mouseleave', () => {
+                popover.classList.add('hidden');
+            });
+
+            // Toggle on click/tap (mobile)
+            trigger.addEventListener('click', (e) => {
+                e.preventDefault();
+                const isHidden = popover.classList.contains('hidden');
+
+                // Hide all other popovers
+                document.querySelectorAll('.template-popover').forEach(p => p.classList.add('hidden'));
+
+                if (isHidden) {
+                    positionPopover(trigger, popover);
+                    popover.classList.remove('hidden');
+                } else {
+                    popover.classList.add('hidden');
+                }
+            });
+
+            // Close on keyboard (Escape)
+            trigger.addEventListener('keydown', (e) => {
+                if (e.key === 'Enter' || e.key === ' ') {
+                    e.preventDefault();
+                    trigger.click();
+                } else if (e.key === 'Escape') {
+                    popover.classList.add('hidden');
+                }
+            });
+        });
+
+        // Close all popovers when clicking outside
+        document.addEventListener('click', (e) => {
+            if (!e.target.closest('.template-placeholder-with-popover') && !e.target.closest('.template-popover')) {
+                document.querySelectorAll('.template-popover').forEach(p => p.classList.add('hidden'));
+            }
+        });
+    }
+
+    // Position popover relative to trigger
+    function positionPopover(trigger, popover) {
+        const triggerRect = trigger.getBoundingClientRect();
+        const popoverRect = popover.getBoundingClientRect();
+
+        // Position below trigger by default
+        popover.style.position = 'absolute';
+        popover.style.top = '100%';
+        popover.style.left = '0';
+        popover.style.marginTop = '0.5rem';
+
+        // Check if popover would go off right edge of screen
+        const popoverRight = triggerRect.left + popoverRect.width;
+        if (popoverRight > window.innerWidth) {
+            popover.style.left = 'auto';
+            popover.style.right = '0';
         }
     }
 
@@ -501,13 +595,17 @@ document.addEventListener('DOMContentLoaded', () => {
                 const html = marked.parse(content);
                 if (templateModalProse) {
                     templateModalProse.innerHTML = html;
-                    // Highlight {{placeholders}} with USWDS warning color
+                    // Separate metadata from legal document
+                    separateMetadataFromDocument(templateModalProse);
+                    // Highlight {{placeholders}} with popovers
                     highlightTemplatePlaceholders(templateModalProse);
                 }
             } else {
                 // Fallback if marked.js doesn't load
                 if (templateModalProse) {
                     templateModalProse.innerHTML = `<pre>${content}</pre>`;
+                    // Separate metadata from legal document
+                    separateMetadataFromDocument(templateModalProse);
                     // Highlight {{placeholders}} in fallback view too
                     highlightTemplatePlaceholders(templateModalProse);
                 }
