@@ -14,6 +14,78 @@ This template applies to United States District Courts and Circuit Courts of App
 
 # NOTICE OF NON-COMPLIANCE (Universal - Federal)
 
+---
+
+## ⚠️ BEFORE USING THIS TEMPLATE
+
+### When to Use Federal Universal Notice
+
+**USE this template when:**
+- You need to address federal court actor (judge, clerk, counsel, agency) with procedural failure
+- More specific federal template doesn't exist for your situation
+- Federal rule, statute, or regulation was violated
+- You need flexible template adaptable to federal procedure
+- Creating record for multiple related federal compliance issues
+
+**DO NOT use this if:**
+- Specific federal template exists (judge, clerk, counsel - use those instead)
+- Duty is unclear or disputed under federal law
+- You haven't tried informal resolution appropriate to federal court
+- This is about case outcome rather than procedural compliance
+- Issue requires substantive motion rather than notice
+
+**Appropriate example:** Federal magistrate judge failed to issue R&R within required timeframe; need notice addressing multiple procedural failures.
+
+**Inappropriate example:** You lost motion in federal court and want to complain generally (use appeal or Rule 59/60 motion instead).
+
+### Preparation Steps
+
+**Before sending this notice:**
+
+1. **Check if specific template exists** (federal judge, clerk, opposing counsel)
+2. **Identify specific FRCP/statute violated** with precise citation
+3. **Document the failure** with ECF numbers, dates, docket references
+4. **Attempt informal resolution** (email chambers, call clerk, meet and confer with counsel)
+5. **Customize role module** from template to match federal rules
+6. **Verify proper CM/ECF filing** requirements for district
+
+**Document everything:** Federal rule requirements, CM/ECF confirmations, informal correspondence.
+
+### Resource Requirements & Federal Court Considerations
+
+⚠️ **Important Considerations:**
+
+- **Customization required:** Framework template requiring significant adaptation to federal rules
+- **Federal rules differ:** FRCP ≠ state procedure; verify federal authority
+- **Less established:** Specific templates have more federal precedent support
+- **CM/ECF filing:** Most federal courts require electronic filing
+- **What this achieves:** Creates record for federal appellate/administrative review
+- **What this does NOT do:** Provide detailed federal-specific guidance; guarantee success
+
+**When to use specific federal templates instead:**
+- **Federal Judge:** Use federal_notice_judge.md for FRCP 52(a) findings violations
+- **Federal Clerk:** Use federal_notice_clerk.md for FRCP 58/79 violations
+- **Federal Opposing Counsel:** Use federal_notice_opposing_counsel.md for discovery/ethics violations
+- **AUSA/Federal Prosecutor:** Adapt opposing counsel template for Brady/Giglio violations
+
+**Appropriate use cases for federal universal template:**
+- Federal magistrate judge procedural violations
+- Court reporter failed to produce federal transcript
+- Federal probation officer violated procedural rules
+- Multiple federal actors with related failures
+- Unique federal role not covered by specific templates
+
+**Federal vs. State differences:**
+- Different rules: FRCP not CPLR
+- Different timelines: Federal deadlines often shorter
+- Different filing system: CM/ECF not NYSCEF
+- Different local rules: Each federal district has own local rules
+- Different appeal deadlines: 30 days (FRAP 4) not 30 days from notice of entry
+
+**Best practice:** Prefer federal-specific templates when available; use universal only when necessary; heavily customize to federal rules; verify citations in FRCP/USC/FRAP.
+
+---
+
 **TO:** {{Name, Title}}
 **FROM:** {{Your Name}}
 **DATE:** {{Date}}

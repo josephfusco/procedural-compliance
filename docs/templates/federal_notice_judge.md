@@ -14,6 +14,69 @@ This template applies to United States District Courts and Circuit Courts of App
 
 # NOTICE OF NON-COMPLIANCE - FEDERAL JUDGE
 
+---
+
+## ⚠️ BEFORE USING THIS TEMPLATE
+
+### When to Use Federal Judge Notice
+
+**USE this template when:**
+- Federal judge conducted bench trial but issued no written FRCP 52(a) findings
+- Judge decided motion without written order or reasoning
+- Judge made ex parte rulings without notice
+- Pattern of bias/recusal issues under 28 U.S.C. §455
+- Need written findings for federal appellate record
+
+**DO NOT use this if:**
+- Judge issued oral ruling on the record (transcript exists as findings)
+- This is routine procedural matter with minute entry
+- Written order exists but you disagree with it (file Rule 59 motion to alter/amend instead)
+- You're seeking to re-argue merits (this won't change decision)
+- No prejudice from lack of written findings
+
+**Appropriate example:** Judge held bench trial 8 weeks ago; oral ruling from bench; no written FRCP 52(a) findings filed on CM/ECF; need findings for Circuit appeal.
+
+**Inappropriate example:** Judge denied your motion last week and you want to argue about it (file Rule 59(e) or 60(b) motion instead).
+
+### Try These Steps First
+
+**Before sending this notice:**
+
+1. **Check CM/ECF docket** to confirm no written order was entered
+2. **Wait 4-6 weeks** after bench trial/oral ruling (federal courts have backlogs)
+3. **Email chambers** politely asking about status of written findings
+4. **Review local rules** for district-specific timing for orders
+5. **Consider if transcript sufficient** (some Circuits accept transcript as findings)
+
+**Document everything:** ECF docket screenshots, emails to chambers, local rule citations.
+
+### Resource Requirements & Federal Standards
+
+⚠️ **Important Considerations:**
+
+- **Timeline:** May take 2-12 weeks for judge to issue findings after this notice
+- **Success rate:** High if bench trial genuinely lacks FRCP 52(a) findings; moderate for motion rulings
+- **FRCP 52(a) is mandatory:** "Must find facts specially and state conclusions separately"
+- **Appellate impact:** Without findings, Circuit Court review severely hampered
+- **What this achieves:** Creates record; may prompt written findings; preserves issue for appeal
+- **What this does NOT do:** Re-argue merits; guarantee reversal; change judge's mind
+
+**Federal vs. State differences:**
+- **FRCP 52(a) not CPLR §2219(a):** Different but similar requirements
+- **De novo review:** Circuit Courts review legal conclusions de novo
+- **Clearly erroneous:** Circuit Courts review factual findings for clear error
+- **Mandamus available:** Can petition Circuit for writ compelling findings (rare)
+
+**Alternatives to consider:**
+- **Rule 52(b) motion:** Motion to amend/make additional findings (28 days after judgment)
+- **Rule 59(e) motion:** Motion to alter or amend judgment (28 days)
+- **Appeal without findings:** Circuit can review from record (but much harder)
+- **Mandamus to Circuit:** Petition for writ compelling District Judge (extraordinary)
+
+**Best practice:** Email chambers first; this notice creates record before Rule 52(b) motion or appeal; preserves FRCP 52(a) issue for Circuit review.
+
+---
+
 **TO:** The Honorable {{Judge Name}}
 {{Title - District Judge / Magistrate Judge}}
 **FROM:** {{Your Name}}

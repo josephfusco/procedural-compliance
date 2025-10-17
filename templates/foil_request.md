@@ -4,6 +4,61 @@
 
 ---
 
+## ⚠️ BEFORE USING THIS TEMPLATE
+
+### When to Use FOIL Request
+
+**USE this template when:**
+- You need records held by a NY state/local government agency or court
+- You have made informal request and need formal statutory process
+- You need to establish official timeline and appeal rights
+- Agency has denied informal access or not responded
+- You need records for litigation, accountability, or public interest purposes
+
+**DO NOT use this if:**
+- Records are already publicly available online
+- You need urgent access (FOIL has 20+ day timeline)
+- This is a federal agency (use FOIA instead)
+- An appeal or subpoena is the proper remedy for your case
+- You're seeking records exempt from disclosure (personal medical, ongoing investigation, etc.)
+
+**Appropriate example:** Requesting court orders and transcripts from your case that aren't in NYSCEF; agency denied informal email request.
+
+**Inappropriate example:** Requesting opposing party's personal medical records (use discovery subpoena).
+
+### Preparation Steps
+
+**Before filing FOIL request:**
+
+1. **Check if records are already public** (NYSCEF, agency website, public reading room)
+2. **Make informal request** (email/call to clerk or agency first)
+3. **Be specific** about what you want (dates, case numbers, document types)
+4. **Identify correct custodian** (which agency/court department has the records)
+5. **Consider costs** (agency may charge for copies; request fee waiver if applicable)
+
+**Document everything:** Keep copies of informal requests and responses for appeal if needed.
+
+### Resource Requirements & Timeline
+
+⚠️ **Important Considerations:**
+
+- **Timeline:** 5 business days for acknowledgment; 20 business days for response (or explanation of delay)
+- **Cost:** Typically $0.25/page for copies; may request fee waiver for public interest
+- **Success rate:** High for clearly public records; low for exempt materials
+- **Response options:** Grant access, partial grant with redactions, or denial with explanation
+- **Appeal rights:** 30 days to appeal denial to agency head, then Article 78 to court
+- **What this achieves:** Legal access to public records; creates record for Article 78 if denied
+
+**Alternatives to consider:**
+- **Informal request first:** Often faster and free (email clerk or agency)
+- **Court motion:** If you need records for pending case (e.g., motion to compel clerk)
+- **Subpoena:** For records in litigation discovery
+- **Federal FOIA:** If records are federal (5 U.S.C. §552)
+
+**Best practice:** Start with informal request; use FOIL for formal timeline and appeal rights if denied.
+
+---
+
 **TO:** {{Records Access Officer / Agency Head}}<br>
 {{Agency/Court Name}}<br>
 {{Address}}
