@@ -1001,14 +1001,379 @@ footer a:hover {
     }
 }
 
-/* Dark mode preparation (future enhancement) */
+/* Dark Mode - System Preference Based */
 @media (prefers-color-scheme: dark) {
-    /* Commented out for now - keep design light for legal aesthetic
     :root {
-        --background: #1a1a1a;
-        --foreground: #ffffff;
-        --muted: #2a2a2a;
-        --border: #3a3a3a;
+        /* Dark theme core colors - WCAG AA compliant */
+        --background: #0a0a0a;
+        --foreground: #e5e5e5;
+        --muted: #1f1f1f;
+        --border: #2a2a2a;
+
+        /* USWDS colors adjusted for dark mode */
+        --uswds-blue-light: #60a5fa;
+        --color-base-lightest: #1f1f1f;
+        --color-base-lighter: #2a2a2a;
+        --color-base-light: #404040;
+        --color-base: #a3a3a3;
+        --color-base-dark: #d4d4d4;
+        --color-base-darker: #e5e5e5;
+        --color-base-darkest: #f5f5f5;
     }
-    */
+
+    /* Body and main background */
+    body {
+        background-color: var(--background);
+        color: var(--foreground);
+    }
+
+    /* Government banner */
+    .gov-banner {
+        background-color: #1f1f1f;
+        border-bottom-color: #2a2a2a;
+    }
+
+    .gov-banner-text {
+        color: #e5e5e5;
+    }
+
+    /* Header */
+    header {
+        background-color: var(--background);
+        border-bottom-color: var(--border);
+    }
+
+    /* Hero section */
+    #hero {
+        background-color: #1f1f1f;
+    }
+
+    #hero p {
+        color: #d4d4d4;
+    }
+
+    /* Helpful text in dark mode */
+    .helpful-text {
+        color: #d4d4d4 !important;
+    }
+
+    /* Search trigger button */
+    #search-trigger {
+        background-color: var(--muted);
+        color: var(--foreground);
+        border-color: var(--border);
+    }
+
+    #search-trigger:hover {
+        background-color: #2a2a2a;
+    }
+
+    #search-trigger kbd {
+        background-color: var(--background);
+        border-color: var(--border);
+        color: #a3a3a3;
+    }
+
+    /* Tables */
+    .table-dense {
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.4);
+    }
+
+    .table-dense th {
+        background: linear-gradient(180deg, #1f1f1f 0%, #1a1a1a 100%);
+        border-bottom-color: #404040;
+        color: #e5e5e5;
+    }
+
+    .table-dense td {
+        border-bottom-color: #2a2a2a;
+    }
+
+    .table-dense tbody tr:hover {
+        background-color: #1f1f1f;
+    }
+
+    /* Template cards */
+    .template-card {
+        background-color: #1f1f1f;
+        border-color: #2a2a2a;
+    }
+
+    .template-card:hover {
+        background-color: #2a2a2a;
+        border-color: var(--uswds-blue-light);
+    }
+
+    .template-card-title {
+        color: #f5f5f5;
+    }
+
+    .template-card-subtitle {
+        color: #a3a3a3;
+    }
+
+    .template-card-footer {
+        border-top-color: #2a2a2a;
+    }
+
+    .template-card-link {
+        color: var(--uswds-blue-light);
+    }
+
+    .template-card-link:hover {
+        color: #93c5fd;
+    }
+
+    /* Selects and inputs */
+    select {
+        background-color: var(--muted);
+        color: var(--foreground);
+        border-color: var(--border);
+        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12'%3E%3Cpath fill='%23a3a3a3' d='M6 9L1.5 4.5h9L6 9z'/%3E%3C/svg%3E");
+    }
+
+    select:hover {
+        border-color: #404040;
+    }
+
+    select:focus {
+        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12'%3E%3Cpath fill='%2360a5fa' d='M6 9L1.5 4.5h9L6 9z'/%3E%3C/svg%3E");
+        border-color: var(--uswds-blue-light);
+    }
+
+    /* Buttons */
+    button {
+        background-color: var(--muted);
+        color: var(--foreground);
+        border-color: var(--border);
+    }
+
+    button:hover {
+        background-color: #2a2a2a;
+    }
+
+    /* Code blocks */
+    code {
+        background-color: #1f1f1f;
+        border-color: #2a2a2a;
+        color: #fbbf24;
+    }
+
+    /* Template viewer sheet */
+    #template-sheet {
+        background-color: var(--background);
+        border-left-color: var(--border);
+    }
+
+    #template-sheet .prose {
+        color: #e5e5e5;
+    }
+
+    #template-sheet .prose h1 {
+        color: #d4d4d4;
+        border-bottom-color: #404040;
+    }
+
+    #template-sheet .prose h2,
+    #template-sheet .prose h3 {
+        color: #e5e5e5;
+    }
+
+    #template-sheet .prose hr {
+        border-top-color: #2a2a2a;
+    }
+
+    #template-sheet .prose strong {
+        color: #f5f5f5;
+    }
+
+    #template-sheet .prose code {
+        background-color: #1f1f1f;
+        color: #fbbf24;
+    }
+
+    #template-sheet .prose pre {
+        background-color: #1f1f1f;
+        border-color: #2a2a2a;
+    }
+
+    #template-sheet .prose pre code {
+        color: #e5e5e5;
+    }
+
+    #template-sheet .prose blockquote {
+        border-left-color: #b8860b;
+        color: #a3a3a3;
+    }
+
+    #template-sheet .prose a {
+        color: var(--uswds-blue-light);
+    }
+
+    #template-sheet .prose a:hover {
+        color: #93c5fd;
+    }
+
+    #template-sheet .prose table th {
+        background-color: #1f1f1f;
+        border-color: #2a2a2a;
+    }
+
+    #template-sheet .prose table td {
+        border-color: #2a2a2a;
+    }
+
+    /* Template placeholder */
+    .template-placeholder {
+        background-color: #1f1f1f;
+        color: #fbbf24;
+        border-bottom-color: #b8860b;
+    }
+
+    /* Template metadata section */
+    .template-metadata-section {
+        background-color: #0c2332;
+        border-left-color: #0891b2;
+    }
+
+    .template-metadata-section::before {
+        color: #06b6d4;
+    }
+
+    /* Template document section */
+    .template-document-section {
+        background-color: var(--background);
+    }
+
+    /* Placeholder with popover */
+    .template-placeholder-with-popover {
+        background-color: #1f1f1f;
+        color: #fbbf24;
+        border-bottom-color: #b8860b;
+    }
+
+    .template-placeholder-with-popover:hover {
+        background-color: #2a2a2a;
+        border-bottom-color: #d97706;
+    }
+
+    .info-icon {
+        color: var(--uswds-blue-light);
+    }
+
+    /* Popover tooltip */
+    .template-popover {
+        background-color: #1f2937;
+        color: #f5f5f5;
+        border-color: var(--uswds-blue-light);
+    }
+
+    /* Modal backdrop */
+    #search-modal,
+    #template-modal {
+        background-color: rgba(0, 0, 0, 0.8);
+    }
+
+    /* Search modal */
+    #search-modal > div {
+        background-color: var(--background);
+        border-color: var(--border);
+    }
+
+    #search-input {
+        background-color: var(--background);
+        color: var(--foreground);
+    }
+
+    #search-close {
+        color: #a3a3a3;
+    }
+
+    #search-close:hover {
+        color: #e5e5e5;
+    }
+
+    /* Sheet header */
+    #template-sheet > div:first-child {
+        background-color: var(--background);
+        border-bottom-color: var(--border);
+    }
+
+    #template-modal-close {
+        color: #a3a3a3;
+    }
+
+    #template-modal-close:hover {
+        color: #e5e5e5;
+    }
+
+    /* Scrollbar */
+    #template-modal-content::-webkit-scrollbar-track {
+        background: var(--background);
+        border-left-color: var(--border);
+    }
+
+    #template-modal-content::-webkit-scrollbar-thumb {
+        background: #404040;
+        border-color: var(--background);
+    }
+
+    #template-modal-content::-webkit-scrollbar-thumb:hover {
+        background: #525252;
+    }
+
+    /* Footer */
+    footer {
+        background-color: #1f1f1f;
+        border-top-color: var(--border);
+    }
+
+    footer h3 {
+        color: #f5f5f5;
+    }
+
+    footer p {
+        color: #d4d4d4;
+    }
+
+    footer a {
+        color: #d4d4d4;
+    }
+
+    footer a:hover {
+        color: #f5f5f5;
+        text-decoration-color: #f5f5f5;
+    }
+
+    /* Resource cards */
+    section a[class*="block p-4"] {
+        background-color: #1f1f1f;
+        border-color: #2a2a2a;
+    }
+
+    section a[class*="block p-4"]:hover {
+        background-color: #2a2a2a;
+        border-color: #404040;
+    }
+
+    /* Badge adjustments for dark mode - maintain contrast */
+    .badge-ny {
+        background: linear-gradient(135deg, #2563eb 0%, #3b82f6 100%);
+    }
+
+    .badge-federal {
+        background: linear-gradient(135deg, #475569 0%, #64748b 100%);
+    }
+
+    .badge-emergency {
+        background: linear-gradient(135deg, #dc2626 0%, #ef4444 100%);
+    }
+
+    .badge-urgent {
+        background: linear-gradient(135deg, #ea580c 0%, #f97316 100%);
+    }
+
+    .badge-standard {
+        background: linear-gradient(135deg, #6b7280 0%, #9ca3af 100%);
+    }
 }
