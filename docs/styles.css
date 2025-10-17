@@ -677,7 +677,9 @@ code {
 .template-popover {
     position: absolute;
     z-index: 9999;
-    max-width: 300px;
+    min-width: 250px; /* Ensure comfortable reading width regardless of trigger width */
+    max-width: 300px; /* Cap for very long text */
+    width: max-content; /* Let content determine natural width within min/max bounds */
     padding: 0.8125rem; /* 13px - F₇ */
     background-color: #1f2937; /* Dark background */
     color: #ffffff;
@@ -687,6 +689,7 @@ code {
     font-family: Monaco, 'Courier New', monospace;
     font-size: 0.8125rem; /* 13px - F₇ */
     line-height: 1.618; /* φ */
+    white-space: normal; /* Allow text wrapping */
     word-wrap: break-word;
     overflow-wrap: break-word;
     animation: popover-fade-in 150ms ease-out;
