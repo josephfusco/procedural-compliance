@@ -1001,9 +1001,9 @@ footer a:hover {
     }
 }
 
-/* Dark Mode - System Preference Based */
+/* Dark Mode - System Preference (when not overridden to light) */
 @media (prefers-color-scheme: dark) {
-    :root {
+    html:not([data-theme="light"]) :root {
         /* Dark theme core colors - WCAG AA compliant */
         --background: #0a0a0a;
         --foreground: #e5e5e5;
@@ -1057,9 +1057,22 @@ footer a:hover {
         color: rgba(229, 229, 229, 0.6) !important;
     }
 
+    .text-foreground\/50 {
+        color: rgba(229, 229, 229, 0.5) !important;
+    }
+
     /* Labels */
     label {
         color: #a3a3a3 !important;
+    }
+
+    /* Additional text color utilities */
+    .text-sm {
+        color: inherit;
+    }
+
+    .text-xs {
+        color: inherit;
     }
 
     /* Link colors */
@@ -1385,25 +1398,39 @@ footer a:hover {
 
     /* Footer */
     footer {
-        background-color: #0f0f0f;
+        background-color: #0f0f0f !important;
         border-top-color: var(--border);
     }
 
+    /* Override Tailwind bg-muted/30 opacity in dark mode */
+    footer.bg-muted\/30 {
+        background-color: #0f0f0f !important;
+    }
+
     footer h3 {
-        color: #f5f5f5;
+        color: #f5f5f5 !important;
     }
 
     footer p {
-        color: #d4d4d4;
+        color: #d4d4d4 !important;
     }
 
     footer a {
-        color: #d4d4d4;
+        color: #d4d4d4 !important;
     }
 
     footer a:hover {
-        color: #f5f5f5;
+        color: #f5f5f5 !important;
         text-decoration-color: #f5f5f5;
+    }
+
+    /* Ensure copyright text is visible */
+    footer .text-foreground\/70 {
+        color: #d4d4d4 !important;
+    }
+
+    footer .text-foreground\/60 {
+        color: #a3a3a3 !important;
     }
 
     /* Resource cards */
@@ -1437,4 +1464,21 @@ footer a:hover {
     .badge-standard {
         background: linear-gradient(135deg, #6b7280 0%, #9ca3af 100%);
     }
+}
+
+/* Dark Mode - Manual Override (applies dark mode regardless of system preference) */
+html[data-theme="dark"] {
+    /* Import all dark mode styles by setting CSS variables */
+    --background: #0a0a0a;
+    --foreground: #e5e5e5;
+    --muted: #0f0f0f;
+    --border: #2a2a2a;
+    --uswds-blue-light: #60a5fa;
+    --color-base-lightest: #0f0f0f;
+    --color-base-lighter: #2a2a2a;
+    --color-base-light: #404040;
+    --color-base: #a3a3a3;
+    --color-base-dark: #d4d4d4;
+    --color-base-darker: #e5e5e5;
+    --color-base-darkest: #f5f5f5;
 }
