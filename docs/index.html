@@ -307,8 +307,7 @@
                 <div class="flex items-center gap-2 w-full md:w-auto">
                     <!-- Theme Toggle Button -->
                     <button id="theme-toggle" class="flex items-center justify-center px-3 py-2 md:py-1.5 text-sm text-muted-foreground bg-muted rounded-md border border-border hover:bg-secondary transition-colors" aria-label="Light mode. Click to toggle" role="switch" aria-checked="false">
-                        <span id="theme-icon" aria-hidden="true">☀️</span>
-                        <span class="sr-only" id="theme-label">Light mode</span>
+                        <span id="theme-label">Light</span>
                     </button>
 
                     <button id="search-trigger" class="flex items-center justify-center md:justify-start space-x-2 px-3 py-2 md:py-1.5 text-sm text-muted-foreground bg-muted rounded-md border border-border hover:bg-secondary transition-colors flex-1 md:flex-initial" aria-label="Open search">
@@ -854,19 +853,18 @@
                 DARK: 'dark'
             };
 
-            const ICONS = {
-                light: '☀️',
-                dark: '🌙'
+            const LABELS = {
+                light: 'Light',
+                dark: 'Dark'
             };
 
-            const LABELS = {
-                light: 'Light mode',
-                dark: 'Dark mode'
+            const ARIA_LABELS = {
+                light: 'Light mode. Click to switch to dark mode',
+                dark: 'Dark mode. Click to switch to light mode'
             };
 
             // Get elements
             const themeToggle = document.getElementById('theme-toggle');
-            const themeIcon = document.getElementById('theme-icon');
             const themeLabel = document.getElementById('theme-label');
             const html = document.documentElement;
 
@@ -880,13 +878,12 @@
                 // Set data-theme attribute
                 html.setAttribute('data-theme', theme);
 
-                // Update icon and label
-                themeIcon.textContent = ICONS[theme];
+                // Update label
                 themeLabel.textContent = LABELS[theme];
 
                 // Update ARIA attributes
                 themeToggle.setAttribute('aria-checked', theme === THEMES.DARK ? 'true' : 'false');
-                themeToggle.setAttribute('aria-label', `${LABELS[theme]}. Click to toggle`);
+                themeToggle.setAttribute('aria-label', ARIA_LABELS[theme]);
             }
 
             // Toggle between light and dark
