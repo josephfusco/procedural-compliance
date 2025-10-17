@@ -14,6 +14,87 @@ This template applies to United States District Courts and Circuit Courts of App
 
 # VERIFIED PETITION FOR WRIT OF MANDAMUS
 
+---
+
+## ⚠️ BEFORE USING THIS TEMPLATE
+
+### When to Use Federal Mandamus
+
+**USE this template when:**
+- Federal officer/employee has clear ministerial (non-discretionary) duty under statute/rule
+- Officer refused or failed to perform that duty despite demands
+- Duty is specific and mandatory ("shall do X"), not discretionary ("may do X")
+- You've exhausted administrative remedies and informal resolution
+- No other adequate legal remedy exists (e.g., no appeal right, no APA review)
+
+**DO NOT use this if:**
+- Duty involves discretion or policy judgment (mandamus only for ministerial acts)
+- You disagree with how officer exercised discretion (that's not mandamus)
+- You haven't exhausted administrative appeals/procedures
+- Another remedy is available (e.g., APA judicial review, direct appeal)
+- Officer is state/local official, not federal (use state mandamus procedure)
+
+**Appropriate example:** Filed FOIA request 18 months ago; agency acknowledged request but never responded; 5 U.S.C. §552 requires response within statutory timeframe; exhausted administrative appeals; agency has ministerial duty to process request.
+
+**Inappropriate example:** FOIA request processed but agency withheld documents under Exemption 5; you think exemption was applied incorrectly (that's APA review of discretionary decision, not mandamus for ministerial duty).
+
+### Try These Steps First
+
+**Before filing mandamus petition:**
+
+1. **Identify the ministerial duty** - Must be specific, mandatory, and non-discretionary
+2. **Serve procedural enclosure** - Use federal_notice_universal.md to demand compliance
+3. **Exhaust administrative remedies** - File appeals within agency; document denials
+4. **Verify no alternative remedy** - Check if APA review, direct appeal, or other remedy available
+5. **Build exhaustion record** - Multiple demands over time showing good-faith efforts
+6. **Calculate timing** - Mandamus may take 6-12 months; ensure underlying matter not moot
+
+**Document everything:** Statute requiring duty, demands for compliance, agency responses/denials, exhaustion of remedies.
+
+### Resource Requirements & Federal Standards
+
+⚠️ **Important Considerations:**
+
+- **Timeline:** 6-12 months from filing to decision; emergency stays rare unless truly urgent
+- **Cost:** Filing fees; possible need for attorney; government may have resources to oppose
+- **Success rate:** Low-moderate; courts scrutinize whether duty is truly ministerial vs. discretionary
+- **Three-part test:** (1) clear right to relief; (2) ministerial duty plainly defined; (3) no other adequate remedy (*Heckler v. Roe*, 465 U.S. 312 (1984))
+- **What this achieves:** Court order compelling officer to perform specific duty
+- **What this does NOT do:** Allow you to dictate how officer exercises discretion; provide appeal of discretionary decision
+
+**Ministerial vs. Discretionary:**
+- **Ministerial:** Duty so plainly prescribed as to be free from doubt; no judgment required (e.g., "shall issue findings within 30 days")
+- **Discretionary:** Officer must make policy judgment, balance factors, or apply expertise (e.g., "may grant stay for good cause")
+- **Key test:** Statute says "shall" (mandatory) vs. "may" (discretionary); duty is mechanical vs. requires judgment
+
+**Common mandamus scenarios:**
+- **FOIA:** Agency failed to process request within statutory timeline (5 U.S.C. §552)
+- **FRCP 52(a):** Judge failed to issue written findings after bench trial
+- **FRCP 58/79:** Clerk failed to enter judgment or maintain record
+- **Administrative deadlines:** Agency missed statutory deadline to process application
+- **Record production:** Officer failed to produce documents required by statute
+
+**Not mandamus (discretionary):**
+- Judge decided motion "wrong way" (that's appeal, not mandamus)
+- Agency denied FOIA request under exemption (that's APA review under §552(a)(4)(B))
+- Officer exercised prosecutorial discretion not to enforce
+- Agency chose one permissible interpretation over another
+
+**Alternatives to consider:**
+- **APA judicial review** (5 U.S.C. §§701-706) - If challenging final agency action involving discretion
+- **FOIA lawsuit** (5 U.S.C. §552(a)(4)(B)) - Specific remedy for FOIA denials (not failure to respond)
+- **Supervisory mandamus** - Petition to Court of Appeals for extraordinary writ (*In re Cheney*)
+- **Informal resolution** - Contact agency ombudsman, FOIA public liaison, inspector general
+- **Congressional inquiry** - Contact representative's constituent services office
+
+**Federal vs. NY differences:**
+- **Statute:** 28 U.S.C. §1361 (federal mandamus jurisdiction) vs. CPLR §7803(1) (NY mandamus)
+- **Venue:** 28 U.S.C. §1391(e) (where officer resides/has office) vs. NY venue rules
+- **Respondent:** Federal officer/employee only; can't use for state/local officials
+- **Standard:** *Heckler v. Roe* three-part test vs. NY common law mandamus
+
+**Best practice:** Identify specific statutory language requiring duty; serve multiple procedural enclosures over time showing good-faith exhaustion; build strong record of agency's refusal; clearly distinguish ministerial duty from discretionary action; verify no other adequate remedy available before filing.
+
 **[Federal][28 U.S.C. §1361] Mandamus to Compel Federal Officer**
 
 ---

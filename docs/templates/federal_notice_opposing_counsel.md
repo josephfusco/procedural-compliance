@@ -14,6 +14,62 @@ This template applies to United States District Courts and Circuit Courts of App
 
 # NOTICE OF NON-COMPLIANCE - OPPOSING COUNSEL (Federal)
 
+---
+
+## ⚠️ BEFORE USING THIS TEMPLATE
+
+### When to Use Federal Opposing Counsel Notice
+
+**USE this template when:**
+- Opposing counsel violated clear discovery obligations under FRCP 26/33/34/36
+- Counsel violated duty of candor under Model Rule 3.3 (false statements to court)
+- Counsel violated duty of fairness under Model Rule 3.4 (obstruction, evidence destruction)
+- Counsel missed court-ordered deadline or violated court order
+- Counsel engaged in sanctionable conduct under FRCP 11/Rule 37
+
+**DO NOT use this if:**
+- Counsel vigorously advocated their client's position (that's their job)
+- Discovery dispute involves interpretation/scope (file FRCP 37 motion instead)
+- You disagree with counsel's legal arguments (that's litigation, not misconduct)
+- You haven't attempted meet-and-confer required by local rules
+- Issue is minor discourtesy rather than rule violation
+
+**Appropriate example:** Opposing counsel produced documents 2 days before trial despite court order requiring production 30 days before; violated FRCP 37 and court order; prejudiced your ability to prepare.
+
+**Inappropriate example:** Opposing counsel objected to every interrogatory claiming privilege (that's discovery dispute requiring motion to compel, not misconduct notice).
+
+### Try These Steps First
+
+**Before sending this notice:**
+
+1. **FRCP 26(c)/(f) meet-and-confer requirement** - Must attempt good faith resolution before filing motion
+2. **Check local rules** - Most districts require meet-and-confer certification
+3. **Document the violation** - Cite specific FRCP rule, Model Rule, or court order violated
+4. **Email counsel** - Professional tone; identify issue; request compliance by specific date
+5. **Follow up in writing** - If phone call doesn't resolve, send email memorializing discussion
+6. **Consider proportionality** - Is violation severe enough to warrant formal notice or motion?
+
+**Document everything:** Discovery requests, responses, meet-and-confer emails, court orders, timeline.
+
+### Resource Requirements & Federal Standards
+
+⚠️ **Important Considerations:**
+
+- **Timeline:** Notice creates record for FRCP 37 motion or sanctions motion (weeks to months)
+- **Meet-and-confer requirement:** Most local rules require good faith attempt to resolve before motion
+- **Success rate:** Moderate; courts reluctant to sanction lawyers absent egregious conduct
+- **What this achieves:** Creates record for motion; may prompt voluntary compliance; preserves sanctions argument
+- **What this does NOT do:** Automatically result in sanctions; resolve discovery dispute; disqualify opposing counsel
+
+**Common violations:**
+- **FRCP 26(e):** Failure to supplement discovery responses
+- **FRCP 33/34:** Inadequate or evasive responses to interrogatories/requests for production
+- **FRCP 37:** Failure to comply with court-ordered discovery
+- **Model Rule 3.3:** False statements to tribunal; failure to disclose controlling adverse authority
+- **Model Rule 3.4:** Obstruction of access to evidence; destruction of documents
+
+**Best practice:** Meet and confer in good faith first; document violations thoroughly; this notice creates record before filing FRCP 37 motion to compel or sanctions motion; consider whether issue warrants court intervention or can be resolved professionally.
+
 **TO:** {{Attorney Name}}, Esq.
 {{Law Firm Name}}
 **FROM:** {{Your Name}}

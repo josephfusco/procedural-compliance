@@ -14,6 +14,82 @@ This template applies to United States District Courts and Circuit Courts of App
 
 # FREEDOM OF INFORMATION ACT (FOIA) REQUEST
 
+---
+
+## ⚠️ BEFORE USING THIS TEMPLATE
+
+### When to Use FOIA Request
+
+**USE this template when:**
+- You need records held by federal agency, department, or executive branch office
+- Records are not already publicly available online (check agency website first)
+- You need formal statutory process with deadlines and appeal rights
+- Agency denied informal request or didn't respond
+- Records needed for litigation, accountability, research, or public interest purposes
+
+**DO NOT use this if:**
+- Records are already online (check agency FOIA reading room, data.gov, regulations.gov)
+- This is state/local agency (use state FOIL/public records law instead)
+- Records are classified or involve ongoing law enforcement investigation (likely exempt under §552(b))
+- You need urgent access (FOIA has 20+ business day timeline; may take months/years)
+- This is discovery request in active litigation (use FRCP 34 subpoena instead)
+
+**Appropriate example:** Need agency emails and memos about decision to deny your contract bid; informal email request ignored; no litigation pending yet; records likely exist and not exempt.
+
+**Inappropriate example:** Seeking personal medical records from VA hospital (use Privacy Act request, 5 U.S.C. §552a, not FOIA).
+
+### Preparation Steps
+
+**Before filing FOIA request:**
+
+1. **Check if records already public** - Agency FOIA reading room, Federal Register, regulations.gov, data.gov
+2. **Identify correct agency** - Which agency created/maintains the records?
+3. **Be specific** - Dates, subject matter, parties, document types, file/case numbers
+4. **Make informal request first** - Email or call agency; may get records faster and free
+5. **Check agency FOIA page** - Many have online portals, specific forms, or procedures
+6. **Consider fee category** - News media/educational requesters get better fee treatment
+7. **Narrow scope if needed** - Broader requests take longer and cost more
+
+**Document everything:** Keep copies of request, tracking numbers, agency responses for appeal.
+
+### Resource Requirements & Timeline
+
+⚠️ **Important Considerations:**
+
+- **Timeline:** 20 business days for agency response (can extend 10 days); actual production may take months or years for complex requests
+- **Cost:** Varies by fee category; can be $0-$10,000+ depending on volume; fees often waived for small requests
+- **Success rate:** High for clearly non-exempt records; low for national security, law enforcement, or deliberative materials
+- **Response options:** Grant in full, partial grant with redactions, denial with exemption citations, or "no records" response
+- **Appeal rights:** 90 days to appeal denial to agency head; then federal court litigation under §552(a)(4)(B)
+- **What this achieves:** Legal access to federal records; creates record for litigation if denied
+- **What this does NOT do:** Provide immediate access; guarantee disclosure of exempt materials; compel agency to create new records
+
+**FOIA Exemptions (5 U.S.C. §552(b)) - Agency can withhold:**
+1. Classified national security information (b)(1)
+2. Internal personnel rules and practices (b)(2)
+3. Information exempt under other statutes (b)(3)
+4. Trade secrets and confidential business information (b)(4)
+5. Inter-agency/intra-agency deliberative memos (b)(5) - most commonly claimed
+6. Personnel/medical files (unwarranted invasion of privacy) (b)(6)
+7. Law enforcement records (b)(7) - ongoing investigations, confidential sources
+8. Financial institution records (b)(8)
+9. Geological/geophysical information about wells (b)(9)
+
+**Fee Categories (§552(a)(4)(A)):**
+- **Commercial use:** Pay for search, review, and duplication (most expensive)
+- **News media/Educational:** Duplication only; first 100 pages free
+- **All other requesters:** Search and duplication; first 2 hours search + 100 pages free
+- **Fee waiver:** Available if disclosure primarily benefits public understanding of government operations
+
+**Alternatives to consider:**
+- **Agency website/reading room:** Check if records already published
+- **Privacy Act request (5 U.S.C. §552a):** For records about yourself personally
+- **Congressional inquiry:** Contact your representative's office for constituent assistance
+- **Agency FOIA Public Liaison:** Informal dispute resolution before appeal
+- **Subpoena in litigation:** If records needed for pending case (FRCP 45)
+
+**Best practice:** Start with informal request; be very specific in FOIA request description; request fee waiver if applicable; use agency online portal if available; preserve all correspondence for potential appeal/litigation; consider retaining FOIA attorney for complex or denied requests.
+
 **[Federal][5 U.S.C. §552] Request for Agency Records**
 
 ---

@@ -14,6 +14,55 @@ This template applies to United States District Courts and Circuit Courts of App
 
 # NOTICE OF NON-COMPLIANCE - FEDERAL COURT CLERK
 
+---
+
+## ⚠️ BEFORE USING THIS TEMPLATE
+
+### When to Use Federal Clerk Notice
+
+**USE this template when:**
+- Clerk failed to enter judgment/order as required by FRCP 58/79
+- Clerk's docket entries are inaccurate or incomplete
+- Clerk refused CM/ECF access or charged improper fees
+- Clerk failed to maintain proper case record
+- Clerk violated ministerial duties under federal rules
+
+**DO NOT use this if:**
+- Judge's decision was wrong (that's appeal, not clerk compliance)
+- CM/ECF technical error was temporary and resolved
+- You disagree with clerk's discretionary decision
+- You haven't contacted clerk's office to request correction
+- Issue involves substantive ruling, not record-keeping
+
+**Appropriate example:** Clerk never entered final judgment on docket despite judge signing order 45 days ago; FRCP 58 requires entry; need judgment entered for appeal deadline purposes.
+
+**Inappropriate example:** Clerk properly entered judgment but you think it was entered on wrong date (that's dispute about judgment itself, not clerk's performance of duty).
+
+### Try These Steps First
+
+**Before sending this notice:**
+
+1. **Check CM/ECF docket** - Verify entry wasn't made and search carefully
+2. **Email clerk's office** - Politely request correction; explain issue
+3. **Call clerk's office** - Often faster than email for simple corrections
+4. **Check local rules** - Verify procedures for requesting docket corrections
+5. **Allow reasonable time** - Clerks are busy; give 5-7 business days for response
+6. **Escalate to supervisor** - If line clerk refuses, contact chief deputy clerk
+
+**Document everything:** CM/ECF screenshots, emails to clerk, local rule citations.
+
+### Resource Requirements & Federal Standards
+
+⚠️ **Important Considerations:**
+
+- **Timeline:** Most clerk issues resolved informally within days; formal notice adds 1-2 weeks
+- **Success rate:** Very high for clearly ministerial duties; low for discretionary matters
+- **FRCP 58/79 are mandatory:** Clerk must enter judgments and maintain accurate docket
+- **What this achieves:** Correction of docket; proper entry of judgment; creates record for appeal/mandamus
+- **What this does NOT do:** Change substance of orders; reverse judge's rulings; guarantee immediate action
+
+**Best practice:** Contact clerk's office informally first; this notice creates formal record for appeal/mandamus if clerk refuses to correct clear error.
+
 **TO:** {{Clerk Name}}, {{Title - Clerk of Court / Deputy Clerk}}
 {{Court Name}}
 **FROM:** {{Your Name}}

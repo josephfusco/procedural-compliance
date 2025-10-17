@@ -14,6 +14,82 @@ This template applies to United States District Courts and Circuit Courts of App
 
 # EMERGENCY MOTION FOR STAY PENDING APPEAL
 
+---
+
+## ⚠️ BEFORE USING THIS TEMPLATE
+
+### When to Use Federal Emergency Stay
+
+**USE this template when:**
+- District Court entered judgment/order against you and you've filed Notice of Appeal
+- Immediate enforcement of judgment/order will cause irreparable harm
+- You need court to pause enforcement while appeal is pending
+- You can demonstrate likelihood of success on appeal
+- Harm to you outweighs harm to opposing party from delay
+
+**DO NOT use this if:**
+- You haven't filed Notice of Appeal yet (file that first - FRAP 4 deadline)
+- Judgment is already fully executed (stay may be moot)
+- You're seeking to re-argue merits (this is about preventing harm during appeal)
+- You cannot show irreparable harm (monetary damages alone usually insufficient)
+- Your appeal is frivolous or filed only to delay
+
+**Appropriate example:** District Court granted summary judgment ordering your immediate eviction from public housing; Notice of Appeal filed to Ninth Circuit; without stay, you'll be homeless before appeal decided; strong likelihood of reversal on exhaustion issue.
+
+**Inappropriate example:** District Court entered money judgment against you and you want more time to pay (post bond or seek payment plan instead).
+
+### Try These Steps First
+
+**Before filing emergency stay motion:**
+
+1. **File Notice of Appeal** - FRAP 4 deadline is 30 days from entry of judgment (60 days if United States is party)
+2. **Contact opposing counsel** - Attempt to stipulate to stay or agree on bond amount
+3. **Check local rules** - Many districts have specific requirements for stay motions
+4. **Prepare supporting declaration** - Sworn statement of facts showing irreparable harm
+5. **Calculate bond** - Be prepared to post security under FRAP 7 and FRCP 62(b)
+6. **Consider District vs. Circuit** - Under FRAP 8(a)(1), must apply to District Court first
+
+**Document everything:** ECF docket, Notice of Appeal, evidence of imminent harm, timeline.
+
+### Resource Requirements & Federal Standards
+
+⚠️ **Important Considerations:**
+
+- **Timeline:** District Court may rule within days; if denied, must seek stay from Circuit within 10 days
+- **Cost:** May require bond (FRCP 62(b)) - typically 110-125% of judgment amount
+- **Success rate:** Moderate; must satisfy all four *Nken* factors (likelihood of success, irreparable harm, balance of equities, public interest)
+- **Emergency filing:** Most courts will expedite if genuine emergency; be prepared for hearing on short notice
+- **What this achieves:** Pauses enforcement during appeal; preserves status quo; prevents mootness
+- **What this does NOT do:** Guarantee success on appeal; extend time to file appeal; reverse District Court ruling
+
+**Four-Factor Test (*Nken v. Holder*, 556 U.S. 418 (2009)):**
+1. **Likelihood of success on merits** - Need strong showing of reversible error
+2. **Irreparable harm** - Must be imminent and not compensable by money damages
+3. **Balance of equities** - Harm to you must outweigh harm to opposing party
+4. **Public interest** - Stay must not harm public interest
+
+**Alternatives to consider:**
+- **FRCP 62(b) automatic stay** - 14-day automatic stay after judgment (too short for most appeals)
+- **FRCP 62(d) stay with bond** - District Court must grant if adequate security posted
+- **FRAP 8(a)(2) motion to Circuit** - If District denies, apply to Circuit within 10 days
+- **Partial stay** - Stay some provisions of judgment while allowing others to proceed
+- **Expedited appeal** - Request accelerated briefing schedule from Circuit
+
+**What happens next:**
+1. **District Court ruling** - May grant, deny, or set bond/conditions
+2. **If denied** - FRAP 8(a)(2) allows motion to Circuit within 10 days
+3. **If granted** - Stay remains in effect until appeal resolved (including potential SCOTUS cert)
+4. **Bond requirement** - Court may require security to protect appellee
+5. **Conditions** - Court may impose conditions (e.g., prohibit dissipating assets)
+
+**Federal vs. NY differences:**
+- **Rule:** FRAP 8 (federal) not CPLR §5519 (NY)
+- **Bond:** FRCP 62(b) requirements different from NY automatic stay
+- **Timeline:** Must exhaust District Court before Circuit (FRAP 8(a)(1))
+- **Standard:** *Nken* four factors (federal) vs. *Hilton v. NYCHA*, 74 N.Y.2d 669 (1989) (NY)
+
+**Best practice:** File Notice of Appeal immediately (FRAP 4 deadline); seek stay from District Court first (FRAP 8(a)(1) requirement); prepare detailed showing of irreparable harm with supporting evidence; be ready to post bond; if District denies, file Circuit motion within 10 days.
+
 **[Federal][FRAP Rule 8] Stay of Judgment or Order Pending Appeal**
 
 ---

@@ -14,6 +14,99 @@ This template applies to United States District Courts and Circuit Courts of App
 
 # NOTICE OF APPEAL
 
+---
+
+## ⚠️ BEFORE USING THIS TEMPLATE
+
+### When to Use Federal Notice of Appeal
+
+**USE this template when:**
+- District Court entered final judgment or appealable order against you
+- You are within 30-day deadline from entry of judgment (60 days if United States is party)
+- You believe District Court made reversible legal or procedural error
+- Order is appealable under 28 U.S.C. §1291 (final decisions) or §1292 (certain interlocutory orders)
+- You have exhausted post-trial motions if required (e.g., FRCP 50(b), 59)
+
+**DO NOT use this if:**
+- Appeal deadline has passed (FRAP 4 deadline is jurisdictional - no extensions)
+- Order is non-appealable interlocutory order (not covered by §1292)
+- You want to re-argue merits to District Court (file motion for reconsideration instead)
+- Issue wasn't preserved below (need contemporaneous objection, except for certain issues)
+- You haven't received written order/judgment entered on docket yet
+
+**Appropriate example:** District Court granted defendant's motion for summary judgment dismissing your civil rights case; written order entered on CM/ECF 18 days ago; you believe court misapplied exhaustion requirement; you've preserved the issue by raising it in opposition brief.
+
+**Inappropriate example:** District Court denied your discovery motion 2 weeks ago but hasn't entered a written order yet (wait for entry of written order; FRAP 4 clock doesn't start until then).
+
+### Critical Timing and Prerequisites
+
+**STRICT DEADLINES - JURISDICTIONAL (MISS THESE AND LOSE YOUR APPEAL):**
+
+1. **30-day deadline (FRAP 4(a)(1)):** File notice of appeal within 30 days of entry of judgment
+   - Clock starts when judgment/order is entered on docket (not when you receive notice)
+   - If United States is party: 60 days (FRAP 4(a)(1)(B))
+   - "Entry" = clerk enters judgment on docket, not when judge signs it
+   - No extensions except as specified in FRAP 4(a)(5) (excusable neglect, max 14 days if motion filed within 30 days)
+
+2. **Preserve issues below:** Must have raised issue in District Court
+   - Exception: jurisdictional issues can be raised for first time on appeal
+   - Exception: pure questions of law from undisputed facts sometimes preserved
+   - General rule: "contemporaneous objection" required
+
+3. **File in correct court:** Notice filed in District Court (not Circuit Court)
+   - Circuit Court gets jurisdiction when notice is filed in District Court
+   - District Court retains jurisdiction for post-judgment motions during appeal
+
+4. **Order transcripts within 14 days:** FRAP 10(b)(1) mandatory requirement
+   - Must order transcripts and file certificate within 14 days
+   - Failure to order transcripts can result in dismissal
+
+### Resource Requirements & Realistic Expectations
+
+⚠️ **Important Considerations:**
+
+- **Timeline:** 12-18 months typical from notice of appeal to Circuit decision; 6 months for briefing, 6-12 months for decision
+- **Cost:** Transcripts ($3.30-5/page = $2,000-10,000+), $505 appellate filing fee, possible bond requirement
+- **Success rate:** ~8-10% reversal rate in civil cases; higher if clear legal error; very low for abuse of discretion review
+- **Perfection requirements:** Must order transcripts, assemble record, file briefs within strict deadlines or appeal dismissed
+- **Standards of review:** Legal conclusions (de novo), factual findings (clearly erroneous), discretionary rulings (abuse of discretion)
+- **What this achieves:** Circuit Court review of legal errors; potential reversal, vacation, or remand
+- **What this does NOT do:** Allow new evidence; retry facts; guarantee reversal; extend District Court deadlines
+
+**What happens after filing notice of appeal:**
+1. **14 days:** Order transcripts, file certificate (FRAP 10(b))
+2. **14 days:** File docketing statement in Circuit (check local rules)
+3. **14 days:** Designate record contents; appellee counter-designates (FRAP 10(a))
+4. **Varies:** District Court transmits record to Circuit (usually 2-4 months)
+5. **40 days after record filed:** Appellant's opening brief due (FRAP 31(a)(1))
+6. **30 days after opening brief:** Appellee's brief due (FRAP 31(a)(1))
+7. **21 days after appellee's brief:** Appellant's optional reply brief (FRAP 31(a)(1))
+8. **Oral argument:** Scheduled by Circuit (may be waived for routine appeals)
+9. **Decision:** Typically 4-12 months after oral argument/submission
+
+**Costs to expect:**
+- **Filing fee:** $505 for Circuit Court (may be waived if granted IFP status)
+- **Transcripts:** $3.30-5/page; bench trial can be $5,000-15,000; hearing $500-2,000
+- **Record preparation:** District Court charges for copying record (can be $100-500)
+- **Poor person relief (IFP):** File Application to Proceed In Forma Pauperis to waive fees (28 U.S.C. §1915)
+- **Stay bond:** If seeking stay of money judgment, may need FRCP 62(b) bond
+
+**Alternatives to consider:**
+- **FRCP 59(e) motion to alter/amend judgment** (28 days from entry) - Can extend appeal time under FRAP 4(a)(4)
+- **FRCP 60(b) motion for relief from judgment** - Based on mistake, new evidence, etc.
+- **Settle the case** - Negotiate resolution before appeal
+- **Consult appellate specialist** - Appeals are highly technical; mistakes can be fatal
+- **Petition for rehearing en banc** - After panel decision, if appropriate (rare)
+
+**Federal vs. NY differences:**
+- **Deadline:** 30 days from entry (federal) vs. 30 days from service of notice of entry (NY)
+- **Interlocutory appeals:** Limited to 28 U.S.C. §1292 (federal) vs. broader CPLR §5701(a)(2) (NY)
+- **Transcript rules:** FRAP 10(b) 14-day order requirement vs. CPLR §5525 (NY)
+- **Filing location:** District Court (federal) vs. trial court clerk (NY)
+- **Briefing schedule:** FRAP 31 (federal) vs. 22 NYCRR §670.8 (NY Appellate Division rules)
+
+**Best practice:** File notice of appeal immediately upon entry of unfavorable judgment (don't wait until day 30); order transcripts within 14 days; check Circuit local rules for docketing statement requirements; consult appellate attorney experienced in your Circuit; understand that filing notice of appeal is just first step in complex, expensive, year-long process.
+
 **[Federal][FRAP Rule 3] Appeal to Circuit Court of Appeals**
 
 ---
