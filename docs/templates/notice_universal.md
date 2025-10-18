@@ -34,48 +34,143 @@ This template applies to New York State courts (Supreme, Family, Appellate Divis
 - Complaint is about case outcome rather than procedural compliance
 - Issue requires substantive motion rather than notice
 
-**Appropriate example:** Multiple court actors (clerk and court attorney) failed to enter orders and provide case file access; need single comprehensive notice.
+**Appropriate Examples:**
 
-**Inappropriate example:** You lost your motion and want to complain generally about the process (use appeal or specific remedy instead).
+✅ **USE Universal Template:**
+1. **Court reporter won't produce transcript:** Reporter missed 90-day deadline (CPLR §8003); judge/AFC/clerk templates don't apply; need notice to court reporter directly
+2. **Court-appointed evaluator violated procedure:** Forensic psychologist in custody case disclosed confidential information violating 22 NYCRR Part 36; unique role not covered by other templates
+3. **Multiple actors with related failures:** Court clerk failed to docket orders AND court attorney refused to calendar motion; single comprehensive notice more efficient than two separate ones
+4. **Interpreter failed to appear:** Court interpreter no-showed at hearing violating Judiciary Law §390; caused adjournment; need formal notice for record
+5. **Court attorney exceeded authority:** Court attorney staff denied motion papers claiming "judge won't consider this" - exceeded ministerial role; not judicial act subject to judge template
+6. **Special referee violated procedure:** Referee appointed under CPLR §4311 failed to hold hearings as ordered; unique quasi-judicial role
+7. **Guardian ad litem (not AFC):** Adult incapacitated person's GAL failed statutory duties under MHL Article 81; different from AFC template
 
-### Preparation Steps
+❌ **DO NOT Use Universal Template:**
+1. Judge decided motion orally without written order → **Use notice_judge.md** (specific template exists)
+2. Opposing counsel won't respond to discovery → **Use notice_opposing_counsel.md** (specific template)
+3. Clerk rejected your NYSCEF filing → **Use ny_nyscef_violations.md** (specialized template)
+4. Attorney for child hasn't met with child → **Use notice_afc.md** (role-specific template)
+5. You lost your motion and disagree with outcome → **Use notice_of_appeal.md** (this is appeal, not compliance issue)
+6. Duty is disputed ("Judge says oral ruling sufficient") → **Use Article 78 after building record** (universal notice won't resolve legal dispute)
+
+### Try These Steps First
 
 **Before sending this notice:**
 
-1. **Check if specific template exists** (judge, AFC, assigned counsel, clerk, opposing counsel)
-2. **Identify specific statute/rule violated** with citation
-3. **Document the failure** with dates, docket references, attempts to resolve
-4. **Attempt informal resolution** appropriate to recipient's role
-5. **Customize role module** from template to match your situation
-6. **Verify proper service method** for recipient
+1. **Verify no specific template exists**
+   - Check all 6 role-specific templates: judge, AFC, assigned counsel, clerk, opposing counsel, universal
+   - Review specialized templates: NYSCEF violations, emergency stay, notice of appeal
+   - If specific template exists, use that instead (better case law support)
 
-**Document everything:** Statutory requirements, timeline of non-compliance, your attempts to resolve.
+2. **Identify specific statute/rule violated**
+   - Must cite exact CPLR, DRL, FCA, or 22 NYCRR provision
+   - Example: "CPLR §8003(a) requires court reporter to deliver transcript within 90 days"
+   - If duty is only in case law or general equity, universal notice is weaker
+
+3. **Determine if duty is ministerial or discretionary**
+   - **Ministerial:** "So plainly prescribed as to be free from doubt" (*Holtzman*)
+   - **Discretionary:** Requires judgment, policy determination, weighing factors
+   - Universal notice only works for ministerial duties
+
+4. **Document the failure thoroughly**
+   - Dates: When duty should have been performed, when you demanded compliance
+   - Docket references: NYSCEF entries, motion sequence numbers
+   - Communications: Emails, letters, phone calls requesting performance
+   - Build table showing timeline of non-compliance
+
+5. **Attempt informal resolution first**
+   - **For court personnel:** Email chambers, call clerk's office, speak to supervisor
+   - **For appointed professionals:** Contact directly, request meeting, send informal letter
+   - **For multiple actors:** Try to resolve each separately before combined notice
+   - **Document all attempts:** Save emails, note phone calls, keep correspondence
+
+6. **Customize role module from template**
+   - See Section "Role Modules" below for judge/clerk/counsel/other frameworks
+   - Replace {{placeholders}} with specific facts
+   - Add citations for role-specific duties
+   - Remove irrelevant modules
+
+7. **Verify proper service method**
+   - **Court personnel:** NYSCEF upload + email to chambers (check local rules)
+   - **Attorneys:** NYSCEF service on attorney's email service address
+   - **Non-attorneys:** Certified mail + regular mail
+   - **Multiple recipients:** Serve all; file one copy with court
+
+**Document everything:** Statutory requirements, timeline of non-compliance, your attempts to resolve, communications, docket entries.
 
 ### Resource Requirements & Customization
 
 ⚠️ **Important Considerations:**
 
-- **Customization required:** This is framework template requiring significant adaptation
-- **Legal research needed:** Must identify specific duties and authorities
-- **Less established:** Specific templates (judge, counsel, etc.) have more case law support
+- **Customization required:** This is framework template requiring significant adaptation (not fill-in-the-blank)
+- **Legal research needed:** Must independently research and cite specific duties and authorities for your situation
+- **Less established:** Specific templates have more case law support; universal template is newer remedy
+- **Timeline:** Varies by recipient; court personnel may respond in days; professionals may take weeks
+- **Success rate:** Moderate; depends on clarity of duty and strength of exhaustion showing
 - **Flexibility vs. precision:** More adaptable but less tailored than role-specific templates
-- **What this achieves:** Creates record for various procedural failures; preserves appeal issues
-- **What this does NOT do:** Provide detailed role-specific guidance; guarantee success
+- **What this achieves:** Creates record for various procedural failures; preserves appeal issues; may prompt compliance
+- **What this does NOT do:** Provide detailed role-specific guidance; guarantee success; replace need for motions/appeals
+
+**Cost Expectations:**
+- **Filing fees:** Usually $0 (notices not typically filed separately; attached to motions if needed)
+- **Service costs:** Certified mail ~$10; NYSCEF free
+- **Attorney consultation recommended:** $200-500 for review if complex role/duty
+- **Time investment:** 3-5 hours to research, customize, and serve
 
 **When to use specific templates instead:**
-- **Judge:** Use notice_judge.md for written order demands
-- **AFC:** Use notice_afc.md for attorney for child issues
-- **Assigned Counsel:** Use notice_assigned_counsel.md for representation failures
-- **Clerk:** Use notice_clerk.md for record-keeping issues
-- **Opposing Counsel:** Use notice_opposing_counsel.md for discovery/ethics violations
+
+| Situation | Correct Template | Why |
+|-----------|-----------------|-----|
+| Judge won't issue written orders | notice_judge.md | CPLR §2219(a) case law well-established |
+| AFC hasn't met with child | notice_afc.md | FCA §§241-249 specific to AFC duties |
+| Assigned counsel not communicating | notice_assigned_counsel.md | RPC 1.4 clear; IAC preservation language |
+| Clerk won't docket/enter orders | notice_clerk.md | CPLR §5017(b) ministerial duty case law |
+| Opposing counsel discovery abuse | notice_opposing_counsel.md | CPLR Article 31 + RPC 3.4 framework |
+| NYSCEF rejection/tech issues | ny_nyscef_violations.md | Uniform Rule 202.5-bb specific |
 
 **Appropriate use cases for universal template:**
-- Court reporter failed to produce transcript
-- Court-appointed evaluator violated procedural rules
-- Multiple actors with related failures
-- Unique role not covered by specific templates
 
-**Best practice:** Prefer specific templates when available; use universal only when necessary; heavily customize role modules and authorities to your specific situation.
+1. **Court Reporter Failures**
+   - Missed CPLR §8003 90-day transcript deadline
+   - Refused to produce transcript despite payment
+   - Produced incomplete/inaccurate transcript
+   - *Why universal:* No court reporter-specific template exists
+
+2. **Court-Appointed Professional Violations**
+   - Forensic evaluator (22 NYCRR Part 36 violations)
+   - Neutral evaluator in matrimonial (22 NYCRR §202.16(f))
+   - Special referee (CPLR §4311) procedural failures
+   - Guardian ad litem for incapacitated person (MHL Art. 81)
+   - *Why universal:* Quasi-judicial/professional roles not covered elsewhere
+
+3. **Multiple Actors with Related Failures**
+   - Clerk + Court Attorney both failed to process motions
+   - Judge + Referee both failed to issue required findings
+   - AFC + Attorney + GAL all failed to appear at hearing
+   - *Why universal:* Single comprehensive notice more efficient
+
+4. **Unique Court Personnel**
+   - Court interpreter violations (Judiciary Law §390)
+   - Court security refusal to permit access
+   - Court IT refusing CM/ECF access despite eligibility
+   - Part clerk refusing to accept filing
+   - *Why universal:* Ministerial duties exist but no specific template
+
+5. **Hybrid Roles**
+   - Law guardian acting as AFC (role confusion)
+   - Magistrate performing judicial functions without authority
+   - Court attorney making substantive rulings
+   - *Why universal:* Role doesn't fit cleanly into other categories
+
+**Best practice:**
+
+1. **Always prefer specific templates when available** - They have better case law support and are more likely to succeed
+2. **Use universal only when necessary** - When no other template fits or multiple actors involved
+3. **Heavily customize role modules and authorities** - This is framework, not fill-in-the-blank form
+4. **Cite specific duties with precision** - Vague "failed to perform duties" won't work; need exact statute/rule
+5. **Build strong exhaustion record** - 2-3 informal demands over time showing good faith
+6. **Consider motion as alternative** - If duty is disputed or complex, motion to compel may be better remedy
+7. **Preserve for appeal/Article 78** - Even if compliance not achieved, notice creates record for escalation
 
 ---
 
