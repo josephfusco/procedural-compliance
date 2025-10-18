@@ -1611,58 +1611,6 @@ html[data-theme="dark"] .badge-standard {
     background: linear-gradient(135deg, #6b7280 0%, #9ca3af 100%);
 }
 
-/* ================================================================== */
-/* Specification Notice - W3C/RFC Style                              */
-/* ================================================================== */
-
-.specification-notice {
-    background: linear-gradient(to bottom, #f8f9fa, #ffffff);
-    border-bottom: 2px solid var(--border);
-    padding: 1.5rem 0;
-}
-
-.spec-content {
-    text-align: center;
-}
-
-.spec-title {
-    font-family: 'SF Mono', 'Monaco', monospace;
-    font-size: 1.125rem; /* 18px */
-    font-weight: 600;
-    color: var(--color-base-darker);
-    margin-bottom: 0.5rem;
-    letter-spacing: 0.02em;
-}
-
-.spec-description {
-    font-size: 0.875rem; /* 14px */
-    color: var(--color-base-darker);
-    margin-bottom: 0.5rem;
-}
-
-.spec-meta {
-    font-size: 0.75rem; /* 12px */
-    color: var(--color-base);
-    opacity: 0.7;
-}
-
-/* Dark mode for specification notice */
-html[data-theme="dark"] .specification-notice {
-    background: linear-gradient(to bottom, #0f0f0f, #0a0a0a);
-    border-bottom-color: var(--border);
-}
-
-html[data-theme="dark"] .spec-title {
-    color: #d4d4d4;
-}
-
-html[data-theme="dark"] .spec-description {
-    color: #a3a3a3;
-}
-
-html[data-theme="dark"] .spec-meta {
-    color: #737373;
-}
 
 /* ================================================================== */
 /* Ultra-Subtle Contributors Footer                                  */
