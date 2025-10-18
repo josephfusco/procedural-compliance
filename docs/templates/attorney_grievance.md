@@ -14,6 +14,88 @@ This template applies to New York State courts (Supreme, Family, Appellate Divis
 
 # ATTORNEY GRIEVANCE COMPLAINT
 
+---
+
+## ⚠️ BEFORE USING THIS TEMPLATE
+
+### When to Use Attorney Grievance Complaint
+
+**USE this template when:**
+- Attorney committed serious professional misconduct (not mere mistakes or strategy disagreements)
+- Violations of NY Rules of Professional Conduct (22 NYCRR Part 1200) are clear and documented
+- You've attempted to resolve directly with attorney without success
+- Pattern of misconduct (multiple violations or ongoing refusal to comply with professional duties)
+- Violations harm clients, court system, or public confidence in legal profession
+
+**DO NOT use this if:**
+- You disagree with attorney's strategy or tactics (that's not misconduct)
+- Attorney made isolated mistake in judgment (unless gross negligence/incompetence)
+- This is primarily a fee dispute (use fee arbitration instead - 22 NYCRR Part 137)
+- You want different attorney (file motion to substitute counsel or request withdrawal)
+- Attorney vigorously advocated position you disagree with (that's their job)
+- You're unhappy with case outcome but attorney acted professionally
+
+**Appropriate example:** Retained attorney who never appeared at hearings, didn't file required papers, missed statute of limitations, never returned calls despite 20+ attempts over 6 months, and failed to withdraw when you requested; documented pattern of neglect violating RPC 1.3 (diligence) and 1.4 (communication).
+
+**Inappropriate example:** Attorney filed motion you think was weak and judge denied it (that's strategy disagreement and adverse outcome, not professional misconduct).
+
+### Try These Steps First
+
+**Before filing grievance complaint:**
+
+1. **Contact attorney directly** - Send email/letter detailing concerns; request meeting to discuss
+2. **Request performance** - Demand specific actions (return files, appear at hearing, file papers) by specific date
+3. **Request withdrawal** - If relationship broken, request attorney withdraw and return retainer/files
+4. **Fee arbitration** - If fee dispute, file for arbitration (22 NYCRR Part 137) - mandatory for attorney if you request
+5. **Contact supervising attorney** - If associate/junior attorney, contact firm partner or managing attorney
+6. **Document everything** - Keep copies of retainer agreement, communications, missed deadlines, court orders
+7. **Consult bar association** - Many have ethics hotlines for guidance on whether conduct constitutes misconduct
+
+**Document everything:** Retainer agreement, fee payments, communications (emails, voicemails), missed appearances, court orders showing attorney failures, timeline of events.
+
+### Resource Requirements & Disciplinary Process
+
+⚠️ **Important Considerations:**
+
+- **Timeline:** Investigation takes months to years; no guarantee of quick resolution or interim relief
+- **Confidentiality:** Complaints are confidential until formal charges filed (22 NYCRR §1240.8(a))
+- **Attorney will know:** Attorney will be notified of complaint and given opportunity to respond
+- **Success rate:** Varies; clear violations with documentation succeed; isolated incidents or judgment calls rarely result in discipline
+- **What this achieves:** Accountability; potential discipline (admonition, censure, suspension, disbarment); creates record
+- **What this does NOT do:** Get you money back; reverse case outcome; guarantee new attorney; provide immediate relief
+- **Consequences:** Attorney may withdraw from representation; relationship irreparably damaged
+
+**Disciplinary Range (from least to most severe):**
+
+1. **Dismissal** - No misconduct found or insufficient evidence
+2. **Letter of education** - Informal guidance; no public record
+3. **Letter of caution** - Informal warning; no public record
+4. **Private admonition** - Formal discipline; not public
+5. **Public censure** - Published discipline; serious misconduct
+6. **Suspension** - License suspended for period; very serious
+7. **Disbarment** - License revoked; most serious misconduct
+
+**Common RPC Violations That Warrant Grievance:**
+
+- **RPC 1.1 (Competence):** Gross negligence, inadequate preparation, ignorance of basic law
+- **RPC 1.3 (Diligence):** Pattern of missing deadlines, failing to appear, neglecting case
+- **RPC 1.4 (Communication):** Prolonged failure to respond, no status updates, unreachable
+- **RPC 1.5 (Fees):** Excessive fees, no written retainer, charging for work not done
+- **RPC 1.15 (Safekeeping Property):** Misappropriating client funds, commingling accounts
+- **RPC 3.3 (Candor to Tribunal):** Lying to court, fabricating evidence, false statements
+- **RPC 8.4(c) (Dishonesty):** Fraud, deceit, misrepresentation to client or others
+
+**Alternatives to Grievance Complaint:**
+
+- **Fee arbitration:** Mandatory if you request (22 NYCRR Part 137); resolves fee disputes
+- **Legal malpractice suit:** If attorney negligence caused damages; file in Supreme Court
+- **Motion to substitute counsel:** Request new attorney be appointed (if assigned counsel)
+- **Request for withdrawal:** Attorney must seek court permission to withdraw (22 NYCRR §1215.19)
+- **Complaint to firm:** If attorney is associate, contact managing partner
+- **Bar association mediation:** Some bar associations offer attorney-client mediation
+
+**Best practice:** Attempt to resolve directly first; document pattern of misconduct (not isolated errors); file grievance only for serious violations of professional duties; consider fee arbitration for fee disputes; consult with another attorney about whether conduct warrants grievance. Filing during active representation may cause attorney to withdraw.
+
 **[NY] Complaint to Attorney Grievance Committee Pursuant to 22 NYCRR Part 1240**
 
 ---

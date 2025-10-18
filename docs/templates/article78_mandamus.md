@@ -14,6 +14,82 @@ This template applies to New York State courts (Supreme, Family, Appellate Divis
 
 # VERIFIED PETITION FOR ARTICLE 78 MANDAMUS RELIEF
 
+---
+
+## ⚠️ BEFORE USING THIS TEMPLATE
+
+### When to Use Article 78 Mandamus
+
+**USE this template when:**
+- Public officer or court has clear legal duty to perform specific ministerial act
+- The duty is mandatory ("shall" language in statute/rule), not discretionary ("may")
+- Officer refuses or fails to perform despite demands
+- All other remedies (notices, motions, administrative appeals) have been exhausted
+- You need court order compelling performance of the duty
+
+**DO NOT use this if:**
+- The duty is discretionary (requires judgment or policy decision)
+- You haven't exhausted other remedies (notices of non-compliance, motions)
+- You're challenging merits of a decision (that's appeal, not mandamus)
+- You're within 4-month statute of limitations for direct appeal
+- Issue involves complex factual disputes requiring trial
+
+**Appropriate example:** Court decided motion orally 8 months ago but refuses to issue written order required by CPLR §2219(a); you served notices of non-compliance; filed omnibus notice; no written order issued; need order for appellate review.
+
+**Inappropriate example:** Judge denied your motion and you think decision was wrong (that's appeal or motion to reargue, not mandamus - you're challenging exercise of discretion, not failure to perform ministerial duty).
+
+### Try These Steps First
+
+**Before filing Article 78:**
+
+1. **Identify the specific duty** - Cite exact statute/rule requiring the act; confirm duty is ministerial
+2. **Serve notice of non-compliance** - Use notice templates in this toolkit; demand compliance by specific date
+3. **Document refusal** - Keep copies of all notices, responses (or lack thereof)
+4. **Exhaust administrative remedies** - File motions, omnibus notices, requests for relief
+5. **Verify statute of limitations** - Article 78 has 4-month SOL from accrual (CPLR §217(1)); appeals have different timelines
+6. **Consider alternatives** - Appeal, motion to compel, complaint to oversight body
+7. **Consult attorney** - Article 78 is complex; requires verified petition, memorandum of law, proper service
+
+**Document everything:** Notices served, dates of oral rulings, motions filed, responses received, statutory provisions violated.
+
+### Resource Requirements & Legal Standards
+
+⚠️ **Important Considerations:**
+
+- **Timeline:** 4-month statute of limitations from when duty should have been performed (CPLR §217(1)); proceeding takes 2-6 months
+- **Cost:** Court filing fees ($210 for Supreme Court); service costs; attorney recommended ($2,500-$10,000+)
+- **Complexity:** Requires verified petition, memorandum of law, exhibits; must show ministerial duty and exhaustion
+- **Success rate:** High if duty is clearly ministerial and exhaustion shown; low if duty is discretionary
+- **What this achieves:** Court order directing officer to perform specific act; establishes record for appeal if denied
+- **What this does NOT do:** Reverse substantive rulings; award damages; discipline the officer
+
+**Ministerial vs. Discretionary Duty:**
+
+- **Ministerial:** Duty "so plainly prescribed as to be free from doubt" (*Holtzman v. Goldman*, 71 N.Y.2d 564 (1988))
+  - Examples: Issue written order (CPLR §2219(a)); enter judgment on docket; provide court records (CPLR §5017(b))
+  - No judgment, policy decision, or weighing of factors required
+  - "Shall" language in statute/rule
+- **Discretionary:** Requires judgment, policy determination, weighing competing considerations
+  - Examples: Grant/deny motion; fashion relief; manage calendar
+  - NOT subject to mandamus (remedy is appeal or motion to reargue)
+
+**Exhaustion Requirement:**
+
+- Must exhaust available administrative remedies before Article 78
+- Serve notices of non-compliance using templates in this toolkit
+- File motions, omnibus notices, or administrative appeals
+- Exception: Exhaustion excused if remedy is inadequate or futile
+
+**Alternatives to Article 78:**
+
+- **Appeal:** If decision is appealable and within time limits (CPLR Article 55)
+- **Motion to compel:** Request court order officer to perform duty
+- **Administrative complaint:** Judicial conduct complaint, grievance committee
+- **Federal court:** 42 U.S.C. §1983 (civil rights violation) if state remedies inadequate
+- **Appellate mandamus:** Petition to Appellate Division for writ of mandamus
+
+**Best practice:** Article 78 is last resort after exhausting other remedies. Serve notices of non-compliance first; file motions; document refusals. Verify duty is ministerial (not discretionary). Consult attorney for complex proceedings. File within 4-month statute of limitations.
+
 **[NY][CPLR] Mandamus to Compel Performance of Ministerial Duty**
 
 ---

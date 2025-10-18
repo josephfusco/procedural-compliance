@@ -14,6 +14,101 @@ This template applies to New York State courts (Supreme, Family, Appellate Divis
 
 # COMPLAINT TO NY STATE COMMISSION ON JUDICIAL CONDUCT
 
+---
+
+## ⚠️ BEFORE USING THIS TEMPLATE
+
+### When to Use Judicial Conduct Complaint
+
+**USE this template when:**
+- Judge engaged in pattern of serious misconduct violating Code of Judicial Conduct (22 NYCRR Part 100)
+- Violations involve integrity, impartiality, or core judicial duties (not mere errors of law)
+- Pattern of conduct (multiple instances or systematic refusal to follow procedural law)
+- You've exhausted other remedies (appeals, motions for recusal, Article 78 mandamus)
+- Conduct harms administration of justice, due process, or public confidence in judiciary
+- Examples: Refusing to issue required orders, persistent ex parte communications, bias/prejudice, failure to provide hearings
+
+**DO NOT use this if:**
+- Judge ruled against you and you disagree with decision (that's appeal, not misconduct)
+- Judge made isolated error of law or fact (remedy is appeal or motion to reargue)
+- You haven't exhausted other remedies (appeal, Article 78, motion for recusal)
+- Issue is scheduling or case management within judge's discretion
+- You're unhappy with pace of proceedings but judge hasn't violated specific duty
+- Judge was impatient or discourteous but followed law (discourtesy alone rarely warrants discipline)
+
+**Appropriate example:** Over 18-month period, judge: (1) refused to issue written orders on 7 motions despite CPLR §2219(a) requirement; (2) held ex parte meetings with opposing counsel documented by emails; (3) denied all your requests without hearings; (4) made statements showing bias ("I don't believe anything you say"); pattern violates §100.3(B)(6) (right to be heard) and §100.2(A) (impartiality).
+
+**Inappropriate example:** Judge denied your motion for summary judgment and you think judge misapplied the law (that's legal error subject to appeal, not judicial misconduct).
+
+### Try These Steps First
+
+**Before filing judicial conduct complaint:**
+
+1. **Appeal the decision** - If judge made legal error, file notice of appeal (CPLR Article 55)
+2. **Motion for recusal** - If bias/prejudice, file motion for judge to recuse (22 NYCRR §100.3(E)(1))
+3. **Article 78 mandamus** - If judge refuses to perform ministerial duty, file Article 78 petition
+4. **Notice of non-compliance** - Serve notice to judge using templates in this toolkit
+5. **Administrative complaint to chief judge** - Some courts have internal complaint procedures
+6. **Federal court** - If state remedies exhausted, consider 42 U.S.C. §1983 (civil rights violation)
+7. **Consult attorney** - Judicial conduct complaints have serious consequences; attorney can advise
+
+**Document everything:** Docket sheets showing missing orders, transcripts of hearings, orders showing pattern, notices served, evidence of bias or ex parte contact.
+
+### Resource Requirements & Serious Consequences
+
+⚠️ **Important Considerations:**
+
+- **Timeline:** Investigation takes months to years; no interim relief or guarantee of quick resolution
+- **Confidentiality:** Complaints are confidential until formal charges filed (Judiciary Law §44(5))
+- **Judge will know:** Judge will be notified and given opportunity to respond; may affect ongoing case
+- **Success rate:** Low; Commission dismisses most complaints; discipline requires clear, egregious violations
+- **What this achieves:** Formal accountability; potential discipline (admonition, censure, removal); creates record
+- **What this does NOT do:** Reverse judge's decisions; remove judge from your case immediately; guarantee new judge; provide damages
+- **Consequences:** Filing during case is high-risk; judge may retaliate (consciously or unconsciously); relationship irreparably damaged
+
+**Disciplinary Range (from least to most severe):**
+
+1. **Dismissal** - No misconduct found or insufficient evidence (majority of complaints)
+2. **Confidential letter** - Informal guidance; no public record
+3. **Admonition** - Formal discipline; published but relatively minor
+4. **Censure** - Public discipline; serious misconduct
+5. **Removal from office** - Most serious; rare; requires egregious violations
+
+**Timing Considerations:**
+
+- **During pending case:** Highest risk; judge will know; may affect rulings (positively or negatively); complaint may be dismissed as premature
+- **After final judgment but before appeal:** Moderate risk; preserves appellate rights; judge still involved if remanded
+- **After appeal concluded:** Safest; case fully resolved; no impact on outcome; purely accountability measure
+
+**Common Code of Judicial Conduct Violations (22 NYCRR Part 100):**
+
+- **§100.2(A) - Integrity and Impartiality:** Bias, prejudice, appearance of impropriety, undermining confidence in judiciary
+- **§100.3(B)(6) - Right to be Heard:** Denying hearings, refusing to consider arguments, not allowing parties to present evidence
+- **§100.3(B)(8) - Relevant Information:** Refusing to consider relevant evidence or law
+- **§100.3(E)(1) - Disqualification:** Failing to recuse when impartiality might reasonably be questioned
+- **§100.3(B)(6) - Ex Parte Communications:** Communicating with one party without other party present
+- **§100.4 - Extrajudicial Activities:** Improper political activity, using office for personal benefit
+
+**Violations That Generally Do NOT Warrant Discipline:**
+
+- Legal errors (remedy: appeal)
+- Discretionary case management decisions
+- Isolated discourtesy or impatience
+- Rulings you disagree with
+- Denial of motions or relief
+- Controlling courtroom (unless violates due process)
+
+**Alternatives to Judicial Conduct Complaint:**
+
+- **Appeal:** CPLR Article 55; challenge legal errors and abuse of discretion
+- **Article 78 mandamus:** CPLR Article 78; compel performance of ministerial duties
+- **Motion for recusal:** 22 NYCRR §100.3(E)(1); request judge disqualify self
+- **Administrative complaint:** Letter to administrative judge or presiding justice
+- **Federal court:** 42 U.S.C. §1983 (civil rights); *Younger* abstention may apply
+- **Request for reassignment:** Some courts allow administrative reassignment
+
+**Best practice:** Exhaust all other remedies first (appeal, Article 78, recusal motion). File judicial conduct complaint only for pattern of serious misconduct violating core judicial duties, not isolated errors or adverse rulings. Consider timing carefully; filing after case concludes is safer. Document pattern thoroughly with docket sheets, orders, transcripts. Consult attorney about whether conduct rises to level warranting Commission complaint versus other remedies.
+
 **[NY] Formal Complaint Pursuant to 22 NYCRR Part 100 (Code of Judicial Conduct)**
 
 ---
