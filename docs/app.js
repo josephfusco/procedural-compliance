@@ -811,7 +811,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // ================================================================
 
     async function loadContributorsMinimal() {
-        const contributorsAPI = 'https://api.github.com/repos/joefusco/procedural-enclosure-toolkit/contributors';
+        const contributorsAPI = 'https://api.github.com/repos/josephfusco/procedural-compliance/contributors';
 
         try {
             const response = await fetch(contributorsAPI);
@@ -848,7 +848,7 @@ document.addEventListener('DOMContentLoaded', () => {
             document.getElementById('contributor-names').innerHTML = names;
         } catch (error) {
             console.error('Failed to load contributors:', error);
-            document.getElementById('contributor-names').textContent = 'joefusco';
+            document.getElementById('contributor-names').innerHTML = '<a href="https://github.com/josephfusco" target="_blank" rel="noopener">josephfusco</a>';
         }
     }
 
