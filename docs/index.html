@@ -280,13 +280,16 @@
         Skip to main content
     </a>
 
-    <!-- USWDS Site Alert Banner -->
-    <section class="usa-site-alert usa-site-alert--info" role="region" aria-label="Site alert">
+    <!-- Specification Notice -->
+    <section class="specification-notice" role="region" aria-label="Specification information">
         <div class="container mx-auto px-4">
-            <div class="flex items-center gap-2 py-2">
-                <img src="us_flag_small.png" class="gov-banner-flag" alt="" aria-hidden="true" loading="lazy">
-                <p class="text-sm text-foreground/90 m-0">
-                    <span class="font-medium">Educational Resource:</span> A public specification for verifiable procedural compliance • Not legal counsel
+            <div class="spec-content">
+                <h1 class="spec-title">Procedural Compliance Specification v1.0</h1>
+                <p class="spec-description">
+                    Open standard for documenting procedural failures in NY State & Federal courts
+                </p>
+                <p class="spec-meta">
+                    Educational resource · Not legal advice · MIT License
                 </p>
             </div>
         </div>
@@ -768,6 +771,20 @@
                 <p class="text-sm text-foreground/70 mt-2">Released under MIT License • Open Source Legal Framework</p>
                 <p class="text-xs text-foreground/60 mt-3">Accessibility: WCAG 2.1 AA • ADA Title II § 35.160 • Section 508 Standards</p>
             </div>
+
+            <!-- Ultra-Subtle Contributors Footer -->
+            <div class="contributors-minimal" id="contributors">
+                <div class="contributors-divider"></div>
+                <p class="contributors-text">
+                    <span id="contributor-names">Loading contributors...</span> ·
+                    <a href="https://github.com/joefusco/procedural-enclosure-toolkit/blob/main/LICENSE"
+                       target="_blank"
+                       rel="noopener">MIT License</a> ·
+                    <a href="https://github.com/joefusco/procedural-enclosure-toolkit"
+                       target="_blank"
+                       rel="noopener">GitHub</a>
+                </p>
+            </div>
         </div>
     </footer>
 
@@ -797,7 +814,7 @@
 
     <!-- Template Viewer Sheet -->
     <div id="template-modal" class="hidden fixed inset-0 z-50 bg-black/50" role="dialog" aria-modal="true" aria-labelledby="template-modal-title">
-        <div id="template-sheet" class="fixed inset-y-0 right-0 z-50 w-full md:w-[50vw] bg-background border-l border-border shadow-2xl flex flex-col">
+        <div id="template-sheet" class="fixed inset-y-0 right-0 z-50 w-full md:w-[66.666vw] bg-background border-l border-border shadow-2xl flex flex-col">
             <!-- Sheet Header -->
             <div class="flex items-center gap-3 px-3 py-2 border-b border-border">
                 <button id="template-modal-close" class="p-1 text-muted-foreground hover:text-foreground" aria-label="Close template viewer (press Escape)">

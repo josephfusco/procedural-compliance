@@ -805,4 +805,53 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         }
     });
+
+    // ================================================================
+    // Ultra-Minimal Contributors Loader with Full Names + Handles
+    // ================================================================
+
+    async function loadContributorsMinimal() {
+        const contributorsAPI = 'https://api.github.com/repos/joefusco/procedural-enclosure-toolkit/contributors';
+
+        try {
+            const response = await fetch(contributorsAPI);
+            const contributors = await response.json();
+
+            // Fetch full names for each contributor
+            const contributorPromises = contributors.map(async (contributor) => {
+                try {
+                    // Fetch user details to get full name
+                    const userResponse = await fetch(contributor.url);
+                    const userData = await userResponse.json();
+
+                    // Format: "Full Name (@username)" or just "@username" if no name
+                    const displayName = userData.name
+                        ? `${userData.name} (@${contributor.login})`
+                        : `@${contributor.login}`;
+
+                    return {
+                        html: `<a href="${contributor.html_url}" target="_blank" rel="noopener" title="${contributor.contributions} commits">${displayName}</a>`,
+                        contributions: contributor.contributions
+                    };
+                } catch (error) {
+                    // Fallback to just username if user fetch fails
+                    return {
+                        html: `<a href="${contributor.html_url}" target="_blank" rel="noopener" title="${contributor.contributions} commits">@${contributor.login}</a>`,
+                        contributions: contributor.contributions
+                    };
+                }
+            });
+
+            const contributorData = await Promise.all(contributorPromises);
+            const names = contributorData.map(c => c.html).join('');
+
+            document.getElementById('contributor-names').innerHTML = names;
+        } catch (error) {
+            console.error('Failed to load contributors:', error);
+            document.getElementById('contributor-names').textContent = 'joefusco';
+        }
+    }
+
+    // Load contributors on ready
+    loadContributorsMinimal();
 });
