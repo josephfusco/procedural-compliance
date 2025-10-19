@@ -1,0 +1,28 @@
+{
+  "name": "procedural-enclosure-toolkit",
+  "version": "1.0.0",
+  "description": "An open, citation-based standard for verifying adherence to court procedure and professional ethics.",
+  "main": "build-templates.js",
+  "directories": {
+    "doc": "docs",
+    "example": "examples"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/josephfusco/procedural-compliance.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/josephfusco/procedural-compliance/issues"
+  },
+  "homepage": "https://github.com/josephfusco/procedural-compliance#readme",
+  "dependencies": {
+    "marked": "^16.4.1"
+  }
+}
