@@ -1,0 +1,616 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="CPLR §5519 - Stay Pending Appeal - Emergency Stay">
+    <title>Emergency Stay | Procedural Compliance Framework</title>
+
+    <!-- Favicon -->
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>⚖️</text></svg>">
+
+    <!-- USWDS Public Sans Font -->
+    <link rel="preload" href="../fonts/public-sans/PublicSans-Regular.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="../fonts/public-sans/PublicSans-SemiBold.woff2" as="font" type="font/woff2" crossorigin>
+
+    <!-- Social Preview Meta Tags -->
+    <meta property="og:title" content="Emergency Stay">
+    <meta property="og:description" content="CPLR §5519 - Stay Pending Appeal">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://proceduralcompliance.org/templates/emergency-stay.html">
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Custom Tailwind Config -->
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                container: {
+                    center: true,
+                    padding: '1rem',
+                    screens: {
+                        sm: '1100px',
+                        md: '1100px',
+                        lg: '1100px',
+                        xl: '1100px',
+                        '2xl': '1100px'
+                    }
+                },
+                extend: {
+                    colors: {
+                        border: '#dfe1e2',
+                        input: '#dfe1e2',
+                        ring: '#005EA2',
+                        background: '#ffffff',
+                        foreground: '#1b1b1b',
+                        primary: {
+                            DEFAULT: '#005EA2',
+                            foreground: '#ffffff'
+                        },
+                        secondary: {
+                            DEFAULT: '#f9fafb',
+                            foreground: '#1a1a1a'
+                        },
+                        muted: {
+                            DEFAULT: '#f9fafb',
+                            foreground: '#6b7280'
+                        },
+                        accent: {
+                            DEFAULT: '#b8860b',
+                            foreground: '#ffffff'
+                        }
+                    },
+                    fontFamily: {
+                        serif: ['Georgia', 'Cambria', 'Times New Roman', 'serif'],
+                        sans: ['Public Sans', '-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'Roboto', 'sans-serif'],
+                        mono: ['Monaco', 'Courier New', 'monospace']
+                    }
+                }
+            }
+        }
+    </script>
+
+    <link rel="stylesheet" href="../styles.css">
+</head>
+<body class="bg-background text-foreground font-sans antialiased">
+    <!-- Skip Navigation Link -->
+    <a href="#main-content" class="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 focus:z-50 focus:px-4 focus:py-2 focus:bg-primary focus:text-primary-foreground focus:rounded focus:outline-none focus:ring-4 focus:ring-ring focus:ring-offset-2">
+        Skip to main content
+    </a>
+
+    <!-- US Government-Style Banner -->
+    <section class="gov-banner" role="region" aria-label="Official government-style notice">
+        <div class="container mx-auto px-4 py-2">
+            <div class="flex items-center gap-2">
+                <img src="../us_flag_small.png" class="gov-banner-flag" alt="U.S. flag" loading="eager">
+                <p class="gov-banner-text">An open framework for documenting procedural compliance · Not legal advice</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Header -->
+    <header class="w-full border-b border-border bg-background" role="banner">
+        <div class="container mx-auto px-4 py-3">
+            <div class="flex flex-col md:flex-row md:h-14 md:items-center md:justify-between gap-3 md:gap-0">
+                <div class="flex items-center justify-between">
+                    <div class="flex items-center space-x-2">
+                        <span class="text-xl" role="img" aria-label="Scales of justice">⚖️</span>
+                        <h1 class="text-lg font-sans font-semibold">
+                            <a href="../index.html" class="hover:text-primary transition-colors">Procedural Compliance Framework</a>
+                        </h1>
+                    </div>
+                    <nav class="hidden md:flex items-center space-x-6 text-sm ml-8">
+                        <a href="../index.html#templates" class="text-foreground/80 hover:text-foreground transition-colors">Templates</a>
+                        <a href="https://github.com/josephfusco/procedural-compliance" target="_blank" rel="noopener noreferrer" class="text-foreground/80 hover:text-foreground transition-colors">GitHub</a>
+                    </nav>
+                </div>
+                <div class="flex items-center gap-2">
+                    <button id="theme-toggle" class="flex items-center justify-center px-4 py-2 text-sm font-medium text-foreground bg-transparent rounded border-2 border-border hover:bg-muted transition-colors focus:outline-none focus:ring-4 focus:ring-ring focus:ring-offset-2" aria-label="Light mode. Click to toggle" role="switch" aria-checked="false">
+                        <span id="theme-label">Light</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Breadcrumb Navigation -->
+    <nav class="border-b border-border bg-muted/30" aria-label="Breadcrumb">
+        <div class="container mx-auto px-4 py-3">
+            <ol class="flex items-center space-x-2 text-sm">
+                <li><a href="../index.html" class="text-foreground/60 hover:text-foreground transition-colors">Home</a></li>
+                <li class="text-foreground/40">/</li>
+                <li><a href="../index.html#templates" class="text-foreground/60 hover:text-foreground transition-colors">Templates</a></li>
+                <li class="text-foreground/40">/</li>
+                <li class="text-foreground font-medium" aria-current="page">Emergency Stay</li>
+            </ol>
+        </div>
+    </nav>
+
+    <main id="main-content" role="main">
+        <!-- Template Header -->
+        <div class="border-b border-border bg-muted/30">
+            <div class="container mx-auto px-4 py-8">
+                <div class="flex items-start justify-between gap-4">
+                    <div class="flex-1">
+                        <div class="flex items-center gap-3 mb-3">
+                            <span class="badge badge-ny">NY</span>
+                            <h1 class="text-3xl font-sans font-semibold text-foreground">Emergency Stay</h1>
+                        </div>
+                        <p class="text-base text-muted-foreground">CPLR §5519 - Stay Pending Appeal</p>
+                    </div>
+                    <div class="flex gap-2">
+                        <a href="https://github.com/josephfusco/procedural-compliance/blob/main/templates/emergency_stay.md" target="_blank" rel="noopener noreferrer" class="px-4 py-2 text-sm font-medium text-foreground bg-transparent rounded border-2 border-border hover:bg-muted transition-colors focus:outline-none focus:ring-4 focus:ring-ring focus:ring-offset-2">
+                            Edit on GitHub
+                        </a>
+                        <a href="../templates/emergency_stay.md" download class="px-4 py-2 text-sm font-medium text-primary-foreground bg-primary rounded border-2 border-primary hover:bg-primary/90 transition-colors focus:outline-none focus:ring-4 focus:ring-ring focus:ring-offset-2">
+                            Download
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Template Content -->
+        <div class="container mx-auto px-4 py-12">
+            <div class="prose prose-slate mx-auto" id="template-content">
+                <hr>
+<p><strong>JURISDICTION: NEW YORK</strong></p>
+<h2>This template applies to New York State courts (Supreme, Family, Appellate Division) governed by CPLR, DRL, FCA, and 22 NYCRR.</h2>
+<h1>MOTION FOR STAY PENDING APPEAL</h1>
+<p><strong>[NY][CPLR] Emergency Stay Pursuant to CPLR §5519</strong></p>
+<hr>
+<h2>⚠️ BEFORE USING THIS TEMPLATE</h2>
+<h3>When to Use Motion for Stay Pending Appeal</h3>
+<p><strong>USE this template when:</strong></p>
+<ul>
+<li>You filed notice of appeal and need to stop enforcement of judgment/order</li>
+<li>Enforcement would cause irreparable harm that can&#39;t be undone if you win appeal</li>
+<li>You have likelihood of success on appeal (not frivolous)</li>
+<li>Harm to you from enforcement exceeds harm to other party from delay</li>
+<li>Judgment involves custody, property sale, or other irreversible action</li>
+</ul>
+<p><strong>DO NOT use this if:</strong></p>
+<ul>
+<li>You haven&#39;t filed notice of appeal yet (file that first)</li>
+<li>Appeal is frivolous or weak (courts won&#39;t stay for unlikely appeals)</li>
+<li>Money damages alone are at stake (usually not irreparable)</li>
+<li>You can&#39;t post required undertaking (if court requires one)</li>
+<li>No immediate enforcement is threatened</li>
+</ul>
+<p><strong>Appropriate example:</strong> Court ordered custody transfer to other parent; you filed appeal; transfer scheduled in 5 days; you need stay to prevent irreversible custody change pending appeal.</p>
+<p><strong>Inappropriate example:</strong> Court awarded $10,000 money judgment; you filed appeal but opposing party hasn&#39;t tried to collect yet (no imminent irreparable harm).</p>
+<h3>Legal Standard - You Must Prove ALL Four Elements</h3>
+<p><strong>To obtain stay, you MUST demonstrate:</strong></p>
+<ol>
+<li><p><strong>Likelihood of success on appeal</strong></p>
+<ul>
+<li>Not &quot;guaranteed to win&quot; but &quot;substantial probability of reversal&quot;</li>
+<li>Clear legal error by trial court</li>
+<li>Cite cases where similar errors were reversed</li>
+</ul>
+</li>
+<li><p><strong>Irreparable injury without stay</strong></p>
+<ul>
+<li>Harm that can&#39;t be compensated by money</li>
+<li>Examples: loss of custody, forced sale of home, constitutional violation</li>
+<li>Must be imminent and concrete, not speculative</li>
+</ul>
+</li>
+<li><p><strong>Balance of equities favors stay</strong></p>
+<ul>
+<li>Your harm from enforcement &gt; their harm from delay</li>
+<li>Consider: can you post undertaking to protect their interests?</li>
+</ul>
+</li>
+<li><p><strong>Public interest</strong> (if applicable)</p>
+<ul>
+<li>Maintaining constitutional rights</li>
+<li>Child welfare (custody cases)</li>
+<li>Usually neutral factor</li>
+</ul>
+</li>
+</ol>
+<p><strong>High bar to meet:</strong> Courts disfavor staying judgments. You need strong showing on all elements.</p>
+<h3>Timing and Procedure</h3>
+<p><strong>TIMING CRITICAL:</strong></p>
+<ol>
+<li><strong>File notice of appeal FIRST</strong> (required before stay motion)</li>
+<li><strong>Move for stay immediately</strong> (before enforcement occurs)</li>
+<li><strong>Automatic stay option</strong> (CPLR §5519(a)(1)):<ul>
+<li>If you serve notice of appeal within 30 days AND</li>
+<li>File undertaking (bond) in required amount</li>
+<li>Automatically stays money judgments (not custody, injunctions, etc.)</li>
+</ul>
+</li>
+</ol>
+<p><strong>WHERE TO MOVE:</strong></p>
+<ul>
+<li><strong>Trial court first</strong> (CPLR §5519(a)(1)) - faster, same judge who decided case</li>
+<li><strong>Appellate Division</strong> (CPLR §5519(a)(2)) - if trial court denies or you skip trial court</li>
+<li><strong>Both:</strong> Can move in trial court first, then Appellate Division if denied</li>
+</ul>
+<p><strong>NOTICE REQUIREMENTS:</strong></p>
+<ul>
+<li>Must give reasonable notice to all parties</li>
+<li>Emergency/ex parte stays rarely granted without notice</li>
+<li>Show good cause if seeking stay on shortened time</li>
+</ul>
+<h3>Resource Requirements &amp; Undertaking</h3>
+<p>⚠️ <strong>Important Considerations:</strong></p>
+<ul>
+<li><p><strong>Undertaking (bond):</strong> Court may require you to post bond to protect other party</p>
+<ul>
+<li>Typically 110% of judgment amount for money judgments</li>
+<li>May be waived for non-money judgments or if you&#39;re poor person</li>
+<li>Must obtain from surety company (costs money)</li>
+</ul>
+</li>
+<li><p><strong>Timeline:</strong></p>
+<ul>
+<li>Emergency: Can get stay in days/weeks if truly urgent</li>
+<li>Standard: 2-4 weeks for decision</li>
+<li>If denied by trial court, move in Appellate Division immediately</li>
+</ul>
+</li>
+<li><p><strong>Success rate:</strong> ~30-40% if you have strong irreparable harm + good appeal</p>
+</li>
+<li><p><strong>What this achieves:</strong> Stops enforcement while appeal pending; preserves status quo</p>
+</li>
+<li><p><strong>What this does NOT do:</strong> Guarantee success on appeal; make enforcement impossible forever (only delays)</p>
+</li>
+</ul>
+<p><strong>Costs:</strong></p>
+<ul>
+<li>Undertaking/bond premiums (typically 1-2% of bond amount per year)</li>
+<li>Motion filing fees</li>
+<li>Possible transcript costs if court needs record</li>
+</ul>
+<p><strong>Alternatives to consider:</strong></p>
+<ul>
+<li><strong>Negotiate with other party:</strong> Agree to voluntary stay pending appeal</li>
+<li><strong>Partial enforcement:</strong> Agree to some enforcement with protections</li>
+<li><strong>Expedited appeal:</strong> Request accelerated briefing schedule instead of stay</li>
+<li><strong>Supersedeas bond:</strong> Automatic stay for money judgments (CPLR §5519(a)(1))</li>
+</ul>
+<p><strong>Best practice:</strong> File stay motion immediately after notice of appeal; demonstrate concrete imminent harm; offer reasonable undertaking; show strong likelihood of success on appeal.</p>
+<hr>
+<p><strong>{{TRIAL COURT NAME}}</strong>
+<strong>COUNTY OF {{COUNTY}}</strong></p>
+<hr>
+<p>{{Movant Name}},
+{{Role}},</p>
+<p>-against-</p>
+<p>{{Respondent Name}},
+{{Role}},</p>
+<p>Index No. {{Number}}</p>
+<hr>
+<h2>NOTICE OF MOTION FOR STAY PENDING APPEAL</h2>
+<p>PLEASE TAKE NOTICE that upon the annexed affidavit/affirmation of {{Name}}, dated {{date}}, and the {{memorandum of law / exhibits / other supporting papers}} submitted herewith, movant will move this Court at {{Courthouse Address}}, {{Courtroom}}, on {{date}} at {{time}} in the {{a.m./p.m.}}, or as soon thereafter as counsel can be heard, for an order pursuant to CPLR §5519:</p>
+<ol>
+<li><p><strong>Staying enforcement</strong> of the {{order/judgment}} dated {{date}} pending determination of movant&#39;s appeal to the Appellate Division, {{Department}} Department;</p>
+</li>
+<li><p><strong>{{If applicable: Restoring status quo / Enjoining specific action / Maintaining custody / etc.}}</strong> pending appeal;</p>
+</li>
+<li><p>Granting such other and further relief as the Court deems just and proper.</p>
+</li>
+</ol>
+<p>PLEASE TAKE FURTHER NOTICE that movant filed a Notice of Appeal on {{date}} (Exhibit A), which is currently pending before the Appellate Division.</p>
+<hr>
+<p>Dated: {{Date}}</p>
+<p>Respectfully submitted,</p>
+<hr>
+<p>{{Your Signature}}
+{{Your Name}}
+{{Pro Se / Attorney for Movant}}
+{{Address}}
+{{Phone}}
+{{Email}}</p>
+<hr>
+<p><strong>TO:</strong> {{Opposing Counsel/Party}}
+        {{Address}}</p>
+<hr>
+<h2>AFFIDAVIT/AFFIRMATION IN SUPPORT</h2>
+<p>STATE OF NEW YORK  )
+                   ) ss.:
+COUNTY OF {{COUNTY}} )</p>
+<p>{{Name}}, being duly sworn/affirms under penalty of perjury, deposes and says:</p>
+<h3>I. BACKGROUND</h3>
+<ol>
+<li><p>I am the {{movant / attorney for movant}} in this action and have personal knowledge of the facts stated herein.</p>
+</li>
+<li><p>On {{date}}, this Court issued an {{order/judgment}} {{granting defendant&#39;s motion / dismissing complaint / etc.}} (Exhibit B).</p>
+</li>
+<li><p>On {{date}}, I filed a Notice of Appeal to the Appellate Division, {{Department}} Department (Exhibit A).</p>
+</li>
+<li><p>I now move for a stay of enforcement of the {{order/judgment}} pending appeal.</p>
+</li>
+</ol>
+<h3>II. LEGAL STANDARD</h3>
+<ol start="5">
+<li><p>CPLR §5519(a)(1) authorizes this Court to stay enforcement of a judgment or order &quot;upon such terms as may be just.&quot;</p>
+</li>
+<li><p>To obtain a stay, movant must demonstrate:</p>
+<ul>
+<li>Likelihood of success on the merits of the appeal</li>
+<li>Irreparable injury absent a stay</li>
+<li>Balance of equities favors a stay</li>
+<li>Public interest (if applicable)</li>
+</ul>
+</li>
+</ol>
+<p><em>William Karl Realty Corp. v. 420 W. 204th St. Realty LLC</em>, 132 A.D.3d 561 (1st Dep&#39;t 2015); <em>Doe v. Axelrod</em>, 73 N.Y.2d 748 (1988).</p>
+<h3>III. LIKELIHOOD OF SUCCESS ON APPEAL</h3>
+<ol start="7">
+<li>Movant has a substantial likelihood of success on appeal because:</li>
+</ol>
+<p><strong>[Provide specific appellate issues with supporting law]</strong></p>
+<p><strong>Issue 1:</strong> {{e.g., &quot;The trial court erred in granting summary judgment where genuine issues of material fact remain&quot;}}</p>
+<p><strong>Analysis:</strong> {{Brief explanation of why this is likely to be reversed. Cite cases where similar errors led to reversal.}}</p>
+<p><strong>Issue 2:</strong> {{e.g., &quot;The trial court violated CPLR §2219(a) by failing to state grounds for decision&quot;}}</p>
+<p><strong>Analysis:</strong> {{Explanation + authority}}</p>
+<p><strong>Issue 3:</strong> {{Additional issues}}</p>
+<ol start="8">
+<li><p>{{Supporting case law showing similar issues resulted in reversal}}</p>
+</li>
+<li><p>Absent the complained-of errors, the outcome would have been different.</p>
+</li>
+</ol>
+<h3>IV. IRREPARABLE INJURY</h3>
+<ol start="10">
+<li>Absent a stay, movant will suffer irreparable injury that cannot be compensated by money damages:</li>
+</ol>
+<p>**{{Describe specific irreparable harms - e.g.:</p>
+<ul>
+<li>&quot;Loss of parental rights/custody pending appeal (cannot be remedied if appeal succeeds)&quot;</li>
+<li>&quot;Enforcement of judgment will force sale of property&quot;</li>
+<li>&quot;Defendant will be judgment-proof by time of appeal&quot;</li>
+<li>&quot;Constitutional rights will be violated pending review&quot;}}**</li>
+</ul>
+<ol start="11">
+<li><p>These harms are imminent. Without a stay, {{specific harm will occur}}.</p>
+</li>
+<li><p>Money damages cannot remedy these harms because {{why damages are inadequate}}.</p>
+</li>
+</ol>
+<h3>V. BALANCE OF EQUITIES</h3>
+<ol start="13">
+<li>The balance of equities favors a stay:</li>
+</ol>
+<p><strong>Harm to Movant (if no stay):</strong></p>
+<ul>
+<li>{{Harm 1}}</li>
+<li>{{Harm 2}}</li>
+</ul>
+<p><strong>Harm to Respondent (if stay granted):</strong></p>
+<ul>
+<li>{{Minimal harm / Delay only / Can be compensated / etc.}}</li>
+</ul>
+<ol start="14">
+<li><p>Movant&#39;s harm is {{greater/irreversible}} while respondent&#39;s harm is {{lesser/remediable}}.</p>
+</li>
+<li><p>{{If applicable: Movant offers undertaking to protect respondent&#39;s interests.}}</p>
+</li>
+</ol>
+<h3>VI. PUBLIC INTEREST</h3>
+<ol start="16">
+<li>{{If applicable: The public interest favors/does not oppose a stay because {{reason - e.g., &quot;ensuring constitutional rights are not violated pending appeal&quot; / &quot;maintaining stability for minor child&quot; / etc.}}}}</li>
+</ol>
+<h3>VII. NO ADEQUATE ALTERNATIVE</h3>
+<ol start="17">
+<li>No alternative remedy exists. Without a stay, the appealed {{order/judgment}} will be enforced, rendering the appeal moot or meaningless.</li>
+</ol>
+<h3>VIII. TERMS OF STAY</h3>
+<ol start="18">
+<li>Movant proposes the following terms for the stay:</li>
+</ol>
+<p>{{If undertaking required:</p>
+<ul>
+<li>&quot;Movant will post undertaking in the amount of ${{X}} pursuant to CPLR §5519(a)(1)&quot;}}</li>
+</ul>
+<p>{{Other conditions:</p>
+<ul>
+<li>&quot;Movant will perfect appeal within {{X}} months&quot;</li>
+<li>&quot;Status quo will be maintained&quot;</li>
+<li>etc.}}</li>
+</ul>
+<h3>IX. NOTICE AND SERVICE</h3>
+<ol start="19">
+<li>This motion is made on {{X}} days&#39; notice to all parties. Service was made via {{method}} on {{date}}.</li>
+</ol>
+<p>WHEREFORE, movant respectfully requests that this Court grant a stay of enforcement of the {{order/judgment}} pending appeal, upon such terms as the Court deems just.</p>
+<hr>
+<p>{{Your Signature}}
+{{Your Name}}</p>
+<p>Sworn to before me this
+{{day}} day of {{month}}, {{year}}</p>
+<hr>
+<p>Notary Public</p>
+<hr>
+<h2>MEMORANDUM OF LAW</h2>
+<h3>I. APPLICABLE LEGAL STANDARD</h3>
+<p>CPLR §5519(a)(1) provides: &quot;Upon an appeal from a judgment or order..., the court which rendered the judgment or made the order, or the appellate division, may stay the enforcement of the judgment or order during the pendency of the appeal upon such terms as may be just...&quot;</p>
+<p>Stay requires showing:</p>
+<ol>
+<li>Likelihood of success on appeal</li>
+<li>Irreparable injury absent stay</li>
+<li>Balance of equities favors movant</li>
+<li>Public interest (if applicable)</li>
+</ol>
+<p><em>William Karl Realty</em>, 132 A.D.3d 561; <em>Doe v. Axelrod</em>, 73 N.Y.2d 748.</p>
+<h3>II. MOVANT SATISFIES ALL ELEMENTS</h3>
+<h4>A. Likelihood of Success</h4>
+<p>{{Expand on affidavit arguments. Cite cases showing similar errors led to reversal. Show this is not frivolous appeal.}}</p>
+<h4>B. Irreparable Injury</h4>
+<p>{{Expand on harms. Cite cases holding similar harms are irreparable.}}</p>
+<p><strong>Cases:</strong></p>
+<ul>
+<li><em>Duchesne v. Sugarman</em>, 566 F.2d 817 (2d Cir. 1977) (parent-child relationship)</li>
+<li><em>Kia P. v. McIntyre</em>, 235 F.3d 749 (2d Cir. 2000) (due process in custody)</li>
+<li>{{Other relevant cases}}</li>
+</ul>
+<h4>C. Balance of Equities</h4>
+<p>{{Compare harms. Show movant&#39;s harm outweighs respondent&#39;s.}}</p>
+<h4>D. Public Interest</h4>
+<p>{{If applicable, argue public interest in ensuring fair process, protecting constitutional rights, etc.}}</p>
+<h3>III. UNDERTAKING</h3>
+<p>{{If court requires undertaking under CPLR §5519(c), address:</p>
+<ul>
+<li>Movant&#39;s ability/willingness to post</li>
+<li>Appropriate amount</li>
+<li>Security for respondent&#39;s interests}}</li>
+</ul>
+<h3>IV. EXPEDITED APPEAL</h3>
+<p>Movant commits to perfecting appeal within {{timeframe}}, ensuring no undue delay.</p>
+<hr>
+<h2>PROPOSED ORDER</h2>
+<p><strong>SUPREME COURT OF THE STATE OF NEW YORK</strong>
+<strong>COUNTY OF {{COUNTY}}</strong></p>
+<p>{{Caption}}</p>
+<hr>
+<h2>ORDER</h2>
+<p>Upon the motion of {{movant}}, and upon all papers and proceedings heretofore had herein, and after {{oral argument / review of papers}}, it is hereby</p>
+<p><strong>ORDERED</strong> that enforcement of the {{order/judgment}} dated {{date}} is <strong>STAYED</strong> pending determination of movant&#39;s appeal to the Appellate Division, {{Department}} Department; and it is further</p>
+<p><strong>ORDERED</strong> that {{specific relief - e.g., &quot;custody remains with movant&quot; / &quot;sale of property is enjoined&quot; / etc.}}; and it is further</p>
+<p><strong>ORDERED</strong> that movant shall {{post undertaking / perfect appeal within X months / other condition}}.</p>
+<p><strong>ENTER:</strong></p>
+<hr>
+<p>Hon. {{Judge Name}}
+{{Title}}</p>
+<p>Dated: {{Date}}</p>
+<hr>
+<p><strong>Authority:</strong></p>
+<ul>
+<li>CPLR §5519 (stays)</li>
+<li>CPLR §5519(a)(1) (automatic stay if notice of appeal served within 30 days + undertaking filed)</li>
+<li>CPLR §5519(c) (undertaking)</li>
+<li><em>William Karl Realty Corp. v. 420 W. 204th St. Realty LLC</em>, 132 A.D.3d 561 (1st Dep&#39;t 2015)</li>
+<li><em>Doe v. Axelrod</em>, 73 N.Y.2d 748 (1988)</li>
+</ul>
+<p><strong>Note:</strong> If trial court denies stay, move for stay in Appellate Division under same standard (CPLR §5519(a)(2)).</p>
+
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="border-t-2 border-border bg-muted/30 py-12 mt-8" role="contentinfo">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-12 mb-10">
+                <div>
+                    <h3 class="text-lg font-sans font-semibold mb-4 text-foreground">Open Collaboration</h3>
+                    <p class="helpful-text text-sm mb-3 leading-relaxed">An open specification for verifying adherence to statutory procedure in state and federal courts. Contributions welcome.</p>
+                    <p class="helpful-text text-sm font-medium"><strong>Not legal advice.</strong> Educational purposes only.</p>
+                </div>
+
+                <div>
+                    <h3 class="text-lg font-sans font-semibold mb-4 text-foreground">Resources</h3>
+                    <ul class="space-y-3 text-sm">
+                        <li><a href="https://github.com/josephfusco/procedural-compliance" target="_blank" rel="noopener noreferrer" class="footer-link text-foreground/80 hover:text-foreground transition-colors underline decoration-1 underline-offset-2">GitHub Repository</a></li>
+                        <li><a href="https://github.com/josephfusco/procedural-compliance/blob/main/CONTRIBUTING.md" target="_blank" rel="noopener noreferrer" class="footer-link text-foreground/80 hover:text-foreground transition-colors underline decoration-1 underline-offset-2">Contributing Guide</a></li>
+                        <li><a href="https://github.com/josephfusco/procedural-compliance/issues" target="_blank" rel="noopener noreferrer" class="footer-link text-foreground/80 hover:text-foreground transition-colors underline decoration-1 underline-offset-2">Report Issue</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h3 class="text-lg font-sans font-semibold mb-4 text-foreground">Legal</h3>
+                    <ul class="space-y-3 text-sm">
+                        <li><a href="https://github.com/josephfusco/procedural-compliance/blob/main/LICENSE" target="_blank" rel="noopener noreferrer" class="footer-link text-foreground/80 hover:text-foreground transition-colors underline decoration-1 underline-offset-2">MIT License</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <div class="flex items-center gap-2 mb-4">
+                        <span class="badge badge-ny">NY</span>
+                        <h3 class="text-lg font-sans font-semibold text-foreground">NY Court Resources</h3>
+                    </div>
+                    <ul class="space-y-3 text-sm">
+                        <li><a href="https://www.nycourts.gov/efile/rules.shtml" target="_blank" rel="noopener noreferrer" class="footer-link text-foreground/80 hover:text-foreground transition-colors underline decoration-1 underline-offset-2">NYSCEF E-Filing Rules</a></li>
+                        <li><a href="https://ww2.nycourts.gov/courts/index.shtml" target="_blank" rel="noopener noreferrer" class="footer-link text-foreground/80 hover:text-foreground transition-colors underline decoration-1 underline-offset-2">NY Court Directory</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="border-t-2 border-border pt-8 text-center">
+                <p class="text-sm text-foreground/70 font-medium">&copy; 2025 Procedural Compliance Framework (PCF)</p>
+                <p class="text-sm text-foreground/70 mt-2">Released under MIT License • Open Source Legal Framework</p>
+                <p class="text-xs text-foreground/60 mt-3">Accessibility: WCAG 2.1 AA • ADA Title II § 35.160 • Section 508 Standards</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Theme Toggle Script -->
+    <script>
+        (function() {
+            const THEMES = { LIGHT: 'light', DARK: 'dark' };
+            const LABELS = { light: 'Light', dark: 'Dark' };
+            const ARIA_LABELS = {
+                light: 'Light mode. Click to switch to dark mode',
+                dark: 'Dark mode. Click to switch to light mode'
+            };
+
+            const themeToggle = document.getElementById('theme-toggle');
+            const themeLabel = document.getElementById('theme-label');
+            const html = document.documentElement;
+
+            function getSavedTheme() {
+                return localStorage.getItem('theme') || THEMES.LIGHT;
+            }
+
+            function applyTheme(theme) {
+                html.setAttribute('data-theme', theme);
+                themeLabel.textContent = LABELS[theme];
+                themeToggle.setAttribute('aria-checked', theme === THEMES.DARK ? 'true' : 'false');
+                themeToggle.setAttribute('aria-label', ARIA_LABELS[theme]);
+            }
+
+            function toggleTheme() {
+                const currentTheme = getSavedTheme();
+                const nextTheme = currentTheme === THEMES.LIGHT ? THEMES.DARK : THEMES.LIGHT;
+                localStorage.setItem('theme', nextTheme);
+                applyTheme(nextTheme);
+            }
+
+            applyTheme(getSavedTheme());
+            themeToggle.addEventListener('click', toggleTheme);
+            themeToggle.addEventListener('keydown', (e) => {
+                if (e.key === ' ' || e.key === 'Enter') {
+                    e.preventDefault();
+                    toggleTheme();
+                }
+            });
+        })();
+    </script>
+
+    <!-- Template Content Enhancements -->
+    <script>
+        // Separate metadata from document
+        const content = document.getElementById('template-content');
+        if (content) {
+            // Highlight placeholders
+            const walker = document.createTreeWalker(content, NodeFilter.SHOW_TEXT, null);
+            const nodesToReplace = [];
+            while (walker.nextNode()) {
+                const node = walker.currentNode;
+                if (node.textContent.includes('{{') && node.textContent.includes('}}')) {
+                    nodesToReplace.push(node);
+                }
+            }
+
+            nodesToReplace.forEach(node => {
+                const fragment = document.createDocumentFragment();
+                const tempDiv = document.createElement('div');
+                tempDiv.innerHTML = node.textContent.replace(
+                    /\{\{([^}]+)\}\}/g,
+                    '<span class="template-placeholder">{{$1}}</span>'
+                );
+                while (tempDiv.firstChild) {
+                    fragment.appendChild(tempDiv.firstChild);
+                }
+                node.parentNode.replaceChild(fragment, node);
+            });
+        }
+    </script>
+</body>
+</html>

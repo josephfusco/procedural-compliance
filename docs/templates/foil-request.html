@@ -1,0 +1,460 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Public Officers Law §87 - Records Request - FOIL Request">
+    <title>FOIL Request | Procedural Compliance Framework</title>
+
+    <!-- Favicon -->
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>⚖️</text></svg>">
+
+    <!-- USWDS Public Sans Font -->
+    <link rel="preload" href="../fonts/public-sans/PublicSans-Regular.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="../fonts/public-sans/PublicSans-SemiBold.woff2" as="font" type="font/woff2" crossorigin>
+
+    <!-- Social Preview Meta Tags -->
+    <meta property="og:title" content="FOIL Request">
+    <meta property="og:description" content="Public Officers Law §87 - Records Request">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://proceduralcompliance.org/templates/foil-request.html">
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Custom Tailwind Config -->
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                container: {
+                    center: true,
+                    padding: '1rem',
+                    screens: {
+                        sm: '1100px',
+                        md: '1100px',
+                        lg: '1100px',
+                        xl: '1100px',
+                        '2xl': '1100px'
+                    }
+                },
+                extend: {
+                    colors: {
+                        border: '#dfe1e2',
+                        input: '#dfe1e2',
+                        ring: '#005EA2',
+                        background: '#ffffff',
+                        foreground: '#1b1b1b',
+                        primary: {
+                            DEFAULT: '#005EA2',
+                            foreground: '#ffffff'
+                        },
+                        secondary: {
+                            DEFAULT: '#f9fafb',
+                            foreground: '#1a1a1a'
+                        },
+                        muted: {
+                            DEFAULT: '#f9fafb',
+                            foreground: '#6b7280'
+                        },
+                        accent: {
+                            DEFAULT: '#b8860b',
+                            foreground: '#ffffff'
+                        }
+                    },
+                    fontFamily: {
+                        serif: ['Georgia', 'Cambria', 'Times New Roman', 'serif'],
+                        sans: ['Public Sans', '-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'Roboto', 'sans-serif'],
+                        mono: ['Monaco', 'Courier New', 'monospace']
+                    }
+                }
+            }
+        }
+    </script>
+
+    <link rel="stylesheet" href="../styles.css">
+</head>
+<body class="bg-background text-foreground font-sans antialiased">
+    <!-- Skip Navigation Link -->
+    <a href="#main-content" class="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 focus:z-50 focus:px-4 focus:py-2 focus:bg-primary focus:text-primary-foreground focus:rounded focus:outline-none focus:ring-4 focus:ring-ring focus:ring-offset-2">
+        Skip to main content
+    </a>
+
+    <!-- US Government-Style Banner -->
+    <section class="gov-banner" role="region" aria-label="Official government-style notice">
+        <div class="container mx-auto px-4 py-2">
+            <div class="flex items-center gap-2">
+                <img src="../us_flag_small.png" class="gov-banner-flag" alt="U.S. flag" loading="eager">
+                <p class="gov-banner-text">An open framework for documenting procedural compliance · Not legal advice</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Header -->
+    <header class="w-full border-b border-border bg-background" role="banner">
+        <div class="container mx-auto px-4 py-3">
+            <div class="flex flex-col md:flex-row md:h-14 md:items-center md:justify-between gap-3 md:gap-0">
+                <div class="flex items-center justify-between">
+                    <div class="flex items-center space-x-2">
+                        <span class="text-xl" role="img" aria-label="Scales of justice">⚖️</span>
+                        <h1 class="text-lg font-sans font-semibold">
+                            <a href="../index.html" class="hover:text-primary transition-colors">Procedural Compliance Framework</a>
+                        </h1>
+                    </div>
+                    <nav class="hidden md:flex items-center space-x-6 text-sm ml-8">
+                        <a href="../index.html#templates" class="text-foreground/80 hover:text-foreground transition-colors">Templates</a>
+                        <a href="https://github.com/josephfusco/procedural-compliance" target="_blank" rel="noopener noreferrer" class="text-foreground/80 hover:text-foreground transition-colors">GitHub</a>
+                    </nav>
+                </div>
+                <div class="flex items-center gap-2">
+                    <button id="theme-toggle" class="flex items-center justify-center px-4 py-2 text-sm font-medium text-foreground bg-transparent rounded border-2 border-border hover:bg-muted transition-colors focus:outline-none focus:ring-4 focus:ring-ring focus:ring-offset-2" aria-label="Light mode. Click to toggle" role="switch" aria-checked="false">
+                        <span id="theme-label">Light</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Breadcrumb Navigation -->
+    <nav class="border-b border-border bg-muted/30" aria-label="Breadcrumb">
+        <div class="container mx-auto px-4 py-3">
+            <ol class="flex items-center space-x-2 text-sm">
+                <li><a href="../index.html" class="text-foreground/60 hover:text-foreground transition-colors">Home</a></li>
+                <li class="text-foreground/40">/</li>
+                <li><a href="../index.html#templates" class="text-foreground/60 hover:text-foreground transition-colors">Templates</a></li>
+                <li class="text-foreground/40">/</li>
+                <li class="text-foreground font-medium" aria-current="page">FOIL Request</li>
+            </ol>
+        </div>
+    </nav>
+
+    <main id="main-content" role="main">
+        <!-- Template Header -->
+        <div class="border-b border-border bg-muted/30">
+            <div class="container mx-auto px-4 py-8">
+                <div class="flex items-start justify-between gap-4">
+                    <div class="flex-1">
+                        <div class="flex items-center gap-3 mb-3">
+                            <span class="badge badge-ny">NY</span>
+                            <h1 class="text-3xl font-sans font-semibold text-foreground">FOIL Request</h1>
+                        </div>
+                        <p class="text-base text-muted-foreground">Public Officers Law §87 - Records Request</p>
+                    </div>
+                    <div class="flex gap-2">
+                        <a href="https://github.com/josephfusco/procedural-compliance/blob/main/templates/foil_request.md" target="_blank" rel="noopener noreferrer" class="px-4 py-2 text-sm font-medium text-foreground bg-transparent rounded border-2 border-border hover:bg-muted transition-colors focus:outline-none focus:ring-4 focus:ring-ring focus:ring-offset-2">
+                            Edit on GitHub
+                        </a>
+                        <a href="../templates/foil_request.md" download class="px-4 py-2 text-sm font-medium text-primary-foreground bg-primary rounded border-2 border-primary hover:bg-primary/90 transition-colors focus:outline-none focus:ring-4 focus:ring-ring focus:ring-offset-2">
+                            Download
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Template Content -->
+        <div class="container mx-auto px-4 py-12">
+            <div class="prose prose-slate mx-auto" id="template-content">
+                <hr>
+<p><strong>JURISDICTION: NEW YORK</strong></p>
+<h2>This template applies to New York State courts (Supreme, Family, Appellate Division) governed by CPLR, DRL, FCA, and 22 NYCRR.</h2>
+<h1>FREEDOM OF INFORMATION LAW REQUEST</h1>
+<hr>
+<h2>⚠️ BEFORE USING THIS TEMPLATE</h2>
+<h3>When to Use FOIL Request</h3>
+<p><strong>USE this template when:</strong></p>
+<ul>
+<li>You need records held by NY state agency, municipal government, or local entity</li>
+<li>Records are not already publicly available online (check agency website first)</li>
+<li>You need formal statutory process with deadlines and appeal rights</li>
+<li>Agency denied informal request or didn&#39;t respond</li>
+<li>Records needed for litigation preparation, accountability, research, or public interest purposes</li>
+</ul>
+<p><strong>DO NOT use this if:</strong></p>
+<ul>
+<li>Records are already online (check agency website, Open Data NY portal, SEQR databases)</li>
+<li>This is federal agency (use federal FOIA instead - 5 U.S.C. §552)</li>
+<li>You need court records (use CPLR §5017(b) request to clerk or judicial FOIL under 22 NYCRR §216.1)</li>
+<li>Records needed for active litigation discovery (use CPLR §3101 discovery or subpoena instead)</li>
+<li>You need urgent access (FOIL has 20+ business day timeline; may take months)</li>
+<li>This is personnel records about yourself (request directly from employer under different procedure)</li>
+</ul>
+<p><strong>Appropriate example:</strong> Need emails and meeting minutes from county planning board about denial of your zoning variance application; informal request to clerk ignored; no litigation pending yet; records likely exist and not exempt.</p>
+<p><strong>Inappropriate example:</strong> Seeking state police investigative file about pending criminal case (law enforcement exemption under POL §87(2)(e); records likely exempt).</p>
+<h3>Try These Steps First</h3>
+<p><strong>Before filing FOIL request:</strong></p>
+<ol>
+<li><strong>Check if records already public</strong> - Agency website, NY Open Data portal, SEQR Environmental Notice Bulletin</li>
+<li><strong>Identify correct agency</strong> - Which state/local entity created or maintains the records?</li>
+<li><strong>Contact FOIL officer informally</strong> - Email or call; may get records faster and free</li>
+<li><strong>Be specific</strong> - Dates, subject matter, document types, parties, case/project numbers</li>
+<li><strong>Check agency FOIL page</strong> - Many have procedures, forms, or online portals</li>
+<li><strong>Consider scope</strong> - Broader requests take longer, cost more, more likely to trigger exemptions</li>
+<li><strong>Estimate fees</strong> - 25¢/page typical; can request fee waiver if in public interest</li>
+</ol>
+<p><strong>Document everything:</strong> Keep copies of request, acknowledgment, agency responses, denials for appeal.</p>
+<h3>Resource Requirements &amp; Realistic Expectations</h3>
+<p>⚠️ <strong>Important Considerations:</strong></p>
+<ul>
+<li><strong>Timeline:</strong> 5 business days for acknowledgment; 20 business days for response (POL §89(3)); actual production may take months for complex requests</li>
+<li><strong>Cost:</strong> Typically 25¢ per page for copies; can be $0-$1,000+ depending on volume; fees often waived for small requests or public interest</li>
+<li><strong>Success rate:</strong> High for clearly public records (meeting minutes, budgets); low for exempt records (investigations, attorney-client privileged)</li>
+<li><strong>Response options:</strong> Grant in full, partial grant with redactions, denial with exemption cited, or &quot;no responsive records&quot;</li>
+<li><strong>Appeal rights:</strong> 30 days to appeal denial to agency head; then Article 78 proceeding in Supreme Court</li>
+<li><strong>What this achieves:</strong> Legal access to public records; creates record for Article 78 if denied; promotes transparency</li>
+<li><strong>What this does NOT do:</strong> Provide immediate access; guarantee disclosure of exempt materials; compel agency to create new records; interpret or summarize records</li>
+</ul>
+<p><strong>FOIL Exemptions (POL §87(2)) - Agency can withhold:</strong></p>
+<ol>
+<li><strong>§87(2)(a):</strong> Records specifically exempted by state or federal statute</li>
+<li><strong>§87(2)(b):</strong> Records that would constitute unwarranted invasion of personal privacy</li>
+<li><strong>§87(2)(c):</strong> Records that would impair contract awards or collective bargaining</li>
+<li><strong>§87(2)(d):</strong> Trade secrets and confidential business information</li>
+<li><strong>§87(2)(e):</strong> Law enforcement records (if disclosure would interfere with investigation, reveal techniques, endanger life/safety, deprive fair trial)</li>
+<li><strong>§87(2)(f):</strong> Records that endanger life or safety of any person</li>
+<li><strong>§87(2)(g):</strong> Inter-agency or intra-agency materials (deliberative process) - most commonly claimed</li>
+<li><strong>§87(2)(h):</strong> Examination questions or answers used for licensing/employment</li>
+</ol>
+<p><strong>Fee Waiver Criteria (POL §87(1)(b)(iii)):</strong></p>
+<ul>
+<li>Disclosure primarily benefits general public by contributing to understanding of government operations</li>
+<li>Requester is news media, educational institution, or representative of public interest</li>
+<li>Financial hardship of requester</li>
+<li>Nominal cost (agencies often waive fees under $5-$10)</li>
+</ul>
+<p><strong>Alternatives to FOIL:</strong></p>
+<ul>
+<li><strong>Judicial records:</strong> CPLR §5017(b) request to court clerk; 22 NYCRR §216.1 (public access to court records)</li>
+<li><strong>Subpoena in litigation:</strong> CPLR §3101 discovery; CPLR §2307 subpoena duces tecum if records needed for pending case</li>
+<li><strong>Open Meetings Law:</strong> Public Officers Law §103-111 (attend public meetings; get meeting minutes)</li>
+<li><strong>Environmental records:</strong> 6 NYCRR Part 616 (SEQR public access); Environmental Notice Bulletin</li>
+<li><strong>Direct request:</strong> Many records available on agency websites without formal FOIL</li>
+</ul>
+<p><strong>Best practice:</strong> Start with informal request to FOIL officer or records access officer; be very specific in description of records (dates, subject, parties); request fee waiver if applicable; cite public interest benefit; preserve acknowledgment and responses for appeal; if denied, file administrative appeal within 30 days; if appeal denied, consider Article 78 proceeding in Supreme Court.</p>
+<p><strong>[NY][FOIL] Request for Records Pursuant to Public Officers Law §87</strong></p>
+<hr>
+<p><strong>TO:</strong> {{Records Access Officer / Agency Head}}
+        {{Agency/Court Name}}
+        {{Address}}</p>
+<p><strong>FROM:</strong> {{Your Name}}
+          {{Your Address}}
+          {{Email}}
+          {{Phone}}</p>
+<p><strong>DATE:</strong> {{Date}}</p>
+<p><strong>RE:</strong> Freedom of Information Law Request</p>
+<hr>
+<h2>REQUEST FOR RECORDS</h2>
+<p>Pursuant to the New York Freedom of Information Law (Public Officers Law §87) and implementing regulations, I hereby request access to and copies of the following records:</p>
+<h3>RECORDS REQUESTED</h3>
+<p>{{Specific description of records - Be as specific as possible. Include:</p>
+<ul>
+<li>Type of document (orders, transcripts, correspondence, emails, etc.)</li>
+<li>Date range</li>
+<li>Parties involved</li>
+<li>Case/matter number if applicable</li>
+<li>Any other identifying information}}</li>
+</ul>
+<p><strong>Example:</strong>
+&quot;All court orders, decisions, and transcripts related to Matter of {{Caption}}, Index No. {{Number}}, dated between {{Start Date}} and {{End Date}}, including but not limited to:</p>
+<ul>
+<li>Written orders on Motion Nos. 3, 5, and 7</li>
+<li>Transcripts of proceedings on {{dates}}</li>
+<li>Correspondence between court and parties</li>
+<li>Docket sheets and minute entries&quot;</li>
+</ul>
+<hr>
+<h2>FORMAT REQUESTED</h2>
+<p>Please provide the requested records in {{electronic format (PDF) / paper copies / opportunity to inspect originals}}.</p>
+<p>If electronic format is available, please email records to: {{email address}}.</p>
+<hr>
+<p>{{#if fee_waiver}}</p>
+<h2>FEE WAIVER REQUEST</h2>
+<p>I request a waiver of all fees associated with this request pursuant to Public Officers Law §87(1)(b)(iii) and 21 NYCRR §1401.9, on the grounds that:</p>
+<p>{{Reason for waiver - e.g., &quot;disclosure is in the public interest&quot; / &quot;requester cannot afford fees&quot; / &quot;records relate to ongoing litigation affecting requester&#39;s rights&quot;}}</p>
+<p>Public disclosure of these records would primarily benefit the general public by {{specific public benefit}}.</p>
+<p>{{/if}}</p>
+<hr>
+<h2>STATUTORY TIMELINE</h2>
+<p>Pursuant to Public Officers Law §89(3):</p>
+<ol>
+<li><p><strong>Acknowledgment:</strong> You must acknowledge receipt of this request within five (5) business days.</p>
+</li>
+<li><p><strong>Response:</strong> You must grant or deny access within twenty (20) business days of acknowledgment (or provide explanation for delay and reasonable date for response).</p>
+</li>
+<li><p><strong>Appeal:</strong> If access is denied, I may appeal to {{head of agency}} within thirty (30) days.</p>
+</li>
+</ol>
+<hr>
+<h2>LEGAL BASIS</h2>
+<p><strong>Public Officers Law §87(2):</strong></p>
+<blockquote>
+<p>&quot;Each entity subject to the provisions of this article... shall make available for public inspection and copying all records, except that such entity may deny access to records or portions thereof that... [enumerated exceptions].&quot;</p>
+</blockquote>
+<p><strong>Applicable to:</strong></p>
+<ul>
+<li>State agencies (Public Officers Law §86(3))</li>
+<li>Municipal corporations and local government entities</li>
+<li>Courts (22 NYCRR §216.1 for court records)</li>
+</ul>
+<p><strong>Exemptions:</strong>
+If you determine that any portion of the requested records is exempt from disclosure, please:</p>
+<ol>
+<li>Identify the specific exemption claimed (Public Officers Law §87(2)(a)-(i))</li>
+<li>Provide factual basis for exemption</li>
+<li>Redact only the exempt portion and provide remainder</li>
+</ol>
+<hr>
+<h2>CONTACT INFORMATION</h2>
+<p>Please direct all correspondence regarding this request to:</p>
+<p>{{Your Name}}
+{{Address}}
+{{Email}}
+{{Phone}}</p>
+<p>I am available to discuss this request and clarify the scope if needed.</p>
+<hr>
+<h2>CERTIFICATION</h2>
+<p>I certify that I am making this request for lawful purposes and that the information will not be used for commercial solicitation purposes in violation of Public Officers Law §89(2)(b).</p>
+<hr>
+<p>{{Your Signature}}
+{{Your Name}}</p>
+<p>Dated: {{Date}}</p>
+<hr>
+<p><strong>Authority:</strong></p>
+<ul>
+<li>Public Officers Law Article 6 (§§84-90) (Freedom of Information Law)</li>
+<li>21 NYCRR Part 1401 (implementing regulations)</li>
+<li>22 NYCRR §216.1 (access to court records)</li>
+<li>Public Officers Law §89(3) (response timeline)</li>
+<li>Public Officers Law §89(4)(a) (administrative appeal)</li>
+</ul>
+<p><strong>If Request is Denied:</strong></p>
+<ul>
+<li>Appeal to head of agency within 30 days (Public Officers Law §89(4)(a))</li>
+<li>Judicial review under Article 78 (Public Officers Law §89(4)(b))</li>
+</ul>
+<p><strong>Note:</strong> For court records, also check CPLR §5017(b) (clerk&#39;s duty to provide access) and local court rules.</p>
+
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="border-t-2 border-border bg-muted/30 py-12 mt-8" role="contentinfo">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-12 mb-10">
+                <div>
+                    <h3 class="text-lg font-sans font-semibold mb-4 text-foreground">Open Collaboration</h3>
+                    <p class="helpful-text text-sm mb-3 leading-relaxed">An open specification for verifying adherence to statutory procedure in state and federal courts. Contributions welcome.</p>
+                    <p class="helpful-text text-sm font-medium"><strong>Not legal advice.</strong> Educational purposes only.</p>
+                </div>
+
+                <div>
+                    <h3 class="text-lg font-sans font-semibold mb-4 text-foreground">Resources</h3>
+                    <ul class="space-y-3 text-sm">
+                        <li><a href="https://github.com/josephfusco/procedural-compliance" target="_blank" rel="noopener noreferrer" class="footer-link text-foreground/80 hover:text-foreground transition-colors underline decoration-1 underline-offset-2">GitHub Repository</a></li>
+                        <li><a href="https://github.com/josephfusco/procedural-compliance/blob/main/CONTRIBUTING.md" target="_blank" rel="noopener noreferrer" class="footer-link text-foreground/80 hover:text-foreground transition-colors underline decoration-1 underline-offset-2">Contributing Guide</a></li>
+                        <li><a href="https://github.com/josephfusco/procedural-compliance/issues" target="_blank" rel="noopener noreferrer" class="footer-link text-foreground/80 hover:text-foreground transition-colors underline decoration-1 underline-offset-2">Report Issue</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h3 class="text-lg font-sans font-semibold mb-4 text-foreground">Legal</h3>
+                    <ul class="space-y-3 text-sm">
+                        <li><a href="https://github.com/josephfusco/procedural-compliance/blob/main/LICENSE" target="_blank" rel="noopener noreferrer" class="footer-link text-foreground/80 hover:text-foreground transition-colors underline decoration-1 underline-offset-2">MIT License</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <div class="flex items-center gap-2 mb-4">
+                        <span class="badge badge-ny">NY</span>
+                        <h3 class="text-lg font-sans font-semibold text-foreground">NY Court Resources</h3>
+                    </div>
+                    <ul class="space-y-3 text-sm">
+                        <li><a href="https://www.nycourts.gov/efile/rules.shtml" target="_blank" rel="noopener noreferrer" class="footer-link text-foreground/80 hover:text-foreground transition-colors underline decoration-1 underline-offset-2">NYSCEF E-Filing Rules</a></li>
+                        <li><a href="https://ww2.nycourts.gov/courts/index.shtml" target="_blank" rel="noopener noreferrer" class="footer-link text-foreground/80 hover:text-foreground transition-colors underline decoration-1 underline-offset-2">NY Court Directory</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="border-t-2 border-border pt-8 text-center">
+                <p class="text-sm text-foreground/70 font-medium">&copy; 2025 Procedural Compliance Framework (PCF)</p>
+                <p class="text-sm text-foreground/70 mt-2">Released under MIT License • Open Source Legal Framework</p>
+                <p class="text-xs text-foreground/60 mt-3">Accessibility: WCAG 2.1 AA • ADA Title II § 35.160 • Section 508 Standards</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Theme Toggle Script -->
+    <script>
+        (function() {
+            const THEMES = { LIGHT: 'light', DARK: 'dark' };
+            const LABELS = { light: 'Light', dark: 'Dark' };
+            const ARIA_LABELS = {
+                light: 'Light mode. Click to switch to dark mode',
+                dark: 'Dark mode. Click to switch to light mode'
+            };
+
+            const themeToggle = document.getElementById('theme-toggle');
+            const themeLabel = document.getElementById('theme-label');
+            const html = document.documentElement;
+
+            function getSavedTheme() {
+                return localStorage.getItem('theme') || THEMES.LIGHT;
+            }
+
+            function applyTheme(theme) {
+                html.setAttribute('data-theme', theme);
+                themeLabel.textContent = LABELS[theme];
+                themeToggle.setAttribute('aria-checked', theme === THEMES.DARK ? 'true' : 'false');
+                themeToggle.setAttribute('aria-label', ARIA_LABELS[theme]);
+            }
+
+            function toggleTheme() {
+                const currentTheme = getSavedTheme();
+                const nextTheme = currentTheme === THEMES.LIGHT ? THEMES.DARK : THEMES.LIGHT;
+                localStorage.setItem('theme', nextTheme);
+                applyTheme(nextTheme);
+            }
+
+            applyTheme(getSavedTheme());
+            themeToggle.addEventListener('click', toggleTheme);
+            themeToggle.addEventListener('keydown', (e) => {
+                if (e.key === ' ' || e.key === 'Enter') {
+                    e.preventDefault();
+                    toggleTheme();
+                }
+            });
+        })();
+    </script>
+
+    <!-- Template Content Enhancements -->
+    <script>
+        // Separate metadata from document
+        const content = document.getElementById('template-content');
+        if (content) {
+            // Highlight placeholders
+            const walker = document.createTreeWalker(content, NodeFilter.SHOW_TEXT, null);
+            const nodesToReplace = [];
+            while (walker.nextNode()) {
+                const node = walker.currentNode;
+                if (node.textContent.includes('{{') && node.textContent.includes('}}')) {
+                    nodesToReplace.push(node);
+                }
+            }
+
+            nodesToReplace.forEach(node => {
+                const fragment = document.createDocumentFragment();
+                const tempDiv = document.createElement('div');
+                tempDiv.innerHTML = node.textContent.replace(
+                    /\{\{([^}]+)\}\}/g,
+                    '<span class="template-placeholder">{{$1}}</span>'
+                );
+                while (tempDiv.firstChild) {
+                    fragment.appendChild(tempDiv.firstChild);
+                }
+                node.parentNode.replaceChild(fragment, node);
+            });
+        }
+    </script>
+</body>
+</html>

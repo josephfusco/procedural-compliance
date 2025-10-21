@@ -1,0 +1,574 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="28 U.S.C. §1361 - Compel Federal Officer - Federal Mandamus">
+    <title>Federal Mandamus | Procedural Compliance Framework</title>
+
+    <!-- Favicon -->
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>⚖️</text></svg>">
+
+    <!-- USWDS Public Sans Font -->
+    <link rel="preload" href="../fonts/public-sans/PublicSans-Regular.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="../fonts/public-sans/PublicSans-SemiBold.woff2" as="font" type="font/woff2" crossorigin>
+
+    <!-- Social Preview Meta Tags -->
+    <meta property="og:title" content="Federal Mandamus">
+    <meta property="og:description" content="28 U.S.C. §1361 - Compel Federal Officer">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://proceduralcompliance.org/templates/federal-mandamus.html">
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Custom Tailwind Config -->
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                container: {
+                    center: true,
+                    padding: '1rem',
+                    screens: {
+                        sm: '1100px',
+                        md: '1100px',
+                        lg: '1100px',
+                        xl: '1100px',
+                        '2xl': '1100px'
+                    }
+                },
+                extend: {
+                    colors: {
+                        border: '#dfe1e2',
+                        input: '#dfe1e2',
+                        ring: '#005EA2',
+                        background: '#ffffff',
+                        foreground: '#1b1b1b',
+                        primary: {
+                            DEFAULT: '#005EA2',
+                            foreground: '#ffffff'
+                        },
+                        secondary: {
+                            DEFAULT: '#f9fafb',
+                            foreground: '#1a1a1a'
+                        },
+                        muted: {
+                            DEFAULT: '#f9fafb',
+                            foreground: '#6b7280'
+                        },
+                        accent: {
+                            DEFAULT: '#b8860b',
+                            foreground: '#ffffff'
+                        }
+                    },
+                    fontFamily: {
+                        serif: ['Georgia', 'Cambria', 'Times New Roman', 'serif'],
+                        sans: ['Public Sans', '-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'Roboto', 'sans-serif'],
+                        mono: ['Monaco', 'Courier New', 'monospace']
+                    }
+                }
+            }
+        }
+    </script>
+
+    <link rel="stylesheet" href="../styles.css">
+</head>
+<body class="bg-background text-foreground font-sans antialiased">
+    <!-- Skip Navigation Link -->
+    <a href="#main-content" class="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 focus:z-50 focus:px-4 focus:py-2 focus:bg-primary focus:text-primary-foreground focus:rounded focus:outline-none focus:ring-4 focus:ring-ring focus:ring-offset-2">
+        Skip to main content
+    </a>
+
+    <!-- US Government-Style Banner -->
+    <section class="gov-banner" role="region" aria-label="Official government-style notice">
+        <div class="container mx-auto px-4 py-2">
+            <div class="flex items-center gap-2">
+                <img src="../us_flag_small.png" class="gov-banner-flag" alt="U.S. flag" loading="eager">
+                <p class="gov-banner-text">An open framework for documenting procedural compliance · Not legal advice</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Header -->
+    <header class="w-full border-b border-border bg-background" role="banner">
+        <div class="container mx-auto px-4 py-3">
+            <div class="flex flex-col md:flex-row md:h-14 md:items-center md:justify-between gap-3 md:gap-0">
+                <div class="flex items-center justify-between">
+                    <div class="flex items-center space-x-2">
+                        <span class="text-xl" role="img" aria-label="Scales of justice">⚖️</span>
+                        <h1 class="text-lg font-sans font-semibold">
+                            <a href="../index.html" class="hover:text-primary transition-colors">Procedural Compliance Framework</a>
+                        </h1>
+                    </div>
+                    <nav class="hidden md:flex items-center space-x-6 text-sm ml-8">
+                        <a href="../index.html#templates" class="text-foreground/80 hover:text-foreground transition-colors">Templates</a>
+                        <a href="https://github.com/josephfusco/procedural-compliance" target="_blank" rel="noopener noreferrer" class="text-foreground/80 hover:text-foreground transition-colors">GitHub</a>
+                    </nav>
+                </div>
+                <div class="flex items-center gap-2">
+                    <button id="theme-toggle" class="flex items-center justify-center px-4 py-2 text-sm font-medium text-foreground bg-transparent rounded border-2 border-border hover:bg-muted transition-colors focus:outline-none focus:ring-4 focus:ring-ring focus:ring-offset-2" aria-label="Light mode. Click to toggle" role="switch" aria-checked="false">
+                        <span id="theme-label">Light</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Breadcrumb Navigation -->
+    <nav class="border-b border-border bg-muted/30" aria-label="Breadcrumb">
+        <div class="container mx-auto px-4 py-3">
+            <ol class="flex items-center space-x-2 text-sm">
+                <li><a href="../index.html" class="text-foreground/60 hover:text-foreground transition-colors">Home</a></li>
+                <li class="text-foreground/40">/</li>
+                <li><a href="../index.html#templates" class="text-foreground/60 hover:text-foreground transition-colors">Templates</a></li>
+                <li class="text-foreground/40">/</li>
+                <li class="text-foreground font-medium" aria-current="page">Federal Mandamus</li>
+            </ol>
+        </div>
+    </nav>
+
+    <main id="main-content" role="main">
+        <!-- Template Header -->
+        <div class="border-b border-border bg-muted/30">
+            <div class="container mx-auto px-4 py-8">
+                <div class="flex items-start justify-between gap-4">
+                    <div class="flex-1">
+                        <div class="flex items-center gap-3 mb-3">
+                            <span class="badge badge-federal"><img src="../us_flag_small.png" class="badge-flag-img" alt="U.S. flag" loading="lazy"><span>Federal</span></span>
+                            <h1 class="text-3xl font-sans font-semibold text-foreground">Federal Mandamus</h1>
+                        </div>
+                        <p class="text-base text-muted-foreground">28 U.S.C. §1361 - Compel Federal Officer</p>
+                    </div>
+                    <div class="flex gap-2">
+                        <a href="https://github.com/josephfusco/procedural-compliance/blob/main/templates/federal_mandamus.md" target="_blank" rel="noopener noreferrer" class="px-4 py-2 text-sm font-medium text-foreground bg-transparent rounded border-2 border-border hover:bg-muted transition-colors focus:outline-none focus:ring-4 focus:ring-ring focus:ring-offset-2">
+                            Edit on GitHub
+                        </a>
+                        <a href="../templates/federal_mandamus.md" download class="px-4 py-2 text-sm font-medium text-primary-foreground bg-primary rounded border-2 border-primary hover:bg-primary/90 transition-colors focus:outline-none focus:ring-4 focus:ring-ring focus:ring-offset-2">
+                            Download
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Template Content -->
+        <div class="container mx-auto px-4 py-12">
+            <div class="prose prose-slate mx-auto" id="template-content">
+                <hr>
+<p><strong>JURISDICTION: FEDERAL</strong></p>
+<h2>This template applies to United States District Courts and Circuit Courts of Appeals governed by FRCP, FRAP, and Federal Rules of Evidence.</h2>
+<h1>VERIFIED PETITION FOR WRIT OF MANDAMUS</h1>
+<hr>
+<h2>⚠️ BEFORE USING THIS TEMPLATE</h2>
+<h3>When to Use Federal Mandamus</h3>
+<p><strong>USE this template when:</strong></p>
+<ul>
+<li>Federal officer/employee has clear ministerial (non-discretionary) duty under statute/rule</li>
+<li>Officer refused or failed to perform that duty despite demands</li>
+<li>Duty is specific and mandatory (&quot;shall do X&quot;), not discretionary (&quot;may do X&quot;)</li>
+<li>You&#39;ve exhausted administrative remedies and informal resolution</li>
+<li>No other adequate legal remedy exists (e.g., no appeal right, no APA review)</li>
+</ul>
+<p><strong>DO NOT use this if:</strong></p>
+<ul>
+<li>Duty involves discretion or policy judgment (mandamus only for ministerial acts)</li>
+<li>You disagree with how officer exercised discretion (that&#39;s not mandamus)</li>
+<li>You haven&#39;t exhausted administrative appeals/procedures</li>
+<li>Another remedy is available (e.g., APA judicial review, direct appeal)</li>
+<li>Officer is state/local official, not federal (use state mandamus procedure)</li>
+</ul>
+<p><strong>Appropriate example:</strong> Filed FOIA request 18 months ago; agency acknowledged request but never responded; 5 U.S.C. §552 requires response within statutory timeframe; exhausted administrative appeals; agency has ministerial duty to process request.</p>
+<p><strong>Inappropriate example:</strong> FOIA request processed but agency withheld documents under Exemption 5; you think exemption was applied incorrectly (that&#39;s APA review of discretionary decision, not mandamus for ministerial duty).</p>
+<h3>Try These Steps First</h3>
+<p><strong>Before filing mandamus petition:</strong></p>
+<ol>
+<li><strong>Identify the ministerial duty</strong> - Must be specific, mandatory, and non-discretionary</li>
+<li><strong>Serve procedural enclosure</strong> - Use federal_notice_universal.md to demand compliance</li>
+<li><strong>Exhaust administrative remedies</strong> - File appeals within agency; document denials</li>
+<li><strong>Verify no alternative remedy</strong> - Check if APA review, direct appeal, or other remedy available</li>
+<li><strong>Build exhaustion record</strong> - Multiple demands over time showing good-faith efforts</li>
+<li><strong>Calculate timing</strong> - Mandamus may take 6-12 months; ensure underlying matter not moot</li>
+</ol>
+<p><strong>Document everything:</strong> Statute requiring duty, demands for compliance, agency responses/denials, exhaustion of remedies.</p>
+<h3>Resource Requirements &amp; Federal Standards</h3>
+<p>⚠️ <strong>Important Considerations:</strong></p>
+<ul>
+<li><strong>Timeline:</strong> 6-12 months from filing to decision; emergency stays rare unless truly urgent</li>
+<li><strong>Cost:</strong> Filing fees; possible need for attorney; government may have resources to oppose</li>
+<li><strong>Success rate:</strong> Low-moderate; courts scrutinize whether duty is truly ministerial vs. discretionary</li>
+<li><strong>Three-part test:</strong> (1) clear right to relief; (2) ministerial duty plainly defined; (3) no other adequate remedy (<em>Heckler v. Roe</em>, 465 U.S. 312 (1984))</li>
+<li><strong>What this achieves:</strong> Court order compelling officer to perform specific duty</li>
+<li><strong>What this does NOT do:</strong> Allow you to dictate how officer exercises discretion; provide appeal of discretionary decision</li>
+</ul>
+<p><strong>Ministerial vs. Discretionary:</strong></p>
+<ul>
+<li><strong>Ministerial:</strong> Duty so plainly prescribed as to be free from doubt; no judgment required (e.g., &quot;shall issue findings within 30 days&quot;)</li>
+<li><strong>Discretionary:</strong> Officer must make policy judgment, balance factors, or apply expertise (e.g., &quot;may grant stay for good cause&quot;)</li>
+<li><strong>Key test:</strong> Statute says &quot;shall&quot; (mandatory) vs. &quot;may&quot; (discretionary); duty is mechanical vs. requires judgment</li>
+</ul>
+<p><strong>Common mandamus scenarios:</strong></p>
+<ul>
+<li><strong>FOIA:</strong> Agency failed to process request within statutory timeline (5 U.S.C. §552)</li>
+<li><strong>FRCP 52(a):</strong> Judge failed to issue written findings after bench trial</li>
+<li><strong>FRCP 58/79:</strong> Clerk failed to enter judgment or maintain record</li>
+<li><strong>Administrative deadlines:</strong> Agency missed statutory deadline to process application</li>
+<li><strong>Record production:</strong> Officer failed to produce documents required by statute</li>
+</ul>
+<p><strong>Not mandamus (discretionary):</strong></p>
+<ul>
+<li>Judge decided motion &quot;wrong way&quot; (that&#39;s appeal, not mandamus)</li>
+<li>Agency denied FOIA request under exemption (that&#39;s APA review under §552(a)(4)(B))</li>
+<li>Officer exercised prosecutorial discretion not to enforce</li>
+<li>Agency chose one permissible interpretation over another</li>
+</ul>
+<p><strong>Alternatives to consider:</strong></p>
+<ul>
+<li><strong>APA judicial review</strong> (5 U.S.C. §§701-706) - If challenging final agency action involving discretion</li>
+<li><strong>FOIA lawsuit</strong> (5 U.S.C. §552(a)(4)(B)) - Specific remedy for FOIA denials (not failure to respond)</li>
+<li><strong>Supervisory mandamus</strong> - Petition to Court of Appeals for extraordinary writ (<em>In re Cheney</em>)</li>
+<li><strong>Informal resolution</strong> - Contact agency ombudsman, FOIA public liaison, inspector general</li>
+<li><strong>Congressional inquiry</strong> - Contact representative&#39;s constituent services office</li>
+</ul>
+<p><strong>Federal vs. NY differences:</strong></p>
+<ul>
+<li><strong>Statute:</strong> 28 U.S.C. §1361 (federal mandamus jurisdiction) vs. CPLR §7803(1) (NY mandamus)</li>
+<li><strong>Venue:</strong> 28 U.S.C. §1391(e) (where officer resides/has office) vs. NY venue rules</li>
+<li><strong>Respondent:</strong> Federal officer/employee only; can&#39;t use for state/local officials</li>
+<li><strong>Standard:</strong> <em>Heckler v. Roe</em> three-part test vs. NY common law mandamus</li>
+</ul>
+<p><strong>Best practice:</strong> Identify specific statutory language requiring duty; serve multiple procedural enclosures over time showing good-faith exhaustion; build strong record of agency&#39;s refusal; clearly distinguish ministerial duty from discretionary action; verify no other adequate remedy available before filing.</p>
+<p><strong>[Federal][28 U.S.C. §1361] Mandamus to Compel Federal Officer</strong></p>
+<hr>
+<p><strong>UNITED STATES DISTRICT COURT</strong>
+<strong>{{DISTRICT}} DISTRICT OF {{STATE}}</strong></p>
+<hr>
+<p>{{Petitioner Name}},
+Plaintiff,</p>
+<p>-v-</p>
+<p>{{Respondent Name}}, {{Respondent Title}},
+Defendant.</p>
+<p>Case No. {{To Be Assigned}}</p>
+<hr>
+<h2>VERIFIED PETITION FOR WRIT OF MANDAMUS</h2>
+<p>Petitioner {{Name}}, by {{pro se / counsel}}, respectfully alleges:</p>
+<h3>I. NATURE OF PROCEEDING</h3>
+<ol>
+<li><p>This is an action pursuant to 28 U.S.C. §1361 seeking a writ of mandamus to compel respondent to perform a ministerial duty required by federal law: {{specific duty - e.g., &quot;process FOIA request pursuant to 5 U.S.C. §552&quot; / &quot;issue written findings pursuant to FRCP 52(a)&quot;}}.</p>
+</li>
+<li><p>Despite multiple demands over {{X}} months, respondent has refused or failed to perform this statutory obligation.</p>
+</li>
+</ol>
+<h3>II. JURISDICTION AND VENUE</h3>
+<ol start="3">
+<li><p>This Court has jurisdiction pursuant to:</p>
+<ul>
+<li>28 U.S.C. §1361 (mandamus jurisdiction over federal officers)</li>
+<li>{{28 U.S.C. §1331 (federal question) / §1343 (civil rights) / other basis}}</li>
+</ul>
+</li>
+<li><p>Venue is proper in this district under 28 U.S.C. §1391(e) as respondent is an officer or employee of the United States and {{resides / has principal office / events occurred}} in this district.</p>
+</li>
+</ol>
+<h3>III. PARTIES</h3>
+<ol start="5">
+<li><p>Petitioner {{Name}} is {{description - party in underlying case, member of public with FOIA request, etc.}} and has a clear legal right to respondent&#39;s performance of the duty at issue.</p>
+</li>
+<li><p>Respondent {{Name}} is {{Title - e.g., &quot;District Judge&quot; / &quot;Agency Administrator&quot; / &quot;United States Attorney&quot;}}, an officer or employee of the United States, with offices at {{Address}}.</p>
+</li>
+<li><p>Respondent has a ministerial duty under {{Federal Statute/Rule}} to {{specific duty}}.</p>
+</li>
+</ol>
+<h3>IV. FACTUAL BACKGROUND</h3>
+<p><strong>Underlying Proceedings</strong></p>
+<ol start="8">
+<li><p>{{Brief description of underlying matter or request}}.</p>
+</li>
+<li><p>The underlying matter is {{Caption / FOIA Request No. / Administrative Matter No.}}, currently {{pending/concluded}} {{before this Court / in agency proceedings}}.</p>
+</li>
+</ol>
+<p><strong>Actions Requiring Compliance</strong></p>
+<ol start="10">
+<li><p>On {{date}}, {{event requiring respondent&#39;s action occurred - e.g., &quot;petitioner submitted FOIA request to agency&quot; / &quot;bench trial concluded without written findings&quot;}}.</p>
+</li>
+<li><p>On {{date}}, {{additional event}}.</p>
+</li>
+</ol>
+<p>[Continue chronologically with all relevant events]</p>
+<p><strong>Demands for Compliance</strong></p>
+<ol start="15">
+<li><p>On {{date}}, petitioner served respondent with notice of non-compliance demanding compliance with {{statute/rule}} (Exhibit A).</p>
+</li>
+<li><p>Respondent did not respond or comply within the {{X}} business days requested.</p>
+</li>
+<li><p>On {{date}}, petitioner {{filed motion / sent follow-up demand / contacted agency}} (Exhibit B).</p>
+</li>
+<li><p>Respondent again failed to comply.</p>
+</li>
+<li><p>On {{date}}, petitioner {{exhausted administrative remedies / filed motion / other action}} (Exhibit C).</p>
+</li>
+<li><p>Respondent {{denied without explanation / ignored / other response}}.</p>
+</li>
+</ol>
+<p><strong>Current Status</strong></p>
+<ol start="21">
+<li><p>As of {{date}}, respondent has still not performed the required duty.</p>
+</li>
+<li><p>Petitioner has exhausted all available administrative remedies.</p>
+</li>
+</ol>
+<h3>V. LEGAL ARGUMENT</h3>
+<h4>POINT I: MANDAMUS IS THE APPROPRIATE REMEDY</h4>
+<ol start="23">
+<li><p>Mandamus is available to compel a federal officer to perform a ministerial duty. <em>Heckler v. Roe</em>, 465 U.S. 312, 314 (1984); <em>In re Cheney</em>, 406 F.3d 723, 729 (D.C. Cir. 2005).</p>
+</li>
+<li><p>To obtain mandamus, petitioner must demonstrate: (1) a clear right to the relief sought; (2) respondent&#39;s duty to act is ministerial and plainly defined; and (3) no other adequate remedy exists. <em>Heckler</em>, 465 U.S. at 314.</p>
+</li>
+<li><p>All three elements are satisfied here.</p>
+</li>
+</ol>
+<h4>POINT II: RESPONDENT&#39;S DUTY IS MINISTERIAL</h4>
+<ol start="26">
+<li><p>{{Statute/Rule}} requires respondent to {{duty}}. [Quote relevant statutory language.]</p>
+</li>
+<li><p>This duty is ministerial because it is &quot;so plainly prescribed as to be free from doubt and equivalent to a positive command.&quot; <em>ICC v. New York, N.H. &amp; H.R. Co.</em>, 287 U.S. 178, 204 (1932).</p>
+</li>
+<li><p>The statute uses mandatory language: &quot;shall {{action}}.&quot; This leaves no discretion.</p>
+</li>
+<li><p>[Analysis showing no discretion involved - duty is purely administrative/ministerial, not requiring judgment or policy determination.]</p>
+</li>
+<li><p>Courts have uniformly held that {{type of duty}} is ministerial. <em>[Supporting cases]</em>.</p>
+</li>
+</ol>
+<h4>POINT III: PETITIONER HAS CLEAR RIGHT TO RELIEF</h4>
+<ol start="31">
+<li><p>Petitioner has a clear statutory right under {{Statute/Rule}} to respondent&#39;s performance of this duty.</p>
+</li>
+<li><p>{{Statute/Rule}} creates an enforceable obligation running to {{petitioner&#39;s status - e.g., &quot;FOIA requesters&quot; / &quot;parties in litigation&quot; / &quot;administrative applicants&quot;}}.</p>
+</li>
+<li><p>[Explanation of why petitioner specifically has standing and right to this relief.]</p>
+</li>
+</ol>
+<h4>POINT IV: NO ADEQUATE ALTERNATIVE REMEDY</h4>
+<ol start="34">
+<li><p>Petitioner has exhausted all alternative remedies, including:</p>
+<ul>
+<li>Procedural enclosures served {{dates}} (Exhibits A-B)</li>
+<li>{{Administrative appeal / Motion / Agency contact}} filed {{date}} (Exhibit C)</li>
+<li>{{Additional efforts}}</li>
+</ul>
+</li>
+<li><p>[Explain why other remedies are inadequate or unavailable - e.g., &quot;APA review is unavailable because no final agency action exists&quot; / &quot;No other judicial remedy exists for ministerial duty&quot;]</p>
+</li>
+<li><p>Absent mandamus relief, petitioner has no remedy for respondent&#39;s continued non-compliance.</p>
+</li>
+</ol>
+<h4>POINT V: IRREPARABLE HARM</h4>
+<ol start="37">
+<li><p>Respondent&#39;s failure to perform causes petitioner irreparable harm:</p>
+<ul>
+<li>{{Harm 1 - e.g., &quot;Prevents access to agency records required for pending litigation&quot;}}</li>
+<li>{{Harm 2 - e.g., &quot;Violates due process rights to written findings&quot;}}</li>
+<li>{{Harm 3 - e.g., &quot;Indefinitely delays resolution of administrative matter&quot;}}</li>
+</ul>
+</li>
+<li><p>These harms cannot be remedied by money damages and are ongoing.</p>
+</li>
+</ol>
+<h3>VI. EXHAUSTION OF REMEDIES</h3>
+<ol start="39">
+<li>Petitioner has made the following good-faith efforts to obtain compliance:</li>
+</ol>
+<table>
+<thead>
+<tr>
+<th>Date</th>
+<th>Action</th>
+<th>Result</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>{{Date}}</td>
+<td>Procedural enclosure served</td>
+<td>No response</td>
+</tr>
+<tr>
+<td>{{Date}}</td>
+<td>{{Administrative appeal/Motion}}</td>
+<td>Denied/Ignored</td>
+</tr>
+<tr>
+<td>{{Date}}</td>
+<td>{{Follow-up demand}}</td>
+<td>No action</td>
+</tr>
+</tbody></table>
+<ol start="40">
+<li>Petitioner has exhausted all reasonable alternatives. Mandamus is the only remaining remedy.</li>
+</ol>
+<h3>VII. RELIEF REQUESTED</h3>
+<p>WHEREFORE, Petitioner respectfully requests that this Court:</p>
+<p>A. Issue an order to show cause why a writ of mandamus should not issue;</p>
+<p>B. After hearing, issue a writ of mandamus directing respondent to {{specific action - e.g., &quot;respond to FOIA Request No. {{X}} within thirty (30) days&quot; / &quot;issue written findings of fact and conclusions of law pursuant to FRCP 52(a)&quot;}};</p>
+<p>C. Award costs and attorney&#39;s fees pursuant to {{28 U.S.C. §2412 / 5 U.S.C. §552(a)(4)(E) / other authority}};</p>
+<p>D. Grant such other and further relief as the Court deems just and proper.</p>
+<p>Dated: {{Date}}</p>
+<p>Respectfully submitted,</p>
+<hr>
+<p>{{Your Signature}}
+{{Your Name}}
+{{Pro Se / Attorney for Petitioner}}
+{{Address}}
+{{Phone}}
+{{Email}}</p>
+<hr>
+<h2>VERIFICATION</h2>
+<p>I, {{Petitioner Name}}, declare under penalty of perjury under the laws of the United States that the foregoing is true and correct to the best of my knowledge, information, and belief.</p>
+<p>Executed on {{Date}}.</p>
+<hr>
+<p>{{Signature}}
+{{Name}}</p>
+<hr>
+<h2>EXHIBITS</h2>
+<p><strong>Exhibit A:</strong> Notice of Non-Compliance dated {{date}}
+<strong>Exhibit B:</strong> {{Administrative Appeal/Motion/Demand}} filed {{date}}
+<strong>Exhibit C:</strong> {{Agency Denial/Court Order/Correspondence}}
+<strong>Exhibit D:</strong> {{Additional documentation}}</p>
+<hr>
+<p><strong>Authorities Cited:</strong></p>
+<ul>
+<li>28 U.S.C. §1361 (mandamus jurisdiction)</li>
+<li>28 U.S.C. §1391(e) (venue)</li>
+<li>{{Specific duty statute - e.g., 5 U.S.C. §552 (FOIA), FRCP 52(a), etc.}}</li>
+<li><em>Heckler v. Roe</em>, 465 U.S. 312 (1984)</li>
+<li><em>In re Cheney</em>, 406 F.3d 723 (D.C. Cir. 2005)</li>
+<li><em>ICC v. New York, N.H. &amp; H.R. Co.</em>, 287 U.S. 178 (1932)</li>
+<li>{{Additional authorities as applicable}}</li>
+</ul>
+<hr>
+<p><strong>Service:</strong> This Verified Petition shall be served on respondent pursuant to FRCP 4 and applicable local rules.</p>
+
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="border-t-2 border-border bg-muted/30 py-12 mt-8" role="contentinfo">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-12 mb-10">
+                <div>
+                    <h3 class="text-lg font-sans font-semibold mb-4 text-foreground">Open Collaboration</h3>
+                    <p class="helpful-text text-sm mb-3 leading-relaxed">An open specification for verifying adherence to statutory procedure in state and federal courts. Contributions welcome.</p>
+                    <p class="helpful-text text-sm font-medium"><strong>Not legal advice.</strong> Educational purposes only.</p>
+                </div>
+
+                <div>
+                    <h3 class="text-lg font-sans font-semibold mb-4 text-foreground">Resources</h3>
+                    <ul class="space-y-3 text-sm">
+                        <li><a href="https://github.com/josephfusco/procedural-compliance" target="_blank" rel="noopener noreferrer" class="footer-link text-foreground/80 hover:text-foreground transition-colors underline decoration-1 underline-offset-2">GitHub Repository</a></li>
+                        <li><a href="https://github.com/josephfusco/procedural-compliance/blob/main/CONTRIBUTING.md" target="_blank" rel="noopener noreferrer" class="footer-link text-foreground/80 hover:text-foreground transition-colors underline decoration-1 underline-offset-2">Contributing Guide</a></li>
+                        <li><a href="https://github.com/josephfusco/procedural-compliance/issues" target="_blank" rel="noopener noreferrer" class="footer-link text-foreground/80 hover:text-foreground transition-colors underline decoration-1 underline-offset-2">Report Issue</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h3 class="text-lg font-sans font-semibold mb-4 text-foreground">Legal</h3>
+                    <ul class="space-y-3 text-sm">
+                        <li><a href="https://github.com/josephfusco/procedural-compliance/blob/main/LICENSE" target="_blank" rel="noopener noreferrer" class="footer-link text-foreground/80 hover:text-foreground transition-colors underline decoration-1 underline-offset-2">MIT License</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <div class="flex items-center gap-2 mb-4">
+                        <span class="badge badge-ny">NY</span>
+                        <h3 class="text-lg font-sans font-semibold text-foreground">NY Court Resources</h3>
+                    </div>
+                    <ul class="space-y-3 text-sm">
+                        <li><a href="https://www.nycourts.gov/efile/rules.shtml" target="_blank" rel="noopener noreferrer" class="footer-link text-foreground/80 hover:text-foreground transition-colors underline decoration-1 underline-offset-2">NYSCEF E-Filing Rules</a></li>
+                        <li><a href="https://ww2.nycourts.gov/courts/index.shtml" target="_blank" rel="noopener noreferrer" class="footer-link text-foreground/80 hover:text-foreground transition-colors underline decoration-1 underline-offset-2">NY Court Directory</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="border-t-2 border-border pt-8 text-center">
+                <p class="text-sm text-foreground/70 font-medium">&copy; 2025 Procedural Compliance Framework (PCF)</p>
+                <p class="text-sm text-foreground/70 mt-2">Released under MIT License • Open Source Legal Framework</p>
+                <p class="text-xs text-foreground/60 mt-3">Accessibility: WCAG 2.1 AA • ADA Title II § 35.160 • Section 508 Standards</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Theme Toggle Script -->
+    <script>
+        (function() {
+            const THEMES = { LIGHT: 'light', DARK: 'dark' };
+            const LABELS = { light: 'Light', dark: 'Dark' };
+            const ARIA_LABELS = {
+                light: 'Light mode. Click to switch to dark mode',
+                dark: 'Dark mode. Click to switch to light mode'
+            };
+
+            const themeToggle = document.getElementById('theme-toggle');
+            const themeLabel = document.getElementById('theme-label');
+            const html = document.documentElement;
+
+            function getSavedTheme() {
+                return localStorage.getItem('theme') || THEMES.LIGHT;
+            }
+
+            function applyTheme(theme) {
+                html.setAttribute('data-theme', theme);
+                themeLabel.textContent = LABELS[theme];
+                themeToggle.setAttribute('aria-checked', theme === THEMES.DARK ? 'true' : 'false');
+                themeToggle.setAttribute('aria-label', ARIA_LABELS[theme]);
+            }
+
+            function toggleTheme() {
+                const currentTheme = getSavedTheme();
+                const nextTheme = currentTheme === THEMES.LIGHT ? THEMES.DARK : THEMES.LIGHT;
+                localStorage.setItem('theme', nextTheme);
+                applyTheme(nextTheme);
+            }
+
+            applyTheme(getSavedTheme());
+            themeToggle.addEventListener('click', toggleTheme);
+            themeToggle.addEventListener('keydown', (e) => {
+                if (e.key === ' ' || e.key === 'Enter') {
+                    e.preventDefault();
+                    toggleTheme();
+                }
+            });
+        })();
+    </script>
+
+    <!-- Template Content Enhancements -->
+    <script>
+        // Separate metadata from document
+        const content = document.getElementById('template-content');
+        if (content) {
+            // Highlight placeholders
+            const walker = document.createTreeWalker(content, NodeFilter.SHOW_TEXT, null);
+            const nodesToReplace = [];
+            while (walker.nextNode()) {
+                const node = walker.currentNode;
+                if (node.textContent.includes('{{') && node.textContent.includes('}}')) {
+                    nodesToReplace.push(node);
+                }
+            }
+
+            nodesToReplace.forEach(node => {
+                const fragment = document.createDocumentFragment();
+                const tempDiv = document.createElement('div');
+                tempDiv.innerHTML = node.textContent.replace(
+                    /\{\{([^}]+)\}\}/g,
+                    '<span class="template-placeholder">{{$1}}</span>'
+                );
+                while (tempDiv.firstChild) {
+                    fragment.appendChild(tempDiv.firstChild);
+                }
+                node.parentNode.replaceChild(fragment, node);
+            });
+        }
+    </script>
+</body>
+</html>

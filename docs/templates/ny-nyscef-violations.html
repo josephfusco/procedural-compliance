@@ -1,0 +1,689 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Uniform Rule 202.5-bb - Mandatory E-Filing - NYSCEF E-Filing Violations">
+    <title>NYSCEF E-Filing Violations | Procedural Compliance Framework</title>
+
+    <!-- Favicon -->
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>⚖️</text></svg>">
+
+    <!-- USWDS Public Sans Font -->
+    <link rel="preload" href="../fonts/public-sans/PublicSans-Regular.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="../fonts/public-sans/PublicSans-SemiBold.woff2" as="font" type="font/woff2" crossorigin>
+
+    <!-- Social Preview Meta Tags -->
+    <meta property="og:title" content="NYSCEF E-Filing Violations">
+    <meta property="og:description" content="Uniform Rule 202.5-bb - Mandatory E-Filing">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://proceduralcompliance.org/templates/ny-nyscef-violations.html">
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Custom Tailwind Config -->
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                container: {
+                    center: true,
+                    padding: '1rem',
+                    screens: {
+                        sm: '1100px',
+                        md: '1100px',
+                        lg: '1100px',
+                        xl: '1100px',
+                        '2xl': '1100px'
+                    }
+                },
+                extend: {
+                    colors: {
+                        border: '#dfe1e2',
+                        input: '#dfe1e2',
+                        ring: '#005EA2',
+                        background: '#ffffff',
+                        foreground: '#1b1b1b',
+                        primary: {
+                            DEFAULT: '#005EA2',
+                            foreground: '#ffffff'
+                        },
+                        secondary: {
+                            DEFAULT: '#f9fafb',
+                            foreground: '#1a1a1a'
+                        },
+                        muted: {
+                            DEFAULT: '#f9fafb',
+                            foreground: '#6b7280'
+                        },
+                        accent: {
+                            DEFAULT: '#b8860b',
+                            foreground: '#ffffff'
+                        }
+                    },
+                    fontFamily: {
+                        serif: ['Georgia', 'Cambria', 'Times New Roman', 'serif'],
+                        sans: ['Public Sans', '-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'Roboto', 'sans-serif'],
+                        mono: ['Monaco', 'Courier New', 'monospace']
+                    }
+                }
+            }
+        }
+    </script>
+
+    <link rel="stylesheet" href="../styles.css">
+</head>
+<body class="bg-background text-foreground font-sans antialiased">
+    <!-- Skip Navigation Link -->
+    <a href="#main-content" class="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 focus:z-50 focus:px-4 focus:py-2 focus:bg-primary focus:text-primary-foreground focus:rounded focus:outline-none focus:ring-4 focus:ring-ring focus:ring-offset-2">
+        Skip to main content
+    </a>
+
+    <!-- US Government-Style Banner -->
+    <section class="gov-banner" role="region" aria-label="Official government-style notice">
+        <div class="container mx-auto px-4 py-2">
+            <div class="flex items-center gap-2">
+                <img src="../us_flag_small.png" class="gov-banner-flag" alt="U.S. flag" loading="eager">
+                <p class="gov-banner-text">An open framework for documenting procedural compliance · Not legal advice</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Header -->
+    <header class="w-full border-b border-border bg-background" role="banner">
+        <div class="container mx-auto px-4 py-3">
+            <div class="flex flex-col md:flex-row md:h-14 md:items-center md:justify-between gap-3 md:gap-0">
+                <div class="flex items-center justify-between">
+                    <div class="flex items-center space-x-2">
+                        <span class="text-xl" role="img" aria-label="Scales of justice">⚖️</span>
+                        <h1 class="text-lg font-sans font-semibold">
+                            <a href="../index.html" class="hover:text-primary transition-colors">Procedural Compliance Framework</a>
+                        </h1>
+                    </div>
+                    <nav class="hidden md:flex items-center space-x-6 text-sm ml-8">
+                        <a href="../index.html#templates" class="text-foreground/80 hover:text-foreground transition-colors">Templates</a>
+                        <a href="https://github.com/josephfusco/procedural-compliance" target="_blank" rel="noopener noreferrer" class="text-foreground/80 hover:text-foreground transition-colors">GitHub</a>
+                    </nav>
+                </div>
+                <div class="flex items-center gap-2">
+                    <button id="theme-toggle" class="flex items-center justify-center px-4 py-2 text-sm font-medium text-foreground bg-transparent rounded border-2 border-border hover:bg-muted transition-colors focus:outline-none focus:ring-4 focus:ring-ring focus:ring-offset-2" aria-label="Light mode. Click to toggle" role="switch" aria-checked="false">
+                        <span id="theme-label">Light</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Breadcrumb Navigation -->
+    <nav class="border-b border-border bg-muted/30" aria-label="Breadcrumb">
+        <div class="container mx-auto px-4 py-3">
+            <ol class="flex items-center space-x-2 text-sm">
+                <li><a href="../index.html" class="text-foreground/60 hover:text-foreground transition-colors">Home</a></li>
+                <li class="text-foreground/40">/</li>
+                <li><a href="../index.html#templates" class="text-foreground/60 hover:text-foreground transition-colors">Templates</a></li>
+                <li class="text-foreground/40">/</li>
+                <li class="text-foreground font-medium" aria-current="page">NYSCEF E-Filing Violations</li>
+            </ol>
+        </div>
+    </nav>
+
+    <main id="main-content" role="main">
+        <!-- Template Header -->
+        <div class="border-b border-border bg-muted/30">
+            <div class="container mx-auto px-4 py-8">
+                <div class="flex items-start justify-between gap-4">
+                    <div class="flex-1">
+                        <div class="flex items-center gap-3 mb-3">
+                            <span class="badge badge-ny">NY</span>
+                            <h1 class="text-3xl font-sans font-semibold text-foreground">NYSCEF E-Filing Violations</h1>
+                        </div>
+                        <p class="text-base text-muted-foreground">Uniform Rule 202.5-bb - Mandatory E-Filing</p>
+                    </div>
+                    <div class="flex gap-2">
+                        <a href="https://github.com/josephfusco/procedural-compliance/blob/main/templates/ny_nyscef_violations.md" target="_blank" rel="noopener noreferrer" class="px-4 py-2 text-sm font-medium text-foreground bg-transparent rounded border-2 border-border hover:bg-muted transition-colors focus:outline-none focus:ring-4 focus:ring-ring focus:ring-offset-2">
+                            Edit on GitHub
+                        </a>
+                        <a href="../templates/ny_nyscef_violations.md" download class="px-4 py-2 text-sm font-medium text-primary-foreground bg-primary rounded border-2 border-primary hover:bg-primary/90 transition-colors focus:outline-none focus:ring-4 focus:ring-ring focus:ring-offset-2">
+                            Download
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Template Content -->
+        <div class="container mx-auto px-4 py-12">
+            <div class="prose prose-slate mx-auto" id="template-content">
+                <hr>
+<p><strong>JURISDICTION: NEW YORK</strong></p>
+<h2>This template applies to New York State courts (Supreme, Family, Appellate Division) governed by CPLR, DRL, FCA, and 22 NYCRR.</h2>
+<h1>PROCEDURAL ENCLOSURE - NYSCEF E-FILING VIOLATIONS</h1>
+<hr>
+<h2>⚠️ BEFORE USING THIS TEMPLATE</h2>
+<h3>When to Use NYSCEF Violations Notice</h3>
+<p><strong>USE this template when:</strong></p>
+<ul>
+<li>Clerk improperly rejected your compliant e-filing</li>
+<li>Clerk accepted paper filing in mandatory e-filing case</li>
+<li>NYSCEF was down and clerk refused your timely paper filing</li>
+<li>Opposing counsel refuses to accept NYSCEF service</li>
+<li>E-filing violation caused you to miss deadline or prejudiced your case</li>
+</ul>
+<p><strong>DO NOT use this if:</strong></p>
+<ul>
+<li>Your e-filing had actual technical defects (wrong format, missing signature, etc.)</li>
+<li>Case is not subject to mandatory e-filing (check Administrative Orders)</li>
+<li>You missed deadline for reasons unrelated to e-filing issues</li>
+<li>Clerk has already corrected the error</li>
+<li>You haven&#39;t tried informal resolution first (email/call to clerk)</li>
+</ul>
+<p><strong>Appropriate example:</strong> You e-filed motion 2 hours before deadline; NYSCEF confirmation received; clerk improperly rejected it next day for &quot;insufficient reason&quot;; now past deadline.</p>
+<p><strong>Inappropriate example:</strong> Your PDF was corrupted and clerk properly rejected it (that&#39;s valid technical defect under Uniform Rule 202.5-d).</p>
+<h3>Try These Steps First</h3>
+<p><strong>Before sending this notice:</strong></p>
+<ol>
+<li><p><strong>Verify NYSCEF rules apply</strong> to your case type and county</p>
+<ul>
+<li>Check Administrative Orders: <a href="https://www.nycourts.gov/efile/rules.shtml">https://www.nycourts.gov/efile/rules.shtml</a></li>
+<li>Confirm your case is in mandatory e-filing category</li>
+</ul>
+</li>
+<li><p><strong>Save evidence:</strong></p>
+<ul>
+<li>NYSCEF confirmation email (proves timely filing)</li>
+<li>Rejection notice with stated reason</li>
+<li>Screenshots if NYSCEF was down</li>
+<li>Email chain with clerk if applicable</li>
+</ul>
+</li>
+<li><p><strong>Contact NYSCEF Resource Center:</strong></p>
+<ul>
+<li>Email: <a href="mailto:nyscef@nycourts.gov">nyscef@nycourts.gov</a></li>
+<li>Phone: (646) 386-3033</li>
+<li>Explain issue; ask for assistance</li>
+</ul>
+</li>
+<li><p><strong>Email county clerk&#39;s office</strong> requesting correction</p>
+<ul>
+<li>Be polite and professional</li>
+<li>Attach NYSCEF confirmation</li>
+<li>Request specific remedy (accept filing with original date)</li>
+</ul>
+</li>
+<li><p><strong>Speak to supervisor</strong> if clerk refuses to correct</p>
+</li>
+</ol>
+<p><strong>Document everything:</strong> Save all emails, confirmations, screenshots, and correspondence.</p>
+<h3>Resource Requirements &amp; Remedies</h3>
+<p>⚠️ <strong>Important Considerations:</strong></p>
+<ul>
+<li><strong>Timeline:</strong> Clerk may correct immediately; or may require motion (2-4 weeks)</li>
+<li><strong>Technical knowledge required:</strong> Must understand NYSCEF rules and permissible rejection grounds</li>
+<li><strong>Success rate:</strong> High if rejection was truly improper and you have proof</li>
+<li><strong>What this achieves:</strong> Creates record; usually prompts correction; supports motion if clerk refuses</li>
+<li><strong>What this does NOT do:</strong> Automatically fix the problem; excuse filing if rejection was proper</li>
+</ul>
+<p><strong>Permissible grounds for rejection (Uniform Rule 202.5-d):</strong></p>
+<ul>
+<li><strong>Technical defects:</strong> Corrupted file, wrong format (not PDF/A), illegible</li>
+<li><strong>Missing information:</strong> No signature, incomplete caption, wrong party names</li>
+<li><strong>Untimely filing:</strong> Filed after deadline</li>
+<li><strong>Incorrect fee:</strong> Wrong amount or payment method</li>
+</ul>
+<p><strong>IMPROPER rejection reasons (clerk CANNOT reject for these):</strong></p>
+<ul>
+<li>&quot;Document is too long&quot; (if within page limits)</li>
+<li>&quot;I don&#39;t like the formatting&quot; (if meets technical requirements)</li>
+<li>&quot;You should have filed this differently&quot; (substantive disagreement)</li>
+<li>&quot;You need to file in person&quot; (when mandatory e-filing applies)</li>
+</ul>
+<p><strong>Available remedies:</strong></p>
+<ol>
+<li><strong>Informal correction:</strong> Clerk accepts filing with nunc pro tunc date (most common if you&#39;re right)</li>
+<li><strong>Order to Show Cause:</strong> Court orders clerk to accept filing with original date</li>
+<li><strong>Article 78 mandamus:</strong> Compel clerk to perform ministerial duty</li>
+<li><strong>Complaint to NYSCEF Resource Center:</strong> Administrative review</li>
+<li><strong>Include in appeal:</strong> If improper rejection caused substantive harm</li>
+</ol>
+<p><strong>Alternatives to consider:</strong></p>
+<ul>
+<li><strong>Motion for nunc pro tunc relief:</strong> Ask court to deem filing timely despite rejection</li>
+<li><strong>Excuse late filing:</strong> If missed deadline due to NYSCEF issues beyond your control</li>
+<li><strong>Stipulation with opposing party:</strong> Agree to accept filing as timely</li>
+<li><strong>Re-file immediately:</strong> While also challenging improper rejection</li>
+</ul>
+<p><strong>Best practice:</strong> Contact NYSCEF Resource Center first; save all evidence; this notice creates record before filing motion; most clerks will correct error once legal authority is shown.</p>
+<hr>
+<p><strong>TO:</strong> {{Recipient Name, Title}}
+{{Court/Law Firm Name}}
+<strong>FROM:</strong> {{Your Name}}
+<strong>DATE:</strong> {{Date}}
+<strong>CASE:</strong> {{Caption}}, Index No. {{Index Number}}
+<strong>COURT:</strong> {{Court Name and County}}
+<strong>SUBJECT:</strong> Procedural Notice and Demand for Compliance with NYSCEF E-Filing Rules</p>
+<hr>
+<h2>1. NYSCEF Mandatory E-Filing Authority</h2>
+<p>The New York State Courts Electronic Filing system (NYSCEF) establishes mandatory e-filing for most cases in New York State courts.</p>
+<p><strong>Governing Rules:</strong></p>
+<ul>
+<li><strong>Uniform Rule 202.5-bb</strong> - Mandatory E-Filing in Supreme Court and County Court</li>
+<li><strong>Uniform Rule 202.5-b</strong> - General Provisions Governing E-Filing</li>
+<li><strong>Uniform Rule 202.5-d</strong> - Rejection of Papers</li>
+<li><strong>22 NYCRR Part 1245</strong> - Appellate Division E-Filing Rules</li>
+<li><strong>Chapter 237 of the Laws of 2015</strong> - E-filing consolidated into CPLR, SCPA, CPL, CCA, FCA, NYCCCA</li>
+</ul>
+<hr>
+<h2>2. Identified E-Filing Violations</h2>
+<p>The following violations of mandatory e-filing rules have occurred as of {{date}}:</p>
+<h3>Violation 1: {{If applicable - Improper Acceptance of Paper Filing}}</h3>
+<p><strong>Rule:</strong> Uniform Rule 202.5-bb(a) requires mandatory electronic filing for all case types designated in Administrative Orders.</p>
+<p><strong>Violation:</strong>
+On {{date}}, {{court clerk / opposing party}} accepted paper filing of {{document type}} in violation of mandatory e-filing requirements for this case type.</p>
+<p><strong>Effect:</strong></p>
+<ul>
+<li>Improper paper filing delays docketing and notice to parties</li>
+<li>Violates mandatory e-filing rules established by Administrative Order</li>
+<li>Deprives parties of timely electronic notice via NYSCEF</li>
+</ul>
+<p><strong>Authority:</strong> Uniform Rule 202.5-bb(a): &quot;All parties... shall use NYSCEF for the filing of all documents with the court.&quot;</p>
+<h3>Violation 2: {{If applicable - Improper Rejection of E-Filed Document}}</h3>
+<p><strong>Rule:</strong> Uniform Rule 202.5-d establishes limited grounds for rejection of e-filed papers.</p>
+<p><strong>Violation:</strong>
+On {{date}}, the Clerk rejected my e-filing (Filing Confirmation No. {{NYSCEF confirmation number}}) for the following stated reason: &quot;{{Rejection reason provided}}.&quot;</p>
+<p><strong>Why Rejection Was Improper:</strong>
+{{Example reasons:</p>
+<ul>
+<li>Document complies with all formatting requirements (PDF/A, searchable text, proper font size)</li>
+<li>Rejection reason is not among grounds listed in Uniform Rule 202.5-d</li>
+<li>Technical issue was on court&#39;s end, not filer&#39;s</li>
+<li>Document was timely filed before deadline}}</li>
+</ul>
+<p><strong>Effect:</strong></p>
+<ul>
+<li>Missed filing deadline due to improper rejection</li>
+<li>Inability to serve opposing counsel via NYSCEF</li>
+<li>Denial of access to courts</li>
+</ul>
+<p><strong>Authority:</strong> Uniform Rule 202.5-d permits rejection only for:</p>
+<ol>
+<li>Technical defects (wrong file format, corrupted file, etc.)</li>
+<li>Missing required information</li>
+<li>Untimely filing</li>
+<li>Incorrect fee payment</li>
+</ol>
+<p>The stated rejection reason (&quot;{{rejection reason}}&quot;) does not fall within these permissible grounds.</p>
+<h3>Violation 3: {{If applicable - Failure to Use NYSCEF Email Service}}</h3>
+<p><strong>Rule:</strong> Uniform Rule 202.5-b(h)(2) requires parties to accept service via NYSCEF email service address.</p>
+<p><strong>Violation:</strong>
+{{Opposing counsel / Party name}} has failed to:</p>
+<ul>
+<li>Maintain active NYSCEF email service address</li>
+<li>Accept service via NYSCEF</li>
+<li>{{Other violation - e.g., &quot;demanded paper service in mandatory e-filing case&quot;}}</li>
+</ul>
+<p><strong>Effect:</strong></p>
+<ul>
+<li>Delays in service of interlocutory papers</li>
+<li>Violation of e-filing protocols</li>
+<li>Increased costs for all parties</li>
+</ul>
+<p><strong>Authority:</strong> Uniform Rule 202.5-b(h)(2): &quot;Service of interlocutory papers upon a user shall be made electronically.&quot;</p>
+<h3>Violation 4: {{If applicable - Technical Access Issues / System Down}}</h3>
+<p><strong>Rule:</strong> When NYSCEF is unavailable, paper filing is permitted but court must accept it.</p>
+<p><strong>Violation:</strong>
+On {{date}}, NYSCEF was unavailable from {{time}} to {{time}} ({{attach screenshot or NYSCEF status notice}}).</p>
+<p>I timely attempted to e-file {{document}} but was unable due to system outage. I then:</p>
+<ul>
+<li>{{Tendered paper copy to clerk}}</li>
+<li>{{Emailed clerk/chambers notifying of technical issue}}</li>
+<li>{{Other reasonable attempt to file}}</li>
+</ul>
+<p>The court {{refused to accept / rejected / other improper action}} the filing despite NYSCEF unavailability.</p>
+<p><strong>Effect:</strong></p>
+<ul>
+<li>Missed filing deadline due to technical failure beyond filer&#39;s control</li>
+<li>Denial of access to courts</li>
+<li>Prejudice to party&#39;s substantive rights</li>
+</ul>
+<p><strong>Authority:</strong> Uniform Rule 202.5-b(c)(1): If NYSCEF is unavailable, &quot;the clerk shall accept the document in another form.&quot;</p>
+<h3>Violation 5: {{If applicable - Other E-Filing Violations}}</h3>
+<p>{{Examples:</p>
+<ul>
+<li>Failure to docket e-filed document within required timeframe</li>
+<li>Improper marking of document as &quot;sealed&quot; or &quot;restricted&quot;</li>
+<li>Denial of access to public court records via NYSCEF</li>
+<li>Charging fees for documents that should be free</li>
+<li>Requiring in-person appearance for task that can be done via NYSCEF}}</li>
+</ul>
+<hr>
+<h2>3. Demand for Compliance</h2>
+<p>You are hereby demanded to:</p>
+<h3>A. {{If Paper Filing Violation}} Accept E-Filed Documents (Immediately)</h3>
+<ol>
+<li>Accept all future filings via NYSCEF as required by Uniform Rule 202.5-bb.</li>
+<li>Refuse to accept paper filings except as permitted by Uniform Rule 202.5-bb(d).</li>
+<li>Provide written confirmation of compliance with mandatory e-filing.</li>
+</ol>
+<h3>B. {{If Improper Rejection}} Re-Process Rejected E-Filing (Within 3 Business Days)</h3>
+<ol>
+<li>Accept the e-filing that was improperly rejected on {{date}} (Confirmation No. {{number}}).</li>
+<li>Docket the document with an effective filing date of {{original filing date}}.</li>
+<li>Provide written explanation of why rejection was improper and steps taken to prevent recurrence.</li>
+</ol>
+<h3>C. {{If Service Violation}} Comply with NYSCEF Service Requirements (Immediately)</h3>
+<ol>
+<li>Maintain active and monitored NYSCEF email service address.</li>
+<li>Accept service of all interlocutory papers via NYSCEF.</li>
+<li>Cease demanding paper service in violation of Uniform Rule 202.5-b(h)(2).</li>
+</ol>
+<h3>D. {{If Technical Issues}} Accept Paper Filing Due to System Outage (Immediately)</h3>
+<ol>
+<li>Accept the paper filing tendered on {{date}} when NYSCEF was unavailable.</li>
+<li>Docket with effective filing date reflecting time of tender, not time of NYSCEF restoration.</li>
+<li>Acknowledge that NYSCEF unavailability is not a basis for rejecting timely paper filing.</li>
+</ol>
+<hr>
+<h2>4. Legal Authority</h2>
+<h3>Uniform Rule 202.5-bb - Mandatory E-Filing</h3>
+<blockquote>
+<p><strong>202.5-bb(a):</strong> &quot;All parties... shall use NYSCEF for the filing of all documents with the court.&quot;</p>
+</blockquote>
+<blockquote>
+<p><strong>202.5-bb(d):</strong> Paper filing is permitted only in limited circumstances: (1) emergency applications when NYSCEF unavailable, (2) working copies, (3) certain exhibits, (4) documents filed by self-represented litigants who received an exemption.</p>
+</blockquote>
+<p>Mandatory e-filing is not optional. Administrative Orders designate case types requiring NYSCEF, and compliance is required.</p>
+<h3>Uniform Rule 202.5-b - General E-Filing Provisions</h3>
+<blockquote>
+<p><strong>202.5-b(c)(1):</strong> &quot;If on a given day NYSCEF is unavailable... the clerk shall accept the document in another form.&quot;</p>
+</blockquote>
+<blockquote>
+<p><strong>202.5-b(h)(2):</strong> &quot;Service of interlocutory papers upon a user shall be made electronically.&quot;</p>
+</blockquote>
+<p>Service via NYSCEF email is mandatory for parties registered as users. Paper service of interlocutory papers is not permitted except for non-users.</p>
+<h3>Uniform Rule 202.5-d - Rejection Standards</h3>
+<p>Rejection is permitted only for:</p>
+<ul>
+<li><strong>Technical defects:</strong> Wrong format, corrupted file, illegible text</li>
+<li><strong>Missing information:</strong> Caption incomplete, signature missing, incorrect fee</li>
+<li><strong>Untimely filing:</strong> Filed after deadline</li>
+<li><strong>Incorrect fee:</strong> Wrong amount or payment method</li>
+</ul>
+<p>All other rejections are <strong>improper</strong> and violate filer&#39;s right of access to courts.</p>
+<h3>Chapter 237 of the Laws of 2015</h3>
+<p>Consolidated e-filing requirements into substantive statutes (CPLR, SCPA, etc.), making NYSCEF compliance a statutory obligation, not merely a rule of practice.</p>
+<h3>NYSCEF Contact Information</h3>
+<ul>
+<li><strong>Email:</strong> <a href="mailto:nyscef@nycourts.gov">nyscef@nycourts.gov</a></li>
+<li><strong>Phone:</strong> (646) 386-3033</li>
+<li><strong>Fax:</strong> (212) 401-9146</li>
+<li><strong>Rules:</strong> <a href="https://www.nycourts.gov/efile/rules.shtml">https://www.nycourts.gov/efile/rules.shtml</a></li>
+</ul>
+<hr>
+<h2>5. Record Preservation and Further Relief</h2>
+<p>This Notice of Non-Compliance serves as:</p>
+<ul>
+<li><strong>Formal notice</strong> of NYSCEF violations for administrative and judicial review</li>
+<li><strong>Preservation</strong> of objection to improper rejections and e-filing non-compliance</li>
+<li><strong>Predicate</strong> for the following relief if compliance is not forthcoming:</li>
+</ul>
+<h3>Administrative Remedies:</h3>
+<ol>
+<li><strong>Complaint to Clerk&#39;s Office Manager</strong> regarding improper rejection or acceptance of paper filings</li>
+<li><strong>Complaint to NYSCEF Resource Center</strong> (<a href="mailto:nyscef@nycourts.gov">nyscef@nycourts.gov</a>) regarding systemic violations</li>
+<li><strong>Escalation to Chief Clerk</strong> if County Clerk refuses to comply</li>
+</ol>
+<h3>Judicial Remedies:</h3>
+<ol start="4">
+<li><strong>Order to Show Cause</strong> directing clerk to accept e-filing and docket with nunc pro tunc effective date</li>
+<li><strong>Motion to Compel</strong> NYSCEF compliance by opposing counsel</li>
+<li><strong>Mandamus Petition</strong> (Article 78) to compel clerk to perform ministerial duty of accepting compliant e-filing</li>
+</ol>
+<h3>Appellate Preservation:</h3>
+<ol start="7">
+<li><strong>Include in appellate brief</strong> if improper rejection or e-filing violation prejudiced party&#39;s substantive rights</li>
+<li><strong>Cite to this notice</strong> as evidence of timely objection to procedural violations</li>
+</ol>
+<hr>
+<h2>6. Opportunity to Cure</h2>
+<p>Before filing judicial or administrative complaints, I am providing this opportunity to cure violations:</p>
+<p><strong>3-Day Cure Period:</strong></p>
+<p>If you:</p>
+<ol>
+<li>Comply with all demands in Section 3 within three (3) business days;</li>
+<li>Provide written confirmation of compliance; and</li>
+<li>Cease further violations;</li>
+</ol>
+<p>Then I will consider the matter resolved without filing motions or administrative complaints.</p>
+<p><strong>Failure to Cure:</strong></p>
+<p>If you fail to cure within three (3) days, I will:</p>
+<ol>
+<li>File Order to Show Cause seeking nunc pro tunc filing date for improperly rejected documents</li>
+<li>File administrative complaint with NYSCEF Resource Center</li>
+<li>Seek all available relief including costs and sanctions for improper rejection</li>
+</ol>
+<hr>
+<h2>7. Service and Filing</h2>
+<p>This Notice of Non-Compliance is:</p>
+<ul>
+<li><strong>{{E-filed / Served}}</strong> via NYSCEF on {{date}}</li>
+<li><strong>Served</strong> on all parties via NYSCEF</li>
+<li><strong>{{Tendered in paper}}</strong> if NYSCEF unavailable {{or if recipient improperly refusing e-service}}</li>
+<li><strong>Copy provided</strong> to {{NYSCEF Resource Center / Clerk&#39;s Office / Chambers}} as courtesy</li>
+</ul>
+<hr>
+<h2>CONCLUSION</h2>
+<p>Uniform Rule 202.5-bb establishes <strong>mandatory</strong> e-filing for designated case types. The word &quot;shall&quot; in the rule is not discretionary.</p>
+<p>Improper rejection of compliant e-filings, acceptance of paper filings when e-filing is required, and refusal to accept electronic service all violate the Uniform Rules and deprive parties of access to courts.</p>
+<p>I respectfully request that you comply with NYSCEF rules by {{accepting e-filing / re-processing improperly rejected filing / accepting electronic service / accepting paper filing due to system outage}} within three (3) business days.</p>
+<hr>
+<p>Respectfully submitted,</p>
+<hr>
+<p>{{Your Signature}}
+{{Your Name}}
+{{Pro Se Party / Attorney for {{Party}}}}
+{{Address}}
+{{Phone}}
+{{Email}}
+{{NYSCEF Email Service Address}}
+{{Bar Number if applicable}}</p>
+<hr>
+<h2>CERTIFICATE OF SERVICE</h2>
+<p>I hereby certify that on {{date}}, a true and correct copy of this Notice of Non-Compliance was {{e-filed via NYSCEF / served via NYSCEF email / tendered in paper due to system unavailability}} to all parties.</p>
+<p>{{If tendered in paper:}} NYSCEF was unavailable on {{date}} from {{time}} to {{time}}, necessitating paper service pursuant to Uniform Rule 202.5-b(c)(1).</p>
+<hr>
+<p>{{Signature}}
+{{Name}}</p>
+<hr>
+<h2>APPENDIX: RELEVANT AUTHORITIES</h2>
+<h3>Uniform Rules for Trial Courts:</h3>
+<ul>
+<li><strong>Uniform Rule 202.5-b</strong> - General Provisions Governing Electronic Filing (Consensual and Mandatory)</li>
+<li><strong>Uniform Rule 202.5-bb</strong> - Mandatory Electronic Filing in Supreme Court and County Court</li>
+<li><strong>Uniform Rule 202.5-d</strong> - Rejection of Papers Submitted for E-Filing</li>
+<li><strong>22 NYCRR Part 1245</strong> - Appellate Division Electronic Filing Rules</li>
+</ul>
+<h3>Legislation:</h3>
+<ul>
+<li><strong>Chapter 237 of the Laws of 2015</strong> - E-filing legislation consolidated into CPLR, SCPA, CPL, CCA, FCA, NYCCCA</li>
+<li><strong>Chapter 416 of the Laws of 2009</strong> - Mandatory e-filing enabling legislation</li>
+<li><strong>Chapter 367 of the Laws of 1999</strong> - Original NYSCEF enabling legislation</li>
+</ul>
+<h3>Administrative Orders:</h3>
+<p>NYSCEF mandatory e-filing has been expanded by numerous Administrative Orders. Current authorizations available at: <a href="https://www.nycourts.gov/efile/rules.shtml">https://www.nycourts.gov/efile/rules.shtml</a></p>
+<p><strong>Note:</strong> Administrative Orders change frequently. This template cites only permanent Uniform Rules, not specific Administrative Orders.</p>
+<hr>
+<p><strong>Common NYSCEF Violations:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Violation</th>
+<th>Authority</th>
+<th>Remedy</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Accepting paper filing in mandatory e-filing case</td>
+<td>Uniform Rule 202.5-bb(a)</td>
+<td>Refuse paper filings; compel e-filing</td>
+</tr>
+<tr>
+<td>Improperly rejecting compliant e-filing</td>
+<td>Uniform Rule 202.5-d</td>
+<td>Accept filing; nunc pro tunc effective date</td>
+</tr>
+<tr>
+<td>Refusing to accept electronic service</td>
+<td>Uniform Rule 202.5-b(h)(2)</td>
+<td>Compel use of NYSCEF email service address</td>
+</tr>
+<tr>
+<td>Rejecting paper filing when NYSCEF down</td>
+<td>Uniform Rule 202.5-b(c)(1)</td>
+<td>Accept paper filing; clerk ministerial duty</td>
+</tr>
+<tr>
+<td>Failing to docket e-filed document</td>
+<td>Uniform Rule 202.5-b</td>
+<td>Compel timely docketing</td>
+</tr>
+<tr>
+<td>Charging improper fees for NYSCEF</td>
+<td>Uniform Rule 202.5-b(e)</td>
+<td>Refund; cite to fee schedule</td>
+</tr>
+</tbody></table>
+<hr>
+<p><strong>Resources:</strong></p>
+<ul>
+<li><strong>NYSCEF E-mail:</strong> <a href="mailto:nyscef@nycourts.gov">nyscef@nycourts.gov</a></li>
+<li><strong>NYSCEF Phone:</strong> (646) 386-3033</li>
+<li><strong>NYSCEF Rules:</strong> <a href="https://www.nycourts.gov/efile/rules.shtml">https://www.nycourts.gov/efile/rules.shtml</a></li>
+<li><strong>NYSCEF User Manual:</strong> <a href="https://www.nycourts.gov/efile/UserManual.shtml">https://www.nycourts.gov/efile/UserManual.shtml</a></li>
+<li><strong>Uniform Rules:</strong> <a href="https://www.nycourts.gov/rules/trialcourts/index.shtml">https://www.nycourts.gov/rules/trialcourts/index.shtml</a></li>
+</ul>
+
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="border-t-2 border-border bg-muted/30 py-12 mt-8" role="contentinfo">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-12 mb-10">
+                <div>
+                    <h3 class="text-lg font-sans font-semibold mb-4 text-foreground">Open Collaboration</h3>
+                    <p class="helpful-text text-sm mb-3 leading-relaxed">An open specification for verifying adherence to statutory procedure in state and federal courts. Contributions welcome.</p>
+                    <p class="helpful-text text-sm font-medium"><strong>Not legal advice.</strong> Educational purposes only.</p>
+                </div>
+
+                <div>
+                    <h3 class="text-lg font-sans font-semibold mb-4 text-foreground">Resources</h3>
+                    <ul class="space-y-3 text-sm">
+                        <li><a href="https://github.com/josephfusco/procedural-compliance" target="_blank" rel="noopener noreferrer" class="footer-link text-foreground/80 hover:text-foreground transition-colors underline decoration-1 underline-offset-2">GitHub Repository</a></li>
+                        <li><a href="https://github.com/josephfusco/procedural-compliance/blob/main/CONTRIBUTING.md" target="_blank" rel="noopener noreferrer" class="footer-link text-foreground/80 hover:text-foreground transition-colors underline decoration-1 underline-offset-2">Contributing Guide</a></li>
+                        <li><a href="https://github.com/josephfusco/procedural-compliance/issues" target="_blank" rel="noopener noreferrer" class="footer-link text-foreground/80 hover:text-foreground transition-colors underline decoration-1 underline-offset-2">Report Issue</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h3 class="text-lg font-sans font-semibold mb-4 text-foreground">Legal</h3>
+                    <ul class="space-y-3 text-sm">
+                        <li><a href="https://github.com/josephfusco/procedural-compliance/blob/main/LICENSE" target="_blank" rel="noopener noreferrer" class="footer-link text-foreground/80 hover:text-foreground transition-colors underline decoration-1 underline-offset-2">MIT License</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <div class="flex items-center gap-2 mb-4">
+                        <span class="badge badge-ny">NY</span>
+                        <h3 class="text-lg font-sans font-semibold text-foreground">NY Court Resources</h3>
+                    </div>
+                    <ul class="space-y-3 text-sm">
+                        <li><a href="https://www.nycourts.gov/efile/rules.shtml" target="_blank" rel="noopener noreferrer" class="footer-link text-foreground/80 hover:text-foreground transition-colors underline decoration-1 underline-offset-2">NYSCEF E-Filing Rules</a></li>
+                        <li><a href="https://ww2.nycourts.gov/courts/index.shtml" target="_blank" rel="noopener noreferrer" class="footer-link text-foreground/80 hover:text-foreground transition-colors underline decoration-1 underline-offset-2">NY Court Directory</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="border-t-2 border-border pt-8 text-center">
+                <p class="text-sm text-foreground/70 font-medium">&copy; 2025 Procedural Compliance Framework (PCF)</p>
+                <p class="text-sm text-foreground/70 mt-2">Released under MIT License • Open Source Legal Framework</p>
+                <p class="text-xs text-foreground/60 mt-3">Accessibility: WCAG 2.1 AA • ADA Title II § 35.160 • Section 508 Standards</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Theme Toggle Script -->
+    <script>
+        (function() {
+            const THEMES = { LIGHT: 'light', DARK: 'dark' };
+            const LABELS = { light: 'Light', dark: 'Dark' };
+            const ARIA_LABELS = {
+                light: 'Light mode. Click to switch to dark mode',
+                dark: 'Dark mode. Click to switch to light mode'
+            };
+
+            const themeToggle = document.getElementById('theme-toggle');
+            const themeLabel = document.getElementById('theme-label');
+            const html = document.documentElement;
+
+            function getSavedTheme() {
+                return localStorage.getItem('theme') || THEMES.LIGHT;
+            }
+
+            function applyTheme(theme) {
+                html.setAttribute('data-theme', theme);
+                themeLabel.textContent = LABELS[theme];
+                themeToggle.setAttribute('aria-checked', theme === THEMES.DARK ? 'true' : 'false');
+                themeToggle.setAttribute('aria-label', ARIA_LABELS[theme]);
+            }
+
+            function toggleTheme() {
+                const currentTheme = getSavedTheme();
+                const nextTheme = currentTheme === THEMES.LIGHT ? THEMES.DARK : THEMES.LIGHT;
+                localStorage.setItem('theme', nextTheme);
+                applyTheme(nextTheme);
+            }
+
+            applyTheme(getSavedTheme());
+            themeToggle.addEventListener('click', toggleTheme);
+            themeToggle.addEventListener('keydown', (e) => {
+                if (e.key === ' ' || e.key === 'Enter') {
+                    e.preventDefault();
+                    toggleTheme();
+                }
+            });
+        })();
+    </script>
+
+    <!-- Template Content Enhancements -->
+    <script>
+        // Separate metadata from document
+        const content = document.getElementById('template-content');
+        if (content) {
+            // Highlight placeholders
+            const walker = document.createTreeWalker(content, NodeFilter.SHOW_TEXT, null);
+            const nodesToReplace = [];
+            while (walker.nextNode()) {
+                const node = walker.currentNode;
+                if (node.textContent.includes('{{') && node.textContent.includes('}}')) {
+                    nodesToReplace.push(node);
+                }
+            }
+
+            nodesToReplace.forEach(node => {
+                const fragment = document.createDocumentFragment();
+                const tempDiv = document.createElement('div');
+                tempDiv.innerHTML = node.textContent.replace(
+                    /\{\{([^}]+)\}\}/g,
+                    '<span class="template-placeholder">{{$1}}</span>'
+                );
+                while (tempDiv.firstChild) {
+                    fragment.appendChild(tempDiv.firstChild);
+                }
+                node.parentNode.replaceChild(fragment, node);
+            });
+        }
+    </script>
+</body>
+</html>

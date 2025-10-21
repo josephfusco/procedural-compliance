@@ -1,0 +1,596 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="CPLR §2219(a) - Written Order Requirement - Notice of Non-Compliance (Universal)">
+    <title>Notice of Non-Compliance (Universal) | Procedural Compliance Framework</title>
+
+    <!-- Favicon -->
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>⚖️</text></svg>">
+
+    <!-- USWDS Public Sans Font -->
+    <link rel="preload" href="../fonts/public-sans/PublicSans-Regular.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="../fonts/public-sans/PublicSans-SemiBold.woff2" as="font" type="font/woff2" crossorigin>
+
+    <!-- Social Preview Meta Tags -->
+    <meta property="og:title" content="Notice of Non-Compliance (Universal)">
+    <meta property="og:description" content="CPLR §2219(a) - Written Order Requirement">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://proceduralcompliance.org/templates/notice-universal.html">
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Custom Tailwind Config -->
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                container: {
+                    center: true,
+                    padding: '1rem',
+                    screens: {
+                        sm: '1100px',
+                        md: '1100px',
+                        lg: '1100px',
+                        xl: '1100px',
+                        '2xl': '1100px'
+                    }
+                },
+                extend: {
+                    colors: {
+                        border: '#dfe1e2',
+                        input: '#dfe1e2',
+                        ring: '#005EA2',
+                        background: '#ffffff',
+                        foreground: '#1b1b1b',
+                        primary: {
+                            DEFAULT: '#005EA2',
+                            foreground: '#ffffff'
+                        },
+                        secondary: {
+                            DEFAULT: '#f9fafb',
+                            foreground: '#1a1a1a'
+                        },
+                        muted: {
+                            DEFAULT: '#f9fafb',
+                            foreground: '#6b7280'
+                        },
+                        accent: {
+                            DEFAULT: '#b8860b',
+                            foreground: '#ffffff'
+                        }
+                    },
+                    fontFamily: {
+                        serif: ['Georgia', 'Cambria', 'Times New Roman', 'serif'],
+                        sans: ['Public Sans', '-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'Roboto', 'sans-serif'],
+                        mono: ['Monaco', 'Courier New', 'monospace']
+                    }
+                }
+            }
+        }
+    </script>
+
+    <link rel="stylesheet" href="../styles.css">
+</head>
+<body class="bg-background text-foreground font-sans antialiased">
+    <!-- Skip Navigation Link -->
+    <a href="#main-content" class="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 focus:z-50 focus:px-4 focus:py-2 focus:bg-primary focus:text-primary-foreground focus:rounded focus:outline-none focus:ring-4 focus:ring-ring focus:ring-offset-2">
+        Skip to main content
+    </a>
+
+    <!-- US Government-Style Banner -->
+    <section class="gov-banner" role="region" aria-label="Official government-style notice">
+        <div class="container mx-auto px-4 py-2">
+            <div class="flex items-center gap-2">
+                <img src="../us_flag_small.png" class="gov-banner-flag" alt="U.S. flag" loading="eager">
+                <p class="gov-banner-text">An open framework for documenting procedural compliance · Not legal advice</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Header -->
+    <header class="w-full border-b border-border bg-background" role="banner">
+        <div class="container mx-auto px-4 py-3">
+            <div class="flex flex-col md:flex-row md:h-14 md:items-center md:justify-between gap-3 md:gap-0">
+                <div class="flex items-center justify-between">
+                    <div class="flex items-center space-x-2">
+                        <span class="text-xl" role="img" aria-label="Scales of justice">⚖️</span>
+                        <h1 class="text-lg font-sans font-semibold">
+                            <a href="../index.html" class="hover:text-primary transition-colors">Procedural Compliance Framework</a>
+                        </h1>
+                    </div>
+                    <nav class="hidden md:flex items-center space-x-6 text-sm ml-8">
+                        <a href="../index.html#templates" class="text-foreground/80 hover:text-foreground transition-colors">Templates</a>
+                        <a href="https://github.com/josephfusco/procedural-compliance" target="_blank" rel="noopener noreferrer" class="text-foreground/80 hover:text-foreground transition-colors">GitHub</a>
+                    </nav>
+                </div>
+                <div class="flex items-center gap-2">
+                    <button id="theme-toggle" class="flex items-center justify-center px-4 py-2 text-sm font-medium text-foreground bg-transparent rounded border-2 border-border hover:bg-muted transition-colors focus:outline-none focus:ring-4 focus:ring-ring focus:ring-offset-2" aria-label="Light mode. Click to toggle" role="switch" aria-checked="false">
+                        <span id="theme-label">Light</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Breadcrumb Navigation -->
+    <nav class="border-b border-border bg-muted/30" aria-label="Breadcrumb">
+        <div class="container mx-auto px-4 py-3">
+            <ol class="flex items-center space-x-2 text-sm">
+                <li><a href="../index.html" class="text-foreground/60 hover:text-foreground transition-colors">Home</a></li>
+                <li class="text-foreground/40">/</li>
+                <li><a href="../index.html#templates" class="text-foreground/60 hover:text-foreground transition-colors">Templates</a></li>
+                <li class="text-foreground/40">/</li>
+                <li class="text-foreground font-medium" aria-current="page">Notice of Non-Compliance (Universal)</li>
+            </ol>
+        </div>
+    </nav>
+
+    <main id="main-content" role="main">
+        <!-- Template Header -->
+        <div class="border-b border-border bg-muted/30">
+            <div class="container mx-auto px-4 py-8">
+                <div class="flex items-start justify-between gap-4">
+                    <div class="flex-1">
+                        <div class="flex items-center gap-3 mb-3">
+                            <span class="badge badge-ny">NY</span>
+                            <h1 class="text-3xl font-sans font-semibold text-foreground">Notice of Non-Compliance (Universal)</h1>
+                        </div>
+                        <p class="text-base text-muted-foreground">CPLR §2219(a) - Written Order Requirement</p>
+                    </div>
+                    <div class="flex gap-2">
+                        <a href="https://github.com/josephfusco/procedural-compliance/blob/main/templates/notice_universal.md" target="_blank" rel="noopener noreferrer" class="px-4 py-2 text-sm font-medium text-foreground bg-transparent rounded border-2 border-border hover:bg-muted transition-colors focus:outline-none focus:ring-4 focus:ring-ring focus:ring-offset-2">
+                            Edit on GitHub
+                        </a>
+                        <a href="../templates/notice_universal.md" download class="px-4 py-2 text-sm font-medium text-primary-foreground bg-primary rounded border-2 border-primary hover:bg-primary/90 transition-colors focus:outline-none focus:ring-4 focus:ring-ring focus:ring-offset-2">
+                            Download
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Template Content -->
+        <div class="container mx-auto px-4 py-12">
+            <div class="prose prose-slate mx-auto" id="template-content">
+                <hr>
+<p><strong>JURISDICTION: NEW YORK</strong></p>
+<h2>This template applies to New York State courts (Supreme, Family, Appellate Division) governed by CPLR, DRL, FCA, and 22 NYCRR.</h2>
+<h1>NOTICE OF NON-COMPLIANCE (Universal)</h1>
+<hr>
+<h2>⚠️ BEFORE USING THIS TEMPLATE</h2>
+<h3>When to Use Universal Notice of Non-Compliance</h3>
+<p><strong>USE this template when:</strong></p>
+<ul>
+<li>You need to address multiple roles or recipients with common procedural failures</li>
+<li>Specific role template doesn&#39;t exist for your situation</li>
+<li>Court actor violated clear statutory or rule-based duty</li>
+<li>You need flexible template adaptable to various procedural deficiencies</li>
+<li>Creating record for multiple related compliance issues</li>
+</ul>
+<p><strong>DO NOT use this if:</strong></p>
+<ul>
+<li>More specific template exists (judge, AFC, clerk, counsel - use those instead)</li>
+<li>Duty is unclear or disputed</li>
+<li>You haven&#39;t tried informal resolution</li>
+<li>Complaint is about case outcome rather than procedural compliance</li>
+<li>Issue requires substantive motion rather than notice</li>
+</ul>
+<p><strong>Appropriate Examples:</strong></p>
+<p>✅ <strong>USE Universal Template:</strong></p>
+<ol>
+<li><strong>Court reporter won&#39;t produce transcript:</strong> Reporter missed 90-day deadline (CPLR §8003); judge/AFC/clerk templates don&#39;t apply; need notice to court reporter directly</li>
+<li><strong>Court-appointed evaluator violated procedure:</strong> Forensic psychologist in custody case disclosed confidential information violating 22 NYCRR Part 36; unique role not covered by other templates</li>
+<li><strong>Multiple actors with related failures:</strong> Court clerk failed to docket orders AND court attorney refused to calendar motion; single comprehensive notice more efficient than two separate ones</li>
+<li><strong>Interpreter failed to appear:</strong> Court interpreter no-showed at hearing violating Judiciary Law §390; caused adjournment; need formal notice for record</li>
+<li><strong>Court attorney exceeded authority:</strong> Court attorney staff denied motion papers claiming &quot;judge won&#39;t consider this&quot; - exceeded ministerial role; not judicial act subject to judge template</li>
+<li><strong>Special referee violated procedure:</strong> Referee appointed under CPLR §4311 failed to hold hearings as ordered; unique quasi-judicial role</li>
+<li><strong>Guardian ad litem (not AFC):</strong> Adult incapacitated person&#39;s GAL failed statutory duties under MHL Article 81; different from AFC template</li>
+</ol>
+<p>❌ <strong>DO NOT Use Universal Template:</strong></p>
+<ol>
+<li>Judge decided motion orally without written order → <strong>Use notice_judge.md</strong> (specific template exists)</li>
+<li>Opposing counsel won&#39;t respond to discovery → <strong>Use notice_opposing_counsel.md</strong> (specific template)</li>
+<li>Clerk rejected your NYSCEF filing → <strong>Use ny_nyscef_violations.md</strong> (specialized template)</li>
+<li>Attorney for child hasn&#39;t met with child → <strong>Use notice_afc.md</strong> (role-specific template)</li>
+<li>You lost your motion and disagree with outcome → <strong>Use notice_of_appeal.md</strong> (this is appeal, not compliance issue)</li>
+<li>Duty is disputed (&quot;Judge says oral ruling sufficient&quot;) → <strong>Use Article 78 after building record</strong> (universal notice won&#39;t resolve legal dispute)</li>
+</ol>
+<h3>Try These Steps First</h3>
+<p><strong>Before sending this notice:</strong></p>
+<ol>
+<li><p><strong>Verify no specific template exists</strong></p>
+<ul>
+<li>Check all 6 role-specific templates: judge, AFC, assigned counsel, clerk, opposing counsel, universal</li>
+<li>Review specialized templates: NYSCEF violations, emergency stay, notice of appeal</li>
+<li>If specific template exists, use that instead (better case law support)</li>
+</ul>
+</li>
+<li><p><strong>Identify specific statute/rule violated</strong></p>
+<ul>
+<li>Must cite exact CPLR, DRL, FCA, or 22 NYCRR provision</li>
+<li>Example: &quot;CPLR §8003(a) requires court reporter to deliver transcript within 90 days&quot;</li>
+<li>If duty is only in case law or general equity, universal notice is weaker</li>
+</ul>
+</li>
+<li><p><strong>Determine if duty is ministerial or discretionary</strong></p>
+<ul>
+<li><strong>Ministerial:</strong> &quot;So plainly prescribed as to be free from doubt&quot; (<em>Holtzman</em>)</li>
+<li><strong>Discretionary:</strong> Requires judgment, policy determination, weighing factors</li>
+<li>Universal notice only works for ministerial duties</li>
+</ul>
+</li>
+<li><p><strong>Document the failure thoroughly</strong></p>
+<ul>
+<li>Dates: When duty should have been performed, when you demanded compliance</li>
+<li>Docket references: NYSCEF entries, motion sequence numbers</li>
+<li>Communications: Emails, letters, phone calls requesting performance</li>
+<li>Build table showing timeline of non-compliance</li>
+</ul>
+</li>
+<li><p><strong>Attempt informal resolution first</strong></p>
+<ul>
+<li><strong>For court personnel:</strong> Email chambers, call clerk&#39;s office, speak to supervisor</li>
+<li><strong>For appointed professionals:</strong> Contact directly, request meeting, send informal letter</li>
+<li><strong>For multiple actors:</strong> Try to resolve each separately before combined notice</li>
+<li><strong>Document all attempts:</strong> Save emails, note phone calls, keep correspondence</li>
+</ul>
+</li>
+<li><p><strong>Customize role module from template</strong></p>
+<ul>
+<li>See Section &quot;Role Modules&quot; below for judge/clerk/counsel/other frameworks</li>
+<li>Replace {{placeholders}} with specific facts</li>
+<li>Add citations for role-specific duties</li>
+<li>Remove irrelevant modules</li>
+</ul>
+</li>
+<li><p><strong>Verify proper service method</strong></p>
+<ul>
+<li><strong>Court personnel:</strong> NYSCEF upload + email to chambers (check local rules)</li>
+<li><strong>Attorneys:</strong> NYSCEF service on attorney&#39;s email service address</li>
+<li><strong>Non-attorneys:</strong> Certified mail + regular mail</li>
+<li><strong>Multiple recipients:</strong> Serve all; file one copy with court</li>
+</ul>
+</li>
+</ol>
+<p><strong>Document everything:</strong> Statutory requirements, timeline of non-compliance, your attempts to resolve, communications, docket entries.</p>
+<h3>Resource Requirements &amp; Customization</h3>
+<p>⚠️ <strong>Important Considerations:</strong></p>
+<ul>
+<li><strong>Customization required:</strong> This is framework template requiring significant adaptation (not fill-in-the-blank)</li>
+<li><strong>Legal research needed:</strong> Must independently research and cite specific duties and authorities for your situation</li>
+<li><strong>Less established:</strong> Specific templates have more case law support; universal template is newer remedy</li>
+<li><strong>Timeline:</strong> Varies by recipient; court personnel may respond in days; professionals may take weeks</li>
+<li><strong>Success rate:</strong> Moderate; depends on clarity of duty and strength of exhaustion showing</li>
+<li><strong>Flexibility vs. precision:</strong> More adaptable but less tailored than role-specific templates</li>
+<li><strong>What this achieves:</strong> Creates record for various procedural failures; preserves appeal issues; may prompt compliance</li>
+<li><strong>What this does NOT do:</strong> Provide detailed role-specific guidance; guarantee success; replace need for motions/appeals</li>
+</ul>
+<p><strong>Cost Expectations:</strong></p>
+<ul>
+<li><strong>Filing fees:</strong> Usually $0 (notices not typically filed separately; attached to motions if needed)</li>
+<li><strong>Service costs:</strong> Certified mail ~$10; NYSCEF free</li>
+<li><strong>Attorney consultation recommended:</strong> $200-500 for review if complex role/duty</li>
+<li><strong>Time investment:</strong> 3-5 hours to research, customize, and serve</li>
+</ul>
+<p><strong>When to use specific templates instead:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Situation</th>
+<th>Correct Template</th>
+<th>Why</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Judge won&#39;t issue written orders</td>
+<td>notice_judge.md</td>
+<td>CPLR §2219(a) case law well-established</td>
+</tr>
+<tr>
+<td>AFC hasn&#39;t met with child</td>
+<td>notice_afc.md</td>
+<td>FCA §§241-249 specific to AFC duties</td>
+</tr>
+<tr>
+<td>Assigned counsel not communicating</td>
+<td>notice_assigned_counsel.md</td>
+<td>RPC 1.4 clear; IAC preservation language</td>
+</tr>
+<tr>
+<td>Clerk won&#39;t docket/enter orders</td>
+<td>notice_clerk.md</td>
+<td>CPLR §5017(b) ministerial duty case law</td>
+</tr>
+<tr>
+<td>Opposing counsel discovery abuse</td>
+<td>notice_opposing_counsel.md</td>
+<td>CPLR Article 31 + RPC 3.4 framework</td>
+</tr>
+<tr>
+<td>NYSCEF rejection/tech issues</td>
+<td>ny_nyscef_violations.md</td>
+<td>Uniform Rule 202.5-bb specific</td>
+</tr>
+</tbody></table>
+<p><strong>Appropriate use cases for universal template:</strong></p>
+<ol>
+<li><p><strong>Court Reporter Failures</strong></p>
+<ul>
+<li>Missed CPLR §8003 90-day transcript deadline</li>
+<li>Refused to produce transcript despite payment</li>
+<li>Produced incomplete/inaccurate transcript</li>
+<li><em>Why universal:</em> No court reporter-specific template exists</li>
+</ul>
+</li>
+<li><p><strong>Court-Appointed Professional Violations</strong></p>
+<ul>
+<li>Forensic evaluator (22 NYCRR Part 36 violations)</li>
+<li>Neutral evaluator in matrimonial (22 NYCRR §202.16(f))</li>
+<li>Special referee (CPLR §4311) procedural failures</li>
+<li>Guardian ad litem for incapacitated person (MHL Art. 81)</li>
+<li><em>Why universal:</em> Quasi-judicial/professional roles not covered elsewhere</li>
+</ul>
+</li>
+<li><p><strong>Multiple Actors with Related Failures</strong></p>
+<ul>
+<li>Clerk + Court Attorney both failed to process motions</li>
+<li>Judge + Referee both failed to issue required findings</li>
+<li>AFC + Attorney + GAL all failed to appear at hearing</li>
+<li><em>Why universal:</em> Single comprehensive notice more efficient</li>
+</ul>
+</li>
+<li><p><strong>Unique Court Personnel</strong></p>
+<ul>
+<li>Court interpreter violations (Judiciary Law §390)</li>
+<li>Court security refusal to permit access</li>
+<li>Court IT refusing CM/ECF access despite eligibility</li>
+<li>Part clerk refusing to accept filing</li>
+<li><em>Why universal:</em> Ministerial duties exist but no specific template</li>
+</ul>
+</li>
+<li><p><strong>Hybrid Roles</strong></p>
+<ul>
+<li>Law guardian acting as AFC (role confusion)</li>
+<li>Magistrate performing judicial functions without authority</li>
+<li>Court attorney making substantive rulings</li>
+<li><em>Why universal:</em> Role doesn&#39;t fit cleanly into other categories</li>
+</ul>
+</li>
+</ol>
+<p><strong>Best practice:</strong></p>
+<ol>
+<li><strong>Always prefer specific templates when available</strong> - They have better case law support and are more likely to succeed</li>
+<li><strong>Use universal only when necessary</strong> - When no other template fits or multiple actors involved</li>
+<li><strong>Heavily customize role modules and authorities</strong> - This is framework, not fill-in-the-blank form</li>
+<li><strong>Cite specific duties with precision</strong> - Vague &quot;failed to perform duties&quot; won&#39;t work; need exact statute/rule</li>
+<li><strong>Build strong exhaustion record</strong> - 2-3 informal demands over time showing good faith</li>
+<li><strong>Consider motion as alternative</strong> - If duty is disputed or complex, motion to compel may be better remedy</li>
+<li><strong>Preserve for appeal/Article 78</strong> - Even if compliance not achieved, notice creates record for escalation</li>
+</ol>
+<hr>
+<p><strong>TO:</strong> {{Name, Title}}
+<strong>FROM:</strong> {{Your Name}}
+<strong>DATE:</strong> {{Date}}
+<strong>CASE:</strong> {{Caption, Index Number}}
+<strong>COURT:</strong> {{Court Name and Location}}
+<strong>SUBJECT:</strong> Procedural Notice and Demand for Statutory Compliance</p>
+<hr>
+<h2>1. Role and Authority</h2>
+<p>You act as {{Role}} in the above-captioned matter, bound by {{Applicable Statutes, Rules, and Ethical Provisions}}.</p>
+<h2>2. Identified Duty</h2>
+<p>The law requires you to {{specific statutory or rule-based duty}}. No compliant action or written explanation appears in the record filed with the court as of {{date}}.</p>
+<h2>3. Demand for Compliance</h2>
+<p>You are hereby demanded to:</p>
+<ul>
+<li><strong>Perform</strong> the required action within {{X}} business days of service of this notice, <strong>OR</strong></li>
+<li><strong>Provide written authority</strong> for non-performance, including statutory basis and factual justification, within the same timeframe.</li>
+</ul>
+<h2>4. Record Preservation</h2>
+<p>This document serves as:</p>
+<ul>
+<li>Formal notice of non-compliance for appellate and administrative review</li>
+<li>Preservation notice under applicable record-keeping rules</li>
+<li>Basis for further relief if statutory duties remain unperformed</li>
+</ul>
+<h2>5. Service and Filing</h2>
+<p>This notice is served via {{method of service}} and {{filed/uploaded}} to {{NYSCEF, CM/ECF, or other platform}} on {{date}}.</p>
+<hr>
+<h2>Role Modules</h2>
+<p>Use the appropriate module below based on the recipient&#39;s role.</p>
+<h3>Judge</h3>
+<p><strong>Applicable Authority:</strong></p>
+<ul>
+<li>CPLR §2219(a): Orders must state grounds and papers considered</li>
+<li>22 NYCRR §202.48(b): Decisions on motions must be in writing or on the record</li>
+<li>CPLR §5704(a): Right to review ex parte orders</li>
+</ul>
+<p><strong>Duties:</strong></p>
+<ul>
+<li>Issue written decisions with findings of fact and conclusions of law</li>
+<li>State grounds for rulings and papers considered</li>
+<li>Provide notice and opportunity to be heard before adverse rulings</li>
+</ul>
+<h3>Attorney for the Child (AFC)</h3>
+<p><strong>Applicable Authority:</strong></p>
+<ul>
+<li>FCA §§241–249: Duties of law guardians and attorneys for children</li>
+<li>22 NYCRR §7.2(d): Standards for representation</li>
+</ul>
+<p><strong>Duties:</strong></p>
+<ul>
+<li>Zealous advocacy for client&#39;s expressed wishes</li>
+<li>Investigation and independent assessment</li>
+<li>Timely court appearances and communications</li>
+</ul>
+<h3>Assigned Counsel</h3>
+<p><strong>Applicable Authority:</strong></p>
+<ul>
+<li>Rules of Professional Conduct 1.2: Scope of representation</li>
+<li>RPC 1.3: Diligence</li>
+<li>RPC 1.4: Communication with client</li>
+</ul>
+<p><strong>Duties:</strong></p>
+<ul>
+<li>Competent and diligent representation</li>
+<li>Regular client communication</li>
+<li>Adherence to client&#39;s objectives</li>
+</ul>
+<h3>Court Clerk</h3>
+<p><strong>Applicable Authority:</strong></p>
+<ul>
+<li>CPLR §5017(b): Entry and filing of orders</li>
+<li>22 NYCRR §202.48: Motion procedures and record-keeping</li>
+</ul>
+<p><strong>Duties:</strong></p>
+<ul>
+<li>Accurate docketing and record maintenance</li>
+<li>Timely processing of filings</li>
+<li>Providing access to court records</li>
+</ul>
+<h3>Opposing Counsel</h3>
+<p><strong>Applicable Authority:</strong></p>
+<ul>
+<li>RPC 3.3: Candor toward the tribunal</li>
+<li>RPC 3.4: Fairness to opposing party and counsel</li>
+<li>RPC 8.4: Misconduct</li>
+</ul>
+<p><strong>Duties:</strong></p>
+<ul>
+<li>Good faith in pleadings and discovery</li>
+<li>Disclosure of controlling adverse authority</li>
+<li>Timely responses to procedural requests</li>
+</ul>
+<hr>
+<p><strong>Service Certification</strong></p>
+<p>I certify that this Notice of Non-Compliance was served upon {{Recipient Name}} via {{method}} on {{date}}.</p>
+<p>{{Your Signature}}
+{{Your Name}}
+{{Contact Information}}</p>
+
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="border-t-2 border-border bg-muted/30 py-12 mt-8" role="contentinfo">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-12 mb-10">
+                <div>
+                    <h3 class="text-lg font-sans font-semibold mb-4 text-foreground">Open Collaboration</h3>
+                    <p class="helpful-text text-sm mb-3 leading-relaxed">An open specification for verifying adherence to statutory procedure in state and federal courts. Contributions welcome.</p>
+                    <p class="helpful-text text-sm font-medium"><strong>Not legal advice.</strong> Educational purposes only.</p>
+                </div>
+
+                <div>
+                    <h3 class="text-lg font-sans font-semibold mb-4 text-foreground">Resources</h3>
+                    <ul class="space-y-3 text-sm">
+                        <li><a href="https://github.com/josephfusco/procedural-compliance" target="_blank" rel="noopener noreferrer" class="footer-link text-foreground/80 hover:text-foreground transition-colors underline decoration-1 underline-offset-2">GitHub Repository</a></li>
+                        <li><a href="https://github.com/josephfusco/procedural-compliance/blob/main/CONTRIBUTING.md" target="_blank" rel="noopener noreferrer" class="footer-link text-foreground/80 hover:text-foreground transition-colors underline decoration-1 underline-offset-2">Contributing Guide</a></li>
+                        <li><a href="https://github.com/josephfusco/procedural-compliance/issues" target="_blank" rel="noopener noreferrer" class="footer-link text-foreground/80 hover:text-foreground transition-colors underline decoration-1 underline-offset-2">Report Issue</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h3 class="text-lg font-sans font-semibold mb-4 text-foreground">Legal</h3>
+                    <ul class="space-y-3 text-sm">
+                        <li><a href="https://github.com/josephfusco/procedural-compliance/blob/main/LICENSE" target="_blank" rel="noopener noreferrer" class="footer-link text-foreground/80 hover:text-foreground transition-colors underline decoration-1 underline-offset-2">MIT License</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <div class="flex items-center gap-2 mb-4">
+                        <span class="badge badge-ny">NY</span>
+                        <h3 class="text-lg font-sans font-semibold text-foreground">NY Court Resources</h3>
+                    </div>
+                    <ul class="space-y-3 text-sm">
+                        <li><a href="https://www.nycourts.gov/efile/rules.shtml" target="_blank" rel="noopener noreferrer" class="footer-link text-foreground/80 hover:text-foreground transition-colors underline decoration-1 underline-offset-2">NYSCEF E-Filing Rules</a></li>
+                        <li><a href="https://ww2.nycourts.gov/courts/index.shtml" target="_blank" rel="noopener noreferrer" class="footer-link text-foreground/80 hover:text-foreground transition-colors underline decoration-1 underline-offset-2">NY Court Directory</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="border-t-2 border-border pt-8 text-center">
+                <p class="text-sm text-foreground/70 font-medium">&copy; 2025 Procedural Compliance Framework (PCF)</p>
+                <p class="text-sm text-foreground/70 mt-2">Released under MIT License • Open Source Legal Framework</p>
+                <p class="text-xs text-foreground/60 mt-3">Accessibility: WCAG 2.1 AA • ADA Title II § 35.160 • Section 508 Standards</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Theme Toggle Script -->
+    <script>
+        (function() {
+            const THEMES = { LIGHT: 'light', DARK: 'dark' };
+            const LABELS = { light: 'Light', dark: 'Dark' };
+            const ARIA_LABELS = {
+                light: 'Light mode. Click to switch to dark mode',
+                dark: 'Dark mode. Click to switch to light mode'
+            };
+
+            const themeToggle = document.getElementById('theme-toggle');
+            const themeLabel = document.getElementById('theme-label');
+            const html = document.documentElement;
+
+            function getSavedTheme() {
+                return localStorage.getItem('theme') || THEMES.LIGHT;
+            }
+
+            function applyTheme(theme) {
+                html.setAttribute('data-theme', theme);
+                themeLabel.textContent = LABELS[theme];
+                themeToggle.setAttribute('aria-checked', theme === THEMES.DARK ? 'true' : 'false');
+                themeToggle.setAttribute('aria-label', ARIA_LABELS[theme]);
+            }
+
+            function toggleTheme() {
+                const currentTheme = getSavedTheme();
+                const nextTheme = currentTheme === THEMES.LIGHT ? THEMES.DARK : THEMES.LIGHT;
+                localStorage.setItem('theme', nextTheme);
+                applyTheme(nextTheme);
+            }
+
+            applyTheme(getSavedTheme());
+            themeToggle.addEventListener('click', toggleTheme);
+            themeToggle.addEventListener('keydown', (e) => {
+                if (e.key === ' ' || e.key === 'Enter') {
+                    e.preventDefault();
+                    toggleTheme();
+                }
+            });
+        })();
+    </script>
+
+    <!-- Template Content Enhancements -->
+    <script>
+        // Separate metadata from document
+        const content = document.getElementById('template-content');
+        if (content) {
+            // Highlight placeholders
+            const walker = document.createTreeWalker(content, NodeFilter.SHOW_TEXT, null);
+            const nodesToReplace = [];
+            while (walker.nextNode()) {
+                const node = walker.currentNode;
+                if (node.textContent.includes('{{') && node.textContent.includes('}}')) {
+                    nodesToReplace.push(node);
+                }
+            }
+
+            nodesToReplace.forEach(node => {
+                const fragment = document.createDocumentFragment();
+                const tempDiv = document.createElement('div');
+                tempDiv.innerHTML = node.textContent.replace(
+                    /\{\{([^}]+)\}\}/g,
+                    '<span class="template-placeholder">{{$1}}</span>'
+                );
+                while (tempDiv.firstChild) {
+                    fragment.appendChild(tempDiv.firstChild);
+                }
+                node.parentNode.replaceChild(fragment, node);
+            });
+        }
+    </script>
+</body>
+</html>
