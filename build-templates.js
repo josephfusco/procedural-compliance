@@ -259,16 +259,30 @@ function wrapSectionInAlert(html, headingPattern, alertType, icon, heading) {
     return html.replace(fullMatch, alert);
 }
 
-// Wrap each role module (Judge, AFC, etc.) in a USWDS card
+// Wrap each role module (Judge, AFC, etc.) in a USWDS card with icons
 function wrapRoleModulesInCards(html) {
     // Match h3 headings followed by content until the next h2/h3
     const rolePattern = /<h3>(Judge|Attorney for the Child \(AFC\)|Assigned Counsel|Court Clerk|Opposing Counsel)<\/h3>([\s\S]*?)(?=<h[23]|$)/g;
 
+    // Role-specific icons for visual differentiation
+    const roleIcons = {
+        'Judge': '⚖️',
+        'Attorney for the Child (AFC)': '👶',
+        'Assigned Counsel': '👔',
+        'Court Clerk': '📋',
+        'Opposing Counsel': '👤'
+    };
+
     return html.replace(rolePattern, (match, roleName, content) => {
+        const icon = roleIcons[roleName] || '📄';
+
         return `
 <div class="usa-card usa-card--accent">
     <div class="usa-card__header">
-        <h3 class="usa-card__heading">${roleName}</h3>
+        <h3 class="usa-card__heading">
+            <span class="role-icon" role="img" aria-label="${roleName}">${icon}</span>
+            ${roleName}
+        </h3>
     </div>
     <div class="usa-card__body">
         ${content}
