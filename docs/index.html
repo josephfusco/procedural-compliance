@@ -348,10 +348,10 @@
                 </div>
 
                 <!-- Filters -->
-                <div class="mb-6 flex flex-col sm:flex-row gap-3 items-start sm:items-end">
+                <form class="usa-form mb-6 flex flex-col sm:flex-row gap-4 items-start sm:items-end">
                     <div class="w-full sm:w-auto">
-                        <label for="jurisdiction-filter" class="usa-label text-xs font-medium text-muted-foreground mb-2 block">Jurisdiction</label>
-                        <select id="jurisdiction-filter" class="usa-select w-full sm:w-40 h-9 px-3 py-2 text-sm border border-border rounded bg-background focus:outline-none focus:ring-4 focus:ring-ring focus:ring-offset-2">
+                        <label for="jurisdiction-filter" class="usa-label" style="font-size: 0.875rem; margin-bottom: 0.5rem;">Jurisdiction</label>
+                        <select id="jurisdiction-filter" class="usa-select" style="width: 12rem;">
                             <option value="all">All</option>
                             <option value="ny">New York</option>
                             <option value="federal">Federal</option>
@@ -359,8 +359,8 @@
                     </div>
 
                     <div class="w-full sm:w-auto">
-                        <label for="category-filter" class="usa-label text-xs font-medium text-muted-foreground mb-2 block">Category</label>
-                        <select id="category-filter" class="usa-select w-full sm:w-48 h-9 px-3 py-2 text-sm border border-border rounded bg-background focus:outline-none focus:ring-4 focus:ring-ring focus:ring-offset-2">
+                        <label for="category-filter" class="usa-label" style="font-size: 0.875rem; margin-bottom: 0.5rem;">Category</label>
+                        <select id="category-filter" class="usa-select" style="width: 14rem;">
                             <option value="all">All Categories</option>
                             <option value="procedural-enforcement">Procedural Enforcement</option>
                             <option value="appeals">Appeals</option>
@@ -370,8 +370,8 @@
                     </div>
 
                     <div class="w-full sm:w-auto">
-                        <label for="urgency-filter" class="usa-label text-xs font-medium text-muted-foreground mb-2 block">Urgency</label>
-                        <select id="urgency-filter" class="usa-select w-full sm:w-40 h-9 px-3 py-2 text-sm border border-border rounded bg-background focus:outline-none focus:ring-4 focus:ring-ring focus:ring-offset-2">
+                        <label for="urgency-filter" class="usa-label" style="font-size: 0.875rem; margin-bottom: 0.5rem;">Urgency</label>
+                        <select id="urgency-filter" class="usa-select" style="width: 11rem;">
                             <option value="all">All Levels</option>
                             <option value="emergency">Emergency</option>
                             <option value="urgent">Urgent</option>
@@ -380,8 +380,8 @@
                     </div>
 
                     <div class="w-full sm:w-auto">
-                        <label for="role-filter" class="usa-label text-xs font-medium text-muted-foreground mb-2 block">Role/Actor</label>
-                        <select id="role-filter" class="usa-select w-full sm:w-48 h-9 px-3 py-2 text-sm border border-border rounded bg-background focus:outline-none focus:ring-4 focus:ring-ring focus:ring-offset-2">
+                        <label for="role-filter" class="usa-label" style="font-size: 0.875rem; margin-bottom: 0.5rem;">Role/Actor</label>
+                        <select id="role-filter" class="usa-select" style="width: 13rem;">
                             <option value="all">All Roles</option>
                             <option value="universal">Universal</option>
                             <option value="judge">Judge</option>
@@ -393,14 +393,14 @@
                         </select>
                     </div>
 
-                    <button id="reset-filters" class="h-9 px-4 py-2 text-sm font-medium text-foreground bg-transparent rounded border-2 border-border hover:bg-muted transition-colors focus:outline-none focus:ring-4 focus:ring-ring focus:ring-offset-2 whitespace-nowrap">
+                    <button type="button" id="reset-filters" class="usa-button usa-button--outline whitespace-nowrap">
                         Reset
                     </button>
 
-                    <button id="view-toggle" class="ml-auto h-9 px-4 py-2 text-sm font-medium text-foreground bg-transparent rounded border-2 border-border hover:bg-muted transition-colors focus:outline-none focus:ring-4 focus:ring-ring focus:ring-offset-2 whitespace-nowrap">
+                    <button type="button" id="view-toggle" class="usa-button usa-button--outline ml-auto whitespace-nowrap">
                         <span id="view-toggle-text">Card View</span>
                     </button>
-                </div>
+                </form>
 
                 <!-- Template Results - Static HTML (Enhanced by JavaScript) -->
                 <div id="template-results">
