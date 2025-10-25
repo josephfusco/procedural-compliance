@@ -1707,6 +1707,196 @@ footer .border-t-2 {
     text-decoration-thickness: 2px;
 }
 
+/* ==================================================================
+   DOCUMENTATION SIDEBAR LAYOUT
+   Vercel-style table of contents with scroll spy
+   ================================================================== */
+
+/* Two-column layout: sidebar + content */
+.docs-layout {
+    display: grid;
+    grid-template-columns: 280px 1fr;
+    gap: 3rem;
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0;
+    position: relative;
+}
+
+/* Sidebar container - sticky positioned */
+.docs-sidebar {
+    position: sticky;
+    top: 0;
+    height: 100vh;
+    overflow-y: auto;
+    padding: var(--spacing-6) 0 var(--spacing-6) var(--spacing-5);
+    background-color: #fafafa;
+    border-right: 1px solid #e5e7eb;
+    scrollbar-width: thin;
+    scrollbar-color: #d1d5db #fafafa;
+}
+
+.docs-sidebar::-webkit-scrollbar {
+    width: 6px;
+}
+
+.docs-sidebar::-webkit-scrollbar-track {
+    background: #fafafa;
+}
+
+.docs-sidebar::-webkit-scrollbar-thumb {
+    background: #d1d5db;
+    border-radius: 3px;
+}
+
+.docs-sidebar::-webkit-scrollbar-thumb:hover {
+    background: #9ca3af;
+}
+
+/* Table of contents container */
+.docs-toc {
+    position: sticky;
+    top: var(--spacing-6);
+}
+
+.docs-toc h4 {
+    font-size: 0.75rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: #6b7280;
+    margin: 0 0 var(--spacing-4) 0;
+    padding-left: var(--spacing-3);
+}
+
+.docs-toc-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.docs-toc-item {
+    margin: 0;
+}
+
+.docs-toc-link {
+    display: block;
+    padding: var(--spacing-2) var(--spacing-3);
+    font-size: 0.875rem;
+    line-height: 1.5;
+    color: #4b5563;
+    text-decoration: none;
+    border-left: 3px solid transparent;
+    transition: all 150ms ease;
+    font-family: 'Public Sans', -apple-system, sans-serif;
+}
+
+.docs-toc-link:hover {
+    color: #1b1b1b;
+    background-color: #f3f4f6;
+    border-left-color: #d1d5db;
+}
+
+.docs-toc-link.active {
+    color: var(--uswds-blue);
+    background-color: #f0f7ff;
+    border-left-color: var(--uswds-blue);
+    font-weight: 500;
+}
+
+/* Nested heading indentation */
+.docs-toc-item[data-level="2"] .docs-toc-link {
+    padding-left: var(--spacing-3);
+    font-weight: 500;
+}
+
+.docs-toc-item[data-level="3"] .docs-toc-link {
+    padding-left: var(--spacing-6);
+    font-size: 0.8125rem;
+    font-weight: 400;
+}
+
+/* Content area with sidebar */
+.docs-content {
+    min-width: 0; /* Prevent overflow */
+    padding: var(--spacing-6) var(--spacing-5) var(--spacing-6) 0;
+}
+
+/* Adjust prose container within docs layout */
+.docs-layout .prose {
+    max-width: 65ch;
+    margin: 0;
+}
+
+/* Smooth scrolling for anchor links */
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 2rem;
+}
+
+/* Add scroll margin to headings for better anchor positioning */
+.docs-content h1,
+.docs-content h2,
+.docs-content h3 {
+    scroll-margin-top: 2rem;
+}
+
+/* Mobile responsive */
+@media (max-width: 1023px) {
+    .docs-layout {
+        grid-template-columns: 1fr;
+        gap: 0;
+    }
+
+    .docs-sidebar {
+        display: none; /* Hide sidebar on mobile */
+    }
+
+    .docs-content {
+        padding: var(--spacing-6) var(--spacing-4);
+    }
+}
+
+/* Tablet responsive */
+@media (min-width: 1024px) and (max-width: 1279px) {
+    .docs-layout {
+        grid-template-columns: 240px 1fr;
+        gap: 2rem;
+    }
+
+    .docs-sidebar {
+        padding: var(--spacing-5) 0 var(--spacing-5) var(--spacing-4);
+    }
+}
+
+/* Large desktop */
+@media (min-width: 1400px) {
+    .docs-layout {
+        grid-template-columns: 300px 1fr 200px;
+    }
+
+    /* Reserve space for future "On This Page" or ads */
+    .docs-layout::after {
+        content: '';
+        display: block;
+    }
+}
+
+/* Print styles - hide sidebar */
+@media print {
+    .docs-sidebar {
+        display: none;
+    }
+
+    .docs-layout {
+        grid-template-columns: 1fr;
+    }
+
+    .docs-content {
+        padding: 0;
+    }
+}
+
 /* Dark Mode - Manual Toggle Only */
 html[data-theme="dark"] {
     /* Dark theme core colors - WCAG AA compliant */
@@ -2429,6 +2619,49 @@ html[data-theme="dark"] .prose a {
 
 html[data-theme="dark"] .prose a:hover {
     color: #93c5fd;
+}
+
+/* Documentation Sidebar - Dark Mode */
+html[data-theme="dark"] .docs-sidebar {
+    background-color: #0a0a0a;
+    border-right-color: #2a2a2a;
+    scrollbar-color: #404040 #0a0a0a;
+}
+
+html[data-theme="dark"] .docs-sidebar::-webkit-scrollbar-track {
+    background: #0a0a0a;
+}
+
+html[data-theme="dark"] .docs-sidebar::-webkit-scrollbar-thumb {
+    background: #404040;
+}
+
+html[data-theme="dark"] .docs-sidebar::-webkit-scrollbar-thumb:hover {
+    background: #525252;
+}
+
+html[data-theme="dark"] .docs-toc h4 {
+    color: #9ca3af;
+}
+
+html[data-theme="dark"] .docs-toc-link {
+    color: #a3a3a3;
+}
+
+html[data-theme="dark"] .docs-toc-link:hover {
+    color: #e5e5e5;
+    background-color: #1a1a1a;
+    border-left-color: #404040;
+}
+
+html[data-theme="dark"] .docs-toc-link.active {
+    color: var(--uswds-blue-light);
+    background-color: #0a1a2a;
+    border-left-color: var(--uswds-blue-light);
+}
+
+html[data-theme="dark"] .docs-content {
+    background-color: var(--background);
 }
 
 
