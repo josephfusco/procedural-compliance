@@ -321,16 +321,17 @@ function generateTemplatePage(templateFile, metadata, markdownContent) {
     htmlContent = enhanceWithUSWDS(htmlContent);
 
     const filename = path.basename(templateFile, '.md');
-    const htmlFilename = filename.replace(/_/g, '-') + '.html';
+    const dirName = filename.replace(/_/g, '-'); // Clean directory name
     const githubUrl = `https://github.com/josephfusco/procedural-compliance/blob/main/templates/${templateFile}`;
+    const githubRawUrl = `https://raw.githubusercontent.com/josephfusco/procedural-compliance/main/templates/${templateFile}`;
 
     const jurisdiction = frontmatter.jurisdiction?.toLowerCase() || metadata.jurisdiction;
     const title = frontmatter.title || metadata.title;
 
-    // Jurisdiction badge
+    // Jurisdiction badge - use absolute path from root
     const jurisdictionBadge = jurisdiction === 'ny'
         ? '<span class="badge badge-ny">NY</span>'
-        : '<span class="badge badge-federal"><img src="../us_flag_small.png" class="badge-flag-img" alt="U.S. flag" loading="lazy"><span>Federal</span></span>';
+        : '<span class="badge badge-federal"><img src="/us_flag_small.png" class="badge-flag-img" alt="U.S. flag" loading="lazy"><span>Federal</span></span>';
 
     return `<!DOCTYPE html>
 <html lang="en">
@@ -344,14 +345,14 @@ function generateTemplatePage(templateFile, metadata, markdownContent) {
     <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>⚖️</text></svg>">
 
     <!-- USWDS Public Sans Font -->
-    <link rel="preload" href="../fonts/public-sans/PublicSans-Regular.woff2" as="font" type="font/woff2" crossorigin>
-    <link rel="preload" href="../fonts/public-sans/PublicSans-SemiBold.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="/fonts/public-sans/PublicSans-Regular.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="/fonts/public-sans/PublicSans-SemiBold.woff2" as="font" type="font/woff2" crossorigin>
 
     <!-- Social Preview Meta Tags -->
     <meta property="og:title" content="${title}">
     <meta property="og:description" content="${metadata.subtitle}">
     <meta property="og:type" content="article">
-    <meta property="og:url" content="https://proceduralcompliance.org/templates/${htmlFilename}">
+    <meta property="og:url" content="https://proceduralcompliance.org/${dirName}/">
 
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
@@ -406,7 +407,7 @@ function generateTemplatePage(templateFile, metadata, markdownContent) {
         }
     </script>
 
-    <link rel="stylesheet" href="../styles.css">
+    <link rel="stylesheet" href="/styles.css">
 </head>
 <body class="bg-background text-foreground font-sans antialiased">
     <!-- Skip Navigation Link -->
@@ -418,7 +419,7 @@ function generateTemplatePage(templateFile, metadata, markdownContent) {
     <section class="gov-banner" role="region" aria-label="Official government-style notice">
         <div class="container mx-auto px-4 py-2">
             <div class="flex items-center gap-2">
-                <img src="../us_flag_small.png" class="gov-banner-flag" alt="U.S. flag" loading="eager">
+                <img src="/us_flag_small.png" class="gov-banner-flag" alt="U.S. flag" loading="eager">
                 <p class="gov-banner-text">An open framework for documenting procedural compliance · Not legal advice</p>
             </div>
         </div>
@@ -432,11 +433,11 @@ function generateTemplatePage(templateFile, metadata, markdownContent) {
                     <div class="flex items-center space-x-2">
                         <span class="text-xl" role="img" aria-label="Scales of justice">⚖️</span>
                         <h1 class="text-lg font-sans font-semibold">
-                            <a href="../index.html" class="hover:text-primary transition-colors">Procedural Compliance Framework</a>
+                            <a href="/" class="hover:text-primary transition-colors">Procedural Compliance Framework</a>
                         </h1>
                     </div>
                     <nav class="hidden md:flex items-center space-x-6 text-sm ml-8">
-                        <a href="../index.html#templates" class="text-foreground/80 hover:text-foreground transition-colors">Templates</a>
+                        <a href="/#templates" class="text-foreground/80 hover:text-foreground transition-colors">Templates</a>
                         <a href="https://github.com/josephfusco/procedural-compliance" target="_blank" rel="noopener noreferrer" class="text-foreground/80 hover:text-foreground transition-colors">GitHub</a>
                     </nav>
                 </div>
@@ -453,9 +454,9 @@ function generateTemplatePage(templateFile, metadata, markdownContent) {
     <nav class="border-b border-border bg-muted/30" aria-label="Breadcrumb">
         <div class="container mx-auto px-4 py-3">
             <ol class="flex items-center space-x-2 text-sm">
-                <li><a href="../index.html" class="text-foreground/60 hover:text-foreground transition-colors">Home</a></li>
+                <li><a href="/" class="text-foreground/60 hover:text-foreground transition-colors">Home</a></li>
                 <li class="text-foreground/40">/</li>
-                <li><a href="../index.html#templates" class="text-foreground/60 hover:text-foreground transition-colors">Templates</a></li>
+                <li><a href="/#templates" class="text-foreground/60 hover:text-foreground transition-colors">Templates</a></li>
                 <li class="text-foreground/40">/</li>
                 <li class="text-foreground font-medium" aria-current="page">${title}</li>
             </ol>
@@ -478,7 +479,7 @@ function generateTemplatePage(templateFile, metadata, markdownContent) {
                         <a href="${githubUrl}" target="_blank" rel="noopener noreferrer" class="px-4 py-2 text-sm font-medium text-foreground bg-transparent rounded border-2 border-border hover:bg-muted transition-colors focus:outline-none focus:ring-4 focus:ring-ring focus:ring-offset-2">
                             Edit on GitHub
                         </a>
-                        <a href="../templates/${templateFile}" download class="px-4 py-2 text-sm font-medium text-primary-foreground bg-primary rounded border-2 border-primary hover:bg-primary/90 transition-colors focus:outline-none focus:ring-4 focus:ring-ring focus:ring-offset-2">
+                        <a href="${githubRawUrl}" download="${templateFile}" class="px-4 py-2 text-sm font-medium text-primary-foreground bg-primary rounded border-2 border-primary hover:bg-primary/90 transition-colors focus:outline-none focus:ring-4 focus:ring-ring focus:ring-offset-2">
                             Download
                         </a>
                     </div>
@@ -793,11 +794,18 @@ async function main() {
 
             const htmlContent = generateTemplatePage(file, metadata, markdownContent);
 
-            const htmlFilename = file.replace(/_/g, '-').replace('.md', '.html');
-            const htmlPath = path.join(templatesDir, htmlFilename);
+            // Create clean directory structure: docs/[template-name]/index.html
+            const dirName = file.replace(/_/g, '-').replace('.md', '');
+            const outputDir = path.join(__dirname, 'docs', dirName);
+            const htmlPath = path.join(outputDir, 'index.html');
+
+            // Create directory if it doesn't exist
+            if (!fs.existsSync(outputDir)) {
+                fs.mkdirSync(outputDir, { recursive: true });
+            }
 
             fs.writeFileSync(htmlPath, htmlContent, 'utf-8');
-            console.log(`✅ Generated: ${htmlFilename}`);
+            console.log(`✅ Generated: ${dirName}/index.html`);
         }
 
         console.log(`\n✨ Done! Generated ${files.length} HTML pages.\n`);
