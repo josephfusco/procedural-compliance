@@ -152,10 +152,23 @@
             </div>
         </div>
 
-        <!-- Template Content -->
+        <!-- Template Content with Sidebar -->
         <div class="container mx-auto px-4 py-12">
-            <div class="prose prose-slate mx-auto" id="template-content">
-                <hr>
+            <div class="docs-layout">
+                <!-- Table of Contents Sidebar -->
+                <aside class="docs-sidebar" aria-label="Table of contents">
+                    <nav class="docs-toc" id="docs-toc">
+                        <h4>On This Page</h4>
+                        <ul class="docs-toc-list" id="docs-toc-list">
+                            <!-- Auto-populated by JavaScript -->
+                        </ul>
+                    </nav>
+                </aside>
+
+                <!-- Main Content -->
+                <div class="docs-content">
+                    <div class="prose prose-slate" id="template-content">
+                        <hr>
 <p><strong>JURISDICTION: FEDERAL</strong></p>
 <h2>This template applies to United States District Courts and Circuit Courts of Appeals governed by FRCP, FRAP, and Federal Rules of Evidence.</h2>
 <h1>EMERGENCY MOTION FOR STAY PENDING APPEAL</h1>
@@ -558,6 +571,8 @@ United States District Judge</p>
 <li><strong>Exhibit D:</strong> {{Supporting documentation}}</li>
 </ul>
 
+                    </div>
+                </div>
             </div>
         </div>
     </main>
@@ -679,6 +694,144 @@ United States District Judge</p>
                 node.parentNode.replaceChild(fragment, node);
             });
         }
+    </script>
+
+    <!-- Table of Contents Generation & Scroll Spy -->
+    <script>
+        (function() {
+            const content = document.getElementById('template-content');
+            const tocList = document.getElementById('docs-toc-list');
+
+            if (!content || !tocList) return;
+
+            // Generate slug from heading text
+            function generateSlug(text) {
+                return text
+                    .toLowerCase()
+                    .replace(/[^a-z0-9]+/g, '-')
+                    .replace(/^-+|-+$/g, '');
+            }
+
+            // Find all H2 and H3 headings
+            const headings = content.querySelectorAll('h2, h3');
+            const tocItems = [];
+
+            headings.forEach((heading, index) => {
+                const level = heading.tagName.toLowerCase();
+                const text = heading.textContent.trim();
+
+                // Skip if heading is too short or is a service certification heading
+                if (text.length < 2 || text === 'Service Certification') return;
+
+                // Generate ID if it doesn't exist
+                let id = heading.id;
+                if (!id) {
+                    id = generateSlug(text);
+                    // Ensure unique ID
+                    let uniqueId = id;
+                    let counter = 1;
+                    while (document.getElementById(uniqueId)) {
+                        uniqueId = id + '-' + counter;
+                        counter++;
+                    }
+                    heading.id = uniqueId;
+                    id = uniqueId;
+                }
+
+                // Create TOC item
+                const li = document.createElement('li');
+                li.className = 'docs-toc-item';
+                li.setAttribute('data-level', level === 'h2' ? '2' : '3');
+
+                const link = document.createElement('a');
+                link.className = 'docs-toc-link';
+                link.href = '#' + id;
+                link.textContent = text;
+                link.setAttribute('data-target', id);
+
+                li.appendChild(link);
+                tocList.appendChild(li);
+                tocItems.push({ id, link, element: heading });
+            });
+
+            // Scroll spy functionality
+            let activeLink = null;
+
+            function updateActiveLink() {
+                let currentId = null;
+                const scrollPos = window.scrollY + 100; // Offset for better UX
+
+                // Find the heading closest to the top of viewport
+                for (let i = tocItems.length - 1; i >= 0; i--) {
+                    const item = tocItems[i];
+                    const rect = item.element.getBoundingClientRect();
+                    const absoluteTop = rect.top + window.scrollY;
+
+                    if (absoluteTop <= scrollPos) {
+                        currentId = item.id;
+                        break;
+                    }
+                }
+
+                // Update active state
+                if (currentId && (!activeLink || activeLink.getAttribute('data-target') !== currentId)) {
+                    tocItems.forEach(item => {
+                        item.link.classList.remove('active');
+                    });
+
+                    const newActiveItem = tocItems.find(item => item.id === currentId);
+                    if (newActiveItem) {
+                        newActiveItem.link.classList.add('active');
+                        activeLink = newActiveItem.link;
+                    }
+                }
+            }
+
+            // Throttle scroll events for performance
+            let scrollTimeout;
+            window.addEventListener('scroll', function() {
+                if (scrollTimeout) {
+                    window.cancelAnimationFrame(scrollTimeout);
+                }
+                scrollTimeout = window.requestAnimationFrame(updateActiveLink);
+            });
+
+            // Initial update
+            updateActiveLink();
+
+            // Smooth scroll on click
+            tocList.addEventListener('click', function(e) {
+                if (e.target.classList.contains('docs-toc-link')) {
+                    e.preventDefault();
+                    const targetId = e.target.getAttribute('data-target');
+                    const targetElement = document.getElementById(targetId);
+
+                    if (targetElement) {
+                        targetElement.scrollIntoView({
+                            behavior: 'smooth',
+                            block: 'start'
+                        });
+
+                        // Update URL without jumping
+                        history.pushState(null, '', '#' + targetId);
+                    }
+                }
+            });
+
+            // Handle initial hash in URL
+            if (window.location.hash) {
+                setTimeout(() => {
+                    const targetElement = document.querySelector(window.location.hash);
+                    if (targetElement) {
+                        targetElement.scrollIntoView({
+                            behavior: 'smooth',
+                            block: 'start'
+                        });
+                        updateActiveLink();
+                    }
+                }, 100);
+            }
+        })();
     </script>
 </body>
 </html>
