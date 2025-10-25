@@ -1148,6 +1148,565 @@ footer .border-t-2 {
     }
 }
 
+/* ==================================================================
+   USWDS ALERT COMPONENTS
+   Official US Web Design System alert boxes
+   ================================================================== */
+
+/* Base alert structure */
+.usa-alert {
+    position: relative;
+    padding: var(--spacing-4);
+    margin-bottom: var(--spacing-6);
+    border-left: 0.5rem solid;
+    border-radius: 0.25rem;
+    background-color: #f9fafb;
+    font-family: 'Public Sans', -apple-system, sans-serif;
+    box-shadow: var(--shadow-2);
+}
+
+.usa-alert__body {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-3);
+}
+
+.usa-alert__heading {
+    margin: 0 0 var(--spacing-2) 0;
+    font-size: 1.125rem;
+    font-weight: 600;
+    line-height: 1.3;
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-2);
+}
+
+.usa-alert__icon {
+    font-size: 1.25rem;
+    line-height: 1;
+    flex-shrink: 0;
+}
+
+.usa-alert__text {
+    margin: 0;
+    font-size: 1rem;
+    line-height: 1.618;
+}
+
+.usa-alert__text p {
+    margin: var(--spacing-2) 0;
+}
+
+.usa-alert__text ul,
+.usa-alert__text ol {
+    margin: var(--spacing-3) 0;
+    padding-left: var(--spacing-6);
+}
+
+.usa-alert__text li {
+    margin: var(--spacing-2) 0;
+}
+
+/* Info Alert - Blue theme */
+.usa-alert--info {
+    background-color: #e7f6f8;
+    border-left-color: #00bde3;
+}
+
+.usa-alert--info .usa-alert__heading {
+    color: #0c7089;
+}
+
+.usa-alert--info .usa-alert__icon {
+    color: #00bde3;
+}
+
+.usa-alert--info .usa-alert__text {
+    color: #1b1b1b;
+}
+
+/* Warning Alert - Yellow/Orange theme */
+.usa-alert--warning {
+    background-color: #fef3c7;
+    border-left-color: #f59e0b;
+}
+
+.usa-alert--warning .usa-alert__heading {
+    color: #92400e;
+}
+
+.usa-alert--warning .usa-alert__icon {
+    color: #f59e0b;
+}
+
+.usa-alert--warning .usa-alert__text {
+    color: #451a03;
+}
+
+/* Error Alert - Red theme */
+.usa-alert--error {
+    background-color: #fee2e2;
+    border-left-color: #ef4444;
+}
+
+.usa-alert--error .usa-alert__heading {
+    color: #991b1b;
+}
+
+.usa-alert--error .usa-alert__icon {
+    color: #ef4444;
+}
+
+.usa-alert--error .usa-alert__text {
+    color: #7f1d1d;
+}
+
+/* Success Alert - Green theme */
+.usa-alert--success {
+    background-color: #d1fae5;
+    border-left-color: #10b981;
+}
+
+.usa-alert--success .usa-alert__heading {
+    color: #065f46;
+}
+
+.usa-alert--success .usa-alert__icon {
+    color: #10b981;
+}
+
+.usa-alert--success .usa-alert__text {
+    color: #064e3b;
+}
+
+/* Emergency/Urgent Alert - Red theme (stronger than error) */
+.usa-alert--emergency {
+    background-color: #fee2e2;
+    border-left-color: #dc2626;
+    border-left-width: 0.75rem;
+}
+
+.usa-alert--emergency .usa-alert__heading {
+    color: #991b1b;
+    font-size: 1.25rem;
+}
+
+.usa-alert--emergency .usa-alert__icon {
+    color: #dc2626;
+    font-size: 1.5rem;
+}
+
+.usa-alert--emergency .usa-alert__text {
+    color: #7f1d1d;
+    font-weight: 500;
+}
+
+/* ==================================================================
+   USWDS CARD COMPONENTS
+   Bordered sections for grouping related content
+   ================================================================== */
+
+.usa-card {
+    position: relative;
+    background-color: #ffffff;
+    border: 1px solid #dfe1e2;
+    border-radius: 0.5rem;
+    padding: var(--spacing-5);
+    margin-bottom: var(--spacing-5);
+    box-shadow: var(--shadow-2);
+    transition: all 200ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.usa-card:hover {
+    box-shadow: var(--shadow-3);
+}
+
+.usa-card__header {
+    margin-bottom: var(--spacing-4);
+    padding-bottom: var(--spacing-3);
+    border-bottom: 2px solid #f0f0f0;
+}
+
+.usa-card__heading {
+    margin: 0;
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: #1b1b1b;
+    line-height: 1.3;
+}
+
+.usa-card__body {
+    font-size: 1rem;
+    line-height: 1.618;
+    color: #1b1b1b;
+}
+
+.usa-card__body p {
+    margin: var(--spacing-3) 0;
+}
+
+.usa-card__body ul,
+.usa-card__body ol {
+    margin: var(--spacing-3) 0;
+    padding-left: var(--spacing-6);
+}
+
+.usa-card__body li {
+    margin: var(--spacing-2) 0;
+}
+
+.usa-card__footer {
+    margin-top: var(--spacing-4);
+    padding-top: var(--spacing-3);
+    border-top: 1px solid #dfe1e2;
+    font-size: 0.875rem;
+    color: #71767a;
+}
+
+/* Card with accent border */
+.usa-card--accent {
+    border-left: 4px solid var(--uswds-blue);
+}
+
+/* Card variants */
+.usa-card--primary {
+    border-left-color: var(--uswds-blue);
+    background-color: #f7fafc;
+}
+
+.usa-card--secondary {
+    border-left-color: #6b7280;
+    background-color: #f9fafb;
+}
+
+/* ==================================================================
+   USWDS TABLE COMPONENTS
+   Enhanced table styling with USWDS patterns
+   ================================================================== */
+
+.usa-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: var(--spacing-6) 0;
+    font-family: 'Public Sans', -apple-system, sans-serif;
+    font-size: 1rem;
+    box-shadow: var(--shadow-2);
+    border: 1px solid #dfe1e2;
+    border-radius: 0.375rem;
+    overflow: hidden;
+}
+
+.usa-table thead {
+    background-color: #f9fafb;
+}
+
+.usa-table th {
+    padding: var(--spacing-4) var(--spacing-5);
+    text-align: left;
+    font-weight: 600;
+    font-size: 0.875rem;
+    color: #1b1b1b;
+    border-bottom: 2px solid #dfe1e2;
+    letter-spacing: 0.025em;
+    text-transform: uppercase;
+}
+
+.usa-table td {
+    padding: var(--spacing-4) var(--spacing-5);
+    border-bottom: 1px solid #e5e7eb;
+    vertical-align: top;
+    color: #1b1b1b;
+}
+
+.usa-table tbody tr {
+    transition: background-color 150ms ease;
+}
+
+.usa-table tbody tr:hover {
+    background-color: #f9fafb;
+}
+
+.usa-table tbody tr:last-child td {
+    border-bottom: none;
+}
+
+/* Striped table variant */
+.usa-table--striped tbody tr:nth-child(odd) {
+    background-color: #ffffff;
+}
+
+.usa-table--striped tbody tr:nth-child(even) {
+    background-color: #f9fafb;
+}
+
+.usa-table--striped tbody tr:hover {
+    background-color: #f3f4f6;
+}
+
+/* Borderless table variant */
+.usa-table--borderless {
+    border: none;
+    box-shadow: none;
+}
+
+.usa-table--borderless th {
+    border-bottom: 2px solid #dfe1e2;
+}
+
+.usa-table--borderless td {
+    border-bottom: 1px solid #e5e7eb;
+}
+
+/* Compact table variant */
+.usa-table--compact th,
+.usa-table--compact td {
+    padding: var(--spacing-2) var(--spacing-3);
+    font-size: 0.875rem;
+}
+
+/* ==================================================================
+   USWDS ACCORDION COMPONENTS
+   Collapsible sections with smooth animations
+   ================================================================== */
+
+.usa-accordion {
+    margin: var(--spacing-6) 0;
+    border: 1px solid #dfe1e2;
+    border-radius: 0.5rem;
+    overflow: hidden;
+}
+
+.usa-accordion__item {
+    border-bottom: 1px solid #dfe1e2;
+}
+
+.usa-accordion__item:last-child {
+    border-bottom: none;
+}
+
+.usa-accordion__button {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: var(--spacing-4) var(--spacing-5);
+    background-color: #f9fafb;
+    border: none;
+    text-align: left;
+    font-family: 'Public Sans', -apple-system, sans-serif;
+    font-size: 1rem;
+    font-weight: 600;
+    color: #1b1b1b;
+    cursor: pointer;
+    transition: all 150ms ease;
+    position: relative;
+}
+
+.usa-accordion__button:hover {
+    background-color: #f3f4f6;
+}
+
+.usa-accordion__button:focus {
+    outline: 4px solid var(--uswds-focus-blue);
+    outline-offset: -4px;
+    z-index: 1;
+}
+
+.usa-accordion__button::after {
+    content: "+";
+    font-size: 1.5rem;
+    line-height: 1;
+    color: var(--uswds-blue);
+    transition: transform 200ms ease;
+    font-weight: 400;
+}
+
+.usa-accordion__button[aria-expanded="true"] {
+    background-color: #ffffff;
+    color: var(--uswds-blue);
+}
+
+.usa-accordion__button[aria-expanded="true"]::after {
+    content: "−";
+    transform: rotate(0deg);
+}
+
+.usa-accordion__content {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 300ms cubic-bezier(0.4, 0, 0.2, 1);
+    background-color: #ffffff;
+}
+
+.usa-accordion__content[aria-hidden="false"] {
+    max-height: 5000px; /* Large enough for most content */
+    transition: max-height 500ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.usa-accordion__content-inner {
+    padding: var(--spacing-5);
+    font-size: 1rem;
+    line-height: 1.618;
+    color: #1b1b1b;
+}
+
+.usa-accordion__content-inner > *:first-child {
+    margin-top: 0;
+}
+
+.usa-accordion__content-inner > *:last-child {
+    margin-bottom: 0;
+}
+
+/* ==================================================================
+   IMPROVED TYPOGRAPHY HIERARCHY
+   Enhanced heading sizes and spacing for better visual hierarchy
+   ================================================================== */
+
+/* Prose container improvements */
+.prose {
+    max-width: 65ch;
+}
+
+.prose h1 {
+    font-size: 2.5rem; /* 40px - larger, more prominent */
+    font-weight: 700;
+    line-height: 1.2;
+    margin-top: 0;
+    margin-bottom: var(--spacing-6);
+    color: #1b1b1b;
+    letter-spacing: -0.02em;
+}
+
+.prose h2 {
+    font-size: 1.875rem; /* 30px - clearer hierarchy step */
+    font-weight: 600;
+    line-height: 1.25;
+    margin-top: var(--spacing-7);
+    margin-bottom: var(--spacing-4);
+    color: #1b1b1b;
+    letter-spacing: -0.015em;
+    padding-bottom: var(--spacing-3);
+    border-bottom: 2px solid #f0f0f0;
+}
+
+.prose h3 {
+    font-size: 1.5rem; /* 24px - clear distinction from h2 */
+    font-weight: 600;
+    line-height: 1.3;
+    margin-top: var(--spacing-6);
+    margin-bottom: var(--spacing-3);
+    color: #1b1b1b;
+    letter-spacing: -0.01em;
+}
+
+.prose h4 {
+    font-size: 1.25rem; /* 20px */
+    font-weight: 600;
+    line-height: 1.4;
+    margin-top: var(--spacing-5);
+    margin-bottom: var(--spacing-3);
+    color: #1b1b1b;
+}
+
+.prose h5 {
+    font-size: 1.125rem; /* 18px */
+    font-weight: 600;
+    line-height: 1.4;
+    margin-top: var(--spacing-4);
+    margin-bottom: var(--spacing-2);
+    color: #1b1b1b;
+}
+
+.prose h6 {
+    font-size: 1rem; /* 16px - base size */
+    font-weight: 600;
+    line-height: 1.5;
+    margin-top: var(--spacing-4);
+    margin-bottom: var(--spacing-2);
+    color: #71767a;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+/* Better paragraph spacing */
+.prose p {
+    margin-top: var(--spacing-4);
+    margin-bottom: var(--spacing-4);
+    line-height: 1.7;
+}
+
+/* Improved list spacing */
+.prose ul,
+.prose ol {
+    margin-top: var(--spacing-4);
+    margin-bottom: var(--spacing-4);
+    padding-left: var(--spacing-6);
+}
+
+.prose li {
+    margin-top: var(--spacing-2);
+    margin-bottom: var(--spacing-2);
+    line-height: 1.6;
+}
+
+/* Nested lists */
+.prose li > ul,
+.prose li > ol {
+    margin-top: var(--spacing-2);
+    margin-bottom: var(--spacing-2);
+}
+
+/* Improved blockquote */
+.prose blockquote {
+    margin: var(--spacing-6) 0;
+    padding-left: var(--spacing-5);
+    border-left: 4px solid var(--uswds-blue);
+    font-style: italic;
+    color: #71767a;
+    font-size: 1.125rem;
+    line-height: 1.7;
+}
+
+/* Improved code blocks */
+.prose pre {
+    margin: var(--spacing-5) 0;
+    padding: var(--spacing-5);
+    background-color: #f9fafb;
+    border: 1px solid #dfe1e2;
+    border-radius: 0.5rem;
+    overflow-x: auto;
+    font-size: 0.875rem;
+    line-height: 1.7;
+}
+
+/* Improved horizontal rules */
+.prose hr {
+    margin: var(--spacing-7) 0;
+    border: none;
+    border-top: 2px solid #e5e7eb;
+}
+
+/* Strong emphasis */
+.prose strong {
+    font-weight: 600;
+    color: #1b1b1b;
+}
+
+/* Links */
+.prose a {
+    color: var(--uswds-blue);
+    text-decoration: underline;
+    text-decoration-thickness: 1px;
+    text-underline-offset: 2px;
+    transition: all 150ms ease;
+}
+
+.prose a:hover {
+    color: var(--uswds-blue-darker);
+    text-decoration-thickness: 2px;
+}
+
 /* Dark Mode - Manual Toggle Only */
 html[data-theme="dark"] {
     /* Dark theme core colors - WCAG AA compliant */
@@ -1663,6 +2222,213 @@ html[data-theme="dark"] .badge-urgent {
 
 html[data-theme="dark"] .badge-standard {
     background: linear-gradient(135deg, #6b7280 0%, #9ca3af 100%);
+}
+
+/* USWDS Components - Dark Mode Overrides */
+html[data-theme="dark"] .usa-alert {
+    background-color: #0f0f0f;
+}
+
+html[data-theme="dark"] .usa-alert--info {
+    background-color: #0a2a30;
+    border-left-color: #00bde3;
+}
+
+html[data-theme="dark"] .usa-alert--info .usa-alert__heading {
+    color: #60a5fa;
+}
+
+html[data-theme="dark"] .usa-alert--info .usa-alert__text {
+    color: #e5e5e5;
+}
+
+html[data-theme="dark"] .usa-alert--warning {
+    background-color: #2a2420;
+    border-left-color: #fbbf24;
+}
+
+html[data-theme="dark"] .usa-alert--warning .usa-alert__heading {
+    color: #fbbf24;
+}
+
+html[data-theme="dark"] .usa-alert--warning .usa-alert__text {
+    color: #e5e5e5;
+}
+
+html[data-theme="dark"] .usa-alert--error {
+    background-color: #2a0f0f;
+    border-left-color: #ef4444;
+}
+
+html[data-theme="dark"] .usa-alert--error .usa-alert__heading {
+    color: #f87171;
+}
+
+html[data-theme="dark"] .usa-alert--error .usa-alert__text {
+    color: #e5e5e5;
+}
+
+html[data-theme="dark"] .usa-alert--success {
+    background-color: #0a2a1a;
+    border-left-color: #10b981;
+}
+
+html[data-theme="dark"] .usa-alert--success .usa-alert__heading {
+    color: #34d399;
+}
+
+html[data-theme="dark"] .usa-alert--success .usa-alert__text {
+    color: #e5e5e5;
+}
+
+html[data-theme="dark"] .usa-alert--emergency {
+    background-color: #2a0f0f;
+    border-left-color: #dc2626;
+}
+
+html[data-theme="dark"] .usa-alert--emergency .usa-alert__heading {
+    color: #f87171;
+}
+
+html[data-theme="dark"] .usa-alert--emergency .usa-alert__text {
+    color: #fecaca;
+}
+
+html[data-theme="dark"] .usa-card {
+    background-color: #0f0f0f;
+    border-color: #2a2a2a;
+}
+
+html[data-theme="dark"] .usa-card__header {
+    border-bottom-color: #2a2a2a;
+}
+
+html[data-theme="dark"] .usa-card__heading {
+    color: #e5e5e5;
+}
+
+html[data-theme="dark"] .usa-card__body {
+    color: #d4d4d4;
+}
+
+html[data-theme="dark"] .usa-card__footer {
+    border-top-color: #2a2a2a;
+    color: #a3a3a3;
+}
+
+html[data-theme="dark"] .usa-card--primary {
+    background-color: #0a1a2a;
+}
+
+html[data-theme="dark"] .usa-card--secondary {
+    background-color: #0f0f0f;
+}
+
+html[data-theme="dark"] .usa-table {
+    border-color: #2a2a2a;
+}
+
+html[data-theme="dark"] .usa-table thead {
+    background-color: #0f0f0f;
+}
+
+html[data-theme="dark"] .usa-table th {
+    color: #e5e5e5;
+    border-bottom-color: #404040;
+}
+
+html[data-theme="dark"] .usa-table td {
+    color: #d4d4d4;
+    border-bottom-color: #2a2a2a;
+}
+
+html[data-theme="dark"] .usa-table tbody tr:hover {
+    background-color: #2a2a2a;
+}
+
+html[data-theme="dark"] .usa-table--striped tbody tr:nth-child(even) {
+    background-color: #0f0f0f;
+}
+
+html[data-theme="dark"] .usa-table--striped tbody tr:hover {
+    background-color: #2a2a2a;
+}
+
+html[data-theme="dark"] .usa-accordion {
+    border-color: #2a2a2a;
+}
+
+html[data-theme="dark"] .usa-accordion__item {
+    border-bottom-color: #2a2a2a;
+}
+
+html[data-theme="dark"] .usa-accordion__button {
+    background-color: #0f0f0f;
+    color: #e5e5e5;
+}
+
+html[data-theme="dark"] .usa-accordion__button:hover {
+    background-color: #2a2a2a;
+}
+
+html[data-theme="dark"] .usa-accordion__button::after {
+    color: var(--uswds-blue-light);
+}
+
+html[data-theme="dark"] .usa-accordion__button[aria-expanded="true"] {
+    background-color: var(--background);
+    color: var(--uswds-blue-light);
+}
+
+html[data-theme="dark"] .usa-accordion__content {
+    background-color: var(--background);
+}
+
+html[data-theme="dark"] .usa-accordion__content-inner {
+    color: #d4d4d4;
+}
+
+/* Improved typography - dark mode overrides */
+html[data-theme="dark"] .prose h1,
+html[data-theme="dark"] .prose h2,
+html[data-theme="dark"] .prose h3,
+html[data-theme="dark"] .prose h4,
+html[data-theme="dark"] .prose h5 {
+    color: #e5e5e5 !important;
+}
+
+html[data-theme="dark"] .prose h6 {
+    color: #a3a3a3 !important;
+}
+
+html[data-theme="dark"] .prose h2 {
+    border-bottom-color: #2a2a2a;
+}
+
+html[data-theme="dark"] .prose p {
+    color: #d4d4d4 !important;
+}
+
+html[data-theme="dark"] .prose blockquote {
+    border-left-color: #b8860b;
+    color: #a3a3a3;
+}
+
+html[data-theme="dark"] .prose pre {
+    background-color: #0f0f0f;
+    border-color: #2a2a2a;
+}
+
+html[data-theme="dark"] .prose hr {
+    border-top-color: #2a2a2a;
+}
+
+html[data-theme="dark"] .prose a {
+    color: var(--uswds-blue-light);
+}
+
+html[data-theme="dark"] .prose a:hover {
+    color: #93c5fd;
 }
 
 
