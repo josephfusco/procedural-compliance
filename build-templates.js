@@ -216,10 +216,109 @@ function parseFrontmatter(markdown) {
     return { frontmatter, content };
 }
 
+// Post-process HTML to add USWDS components
+function enhanceWithUSWDS(html) {
+    // Add USWDS table classes
+    html = html.replace(/<table>/g, '<table class="usa-table usa-table--striped">');
+
+    // Wrap sections with specific patterns in USWDS alerts
+    html = wrapSectionInAlert(html, /⚠️\s*BEFORE USING THIS TEMPLATE/, 'warning', '⚠️', 'Before Using This Template');
+    html = wrapSectionInAlert(html, /Important Legal Context/, 'info', 'ℹ️', 'Important Legal Context');
+
+    // Wrap role modules in cards
+    html = wrapRoleModulesInCards(html);
+
+    // Make long sections collapsible
+    html = makeUsageGuidanceCollapsible(html);
+
+    return html;
+}
+
+// Wrap a section (h2/h3 + following content until next same-level heading) in a USWDS alert
+function wrapSectionInAlert(html, headingPattern, alertType, icon, heading) {
+    const headingRegex = new RegExp(`<h([23])>.*?${headingPattern.source}.*?</h\\1>([\\s\\S]*?)(?=<h[123]|$)`, 'i');
+    const match = html.match(headingRegex);
+
+    if (!match) return html;
+
+    const [fullMatch, level, content] = match;
+
+    const alert = `
+<div class="usa-alert usa-alert--${alertType}">
+    <div class="usa-alert__body">
+        <h3 class="usa-alert__heading">
+            <span class="usa-alert__icon">${icon}</span>
+            ${heading}
+        </h3>
+        <div class="usa-alert__text">
+            ${content}
+        </div>
+    </div>
+</div>`;
+
+    return html.replace(fullMatch, alert);
+}
+
+// Wrap each role module (Judge, AFC, etc.) in a USWDS card
+function wrapRoleModulesInCards(html) {
+    // Match h3 headings followed by content until the next h2/h3
+    const rolePattern = /<h3>(Judge|Attorney for the Child \(AFC\)|Assigned Counsel|Court Clerk|Opposing Counsel)<\/h3>([\s\S]*?)(?=<h[23]|$)/g;
+
+    return html.replace(rolePattern, (match, roleName, content) => {
+        return `
+<div class="usa-card usa-card--accent">
+    <div class="usa-card__header">
+        <h3 class="usa-card__heading">${roleName}</h3>
+    </div>
+    <div class="usa-card__body">
+        ${content}
+    </div>
+</div>`;
+    });
+}
+
+// Make long usage guidance sections collapsible with accordions
+function makeUsageGuidanceCollapsible(html) {
+    // Match "When to Use" sections and wrap in accordion
+    const usagePattern = /<h3>(When to Use.*?|Try These Steps First|Resource Requirements.*?)<\/h3>([\s\S]*?)(?=<h[23]|<div class="usa-|$)/g;
+
+    let accordionId = 0;
+    return html.replace(usagePattern, (match, heading, content) => {
+        const id = `accordion-${accordionId++}`;
+        const isOpen = accordionId === 1; // First accordion open by default
+
+        return `
+<div class="usa-accordion">
+    <div class="usa-accordion__item">
+        <button
+            class="usa-accordion__button"
+            aria-expanded="${isOpen}"
+            aria-controls="${id}"
+            onclick="this.setAttribute('aria-expanded', this.getAttribute('aria-expanded') === 'true' ? 'false' : 'true'); document.getElementById('${id}').setAttribute('aria-hidden', this.getAttribute('aria-expanded') === 'true' ? 'false' : 'true');"
+        >
+            ${heading}
+        </button>
+        <div
+            id="${id}"
+            class="usa-accordion__content"
+            aria-hidden="${!isOpen}"
+        >
+            <div class="usa-accordion__content-inner">
+                ${content}
+            </div>
+        </div>
+    </div>
+</div>`;
+    });
+}
+
 // Generate HTML page for a template
 function generateTemplatePage(templateFile, metadata, markdownContent) {
     const { frontmatter, content } = parseFrontmatter(markdownContent);
-    const htmlContent = marked.parse(content);
+    let htmlContent = marked.parse(content);
+
+    // Enhance with USWDS components
+    htmlContent = enhanceWithUSWDS(htmlContent);
 
     const filename = path.basename(templateFile, '.md');
     const htmlFilename = filename.replace(/_/g, '-') + '.html';
