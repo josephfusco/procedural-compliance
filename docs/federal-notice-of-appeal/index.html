@@ -9,9 +9,10 @@
     <!-- Favicon -->
     <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>⚖️</text></svg>">
 
-    <!-- USWDS Public Sans Font -->
-    <link rel="preload" href="/fonts/public-sans/PublicSans-Regular.woff2" as="font" type="font/woff2" crossorigin>
-    <link rel="preload" href="/fonts/public-sans/PublicSans-SemiBold.woff2" as="font" type="font/woff2" crossorigin>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Source+Sans+Pro:wght@400;600;700&display=swap" rel="stylesheet">
 
     <!-- Social Preview Meta Tags -->
     <meta property="og:title" content="Federal Notice of Appeal">
@@ -21,254 +22,62 @@
 
     <link rel="stylesheet" href="/styles.css">
 </head>
-<body class="bg-background text-foreground font-sans antialiased">
+<body class="bg-white">
     <!-- Skip Navigation Link -->
     <a href="#main-content" class="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 focus:z-50 focus:px-4 focus:py-2 focus:bg-primary focus:text-primary-foreground focus:rounded focus:outline-none focus:ring-4 focus:ring-ring focus:ring-offset-2">
         Skip to main content
     </a>
 
-    <!-- US Government-Style Banner -->
-    <section class="gov-banner" role="region" aria-label="Official government-style notice">
-        <div class="container mx-auto px-4 py-2">
+    <!-- Government Banner -->
+    <div class="gov-banner">
+        <div class="container mx-auto px-4">
             <div class="flex items-center gap-2">
-                <img src="/us_flag_small.png" class="gov-banner-flag" alt="U.S. flag" loading="eager">
-                <p class="gov-banner-text">An open framework for documenting procedural compliance · Not legal advice</p>
+                <img src="/us_flag_small.png" class="gov-banner-flag" alt="U.S. flag">
+                <span>An open framework for documenting procedural compliance · Not legal advice</span>
             </div>
         </div>
-    </section>
+    </div>
 
-    <!-- Header -->
-    <header class="w-full border-b border-border bg-background" role="banner">
-        <div class="container mx-auto px-4 py-3">
-            <div class="flex flex-col md:flex-row md:h-14 md:items-center md:justify-between gap-3 md:gap-0">
-                <div class="flex items-center justify-between">
-                    <div class="flex items-center space-x-2">
-                        <span class="text-xl" role="img" aria-label="Scales of justice">⚖️</span>
-                        <h1 class="text-lg font-sans font-semibold">
-                            <a href="/" class="hover:text-primary transition-colors">Procedural Compliance Framework</a>
-                        </h1>
-                    </div>
-                    <nav class="hidden md:flex items-center space-x-6 text-sm ml-8">
-                        <a href="/#templates" class="text-foreground/80 hover:text-foreground transition-colors">Templates</a>
-                        <a href="https://github.com/josephfusco/procedural-compliance" target="_blank" rel="noopener noreferrer" class="text-foreground/80 hover:text-foreground transition-colors">GitHub</a>
-                    </nav>
+    <!-- Header / Navigation -->
+    <header class="border-b border-gray-200 bg-white">
+        <div class="max-w-5xl mx-auto px-4 py-4">
+            <div class="flex items-center justify-between">
+                <!-- Logo -->
+                <div class="flex items-center gap-3">
+                    <span class="text-2xl">⚖️</span>
+                    <h1 class="text-xl font-semibold">
+                        <a href="/" class="hover:text-gov-blue transition-colors">Procedural Compliance Framework</a>
+                    </h1>
                 </div>
-                <div class="flex items-center gap-2">
-                    <button id="theme-toggle" class="flex items-center justify-center px-4 py-2 text-sm font-medium text-foreground bg-transparent rounded border-2 border-border hover:bg-muted transition-colors focus:outline-none focus:ring-4 focus:ring-ring focus:ring-offset-2" aria-label="Light mode. Click to toggle" role="switch" aria-checked="false">
-                        <span id="theme-label">Light</span>
-                    </button>
-                </div>
+
+                <!-- Navigation -->
+                <nav class="hidden md:flex items-center gap-6">
+                    <a href="/#templates" class="text-gray-700 hover:text-gray-900 transition-colors">Templates</a>
+                    <a href="https://github.com/josephfusco/procedural-compliance" target="_blank" rel="noopener noreferrer" class="text-gray-700 hover:text-gray-900 transition-colors">GitHub</a>
+                </nav>
+
             </div>
         </div>
     </header>
 
-    <!-- Breadcrumb Navigation -->
-    <nav class="border-b border-border bg-muted/30" aria-label="Breadcrumb">
-        <div class="container mx-auto px-4 py-3">
-            <ol class="flex items-center space-x-2 text-sm">
-                <li><a href="/" class="text-foreground/60 hover:text-foreground transition-colors">Home</a></li>
-                <li class="text-foreground/40">/</li>
-                <li><a href="/#templates" class="text-foreground/60 hover:text-foreground transition-colors">Templates</a></li>
-                <li class="text-foreground/40">/</li>
-                <li class="text-foreground font-medium" aria-current="page">Federal Notice of Appeal</li>
-            </ol>
-        </div>
-    </nav>
 
     <main id="main-content" role="main">
         <!-- Template Header -->
-        <div class="border-b border-border bg-muted/30">
-            <div class="container mx-auto px-4 py-8">
-                <div class="flex items-start justify-between gap-4">
-                    <div class="flex-1">
-                        <div class="flex items-center gap-3 mb-3">
-                            <span class="badge badge-federal"><img src="/us_flag_small.png" class="badge-flag-img" alt="U.S. flag" loading="lazy"><span>Federal</span></span>
-                            <h1 class="text-3xl font-sans font-semibold text-foreground">Federal Notice of Appeal</h1>
-                        </div>
-                        <p class="text-base text-muted-foreground">FRAP Rule 3 - Circuit Court Appeal</p>
-                    </div>
-                    <div class="flex gap-2">
-                        <a href="https://github.com/josephfusco/procedural-compliance/blob/main/templates/federal_notice_of_appeal.md" target="_blank" rel="noopener noreferrer" class="px-4 py-2 text-sm font-medium text-foreground bg-transparent rounded border-2 border-border hover:bg-muted transition-colors focus:outline-none focus:ring-4 focus:ring-ring focus:ring-offset-2">
-                            Edit on GitHub
-                        </a>
-                        <a href="https://raw.githubusercontent.com/josephfusco/procedural-compliance/main/templates/federal_notice_of_appeal.md" download="federal_notice_of_appeal.md" class="px-4 py-2 text-sm font-medium text-primary-foreground bg-primary rounded border-2 border-primary hover:bg-primary/90 transition-colors focus:outline-none focus:ring-4 focus:ring-ring focus:ring-offset-2">
-                            Download
-                        </a>
-                    </div>
+        <div class="border-b border-gray-200 bg-gray-50">
+            <div class="max-w-5xl mx-auto px-4 py-8">
+                <div class="flex items-center gap-3 mb-3">
+                    <span class="jurisdiction-badge jurisdiction-federal">Federal</span>
+                    <h1 class="text-3xl font-semibold text-gray-900">Federal Notice of Appeal</h1>
                 </div>
+                <p class="text-base text-gray-600">FRAP Rule 3 - Circuit Court Appeal</p>
             </div>
         </div>
 
-        <!-- Template Content with Sidebar -->
-        <div class="container mx-auto px-4 py-12">
-            <div class="docs-layout">
-                <!-- Table of Contents Sidebar -->
-                <aside class="docs-sidebar" aria-label="Table of contents">
-                    <nav class="docs-toc" id="docs-toc">
-                        <h4>On This Page</h4>
-                        <ul class="docs-toc-list" id="docs-toc-list">
-                            <!-- Auto-populated by JavaScript -->
-                        </ul>
-                    </nav>
-                </aside>
-
-                <!-- Main Content -->
-                <div class="docs-content">
-                    <div class="prose prose-slate" id="template-content">
-                        <hr>
-<p><strong>JURISDICTION: FEDERAL</strong></p>
-<h2>This template applies to United States District Courts and Circuit Courts of Appeals governed by FRCP, FRAP, and Federal Rules of Evidence.</h2>
-<h1>NOTICE OF APPEAL</h1>
-<hr>
-
-<div class="usa-alert usa-alert--warning">
-    <div class="usa-alert__body">
-        <h3 class="usa-alert__heading">
-            <span class="usa-alert__icon">⚠️</span>
-            Before Using This Template
-        </h3>
-        <div class="usa-alert__text">
-            
-
-        </div>
-    </div>
-</div>
-<div class="usa-accordion">
-    <div class="usa-accordion__item">
-        <button
-            class="usa-accordion__button"
-            aria-expanded="true"
-            aria-controls="accordion-0"
-            onclick="this.setAttribute('aria-expanded', this.getAttribute('aria-expanded') === 'true' ? 'false' : 'true'); document.getElementById('accordion-0').setAttribute('aria-hidden', this.getAttribute('aria-expanded') === 'true' ? 'false' : 'true');"
-        >
-            When to Use Federal Notice of Appeal
-        </button>
-        <div
-            id="accordion-0"
-            class="usa-accordion__content"
-            aria-hidden="false"
-        >
-            <div class="usa-accordion__content-inner">
-                
-<p><strong>USE this template when:</strong></p>
-<ul>
-<li>District Court entered final judgment or appealable order against you</li>
-<li>You are within 30-day deadline from entry of judgment (60 days if United States is party)</li>
-<li>You believe District Court made reversible legal or procedural error</li>
-<li>Order is appealable under 28 U.S.C. §1291 (final decisions) or §1292 (certain interlocutory orders)</li>
-<li>You have exhausted post-trial motions if required (e.g., FRCP 50(b), 59)</li>
-</ul>
-<p><strong>DO NOT use this if:</strong></p>
-<ul>
-<li>Appeal deadline has passed (FRAP 4 deadline is jurisdictional - no extensions)</li>
-<li>Order is non-appealable interlocutory order (not covered by §1292)</li>
-<li>You want to re-argue merits to District Court (file motion for reconsideration instead)</li>
-<li>Issue wasn&#39;t preserved below (need contemporaneous objection, except for certain issues)</li>
-<li>You haven&#39;t received written order/judgment entered on docket yet</li>
-</ul>
-<p><strong>Appropriate example:</strong> District Court granted defendant&#39;s motion for summary judgment dismissing your civil rights case; written order entered on CM/ECF 18 days ago; you believe court misapplied exhaustion requirement; you&#39;ve preserved the issue by raising it in opposition brief.</p>
-<p><strong>Inappropriate example:</strong> District Court denied your discovery motion 2 weeks ago but hasn&#39;t entered a written order yet (wait for entry of written order; FRAP 4 clock doesn&#39;t start until then).</p>
-
-            </div>
-        </div>
-    </div>
-</div><h3>Critical Timing and Prerequisites</h3>
-<p><strong>STRICT DEADLINES - JURISDICTIONAL (MISS THESE AND LOSE YOUR APPEAL):</strong></p>
-<ol>
-<li><p><strong>30-day deadline (FRAP 4(a)(1)):</strong> File notice of appeal within 30 days of entry of judgment</p>
-<ul>
-<li>Clock starts when judgment/order is entered on docket (not when you receive notice)</li>
-<li>If United States is party: 60 days (FRAP 4(a)(1)(B))</li>
-<li>&quot;Entry&quot; = clerk enters judgment on docket, not when judge signs it</li>
-<li>No extensions except as specified in FRAP 4(a)(5) (excusable neglect, max 14 days if motion filed within 30 days)</li>
-</ul>
-</li>
-<li><p><strong>Preserve issues below:</strong> Must have raised issue in District Court</p>
-<ul>
-<li>Exception: jurisdictional issues can be raised for first time on appeal</li>
-<li>Exception: pure questions of law from undisputed facts sometimes preserved</li>
-<li>General rule: &quot;contemporaneous objection&quot; required</li>
-</ul>
-</li>
-<li><p><strong>File in correct court:</strong> Notice filed in District Court (not Circuit Court)</p>
-<ul>
-<li>Circuit Court gets jurisdiction when notice is filed in District Court</li>
-<li>District Court retains jurisdiction for post-judgment motions during appeal</li>
-</ul>
-</li>
-<li><p><strong>Order transcripts within 14 days:</strong> FRAP 10(b)(1) mandatory requirement</p>
-<ul>
-<li>Must order transcripts and file certificate within 14 days</li>
-<li>Failure to order transcripts can result in dismissal</li>
-</ul>
-</li>
-</ol>
-
-<div class="usa-accordion">
-    <div class="usa-accordion__item">
-        <button
-            class="usa-accordion__button"
-            aria-expanded="false"
-            aria-controls="accordion-1"
-            onclick="this.setAttribute('aria-expanded', this.getAttribute('aria-expanded') === 'true' ? 'false' : 'true'); document.getElementById('accordion-1').setAttribute('aria-hidden', this.getAttribute('aria-expanded') === 'true' ? 'false' : 'true');"
-        >
-            Resource Requirements &amp; Realistic Expectations
-        </button>
-        <div
-            id="accordion-1"
-            class="usa-accordion__content"
-            aria-hidden="true"
-        >
-            <div class="usa-accordion__content-inner">
-                
-<p>⚠️ <strong>Important Considerations:</strong></p>
-<ul>
-<li><strong>Timeline:</strong> 12-18 months typical from notice of appeal to Circuit decision; 6 months for briefing, 6-12 months for decision</li>
-<li><strong>Cost:</strong> Transcripts ($3.30-5/page = $2,000-10,000+), $505 appellate filing fee, possible bond requirement</li>
-<li><strong>Success rate:</strong> ~8-10% reversal rate in civil cases; higher if clear legal error; very low for abuse of discretion review</li>
-<li><strong>Perfection requirements:</strong> Must order transcripts, assemble record, file briefs within strict deadlines or appeal dismissed</li>
-<li><strong>Standards of review:</strong> Legal conclusions (de novo), factual findings (clearly erroneous), discretionary rulings (abuse of discretion)</li>
-<li><strong>What this achieves:</strong> Circuit Court review of legal errors; potential reversal, vacation, or remand</li>
-<li><strong>What this does NOT do:</strong> Allow new evidence; retry facts; guarantee reversal; extend District Court deadlines</li>
-</ul>
-<p><strong>What happens after filing notice of appeal:</strong></p>
-<ol>
-<li><strong>14 days:</strong> Order transcripts, file certificate (FRAP 10(b))</li>
-<li><strong>14 days:</strong> File docketing statement in Circuit (check local rules)</li>
-<li><strong>14 days:</strong> Designate record contents; appellee counter-designates (FRAP 10(a))</li>
-<li><strong>Varies:</strong> District Court transmits record to Circuit (usually 2-4 months)</li>
-<li><strong>40 days after record filed:</strong> Appellant&#39;s opening brief due (FRAP 31(a)(1))</li>
-<li><strong>30 days after opening brief:</strong> Appellee&#39;s brief due (FRAP 31(a)(1))</li>
-<li><strong>21 days after appellee&#39;s brief:</strong> Appellant&#39;s optional reply brief (FRAP 31(a)(1))</li>
-<li><strong>Oral argument:</strong> Scheduled by Circuit (may be waived for routine appeals)</li>
-<li><strong>Decision:</strong> Typically 4-12 months after oral argument/submission</li>
-</ol>
-<p><strong>Costs to expect:</strong></p>
-<ul>
-<li><strong>Filing fee:</strong> $505 for Circuit Court (may be waived if granted IFP status)</li>
-<li><strong>Transcripts:</strong> $3.30-5/page; bench trial can be $5,000-15,000; hearing $500-2,000</li>
-<li><strong>Record preparation:</strong> District Court charges for copying record (can be $100-500)</li>
-<li><strong>Poor person relief (IFP):</strong> File Application to Proceed In Forma Pauperis to waive fees (28 U.S.C. §1915)</li>
-<li><strong>Stay bond:</strong> If seeking stay of money judgment, may need FRCP 62(b) bond</li>
-</ul>
-<p><strong>Alternatives to consider:</strong></p>
-<ul>
-<li><strong>FRCP 59(e) motion to alter/amend judgment</strong> (28 days from entry) - Can extend appeal time under FRAP 4(a)(4)</li>
-<li><strong>FRCP 60(b) motion for relief from judgment</strong> - Based on mistake, new evidence, etc.</li>
-<li><strong>Settle the case</strong> - Negotiate resolution before appeal</li>
-<li><strong>Consult appellate specialist</strong> - Appeals are highly technical; mistakes can be fatal</li>
-<li><strong>Petition for rehearing en banc</strong> - After panel decision, if appropriate (rare)</li>
-</ul>
-<p><strong>Federal vs. NY differences:</strong></p>
-<ul>
-<li><strong>Deadline:</strong> 30 days from entry (federal) vs. 30 days from service of notice of entry (NY)</li>
-<li><strong>Interlocutory appeals:</strong> Limited to 28 U.S.C. §1292 (federal) vs. broader CPLR §5701(a)(2) (NY)</li>
-<li><strong>Transcript rules:</strong> FRAP 10(b) 14-day order requirement vs. CPLR §5525 (NY)</li>
-<li><strong>Filing location:</strong> District Court (federal) vs. trial court clerk (NY)</li>
-<li><strong>Briefing schedule:</strong> FRAP 31 (federal) vs. 22 NYCRR §670.8 (NY Appellate Division rules)</li>
-</ul>
-<p><strong>Best practice:</strong> File notice of appeal immediately upon entry of unfavorable judgment (don&#39;t wait until day 30); order transcripts within 14 days; check Circuit local rules for docketing statement requirements; consult appellate attorney experienced in your Circuit; understand that filing notice of appeal is just first step in complex, expensive, year-long process.</p>
-<p><strong>[Federal][FRAP Rule 3] Appeal to Circuit Court of Appeals</strong></p>
+        <!-- Template Content -->
+        <div class="max-w-5xl mx-auto px-4 py-12">
+            <div class="prose max-w-none" id="template-content">
+                <h1>NOTICE OF APPEAL</h1>
+<p>FRAP Rule 3 - Circuit Court Appeal</p>
 <hr>
 <p><strong>UNITED STATES DISTRICT COURT</strong>
 <strong>{{DISTRICT}} DISTRICT OF {{STATE}}</strong></p>
@@ -280,11 +89,7 @@ Plaintiff/Petitioner,</p>
 Defendant/Respondent.</p>
 <p>Case No. {{Case Number}}</p>
 <hr>
-
-            </div>
-        </div>
-    </div>
-</div><h2>NOTICE OF APPEAL</h2>
+<h2>NOTICE OF APPEAL</h2>
 <p>Notice is hereby given that {{Appellant Name}}, {{plaintiff/defendant/petitioner/respondent}} in the above-captioned action, appeals to the United States Court of Appeals for the {{Circuit}} Circuit from:</p>
 <ul>
 <li><input disabled="" type="checkbox"> <strong>Final Judgment</strong> entered on {{date}} (Doc. {{ECF Number}})</li>
@@ -410,62 +215,6 @@ Defendant/Respondent.</p>
 <p>{{Signature}}
 {{Name}}</p>
 <hr>
-<h2>NOTES FOR APPELLANT</h2>
-<p><strong>Immediate Actions Required (FRAP 3-10):</strong></p>
-<ol>
-<li><p><strong>Filing Fee:</strong> Pay appellate filing fee ($505 as of 2025) or file motion to proceed IFP within 14 days.</p>
-</li>
-<li><p><strong>Transcript Order (FRAP 10(b)):</strong> Order all necessary transcripts within 14 days of filing this notice. File certificate of transcript order.</p>
-</li>
-<li><p><strong>Docketing Statement (Circuit Local Rule):</strong> File docketing statement in Circuit Court within 14 days (check local rules for specific requirements).</p>
-</li>
-<li><p><strong>Designation of Record (FRAP 10(a)):</strong> Within 14 days, serve on appellee designation of record contents. Appellee has 14 days to counter-designate.</p>
-</li>
-<li><p><strong>Appellate Briefing Schedule:</strong> Circuit Court will issue briefing schedule. Appellant&#39;s brief typically due 40 days after record is filed.</p>
-</li>
-</ol>
-<p><strong>Key Deadlines:</strong></p>
-<table class="usa-table usa-table--striped">
-<thead>
-<tr>
-<th>Action</th>
-<th>Deadline</th>
-<th>Rule</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>File Notice of Appeal</td>
-<td>30 days (60 if US is party)</td>
-<td>FRAP 4(a)</td>
-</tr>
-<tr>
-<td>Order transcripts</td>
-<td>14 days from notice</td>
-<td>FRAP 10(b)</td>
-</tr>
-<tr>
-<td>File docketing statement</td>
-<td>14 days (check local rules)</td>
-<td>Circuit Rules</td>
-</tr>
-<tr>
-<td>Designate record</td>
-<td>14 days from notice</td>
-<td>FRAP 10(a)</td>
-</tr>
-<tr>
-<td>Appellant&#39;s brief</td>
-<td>40 days after record filed</td>
-<td>FRAP 31(a)(1)</td>
-</tr>
-</tbody></table>
-<p><strong>Resources:</strong></p>
-<ul>
-<li>Circuit Court website: {{Insert circuit court URL}}</li>
-<li>FRAP available at: <a href="https://www.law.cornell.edu/rules/frap">https://www.law.cornell.edu/rules/frap</a></li>
-<li>Circuit Local Rules: {{Insert link to local rules}}</li>
-</ul>
-<hr>
 <p><strong>Authorities:</strong></p>
 <ul>
 <li>FRAP 3: Filing the notice of appeal</li>
@@ -475,267 +224,13 @@ Defendant/Respondent.</p>
 <li>28 U.S.C. §1292: Interlocutory decisions</li>
 </ul>
 
-                    </div>
-                </div>
             </div>
         </div>
     </main>
 
-    <!-- Footer -->
-    <footer class="border-t-2 border-border bg-muted/30 py-12 mt-8" role="contentinfo">
-        <div class="container mx-auto px-4">
-            <div class="grid grid-cols-1 md:grid-cols-4 gap-12 mb-10">
-                <div>
-                    <h3 class="text-lg font-sans font-semibold mb-4 text-foreground">Open Collaboration</h3>
-                    <p class="helpful-text text-sm mb-3 leading-relaxed">An open specification for verifying adherence to statutory procedure in state and federal courts. Contributions welcome.</p>
-                    <p class="helpful-text text-sm font-medium"><strong>Not legal advice.</strong> Educational purposes only.</p>
-                </div>
-
-                <div>
-                    <h3 class="text-lg font-sans font-semibold mb-4 text-foreground">Resources</h3>
-                    <ul class="space-y-3 text-sm">
-                        <li><a href="https://github.com/josephfusco/procedural-compliance" target="_blank" rel="noopener noreferrer" class="footer-link text-foreground/80 hover:text-foreground transition-colors underline decoration-1 underline-offset-2">GitHub Repository</a></li>
-                        <li><a href="https://github.com/josephfusco/procedural-compliance/blob/main/CONTRIBUTING.md" target="_blank" rel="noopener noreferrer" class="footer-link text-foreground/80 hover:text-foreground transition-colors underline decoration-1 underline-offset-2">Contributing Guide</a></li>
-                        <li><a href="https://github.com/josephfusco/procedural-compliance/issues" target="_blank" rel="noopener noreferrer" class="footer-link text-foreground/80 hover:text-foreground transition-colors underline decoration-1 underline-offset-2">Report Issue</a></li>
-                    </ul>
-                </div>
-
-                <div>
-                    <h3 class="text-lg font-sans font-semibold mb-4 text-foreground">Legal</h3>
-                    <ul class="space-y-3 text-sm">
-                        <li><a href="https://github.com/josephfusco/procedural-compliance/blob/main/LICENSE" target="_blank" rel="noopener noreferrer" class="footer-link text-foreground/80 hover:text-foreground transition-colors underline decoration-1 underline-offset-2">MIT License</a></li>
-                    </ul>
-                </div>
-
-                <div>
-                    <div class="flex items-center gap-2 mb-4">
-                        <span class="badge badge-ny">NY</span>
-                        <h3 class="text-lg font-sans font-semibold text-foreground">NY Court Resources</h3>
-                    </div>
-                    <ul class="space-y-3 text-sm">
-                        <li><a href="https://www.nycourts.gov/efile/rules.shtml" target="_blank" rel="noopener noreferrer" class="footer-link text-foreground/80 hover:text-foreground transition-colors underline decoration-1 underline-offset-2">NYSCEF E-Filing Rules</a></li>
-                        <li><a href="https://ww2.nycourts.gov/courts/index.shtml" target="_blank" rel="noopener noreferrer" class="footer-link text-foreground/80 hover:text-foreground transition-colors underline decoration-1 underline-offset-2">NY Court Directory</a></li>
-                    </ul>
-                </div>
-            </div>
-
-            <div class="border-t-2 border-border pt-8 text-center">
-                <p class="text-sm text-foreground/70 font-medium">&copy; 2025 Procedural Compliance Framework (PCF)</p>
-                <p class="text-sm text-foreground/70 mt-2">Released under MIT License • Open Source Legal Framework</p>
-                <p class="text-xs text-foreground/60 mt-3">Accessibility: WCAG 2.1 AA • ADA Title II § 35.160 • Section 508 Standards</p>
-            </div>
-        </div>
+    <!-- Minimal Footer -->
+    <footer class="border-t border-gray-200 py-8 text-center text-sm text-gray-600">
+        <p>Open source under MIT License · <a href="https://github.com/josephfusco/procedural-compliance" class="hover:text-gray-900 transition-colors">View on GitHub</a></p>
     </footer>
-
-    <!-- Theme Toggle Script -->
-    <script>
-        (function() {
-            const THEMES = { LIGHT: 'light', DARK: 'dark' };
-            const LABELS = { light: 'Light', dark: 'Dark' };
-            const ARIA_LABELS = {
-                light: 'Light mode. Click to switch to dark mode',
-                dark: 'Dark mode. Click to switch to light mode'
-            };
-
-            const themeToggle = document.getElementById('theme-toggle');
-            const themeLabel = document.getElementById('theme-label');
-            const html = document.documentElement;
-
-            function getSavedTheme() {
-                return localStorage.getItem('theme') || THEMES.LIGHT;
-            }
-
-            function applyTheme(theme) {
-                html.setAttribute('data-theme', theme);
-                themeLabel.textContent = LABELS[theme];
-                themeToggle.setAttribute('aria-checked', theme === THEMES.DARK ? 'true' : 'false');
-                themeToggle.setAttribute('aria-label', ARIA_LABELS[theme]);
-            }
-
-            function toggleTheme() {
-                const currentTheme = getSavedTheme();
-                const nextTheme = currentTheme === THEMES.LIGHT ? THEMES.DARK : THEMES.LIGHT;
-                localStorage.setItem('theme', nextTheme);
-                applyTheme(nextTheme);
-            }
-
-            applyTheme(getSavedTheme());
-            themeToggle.addEventListener('click', toggleTheme);
-            themeToggle.addEventListener('keydown', (e) => {
-                if (e.key === ' ' || e.key === 'Enter') {
-                    e.preventDefault();
-                    toggleTheme();
-                }
-            });
-        })();
-    </script>
-
-    <!-- Template Content Enhancements -->
-    <script>
-        // Separate metadata from document
-        const content = document.getElementById('template-content');
-        if (content) {
-            // Highlight placeholders
-            const walker = document.createTreeWalker(content, NodeFilter.SHOW_TEXT, null);
-            const nodesToReplace = [];
-            while (walker.nextNode()) {
-                const node = walker.currentNode;
-                if (node.textContent.includes('{{') && node.textContent.includes('}}')) {
-                    nodesToReplace.push(node);
-                }
-            }
-
-            nodesToReplace.forEach(node => {
-                const fragment = document.createDocumentFragment();
-                const tempDiv = document.createElement('div');
-                tempDiv.innerHTML = node.textContent.replace(
-                    /\{\{([^}]+)\}\}/g,
-                    '<span class="template-placeholder">{{$1}}</span>'
-                );
-                while (tempDiv.firstChild) {
-                    fragment.appendChild(tempDiv.firstChild);
-                }
-                node.parentNode.replaceChild(fragment, node);
-            });
-        }
-    </script>
-
-    <!-- Table of Contents Generation & Scroll Spy -->
-    <script>
-        (function() {
-            const content = document.getElementById('template-content');
-            const tocList = document.getElementById('docs-toc-list');
-
-            if (!content || !tocList) return;
-
-            // Generate slug from heading text
-            function generateSlug(text) {
-                return text
-                    .toLowerCase()
-                    .replace(/[^a-z0-9]+/g, '-')
-                    .replace(/^-+|-+$/g, '');
-            }
-
-            // Find all H2 and H3 headings
-            const headings = content.querySelectorAll('h2, h3');
-            const tocItems = [];
-
-            headings.forEach((heading, index) => {
-                const level = heading.tagName.toLowerCase();
-                const text = heading.textContent.trim();
-
-                // Skip if heading is too short or is a service certification heading
-                if (text.length < 2 || text === 'Service Certification') return;
-
-                // Generate ID if it doesn't exist
-                let id = heading.id;
-                if (!id) {
-                    id = generateSlug(text);
-                    // Ensure unique ID
-                    let uniqueId = id;
-                    let counter = 1;
-                    while (document.getElementById(uniqueId)) {
-                        uniqueId = id + '-' + counter;
-                        counter++;
-                    }
-                    heading.id = uniqueId;
-                    id = uniqueId;
-                }
-
-                // Create TOC item
-                const li = document.createElement('li');
-                li.className = 'docs-toc-item';
-                li.setAttribute('data-level', level === 'h2' ? '2' : '3');
-
-                const link = document.createElement('a');
-                link.className = 'docs-toc-link';
-                link.href = '#' + id;
-                link.textContent = text;
-                link.setAttribute('data-target', id);
-
-                li.appendChild(link);
-                tocList.appendChild(li);
-                tocItems.push({ id, link, element: heading });
-            });
-
-            // Scroll spy functionality
-            let activeLink = null;
-
-            function updateActiveLink() {
-                let currentId = null;
-                const scrollPos = window.scrollY + 100; // Offset for better UX
-
-                // Find the heading closest to the top of viewport
-                for (let i = tocItems.length - 1; i >= 0; i--) {
-                    const item = tocItems[i];
-                    const rect = item.element.getBoundingClientRect();
-                    const absoluteTop = rect.top + window.scrollY;
-
-                    if (absoluteTop <= scrollPos) {
-                        currentId = item.id;
-                        break;
-                    }
-                }
-
-                // Update active state
-                if (currentId && (!activeLink || activeLink.getAttribute('data-target') !== currentId)) {
-                    tocItems.forEach(item => {
-                        item.link.classList.remove('active');
-                    });
-
-                    const newActiveItem = tocItems.find(item => item.id === currentId);
-                    if (newActiveItem) {
-                        newActiveItem.link.classList.add('active');
-                        activeLink = newActiveItem.link;
-                    }
-                }
-            }
-
-            // Throttle scroll events for performance
-            let scrollTimeout;
-            window.addEventListener('scroll', function() {
-                if (scrollTimeout) {
-                    window.cancelAnimationFrame(scrollTimeout);
-                }
-                scrollTimeout = window.requestAnimationFrame(updateActiveLink);
-            });
-
-            // Initial update
-            updateActiveLink();
-
-            // Smooth scroll on click
-            tocList.addEventListener('click', function(e) {
-                if (e.target.classList.contains('docs-toc-link')) {
-                    e.preventDefault();
-                    const targetId = e.target.getAttribute('data-target');
-                    const targetElement = document.getElementById(targetId);
-
-                    if (targetElement) {
-                        targetElement.scrollIntoView({
-                            behavior: 'smooth',
-                            block: 'start'
-                        });
-
-                        // Update URL without jumping
-                        history.pushState(null, '', '#' + targetId);
-                    }
-                }
-            });
-
-            // Handle initial hash in URL
-            if (window.location.hash) {
-                setTimeout(() => {
-                    const targetElement = document.querySelector(window.location.hash);
-                    if (targetElement) {
-                        targetElement.scrollIntoView({
-                            behavior: 'smooth',
-                            block: 'start'
-                        });
-                        updateActiveLink();
-                    }
-                }, 100);
-            }
-        })();
-    </script>
 </body>
 </html>

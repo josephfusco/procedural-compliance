@@ -6,91 +6,9 @@ statutes: ["CPLR §7803(1)", "CPLR §7804(b)", "CPLR Article 78"]
 version: "1.0.0"
 ---
 
----
-**JURISDICTION: NEW YORK**
-
-This template applies to New York State courts (Supreme, Family, Appellate Division) governed by CPLR, DRL, FCA, and 22 NYCRR.
----
-
 # VERIFIED PETITION FOR ARTICLE 78 MANDAMUS RELIEF
 
----
-
-## ⚠️ BEFORE USING THIS TEMPLATE
-
-### When to Use Article 78 Mandamus
-
-**USE this template when:**
-- Public officer or court has clear legal duty to perform specific ministerial act
-- The duty is mandatory ("shall" language in statute/rule), not discretionary ("may")
-- Officer refuses or fails to perform despite demands
-- All other remedies (notices, motions, administrative appeals) have been exhausted
-- You need court order compelling performance of the duty
-
-**DO NOT use this if:**
-- The duty is discretionary (requires judgment or policy decision)
-- You haven't exhausted other remedies (notices of non-compliance, motions)
-- You're challenging merits of a decision (that's appeal, not mandamus)
-- You're within 4-month statute of limitations for direct appeal
-- Issue involves complex factual disputes requiring trial
-
-**Appropriate example:** Court decided motion orally 8 months ago but refuses to issue written order required by CPLR §2219(a); you served notices of non-compliance; filed omnibus notice; no written order issued; need order for appellate review.
-
-**Inappropriate example:** Judge denied your motion and you think decision was wrong (that's appeal or motion to reargue, not mandamus - you're challenging exercise of discretion, not failure to perform ministerial duty).
-
-### Try These Steps First
-
-**Before filing Article 78:**
-
-1. **Identify the specific duty** - Cite exact statute/rule requiring the act; confirm duty is ministerial
-2. **Serve notice of non-compliance** - Use notice templates in this toolkit; demand compliance by specific date
-3. **Document refusal** - Keep copies of all notices, responses (or lack thereof)
-4. **Exhaust administrative remedies** - File motions, omnibus notices, requests for relief
-5. **Verify statute of limitations** - Article 78 has 4-month SOL from accrual (CPLR §217(1)); appeals have different timelines
-6. **Consider alternatives** - Appeal, motion to compel, complaint to oversight body
-7. **Consult attorney** - Article 78 is complex; requires verified petition, memorandum of law, proper service
-
-**Document everything:** Notices served, dates of oral rulings, motions filed, responses received, statutory provisions violated.
-
-### Resource Requirements & Legal Standards
-
-⚠️ **Important Considerations:**
-
-- **Timeline:** 4-month statute of limitations from when duty should have been performed (CPLR §217(1)); proceeding takes 2-6 months
-- **Cost:** Court filing fees ($210 for Supreme Court); service costs; attorney recommended ($2,500-$10,000+)
-- **Complexity:** Requires verified petition, memorandum of law, exhibits; must show ministerial duty and exhaustion
-- **Success rate:** High if duty is clearly ministerial and exhaustion shown; low if duty is discretionary
-- **What this achieves:** Court order directing officer to perform specific act; establishes record for appeal if denied
-- **What this does NOT do:** Reverse substantive rulings; award damages; discipline the officer
-
-**Ministerial vs. Discretionary Duty:**
-
-- **Ministerial:** Duty "so plainly prescribed as to be free from doubt" (*Holtzman v. Goldman*, 71 N.Y.2d 564 (1988))
-  - Examples: Issue written order (CPLR §2219(a)); enter judgment on docket; provide court records (CPLR §5017(b))
-  - No judgment, policy decision, or weighing of factors required
-  - "Shall" language in statute/rule
-- **Discretionary:** Requires judgment, policy determination, weighing competing considerations
-  - Examples: Grant/deny motion; fashion relief; manage calendar
-  - NOT subject to mandamus (remedy is appeal or motion to reargue)
-
-**Exhaustion Requirement:**
-
-- Must exhaust available administrative remedies before Article 78
-- Serve notices of non-compliance using templates in this toolkit
-- File motions, omnibus notices, or administrative appeals
-- Exception: Exhaustion excused if remedy is inadequate or futile
-
-**Alternatives to Article 78:**
-
-- **Appeal:** If decision is appealable and within time limits (CPLR Article 55)
-- **Motion to compel:** Request court order officer to perform duty
-- **Administrative complaint:** Judicial conduct complaint, grievance committee
-- **Federal court:** 42 U.S.C. §1983 (civil rights violation) if state remedies inadequate
-- **Appellate mandamus:** Petition to Appellate Division for writ of mandamus
-
-**Best practice:** Article 78 is last resort after exhausting other remedies. Serve notices of non-compliance first; file motions; document refusals. Verify duty is ministerial (not discretionary). Consult attorney for complex proceedings. File within 4-month statute of limitations.
-
-**[NY][CPLR] Mandamus to Compel Performance of Ministerial Duty**
+CPLR §7803(1) - Mandamus to Compel Performance of Ministerial Duty
 
 ---
 
@@ -117,7 +35,7 @@ Petitioner {{Name}}, by {{pro se / counsel}}, respectfully alleges:
 
 ### I. NATURE OF PROCEEDING
 
-1. This is a proceeding pursuant to CPLR Article 78 to compel respondent to perform a ministerial duty required by law: {{specific duty - e.g., "issue written orders pursuant to CPLR §2219(a)" / "provide access to court records under CPLR §5017(b)"}}.
+1. This is a proceeding pursuant to CPLR Article 78 to compel respondent to perform a ministerial duty required by law: {{specific duty}}.
 
 2. Despite multiple demands over {{X}} months, respondent has refused or failed to perform this statutory obligation.
 
@@ -129,9 +47,9 @@ Petitioner {{Name}}, by {{pro se / counsel}}, respectfully alleges:
 
 ### III. PARTIES
 
-5. Petitioner {{Name}} is {{description - party in underlying case, member of public, etc.}} and has a clear legal right to respondent's performance of the duty at issue.
+5. Petitioner {{Name}} is {{description}} and has a clear legal right to respondent's performance of the duty at issue.
 
-6. Respondent {{Name}} is {{Title - e.g., "Justice of the Supreme Court" / "County Clerk" / "Commissioner"}}, with principal offices at {{Address}}, County of {{County}}, State of New York.
+6. Respondent {{Name}} is {{Title}}, with principal offices at {{Address}}, County of {{County}}, State of New York.
 
 7. Respondent has a ministerial duty under {{Statute}} to {{specific duty}}.
 
@@ -145,7 +63,7 @@ Petitioner {{Name}}, by {{pro se / counsel}}, respectfully alleges:
 
 **Actions Requiring Compliance**
 
-10. On {{date}}, {{event requiring respondent's action occurred - e.g., "the court decided Motion No. 3 orally without issuing written order"}}.
+10. On {{date}}, {{event requiring respondent's action occurred}}.
 
 11. On {{date}}, {{additional event}}.
 
@@ -189,17 +107,17 @@ Petitioner {{Name}}, by {{pro se / counsel}}, respectfully alleges:
 
 28. The statute uses mandatory language: "shall {{action}}." This leaves no discretion.
 
-29. [Analysis showing no discretion involved - duty is purely administrative/ministerial, not requiring judgment or policy determination.]
+29. {{Analysis showing no discretion involved}}.
 
-30. Courts have uniformly held that {{type of duty}} is ministerial. *[Supporting cases]*.
+30. Courts have uniformly held that {{type of duty}} is ministerial. {{Supporting cases}}.
 
 #### POINT III: PETITIONER HAS CLEAR LEGAL RIGHT
 
 31. Petitioner has a clear statutory right under {{Statute}} to respondent's performance of this duty.
 
-32. {{Statute}} creates an enforceable obligation running to {{petitioner's status - e.g., "parties in litigation" / "members of the public" / "litigants seeking appellate review"}}.
+32. {{Statute}} creates an enforceable obligation running to {{petitioner's status}}.
 
-33. [Explanation of why petitioner specifically has standing and right to this relief.]
+33. {{Explanation of why petitioner specifically has standing and right to this relief}}.
 
 #### POINT IV: NO ADEQUATE ALTERNATIVE REMEDY
 
@@ -208,16 +126,16 @@ Petitioner {{Name}}, by {{pro se / counsel}}, respectfully alleges:
     - {{Motion / Omnibus notice / other remedy}} filed {{date}} (Exhibit C)
     - {{Additional efforts}}
 
-35. [Explain why appeal, motion, or other remedies are inadequate or unavailable - e.g., "No appealable order exists because respondent refuses to issue written order" / "Motion procedures have been exhausted without success"]
+35. {{Explain why appeal, motion, or other remedies are inadequate or unavailable}}.
 
 36. Absent mandamus relief, petitioner has no remedy for respondent's continued non-compliance.
 
 #### POINT V: IRREPARABLE HARM
 
 37. Respondent's failure to perform causes petitioner irreparable harm:
-    - {{Harm 1 - e.g., "Prevents meaningful appellate review of adverse ruling"}}
-    - {{Harm 2 - e.g., "Violates due process rights to written findings"}}
-    - {{Harm 3 - e.g., "Indefinitely delays resolution of underlying matter"}}
+    - {{Harm 1}}
+    - {{Harm 2}}
+    - {{Harm 3}}
 
 38. These harms cannot be remedied by money damages and are ongoing.
 
@@ -239,7 +157,7 @@ WHEREFORE, Petitioner respectfully requests that this Court:
 
 A. Issue an order to show cause why a writ of mandamus should not issue, returnable on the earliest available date;
 
-B. After hearing, issue a writ of mandamus directing respondent to {{specific action - e.g., "issue written orders pursuant to CPLR §2219(a) for Motion Nos. 3, 5, and 7 within fourteen (14) days"}};
+B. After hearing, issue a writ of mandamus directing respondent to {{specific action}} within fourteen (14) days;
 
 C. Award costs and disbursements to petitioner pursuant to CPLR §8101;
 
@@ -273,7 +191,7 @@ COUNTY OF {{COUNTY}}  )
 
 3. The contents are true to my knowledge, except as to matters therein stated to be alleged on information and belief, and as to those matters I believe them to be true.
 
-4. The source of my information and grounds of my belief as to matters not within my personal knowledge are {{source - e.g., "court records, correspondence with respondent, docket entries"}}.
+4. The source of my information and grounds of my belief as to matters not within my personal knowledge are {{source}}.
 
 _________________________
 {{Signature}}

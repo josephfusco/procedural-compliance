@@ -3,876 +3,137 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Procedural Compliance Framework (PCF) - Open specification for documenting and verifying procedural compliance in courts; statute-linked templates for judges, clerks, and counsel.">
-    <title>Procedural Compliance Framework (PCF)</title>
+    <meta name="description" content="An open framework for documenting procedural compliance in courts.">
+    <title>Procedural Compliance Framework</title>
 
-    <!-- Google tag (gtag.js) -->
+    <!-- Favicon -->
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>⚖️</text></svg>">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Source+Sans+Pro:wght@400;600;700&display=swap" rel="stylesheet">
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="/styles.css">
+
+    <!-- Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-N6B94DSFZS"></script>
     <script>
       window.dataLayer = window.dataLayer || [];
       function gtag(){dataLayer.push(arguments);}
       gtag('js', new Date());
-
       gtag('config', 'G-N6B94DSFZS');
     </script>
-
-    <!-- Favicon -->
-    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>⚖️</text></svg>">
-
-    <!-- USWDS Public Sans Font - Self-Hosted (Preload Critical Weights) -->
-    <link rel="preload" href="fonts/public-sans/PublicSans-Regular.woff2" as="font" type="font/woff2" crossorigin>
-    <link rel="preload" href="fonts/public-sans/PublicSans-SemiBold.woff2" as="font" type="font/woff2" crossorigin>
-
-    <!-- Social Preview Meta Tags -->
-    <meta property="og:title" content="Procedural Compliance Framework (PCF)">
-    <meta property="og:description" content="Open specification for documenting and verifying procedural compliance in courts; statute-linked templates for judges, clerks, and counsel.">
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://proceduralcompliance.org">
-    <meta property="og:image" content="https://josephfusco.github.io/procedural-compliance/us_flag_distress.png">
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Procedural Compliance Framework (PCF)">
-    <meta name="twitter:description" content="Open specification for documenting and verifying procedural compliance in courts; statute-linked templates for judges, clerks, and counsel.">
-    <meta name="twitter:image" content="https://josephfusco.github.io/procedural-compliance/us_flag_distress.png">
-
-    <link rel="stylesheet" href="styles.css">
-
-    <!-- Markdown Parser for Template Viewer -->
-    <script src="https://cdn.jsdelivr.net/npm/marked@11.1.1/marked.min.js"></script>
-
-    <!-- Structured Data for AI Agents and SEO -->
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "ItemList",
-      "name": "Legal Templates - Procedural Compliance Framework",
-      "description": "Open specification for documenting and verifying procedural compliance in courts; statute-linked templates for judges, clerks, and counsel",
-      "url": "https://proceduralcompliance.org",
-      "numberOfItems": 21,
-      "itemListElement": [
-        {
-          "@type": "Article",
-          "position": 1,
-          "name": "Notice of Non-Compliance (Universal)",
-          "description": "Universal template for demanding statutory compliance from any role",
-          "url": "https://github.com/josephfusco/procedural-compliance/blob/main/templates/notice_universal.md",
-          "keywords": ["CPLR §2219(a)", "22 NYCRR §202.48(b)", "New York", "procedural-enforcement"]
-        },
-        {
-          "@type": "Article",
-          "position": 2,
-          "name": "Article 78 Mandamus",
-          "description": "Petition to compel performance of duty required by law",
-          "url": "https://github.com/josephfusco/procedural-compliance/blob/main/templates/article78_mandamus.md",
-          "keywords": ["CPLR §7803(1)", "New York", "procedural-enforcement", "urgent"]
-        },
-        {
-          "@type": "Article",
-          "position": 3,
-          "name": "Notice of Appeal",
-          "description": "Notice of appeal to Appellate Division",
-          "url": "https://github.com/josephfusco/procedural-compliance/blob/main/templates/notice_of_appeal.md",
-          "keywords": ["CPLR §5515", "New York", "appeals", "urgent"]
-        },
-        {
-          "@type": "Article",
-          "position": 4,
-          "name": "Emergency Stay",
-          "description": "Motion for stay of enforcement pending appeal",
-          "url": "https://github.com/josephfusco/procedural-compliance/blob/main/templates/emergency_stay.md",
-          "keywords": ["CPLR §5519", "New York", "appeals", "emergency"]
-        },
-        {
-          "@type": "Article",
-          "position": 5,
-          "name": "FOIL Request",
-          "description": "Freedom of Information Law request for records",
-          "url": "https://github.com/josephfusco/procedural-compliance/blob/main/templates/foil_request.md",
-          "keywords": ["Public Officers Law §87", "New York", "transparency"]
-        },
-        {
-          "@type": "Article",
-          "position": 6,
-          "name": "Judicial Conduct Complaint",
-          "description": "Complaint to NY Commission on Judicial Conduct",
-          "url": "https://github.com/josephfusco/procedural-compliance/blob/main/templates/judicial_conduct_complaint.md",
-          "keywords": ["22 NYCRR Part 100", "New York", "oversight"]
-        },
-        {
-          "@type": "Article",
-          "position": 7,
-          "name": "Attorney Grievance",
-          "description": "Complaint to Attorney Grievance Committee",
-          "url": "https://github.com/josephfusco/procedural-compliance/blob/main/templates/attorney_grievance.md",
-          "keywords": ["22 NYCRR Part 1200", "New York", "oversight"]
-        },
-        {
-          "@type": "Article",
-          "position": 8,
-          "name": "Notice of Non-Compliance - Judge",
-          "description": "Formal demand for judge to issue written decisions",
-          "url": "https://github.com/josephfusco/procedural-compliance/blob/main/templates/notice_judge.md",
-          "keywords": ["CPLR §2219(a)", "New York", "procedural-enforcement", "urgent"]
-        },
-        {
-          "@type": "Article",
-          "position": 9,
-          "name": "Notice of Non-Compliance - Attorney for Child",
-          "description": "Demand for Attorney for Child to fulfill statutory duties",
-          "url": "https://github.com/josephfusco/procedural-compliance/blob/main/templates/notice_afc.md",
-          "keywords": ["FCA §§241-249", "New York", "procedural-enforcement"]
-        },
-        {
-          "@type": "Article",
-          "position": 10,
-          "name": "Notice of Non-Compliance - Assigned Counsel",
-          "description": "Demand for assigned counsel to provide competent representation",
-          "url": "https://github.com/josephfusco/procedural-compliance/blob/main/templates/notice_assigned_counsel.md",
-          "keywords": ["RPC 1.2-1.4", "New York", "procedural-enforcement"]
-        },
-        {
-          "@type": "Article",
-          "position": 11,
-          "name": "Notice of Non-Compliance - Court Clerk",
-          "description": "Demand for court clerk to maintain accurate records",
-          "url": "https://github.com/josephfusco/procedural-compliance/blob/main/templates/notice_clerk.md",
-          "keywords": ["CPLR §5017(b)", "New York", "procedural-enforcement"]
-        },
-        {
-          "@type": "Article",
-          "position": 12,
-          "name": "Notice of Non-Compliance - Opposing Counsel",
-          "description": "Demand for opposing counsel to comply with professional conduct rules",
-          "url": "https://github.com/josephfusco/procedural-compliance/blob/main/templates/notice_opposing_counsel.md",
-          "keywords": ["RPC 3.3-3.4", "New York", "procedural-enforcement"]
-        },
-        {
-          "@type": "Article",
-          "position": 13,
-          "name": "NYSCEF E-Filing Violations",
-          "description": "Demand for compliance with mandatory e-filing rules",
-          "url": "https://github.com/josephfusco/procedural-compliance/blob/main/templates/ny_nyscef_violations.md",
-          "keywords": ["Uniform Rule 202.5-bb", "NYSCEF", "New York", "procedural-enforcement"]
-        },
-        {
-          "@type": "Article",
-          "position": 14,
-          "name": "Notice of Non-Compliance (Universal - Federal)",
-          "description": "Universal federal template for demanding compliance with FRCP",
-          "url": "https://github.com/josephfusco/procedural-compliance/blob/main/templates/federal_notice_universal.md",
-          "keywords": ["FRCP 52(a)", "FRCP 79", "Federal", "procedural-enforcement"]
-        },
-        {
-          "@type": "Article",
-          "position": 15,
-          "name": "Federal Mandamus",
-          "description": "Petition to compel federal officer to perform duty",
-          "url": "https://github.com/josephfusco/procedural-compliance/blob/main/templates/federal_mandamus.md",
-          "keywords": ["28 U.S.C. §1361", "Federal", "procedural-enforcement", "urgent"]
-        },
-        {
-          "@type": "Article",
-          "position": 16,
-          "name": "Federal Notice of Appeal",
-          "description": "Notice of appeal to Circuit Court of Appeals",
-          "url": "https://github.com/josephfusco/procedural-compliance/blob/main/templates/federal_notice_of_appeal.md",
-          "keywords": ["FRAP Rule 3", "Federal", "appeals", "urgent"]
-        },
-        {
-          "@type": "Article",
-          "position": 17,
-          "name": "Federal Emergency Stay",
-          "description": "Motion for stay of enforcement pending federal appeal",
-          "url": "https://github.com/josephfusco/procedural-compliance/blob/main/templates/federal_emergency_stay.md",
-          "keywords": ["FRAP Rule 8", "Federal", "appeals", "emergency"]
-        },
-        {
-          "@type": "Article",
-          "position": 18,
-          "name": "FOIA Request",
-          "description": "Freedom of Information Act request for federal records",
-          "url": "https://github.com/josephfusco/procedural-compliance/blob/main/templates/federal_foia_request.md",
-          "keywords": ["5 U.S.C. §552", "Federal", "transparency"]
-        },
-        {
-          "@type": "Article",
-          "position": 19,
-          "name": "Notice of Non-Compliance - Federal Judge",
-          "description": "Demand for federal judge to issue written findings",
-          "url": "https://github.com/josephfusco/procedural-compliance/blob/main/templates/federal_notice_judge.md",
-          "keywords": ["FRCP 52(a)", "Federal", "procedural-enforcement", "urgent"]
-        },
-        {
-          "@type": "Article",
-          "position": 20,
-          "name": "Notice of Non-Compliance - Federal Clerk",
-          "description": "Demand for federal clerk to maintain accurate records",
-          "url": "https://github.com/josephfusco/procedural-compliance/blob/main/templates/federal_notice_clerk.md",
-          "keywords": ["FRCP 58", "FRCP 79", "Federal", "procedural-enforcement"]
-        },
-        {
-          "@type": "Article",
-          "position": 21,
-          "name": "Notice of Non-Compliance - Federal Opposing Counsel",
-          "description": "Demand for federal opposing counsel to comply with professional conduct",
-          "url": "https://github.com/josephfusco/procedural-compliance/blob/main/templates/federal_notice_opposing_counsel.md",
-          "keywords": ["Model Rules 3.3-3.4", "Federal", "procedural-enforcement"]
-        }
-      ]
-    }
-    </script>
 </head>
-<body class="bg-background text-foreground font-sans antialiased">
-    <!-- Skip Navigation Link (Accessibility) -->
-    <a href="#main-content" class="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 focus:z-50 focus:px-4 focus:py-2 focus:bg-primary focus:text-primary-foreground focus:rounded focus:outline-none focus:ring-4 focus:ring-ring focus:ring-offset-2">
-        Skip to main content
-    </a>
-
-    <!-- US Government-Style Banner -->
-    <section class="gov-banner" role="region" aria-label="Official government-style notice">
-        <div class="container mx-auto px-4 py-2">
+<body class="bg-white">
+    <!-- Government Banner -->
+    <div class="gov-banner">
+        <div class="container mx-auto px-4">
             <div class="flex items-center gap-2">
-                <img src="us_flag_small.png" class="gov-banner-flag" alt="U.S. flag" loading="eager">
-                <p class="gov-banner-text">An open framework for documenting procedural compliance · Not legal advice</p>
+                <img src="/us_flag_small.png" class="gov-banner-flag" alt="U.S. flag">
+                <span>An open framework for documenting procedural compliance · Not legal advice</span>
             </div>
         </div>
-    </section>
+    </div>
 
-    <!-- Header -->
-    <header class="w-full border-b border-border bg-background" role="banner" aria-label="Main navigation">
-        <div class="container mx-auto px-4 py-3">
-            <div class="flex flex-col md:flex-row md:h-14 md:items-center md:justify-between gap-3 md:gap-0">
-                <div class="flex items-center justify-between">
-                    <div class="flex items-center space-x-2">
-                        <span class="text-xl" role="img" aria-label="Scales of justice">⚖️</span>
-                        <h1 class="text-lg font-sans font-semibold">Procedural Compliance Framework</h1>
-                    </div>
-                    <nav class="hidden md:flex items-center space-x-6 text-sm ml-8" role="navigation" aria-label="Primary navigation">
-                        <a href="#templates" class="text-foreground/80 hover:text-foreground transition-colors">Templates</a>
-                        <a href="https://github.com/josephfusco/procedural-compliance" target="_blank" rel="noopener noreferrer" class="text-foreground/80 hover:text-foreground transition-colors">GitHub</a>
-                    </nav>
+    <!-- Header / Navigation -->
+    <header class="border-b border-gray-200 bg-white">
+        <div class="max-w-5xl mx-auto px-4 py-4">
+            <div class="flex items-center justify-between">
+                <!-- Logo -->
+                <div class="flex items-center gap-3">
+                    <span class="text-2xl">⚖️</span>
+                    <h1 class="text-xl font-semibold">
+                        <a href="/" class="hover:text-gov-blue transition-colors">Procedural Compliance Framework</a>
+                    </h1>
                 </div>
-                <div class="flex items-center gap-2 w-full md:w-auto">
-                    <!-- Theme Toggle Button - USWDS Style -->
-                    <button id="theme-toggle" class="flex items-center justify-center px-4 py-2 text-sm font-medium text-foreground bg-transparent rounded border-2 border-border hover:bg-muted transition-colors focus:outline-none focus:ring-4 focus:ring-ring focus:ring-offset-2" aria-label="Light mode. Click to toggle" role="switch" aria-checked="false">
-                        <span id="theme-label">Light</span>
-                    </button>
 
-                    <button id="search-trigger" class="flex items-center justify-center md:justify-start space-x-2 px-4 py-2 text-sm font-medium text-foreground bg-transparent rounded border-2 border-border hover:bg-muted transition-colors focus:outline-none focus:ring-4 focus:ring-ring focus:ring-offset-2 flex-1 md:flex-initial" aria-label="Open search">
-                        <span>Search</span>
-                        <kbd class="pointer-events-none inline-flex h-5 select-none items-center gap-1 rounded border border-border bg-background px-2 font-mono text-xs font-medium text-muted-foreground">
-                            <span class="text-xs">/</span>
-                        </kbd>
-                    </button>
-                </div>
+                <!-- Navigation -->
+                <nav class="hidden md:flex items-center gap-6">
+                    <a href="#templates" class="text-gray-700 hover:text-gray-900 transition-colors">Templates</a>
+                    <a href="https://github.com/josephfusco/procedural-compliance" target="_blank" rel="noopener noreferrer" class="text-gray-700 hover:text-gray-900 transition-colors">GitHub</a>
+                </nav>
+
             </div>
         </div>
     </header>
 
-    <!-- Hero Section -->
-    <section id="hero" class="border-b border-border bg-muted/30">
-        <div class="container mx-auto px-4 py-16">
-            <div class="text-lg font-serif leading-loose max-w-3xl mx-auto text-center">
-                <p class="helpful-text">
-                    <em>We the People</em> establish this framework to document the procedure by which rights become remedy. Courts shall provide written findings. Clerks shall maintain faithful records. Counsel shall fulfill statutory duty. When procedure fails, liberty fails. We publish openly that all may enforce the law's promise.
-                </p>
-            </div>
-            <div class="mt-8 text-center">
-                <span id="hero-template-count" class="inline-flex items-center px-3 py-1 text-sm font-medium bg-accent/10 text-accent border border-accent/20 rounded-full">
-                    21 Templates Available
-                </span>
-            </div>
-        </div>
-    </section>
+    <!-- Main Content -->
+    <main>
+        <!-- Hero Section -->
+        <section class="py-16 md:py-24 px-4 bg-[#fdf5ea]">
+            <p class="hero-text">
+                <em>We the People</em> establish this framework to document the procedure by which rights become remedy. Courts shall provide written findings. Clerks shall maintain faithful records. Counsel shall fulfill statutory duty. When procedure fails, liberty fails. We publish openly that all may enforce the law's promise.
+            </p>
+            <p class="text-center text-brand-gold text-sm font-semibold mt-8">4 Templates Available</p>
+        </section>
 
-    <main id="main-content" role="main" aria-label="Main content">
         <!-- Templates Section -->
-        <section id="templates" class="py-12" aria-labelledby="templates-heading">
-            <div class="container mx-auto px-4">
-                <!-- Section Header -->
-                <div class="mb-6">
-                    <h2 id="templates-heading" class="text-2xl font-sans font-semibold mb-2">Legal Templates</h2>
-                    <p class="helpful-text text-sm">Ready-to-use templates for filing demands, requests, and complaints. Fill in placeholders like {{Your Name}} and {{Case Number}} with your information.</p>
-                </div>
+        <section id="templates" class="py-6 px-4">
+            <div class="max-w-3xl mx-auto">
+                <!-- Template List -->
+                <div class="space-y-1">
+                    <!-- Notice of Appeal -->
+                    <a href="/notice-of-appeal/" class="block px-4 py-4 rounded-md hover:bg-gray-50 transition-colors">
+                        <div class="flex items-start justify-between">
+                            <div class="flex-1">
+                                <h3 class="text-xl font-semibold mb-1 text-gray-900">Notice of Appeal</h3>
+                                <p class="text-sm text-gray-600">CPLR §5515 - Appellate Procedure</p>
+                            </div>
+                            <span class="jurisdiction-badge jurisdiction-ny ml-4">NY</span>
+                        </div>
+                    </a>
 
-                <!-- Filters -->
-                <form class="usa-form mb-6 flex flex-col sm:flex-row gap-4 items-start sm:items-end">
-                    <div class="w-full sm:w-auto">
-                        <label for="jurisdiction-filter" class="usa-label" style="font-size: 0.875rem; margin-bottom: 0.5rem;">Jurisdiction</label>
-                        <select id="jurisdiction-filter" class="usa-select" style="width: 12rem;">
-                            <option value="all">All</option>
-                            <option value="ny">New York</option>
-                            <option value="federal">Federal</option>
-                        </select>
-                    </div>
+                    <!-- Article 78 Mandamus -->
+                    <a href="/article78-mandamus/" class="block px-4 py-4 rounded-md hover:bg-gray-50 transition-colors">
+                        <div class="flex items-start justify-between">
+                            <div class="flex-1">
+                                <h3 class="text-xl font-semibold mb-1 text-gray-900">Article 78 Mandamus</h3>
+                                <p class="text-sm text-gray-600">CPLR §7803(1) - Compel Ministerial Duty</p>
+                            </div>
+                            <span class="jurisdiction-badge jurisdiction-ny ml-4">NY</span>
+                        </div>
+                    </a>
 
-                    <div class="w-full sm:w-auto">
-                        <label for="category-filter" class="usa-label" style="font-size: 0.875rem; margin-bottom: 0.5rem;">Category</label>
-                        <select id="category-filter" class="usa-select" style="width: 14rem;">
-                            <option value="all">All Categories</option>
-                            <option value="procedural-enforcement">Procedural Enforcement</option>
-                            <option value="appeals">Appeals</option>
-                            <option value="transparency">Transparency</option>
-                            <option value="oversight">Oversight</option>
-                        </select>
-                    </div>
+                    <!-- Federal Notice of Appeal -->
+                    <a href="/federal-notice-of-appeal/" class="block px-4 py-4 rounded-md hover:bg-gray-50 transition-colors">
+                        <div class="flex items-start justify-between">
+                            <div class="flex-1">
+                                <h3 class="text-xl font-semibold mb-1 text-gray-900">Federal Notice of Appeal</h3>
+                                <p class="text-sm text-gray-600">FRAP Rule 3 - Circuit Court Appeal</p>
+                            </div>
+                            <span class="jurisdiction-badge jurisdiction-federal ml-4">
+                <img src="/us_flag_small.png" class="w-4 h-3 mr-1" alt="">
+                Federal
+            </span>
+                        </div>
+                    </a>
 
-                    <div class="w-full sm:w-auto">
-                        <label for="urgency-filter" class="usa-label" style="font-size: 0.875rem; margin-bottom: 0.5rem;">Urgency</label>
-                        <select id="urgency-filter" class="usa-select" style="width: 11rem;">
-                            <option value="all">All Levels</option>
-                            <option value="emergency">Emergency</option>
-                            <option value="urgent">Urgent</option>
-                            <option value="standard">Standard</option>
-                        </select>
-                    </div>
-
-                    <div class="w-full sm:w-auto">
-                        <label for="role-filter" class="usa-label" style="font-size: 0.875rem; margin-bottom: 0.5rem;">Role/Actor</label>
-                        <select id="role-filter" class="usa-select" style="width: 13rem;">
-                            <option value="all">All Roles</option>
-                            <option value="universal">Universal</option>
-                            <option value="judge">Judge</option>
-                            <option value="afc">Attorney for Child</option>
-                            <option value="counsel">Assigned Counsel</option>
-                            <option value="clerk">Court Clerk</option>
-                            <option value="opposing-counsel">Opposing Counsel</option>
-                            <option value="procedural">Procedural/General</option>
-                        </select>
-                    </div>
-
-                    <button type="button" id="reset-filters" class="usa-button usa-button--outline whitespace-nowrap">
-                        Reset
-                    </button>
-
-                    <button type="button" id="view-toggle" class="usa-button usa-button--outline ml-auto whitespace-nowrap">
-                        <span id="view-toggle-text">Card View</span>
-                    </button>
-                </form>
-
-                <!-- Template Results - Static HTML (Enhanced by JavaScript) -->
-                <div id="template-results">
-                    <div class="border border-border rounded-md overflow-hidden">
-                        <table class="usa-table usa-table--striped table-dense">
-                            <thead>
-                                <tr>
-                                    <th>Template</th>
-                                    <th class="hidden md:table-cell">Jurisdiction</th>
-                                    <th class="hidden lg:table-cell">Urgency</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr data-jurisdiction="ny" data-category="procedural-enforcement" data-urgency="standard" data-role="universal">
-                                    <td>
-                                        <a href="/notice-universal/" class="block group" data-template-title="Notice of Non-Compliance (Universal)" data-github-url="https://github.com/josephfusco/procedural-compliance/blob/main/templates/notice_universal.md">
-                                            <div class="font-medium text-sm text-primary group-hover:underline">Notice of Non-Compliance (Universal)</div>
-                                            <div class="text-xs text-muted-foreground mt-1">CPLR §2219(a) - Written Order Requirement</div>
-                                        </a>
-                                    </td>
-                                    <td class="hidden md:table-cell">
-                                        <span class="badge badge-ny">NY</span>
-                                    </td>
-                                    <td class="hidden lg:table-cell">
-                                        <span class="badge badge-standard">STANDARD</span>
-                                    </td>
-                                </tr>
-                                <tr data-jurisdiction="ny" data-category="procedural-enforcement" data-urgency="urgent" data-role="procedural">
-                                    <td>
-                                        <a href="/article78-mandamus/" class="block group" data-template-title="Article 78 Mandamus" data-github-url="https://github.com/josephfusco/procedural-compliance/blob/main/templates/article78_mandamus.md">
-                                            <div class="font-medium text-sm text-primary group-hover:underline">Article 78 Mandamus</div>
-                                            <div class="text-xs text-muted-foreground mt-1">CPLR §7803(1) - Compel Ministerial Duty</div>
-                                        </a>
-                                    </td>
-                                    <td class="hidden md:table-cell">
-                                        <span class="badge badge-ny">NY</span>
-                                    </td>
-                                    <td class="hidden lg:table-cell">
-                                        <span class="badge badge-urgent">URGENT</span>
-                                    </td>
-                                </tr>
-                                <tr data-jurisdiction="ny" data-category="appeals" data-urgency="urgent" data-role="procedural">
-                                    <td>
-                                        <a href="/notice-of-appeal/" class="block group" data-template-title="Notice of Appeal" data-github-url="https://github.com/josephfusco/procedural-compliance/blob/main/templates/notice_of_appeal.md">
-                                            <div class="font-medium text-sm text-primary group-hover:underline">Notice of Appeal</div>
-                                            <div class="text-xs text-muted-foreground mt-1">CPLR §5515 - Appellate Procedure</div>
-                                        </a>
-                                    </td>
-                                    <td class="hidden md:table-cell">
-                                        <span class="badge badge-ny">NY</span>
-                                    </td>
-                                    <td class="hidden lg:table-cell">
-                                        <span class="badge badge-urgent">URGENT</span>
-                                    </td>
-                                </tr>
-                                <tr data-jurisdiction="ny" data-category="appeals" data-urgency="emergency" data-role="procedural">
-                                    <td>
-                                        <a href="/emergency-stay/" class="block group" data-template-title="Emergency Stay" data-github-url="https://github.com/josephfusco/procedural-compliance/blob/main/templates/emergency_stay.md">
-                                            <div class="font-medium text-sm text-primary group-hover:underline">Emergency Stay</div>
-                                            <div class="text-xs text-muted-foreground mt-1">CPLR §5519 - Stay Pending Appeal</div>
-                                        </a>
-                                    </td>
-                                    <td class="hidden md:table-cell">
-                                        <span class="badge badge-ny">NY</span>
-                                    </td>
-                                    <td class="hidden lg:table-cell">
-                                        <span class="badge badge-emergency">EMERGENCY</span>
-                                    </td>
-                                </tr>
-                                <tr data-jurisdiction="ny" data-category="transparency" data-urgency="standard" data-role="procedural">
-                                    <td>
-                                        <a href="/foil-request/" class="block group" data-template-title="FOIL Request" data-github-url="https://github.com/josephfusco/procedural-compliance/blob/main/templates/foil_request.md">
-                                            <div class="font-medium text-sm text-primary group-hover:underline">FOIL Request</div>
-                                            <div class="text-xs text-muted-foreground mt-1">Public Officers Law §87 - Records Request</div>
-                                        </a>
-                                    </td>
-                                    <td class="hidden md:table-cell">
-                                        <span class="badge badge-ny">NY</span>
-                                    </td>
-                                    <td class="hidden lg:table-cell">
-                                        <span class="badge badge-standard">STANDARD</span>
-                                    </td>
-                                </tr>
-                                <tr data-jurisdiction="ny" data-category="oversight" data-urgency="standard" data-role="procedural">
-                                    <td>
-                                        <a href="/judicial-conduct-complaint/" class="block group" data-template-title="Judicial Conduct Complaint" data-github-url="https://github.com/josephfusco/procedural-compliance/blob/main/templates/judicial_conduct_complaint.md">
-                                            <div class="font-medium text-sm text-primary group-hover:underline">Judicial Conduct Complaint</div>
-                                            <div class="text-xs text-muted-foreground mt-1">22 NYCRR Part 100 - Judicial Ethics</div>
-                                        </a>
-                                    </td>
-                                    <td class="hidden md:table-cell">
-                                        <span class="badge badge-ny">NY</span>
-                                    </td>
-                                    <td class="hidden lg:table-cell">
-                                        <span class="badge badge-standard">STANDARD</span>
-                                    </td>
-                                </tr>
-                                <tr data-jurisdiction="ny" data-category="oversight" data-urgency="standard" data-role="procedural">
-                                    <td>
-                                        <a href="/attorney-grievance/" class="block group" data-template-title="Attorney Grievance" data-github-url="https://github.com/josephfusco/procedural-compliance/blob/main/templates/attorney_grievance.md">
-                                            <div class="font-medium text-sm text-primary group-hover:underline">Attorney Grievance</div>
-                                            <div class="text-xs text-muted-foreground mt-1">22 NYCRR Part 1200 - Professional Conduct</div>
-                                        </a>
-                                    </td>
-                                    <td class="hidden md:table-cell">
-                                        <span class="badge badge-ny">NY</span>
-                                    </td>
-                                    <td class="hidden lg:table-cell">
-                                        <span class="badge badge-standard">STANDARD</span>
-                                    </td>
-                                </tr>
-                                <tr data-jurisdiction="ny" data-category="procedural-enforcement" data-urgency="urgent" data-role="judge">
-                                    <td>
-                                        <a href="/notice-judge/" class="block group" data-template-title="Notice of Non-Compliance - Judge" data-github-url="https://github.com/josephfusco/procedural-compliance/blob/main/templates/notice_judge.md">
-                                            <div class="font-medium text-sm text-primary group-hover:underline">Notice of Non-Compliance - Judge</div>
-                                            <div class="text-xs text-muted-foreground mt-1">CPLR §2219(a) - Judicial Compliance</div>
-                                        </a>
-                                    </td>
-                                    <td class="hidden md:table-cell">
-                                        <span class="badge badge-ny">NY</span>
-                                    </td>
-                                    <td class="hidden lg:table-cell">
-                                        <span class="badge badge-urgent">URGENT</span>
-                                    </td>
-                                </tr>
-                                <tr data-jurisdiction="ny" data-category="procedural-enforcement" data-urgency="standard" data-role="afc">
-                                    <td>
-                                        <a href="/notice-afc/" class="block group" data-template-title="Notice of Non-Compliance - Attorney for Child" data-github-url="https://github.com/josephfusco/procedural-compliance/blob/main/templates/notice_afc.md">
-                                            <div class="font-medium text-sm text-primary group-hover:underline">Notice of Non-Compliance - Attorney for Child</div>
-                                            <div class="text-xs text-muted-foreground mt-1">FCA §§241-249 - AFC Duties</div>
-                                        </a>
-                                    </td>
-                                    <td class="hidden md:table-cell">
-                                        <span class="badge badge-ny">NY</span>
-                                    </td>
-                                    <td class="hidden lg:table-cell">
-                                        <span class="badge badge-standard">STANDARD</span>
-                                    </td>
-                                </tr>
-                                <tr data-jurisdiction="ny" data-category="procedural-enforcement" data-urgency="standard" data-role="counsel">
-                                    <td>
-                                        <a href="/notice-assigned-counsel/" class="block group" data-template-title="Notice of Non-Compliance - Assigned Counsel" data-github-url="https://github.com/josephfusco/procedural-compliance/blob/main/templates/notice_assigned_counsel.md">
-                                            <div class="font-medium text-sm text-primary group-hover:underline">Notice of Non-Compliance - Assigned Counsel</div>
-                                            <div class="text-xs text-muted-foreground mt-1">RPC 1.2-1.4 - Attorney Duties</div>
-                                        </a>
-                                    </td>
-                                    <td class="hidden md:table-cell">
-                                        <span class="badge badge-ny">NY</span>
-                                    </td>
-                                    <td class="hidden lg:table-cell">
-                                        <span class="badge badge-standard">STANDARD</span>
-                                    </td>
-                                </tr>
-                                <tr data-jurisdiction="ny" data-category="procedural-enforcement" data-urgency="standard" data-role="clerk">
-                                    <td>
-                                        <a href="/notice-clerk/" class="block group" data-template-title="Notice of Non-Compliance - Court Clerk" data-github-url="https://github.com/josephfusco/procedural-compliance/blob/main/templates/notice_clerk.md">
-                                            <div class="font-medium text-sm text-primary group-hover:underline">Notice of Non-Compliance - Court Clerk</div>
-                                            <div class="text-xs text-muted-foreground mt-1">CPLR §5017(b) - Clerk Duties</div>
-                                        </a>
-                                    </td>
-                                    <td class="hidden md:table-cell">
-                                        <span class="badge badge-ny">NY</span>
-                                    </td>
-                                    <td class="hidden lg:table-cell">
-                                        <span class="badge badge-standard">STANDARD</span>
-                                    </td>
-                                </tr>
-                                <tr data-jurisdiction="ny" data-category="procedural-enforcement" data-urgency="standard" data-role="opposing-counsel">
-                                    <td>
-                                        <a href="/notice-opposing-counsel/" class="block group" data-template-title="Notice of Non-Compliance - Opposing Counsel" data-github-url="https://github.com/josephfusco/procedural-compliance/blob/main/templates/notice_opposing_counsel.md">
-                                            <div class="font-medium text-sm text-primary group-hover:underline">Notice of Non-Compliance - Opposing Counsel</div>
-                                            <div class="text-xs text-muted-foreground mt-1">RPC 3.3-3.4 - Ethical Obligations</div>
-                                        </a>
-                                    </td>
-                                    <td class="hidden md:table-cell">
-                                        <span class="badge badge-ny">NY</span>
-                                    </td>
-                                    <td class="hidden lg:table-cell">
-                                        <span class="badge badge-standard">STANDARD</span>
-                                    </td>
-                                </tr>
-                                <tr data-jurisdiction="ny" data-category="procedural-enforcement" data-urgency="standard" data-role="procedural">
-                                    <td>
-                                        <a href="/ny-nyscef-violations/" class="block group" data-template-title="NYSCEF E-Filing Violations" data-github-url="https://github.com/josephfusco/procedural-compliance/blob/main/templates/ny_nyscef_violations.md">
-                                            <div class="font-medium text-sm text-primary group-hover:underline">NYSCEF E-Filing Violations</div>
-                                            <div class="text-xs text-muted-foreground mt-1">Uniform Rule 202.5-bb - Mandatory E-Filing</div>
-                                        </a>
-                                    </td>
-                                    <td class="hidden md:table-cell">
-                                        <span class="badge badge-ny">NY</span>
-                                    </td>
-                                    <td class="hidden lg:table-cell">
-                                        <span class="badge badge-standard">STANDARD</span>
-                                    </td>
-                                </tr>
-                                <tr data-jurisdiction="federal" data-category="procedural-enforcement" data-urgency="standard" data-role="universal">
-                                    <td>
-                                        <a href="/federal-notice-universal/" class="block group" data-template-title="Notice of Non-Compliance (Universal - Federal)" data-github-url="https://github.com/josephfusco/procedural-compliance/blob/main/templates/federal_notice_universal.md">
-                                            <div class="font-medium text-sm text-primary group-hover:underline">Notice of Non-Compliance (Universal - Federal)</div>
-                                            <div class="text-xs text-muted-foreground mt-1">FRCP 52(a), 79 - Federal Compliance</div>
-                                        </a>
-                                    </td>
-                                    <td class="hidden md:table-cell">
-                                        <span class="badge badge-federal"><img src="us_flag_small.png" class="badge-flag-img" alt="U.S. flag" loading="lazy">Federal</span>
-                                    </td>
-                                    <td class="hidden lg:table-cell">
-                                        <span class="badge badge-standard">STANDARD</span>
-                                    </td>
-                                </tr>
-                                <tr data-jurisdiction="federal" data-category="procedural-enforcement" data-urgency="urgent" data-role="procedural">
-                                    <td>
-                                        <a href="/federal-mandamus/" class="block group" data-template-title="Federal Mandamus" data-github-url="https://github.com/josephfusco/procedural-compliance/blob/main/templates/federal_mandamus.md">
-                                            <div class="font-medium text-sm text-primary group-hover:underline">Federal Mandamus</div>
-                                            <div class="text-xs text-muted-foreground mt-1">28 U.S.C. §1361 - Compel Federal Officer</div>
-                                        </a>
-                                    </td>
-                                    <td class="hidden md:table-cell">
-                                        <span class="badge badge-federal"><img src="us_flag_small.png" class="badge-flag-img" alt="U.S. flag" loading="lazy">Federal</span>
-                                    </td>
-                                    <td class="hidden lg:table-cell">
-                                        <span class="badge badge-urgent">URGENT</span>
-                                    </td>
-                                </tr>
-                                <tr data-jurisdiction="federal" data-category="appeals" data-urgency="urgent" data-role="procedural">
-                                    <td>
-                                        <a href="/federal-notice-of-appeal/" class="block group" data-template-title="Federal Notice of Appeal" data-github-url="https://github.com/josephfusco/procedural-compliance/blob/main/templates/federal_notice_of_appeal.md">
-                                            <div class="font-medium text-sm text-primary group-hover:underline">Federal Notice of Appeal</div>
-                                            <div class="text-xs text-muted-foreground mt-1">FRAP Rule 3 - Circuit Court Appeal</div>
-                                        </a>
-                                    </td>
-                                    <td class="hidden md:table-cell">
-                                        <span class="badge badge-federal"><img src="us_flag_small.png" class="badge-flag-img" alt="U.S. flag" loading="lazy">Federal</span>
-                                    </td>
-                                    <td class="hidden lg:table-cell">
-                                        <span class="badge badge-urgent">URGENT</span>
-                                    </td>
-                                </tr>
-                                <tr data-jurisdiction="federal" data-category="appeals" data-urgency="emergency" data-role="procedural">
-                                    <td>
-                                        <a href="/federal-emergency-stay/" class="block group" data-template-title="Federal Emergency Stay" data-github-url="https://github.com/josephfusco/procedural-compliance/blob/main/templates/federal_emergency_stay.md">
-                                            <div class="font-medium text-sm text-primary group-hover:underline">Federal Emergency Stay</div>
-                                            <div class="text-xs text-muted-foreground mt-1">FRAP Rule 8 - Stay Pending Appeal</div>
-                                        </a>
-                                    </td>
-                                    <td class="hidden md:table-cell">
-                                        <span class="badge badge-federal"><img src="us_flag_small.png" class="badge-flag-img" alt="U.S. flag" loading="lazy">Federal</span>
-                                    </td>
-                                    <td class="hidden lg:table-cell">
-                                        <span class="badge badge-emergency">EMERGENCY</span>
-                                    </td>
-                                </tr>
-                                <tr data-jurisdiction="federal" data-category="transparency" data-urgency="standard" data-role="procedural">
-                                    <td>
-                                        <a href="/federal-foia-request/" class="block group" data-template-title="FOIA Request" data-github-url="https://github.com/josephfusco/procedural-compliance/blob/main/templates/federal_foia_request.md">
-                                            <div class="font-medium text-sm text-primary group-hover:underline">FOIA Request</div>
-                                            <div class="text-xs text-muted-foreground mt-1">5 U.S.C. §552 - Freedom of Information Act</div>
-                                        </a>
-                                    </td>
-                                    <td class="hidden md:table-cell">
-                                        <span class="badge badge-federal"><img src="us_flag_small.png" class="badge-flag-img" alt="U.S. flag" loading="lazy">Federal</span>
-                                    </td>
-                                    <td class="hidden lg:table-cell">
-                                        <span class="badge badge-standard">STANDARD</span>
-                                    </td>
-                                </tr>
-                                <tr data-jurisdiction="federal" data-category="procedural-enforcement" data-urgency="urgent" data-role="judge">
-                                    <td>
-                                        <a href="/federal-notice-judge/" class="block group" data-template-title="Notice of Non-Compliance - Federal Judge" data-github-url="https://github.com/josephfusco/procedural-compliance/blob/main/templates/federal_notice_judge.md">
-                                            <div class="font-medium text-sm text-primary group-hover:underline">Notice of Non-Compliance - Federal Judge</div>
-                                            <div class="text-xs text-muted-foreground mt-1">FRCP 52(a) - Written Findings Required</div>
-                                        </a>
-                                    </td>
-                                    <td class="hidden md:table-cell">
-                                        <span class="badge badge-federal"><img src="us_flag_small.png" class="badge-flag-img" alt="U.S. flag" loading="lazy">Federal</span>
-                                    </td>
-                                    <td class="hidden lg:table-cell">
-                                        <span class="badge badge-urgent">URGENT</span>
-                                    </td>
-                                </tr>
-                                <tr data-jurisdiction="federal" data-category="procedural-enforcement" data-urgency="standard" data-role="clerk">
-                                    <td>
-                                        <a href="/federal-notice-clerk/" class="block group" data-template-title="Notice of Non-Compliance - Federal Clerk" data-github-url="https://github.com/josephfusco/procedural-compliance/blob/main/templates/federal_notice_clerk.md">
-                                            <div class="font-medium text-sm text-primary group-hover:underline">Notice of Non-Compliance - Federal Clerk</div>
-                                            <div class="text-xs text-muted-foreground mt-1">FRCP 58, 79 - Clerk Duties</div>
-                                        </a>
-                                    </td>
-                                    <td class="hidden md:table-cell">
-                                        <span class="badge badge-federal"><img src="us_flag_small.png" class="badge-flag-img" alt="U.S. flag" loading="lazy">Federal</span>
-                                    </td>
-                                    <td class="hidden lg:table-cell">
-                                        <span class="badge badge-standard">STANDARD</span>
-                                    </td>
-                                </tr>
-                                <tr data-jurisdiction="federal" data-category="procedural-enforcement" data-urgency="standard" data-role="opposing-counsel">
-                                    <td>
-                                        <a href="/federal-notice-opposing-counsel/" class="block group" data-template-title="Notice of Non-Compliance - Federal Opposing Counsel" data-github-url="https://github.com/josephfusco/procedural-compliance/blob/main/templates/federal_notice_opposing_counsel.md">
-                                            <div class="font-medium text-sm text-primary group-hover:underline">Notice of Non-Compliance - Federal Opposing Counsel</div>
-                                            <div class="text-xs text-muted-foreground mt-1">Model Rules 3.3-3.4 - Professional Conduct</div>
-                                        </a>
-                                    </td>
-                                    <td class="hidden md:table-cell">
-                                        <span class="badge badge-federal"><img src="us_flag_small.png" class="badge-flag-img" alt="U.S. flag" loading="lazy">Federal</span>
-                                    </td>
-                                    <td class="hidden lg:table-cell">
-                                        <span class="badge badge-standard">STANDARD</span>
-                                    </td>
-                                </tr>
-                            </tbody>
-                        </table>
-                    </div>
-                    <div class="mt-4 text-sm text-muted-foreground">
-                        Showing 21 templates
-                    </div>
-                </div>
+                    <!-- Federal Mandamus -->
+                    <a href="/federal-mandamus/" class="block px-4 py-4 rounded-md hover:bg-gray-50 transition-colors">
+                        <div class="flex items-start justify-between">
+                            <div class="flex-1">
+                                <h3 class="text-xl font-semibold mb-1 text-gray-900">Federal Mandamus</h3>
+                                <p class="text-sm text-gray-600">28 U.S.C. §1361 - Compel Federal Officer</p>
+                            </div>
+                            <span class="jurisdiction-badge jurisdiction-federal ml-4">
+                <img src="/us_flag_small.png" class="w-4 h-3 mr-1" alt="">
+                Federal
+            </span>
+                        </div>
+                    </a>
+                </div></div>
             </div>
         </section>
 
+        <!-- Footer Spacer -->
+        <div class="py-12"></div>
     </main>
 
-    <!-- Footer -->
-    <footer class="border-t-2 border-border bg-muted/30 py-12 mt-8" role="contentinfo" aria-label="Site footer">
-        <div class="container mx-auto px-4">
-            <!-- Footer Columns -->
-            <div class="grid grid-cols-1 md:grid-cols-4 gap-12 mb-10">
-                <div>
-                    <h3 class="text-lg font-sans font-semibold mb-4 text-foreground">Open Collaboration</h3>
-                    <p class="helpful-text text-sm mb-3 leading-relaxed">An open specification for verifying adherence to statutory procedure in state and federal courts. Contributions welcome.</p>
-                    <p class="helpful-text text-sm font-medium"><strong>Not legal advice.</strong> Educational purposes only.</p>
-                </div>
-
-                <div>
-                    <h3 class="text-lg font-sans font-semibold mb-4 text-foreground">Resources</h3>
-                    <ul class="space-y-3 text-sm">
-                        <li><a href="https://github.com/josephfusco/procedural-compliance" target="_blank" rel="noopener noreferrer" class="footer-link text-foreground/80 hover:text-foreground transition-colors underline decoration-1 underline-offset-2" aria-label="Visit GitHub Repository (opens in new window)">GitHub Repository</a></li>
-                        <li><a href="https://github.com/josephfusco/procedural-compliance/blob/main/CONTRIBUTING.md" target="_blank" rel="noopener noreferrer" class="footer-link text-foreground/80 hover:text-foreground transition-colors underline decoration-1 underline-offset-2" aria-label="Read Contributing Guide (opens in new window)">Contributing Guide</a></li>
-                        <li><a href="https://github.com/josephfusco/procedural-compliance/issues" target="_blank" rel="noopener noreferrer" class="footer-link text-foreground/80 hover:text-foreground transition-colors underline decoration-1 underline-offset-2" aria-label="Report an Issue (opens in new window)">Report Issue</a></li>
-                    </ul>
-                </div>
-
-                <div>
-                    <h3 class="text-lg font-sans font-semibold mb-4 text-foreground">Legal</h3>
-                    <ul class="space-y-3 text-sm">
-                        <li><a href="https://github.com/josephfusco/procedural-compliance/blob/main/LICENSE" target="_blank" rel="noopener noreferrer" class="footer-link text-foreground/80 hover:text-foreground transition-colors underline decoration-1 underline-offset-2" aria-label="View MIT License (opens in new window)">MIT License</a></li>
-                        <li><a href="guides/ETHICS.md" class="guide-link footer-link text-foreground/80 hover:text-foreground transition-colors underline decoration-1 underline-offset-2" data-guide-title="Ethics & Disclaimers" data-github-url="https://github.com/josephfusco/procedural-compliance/blob/main/guides/ETHICS.md" aria-label="View Ethics and Disclaimers">Ethics & Disclaimers</a></li>
-                    </ul>
-                </div>
-
-                <div>
-                    <div class="flex items-center gap-2 mb-4">
-                        <span class="badge badge-ny">NY</span>
-                        <h3 class="text-lg font-sans font-semibold text-foreground">NY Court Resources</h3>
-                    </div>
-                    <ul class="space-y-3 text-sm">
-                        <li><a href="https://www.nycourts.gov/efile/rules.shtml" target="_blank" rel="noopener noreferrer" class="footer-link text-foreground/80 hover:text-foreground transition-colors underline decoration-1 underline-offset-2" aria-label="NYSCEF E-Filing Rules (opens in new window)">NYSCEF E-Filing Rules</a></li>
-                        <li><a href="https://ww2.nycourts.gov/courts/index.shtml" target="_blank" rel="noopener noreferrer" class="footer-link text-foreground/80 hover:text-foreground transition-colors underline decoration-1 underline-offset-2" aria-label="NY Court Directory (opens in new window)">NY Court Directory</a></li>
-                    </ul>
-                </div>
-            </div>
-
-            <!-- Copyright Section -->
-            <div class="border-t-2 border-border pt-8 text-center">
-                <p class="text-sm text-foreground/70 font-medium">&copy; 2025 Procedural Compliance Framework (PCF)</p>
-                <p class="text-sm text-foreground/70 mt-2">Released under MIT License • Open Source Legal Framework</p>
-                <p class="text-xs text-foreground/60 mt-3">Accessibility: WCAG 2.1 AA • ADA Title II § 35.160 • Section 508 Standards</p>
-            </div>
-
-            <!-- Ultra-Subtle Contributors Footer -->
-            <div class="contributors-minimal" id="contributors">
-                <div class="contributors-divider"></div>
-                <p class="contributors-text">
-                    <span id="contributor-names">Loading contributors...</span> ·
-                    <a href="https://github.com/josephfusco/procedural-compliance/blob/main/LICENSE"
-                       target="_blank"
-                       rel="noopener">MIT License</a> ·
-                    <a href="https://github.com/josephfusco/procedural-compliance"
-                       target="_blank"
-                       rel="noopener">GitHub</a>
-                </p>
-            </div>
-        </div>
+    <!-- Minimal Footer -->
+    <footer class="border-t border-gray-200 py-8 text-center text-sm text-gray-600">
+        <p>Open source under MIT License · <a href="https://github.com/josephfusco/procedural-compliance" class="hover:text-gray-900 transition-colors">View on GitHub</a></p>
     </footer>
-
-    <!-- Search Modal (Command Palette) -->
-    <div id="search-modal" class="hidden fixed inset-0 z-50 bg-black/50" role="dialog" aria-modal="true" aria-labelledby="search-modal-label">
-        <div class="fixed left-1/2 top-[20%] -translate-x-1/2 w-full max-w-2xl bg-background border border-border rounded-md shadow-lg">
-            <div class="flex items-center border-b border-border px-4">
-                <svg class="w-5 h-5 text-muted-foreground" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/>
-                </svg>
-                <label for="search-input" class="sr-only" id="search-modal-label">Search templates</label>
-                <input
-                    type="text"
-                    id="search-input"
-                    class="flex-1 px-3 py-3 text-sm bg-transparent border-0 focus:outline-none focus:ring-4 focus:ring-ring focus:ring-offset-2"
-                    placeholder="Search templates..."
-                    autocomplete="off"
-                    aria-label="Search templates"
-                />
-                <button id="search-close" class="text-sm text-muted-foreground hover:text-foreground" aria-label="Close search (press Escape)">ESC</button>
-            </div>
-            <div id="search-results" class="max-h-96 overflow-y-auto p-2">
-                <!-- Populated by JavaScript -->
-            </div>
-        </div>
-    </div>
-
-    <!-- Template Viewer Sheet -->
-    <div id="template-modal" class="hidden fixed inset-0 z-50 bg-black/50" role="dialog" aria-modal="true" aria-labelledby="template-modal-title">
-        <div id="template-sheet" class="fixed inset-y-0 right-0 z-50 w-full md:w-[66.666vw] bg-background border-l border-border shadow-2xl flex flex-col">
-            <!-- Sheet Header -->
-            <div class="flex items-center gap-3 px-3 py-2 border-b border-border">
-                <button id="template-modal-close" class="p-1 text-muted-foreground hover:text-foreground" aria-label="Close template viewer (press Escape)">
-                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
-                    </svg>
-                </button>
-                <h3 id="template-modal-title" class="text-base font-sans font-semibold"></h3>
-            </div>
-
-            <!-- Sheet Content -->
-            <div id="template-modal-content" class="flex-1 overflow-y-auto">
-                <div id="template-modal-prose" class="prose prose-slate px-4 py-3">
-                    <!-- Rendered markdown will be inserted here -->
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <script>
-        // Dynamically update template count
-        document.addEventListener('DOMContentLoaded', () => {
-            // Count actual template rows
-            const templateRows = document.querySelectorAll('#template-results tbody tr');
-            const totalCount = templateRows.length;
-
-            // Update JSON-LD numberOfItems based on actual itemListElement array
-            const jsonLd = document.querySelector('script[type="application/ld+json"]');
-            if (jsonLd) {
-                const schema = JSON.parse(jsonLd.textContent);
-                schema.numberOfItems = totalCount;
-                jsonLd.textContent = JSON.stringify(schema, null, 2);
-            }
-
-            // Update hero badge count
-            const heroCount = document.getElementById('hero-template-count');
-            if (heroCount && totalCount > 0) {
-                heroCount.textContent = `${totalCount} Template${totalCount !== 1 ? 's' : ''} Available`;
-            }
-
-            // Update "Showing X templates" text
-            const templateCountText = document.querySelector('#template-results .mt-4.text-sm.text-muted-foreground');
-            if (templateCountText && totalCount > 0) {
-                templateCountText.textContent = `Showing ${totalCount} template${totalCount !== 1 ? 's' : ''}`;
-            }
-        });
-    </script>
-
-    <!-- Theme Toggle Script -->
-    <script>
-        (function() {
-            // Theme configuration - simple light/dark toggle
-            const THEMES = {
-                LIGHT: 'light',
-                DARK: 'dark'
-            };
-
-            const LABELS = {
-                light: 'Light',
-                dark: 'Dark'
-            };
-
-            const ARIA_LABELS = {
-                light: 'Light mode. Click to switch to dark mode',
-                dark: 'Dark mode. Click to switch to light mode'
-            };
-
-            // Get elements
-            const themeToggle = document.getElementById('theme-toggle');
-            const themeLabel = document.getElementById('theme-label');
-            const html = document.documentElement;
-
-            // Get saved theme or default to light
-            function getSavedTheme() {
-                return localStorage.getItem('theme') || THEMES.LIGHT;
-            }
-
-            // Apply theme to document
-            function applyTheme(theme) {
-                // Set data-theme attribute
-                html.setAttribute('data-theme', theme);
-
-                // Update label
-                themeLabel.textContent = LABELS[theme];
-
-                // Update ARIA attributes
-                themeToggle.setAttribute('aria-checked', theme === THEMES.DARK ? 'true' : 'false');
-                themeToggle.setAttribute('aria-label', ARIA_LABELS[theme]);
-            }
-
-            // Toggle between light and dark
-            function toggleTheme() {
-                const currentTheme = getSavedTheme();
-                const nextTheme = currentTheme === THEMES.LIGHT ? THEMES.DARK : THEMES.LIGHT;
-
-                localStorage.setItem('theme', nextTheme);
-                applyTheme(nextTheme);
-            }
-
-            // Initialize theme on page load
-            const savedTheme = getSavedTheme();
-            applyTheme(savedTheme);
-
-            // Listen for toggle button clicks
-            themeToggle.addEventListener('click', toggleTheme);
-
-            // Listen for keyboard events (Space/Enter)
-            themeToggle.addEventListener('keydown', (e) => {
-                if (e.key === ' ' || e.key === 'Enter') {
-                    e.preventDefault();
-                    toggleTheme();
-                }
-            });
-        })();
-    </script>
-
-    <script src="app.js"></script>
 </body>
 </html>
