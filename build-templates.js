@@ -8,8 +8,8 @@ const SITE_URL = 'https://proceduralcompliance.org';
 const CONTENT_DIR = path.join(__dirname, 'content');
 const OUT_DIR = path.join(__dirname, 'docs');
 
-// Shown in the footer. Change it when the content is reviewed, not on every build.
-const LAST_REVIEWED = 'November 2026';
+// Shown in the footer. Change it when the content changes, not on every build.
+const LAST_UPDATED = 'November 2026';
 
 function loadPartials() {
     const dir = path.join(__dirname, 'src', 'partials');
@@ -76,9 +76,13 @@ const NY_GLOSSARY = [
 
 const FEDERAL_GLOSSARY = [
         { term: "Agency", body: "A part of the government that carries out the law." },
+        { term: "Complaint", body: "The paper that starts the case. It says what happened and what you want." },
         { term: "Fed. R. App. P.", body: "Federal Rules of Appellate Procedure." },
+        { term: "Fed. R. Civ. P.", body: "Federal Rules of Civil Procedure." },
         { term: "Mandamus", body: "A court order that tells an official or a lower court to carry out a duty." },
         { term: "Petition", body: "The paper that asks the court for the order." },
+        { term: "Serve", body: "Give court papers to the other side in the way the law requires." },
+        { term: "Summons", body: "The paper that tells the other side it is being sued and must answer." },
         { term: "U.S.C.", body: "United States Code." }
 ];
 
@@ -88,6 +92,7 @@ const JURISDICTIONS = [
         name: 'New York State',
         subject: 'CPLR Article 78',
         who: 'A New York State or local agency, official, or court',
+        limit: 'You cannot use Article 78 to attack a ruling made in a civil or criminal case (CPLR &sect;7801).',
         triageExtra: [{ href: '/new-york/problems/', text: 'A clerk or court did not follow the rules in your case.' }],
         help: [
             { text: 'LawHelpNY (lawhelpny.org)', href: 'https://www.lawhelpny.org/' },
@@ -96,7 +101,14 @@ const JURISDICTIONS = [
         problemsHeading: 'What went wrong?',
         problems() {
             const gaps = loadGaps(path.join(CONTENT_DIR, this.slug, 'gaps'));
-            const body = `${renderGapsSection(gaps)}
+            const body = `${renderProseSection({
+    id: 'first',
+    heading: 'First, write it down.',
+    paragraphs: [
+        'Put every demand, refusal, and objection in writing, with the date and proof of receipt.'
+    ]
+})}
+${renderGapsSection(gaps)}
 ${renderProseSection({
     id: 'void',
     heading: 'Void orders.',
@@ -138,6 +150,13 @@ ${renderStepsSection({
         { term: 'Record', body: 'Put every demand, refusal, and objection in writing, with the date and proof of receipt.' },
         { term: 'Filing', body: 'File a notice of petition and a verified petition in Supreme Court, in the county CPLR &sect;506(b) names. If time is short, use an order to show cause. <a class="usa-link" href="https://www.nycourts.gov/forms/">Court forms</a> and <a class="usa-link" href="https://iapps.courts.state.ny.us/nyscef/">e-filing</a> are online.' },
         { term: 'Service', body: 'Serve the other side at least twenty days before the court date (&sect;7804(c)). For a state body or official, also serve the Attorney General, at the office in or nearest that county. For a member of a local body whose term has ended, serve the body (CPLR &sect;311).' }
+    ]
+})}
+${renderProseSection({
+    id: 'fees',
+    heading: 'What if you cannot pay the fee?',
+    paragraphs: [
+        'Ask the court to waive the fees. File a sworn statement that you cannot pay, together with the papers that start your case. The clerk&rsquo;s office has the form (CPLR &sect;1101(d)).'
     ]
 })}
 ${renderStepsSection({
@@ -190,7 +209,13 @@ ${renderProseSection({
     heading: 'What happened?',
     grounds: routes
 })}
-`;
+${renderProseSection({
+    id: 'fees',
+    heading: 'What if you cannot pay the fee?',
+    paragraphs: [
+        'Ask the court to let you file without paying the fee first. You file a sworn statement of what you own and that you cannot pay (28 U.S.C. &sect;1915(a)(1)). If the court agrees, it must also order a United States marshal to serve your papers (Fed. R. Civ. P. 4(c)(3)).'
+    ]
+})}`;
             return `${withGlossary(body, FEDERAL_GLOSSARY, renderHelpSection(this.help))}`;
         }
     }
@@ -246,11 +271,22 @@ ${items}
 function renderLayout({ current, crumbs, toc, heading, lede, sections }) {
     const aside = toc ? `
         <aside class="usa-in-page-nav" data-title-text="On this page" data-title-heading-level="h2" data-heading-elements="h2" data-main-content-selector="#page-sections" data-scroll-offset="0" data-root-margin="0px 0px -50% 0px" data-threshold="1"></aside>` : '';
+    const heads = [...sections.matchAll(/<h2 id="([^"]+)"[^>]*>([\s\S]*?)<\/h2>|<li id="([^"]+)" class="pcf-gap">\s*<h2[^>]*>([\s\S]*?)<\/h2>/g)]
+        .map(m => ({ id: m[1] || m[3], text: (m[2] || m[4]).replace(/<[^>]+>/g, '') }));
+    const small = toc ? `
+          <nav class="pcf-toc" aria-label="On this page">
+            <details>
+              <summary>On this page</summary>
+              <ul>
+${heads.map(h => `                <li><a class="usa-link" href="#${h.id}">${h.text}</a></li>`).join('\n')}
+              </ul>
+            </details>
+          </nav>` : '';
     return `      <div class="pcf-layout${toc ? ' pcf-layout--toc' : ''}">
 ${renderBreadcrumb([{ href: '/', text: 'Home' }, ...crumbs])}
 ${renderSidenav(current)}
         <div id="page-sections" class="pcf-layout__main">
-${renderPageHeader({ heading, lede })}
+${renderPageHeader({ heading, lede })}${small}
 ${sections}
         </div>${aside}
       </div>`;
@@ -260,7 +296,7 @@ function renderPage({ partials, scripts = false, title, subtitle, description, u
     const head = interpolate(partials.head, { title, subtitle, description, ogUrl: `${SITE_URL}${urlPath}` });
     const header = partials.header;
     const footer = interpolate(partials.footer, {
-        lastReviewed: LAST_REVIEWED,
+        lastUpdated: LAST_UPDATED,
         scripts: scripts ? '    <script src="/assets/js/uswds.min.js"></script>' : ''
     });
     return `<!DOCTYPE html>
@@ -285,7 +321,7 @@ ${footer}
 // =============================================================================
 function renderGroundsSection({ id, heading, grounds, paragraphs = [] }) {
     const items = grounds.map(g => `            <li id="${g.id}" class="pcf-grounds__item">
-              <p class="pcf-grounds__desc${balance(g.plain)}">${g.plain}</p>${g.note ? `\n              <p class="pcf-grounds__note${balance(g.note)}">${g.note}</p>` : ''}
+              <p class="pcf-grounds__desc${balance(g.plain)}">${g.plain}</p>${g.note ? `\n              <p class="pcf-grounds__note${balance(g.note)}">${g.note}</p>` : ''}${g.steps.length ? `\n              <ol class="pcf-list pcf-grounds__steps">\n${g.steps.map(st => `                <li>${st}</li>`).join('\n')}\n              </ol>` : ''}
               <p class="pcf-grounds__cite">${g.title} &middot; ${g.section}${g.authority.case ? ` &middot; <cite>${g.authority.case}</cite>, ${g.authority.cite}` : ''}</p>
             </li>`).join('\n');
     const ps = paragraphs.map(p => `\n          <p class="pcf-prose pcf-prose--follow">${p}</p>`).join('');
@@ -345,7 +381,7 @@ ${authorityItems}
               </ul>
             </li>`;
     }).join('\n');
-    return `      <section id="gaps" class="pcf-section" aria-labelledby="page-heading">
+    return `      <section id="gaps" class="pcf-section">
         <div class="grid-container">
           <ol class="pcf-gaps" role="list">
 ${items}
@@ -364,14 +400,15 @@ const TERM_HOSTS = /(<(p|dd) class="(?:pcf-prose[^"]*|pcf-grounds__desc|pcf-grou
 // 22 NYCRR cites stay plain: there is no stable public URL for them.
 const SEC = '(?:§|&sect;)';
 const SUBS = '(?:\\([0-9a-z]+\\))*';
-const CITE = new RegExp(`28 U\\.S\\.C\\. ${SEC}(\\d+)${SUBS}|Fed\\. R\\. App\\. P\\. (\\d+)${SUBS}|(?<!NYCRR )(?:CPLR )?${SEC}(\\d+(?:-[a-z])?)${SUBS}`, 'g');
+const CITE = new RegExp(`28 U\\.S\\.C\\. ${SEC}(\\d+)${SUBS}|Fed\\. R\\. App\\. P\\. (\\d+)${SUBS}|Fed\\. R\\. Civ\\. P\\. (\\d+)${SUBS}|(?<!NYCRR )(?:CPLR )?${SEC}(\\d+(?:-[a-z])?)${SUBS}`, 'g');
 
 function linkCites(html) {
     return html.split(/(<a\b[\s\S]*?<\/a>|<[^>]+>)/).map((part, i) => {
         if (i % 2) return part;
-        return part.replace(CITE, (m, usc, frap, cplr) => {
+        return part.replace(CITE, (m, usc, frap, frcp, cplr) => {
             const href = usc ? `https://www.law.cornell.edu/uscode/text/28/${usc}`
                 : frap ? `https://www.law.cornell.edu/rules/frap/rule_${frap}`
+                : frcp ? `https://www.law.cornell.edu/rules/frcp/rule_${frcp}`
                 : `https://www.nysenate.gov/legislation/laws/CVP/${cplr.toUpperCase()}`;
             return `<a class="pcf-cite" href="${href}">${m}</a>`;
         });
@@ -444,7 +481,7 @@ function renderTriageSection() {
             ...(j.triageExtra || [])
         ];
         const links = rows.map(r => `              <li><a class="usa-link" href="${r.href}">${r.text}</a>${r.example ? `\n                <p class="pcf-triage__example pcf-balance">Example: ${r.example}</p>` : ''}</li>`).join('\n');
-        return `            <h3 class="pcf-triage__who">${j.who}</h3>
+        return `            <h3 class="pcf-triage__who">${j.who}</h3>${j.limit ? `\n            <p class="pcf-triage__limit">${linkCites(j.limit)}</p>` : ''}
             <ul class="pcf-triage__list" role="list">
 ${links}
             </ul>`;
@@ -500,7 +537,14 @@ function generateAboutPage(partials) {
 ${lis}
           </ol>
         </div>
-      </section>`
+      </section>
+${renderProseSection({
+    id: 'privacy',
+    heading: 'Privacy.',
+    paragraphs: [
+        'This site has no accounts and no forms. It uses Google Analytics to count visits, and Google sets cookies to do that.'
+    ]
+})}`
         })
     });
 }
@@ -569,6 +613,7 @@ function loadGrounds(dir) {
             happened: fm.happened,
             example: fm.example || '',
             note: fm.note || '',
+            steps: Array.isArray(fm.steps) ? fm.steps : [],
             plain: fm.plain || '',
             // Federal routes carry their lead case under `progeny`.
             authority: fm.authority || (Array.isArray(fm.progeny) && fm.progeny[0]) || { case: '', cite: '' }

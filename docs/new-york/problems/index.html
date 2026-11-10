@@ -27,13 +27,12 @@
 <body>
     <a class="usa-skipnav" href="#main-content">Skip to main content</a>
 
-    <div class="pcf-notice">
-      <div class="grid-container">
-        <p class="pcf-notice__text"><img class="pcf-notice__flag" src="/assets/img/us_flag_small.png" alt="United States" width="16" height="11" />Not legal advice. Not a government site.</p>
-      </div>
-    </div>
-
     <header class="pcf-header">
+      <div class="pcf-notice">
+        <div class="grid-container">
+          <p class="pcf-notice__text"><img class="pcf-notice__flag" src="/assets/img/us_flag_small.png" alt="United States" width="16" height="11" />Not legal advice. Not a government site.</p>
+        </div>
+      </div>
       <div class="grid-container">
         <a class="pcf-header__name" href="/">Procedural Compliance</a>
       </div>
@@ -69,7 +68,31 @@
           <p class="pcf-page-header__lede">Where Article 78 cases often go wrong.</p>
         </div>
       </section>
-      <section id="gaps" class="pcf-section" aria-labelledby="page-heading">
+          <nav class="pcf-toc" aria-label="On this page">
+            <details>
+              <summary>On this page</summary>
+              <ul>
+                <li><a class="usa-link" href="#first-heading">First, write it down.</a></li>
+                <li><a class="usa-link" href="#clerk-gatekeeping">The clerk would not take your papers.</a></li>
+                <li><a class="usa-link" href="#verification-rejection">Your paper was rejected over its sworn statement.</a></li>
+                <li><a class="usa-link" href="#original-jurisdiction-misrouted">Your case against a judge was sent to the wrong court.</a></li>
+                <li><a class="usa-link" href="#service-framework-confusion">Your case was thrown out over how you served the papers.</a></li>
+                <li><a class="usa-link" href="#triable-issue-bypass">The court decided without a hearing.</a></li>
+                <li><a class="usa-link" href="#pell-deference-imported">The court asked whether the refusal made sense.</a></li>
+                <li><a class="usa-link" href="#record-dependency">Your case was thrown out for a missing record.</a></li>
+                <li><a class="usa-link" href="#void-heading">Void orders.</a></li>
+                <li><a class="usa-link" href="#help-heading">Free legal help.</a></li>
+                <li><a class="usa-link" href="#glossary-heading">Glossary.</a></li>
+              </ul>
+            </details>
+          </nav>
+      <section id="first" class="pcf-section" aria-labelledby="first-heading">
+        <div class="grid-container">
+          <h2 id="first-heading" class="pcf-heading">First, write it down.</h2>
+          <p class="pcf-prose pcf-balance">Put every demand, refusal, and objection in writing, with the date and proof of receipt.</p>
+        </div>
+      </section>
+      <section id="gaps" class="pcf-section">
         <div class="grid-container">
           <ol class="pcf-gaps" role="list">
             <li id="clerk-gatekeeping" class="pcf-gap">
@@ -204,7 +227,7 @@
             <li><a class="usa-link" href="https://github.com/josephfusco/procedural-compliance/issues/new?labels=accessibility">Report an accessibility problem</a></li>
           </ul>
         </nav>
-        <p class="pcf-footer__reviewed">Last reviewed November 2026.</p>
+        <p class="pcf-footer__reviewed">Last updated November 2026.</p>
       </div>
     </footer>
     <script src="/assets/js/uswds.min.js"></script>

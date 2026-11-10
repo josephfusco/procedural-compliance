@@ -31,6 +31,7 @@ p, li, dt, dd { text-wrap: pretty; }
   color: inherit;
   text-decoration: underline;
   text-decoration-thickness: 1px;
+  text-decoration-color: color("base");
   text-underline-offset: 0.2em;
 
   &:visited { color: inherit; }
@@ -41,6 +42,7 @@ p, li, dt, dd { text-wrap: pretty; }
 .pcf-term {
   color: inherit;
   text-decoration: underline dotted;
+  text-decoration-color: color("base");
   text-underline-offset: 0.2em;
 
   &:visited { color: inherit; }
@@ -55,7 +57,8 @@ p, li, dt, dd { text-wrap: pretty; }
 .pcf-header {
   border-bottom: 1px solid color("base-lighter");
 
-  .grid-container {
+  // The site name's row; the notice bar above it keeps its own container.
+  > .grid-container {
     max-width: $pcf-page;
     display: flex;
     flex-wrap: wrap;
@@ -203,6 +206,14 @@ p, li, dt, dd { text-wrap: pretty; }
     }
   }
 
+  // What the group's remedy cannot do, ahead of the lines.
+  &__limit {
+    @include u-font("sans", "xs");
+    line-height: 1.5;
+    color: color("ink");
+    margin: 0 0 units(1.5);
+  }
+
   // One concrete case under a line, so the reader can recognize their own.
   &__example {
     @include u-font("sans", "2xs");
@@ -297,6 +308,37 @@ p, li, dt, dd { text-wrap: pretty; }
     }
 
     .pcf-page-header + .pcf-section { border-top: 0; }
+  }
+
+  // The same heading list, folded, for screens too narrow for the side list.
+  .pcf-toc {
+    padding-bottom: units(3);
+
+    @include at-media("desktop") { display: none; }
+
+    summary {
+      @include u-font("sans", "xs");
+      font-weight: 700;
+      color: color("ink");
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      min-height: $pcf-target;
+    }
+
+    ul {
+      @include u-font("sans", "xs");
+      list-style: none;
+      margin: 0;
+      padding: 0;
+    }
+
+    a {
+      display: flex;
+      align-items: center;
+      min-height: $pcf-target;
+      line-height: 1.4;
+    }
   }
 
   .usa-in-page-nav {
@@ -394,6 +436,12 @@ p, li, dt, dd { text-wrap: pretty; }
     @include u-measure(5);
     line-height: 1.5;
     margin: 0 0 units(1);
+  }
+
+  // Doubled class: outranks .pcf-list's own margin reset further down.
+  &__steps.pcf-list {
+    margin: units(2) 0;
+    max-width: none;
   }
 
   &__cite {
@@ -510,7 +558,8 @@ p, li, dt, dd { text-wrap: pretty; }
   &__authority {
     @include u-font("sans", "2xs");
     color: color("base-darker");
-    line-height: 1.5;
+    // Stacked cite links need 24px between targets (WCAG 2.5.8).
+    line-height: 1.8;
     list-style: none;
     margin: 0;
     padding: 0;
@@ -625,6 +674,7 @@ p, li, dt, dd { text-wrap: pretty; }
 @media print {
   .pcf-notice,
   .pcf-header,
+  .pcf-toc,
   .usa-breadcrumb,
   .usa-in-page-nav,
   .pcf-footer,

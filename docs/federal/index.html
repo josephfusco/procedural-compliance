@@ -27,13 +27,12 @@
 <body>
     <a class="usa-skipnav" href="#main-content">Skip to main content</a>
 
-    <div class="pcf-notice">
-      <div class="grid-container">
-        <p class="pcf-notice__text"><img class="pcf-notice__flag" src="/assets/img/us_flag_small.png" alt="United States" width="16" height="11" />Not legal advice. Not a government site.</p>
-      </div>
-    </div>
-
     <header class="pcf-header">
+      <div class="pcf-notice">
+        <div class="grid-container">
+          <p class="pcf-notice__text"><img class="pcf-notice__flag" src="/assets/img/us_flag_small.png" alt="United States" width="16" height="11" />Not legal advice. Not a government site.</p>
+        </div>
+      </div>
       <div class="grid-container">
         <a class="pcf-header__name" href="/">Procedural Compliance</a>
       </div>
@@ -68,6 +67,17 @@
           <p class="pcf-page-header__lede"><strong>Mandamus.</strong> Compel a federal official, agency, or lower court to do its duty.</p>
         </div>
       </section>
+          <nav class="pcf-toc" aria-label="On this page">
+            <details>
+              <summary>On this page</summary>
+              <ul>
+                <li><a class="usa-link" href="#routes-heading">What happened?</a></li>
+                <li><a class="usa-link" href="#fees-heading">What if you cannot pay the fee?</a></li>
+                <li><a class="usa-link" href="#help-heading">Free legal help.</a></li>
+                <li><a class="usa-link" href="#glossary-heading">Glossary.</a></li>
+              </ul>
+            </details>
+          </nav>
       <section id="routes" class="pcf-section" aria-labelledby="routes-heading">
         <div class="grid-container">
           <h2 id="routes-heading" class="pcf-heading">What happened?</h2>
@@ -75,6 +85,13 @@
             <li id="mandamus-to-compel-a-federal-officer" class="pcf-grounds__item">
               <p class="pcf-grounds__desc">A federal official or <a class="pcf-term" href="#term-agency">agency</a> must do a certain thing for you and has no choice about it. You have tried every other way to get it done. You ask a federal trial court to order it.</p>
               <p class="pcf-grounds__note">This works only against the federal government. It does not work against a state court, a state clerk, or a state agency. For those, go to state court. In New York State, that is <a class="usa-link" href="/new-york/">Article 78</a>.</p>
+              <ol class="pcf-list pcf-grounds__steps">
+                <li>File a complaint in a federal trial court (<a class="pcf-cite" href="https://www.law.cornell.edu/uscode/text/28/1361">28 U.S.C. §1361</a>; <a class="pcf-cite" href="https://www.law.cornell.edu/rules/frcp/rule_3">Fed. R. Civ. P. 3</a>).</li>
+                <li>File it where the official or agency is, or where the events happened. If no land is involved, you can also file where you live (<a class="pcf-cite" href="https://www.law.cornell.edu/uscode/text/28/1391">28 U.S.C. §1391(e)(1)</a>).</li>
+                <li>Have someone who is at least 18 and not part of the case serve the summons and complaint (<a class="pcf-cite" href="https://www.law.cornell.edu/rules/frcp/rule_4">Fed. R. Civ. P. 4(c)(2)</a>).</li>
+                <li>Serve the United States attorney for that district. Send copies by registered or certified mail to the Attorney General in Washington and to the official or agency (<a class="pcf-cite" href="https://www.law.cornell.edu/rules/frcp/rule_4">Fed. R. Civ. P. 4(i)</a>).</li>
+                <li>The government has 60 days to answer after the United States attorney is served (<a class="pcf-cite" href="https://www.law.cornell.edu/rules/frcp/rule_12">Fed. R. Civ. P. 12(a)(2)</a>).</li>
+              </ol>
               <p class="pcf-grounds__cite">Mandamus to Compel a Federal Officer &middot; <a class="pcf-cite" href="https://www.law.cornell.edu/uscode/text/28/1361">28 U.S.C. §1361</a> &middot; <cite>Heckler v. Ringer</cite>, 466 U.S. 602, 616 (1984)</p>
             </li>
             <li id="mandamus-to-a-lower-court" class="pcf-grounds__item">
@@ -85,7 +102,12 @@
           </ul>
         </div>
       </section>
-
+      <section id="fees" class="pcf-section" aria-labelledby="fees-heading">
+        <div class="grid-container">
+          <h2 id="fees-heading" class="pcf-heading">What if you cannot pay the fee?</h2>
+          <p class="pcf-prose">Ask the court to let you file without paying the fee first. You file a sworn statement of what you own and that you cannot pay (<a class="pcf-cite" href="https://www.law.cornell.edu/uscode/text/28/1915">28 U.S.C. &sect;1915(a)(1)</a>). If the court agrees, it must also order a United States marshal to <a class="pcf-term" href="#term-serve">serve</a> your papers (<a class="pcf-cite" href="https://www.law.cornell.edu/rules/frcp/rule_4">Fed. R. Civ. P. 4(c)(3)</a>).</p>
+        </div>
+      </section>
       <section id="help" class="pcf-section" aria-labelledby="help-heading">
         <div class="grid-container">
           <h2 id="help-heading" class="pcf-heading">Free legal help.</h2>
@@ -102,9 +124,17 @@
               <dt class="pcf-steps__term">Agency</dt>
               <dd class="pcf-steps__def pcf-balance">A part of the government that carries out the law.</dd>
             </div>
+            <div class="pcf-steps__row" id="term-complaint">
+              <dt class="pcf-steps__term">Complaint</dt>
+              <dd class="pcf-steps__def pcf-balance">The paper that starts the case. It says what happened and what you want.</dd>
+            </div>
             <div class="pcf-steps__row" id="term-fed-r-app-p">
               <dt class="pcf-steps__term">Fed. R. App. P.</dt>
               <dd class="pcf-steps__def pcf-balance">Federal Rules of Appellate Procedure.</dd>
+            </div>
+            <div class="pcf-steps__row" id="term-fed-r-civ-p">
+              <dt class="pcf-steps__term">Fed. R. Civ. P.</dt>
+              <dd class="pcf-steps__def pcf-balance">Federal Rules of Civil Procedure.</dd>
             </div>
             <div class="pcf-steps__row" id="term-mandamus">
               <dt class="pcf-steps__term">Mandamus</dt>
@@ -113,6 +143,14 @@
             <div class="pcf-steps__row" id="term-petition">
               <dt class="pcf-steps__term">Petition</dt>
               <dd class="pcf-steps__def pcf-balance">The paper that asks the court for the order.</dd>
+            </div>
+            <div class="pcf-steps__row" id="term-serve">
+              <dt class="pcf-steps__term">Serve</dt>
+              <dd class="pcf-steps__def pcf-balance">Give court papers to the other side in the way the law requires.</dd>
+            </div>
+            <div class="pcf-steps__row" id="term-summons">
+              <dt class="pcf-steps__term">Summons</dt>
+              <dd class="pcf-steps__def pcf-balance">The paper that tells the other side it is being sued and must answer.</dd>
             </div>
             <div class="pcf-steps__row" id="term-u-s-c">
               <dt class="pcf-steps__term">U.S.C.</dt>
@@ -136,7 +174,7 @@
             <li><a class="usa-link" href="https://github.com/josephfusco/procedural-compliance/issues/new?labels=accessibility">Report an accessibility problem</a></li>
           </ul>
         </nav>
-        <p class="pcf-footer__reviewed">Last reviewed November 2026.</p>
+        <p class="pcf-footer__reviewed">Last updated November 2026.</p>
       </div>
     </footer>
     <script src="/assets/js/uswds.min.js"></script>

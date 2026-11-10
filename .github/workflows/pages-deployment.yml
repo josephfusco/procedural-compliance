@@ -5,432 +5,70 @@ on:
     branches: [ main ]
     paths:
       - 'docs/**'
+      - 'scripts/check-links.js'
+      - '.github/workflows/pages-deployment.yml'
   pull_request:
     branches: [ main ]
     paths:
       - 'docs/**'
+      - 'scripts/check-links.js'
+      - '.github/workflows/pages-deployment.yml'
 
 jobs:
-  validate-web-interface:
-    name: Validate Web Interface
+  validate-site:
+    name: Validate Built Site
     runs-on: ubuntu-latest
 
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
 
-      - name: Verify required web files exist
+      - name: Verify required files exist
         run: |
-          echo "🔍 Checking required web interface files..."
-
-          REQUIRED_FILES=(
-            "docs/index.html"
-            "docs/styles.css"
-            "docs/app.js"
-            "docs/.nojekyll"
-            "docs/README.md"
-          )
-
           MISSING=0
-          for file in "${REQUIRED_FILES[@]}"; do
-            if [ ! -f "$file" ]; then
+          for file in \
+            docs/index.html \
+            docs/styles.css \
+            docs/.nojekyll \
+            docs/CNAME \
+            docs/about/index.html \
+            docs/new-york/index.html \
+            docs/new-york/problems/index.html \
+            docs/federal/index.html; do
+            if [ -f "$file" ]; then
+              echo "✅ Found: $file"
+            else
               echo "❌ Missing required file: $file"
               MISSING=$((MISSING + 1))
-            else
-              echo "✅ Found: $file"
             fi
           done
+          [ "$MISSING" -eq 0 ]
 
-          if [ $MISSING -gt 0 ]; then
-            echo "❌ $MISSING required files missing"
-            exit 1
-          fi
-
-          echo "✅ All required web files present"
-
-      - name: Validate HTML
+      - name: Check every page
         run: |
-          echo "🔍 Checking HTML syntax..."
-
-          # Basic HTML validation (allow tags with attributes)
-          if grep -q '</html>' docs/index.html && \
-             grep -q '<head' docs/index.html && \
-             grep -q '<body' docs/index.html; then
-            echo "✅ HTML structure valid"
-          else
-            echo "❌ HTML structure invalid"
-            exit 1
-          fi
-
-          # Check for required meta tags
-          if grep -q '<meta name="viewport"' docs/index.html && \
-             grep -q '<meta name="description"' docs/index.html; then
-            echo "✅ Required meta tags present"
-          else
-            echo "❌ Missing required meta tags"
-            exit 1
-          fi
-
-      - name: Validate CSS
-        run: |
-          echo "🔍 Checking CSS syntax..."
-
-          # Basic CSS validation - check for curly braces (multi-line aware)
-          if grep -q '{' docs/styles.css && grep -q '}' docs/styles.css; then
-            echo "✅ CSS structure appears valid"
-          else
-            echo "❌ CSS structure may be invalid"
-            exit 1
-          fi
-
-          # Check for required CSS variables
-          if grep -q ':root {' docs/styles.css && \
-             grep -q '\-\-primary-color:' docs/styles.css; then
-            echo "✅ CSS variables defined"
-          else
-            echo "❌ Missing CSS variables"
-            exit 1
-          fi
-
-      - name: Validate JavaScript
-        run: |
-          echo "🔍 Checking JavaScript syntax..."
-
-          # Check for progressive enhancement structure
-          if grep -q 'document.getElementById' docs/app.js && \
-             grep -q 'function' docs/app.js && \
-             grep -q 'addEventListener' docs/app.js; then
-            echo "✅ JavaScript structure valid"
-          else
-            echo "❌ JavaScript structure may be invalid"
-            exit 1
-          fi
-
-          # Check that templates are pre-rendered in HTML (not JS)
-          TEMPLATE_COUNT=$(grep -c 'data-jurisdiction=' docs/index.html || echo "0")
-          if [ "$TEMPLATE_COUNT" -gt 5 ]; then
-            echo "✅ Templates pre-rendered in HTML ($TEMPLATE_COUNT templates)"
-          else
-            echo "❌ Templates may not be pre-rendered in HTML"
-            exit 1
-          fi
-
-      - name: Check for broken GitHub URLs
-        run: |
-          echo "🔍 Checking for broken GitHub URLs..."
-
-          # Extract GitHub URLs from web files
-          ERRORS=0
-          grep -oP 'https://github\.com/[^"'\'']+' docs/*.{html,js,md} 2>/dev/null | while read -r url; do
-            # Remove trailing quotes or slashes
-            url=$(echo "$url" | sed 's/[">]$//')
-
-            echo "Checking: $url"
-
-            # Basic validation - should contain expected repo structure
-            if [[ "$url" =~ github\.com/[^/]+/[^/]+/blob/main/.+ ]] || \
-               [[ "$url" =~ github\.com/[^/]+/[^/]+/?$ ]]; then
-              echo "✅ Valid GitHub URL format"
-            else
-              echo "⚠️ Unusual GitHub URL: $url"
+          FAILED=0
+          for file in $(find docs -name index.html -not -path 'docs/assets/*'); do
+            for needle in '<html lang="en">' '<meta name="viewport"' '<meta name="description"' '<title>' '<main id="main-content">'; do
+              if ! grep -q "$needle" "$file"; then
+                echo "❌ $file: missing $needle"
+                FAILED=1
+              fi
+            done
+            H1_COUNT=$(grep -o '<h1' "$file" | wc -l | tr -d ' ')
+            if [ "$H1_COUNT" -ne 1 ]; then
+              echo "❌ $file: $H1_COUNT h1 elements (expected 1)"
+              FAILED=1
+            fi
+            if grep -q '{{' "$file"; then
+              echo "❌ $file: unfilled {{placeholder}}"
+              FAILED=1
+            fi
+            if grep '<img' "$file" | grep -qv 'alt='; then
+              echo "❌ $file: image without alt text"
+              FAILED=1
             fi
           done
+          [ "$FAILED" -eq 0 ] && echo "✅ All pages pass"
 
-          if [ $ERRORS -gt 0 ]; then
-            echo "⚠️ Found $ERRORS questionable URLs"
-            # Don't fail, just warn
-          else
-            echo "✅ GitHub URLs appear valid"
-          fi
-
-      - name: Check responsive design elements
-        run: |
-          echo "🔍 Checking for responsive design elements..."
-
-          # Check for viewport meta tag
-          if grep -q '<meta name="viewport"' docs/index.html; then
-            echo "✅ Viewport meta tag present"
-          else
-            echo "❌ Missing viewport meta tag (not mobile-friendly)"
-            exit 1
-          fi
-
-          # Check for media queries in CSS
-          if grep -q '@media' docs/styles.css; then
-            echo "✅ Media queries found (responsive CSS)"
-          else
-            echo "⚠️ No media queries found - may not be responsive"
-          fi
-
-      - name: Verify accessibility features
-        run: |
-          echo "🔍 Checking accessibility features..."
-
-          # Check for semantic HTML
-          SEMANTIC_TAGS=("header" "nav" "main" "section" "footer" "article")
-          MISSING_TAGS=0
-
-          for tag in "${SEMANTIC_TAGS[@]}"; do
-            if grep -q "<$tag" docs/index.html; then
-              echo "✅ Found semantic tag: <$tag>"
-            else
-              echo "⚠️ Missing semantic tag: <$tag>"
-              MISSING_TAGS=$((MISSING_TAGS + 1))
-            fi
-          done
-
-          # Check for ARIA labels
-          if grep -q 'aria-label' docs/index.html; then
-            echo "✅ ARIA labels present"
-          else
-            echo "⚠️ No ARIA labels found"
-          fi
-
-          # Check for alt text on images (if any)
-          if grep -q '<img' docs/index.html; then
-            if grep '<img' docs/index.html | grep -v 'alt=' > /dev/null; then
-              echo "⚠️ Images without alt text found"
-            else
-              echo "✅ All images have alt text"
-            fi
-          else
-            echo "✅ No images to check for alt text"
-          fi
-
-      - name: Test JavaScript for syntax errors (basic)
-        run: |
-          echo "🔍 Basic JavaScript syntax check..."
-
-          # Check for common syntax errors
-          if grep -E ';{2,}|function\s*\(|const\s+const' docs/app.js; then
-            echo "⚠️ Potential JavaScript syntax issues"
-          else
-            echo "✅ No obvious JavaScript syntax errors"
-          fi
-
-  performance-check:
-    name: Performance Check
-    runs-on: ubuntu-latest
-
-    steps:
-      - name: Checkout repository
-        uses: actions/checkout@v4
-
-      - name: Check file sizes
-        run: |
-          echo "📊 Checking file sizes for performance..."
-
-          # Check HTML size
-          HTML_SIZE=$(stat -f%z docs/index.html 2>/dev/null || stat -c%s docs/index.html)
-          if [ $HTML_SIZE -gt 100000 ]; then
-            echo "⚠️ index.html is large: $HTML_SIZE bytes (>100KB)"
-          else
-            echo "✅ index.html size acceptable: $HTML_SIZE bytes"
-          fi
-
-          # Check CSS size
-          CSS_SIZE=$(stat -f%z docs/styles.css 2>/dev/null || stat -c%s docs/styles.css)
-          if [ $CSS_SIZE -gt 50000 ]; then
-            echo "⚠️ styles.css is large: $CSS_SIZE bytes (>50KB)"
-          else
-            echo "✅ styles.css size acceptable: $CSS_SIZE bytes"
-          fi
-
-          # Check JS size
-          JS_SIZE=$(stat -f%z docs/app.js 2>/dev/null || stat -c%s docs/app.js)
-          if [ $JS_SIZE -gt 50000 ]; then
-            echo "⚠️ app.js is large: $JS_SIZE bytes (>50KB)"
-          else
-            echo "✅ app.js size acceptable: $JS_SIZE bytes"
-          fi
-
-          # Total size
-          TOTAL_SIZE=$((HTML_SIZE + CSS_SIZE + JS_SIZE))
-          echo "Total web assets: $TOTAL_SIZE bytes"
-
-          if [ $TOTAL_SIZE -gt 200000 ]; then
-            echo "⚠️ Total size over 200KB - may affect load time"
-          else
-            echo "✅ Total size acceptable for fast loading"
-          fi
-
-      - name: Check for external dependencies
-        run: |
-          echo "🔍 Checking for external dependencies..."
-
-          # Check for external CSS/JS includes
-          if grep -E 'href="https?://' docs/index.html | grep -v 'github.com' > /dev/null; then
-            echo "⚠️ External CSS dependencies found"
-            grep -E 'href="https?://' docs/index.html | grep -v 'github.com'
-          else
-            echo "✅ No external CSS dependencies"
-          fi
-
-          if grep -E 'src="https?://' docs/index.html | grep -v 'github.com' > /dev/null; then
-            echo "⚠️ External JS dependencies found"
-            grep -E 'src="https?://' docs/index.html | grep -v 'github.com'
-          else
-            echo "✅ No external JS dependencies"
-          fi
-
-  seo-check:
-    name: SEO Check
-    runs-on: ubuntu-latest
-
-    steps:
-      - name: Checkout repository
-        uses: actions/checkout@v4
-
-      - name: Check SEO elements
-        run: |
-          echo "🔍 Checking SEO elements..."
-
-          # Title tag
-          if grep -q '<title>' docs/index.html; then
-            TITLE=$(grep -oP '<title>\K[^<]+' docs/index.html)
-            echo "✅ Title tag present: $TITLE"
-          else
-            echo "❌ Missing title tag"
-            exit 1
-          fi
-
-          # Meta description
-          if grep -q '<meta name="description"' docs/index.html; then
-            echo "✅ Meta description present"
-          else
-            echo "❌ Missing meta description"
-            exit 1
-          fi
-
-          # Heading hierarchy
-          if grep -q '<h1' docs/index.html; then
-            H1_COUNT=$(grep -o '<h1' docs/index.html | wc -l | tr -d ' ')
-            if [ $H1_COUNT -eq 1 ]; then
-              echo "✅ Exactly one H1 tag (good for SEO)"
-            else
-              echo "⚠️ Multiple H1 tags found ($H1_COUNT) - may affect SEO"
-            fi
-          else
-            echo "❌ Missing H1 tag"
-            exit 1
-          fi
-
-          # Canonical URL (optional but recommended)
-          if grep -q '<link rel="canonical"' docs/index.html; then
-            echo "✅ Canonical URL set"
-          else
-            echo "⚠️ No canonical URL (consider adding)"
-          fi
-
-  deployment-simulation:
-    name: Deployment Simulation
-    runs-on: ubuntu-latest
-
-    steps:
-      - name: Checkout repository
-        uses: actions/checkout@v4
-
-      - name: Setup Pages
-        uses: actions/configure-pages@v4
-
-      - name: Build and test
-        run: |
-          echo "🔨 Simulating GitHub Pages deployment..."
-
-          # Verify .nojekyll exists (required for proper serving)
-          if [ -f "docs/.nojekyll" ]; then
-            echo "✅ .nojekyll file present (Jekyll disabled)"
-          else
-            echo "❌ Missing .nojekyll file"
-            exit 1
-          fi
-
-          # Check that index.html is in root of docs/
-          if [ -f "docs/index.html" ]; then
-            echo "✅ index.html in docs root"
-          else
-            echo "❌ index.html not in docs root"
-            exit 1
-          fi
-
-          # Verify no Jekyll-specific files
-          if [ -f "docs/_config.yml" ]; then
-            echo "⚠️ Found _config.yml - Jekyll may process site"
-          else
-            echo "✅ No Jekyll config (pure HTML/CSS/JS)"
-          fi
-
-      - name: Test local serving (quick)
-        run: |
-          echo "🌐 Testing local serving..."
-
-          cd docs
-
-          # Start simple HTTP server in background
-          python3 -m http.server 8000 &
-          SERVER_PID=$!
-
-          # Wait for server to start
-          sleep 2
-
-          # Test if index.html is served
-          HTTP_CODE=$(curl -s -o /dev/null -w "%{http_code}" http://localhost:8000/)
-
-          if [ "$HTTP_CODE" -eq 200 ]; then
-            echo "✅ Site serves successfully (HTTP $HTTP_CODE)"
-          else
-            echo "❌ Site failed to serve (HTTP $HTTP_CODE)"
-            kill $SERVER_PID
-            exit 1
-          fi
-
-          # Test if CSS loads
-          CSS_CODE=$(curl -s -o /dev/null -w "%{http_code}" http://localhost:8000/styles.css)
-          if [ "$CSS_CODE" -eq 200 ]; then
-            echo "✅ CSS loads successfully"
-          else
-            echo "❌ CSS failed to load"
-            kill $SERVER_PID
-            exit 1
-          fi
-
-          # Test if JS loads
-          JS_CODE=$(curl -s -o /dev/null -w "%{http_code}" http://localhost:8000/app.js)
-          if [ "$JS_CODE" -eq 200 ]; then
-            echo "✅ JavaScript loads successfully"
-          else
-            echo "❌ JavaScript failed to load"
-            kill $SERVER_PID
-            exit 1
-          fi
-
-          # Stop server
-          kill $SERVER_PID
-          echo "✅ Local serving test passed"
-
-  summary:
-    name: Pages Deployment Summary
-    runs-on: ubuntu-latest
-    needs: [validate-web-interface, performance-check, seo-check, deployment-simulation]
-    if: always()
-
-    steps:
-      - name: Summary
-        run: |
-          echo "📊 GitHub Pages Deployment Check Summary"
-          echo "========================================="
-          echo ""
-          echo "Web Interface Validation: ${{ needs.validate-web-interface.result }}"
-          echo "Performance Check: ${{ needs.performance-check.result }}"
-          echo "SEO Check: ${{ needs.seo-check.result }}"
-          echo "Deployment Simulation: ${{ needs.deployment-simulation.result }}"
-          echo ""
-
-          if [ "${{ needs.validate-web-interface.result }}" != "success" ] || \
-             [ "${{ needs.deployment-simulation.result }}" != "success" ]; then
-            echo "❌ Critical deployment checks failed"
-            exit 1
-          else
-            echo "✅ All critical deployment checks passed"
-            echo "Site is ready for GitHub Pages deployment"
-          fi
+      - name: Check internal links
+        run: node scripts/check-links.js
