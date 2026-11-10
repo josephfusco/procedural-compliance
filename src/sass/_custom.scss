@@ -1,0 +1,560 @@
+@use "uswds-core" as *;
+
+// WCAG 2.5.5 (AAA) minimum pointer target; USWDS has no 44px spacing token.
+$pcf-target: 2.75rem;
+
+// =============================================================================
+// LAYOUT — sticky footer
+// =============================================================================
+html { height: 100%; }
+
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
+}
+
+main { flex: 1 0 auto; min-width: 0; }
+
+// No orphaned last words: running text avoids a one-word final line, and
+// blocks short enough to sit on two lines (marked at build time) balance them.
+h1, h2, h3 { text-wrap: balance; }
+p, li, dt, dd { text-wrap: pretty; }
+
+.pcf-balance { text-wrap: balance; }
+
+// A glossary term at its first use: links to its entry, reads as text.
+.pcf-term {
+  color: inherit;
+  text-decoration: underline dotted;
+  text-underline-offset: 0.2em;
+
+  &:visited { color: inherit; }
+  &:hover { text-decoration-style: solid; }
+}
+.pcf-footer { flex-shrink: 0; }
+
+
+// =============================================================================
+// HEADER — wordmark on a single line
+// =============================================================================
+.usa-header--basic {
+  // Desktop only: below it the logo must keep flex: 1 so the menu button
+  // sits at the right edge.
+  .usa-logo {
+    @include at-media("desktop") {
+      flex: 0 1 auto;
+      max-width: none;
+    }
+  }
+  .usa-logo__text {
+    @include u-font("sans", "md");
+    white-space: nowrap;
+
+    @include at-media("mobile-lg") {
+      @include u-font("sans", "lg");
+    }
+
+    a {
+      display: inline-flex;
+      align-items: center;
+      min-height: $pcf-target;
+    }
+  }
+
+  // USWDS ships nav links at grade 60; AAA on white needs grade 70.
+  .usa-nav__primary > .usa-nav__primary-item > a {
+    color: color("base-darker");
+    min-height: $pcf-target;
+    display: flex;
+    align-items: center;
+
+    &:hover,
+    &.usa-current { color: color("primary"); }
+  }
+}
+
+.usa-skipnav { min-height: $pcf-target; }
+
+
+// =============================================================================
+// NOTICE — one static line; the USWDS banner is reserved for government sites
+// =============================================================================
+.pcf-notice {
+  background: color("base-lightest");
+
+  .grid-container { max-width: 64rem; }
+
+  &__text {
+    @include u-font("sans", "3xs");
+    line-height: 1.5;
+    color: color("ink");
+    margin: 0;
+    padding: units(1) 0;
+    display: flex;
+    align-items: center;
+    gap: units(1);
+  }
+
+  &__flag {
+    flex: none;
+    width: 1rem;
+    height: auto;
+  }
+}
+
+
+// =============================================================================
+// HERO — title and one-sentence lede
+// =============================================================================
+.pcf-hero {
+  padding: units(4) 0;
+
+  @include at-media("tablet") {
+    padding: units(6) 0;
+  }
+
+  .grid-container { max-width: 64rem; }
+
+  &__title {
+    @include u-font("sans", "xl");
+    font-weight: 700;
+    line-height: 1.2;
+    color: color("ink");
+    margin: 0 0 units(2);
+    max-width: 40rem;
+    text-wrap: balance;
+
+    @include at-media("tablet") {
+      @include u-font("sans", "2xl");
+      line-height: 1.15;
+    }
+  }
+
+  &__lede {
+    @include u-font("sans", "md");
+    @include u-measure(4);
+    line-height: 1.5;
+    color: color("base-darker");
+    margin: 0;
+  }
+}
+
+
+// =============================================================================
+// TRIAGE (home) + PAGE HEADER (jurisdiction pages)
+// =============================================================================
+.pcf-triage {
+  max-width: 48rem;
+
+  &__who {
+    @include u-font("sans", "md");
+    font-weight: 700;
+    line-height: 1.3;
+    color: color("ink");
+    margin: units(4) 0 units(1);
+  }
+
+  &__list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+
+    li { border-top: 1px solid color("base-lighter"); }
+
+    a {
+      @include u-font("sans", "sm");
+      display: flex;
+      align-items: center;
+      min-height: $pcf-target;
+      padding: units(1) 0;
+      line-height: 1.5;
+    }
+  }
+
+  // One concrete case under a line, so the reader can recognize their own.
+  &__example {
+    @include u-font("sans", "2xs");
+    line-height: 1.5;
+    color: color("base-darker");
+    margin: 0 0 units(1.5);
+  }
+}
+
+.pcf-page-header {
+  padding: units(4) 0;
+  border-bottom: 1px solid color("base-lighter");
+
+  @include at-media("tablet") {
+    padding: units(6) 0;
+  }
+
+  .grid-container { max-width: 64rem; }
+
+  &__title {
+    @include u-font("sans", "2xl");
+    font-weight: 700;
+    line-height: 1.15;
+    color: color("ink");
+    margin: 0 0 units(2);
+  }
+
+  &__lede {
+    @include u-font("sans", "md");
+    max-width: 48rem;
+    text-wrap: balance;
+    line-height: 1.5;
+    color: color("base-darker");
+    margin: 0;
+  }
+}
+
+// Page body: one column of sections under the page header.
+.pcf-page-body {
+  @include grid-container;
+  max-width: 64rem;
+
+  .pcf-section:first-child { border-top: 0; }
+
+  .pcf-section .grid-container {
+    max-width: none;
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
+
+
+// =============================================================================
+// SECTION — vertical rhythm + hairline rule above each
+// =============================================================================
+.pcf-section {
+  padding: units(4) 0;
+  border-top: 1px solid color("base-lighter");
+
+  @include at-media("tablet") {
+    padding: units(5) 0;
+  }
+
+  // Constrain the section's content column to a focused reading band,
+  // centered on the page. Section dividers (border-top above) stay full
+  // viewport width as page-level architectural rules.
+  .grid-container {
+    max-width: 64rem;
+  }
+}
+
+.pcf-heading {
+  @include u-font("sans", "lg");
+  line-height: 1.2;
+  margin: 0 0 units(2);
+  font-weight: 700;
+  color: color("ink");
+  max-width: 32rem;
+  text-wrap: balance;
+}
+
+.pcf-prose {
+  @include u-font("sans", "sm");
+  color: color("ink");
+  @include u-measure(5);
+  line-height: 1.6;
+  margin: 0;
+
+  + .pcf-prose,
+  &--follow {
+    margin-top: units(2);
+  }
+}
+
+
+// =============================================================================
+// GROUNDS — plain statement, then the law
+// =============================================================================
+.pcf-grounds {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  max-width: 48rem;
+
+  &__item {
+    padding: units(3) 0;
+    border-top: 1px solid color("base-lighter");
+  }
+
+  &__desc {
+    @include u-font("sans", "sm");
+    color: color("ink");
+    @include u-measure(5);
+    line-height: 1.5;
+    margin: 0 0 units(1);
+  }
+
+  &__note {
+    @include u-font("sans", "sm");
+    color: color("ink");
+    @include u-measure(5);
+    line-height: 1.5;
+    margin: 0 0 units(1);
+  }
+
+  &__cite {
+    @include u-font("sans", "2xs");
+    color: color("base-darker");
+    line-height: 1.5;
+    margin: 0;
+    text-wrap: balance;
+
+    cite { font-style: italic; }
+  }
+}
+
+
+// =============================================================================
+// STEPS — labeled procedural steps (Procedure section)
+// =============================================================================
+.pcf-steps {
+  margin: 0;
+  padding: 0;
+  max-width: 48rem;
+
+  &__row {
+    padding: units(1.5) 0;
+    border-top: 1px solid color("base-lighter");
+
+    @include at-media("tablet") {
+      display: grid;
+      grid-template-columns: 7rem 1fr;
+      column-gap: units(4);
+    }
+  }
+
+  &__term {
+    @include u-font("mono", "2xs");
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    color: color("base-darker");
+    font-weight: 700;
+    margin: 0 0 units("05");
+
+    @include at-media("tablet") {
+      margin-bottom: 0;
+    }
+  }
+
+  &__def {
+    @include u-font("sans", "sm");
+    color: color("ink");
+    @include u-measure(5);
+    line-height: 1.55;
+    margin: 0;
+  }
+
+  // Abbreviations — terms keep their own capitalization
+  &--plain &__term {
+    text-transform: none;
+    letter-spacing: 0;
+  }
+
+  &--plain &__row {
+    @include at-media("tablet") {
+      grid-template-columns: 10rem 1fr;
+    }
+  }
+
+  // Numbered steps — the number rides on the term.
+  &--ordered {
+    list-style: none;
+    counter-reset: pcf-step;
+  }
+
+  &--ordered &__row { counter-increment: pcf-step; }
+
+  &--ordered &__term::before { content: counter(pcf-step) ". "; }
+}
+
+
+// =============================================================================
+// GAPS — what the reader saw, plain statement, authority
+// =============================================================================
+.pcf-gaps {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  max-width: 48rem;
+}
+
+.pcf-gap {
+  padding: units(3) 0;
+  border-top: 1px solid color("base-lighter");
+
+  &:first-child {
+    border-top: 0;
+    padding-top: 0;
+  }
+
+  &__name {
+    @include u-font("sans", "md");
+    font-weight: 700;
+    line-height: 1.3;
+    color: color("ink");
+    margin: 0 0 units("05");
+  }
+
+  &__body {
+    @include u-font("sans", "sm");
+    @include u-measure(5);
+    color: color("ink");
+    line-height: 1.5;
+    margin: 0 0 units(1);
+  }
+
+  &__authority {
+    @include u-font("sans", "2xs");
+    color: color("base-darker");
+    line-height: 1.5;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  &__case { font-style: italic; }
+}
+
+
+// =============================================================================
+// LIST — principles
+// =============================================================================
+.pcf-list {
+  list-style: decimal;
+  @include u-measure(5);
+  padding-left: units(4);
+  margin: 0;
+
+  > li {
+    @include u-font("sans", "sm");
+    color: color("ink");
+    line-height: 1.55;
+    margin-bottom: units(2);
+    padding-left: units(1);
+
+    &::marker {
+      font-family: family("mono");
+      color: color("primary");
+      font-weight: 700;
+    }
+
+    &:last-child { margin-bottom: 0; }
+  }
+}
+
+
+// =============================================================================
+// RESOURCES — link list
+// =============================================================================
+.pcf-resources {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  max-width: 44rem;
+
+  > li {
+    @include u-font("sans", "sm");
+    line-height: 1.5;
+    padding: 0;
+    border-top: 1px solid color("base-lighter");
+
+    &:last-child { border-bottom: 1px solid color("base-lighter"); }
+  }
+
+  a {
+    display: inline-flex;
+    align-items: center;
+    min-height: $pcf-target;
+    padding: units(1) 0;
+  }
+}
+
+
+// =============================================================================
+// FOOTER — one quiet row that mirrors the notice bar at the top
+// =============================================================================
+.pcf-footer {
+  background: color("base-lightest");
+  padding: units(2) 0;
+
+  .grid-container {
+    max-width: 64rem;
+
+    @include at-media("tablet") {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: units(4);
+    }
+  }
+
+  &__links {
+    @include u-font("sans", "2xs");
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    column-gap: units(3);
+
+    a {
+      display: inline-flex;
+      align-items: center;
+      min-height: $pcf-target;
+      color: color("ink");
+    }
+  }
+
+  &__reviewed {
+    @include u-font("sans", "2xs");
+    color: color("base-darker");
+    line-height: 1.5;
+    margin: 0;
+    flex: none;
+  }
+}
+
+
+// =============================================================================
+// PRINT
+// =============================================================================
+@media print {
+  .pcf-notice,
+  .usa-header,
+  .pcf-footer,
+  .usa-skipnav,
+  .pcf-hero,
+  nav {
+    display: none !important;
+  }
+
+  html, body {
+    background: white !important;
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+
+  main { flex: none; padding: 0 !important; }
+
+  a { color: black !important; text-decoration: underline !important; }
+
+  @page { size: letter; margin: 1in; }
+
+  h1, h2, h3, h4 { break-after: avoid; }
+  p, li { orphans: 3; widows: 3; }
+
+  .pcf-section { break-inside: avoid; }
+}
+
+
+// =============================================================================
+// REDUCED MOTION
+// =============================================================================
+@media (prefers-reduced-motion: reduce) {
+  * { transition: none !important; }
+}

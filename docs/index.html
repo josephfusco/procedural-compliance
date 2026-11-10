@@ -3,21 +3,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="An open framework for documenting procedural compliance in courts.">
-    <title>Procedural Compliance Framework</title>
+    <meta name="description" content="Court procedure, plainly stated: Article 78 in New York State and mandamus in federal court. The grounds, the clock, the court, and the record discipline that survives review. Educational. Not legal advice.">
+    <title>Procedural Compliance — Court procedure, plainly stated</title>
 
-    <!-- Favicon -->
     <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>⚖️</text></svg>">
 
-    <!-- Google Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Source+Sans+Pro:wght@400;600;700&display=swap" rel="stylesheet">
+    <meta property="og:title" content="Procedural Compliance — Court procedure, plainly stated">
+    <meta property="og:description" content="New York State Article 78 and federal mandamus procedure, plainly stated. Educational. Not legal advice.">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://proceduralcompliance.org/">
 
-    <!-- Styles -->
     <link rel="stylesheet" href="/styles.css">
+    <script src="/assets/js/uswds-init.min.js"></script>
 
-    <!-- Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-N6B94DSFZS"></script>
     <script>
       window.dataLayer = window.dataLayer || [];
@@ -25,115 +23,102 @@
       gtag('js', new Date());
       gtag('config', 'G-N6B94DSFZS');
     </script>
+
 </head>
-<body class="bg-white">
-    <!-- Government Banner -->
-    <div class="gov-banner">
-        <div class="container mx-auto px-4">
-            <div class="flex items-center gap-2">
-                <img src="/us_flag_small.png" class="gov-banner-flag" alt="U.S. flag">
-                <span>An open framework for documenting procedural compliance · Not legal advice</span>
-            </div>
-        </div>
+<body>
+    <a class="usa-skipnav" href="#main-content">Skip to main content</a>
+
+    <div class="pcf-notice">
+      <div class="grid-container">
+        <p class="pcf-notice__text"><img class="pcf-notice__flag" src="/assets/img/us_flag_small.png" alt="United States" width="16" height="11" />Not legal advice. Not a government site.</p>
+      </div>
     </div>
 
-    <!-- Header / Navigation -->
-    <header class="border-b border-gray-200 bg-white">
-        <div class="max-w-5xl mx-auto px-4 py-4">
-            <div class="flex items-center justify-between">
-                <!-- Logo -->
-                <div class="flex items-center gap-3">
-                    <span class="text-2xl">⚖️</span>
-                    <h1 class="text-xl font-semibold">
-                        <a href="/" class="hover:text-gov-blue transition-colors">Procedural Compliance Framework</a>
-                    </h1>
-                </div>
-
-                <!-- Navigation -->
-                <nav class="hidden md:flex items-center gap-6">
-                    <a href="#templates" class="text-gray-700 hover:text-gray-900 transition-colors">Templates</a>
-                    <a href="https://github.com/josephfusco/procedural-compliance" target="_blank" rel="noopener noreferrer" class="text-gray-700 hover:text-gray-900 transition-colors">GitHub</a>
-                </nav>
-
-            </div>
+    <div class="usa-overlay"></div>
+    <header class="usa-header usa-header--basic">
+      <div class="usa-nav-container">
+        <div class="usa-navbar">
+          <div class="usa-logo" id="basic-logo">
+            <em class="usa-logo__text">
+              <a href="/" title="Procedural Compliance">Procedural Compliance</a>
+            </em>
+          </div>
+          <button type="button" class="usa-menu-btn">Menu</button>
         </div>
+        <nav aria-label="Primary navigation" class="usa-nav">
+          <button type="button" class="usa-nav__close">
+            <img src="/assets/img/usa-icons/close.svg" role="img" alt="Close" />
+          </button>
+          <ul class="usa-nav__primary usa-accordion">
+            <li class="usa-nav__primary-item">
+              <a class="usa-nav__link" href="/new-york/"><span>New York State</span></a>
+            </li>
+            <li class="usa-nav__primary-item">
+              <a class="usa-nav__link" href="/federal/"><span>Federal</span></a>
+            </li>
+          </ul>
+        </nav>
+      </div>
     </header>
 
-    <!-- Main Content -->
-    <main>
-        <!-- Hero Section -->
-        <section class="py-16 md:py-24 px-4 bg-[#fdf5ea]">
-            <p class="hero-text">
-                <em>We the People</em> establish this framework to document the procedure by which rights become remedy. Courts shall provide written findings. Clerks shall maintain faithful records. Counsel shall fulfill statutory duty. When procedure fails, liberty fails. We publish openly that all may enforce the law's promise.
-            </p>
-            <p class="text-center text-brand-gold text-sm font-semibold mt-8">4 Templates Available</p>
-        </section>
 
-        <!-- Templates Section -->
-        <section id="templates" class="py-6 px-4">
-            <div class="max-w-3xl mx-auto">
-                <!-- Template List -->
-                <div class="space-y-1">
-                    <!-- Notice of Appeal -->
-                    <a href="/notice-of-appeal/" class="block px-4 py-4 rounded-md hover:bg-gray-50 transition-colors">
-                        <div class="flex items-start justify-between">
-                            <div class="flex-1">
-                                <h3 class="text-xl font-semibold mb-1 text-gray-900">Notice of Appeal</h3>
-                                <p class="text-sm text-gray-600">CPLR §5515 - Appellate Procedure</p>
-                            </div>
-                            <span class="jurisdiction-badge jurisdiction-ny ml-4">NY</span>
-                        </div>
-                    </a>
-
-                    <!-- Article 78 Mandamus -->
-                    <a href="/article78-mandamus/" class="block px-4 py-4 rounded-md hover:bg-gray-50 transition-colors">
-                        <div class="flex items-start justify-between">
-                            <div class="flex-1">
-                                <h3 class="text-xl font-semibold mb-1 text-gray-900">Article 78 Mandamus</h3>
-                                <p class="text-sm text-gray-600">CPLR §7803(1) - Compel Ministerial Duty</p>
-                            </div>
-                            <span class="jurisdiction-badge jurisdiction-ny ml-4">NY</span>
-                        </div>
-                    </a>
-
-                    <!-- Federal Notice of Appeal -->
-                    <a href="/federal-notice-of-appeal/" class="block px-4 py-4 rounded-md hover:bg-gray-50 transition-colors">
-                        <div class="flex items-start justify-between">
-                            <div class="flex-1">
-                                <h3 class="text-xl font-semibold mb-1 text-gray-900">Federal Notice of Appeal</h3>
-                                <p class="text-sm text-gray-600">FRAP Rule 3 - Circuit Court Appeal</p>
-                            </div>
-                            <span class="jurisdiction-badge jurisdiction-federal ml-4">
-                <img src="/us_flag_small.png" class="w-4 h-3 mr-1" alt="">
-                Federal
-            </span>
-                        </div>
-                    </a>
-
-                    <!-- Federal Mandamus -->
-                    <a href="/federal-mandamus/" class="block px-4 py-4 rounded-md hover:bg-gray-50 transition-colors">
-                        <div class="flex items-start justify-between">
-                            <div class="flex-1">
-                                <h3 class="text-xl font-semibold mb-1 text-gray-900">Federal Mandamus</h3>
-                                <p class="text-sm text-gray-600">28 U.S.C. §1361 - Compel Federal Officer</p>
-                            </div>
-                            <span class="jurisdiction-badge jurisdiction-federal ml-4">
-                <img src="/us_flag_small.png" class="w-4 h-3 mr-1" alt="">
-                Federal
-            </span>
-                        </div>
-                    </a>
-                </div></div>
-            </div>
-        </section>
-
-        <!-- Footer Spacer -->
-        <div class="py-12"></div>
+    <main id="main-content">
+      <section class="pcf-hero" aria-labelledby="hero-heading">
+        <div class="grid-container">
+          <h1 id="hero-heading" class="pcf-hero__title">How to ask a court to make the government follow the law.</h1>
+        </div>
+      </section>
+      <section id="triage" class="pcf-section" aria-labelledby="triage-heading">
+        <div class="grid-container">
+          <h2 id="triage-heading" class="pcf-heading">What happened?</h2>
+          <div class="pcf-triage">
+            <h3 class="pcf-triage__who">A New York State or local agency, official, or court</h3>
+            <ul class="pcf-triage__list" role="list">
+              <li><a class="usa-link" href="/new-york/#mandamus-to-compel">An official must do something and has not done it.</a>
+                <p class="pcf-triage__example pcf-balance">Example: A clerk will not file a paper the rules say must be filed.</p></li>
+              <li><a class="usa-link" href="/new-york/#prohibition">A court or officer is acting without the power to act.</a>
+                <p class="pcf-triage__example pcf-balance">Example: A court keeps going with a case it has no power to hear.</p></li>
+              <li><a class="usa-link" href="/new-york/#mandamus-to-review">An agency made a decision the wrong way.</a>
+                <p class="pcf-triage__example pcf-balance">Example: An agency denied a license, permit, or benefit without a sound reason.</p></li>
+              <li><a class="usa-link" href="/new-york/#substantial-evidence">An agency held a hearing, and the proof does not back its ruling.</a>
+                <p class="pcf-triage__example pcf-balance">Example: A licensing board punished a professional after a hearing.</p></li>
+              <li><a class="usa-link" href="/new-york/problems/">A clerk or court did not follow the rules in your case.</a></li>
+            </ul>
+            <h3 class="pcf-triage__who">A federal agency, worker, or court</h3>
+            <ul class="pcf-triage__list" role="list">
+              <li><a class="usa-link" href="/federal/#mandamus-to-compel-a-federal-officer">A federal worker or agency must do something for you and has not done it.</a></li>
+              <li><a class="usa-link" href="/federal/#mandamus-to-a-lower-court">A federal trial court is doing something it has no power to do.</a></li>
+            </ul>
+          </div>
+        </div>
+      </section>
+      <section id="help" class="pcf-section" aria-labelledby="help-heading">
+        <div class="grid-container">
+          <h2 id="help-heading" class="pcf-heading">Free legal help.</h2>
+          <ul class="pcf-resources">
+            <li><a class="usa-link" href="https://www.lawhelpny.org/">LawHelpNY (lawhelpny.org)</a></li>
+            <li><a class="usa-link" href="https://www.nycourts.gov/help/representing-yourself-court/court-help-centers-community-organizations">New York State court help centers (nycourts.gov)</a></li>
+            <li><a class="usa-link" href="https://www.lsc.gov/about-lsc/what-legal-aid/i-need-legal-help">Find legal aid (lsc.gov)</a></li>
+          </ul>
+        </div>
+      </section>
     </main>
 
-    <!-- Minimal Footer -->
-    <footer class="border-t border-gray-200 py-8 text-center text-sm text-gray-600">
-        <p>Open source under MIT License · <a href="https://github.com/josephfusco/procedural-compliance" class="hover:text-gray-900 transition-colors">View on GitHub</a></p>
+    <footer class="pcf-footer">
+      <div class="grid-container">
+        <nav aria-label="Footer">
+          <ul class="pcf-footer__links">
+            <li><a class="usa-link" href="/about/">About</a></li>
+            <li><a class="usa-link" href="https://github.com/josephfusco/procedural-compliance">Source</a></li>
+            <li><a class="usa-link" href="https://github.com/josephfusco/procedural-compliance/issues/new">Suggest a correction</a></li>
+            <li><a class="usa-link" href="https://github.com/josephfusco/procedural-compliance/issues/new?labels=accessibility">Report an accessibility problem</a></li>
+          </ul>
+        </nav>
+        <p class="pcf-footer__reviewed">Last reviewed November 2026.</p>
+      </div>
     </footer>
+
+    <script src="/assets/js/uswds.min.js"></script>
+
 </body>
 </html>
