@@ -1,7 +1,13 @@
 @use "uswds-core" with (
   // Typography
   $theme-font-type-sans: "public-sans",
-  $theme-font-type-serif: "merriweather",
+  // One family: Public Sans in regular, italic, and bold. No serif, no mono,
+  // no light weight, so no @font-face rules or files for them.
+  $theme-font-type-serif: false,
+  $theme-font-type-mono: false,
+  $theme-font-role-code: "sans",
+  $theme-font-role-alt: "sans",
+  $theme-font-weight-light: false,
   $theme-font-role-ui: "sans",
   $theme-font-role-heading: "sans",
   $theme-font-role-body: "sans",

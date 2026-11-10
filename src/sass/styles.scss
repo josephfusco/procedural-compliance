@@ -1,3 +1,12 @@
 @forward "uswds-theme";
-@forward "uswds";
+
+// Only the USWDS packages the site uses.
+@forward "uswds-global";
+@forward "usa-layout-grid";
+@forward "usa-skipnav";
+@forward "usa-link";
+@forward "usa-breadcrumb";
+@forward "usa-sidenav";
+@forward "usa-in-page-navigation";
+
 @forward "uswds-theme-custom-styles";

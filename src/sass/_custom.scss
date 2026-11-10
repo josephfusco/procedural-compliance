@@ -476,7 +476,7 @@ p, li, dt, dd { text-wrap: pretty; }
   }
 
   &__term {
-    @include u-font("mono", "2xs");
+    @include u-font("sans", "2xs");
     text-transform: uppercase;
     letter-spacing: 0.04em;
     color: color("base-darker");
@@ -586,7 +586,6 @@ p, li, dt, dd { text-wrap: pretty; }
     padding-left: units(1);
 
     &::marker {
-      font-family: family("mono");
       color: color("primary");
       font-weight: 700;
     }
