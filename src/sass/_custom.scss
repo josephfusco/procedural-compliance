@@ -3,6 +3,9 @@
 // WCAG 2.5.5 (AAA) minimum pointer target; USWDS has no 44px spacing token.
 $pcf-target: 2.75rem;
 
+// Page width: room for the page tree, the content, and the heading list.
+$pcf-page: 80rem;
+
 // =============================================================================
 // LAYOUT — sticky footer
 // =============================================================================
@@ -23,6 +26,17 @@ p, li, dt, dd { text-wrap: pretty; }
 
 .pcf-balance { text-wrap: balance; }
 
+// A statute or rule cite: links to the section, reads as text.
+.pcf-cite {
+  color: inherit;
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 0.2em;
+
+  &:visited { color: inherit; }
+  &:hover { color: color("primary"); }
+}
+
 // A glossary term at its first use: links to its entry, reads as text.
 .pcf-term {
   color: inherit;
@@ -36,17 +50,45 @@ p, li, dt, dd { text-wrap: pretty; }
 
 
 // =============================================================================
-// HEADER — wordmark on a single line
+// HEADER — the site name, linking home
 // =============================================================================
-.usa-header--basic {
-  // Desktop only: below it the logo must keep flex: 1 so the menu button
-  // sits at the right edge.
-  .usa-logo {
-    @include at-media("desktop") {
-      flex: 0 1 auto;
-      max-width: none;
+.pcf-header {
+  border-bottom: 1px solid color("base-lighter");
+
+  .grid-container {
+    max-width: $pcf-page;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    column-gap: units(4);
+    padding-top: units(1);
+    padding-bottom: units(1);
+
+    @include at-media("tablet") {
+      padding-top: units(3);
+      padding-bottom: units(3);
     }
   }
+
+  &__name {
+    @include u-font("sans", "md");
+    font-weight: 700;
+    color: color("ink");
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    min-height: $pcf-target;
+
+    @include at-media("mobile-lg") {
+      @include u-font("sans", "lg");
+    }
+  }
+}
+
+
+// =============================================================================
+.usa-header--basic {
   .usa-logo__text {
     @include u-font("sans", "md");
     white-space: nowrap;
@@ -61,17 +103,6 @@ p, li, dt, dd { text-wrap: pretty; }
       min-height: $pcf-target;
     }
   }
-
-  // USWDS ships nav links at grade 60; AAA on white needs grade 70.
-  .usa-nav__primary > .usa-nav__primary-item > a {
-    color: color("base-darker");
-    min-height: $pcf-target;
-    display: flex;
-    align-items: center;
-
-    &:hover,
-    &.usa-current { color: color("primary"); }
-  }
 }
 
 .usa-skipnav { min-height: $pcf-target; }
@@ -83,7 +114,7 @@ p, li, dt, dd { text-wrap: pretty; }
 .pcf-notice {
   background: color("base-lightest");
 
-  .grid-container { max-width: 64rem; }
+  .grid-container { max-width: $pcf-page; }
 
   &__text {
     @include u-font("sans", "3xs");
@@ -114,7 +145,7 @@ p, li, dt, dd { text-wrap: pretty; }
     padding: units(6) 0;
   }
 
-  .grid-container { max-width: 64rem; }
+  .grid-container { max-width: $pcf-page; }
 
   &__title {
     @include u-font("sans", "xl");
@@ -189,7 +220,7 @@ p, li, dt, dd { text-wrap: pretty; }
     padding: units(6) 0;
   }
 
-  .grid-container { max-width: 64rem; }
+  .grid-container { max-width: $pcf-page; }
 
   &__title {
     @include u-font("sans", "2xl");
@@ -209,17 +240,85 @@ p, li, dt, dd { text-wrap: pretty; }
   }
 }
 
-// Page body: one column of sections under the page header.
-.pcf-page-body {
+// Inner pages: breadcrumbs, then the page tree (left), the content, and the
+// page's headings (right). Below desktop it is one column: content first,
+// then the page tree, as in the USWDS documentation template.
+.pcf-layout {
   @include grid-container;
-  max-width: 64rem;
+  max-width: $pcf-page;
+  display: flex;
+  flex-direction: column;
 
-  .pcf-section:first-child { border-top: 0; }
+  @include at-media("desktop") {
+    display: grid;
+    grid-template-columns: 13rem minmax(0, 1fr);
+    column-gap: units(6);
+    align-items: start;
 
-  .pcf-section .grid-container {
-    max-width: none;
+    &--toc { grid-template-columns: 13rem minmax(0, 1fr) 13rem; }
+  }
+
+  .usa-breadcrumb {
+    grid-column: 1 / -1;
     padding-left: 0;
     padding-right: 0;
+  }
+
+  &__pages {
+    order: 2;
+    padding: units(4) 0;
+
+    @include at-media("desktop") {
+      order: 0;
+      padding: units(2) 0 units(6);
+    }
+
+    // USWDS ships these at grade 60; AAA on white needs grade 70.
+    .usa-sidenav a:not(.usa-current) { color: color("base-darker"); }
+
+    .usa-sidenav a {
+      display: flex;
+      align-items: center;
+      min-height: $pcf-target;
+    }
+  }
+
+  &__main {
+    min-width: 0;
+
+    .grid-container {
+      max-width: none;
+      padding-left: 0;
+      padding-right: 0;
+    }
+
+    .pcf-page-header {
+      padding: units(2) 0 units(4);
+    }
+
+    .pcf-page-header + .pcf-section { border-top: 0; }
+  }
+
+  .usa-in-page-nav {
+    display: none;
+
+    @include at-media("desktop") {
+      display: block;
+      position: sticky;
+      top: units(3);
+      width: auto;
+      max-width: none;
+      margin: units(2) 0 0;
+      padding: 0;
+    }
+  }
+
+  .usa-in-page-nav__nav { padding: 0; }
+
+  .usa-in-page-nav__list a:not(.usa-button) {
+    display: flex;
+    align-items: center;
+    min-height: $pcf-target;
   }
 }
 
@@ -239,7 +338,7 @@ p, li, dt, dd { text-wrap: pretty; }
   // centered on the page. Section dividers (border-top above) stay full
   // viewport width as page-level architectural rules.
   .grid-container {
-    max-width: 64rem;
+    max-width: $pcf-page;
   }
 }
 
@@ -483,7 +582,7 @@ p, li, dt, dd { text-wrap: pretty; }
   padding: units(2) 0;
 
   .grid-container {
-    max-width: 64rem;
+    max-width: $pcf-page;
 
     @include at-media("tablet") {
       display: flex;
@@ -525,7 +624,9 @@ p, li, dt, dd { text-wrap: pretty; }
 // =============================================================================
 @media print {
   .pcf-notice,
-  .usa-header,
+  .pcf-header,
+  .usa-breadcrumb,
+  .usa-in-page-nav,
   .pcf-footer,
   .usa-skipnav,
   .pcf-hero,

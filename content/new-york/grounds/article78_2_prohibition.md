@@ -12,7 +12,7 @@ authority:
   case: "La Rocca v. Lane"
   cite: "37 N.Y.2d 575, 579 (1975)"
   quote: "Prohibition is never available merely to correct or prevent trial errors of substantive law or procedure, however grievous."
-happened: "A court or officer is acting without the power to act."
+happened: "A court or official is acting without the power to act."
 example: "A court keeps going with a case it has no power to hear."
-plain: "A court or officer is acting without the power to act. You ask the court to make it stop."
+plain: "A court or official is acting without the power to act. You ask the court to make it stop."
 ---

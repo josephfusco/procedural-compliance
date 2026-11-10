@@ -14,7 +14,6 @@
     <meta property="og:url" content="https://proceduralcompliance.org/new-york/problems/">
 
     <link rel="stylesheet" href="/styles.css">
-    <script src="/assets/js/uswds-init.min.js"></script>
 
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-N6B94DSFZS"></script>
     <script>
@@ -34,42 +33,42 @@
       </div>
     </div>
 
-    <div class="usa-overlay"></div>
-    <header class="usa-header usa-header--basic">
-      <div class="usa-nav-container">
-        <div class="usa-navbar">
-          <div class="usa-logo" id="basic-logo">
-            <em class="usa-logo__text">
-              <a href="/" title="Procedural Compliance">Procedural Compliance</a>
-            </em>
-          </div>
-          <button type="button" class="usa-menu-btn">Menu</button>
-        </div>
-        <nav aria-label="Primary navigation" class="usa-nav">
-          <button type="button" class="usa-nav__close">
-            <img src="/assets/img/usa-icons/close.svg" role="img" alt="Close" />
-          </button>
-          <ul class="usa-nav__primary usa-accordion">
-            <li class="usa-nav__primary-item">
-              <a class="usa-nav__link usa-current" href="/new-york/" aria-current="page"><span>New York State</span></a>
-            </li>
-            <li class="usa-nav__primary-item">
-              <a class="usa-nav__link" href="/federal/"><span>Federal</span></a>
-            </li>
-          </ul>
-        </nav>
+    <header class="pcf-header">
+      <div class="grid-container">
+        <a class="pcf-header__name" href="/">Procedural Compliance</a>
       </div>
     </header>
 
 
     <main id="main-content">
+      <div class="pcf-layout pcf-layout--toc">
+        <nav class="usa-breadcrumb" aria-label="Breadcrumbs">
+          <ol class="usa-breadcrumb__list">
+            <li class="usa-breadcrumb__list-item"><a href="/" class="usa-breadcrumb__link"><span>Home</span></a></li>
+            <li class="usa-breadcrumb__list-item"><a href="/new-york/" class="usa-breadcrumb__link"><span>New York State</span></a></li>
+            <li class="usa-breadcrumb__list-item usa-current" aria-current="page"><span>What went wrong?</span></li>
+          </ol>
+        </nav>
+        <nav class="pcf-layout__pages" aria-label="Pages">
+          <ul class="usa-sidenav">
+            <li class="usa-sidenav__item"><a href="/new-york/" class="usa-current">New York State</a>
+              <ul class="usa-sidenav__sublist">
+                <li class="usa-sidenav__item"><a href="/new-york/problems/" class="usa-current" aria-current="page">What went wrong?</a></li>
+              </ul>
+            </li>
+            <li class="usa-sidenav__item"><a href="/federal/">Federal</a>
+            </li>
+            <li class="usa-sidenav__item"><a href="/about/">About</a>
+            </li>
+          </ul>
+        </nav>
+        <div id="page-sections" class="pcf-layout__main">
       <section class="pcf-page-header" aria-labelledby="page-heading">
         <div class="grid-container">
           <h1 id="page-heading" class="pcf-page-header__title">What went wrong?</h1>
-          <p class="pcf-page-header__lede"><strong><a class="usa-link" href="/new-york/">New York State</a>.</strong> Where Article 78 cases often go wrong.</p>
+          <p class="pcf-page-header__lede">Where Article 78 cases often go wrong.</p>
         </div>
       </section>
-      <div class="pcf-page-body">
       <section id="gaps" class="pcf-section" aria-labelledby="page-heading">
         <div class="grid-container">
           <ol class="pcf-gaps" role="list">
@@ -77,7 +76,7 @@
               <h2 class="pcf-gap__name">The clerk would not take your papers.</h2>
               <p class="pcf-gap__body">A clerk must accept a petition that meets the written rules. Some clerks turn petitions away for reasons the rules do not list. With no case on file, there is no <a class="pcf-term" href="#term-record">record</a> to show a judge what went wrong.</p>
               <ul class="pcf-gap__authority">
-                <li>CPLR §304 · 22 NYCRR §1250.4</li>
+                <li><a class="pcf-cite" href="https://www.nysenate.gov/legislation/laws/CVP/304">CPLR §304</a> · 22 NYCRR §1250.4</li>
                 <li><cite class="pcf-gap__case">Brusco v. Braun</cite>, 84 N.Y.2d 674 (1994)</li>
                 <li><cite class="pcf-gap__case">Klostermann v. Cuomo</cite>, 61 N.Y.2d 525, 540–41 (1984)</li>
                 <li><cite class="pcf-gap__case">Matter of Council of City of N.Y. v. Bloomberg</cite>, 6 N.Y.3d 380 (2006)</li>
@@ -87,8 +86,8 @@
               <h2 class="pcf-gap__name">Your paper was rejected over its sworn statement.</h2>
               <p class="pcf-gap__body">If the sworn statement on a paper has a flaw, the law says the other side must object fast and name the flaw. Clerks and court staff sometimes reject the paper on their own. Then there is no objection on file for you to appeal.</p>
               <ul class="pcf-gap__authority">
-                <li>CPLR §7804(d)</li>
-                <li>CPLR §3022</li>
+                <li><a class="pcf-cite" href="https://www.nysenate.gov/legislation/laws/CVP/7804">CPLR §7804(d)</a></li>
+                <li><a class="pcf-cite" href="https://www.nysenate.gov/legislation/laws/CVP/3022">CPLR §3022</a></li>
                 <li><cite class="pcf-gap__case">Matter of Miller v. Bd. of Assessors</cite>, 91 N.Y.2d 82 (1997)</li>
                 <li><cite class="pcf-gap__case">Lentlie v. Egan</cite>, 94 A.D.2d 839 (3d Dep't 1983), aff'd 61 N.Y.2d 874 (1984)</li>
               </ul>
@@ -97,8 +96,8 @@
               <h2 class="pcf-gap__name">Your case against a judge was sent to the wrong court.</h2>
               <p class="pcf-gap__body">A case against a <a class="pcf-term" href="#term-supreme-court">Supreme Court</a> or County Court judge must start in the <a class="pcf-term" href="#term-appellate-division">Appellate Division</a>. Clerks sometimes send it back to Supreme Court, which is the wrong place. That moves your filing date, and the four-month limit is counted from it.</p>
               <ul class="pcf-gap__authority">
-                <li>CPLR §506(b)(1)</li>
-                <li>CPLR §7804(b)</li>
+                <li><a class="pcf-cite" href="https://www.nysenate.gov/legislation/laws/CVP/506">CPLR §506(b)(1)</a></li>
+                <li><a class="pcf-cite" href="https://www.nysenate.gov/legislation/laws/CVP/7804">CPLR §7804(b)</a></li>
                 <li><cite class="pcf-gap__case">Nolan v. Lungen</cite>, 61 N.Y.2d 788 (1984)</li>
               </ul>
             </li>
@@ -106,8 +105,8 @@
               <h2 class="pcf-gap__name">Your case was thrown out over how you served the papers.</h2>
               <p class="pcf-gap__body">Article 78 has its own rule for giving papers to the other side: at least twenty days before the court date. Courts sometimes use rules meant for other kinds of cases. A case can be thrown out even though the Article 78 rule was met.</p>
               <ul class="pcf-gap__authority">
-                <li>CPLR §7804(c)</li>
-                <li>CPLR §306-b</li>
+                <li><a class="pcf-cite" href="https://www.nysenate.gov/legislation/laws/CVP/7804">CPLR §7804(c)</a></li>
+                <li><a class="pcf-cite" href="https://www.nysenate.gov/legislation/laws/CVP/306-B">CPLR §306-b</a></li>
                 <li><cite class="pcf-gap__case">Matter of Common Council of Albany v. Town Bd. of Bethlehem</cite>, 144 A.D.2d 215 (3d Dep't 1988)</li>
                 <li><cite class="pcf-gap__case">Matter of Vetrone v. Mackin</cite>, 50 A.D.3d 1589 (4th Dep't 2008)</li>
               </ul>
@@ -116,8 +115,8 @@
               <h2 class="pcf-gap__name">The court decided without a hearing.</h2>
               <p class="pcf-gap__body">When the two sides disagree about a fact that matters, the law says the court must hold a hearing right away. Courts sometimes decide on the papers alone and skip the hearing. Later courts then treat the facts as if they were decided against you.</p>
               <ul class="pcf-gap__authority">
-                <li>CPLR §7804(h)</li>
-                <li>CPLR §409(b)</li>
+                <li><a class="pcf-cite" href="https://www.nysenate.gov/legislation/laws/CVP/7804">CPLR §7804(h)</a></li>
+                <li><a class="pcf-cite" href="https://www.nysenate.gov/legislation/laws/CVP/409">CPLR §409(b)</a></li>
                 <li><cite class="pcf-gap__case">Matter of Kickertz v. New York Univ.</cite>, 25 N.Y.3d 942 (2015)</li>
               </ul>
             </li>
@@ -125,7 +124,7 @@
               <h2 class="pcf-gap__name">The court asked whether the refusal made sense.</h2>
               <p class="pcf-gap__body">When an official has no choice but to act, the court should order the act. It should not ask whether the refusal made sense. Courts sometimes use that softer test anyway and deny the order.</p>
               <ul class="pcf-gap__authority">
-                <li>CPLR §7803(1) · §7803(3)</li>
+                <li><a class="pcf-cite" href="https://www.nysenate.gov/legislation/laws/CVP/7803">CPLR §7803(1)</a> · <a class="pcf-cite" href="https://www.nysenate.gov/legislation/laws/CVP/7803">§7803(3)</a></li>
                 <li><cite class="pcf-gap__case">Klostermann v. Cuomo</cite>, 61 N.Y.2d 525 (1984)</li>
                 <li><cite class="pcf-gap__case">Brusco v. Braun</cite>, 84 N.Y.2d 674 (1994)</li>
                 <li><cite class="pcf-gap__case">Matter of Council of City of N.Y. v. Bloomberg</cite>, 6 N.Y.3d 380 (2006)</li>
@@ -136,7 +135,7 @@
               <h2 class="pcf-gap__name">Your case was thrown out for a missing record.</h2>
               <p class="pcf-gap__body">The agency or official you are suing must file the full record of what happened. You do not have to. Courts sometimes throw a case out for a missing record that only the other side can supply.</p>
               <ul class="pcf-gap__authority">
-                <li>CPLR §7804(e)</li>
+                <li><a class="pcf-cite" href="https://www.nysenate.gov/legislation/laws/CVP/7804">CPLR §7804(e)</a></li>
                 <li><cite class="pcf-gap__case">Matter of Smith v. Town of Plattekill</cite>, 169 A.D.3d 1265 (3d Dep't 2019)</li>
                 <li><cite class="pcf-gap__case">Matter of Kaur v. New York State Urban Dev. Corp.</cite>, 15 N.Y.3d 235 (2010)</li>
               </ul>
@@ -147,7 +146,7 @@
       <section id="void" class="pcf-section" aria-labelledby="void-heading">
         <div class="grid-container">
           <h2 id="void-heading" class="pcf-heading">Void orders.</h2>
-          <p class="pcf-prose">A <a class="pcf-term" href="#term-void">void</a> order is one the court had no power to make. It has no legal force, and you can attack it at any time. The usual first step is a motion in the court that made the order (<a class="pcf-term" href="#term-cplr">CPLR</a> &sect;5015(a)). If a court keeps acting without power, Article 78 <a class="pcf-term" href="#term-prohibition">prohibition</a> can stop it (&sect;7803(2)).</p>
+          <p class="pcf-prose">A <a class="pcf-term" href="#term-void">void</a> order is one the court had no power to make. It has no legal force, and you can attack it at any time. The usual first step is a motion in the court that made the order (<a class="pcf-cite" href="https://www.nysenate.gov/legislation/laws/CVP/5015">CPLR &sect;5015(a)</a>). If a court keeps acting without power, Article 78 <a class="pcf-term" href="#term-prohibition">prohibition</a> can stop it (<a class="pcf-cite" href="https://www.nysenate.gov/legislation/laws/CVP/7803">&sect;7803(2)</a>).</p>
         </div>
       </section>
       <section id="help" class="pcf-section" aria-labelledby="help-heading">
@@ -173,7 +172,7 @@
             </div>
             <div class="pcf-steps__row" id="term-prohibition">
               <dt class="pcf-steps__term">Prohibition</dt>
-              <dd class="pcf-steps__def pcf-balance">A court order that tells a court or officer to stop acting without power.</dd>
+              <dd class="pcf-steps__def pcf-balance">A court order that tells a court or official to stop acting without power.</dd>
             </div>
             <div class="pcf-steps__row" id="term-record">
               <dt class="pcf-steps__term">Record</dt>
@@ -190,6 +189,8 @@
           </dl>
         </div>
       </section>
+        </div>
+        <aside class="usa-in-page-nav" data-title-text="On this page" data-title-heading-level="h2" data-heading-elements="h2" data-main-content-selector="#page-sections" data-scroll-offset="0" data-root-margin="0px 0px -50% 0px" data-threshold="1"></aside>
       </div>
     </main>
 
@@ -206,7 +207,6 @@
         <p class="pcf-footer__reviewed">Last reviewed November 2026.</p>
       </div>
     </footer>
-
     <script src="/assets/js/uswds.min.js"></script>
 
 </body>

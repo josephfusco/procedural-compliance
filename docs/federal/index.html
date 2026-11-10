@@ -14,7 +14,6 @@
     <meta property="og:url" content="https://proceduralcompliance.org/federal/">
 
     <link rel="stylesheet" href="/styles.css">
-    <script src="/assets/js/uswds-init.min.js"></script>
 
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-N6B94DSFZS"></script>
     <script>
@@ -34,55 +33,54 @@
       </div>
     </div>
 
-    <div class="usa-overlay"></div>
-    <header class="usa-header usa-header--basic">
-      <div class="usa-nav-container">
-        <div class="usa-navbar">
-          <div class="usa-logo" id="basic-logo">
-            <em class="usa-logo__text">
-              <a href="/" title="Procedural Compliance">Procedural Compliance</a>
-            </em>
-          </div>
-          <button type="button" class="usa-menu-btn">Menu</button>
-        </div>
-        <nav aria-label="Primary navigation" class="usa-nav">
-          <button type="button" class="usa-nav__close">
-            <img src="/assets/img/usa-icons/close.svg" role="img" alt="Close" />
-          </button>
-          <ul class="usa-nav__primary usa-accordion">
-            <li class="usa-nav__primary-item">
-              <a class="usa-nav__link" href="/new-york/"><span>New York State</span></a>
-            </li>
-            <li class="usa-nav__primary-item">
-              <a class="usa-nav__link usa-current" href="/federal/" aria-current="page"><span>Federal</span></a>
-            </li>
-          </ul>
-        </nav>
+    <header class="pcf-header">
+      <div class="grid-container">
+        <a class="pcf-header__name" href="/">Procedural Compliance</a>
       </div>
     </header>
 
 
     <main id="main-content">
+      <div class="pcf-layout pcf-layout--toc">
+        <nav class="usa-breadcrumb" aria-label="Breadcrumbs">
+          <ol class="usa-breadcrumb__list">
+            <li class="usa-breadcrumb__list-item"><a href="/" class="usa-breadcrumb__link"><span>Home</span></a></li>
+            <li class="usa-breadcrumb__list-item usa-current" aria-current="page"><span>Federal</span></li>
+          </ol>
+        </nav>
+        <nav class="pcf-layout__pages" aria-label="Pages">
+          <ul class="usa-sidenav">
+            <li class="usa-sidenav__item"><a href="/new-york/">New York State</a>
+              <ul class="usa-sidenav__sublist">
+                <li class="usa-sidenav__item"><a href="/new-york/problems/">What went wrong?</a></li>
+              </ul>
+            </li>
+            <li class="usa-sidenav__item"><a href="/federal/" class="usa-current" aria-current="page">Federal</a>
+            </li>
+            <li class="usa-sidenav__item"><a href="/about/">About</a>
+            </li>
+          </ul>
+        </nav>
+        <div id="page-sections" class="pcf-layout__main">
       <section class="pcf-page-header" aria-labelledby="page-heading">
         <div class="grid-container">
           <h1 id="page-heading" class="pcf-page-header__title">Federal</h1>
-          <p class="pcf-page-header__lede"><strong>Mandamus.</strong> Compel a federal officer, agency, or lower court to do its duty.</p>
+          <p class="pcf-page-header__lede"><strong>Mandamus.</strong> Compel a federal official, agency, or lower court to do its duty.</p>
         </div>
       </section>
-      <div class="pcf-page-body">
       <section id="routes" class="pcf-section" aria-labelledby="routes-heading">
         <div class="grid-container">
           <h2 id="routes-heading" class="pcf-heading">What happened?</h2>
           <ul class="pcf-grounds" role="list">
             <li id="mandamus-to-compel-a-federal-officer" class="pcf-grounds__item">
-              <p class="pcf-grounds__desc">A federal worker or <a class="pcf-term" href="#term-agency">agency</a> must do a certain thing for you and has no choice about it. You have tried every other way to get it done. You ask a federal trial court to order it.</p>
+              <p class="pcf-grounds__desc">A federal official or <a class="pcf-term" href="#term-agency">agency</a> must do a certain thing for you and has no choice about it. You have tried every other way to get it done. You ask a federal trial court to order it.</p>
               <p class="pcf-grounds__note">This works only against the federal government. It does not work against a state court, a state clerk, or a state agency. For those, go to state court. In New York State, that is <a class="usa-link" href="/new-york/">Article 78</a>.</p>
-              <p class="pcf-grounds__cite">Mandamus to Compel a Federal Officer &middot; 28 U.S.C. §1361 &middot; <cite>Heckler v. Ringer</cite>, 466 U.S. 602, 616 (1984)</p>
+              <p class="pcf-grounds__cite">Mandamus to Compel a Federal Officer &middot; <a class="pcf-cite" href="https://www.law.cornell.edu/uscode/text/28/1361">28 U.S.C. §1361</a> &middot; <cite>Heckler v. Ringer</cite>, 466 U.S. 602, 616 (1984)</p>
             </li>
             <li id="mandamus-to-a-lower-court" class="pcf-grounds__item">
               <p class="pcf-grounds__desc pcf-balance">A federal trial court is doing something it has no power to do, and a later appeal cannot fix the harm. You ask the appeals court above it to step in.</p>
-              <p class="pcf-grounds__note">File your <a class="pcf-term" href="#term-petition">petition</a> with the clerk of the appeals court. Give a copy to every party and to the trial judge. The appeals court can say no without asking anyone to answer (<a class="pcf-term" href="#term-fed-r-app-p">Fed. R. App. P.</a> 21(a)(1),&nbsp;(b)(1)).</p>
-              <p class="pcf-grounds__cite">Mandamus to a Lower Court &middot; 28 U.S.C. §1651(a) · Fed. R. App. P. 21 &middot; <cite>Cheney v. United States District Court</cite>, 542 U.S. 367, 380–81 (2004)</p>
+              <p class="pcf-grounds__note">File your <a class="pcf-term" href="#term-petition">petition</a> with the clerk of the appeals court. Give a copy to every party and to the trial judge. The appeals court can say no without asking anyone to answer (<a class="pcf-cite" href="https://www.law.cornell.edu/rules/frap/rule_21">Fed. R. App. P. 21(a)(1)</a>,&nbsp;(b)(1)).</p>
+              <p class="pcf-grounds__cite">Mandamus to a Lower Court &middot; <a class="pcf-cite" href="https://www.law.cornell.edu/uscode/text/28/1651">28 U.S.C. §1651(a)</a> · <a class="pcf-cite" href="https://www.law.cornell.edu/rules/frap/rule_21">Fed. R. App. P. 21</a> &middot; <cite>Cheney v. United States District Court</cite>, 542 U.S. 367, 380–81 (2004)</p>
             </li>
           </ul>
         </div>
@@ -123,17 +121,8 @@
           </dl>
         </div>
       </section>
-      <section id="resources" class="pcf-section" aria-labelledby="resources-heading">
-        <div class="grid-container">
-          <h2 id="resources-heading" class="pcf-heading">Sources.</h2>
-          <ul class="pcf-resources">
-            <li><a class="usa-link" href="https://uscode.house.gov/">United States Code (uscode.house.gov)</a></li>
-            <li><a class="usa-link" href="https://www.law.cornell.edu/uscode/text/28/1361">28 U.S.C. &sect;1361 (law.cornell.edu)</a></li>
-            <li><a class="usa-link" href="https://www.law.cornell.edu/uscode/text/28/1651">28 U.S.C. &sect;1651 (law.cornell.edu)</a></li>
-            <li><a class="usa-link" href="https://www.law.cornell.edu/rules/frap/rule_21">Federal Rule of Appellate Procedure 21 (law.cornell.edu)</a></li>
-          </ul>
         </div>
-      </section>
+        <aside class="usa-in-page-nav" data-title-text="On this page" data-title-heading-level="h2" data-heading-elements="h2" data-main-content-selector="#page-sections" data-scroll-offset="0" data-root-margin="0px 0px -50% 0px" data-threshold="1"></aside>
       </div>
     </main>
 
@@ -150,7 +139,6 @@
         <p class="pcf-footer__reviewed">Last reviewed November 2026.</p>
       </div>
     </footer>
-
     <script src="/assets/js/uswds.min.js"></script>
 
 </body>

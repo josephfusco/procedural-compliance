@@ -43,7 +43,7 @@ const PRINCIPLES = [
 //
 // To add a state: add an entry here, put its frontmatter files under
 // content/<slug>/, and return its sections from `sections()`. The homepage
-// triage group, primary nav, and /<slug>/ page are generated from this list.
+// triage group, page tree, and /<slug>/ page are generated from this list.
 //
 // `who` heads the jurisdiction's group in the homepage triage and `help` lists
 // where to find a person. `lede` is the
@@ -56,12 +56,12 @@ const NY_GLOSSARY = [
         { term: "Contempt", body: "Disobeying or disrespecting a court." },
         { term: "Court of Appeals", body: "The highest court in New York State." },
         { term: "CPLR", body: "Civil Practice Law and Rules, the New York statute governing civil procedure." },
-        { term: "Jurisdiction", body: "The legal power of a court or officer to act in a matter." },
+        { term: "Jurisdiction", body: "The legal power of a court or official to act in a matter." },
         { term: "Mandamus", body: "A court order that tells an official to carry out a duty." },
         { term: "Notice of petition", body: "The paper that tells the other side about the case and the court date." },
         { term: "Order to show cause", body: "A paper a judge signs that sets a fast court date. It takes the place of a notice of petition when time is short." },
         { term: "Pell deference", body: "The practice, named for the <em>Pell</em> case, of leaving an agency&rsquo;s choice in place unless it is arbitrary and capricious." },
-        { term: "Prohibition", body: "A court order that tells a court or officer to stop acting without power." },
+        { term: "Prohibition", body: "A court order that tells a court or official to stop acting without power." },
         { term: "Record", body: "The papers and testimony the agency or court had in front of it when it decided." },
         { term: "Res judicata", body: "The rule that a matter already decided cannot be brought again." },
         { term: "Respondent", body: "The agency, official, or court the case is brought against." },
@@ -93,6 +93,7 @@ const JURISDICTIONS = [
             { text: 'LawHelpNY (lawhelpny.org)', href: 'https://www.lawhelpny.org/' },
             { text: 'New York State court help centers (nycourts.gov)', href: 'https://www.nycourts.gov/help/representing-yourself-court/court-help-centers-community-organizations' }
         ],
+        problemsHeading: 'What went wrong?',
         problems() {
             const gaps = loadGaps(path.join(CONTENT_DIR, this.slug, 'gaps'));
             const body = `${renderGapsSection(gaps)}
@@ -104,12 +105,12 @@ ${renderProseSection({
     ]
 })}`;
             return {
-                heading: 'What went wrong?',
+                heading: this.problemsHeading,
                 lede: 'Where Article 78 cases often go wrong.',
                 sections: `${withGlossary(body, NY_GLOSSARY, renderHelpSection(this.help))}`
             };
         },
-        lede: 'Challenge a New York state or local agency, officer, or court.',
+        lede: 'Challenge a New York state or local agency, official, or court.',
         description: 'Article 78 procedure for New York State, plainly stated. One proceeding, four grounds under CPLR §7803, the clock, the court, and the appellate-record discipline that survives review. Educational. Not legal advice.',
         routes() { return loadGrounds(path.join(CONTENT_DIR, this.slug, 'grounds')); },
         sections() {
@@ -131,12 +132,18 @@ ${renderProseSection({
 })}
 ${renderStepsSection({
     id: 'procedure',
-    heading: 'Steps.',
+    heading: 'What do you do?',
     ordered: true,
     steps: [
         { term: 'Record', body: 'Put every demand, refusal, and objection in writing, with the date and proof of receipt.' },
-        { term: 'Filing', body: 'File a notice of petition and a verified petition in Supreme Court, in the county CPLR &sect;506(b) names. If time is short, use an order to show cause.' },
-        { term: 'Service', body: 'Serve the other side at least twenty days before the court date (&sect;7804(c)). For a state body or officer, also serve the Attorney General, at the office in or nearest that county. For a member of a local body whose term has ended, serve the body (CPLR &sect;311).' },
+        { term: 'Filing', body: 'File a notice of petition and a verified petition in Supreme Court, in the county CPLR &sect;506(b) names. If time is short, use an order to show cause. <a class="usa-link" href="https://www.nycourts.gov/forms/">Court forms</a> and <a class="usa-link" href="https://iapps.courts.state.ny.us/nyscef/">e-filing</a> are online.' },
+        { term: 'Service', body: 'Serve the other side at least twenty days before the court date (&sect;7804(c)). For a state body or official, also serve the Attorney General, at the office in or nearest that county. For a member of a local body whose term has ended, serve the body (CPLR &sect;311).' }
+    ]
+})}
+${renderStepsSection({
+    id: 'next',
+    heading: 'What happens next?',
+    steps: [
         { term: 'Answer', body: 'The other side files a sworn answer and the certified record (&sect;7804(e)).' },
         { term: 'Transfer', body: 'Substantial-evidence cases (&sect;7803(4)) move to the Appellate Division, after the trial court rules on jurisdiction, the time limit, and res judicata (&sect;7804(g)).' }
     ]
@@ -162,25 +169,18 @@ ${renderProseSection({
         '<a class="usa-link" href="/new-york/problems/">Where Article 78 cases often go wrong.</a>'
     ]
 })}`;
-            return `${withGlossary(body, NY_GLOSSARY, renderHelpSection(this.help))}
-${renderResourcesSection([
-    { text: 'New York Civil Practice Law and Rules (nysenate.gov)', href: 'https://www.nysenate.gov/legislation/laws/CVP' },
-    { text: 'CPLR Article 78 (nysenate.gov)', href: 'https://www.nysenate.gov/legislation/laws/CVP/A78' },
-    { text: 'New York court rules (nycourts.gov)', href: 'https://www.nycourts.gov/rules/' },
-    { text: 'New York court forms (nycourts.gov)', href: 'https://www.nycourts.gov/forms/' },
-    { text: 'NYSCEF e-filing (courts.state.ny.us)', href: 'https://iapps.courts.state.ny.us/nyscef/' }
-])}`;
+            return `${withGlossary(body, NY_GLOSSARY, renderHelpSection(this.help))}`;
         }
     },
     {
         slug: 'federal',
         name: 'Federal',
         subject: 'Mandamus',
-        who: 'A federal agency, worker, or court',
+        who: 'A federal agency, official, or court',
         help: [
             { text: 'Find legal aid (lsc.gov)', href: 'https://www.lsc.gov/about-lsc/what-legal-aid/i-need-legal-help' }
         ],
-        lede: 'Compel a federal officer, agency, or lower court to do its duty.',
+        lede: 'Compel a federal official, agency, or lower court to do its duty.',
         description: 'Mandamus in federal court, plainly stated. Two routes: 28 U.S.C. §1361 against a federal officer or agency, and 28 U.S.C. §1651 with Fed. R. App. P. 21 against a lower court. Educational. Not legal advice.',
         routes() { return loadGrounds(path.join(CONTENT_DIR, this.slug, 'routes')); },
         sections() {
@@ -191,31 +191,78 @@ ${renderResourcesSection([
     grounds: routes
 })}
 `;
-            return `${withGlossary(body, FEDERAL_GLOSSARY, renderHelpSection(this.help))}
-${renderResourcesSection([
-    { text: 'United States Code (uscode.house.gov)', href: 'https://uscode.house.gov/' },
-    { text: '28 U.S.C. &sect;1361 (law.cornell.edu)', href: 'https://www.law.cornell.edu/uscode/text/28/1361' },
-    { text: '28 U.S.C. &sect;1651 (law.cornell.edu)', href: 'https://www.law.cornell.edu/uscode/text/28/1651' },
-    { text: 'Federal Rule of Appellate Procedure 21 (law.cornell.edu)', href: 'https://www.law.cornell.edu/rules/frap/rule_21' }
-])}`;
+            return `${withGlossary(body, FEDERAL_GLOSSARY, renderHelpSection(this.help))}`;
         }
     }
 ];
 
 // =============================================================================
-// SITE CHROME — nav generated from the jurisdiction registry
+// SITE CHROME — breadcrumbs and the page tree come from the jurisdiction registry
 // =============================================================================
-function renderPrimaryNav(current) {
-    const links = JURISDICTIONS.map(j => ({ href: `/${j.slug}/`, text: j.name, current: current === j.slug }));
-    return links.map(l => `            <li class="usa-nav__primary-item">
-              <a class="usa-nav__link${l.current ? ' usa-current' : ''}" href="${l.href}"${l.current ? ' aria-current="page"' : ''}><span>${l.text}</span></a>
-            </li>`).join('\n');
+const ABOUT = { href: '/about/', text: 'About' };
+
+function siteTree() {
+    return [
+        ...JURISDICTIONS.map(j => ({
+            href: `/${j.slug}/`,
+            text: j.name,
+            children: j.problems ? [{ href: `/${j.slug}/problems/`, text: j.problemsHeading }] : []
+        })),
+        { ...ABOUT, children: [] }
+    ];
 }
 
-function renderPage({ partials, current, title, subtitle, description, urlPath, main }) {
+function renderBreadcrumb(crumbs) {
+    const items = crumbs.map((c, i) => i < crumbs.length - 1
+        ? `            <li class="usa-breadcrumb__list-item"><a href="${c.href}" class="usa-breadcrumb__link"><span>${c.text}</span></a></li>`
+        : `            <li class="usa-breadcrumb__list-item usa-current" aria-current="page"><span>${c.text}</span></li>`).join('\n');
+    return `        <nav class="usa-breadcrumb" aria-label="Breadcrumbs">
+          <ol class="usa-breadcrumb__list">
+${items}
+          </ol>
+        </nav>`;
+}
+
+function renderSidenav(current) {
+    const link = (p, on) => `<a href="${p.href}"${on ? ' class="usa-current"' : ''}${p.href === current ? ' aria-current="page"' : ''}>${p.text}</a>`;
+    const items = siteTree().map(p => {
+        const sub = p.children.length ? `
+              <ul class="usa-sidenav__sublist">
+${p.children.map(c => `                <li class="usa-sidenav__item">${link(c, c.href === current)}</li>`).join('\n')}
+              </ul>` : '';
+        const on = p.href === current || p.children.some(c => c.href === current);
+        return `            <li class="usa-sidenav__item">${link(p, on)}${sub}
+            </li>`;
+    }).join('\n');
+    return `        <nav class="pcf-layout__pages" aria-label="Pages">
+          <ul class="usa-sidenav">
+${items}
+          </ul>
+        </nav>`;
+}
+
+// An inner page: breadcrumbs across the top, the page tree on the left, the
+// content in the middle, and (with `toc`) the page's headings on the right.
+function renderLayout({ current, crumbs, toc, heading, lede, sections }) {
+    const aside = toc ? `
+        <aside class="usa-in-page-nav" data-title-text="On this page" data-title-heading-level="h2" data-heading-elements="h2" data-main-content-selector="#page-sections" data-scroll-offset="0" data-root-margin="0px 0px -50% 0px" data-threshold="1"></aside>` : '';
+    return `      <div class="pcf-layout${toc ? ' pcf-layout--toc' : ''}">
+${renderBreadcrumb([{ href: '/', text: 'Home' }, ...crumbs])}
+${renderSidenav(current)}
+        <div id="page-sections" class="pcf-layout__main">
+${renderPageHeader({ heading, lede })}
+${sections}
+        </div>${aside}
+      </div>`;
+}
+
+function renderPage({ partials, scripts = false, title, subtitle, description, urlPath, main }) {
     const head = interpolate(partials.head, { title, subtitle, description, ogUrl: `${SITE_URL}${urlPath}` });
-    const header = interpolate(partials.header, { primaryNav: renderPrimaryNav(current) });
-    const footer = interpolate(partials.footer, { lastReviewed: LAST_REVIEWED });
+    const header = partials.header;
+    const footer = interpolate(partials.footer, {
+        lastReviewed: LAST_REVIEWED,
+        scripts: scripts ? '    <script src="/assets/js/uswds.min.js"></script>' : ''
+    });
     return `<!DOCTYPE html>
 <html lang="en">
 <head>
@@ -313,9 +360,28 @@ const termPattern = term => `(?<![A-Za-z])${term.replace(/[.*+?^${}()|[\]\\]/g, 
 // Running text only: headings, labels, and cite lines stay unlinked.
 const TERM_HOSTS = /(<(p|dd) class="(?:pcf-prose[^"]*|pcf-grounds__desc|pcf-grounds__note|pcf-steps__def|pcf-gap__body)(?: pcf-balance)?">)([\s\S]*?)(<\/\2>)/g;
 
+// Links each statute or rule cite in running text to the section it names.
+// 22 NYCRR cites stay plain: there is no stable public URL for them.
+const SEC = '(?:§|&sect;)';
+const SUBS = '(?:\\([0-9a-z]+\\))*';
+const CITE = new RegExp(`28 U\\.S\\.C\\. ${SEC}(\\d+)${SUBS}|Fed\\. R\\. App\\. P\\. (\\d+)${SUBS}|(?<!NYCRR )(?:CPLR )?${SEC}(\\d+(?:-[a-z])?)${SUBS}`, 'g');
+
+function linkCites(html) {
+    return html.split(/(<a\b[\s\S]*?<\/a>|<[^>]+>)/).map((part, i) => {
+        if (i % 2) return part;
+        return part.replace(CITE, (m, usc, frap, cplr) => {
+            const href = usc ? `https://www.law.cornell.edu/uscode/text/28/${usc}`
+                : frap ? `https://www.law.cornell.edu/rules/frap/rule_${frap}`
+                : `https://www.nysenate.gov/legislation/laws/CVP/${cplr.toUpperCase()}`;
+            return `<a class="pcf-cite" href="${href}">${m}</a>`;
+        });
+    }).join('');
+}
+
 // Appends the glossary of terms the body uses, and links each term's first
 // use in running text to its entry. `between` sits ahead of the glossary.
 function withGlossary(body, terms, between = '') {
+    body = linkCites(body);
     const text = body.replace(/<[^>]+>/g, ' ');
     const used = terms.filter(t => new RegExp(termPattern(t.term), 'i').test(text));
     if (!used.length) return `${body}\n${between}`;
@@ -360,10 +426,6 @@ function renderHelpSection(links) {
     return renderLinksSection({ id: 'help', heading: 'Free legal help.', links });
 }
 
-function renderResourcesSection(links) {
-    return renderLinksSection({ id: 'resources', heading: 'Sources.', links });
-}
-
 // =============================================================================
 // PAGES
 // =============================================================================
@@ -400,7 +462,6 @@ ${groups}
 function generateHomepage(partials) {
     return renderPage({
         partials,
-        current: 'home',
         title: 'Procedural Compliance — Court procedure, plainly stated',
         subtitle: 'New York State Article 78 and federal mandamus procedure, plainly stated. Educational. Not legal advice.',
         description: 'Court procedure, plainly stated: Article 78 in New York State and mandamus in federal court. The grounds, the clock, the court, and the record discipline that survives review. Educational. Not legal advice.',
@@ -423,53 +484,65 @@ function generateAboutPage(partials) {
     const lis = PRINCIPLES.map(it => `            <li>${it}</li>`).join('\n');
     return renderPage({
         partials,
-        current: 'about',
         title: 'About — Procedural Compliance',
         subtitle: 'Plain-language court procedure for people without a lawyer.',
         description: 'Plain-language court procedure for people without a lawyer. Free and open source. Educational. Not legal advice.',
-        urlPath: '/about/',
-        main: `${renderPageHeader({ heading: 'About', lede: 'Plain-language court procedure for people without a lawyer. Free and open source.' })}
-      <div class="pcf-page-body">
-      <section id="principles" class="pcf-section" aria-labelledby="principles-heading">
+        urlPath: ABOUT.href,
+        main: renderLayout({
+            current: ABOUT.href,
+            crumbs: [ABOUT],
+            heading: 'About',
+            lede: 'Plain-language court procedure for people without a lawyer. Free and open source.',
+            sections: `      <section id="principles" class="pcf-section" aria-labelledby="principles-heading">
         <div class="grid-container">
           <h2 id="principles-heading" class="pcf-heading">Principles.</h2>
           <ol class="pcf-list">
 ${lis}
           </ol>
         </div>
-      </section>
-      </div>`
+      </section>`
+        })
     });
 }
 
 function generateProblemsPage(j, partials) {
     const p = j.problems();
+    const href = `/${j.slug}/problems/`;
     return renderPage({
         partials,
-        current: j.slug,
+        scripts: true,
         title: `${j.name}: ${p.heading} — Procedural Compliance`,
         subtitle: `${j.name} ${j.subject}. ${p.lede} Educational. Not legal advice.`,
         description: `${j.name} ${j.subject}. ${p.lede} Educational. Not legal advice.`,
-        urlPath: `/${j.slug}/problems/`,
-        main: `${renderPageHeader({ heading: p.heading, lede: `<strong><a class="usa-link" href="/${j.slug}/">${j.name}</a>.</strong> ${p.lede}` })}
-      <div class="pcf-page-body">
-${p.sections}
-      </div>`
+        urlPath: href,
+        main: renderLayout({
+            current: href,
+            crumbs: [{ href: `/${j.slug}/`, text: j.name }, { href, text: p.heading }],
+            toc: true,
+            heading: p.heading,
+            lede: p.lede,
+            sections: p.sections
+        })
     });
 }
 
 function generateJurisdictionPage(j, partials) {
+    const href = `/${j.slug}/`;
     return renderPage({
         partials,
-        current: j.slug,
+        scripts: true,
         title: `${j.name}: ${j.subject} — Procedural Compliance`,
         subtitle: `${j.name} ${j.subject} procedure, plainly stated. Educational. Not legal advice.`,
         description: j.description,
-        urlPath: `/${j.slug}/`,
-        main: `${renderPageHeader({ heading: j.name, lede: `<strong>${j.subject}.</strong> ${j.lede}` })}
-      <div class="pcf-page-body">
-${j.sections()}
-      </div>`
+        urlPath: href,
+        main: renderLayout({
+            current: href,
+            crumbs: [{ href, text: j.name }],
+            toc: true,
+            heading: j.name,
+            lede: `<strong>${j.subject}.</strong> ${j.lede}`,
+            sections: j.sections()
+        })
     });
 }
 
